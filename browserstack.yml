@@ -1,0 +1,49 @@
+# ===== BrowserStack Credentials =====
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+# ===== Project Info =====
+projectName: Amazon Playwright Automation
+buildName: Amazon Build
+buildTag: v1.0
+
+# ===== Platforms to run tests on =====
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-firefox
+    browserVersion: latest
+
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-webkit
+    browserVersion: latest
+
+  - os: OS X
+    osVersion: Sonoma
+    browserName: chrome
+    browserVersion: latest
+
+# ===== Parallel Execution =====
+parallelsPerPlatform: 2
+
+# ===== Playwright Framework =====
+framework: playwright
+testFramework:
+  name: playwright
+  version: latest
+
+# ===== Test Settings =====
+browserstackLocal: false   # set true if testing localhost
+debug: true                # enables screenshots on BrowserStack dashboard
+networkLogs: true          # captures network logs
+consoleLogs: info          # captures browser console logs
+
+testObservability: true
+testObservabilityProject: Amazon
+testObservabilityBuild: Amazon Build

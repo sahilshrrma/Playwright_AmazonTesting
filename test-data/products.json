@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "category": "Electronics",
+      "priceRange": {
+        "min": 500,
+        "max": 2000
+      },
+      "minRating": 4,
+      "keywords": ["laptop", "computer", "notebook"]
+    },
+    {
+      "id": 2,
+      "name": "Headphones",
+      "category": "Electronics",
+      "priceRange": {
+        "min": 20,
+        "max": 500
+      },
+      "minRating": 3,
+      "keywords": ["headphones", "earbuds", "wireless"]
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "priceRange": {
+        "min": 100,
+        "max": 800
+      },
+      "minRating": 4,
+      "keywords": ["smartwatch", "wearable", "fitness"]
+    },
+    {
+      "id": 4,
+      "name": "USB Cable",
+      "category": "Electronics",
+      "priceRange": {
+        "min": 5,
+        "max": 30
+      },
+      "minRating": 4,
+      "keywords": ["usb", "cable", "charger"]
+    },
+    {
+      "id": 5,
+      "name": "Keyboard",
+      "category": "Electronics",
+      "priceRange": {
+        "min": 30,
+        "max": 300
+      },
+      "minRating": 4,
+      "keywords": ["keyboard", "mechanical", "wireless"]
+    }
+  ],
+  "testUsers": [
+    {
+      "email": "testuser@example.com",
+      "password": "TestPassword123!",
+      "firstName": "Test",
+      "lastName": "User"
+    }
+  ]
+}

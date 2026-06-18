@@ -1,0 +1,76 @@
+2026-06-15 15:52:58 - [32minfo[39m: Reading configs from C:\Users\Testing\playwright-Amazon_Project\browserstack.yml
+2026-06-15 15:52:58 - [32minfo[39m: Log Directory has been set to C:\Users\Testing\playwright-Amazon_Project\log
+2026-06-15 15:52:58 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\runner.js playwright test
+2026-06-15 15:52:58 - [32minfo[39m: SDK run started with id: db689c73-35f8-4d8b-a8f2-871f75a76fba
+2026-06-15 15:52:58 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2026-06-15 15:52:58 - [32minfo[39m: [BrowserstackCLI] startMain: Starting main process
+2026-06-15 15:52:58 - [32minfo[39m: [CLIUtils] Current CLI Path Found: 
+2026-06-15 15:52:59 - [31merror[39m: [BrowserstackCLI] CLIUtils.setupCliPath returned null
+2026-06-15 15:52:59 - [31merror[39m: [BrowserstackCLI] bootstrap: failed to bootstrap=Error: Failed to get CLI binary path. CLI setup failed.
+    at BrowserstackCLI.start (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:16824)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BrowserstackCLI.startMain (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:10953)
+    at async BrowserstackCLI.bootstrap (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:10311)
+    at async C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:13247
+2026-06-15 15:52:59 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2026-06-15 15:52:59 - [31merror[39m: Error: playwright/lib/common/configLoader.js doesn't exist.
+    at exports.<computed> (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:93467)
+    at getUserPlaywrightConfig (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:7023)
+    at Object.zaORQ (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:10318)
+    at C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:15330
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-06-15 15:53:01 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2026-06-15 15:53:01 - [32minfo[39m: key-metrics.json file not found, skipping processing for event for cli.
+2026-06-15 16:01:20 - [32minfo[39m: Reading configs from C:\Users\Testing\playwright-Amazon_Project\browserstack.yml
+2026-06-15 16:01:20 - [32minfo[39m: Log Directory has been set to C:\Users\Testing\playwright-Amazon_Project\log
+2026-06-15 16:01:20 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\runner.js playwright test
+2026-06-15 16:01:20 - [32minfo[39m: SDK run started with id: 57ccbabe-2e1b-426c-bae4-d73ace2920a9
+2026-06-15 16:01:20 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2026-06-15 16:01:21 - [32minfo[39m: [BrowserstackCLI] startMain: Starting main process
+2026-06-15 16:01:21 - [32minfo[39m: [CLIUtils] Current CLI Path Found: 
+2026-06-15 16:01:22 - [31merror[39m: [BrowserstackCLI] CLIUtils.setupCliPath returned null
+2026-06-15 16:01:22 - [31merror[39m: [BrowserstackCLI] bootstrap: failed to bootstrap=Error: Failed to get CLI binary path. CLI setup failed.
+    at BrowserstackCLI.start (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:16824)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BrowserstackCLI.startMain (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:10953)
+    at async BrowserstackCLI.bootstrap (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:10311)
+    at async C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:13247
+2026-06-15 16:01:22 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2026-06-15 16:01:22 - [31merror[39m: Error: playwright/lib/common/configLoader.js doesn't exist.
+    at exports.<computed> (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:93467)
+    at getUserPlaywrightConfig (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:7023)
+    at Object.zaORQ (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:10318)
+    at C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:15330
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-06-15 16:01:22 - [31merror[39m: Size mismatch
+2026-06-15 16:01:22 - [31merror[39m: Size mismatch
+2026-06-15 16:01:23 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2026-06-15 16:01:23 - [32minfo[39m: key-metrics.json file not found, skipping processing for event for cli.
+2026-06-15 16:09:27 - [32minfo[39m: Reading configs from C:\Users\Testing\playwright-Amazon_Project\browserstack.yml
+2026-06-15 16:09:27 - [32minfo[39m: Log Directory has been set to C:\Users\Testing\playwright-Amazon_Project\log
+2026-06-15 16:09:27 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\runner.js playwright test
+2026-06-15 16:09:27 - [32minfo[39m: SDK run started with id: f97e78bd-141c-4823-86aa-2d8da8fde38a
+2026-06-15 16:09:28 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2026-06-15 16:09:28 - [32minfo[39m: [BrowserstackCLI] startMain: Starting main process
+2026-06-15 16:09:28 - [32minfo[39m: [CLIUtils] Current CLI Path Found: 
+2026-06-15 16:09:29 - [31merror[39m: [BrowserstackCLI] CLIUtils.setupCliPath returned null
+2026-06-15 16:09:29 - [31merror[39m: [BrowserstackCLI] bootstrap: failed to bootstrap=Error: Failed to get CLI binary path. CLI setup failed.
+    at BrowserstackCLI.start (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:16824)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BrowserstackCLI.startMain (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:10953)
+    at async BrowserstackCLI.bootstrap (C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\v2\browserstackCLI.js:1:10311)
+    at async C:\Users\Testing\playwright-Amazon_Project\node_modules\browserstack-node-sdk\src\bin\playwright\command.js:2:13247
+2026-06-15 16:09:29 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2026-06-15 16:09:31 - [31merror[39m: Access to BrowserStack denied due to incorrect credentials.
+2026-06-15 16:09:31 - [31merror[39m: {
+  success: false,
+  errors: [
+    {
+      message: 'Access to BrowserStack denied due to incorrect credentials.',
+      key: 'ERROR_INVALID_CREDENTIALS'
+    }
+  ],
+  error_trace_id: 'c63e5afc-9bdc-47a3-a8a4-f35a6934118a'
+}
+2026-06-15 16:09:32 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2026-06-15 16:09:32 - [32minfo[39m: key-metrics.json file not found, skipping processing for event for cli.

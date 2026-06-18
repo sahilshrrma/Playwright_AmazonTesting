@@ -1,0 +1,2519 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: EnhancedProductFlow.spec.ts >> Amazon Product Flow - Enhanced >> should get cart item count independently
+- Location: src\tests\EnhancedProductFlow.spec.ts:198:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForTimeout: Target page, context or browser has been closed
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Shortcuts menu" [ref=e3]:
+      - heading "Skip to" [level=2] [ref=e4]
+      - list "Skip to" [ref=e5]:
+        - listitem [ref=e6]:
+          - link "main content" [ref=e7] [cursor=pointer]:
+            - /url: "#skippedLink"
+            - text: Main content
+        - listitem [ref=e8]:
+          - link "About this item" [ref=e9] [cursor=pointer]:
+            - /url: "#featurebullets_feature_div"
+        - listitem [ref=e10]:
+          - link "Buying options" [ref=e11] [cursor=pointer]:
+            - /url: "#buybox"
+        - listitem [ref=e12]:
+          - link "Videos" [ref=e13] [cursor=pointer]:
+            - /url: "#va-related-videos-widget_feature_div"
+        - listitem [ref=e14]:
+          - link "Reviews" [ref=e15] [cursor=pointer]:
+            - /url: "#customerReviews"
+      - separator [ref=e16]
+      - heading "Keyboard shortcuts" [level=2] [ref=e17]
+      - list "Keyboard shortcuts" [ref=e18]:
+        - listitem [ref=e19]:
+          - link "Search, alt, forward slash" [ref=e20] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e21]:
+              - generic [ref=e22]: Search
+              - generic [ref=e23]:
+                - generic [ref=e24]: alt
+                - generic [ref=e25]: +
+                - generic [ref=e26]: /
+        - listitem [ref=e27]:
+          - link "Cart, shift, alt, c" [ref=e28] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e29]:
+              - generic [ref=e30]: Cart
+              - generic [ref=e31]:
+                - generic [ref=e32]: shift
+                - generic [ref=e33]: +
+                - generic [ref=e34]: alt
+                - generic [ref=e35]: +
+                - generic [ref=e36]: C
+        - listitem [ref=e37]:
+          - link "Home, shift, alt, h" [ref=e38] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e39]:
+              - generic [ref=e40]: Home
+              - generic [ref=e41]:
+                - generic [ref=e42]: shift
+                - generic [ref=e43]: +
+                - generic [ref=e44]: alt
+                - generic [ref=e45]: +
+                - generic [ref=e46]: H
+        - listitem [ref=e47]:
+          - link "Your orders, shift, alt, o" [ref=e48] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e49]:
+              - generic [ref=e50]: Orders
+              - generic [ref=e51]:
+                - generic [ref=e52]: shift
+                - generic [ref=e53]: +
+                - generic [ref=e54]: alt
+                - generic [ref=e55]: +
+                - generic [ref=e56]: O
+        - listitem [ref=e57]:
+          - button "Add to cart, shift, alt, K" [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: Add to cart
+              - generic [ref=e61]:
+                - generic [ref=e62]: shift
+                - generic [ref=e63]: +
+                - generic [ref=e64]: alt
+                - generic [ref=e65]: +
+                - generic [ref=e66]: K
+        - listitem [ref=e67]:
+          - button "Product summary, shift, alt, d" [ref=e68] [cursor=pointer]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: Product summary
+              - generic [ref=e71]:
+                - generic [ref=e72]: shift
+                - generic [ref=e73]: +
+                - generic [ref=e74]: alt
+                - generic [ref=e75]: +
+                - generic [ref=e76]: D
+        - listitem [ref=e77]:
+          - button "Show/hide shortcuts, shift, alt, z" [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]:
+              - generic [ref=e80]: Show/Hide shortcuts
+              - generic [ref=e81]:
+                - generic [ref=e82]: shift
+                - generic [ref=e83]: +
+                - generic [ref=e84]: alt
+                - generic [ref=e85]: +
+                - generic [ref=e86]: Z
+      - generic [ref=e92]: To move between items, use your keyboard's up or down arrows.
+    - banner [ref=e93]:
+      - navigation "Primary" [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - link "Amazon" [ref=e98] [cursor=pointer]:
+              - /url: /ref=nav_logo
+            - button "Deliver to India" [ref=e101] [cursor=pointer]:
+              - generic [ref=e103]:
+                - generic [ref=e104]: Deliver to
+                - generic [ref=e105]: India
+          - search [ref=e108]:
+            - generic [ref=e111]:
+              - generic [ref=e113]: All
+              - combobox "Select the department you want to search in" [ref=e115] [cursor=pointer]:
+                - option "All Departments" [selected]
+                - option "Arts & Crafts"
+                - option "Automotive"
+                - option "Baby"
+                - option "Beauty & Personal Care"
+                - option "Books"
+                - option "Boys' Fashion"
+                - option "Computers"
+                - option "Deals"
+                - option "Digital Music"
+                - option "Electronics"
+                - option "Girls' Fashion"
+                - option "Health & Household"
+                - option "Home & Kitchen"
+                - option "Industrial & Scientific"
+                - option "Kindle Store"
+                - option "Luggage"
+                - option "Men's Fashion"
+                - option "Movies & TV"
+                - option "Music, CDs & Vinyl"
+                - option "Pet Supplies"
+                - option "Prime Video"
+                - option "Software"
+                - option "Sports & Outdoors"
+                - option "Tools & Home Improvement"
+                - option "Toys & Games"
+                - option "Video Games"
+                - option "Women's Fashion"
+            - searchbox "Search Amazon" [ref=e118]: Headphones
+            - generic "Go" [ref=e121] [cursor=pointer]:
+              - button "Go" [ref=e122]
+          - generic [ref=e124]:
+            - generic [ref=e125]:
+              - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=e126] [cursor=pointer]:
+                - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+                - generic [ref=e129]:
+                  - img "United States" [ref=e130]
+                  - generic [ref=e131]: EN
+              - button "Expand to Change Language or Country" [ref=e132] [cursor=pointer]
+            - generic [ref=e133]:
+              - link "Hello, sign in Account & Lists" [ref=e134] [cursor=pointer]:
+                - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FSkullcandy-Bluetooth-Headphones-Cancelling-Microphone%2Fdp%2FB0FJ44ZNKT%2Fref%3Dnav_ya_signin%3Fdib%3DeyJ2IjoiMSJ9.Jold3rIibnbgvuXHxOIJcx6zpcL_ntk5tWSLbZ9poiz5FCbyBj7mJw9_Td0RZWLEnlUVsmhhTjbE_R1exAYO8l9rq7FMs43XOuFAQmHqP0Ixw__PrUs4DyLhOShGQbtTF6_g4L3xkwaQ9AmuriNcc18bx1yOHAW85SfHpkKka0UwVKcMO05iU1rgfiA4p5cxnK2ja2eotCig2DoN2gXWfhTFkNX1V5OjBTH5qcHRh6E.BPetYRXHzB9cRPeZafzKNN6xoAwKQkNwi63gb2gZdi0%26dib_tag%3Dse%26keywords%3DHeadphones%26qid%3D1781504445%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                - generic [ref=e136]: Hello, sign in
+                - generic [ref=e137]: Account & Lists
+              - button "Expand Account and Lists" [ref=e138] [cursor=pointer]
+            - link "Returns & Orders" [ref=e139] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=nav_orders_first
+              - generic [ref=e140]: Returns
+              - generic [ref=e141]: "& Orders"
+            - link "0 items in cart" [ref=e142] [cursor=pointer]:
+              - /url: /gp/cart/view.html?ref_=nav_cart
+              - generic [ref=e144]: "0"
+              - generic [ref=e147]: Cart
+        - alertdialog "International Shopping Transition Alert" [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e153]:
+              - text: We're showing you items that ship to
+              - strong [ref=e154]: India
+              - text: . To see items that ship to a different country, change your delivery address.
+            - generic [ref=e155]:
+              - generic [ref=e157] [cursor=pointer]:
+                - button "Dismiss" [ref=e158]
+                - generic [ref=e159]: Dismiss
+              - generic [ref=e161] [cursor=pointer]:
+                - button "Change Address" [ref=e162]
+                - generic [ref=e163]: Change Address
+        - generic [ref=e164]:
+          - button "Open All Categories Menu" [ref=e166] [cursor=pointer]:
+            - generic [ref=e168]: All
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - link "Today's Deals" [ref=e175] [cursor=pointer]:
+                - /url: /gp/goldbox?ref_=nav_cs_gb
+            - listitem [ref=e176]:
+              - link "Gift Cards" [ref=e178] [cursor=pointer]:
+                - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+            - listitem [ref=e179]:
+              - link "Sell" [ref=e181] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+            - listitem [ref=e182]:
+              - link "Prime Video" [ref=e184] [cursor=pointer]:
+                - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+            - listitem [ref=e185]:
+              - link "Registry" [ref=e187] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+            - listitem [ref=e188]:
+              - link "Customer Service" [ref=e190] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+            - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=e191] [cursor=pointer]:
+              - /url: /gp/help/customer/accessibility
+              - text: Disability Customer Support
+        - dialog [ref=e194]
+    - generic [ref=e196]:
+      - heading "Product summary presents key product information Keyboard shortcut shift + alt + D" [level=1] [ref=e198]:
+        - button "Product summary presents key product information" [ref=e200] [cursor=pointer]:
+          - generic [ref=e201]: Product summary presents key product information
+        - separator [ref=e203]
+        - generic [ref=e204]:
+          - text: Keyboard shortcut
+          - generic [ref=e205]: shift + alt + D
+      - main [ref=e206]:
+        - generic [ref=e207]:
+          - generic [ref=e210]:
+            - iframe [ref=e211]:
+              - generic [ref=f4e10]:
+                - link "Sponsored ad. Click to learn more information." [ref=f4e11] [cursor=pointer]:
+                  - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RAYcqdlSfmZgK6XrfdbYxBQAAAGeyfCa6gEAAAH0AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCakTNW/clv1c_ek-wBfHXbcbWXixXZOkTCGbe-Uq3UnBxsbx2obmqzu9-40ivjG-aklUM5z1_pDm4XwEv-mqmroOPF2FCQZSSk2CdpsnxCe3dsYMvW47XmsQVDwXxwEQ5ay546MnsjiLZtpU2yA7TPFqZi8cZU3mk4_Lz4N2ZsjVqolSdr2arS4gSU67ZNj_LooWLRB01BA4s1c4jtkrOngVb3_3lX-7k21gTUfm9I5aaTc8W9WgpmioLEeJpOddYgh8L2Nl5lh-LUV8jSswwIqIOsHfEeMtBHMl1Xoq8Tkc-ePd7PG5fYii2vvEQkWt34Gdlcj4W9Xfl_Een9aAExsnRBr8AmjFvViOrTrNQhyvQ7Bc3FqrgLuYEX3S3qnV6t90fcNNi4Rrnt8H3kQfBZekcfNw5PqM607Tv2NKPCMtQePN-BER07e9FXknC7W96FE-d2n_ZRL9KhTvFCkKgCCuMpETA2D7q4Q_vKOgP55f5OrU7wwMt_ZC-3IR046cODiyFeFJID_-UfbN8Gc2hFGvVz3Uhwz-yroRFAGLkISf_DzkKd1hraktbIRbwd7EHSPekohAfZMPhnXr7FeGj5FixpA-4_rDDfUs-V6wWedeLgFdwdeeHOZF9SF9dkF4N1m38nxv9seIJ0ZwlYq89anY7LaowBEf4A9wYJuwGbbnRbuDZigcxwSMife4xAmGYzYV1U-C38UTQ5HfCBCQIPs0alPMvEXIcsMYzM7vb30BZjjY8XxZv4kST2YvzpDA5uJY898xmZD9t59gZzoiPsrezVzUzNHPH2lIlEV6GCkIIf4mQ--vYsUJetu6Tn-SqF3CV2mDlH7nnAWaPE6MLI41MnCNJgbnQ1x1_55Ca5LI6wJUdKvG_HemkY6h6hThJCex6ZyJay6U-nEaX_OPj8NLz7ci8PCosvLHY4VzbRSIt9JZmX4BcVSdTSObs8Kc9u19KglTTOTiIQZDrnxaUq-DlASpUjlw2A7yvvVt7OZCluvvEDoM-TLCDztX07IdSv5jo617RIS5PFDoQegqNGd6ahvN7-l1IruWMzclc6JQFK6K3jV2gXDtZnpdrFgwLZ0sx5LPkU5osWtyCR90pBYTpJkAsTN2wklIvsg2YiLsLbGlqgUI0oeX0ijhVtJy42uyO6DW_3KkpzV1TvzMM4KyrXXJLV3kzrl71tCbxa5PtfWTZqGaXwuMRe-i2JwMPWuQRsUufBXaEwS_5_VR6hrlkmmJNSPvWe4xdlSpUjLDi4KaQ_kBjDJXv7XHfuoG8DUIauqRRpAzF4T0eRCMS3hUSuEqyAmK-DDUk1Di80deEKNo_2Kkmd7oGy0tnfkSVgKsKnBwC1IcjE-U-wfPcXeYXSZ-yEZDWNwpdqET7wcX85x2w7vTVKgKgRM7Bl981J7GIqKqC4PDLwaxmyRgAc4bCoCJz-Pi9rhjuwg/https://www.amazon.com/stores/page/6D46FF03-8CF0-43D7-83BF-CE8A3B87BB29
+                - generic [ref=f4e12]:
+                  - generic [ref=f4e14]: OneOdio- Studio Series Headphones
+                  - generic [ref=f4e16]:
+                    - img "OneOdio Studio Max 1-20MS Low-Latency Wireless DJ Headphones, 120H Playtime, Lossless Hi-Res/LDAC Audio, Dual-Mic ENC, Dongle/Bluetooth/Wired Connection for Studio Guitar and Gaming PC Computer" [ref=f4e18]
+                    - img "OneOdio Studio Max 1-20MS Low-Latency Wireless DJ Headphones, 120H Playtime, Lossless Hi-Res/LDAC Audio, Dual-Mic ENC, Dongle/Bluetooth/Wired Connection for Studio Guitar and Gaming PC Computer" [ref=f4e20]
+                  - generic [ref=f4e22]:
+                    - generic [ref=f4e23]:
+                      - link "Sponsored ad. Click to learn more information." [ref=f4e24] [cursor=pointer]:
+                        - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RAYcqdlSfmZgK6XrfdbYxBQAAAGeyfCa6gEAAAH0AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCakTNW/clv1c_ek-wBfHXbcbWXixXZOkTCGbe-Uq3UnBxsbx2obmqzu9-40ivjG-aklUM5z1_pDm4XwEv-mqmroOPF2FCQZSSk2CdpsnxCe3dsYMvW47XmsQVDwXxwEQ5ay546MnsjiLZtpU2yA7TPFqZi8cZU3mk4_Lz4N2ZsjVqolSdr2arS4gSU67ZNj_LooWLRB01BA4s1c4jtkrOngVb3_3lX-7k21gTUfm9I5aaTc8W9WgpmioLEeJpOddYgh8L2Nl5lh-LUV8jSswwIqIOsHfEeMtBHMl1Xoq8Tkc-ePd7PG5fYii2vvEQkWt34Gdlcj4W9Xfl_Een9aAExsnRBr8AmjFvViOrTrNQhyvQ7Bc3FqrgLuYEX3S3qnV6t90fcNNi4Rrnt8H3kQfBZekcfNw5PqM607Tv2NKPCMtQePN-BER07e9FXknC7W96FE-d2n_ZRL9KhTvFCkKgCCuMpETA2D7q4Q_vKOgP55f5OrU7wwMt_ZC-3IR046cODiyFeFJID_-UfbN8Gc2hFGvVz3Uhwz-yroRFAGLkISf_DzkKd1hraktbIRbwd7EHSPekohAfZMPhnXr7FeGj5FixpA-4_rDDfUs-V6wWedeLgFdwdeeHOZF9SF9dkF4N1m38nxv9seIJ0ZwlYq89anY7LaowBEf4A9wYJuwGbbnRbuDZigcxwSMife4xAmGYzYV1U-C38UTQ5HfCBCQIPs0alPMvEXIcsMYzM7vb30BZjjY8XxZv4kST2YvzpDA5uJY898xmZD9t59gZzoiPsrezVzUzNHPH2lIlEV6GCkIIf4mQ--vYsUJetu6Tn-SqF3CV2mDlH7nnAWaPE6MLI41MnCNJgbnQ1x1_55Ca5LI6wJUdKvG_HemkY6h6hThJCex6ZyJay6U-nEaX_OPj8NLz7ci8PCosvLHY4VzbRSIt9JZmX4BcVSdTSObs8Kc9u19KglTTOTiIQZDrnxaUq-DlASpUjlw2A7yvvVt7OZCluvvEDoM-TLCDztX07IdSv5jo617RIS5PFDoQegqNGd6ahvN7-l1IruWMzclc6JQFK6K3jV2gXDtZnpdrFgwLZ0sx5LPkU5osWtyCR90pBYTpJkAsTN2wklIvsg2YiLsLbGlqgUI0oeX0ijhVtJy42uyO6DW_3KkpzV1TvzMM4KyrXXJLV3kzrl71tCbxa5PtfWTZqGaXwuMRe-i2JwMPWuQRsUufBXaEwS_5_VR6hrlkmmJNSPvWe4xdlSpUjLDi4KaQ_kBjDJXv7XHfuoG8DUIauqRRpAzF4T0eRCMS3hUSuEqyAmK-DDUk1Di80deEKNo_2Kkmd7oGy0tnfkSVgKsKnBwC1IcjE-U-wfPcXeYXSZ-yEZDWNwpdqET7wcX85x2w7vTVKgKgRM7Bl981J7GIqKqC4PDLwaxmyRgAc4bCoCJz-Pi9rhjuwg/https://www.amazon.com/dp/B0DRYMTV46
+                      - generic [ref=f4e26]:
+                        - img "OneOdio Studio Max 1-20MS Low-Latency Wireless DJ Headphones, 120H Playtime, Lossless Hi-Res/LDAC Audio, Dual-Mic ENC, Dongle/Bluetooth/Wired Connection for Studio Guitar and Gaming PC Computer" [ref=f4e28]
+                        - img "OneOdio Studio Max 1-20MS Low-Latency Wireless DJ Headphones, 120H Playtime, Lossless Hi-Res/LDAC Audio, Dual-Mic ENC, Dongle/Bluetooth/Wired Connection for Studio Guitar and Gaming PC Computer" [ref=f4e30]
+                    - generic [ref=f4e31]:
+                      - link "Sponsored ad. Click to learn more information." [ref=f4e32] [cursor=pointer]:
+                        - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RAYcqdlSfmZgK6XrfdbYxBQAAAGeyfCa6gEAAAH0AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCakTNW/clv1c_ek-wBfHXbcbWXixXZOkTCGbe-Uq3UnBxsbx2obmqzu9-40ivjG-aklUM5z1_pDm4XwEv-mqmroOPF2FCQZSSk2CdpsnxCe3dsYMvW47XmsQVDwXxwEQ5ay546MnsjiLZtpU2yA7TPFqZi8cZU3mk4_Lz4N2ZsjVqolSdr2arS4gSU67ZNj_LooWLRB01BA4s1c4jtkrOngVb3_3lX-7k21gTUfm9I5aaTc8W9WgpmioLEeJpOddYgh8L2Nl5lh-LUV8jSswwIqIOsHfEeMtBHMl1Xoq8Tkc-ePd7PG5fYii2vvEQkWt34Gdlcj4W9Xfl_Een9aAExsnRBr8AmjFvViOrTrNQhyvQ7Bc3FqrgLuYEX3S3qnV6t90fcNNi4Rrnt8H3kQfBZekcfNw5PqM607Tv2NKPCMtQePN-BER07e9FXknC7W96FE-d2n_ZRL9KhTvFCkKgCCuMpETA2D7q4Q_vKOgP55f5OrU7wwMt_ZC-3IR046cODiyFeFJID_-UfbN8Gc2hFGvVz3Uhwz-yroRFAGLkISf_DzkKd1hraktbIRbwd7EHSPekohAfZMPhnXr7FeGj5FixpA-4_rDDfUs-V6wWedeLgFdwdeeHOZF9SF9dkF4N1m38nxv9seIJ0ZwlYq89anY7LaowBEf4A9wYJuwGbbnRbuDZigcxwSMife4xAmGYzYV1U-C38UTQ5HfCBCQIPs0alPMvEXIcsMYzM7vb30BZjjY8XxZv4kST2YvzpDA5uJY898xmZD9t59gZzoiPsrezVzUzNHPH2lIlEV6GCkIIf4mQ--vYsUJetu6Tn-SqF3CV2mDlH7nnAWaPE6MLI41MnCNJgbnQ1x1_55Ca5LI6wJUdKvG_HemkY6h6hThJCex6ZyJay6U-nEaX_OPj8NLz7ci8PCosvLHY4VzbRSIt9JZmX4BcVSdTSObs8Kc9u19KglTTOTiIQZDrnxaUq-DlASpUjlw2A7yvvVt7OZCluvvEDoM-TLCDztX07IdSv5jo617RIS5PFDoQegqNGd6ahvN7-l1IruWMzclc6JQFK6K3jV2gXDtZnpdrFgwLZ0sx5LPkU5osWtyCR90pBYTpJkAsTN2wklIvsg2YiLsLbGlqgUI0oeX0ijhVtJy42uyO6DW_3KkpzV1TvzMM4KyrXXJLV3kzrl71tCbxa5PtfWTZqGaXwuMRe-i2JwMPWuQRsUufBXaEwS_5_VR6hrlkmmJNSPvWe4xdlSpUjLDi4KaQ_kBjDJXv7XHfuoG8DUIauqRRpAzF4T0eRCMS3hUSuEqyAmK-DDUk1Di80deEKNo_2Kkmd7oGy0tnfkSVgKsKnBwC1IcjE-U-wfPcXeYXSZ-yEZDWNwpdqET7wcX85x2w7vTVKgKgRM7Bl981J7GIqKqC4PDLwaxmyRgAc4bCoCJz-Pi9rhjuwg/https://www.amazon.com/dp/B0GTVQXM3C
+                      - generic [ref=f4e34]:
+                        - img "OneOdio Studio Max 2 Wireless DJ Headphones, 9ms Low Latency Hi-Res Audio Over Ear Studio Headphones with LDAC, 120H Playtime, Bluetooth Headphones Support 3.5MM 6.35MM for Guitar Keyboard" [ref=f4e36]
+                        - img "OneOdio Studio Max 2 Wireless DJ Headphones, 9ms Low Latency Hi-Res Audio Over Ear Studio Headphones with LDAC, 120H Playtime, Bluetooth Headphones Support 3.5MM 6.35MM for Guitar Keyboard" [ref=f4e38]
+                    - generic [ref=f4e39]:
+                      - link "Sponsored ad. Click to learn more information." [ref=f4e40] [cursor=pointer]:
+                        - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RAYcqdlSfmZgK6XrfdbYxBQAAAGeyfCa6gEAAAH0AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCakTNW/clv1c_ek-wBfHXbcbWXixXZOkTCGbe-Uq3UnBxsbx2obmqzu9-40ivjG-aklUM5z1_pDm4XwEv-mqmroOPF2FCQZSSk2CdpsnxCe3dsYMvW47XmsQVDwXxwEQ5ay546MnsjiLZtpU2yA7TPFqZi8cZU3mk4_Lz4N2ZsjVqolSdr2arS4gSU67ZNj_LooWLRB01BA4s1c4jtkrOngVb3_3lX-7k21gTUfm9I5aaTc8W9WgpmioLEeJpOddYgh8L2Nl5lh-LUV8jSswwIqIOsHfEeMtBHMl1Xoq8Tkc-ePd7PG5fYii2vvEQkWt34Gdlcj4W9Xfl_Een9aAExsnRBr8AmjFvViOrTrNQhyvQ7Bc3FqrgLuYEX3S3qnV6t90fcNNi4Rrnt8H3kQfBZekcfNw5PqM607Tv2NKPCMtQePN-BER07e9FXknC7W96FE-d2n_ZRL9KhTvFCkKgCCuMpETA2D7q4Q_vKOgP55f5OrU7wwMt_ZC-3IR046cODiyFeFJID_-UfbN8Gc2hFGvVz3Uhwz-yroRFAGLkISf_DzkKd1hraktbIRbwd7EHSPekohAfZMPhnXr7FeGj5FixpA-4_rDDfUs-V6wWedeLgFdwdeeHOZF9SF9dkF4N1m38nxv9seIJ0ZwlYq89anY7LaowBEf4A9wYJuwGbbnRbuDZigcxwSMife4xAmGYzYV1U-C38UTQ5HfCBCQIPs0alPMvEXIcsMYzM7vb30BZjjY8XxZv4kST2YvzpDA5uJY898xmZD9t59gZzoiPsrezVzUzNHPH2lIlEV6GCkIIf4mQ--vYsUJetu6Tn-SqF3CV2mDlH7nnAWaPE6MLI41MnCNJgbnQ1x1_55Ca5LI6wJUdKvG_HemkY6h6hThJCex6ZyJay6U-nEaX_OPj8NLz7ci8PCosvLHY4VzbRSIt9JZmX4BcVSdTSObs8Kc9u19KglTTOTiIQZDrnxaUq-DlASpUjlw2A7yvvVt7OZCluvvEDoM-TLCDztX07IdSv5jo617RIS5PFDoQegqNGd6ahvN7-l1IruWMzclc6JQFK6K3jV2gXDtZnpdrFgwLZ0sx5LPkU5osWtyCR90pBYTpJkAsTN2wklIvsg2YiLsLbGlqgUI0oeX0ijhVtJy42uyO6DW_3KkpzV1TvzMM4KyrXXJLV3kzrl71tCbxa5PtfWTZqGaXwuMRe-i2JwMPWuQRsUufBXaEwS_5_VR6hrlkmmJNSPvWe4xdlSpUjLDi4KaQ_kBjDJXv7XHfuoG8DUIauqRRpAzF4T0eRCMS3hUSuEqyAmK-DDUk1Di80deEKNo_2Kkmd7oGy0tnfkSVgKsKnBwC1IcjE-U-wfPcXeYXSZ-yEZDWNwpdqET7wcX85x2w7vTVKgKgRM7Bl981J7GIqKqC4PDLwaxmyRgAc4bCoCJz-Pi9rhjuwg/https://www.amazon.com/dp/B096SJSBXC
+                      - generic [ref=f4e42]:
+                        - img "OneOdio Monitor 60 Professional Studio Headphones - Recording Wired Over Ear Headphones, Hi-Res Audio, Soft Comfortable Earmuffs, 6.35mm Adapter for Tracking Mixing DJ Mastering Broadcast-Black" [ref=f4e44]
+                        - img "OneOdio Monitor 60 Professional Studio Headphones - Recording Wired Over Ear Headphones, Hi-Res Audio, Soft Comfortable Earmuffs, 6.35mm Adapter for Tracking Mixing DJ Mastering Broadcast-Black" [ref=f4e46]
+                  - generic [ref=f4e49]:
+                    - img "OneOdio logo image" [ref=f4e51]
+                    - img "OneOdio logo image" [ref=f4e53]
+                  - link "Shop OneOdio" [ref=f4e55] [cursor=pointer]:
+                    - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RAYcqdlSfmZgK6XrfdbYxBQAAAGeyfCa6gEAAAH0AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCakTNW/clv1c_ek-wBfHXbcbWXixXZOkTCGbe-Uq3UnBxsbx2obmqzu9-40ivjG-aklUM5z1_pDm4XwEv-mqmroOPF2FCQZSSk2CdpsnxCe3dsYMvW47XmsQVDwXxwEQ5ay546MnsjiLZtpU2yA7TPFqZi8cZU3mk4_Lz4N2ZsjVqolSdr2arS4gSU67ZNj_LooWLRB01BA4s1c4jtkrOngVb3_3lX-7k21gTUfm9I5aaTc8W9WgpmioLEeJpOddYgh8L2Nl5lh-LUV8jSswwIqIOsHfEeMtBHMl1Xoq8Tkc-ePd7PG5fYii2vvEQkWt34Gdlcj4W9Xfl_Een9aAExsnRBr8AmjFvViOrTrNQhyvQ7Bc3FqrgLuYEX3S3qnV6t90fcNNi4Rrnt8H3kQfBZekcfNw5PqM607Tv2NKPCMtQePN-BER07e9FXknC7W96FE-d2n_ZRL9KhTvFCkKgCCuMpETA2D7q4Q_vKOgP55f5OrU7wwMt_ZC-3IR046cODiyFeFJID_-UfbN8Gc2hFGvVz3Uhwz-yroRFAGLkISf_DzkKd1hraktbIRbwd7EHSPekohAfZMPhnXr7FeGj5FixpA-4_rDDfUs-V6wWedeLgFdwdeeHOZF9SF9dkF4N1m38nxv9seIJ0ZwlYq89anY7LaowBEf4A9wYJuwGbbnRbuDZigcxwSMife4xAmGYzYV1U-C38UTQ5HfCBCQIPs0alPMvEXIcsMYzM7vb30BZjjY8XxZv4kST2YvzpDA5uJY898xmZD9t59gZzoiPsrezVzUzNHPH2lIlEV6GCkIIf4mQ--vYsUJetu6Tn-SqF3CV2mDlH7nnAWaPE6MLI41MnCNJgbnQ1x1_55Ca5LI6wJUdKvG_HemkY6h6hThJCex6ZyJay6U-nEaX_OPj8NLz7ci8PCosvLHY4VzbRSIt9JZmX4BcVSdTSObs8Kc9u19KglTTOTiIQZDrnxaUq-DlASpUjlw2A7yvvVt7OZCluvvEDoM-TLCDztX07IdSv5jo617RIS5PFDoQegqNGd6ahvN7-l1IruWMzclc6JQFK6K3jV2gXDtZnpdrFgwLZ0sx5LPkU5osWtyCR90pBYTpJkAsTN2wklIvsg2YiLsLbGlqgUI0oeX0ijhVtJy42uyO6DW_3KkpzV1TvzMM4KyrXXJLV3kzrl71tCbxa5PtfWTZqGaXwuMRe-i2JwMPWuQRsUufBXaEwS_5_VR6hrlkmmJNSPvWe4xdlSpUjLDi4KaQ_kBjDJXv7XHfuoG8DUIauqRRpAzF4T0eRCMS3hUSuEqyAmK-DDUk1Di80deEKNo_2Kkmd7oGy0tnfkSVgKsKnBwC1IcjE-U-wfPcXeYXSZ-yEZDWNwpdqET7wcX85x2w7vTVKgKgRM7Bl981J7GIqKqC4PDLwaxmyRgAc4bCoCJz-Pi9rhjuwg/https://www.amazon.com/stores/page/6D46FF03-8CF0-43D7-83BF-CE8A3B87BB29
+            - button "Leave feedback on Sponsored ad" [ref=e213] [cursor=pointer]:
+              - generic [ref=e214]: Sponsored
+          - list [ref=e220]:
+            - listitem [ref=e221]:
+              - link "Electronics" [ref=e223] [cursor=pointer]:
+                - /url: /electronics-store/b/ref=dp_bc_1?ie=UTF8&node=172282
+            - listitem [ref=e224]: ›
+            - listitem [ref=e225]:
+              - link "Headphones, Earbuds & Accessories" [ref=e227] [cursor=pointer]:
+                - /url: /Headphones-Earbuds-Accessories/b/ref=dp_bc_2?ie=UTF8&node=24046923011
+            - listitem [ref=e228]: ›
+            - listitem [ref=e229]:
+              - link "Headphones & Earbuds" [ref=e231] [cursor=pointer]:
+                - /url: /Headphones-Accessories-Supplies/b/ref=dp_bc_3?ie=UTF8&node=172541
+            - listitem [ref=e232]: ›
+            - listitem [ref=e233]:
+              - link "Over-Ear Headphones" [ref=e235] [cursor=pointer]:
+                - /url: /Over-Ear-Headphones/b/ref=dp_bc_4?ie=UTF8&node=12097479011
+        - generic [ref=e236]:
+          - generic [ref=e237]:
+            - generic [ref=e248]:
+              - generic [ref=e255]:
+                - generic [ref=e256]: INR24,728.69
+                - generic [ref=e257]:
+                  - text: INR
+                  - generic [ref=e258]:
+                    - text: 24,728
+                    - generic [ref=e259]: .
+                  - text: "69"
+              - generic [ref=e261]:
+                - generic [ref=e262]:
+                  - generic [ref=e263]:
+                    - text: INR 9,629.34 Shipping & Import Charges to India
+                    - button "Details" [ref=e265] [cursor=pointer]: Details
+                  - generic [ref=e267]:
+                    - generic [ref=e272]: INR 1,300.21 delivery Tuesday, July 7
+                    - button "Deliver to India" [ref=e275] [cursor=pointer]:
+                      - generic [ref=e281]: Deliver to India
+                - generic [ref=e284]: In Stock
+                - generic [ref=e292]:
+                  - generic [ref=e293]: "Quantity:"
+                  - combobox "Quantity:" [ref=e294]:
+                    - option "1" [selected]
+                    - option "2"
+                    - option "3"
+                    - option "4"
+                    - option "5"
+                    - option "6"
+                    - option "7"
+                    - option "8"
+                    - option "9"
+                    - option "10"
+                    - option "11"
+                    - option "12"
+                    - option "13"
+                    - option "14"
+                    - option "15"
+                    - option "16"
+                    - option "17"
+                    - option "18"
+                    - option "19"
+                    - option "20"
+                    - option "21"
+                    - option "22"
+                    - option "23"
+                    - option "24"
+                    - option "25"
+                    - option "26"
+                    - option "27"
+                    - option "28"
+                    - option "29"
+                    - option "30"
+                  - generic [ref=e297] [cursor=pointer]: Quantity:1
+                - generic [ref=e303] [cursor=pointer]:
+                  - button "Add to cart" [ref=e304]
+                  - generic [ref=e305]: Add to cart
+                - generic [ref=e310] [cursor=pointer]:
+                  - button "Buy Now" [ref=e311]
+                  - generic [ref=e312]: Buy Now
+                - generic [ref=e315]:
+                  - group "Seller, shipping, and buying option details" [ref=e317]:
+                    - generic [ref=e318]:
+                      - heading "Shipper / Seller" [level=4] [ref=e319]:
+                        - generic [ref=e320]: Shipper / Seller
+                      - generic [ref=e323]: Amazon.com
+                    - generic [ref=e324]:
+                      - heading "Returns" [level=4] [ref=e325]:
+                        - generic [ref=e326]: Returns
+                      - button "30-day refund / replacement" [ref=e329] [cursor=pointer]:
+                        - generic [ref=e330]: 30-day refund / replacement
+                    - generic [ref=e333]:
+                      - heading "Support" [level=4] [ref=e334]:
+                        - generic [ref=e335]: Support
+                      - button "Product support included" [ref=e338] [cursor=pointer]:
+                        - generic [ref=e339]: Product support included
+                  - button "See more" [ref=e341] [cursor=pointer]: See more
+              - generic [ref=e343]:
+                - separator [ref=e344]
+                - link "Add to List" [ref=e349] [cursor=pointer]:
+                  - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB0FJ44ZNKT&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+            - generic [ref=e353]:
+              - iframe [ref=e354]:
+                - generic [ref=f5e3]:
+                  - link "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black" [ref=f5e5] [cursor=pointer]:
+                    - /url: https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjU3OTAxNjE2NDgyMjI5OjE3ODE1MDQ0NDk6c3BfZGV0YWlsX3JpZ2h0X3NoYXJlZDozMDEzMzIyMjYyMTc3MDI6Ojo6&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_detail_right_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk
+                  - img "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black" [ref=f5e8]
+                  - generic [ref=f5e10]:
+                    - generic [ref=f5e12]:
+                      - generic [ref=f5e13]: Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black
+                      - generic [ref=f5e14]: Skullcandy Hesh 540 ANC Wirel...
+                    - generic [ref=f5e15]:
+                      - text: "4.0"
+                      - text: "271"
+                    - generic [ref=f5e18]:
+                      - generic [ref=f5e19]: INR 15,819.56
+                      - generic [ref=f5e20]:
+                        - text: INR
+                        - generic [ref=f5e21]:
+                          - text: 15,819
+                          - generic [ref=f5e22]: .
+                        - text: "56"
+              - button "Leave feedback on Sponsored ad" [ref=e356] [cursor=pointer]:
+                - generic [ref=e357]: Sponsored
+          - generic [ref=e359]:
+            - generic [ref=e361]:
+              - button "Share" [ref=e362]:
+                - button "Share" [ref=e363] [cursor=pointer]
+              - generic [ref=e366]:
+                - radiogroup "Image thumbnails" [ref=e368]:
+                  - listitem [ref=e369]:
+                    - radio [ref=e374] [cursor=pointer]
+                  - listitem [ref=e376]:
+                    - radio [ref=e381] [cursor=pointer]
+                  - listitem [ref=e383]:
+                    - radio [ref=e388] [cursor=pointer]
+                  - listitem [ref=e390]:
+                    - radio [ref=e395] [cursor=pointer]
+                  - listitem [ref=e397]:
+                    - radio [ref=e402] [cursor=pointer]
+                  - listitem [ref=e404]:
+                    - generic [ref=e408] [cursor=pointer]:
+                      - radio "4+" [ref=e409]
+                      - generic [ref=e411]: 4+
+                  - listitem [ref=e412]:
+                    - generic [ref=e414]:
+                      - radio [ref=e417] [cursor=pointer]
+                      - generic [ref=e419]: 6 VIDEOS
+                - generic [ref=e420]:
+                  - generic [ref=e422]:
+                    - list
+                    - list [ref=e423]:
+                      - listitem [ref=e424] [cursor=pointer]:
+                        - button "Skullcandy Aviator 900 ANC Wireless Over-Ear Bluetooth Headphones, THX Spatial Audio with Head Tracking, Adaptive Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [ref=e427]:
+                          - img "Skullcandy Aviator 900 ANC Wireless Over-Ear Bluetooth Headphones, THX Spatial Audio with Head Tracking, Adaptive Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [ref=e428]
+                      - text:           
+                  - link "Click to see full view" [ref=e432] [cursor=pointer]:
+                    - /url: "#"
+              - text:           
+            - generic [ref=e434]:
+              - generic:
+                - button
+            - generic:
+              - link:
+                - generic:
+                  - list
+          - generic [ref=e435]:
+            - heading "Skullcandy Aviator 900 ANC Wireless Over-Ear Bluetooth Headphones, THX Spatial Audio with Head Tracking, Adaptive Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [level=1] [ref=e438]
+            - link "Visit the Skullcandy Store" [ref=e441] [cursor=pointer]:
+              - /url: /stores/Skullcandy/page/9F16B940-F912-43FE-888C-5BB1B86337A9?lp_asin=B0FJ44ZNKT&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto
+            - generic [ref=e443]:
+              - generic "4.2 out of 5 stars" [ref=e445]:
+                - button "4.2 out of 5 stars" [ref=e447] [cursor=pointer]:
+                  - text: "4.2"
+                  - generic [ref=e449]: 4.2 out of 5 stars
+              - link "292 Reviews" [ref=e452] [cursor=pointer]:
+                - /url: "#averageCustomerReviewsAnchor"
+                - text: (292)
+            - generic [ref=e456]: 100+ bought in past month
+            - separator [ref=e457]
+            - generic [ref=e460]:
+              - generic [ref=e461]:
+                - generic [ref=e462]:
+                  - generic [ref=e463]: INR 24,728.69 with 13 percent savings
+                  - generic [ref=e464]: "-13%"
+                  - generic [ref=e466]:
+                    - text: INR
+                    - generic [ref=e467]:
+                      - text: 24,728
+                      - generic [ref=e468]: .
+                    - text: "69"
+                - generic [ref=e470]:
+                  - generic [ref=e471]:
+                    - generic [ref=e472]: "List Price: INR 28,533.25"
+                    - generic [ref=e473]:
+                      - text: "List Price:"
+                      - generic [ref=e474]:
+                        - generic [ref=e475]: INR28,533.25
+                        - text: INR28,533.25
+                  - link "Learn more about Amazon pricing and savings" [ref=e478] [cursor=pointer]:
+                    - /url: "#"
+                    - img "Learn more about Amazon pricing and savings" [ref=e479]
+              - generic:
+                - table
+              - generic [ref=e480]:
+                - text: INR 9,629.34 Shipping & Import Charges to India
+                - button "Details" [ref=e482] [cursor=pointer]: Details
+            - generic [ref=e488]:
+              - text: Available at a lower price from
+              - link "other sellers" [ref=e489] [cursor=pointer]:
+                - /url: /gp/offer-listing/B0FJ44ZNKT/ref=dp_olp_pn
+              - text: that may not offer free Prime shipping.
+            - generic [ref=e495]:
+              - generic "Selected Color is True Black. Tap to collapse." [ref=e496] [cursor=pointer]:
+                - generic [ref=e498]: "Color: True Black"
+              - generic "There are 2 options." [ref=e499]:
+                - group "Make a Color selection" [ref=e501]:
+                  - radiogroup [ref=e502]:
+                    - listitem [ref=e503]:
+                      - generic [ref=e506] [cursor=pointer]:
+                        - radio "True Black INR 24,728.69 with 13 percent savings INR24,728.69 INR28,533.25 INR28,533.25 In Stock" [checked] [ref=e507]
+                        - generic [ref=e508]:
+                          - img [ref=e511]
+                          - separator [ref=e512]
+                          - generic [ref=e517]:
+                            - generic [ref=e518]:
+                              - generic [ref=e519]: INR 24,728.69 with 13 percent savings
+                              - generic [ref=e520]: INR24,728.69
+                            - generic [ref=e523]:
+                              - generic [ref=e524]: INR28,533.25
+                              - text: INR28,533.25
+                    - listitem [ref=e525]:
+                      - generic [ref=e528] [cursor=pointer]:
+                        - radio "Tortoise INR 28,533.25 INR28,533.25 In Stock" [ref=e529]
+                        - generic [ref=e530]:
+                          - img [ref=e533]
+                          - separator [ref=e534]
+                          - generic [ref=e540]:
+                            - generic [ref=e541]: INR 28,533.25
+                            - generic [ref=e542]: INR28,533.25
+                  - navigation
+            - list [ref=e546]:
+              - rowgroup [ref=e547]:
+                - listitem [ref=e548]: Brand Skullcandy
+                - listitem [ref=e549]: Color True Black
+                - listitem [ref=e550]: Ear Placement Over Ear
+                - listitem [ref=e551]: Form Factor Over Ear
+                - listitem [ref=e552]: Impedance 36 Ohms
+            - generic [ref=e554]:
+              - separator [ref=e555]
+              - heading "About this item" [level=1] [ref=e556]
+              - list [ref=e557]:
+                - listitem [ref=e558]: PREMIUM 6-MIC ADAPTIVE NOISE CANCELLING. Aviator 900 ANC is designed with ANC that automatically adapts to your surroundings, no matter how noisy or chaotic.
+                - listitem [ref=e559]: UP TO 60 HOURS BATTERY + RAPID CHARGE. Get hours of uninterrupted listening with up to 60 hours of battery life with ANC off. Our Rapid Charge feature gives you 4 hours of listening on a quick 10-minute charge.
+                - listitem [ref=e560]: THX SPATIAL AUDIO WITH HEAD TRACKING. Sink into your favorite content with fully immersive, 360-degree sound. Experience depth as sounds move around you. Get lost in hyper-realistic sound.
+                - listitem [ref=e561]: WEAR DETECTION. Never miss a beat. With wear detection, your audio will auto-pause when you take your headphones off and auto-play when you put your headphones on.
+                - listitem [ref=e562]: COMFORT THAT WON’T QUIT. Aviator 900 ANC is engineered for all-day comfort. No pressure points, no distractions. Ergonomic earcups with memory foam adapt to you, not the other way around.
+              - generic [ref=e563]:
+                - text: ›
+                - link "See more product details" [ref=e564] [cursor=pointer]:
+                  - /url: "#productDetails"
+            - link "Report an issue with this product or seller" [ref=e570] [cursor=pointer]:
+              - /url: "#"
+            - generic [ref=e573]:
+              - separator [ref=e574]
+              - heading "Check Compatibility" [level=1] [ref=e575]
+              - generic [ref=e582]:
+                - generic [ref=e585]: Choose your product
+                - list [ref=e586]:
+                  - listitem [ref=e587]:
+                    - button "Audio CD Player" [ref=e591] [cursor=pointer]
+                  - listitem [ref=e592]:
+                    - button "Audio & MIDI Interface" [ref=e596] [cursor=pointer]
+                  - listitem [ref=e597]:
+                    - button "Cellular Phone" [ref=e601] [cursor=pointer]
+                  - listitem [ref=e602]:
+                    - button "MP3 Player" [ref=e606] [cursor=pointer]
+                  - listitem [ref=e607]:
+                    - button "Tablet Computer" [ref=e611] [cursor=pointer]
+                  - listitem [ref=e612]:
+                    - button "See all options" [ref=e616] [cursor=pointer]:
+                      - generic [ref=e617]: See all options
+          - generic [ref=e619]:
+            - separator [ref=e620]
+            - generic [ref=e623]:
+              - iframe [ref=e624]:
+                - generic [ref=f6e4]:
+                  - link "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [ref=f6e6] [cursor=pointer]:
+                    - /url: https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Mjg3ODE0Mjc0NzcyOTA2OjE3ODE1MDQ0NDk6c3BfaHFwX3NoYXJlZDozMDEyNjUyMTA2MDkzMDI6Ojo6&url=%2Fdp%2FB0C9L8ZR6Q%2Fref%3Dsspa_dk_hqp_detail_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk
+                  - img "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [ref=f6e7]
+                  - generic [ref=f6e8]:
+                    - generic [ref=f6e9]: Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass...
+                    - generic [ref=f6e10]:
+                      - generic [ref=f6e11]: 4,010
+                      - generic [ref=f6e13]: "|"
+                      - text: INR 21,752.26
+                    - generic [ref=f6e14]: Shop now ›
+              - button "Leave feedback on Sponsored ad" [ref=e626] [cursor=pointer]:
+                - generic [ref=e627]: Sponsored
+        - generic [ref=e632]:
+          - separator [ref=e633]
+          - group [ref=e636]:
+            - heading "Customers who viewed this item also viewed" [level=2] [ref=e641]
+            - group [ref=e646]:
+              - list [ref=e647]:
+                - listitem [ref=e648]:
+                  - generic [ref=e650]:
+                    - link [ref=e651] [cursor=pointer]:
+                      - /url: /Skullcandy-Cancelling-Headphones-Microphone-Bluetooth/dp/B0C9L8ZR6Q/ref=pd_sbs_d_sccl_1_1/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0C9L8ZR6Q&psc=1
+                      - img [ref=e653]
+                    - generic [ref=e655]:
+                      - link "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [ref=e656] [cursor=pointer]:
+                        - /url: /Skullcandy-Cancelling-Headphones-Microphone-Bluetooth/dp/B0C9L8ZR6Q/ref=pd_sbs_d_sccl_1_1/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0C9L8ZR6Q&psc=1
+                        - generic [ref=e658]: Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black
+                      - link "4.6 out of 5 stars, 4,015 ratings" [ref=e661] [cursor=pointer]:
+                        - /url: /product-reviews/B0C9L8ZR6Q/ref=pd_sbs_d_sccl_1_1_cr/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0C9L8ZR6Q
+                        - generic [ref=e663]: 4.6 out of 5 stars
+                        - text: 4,015
+                      - link "INR20,924.13" [ref=e667] [cursor=pointer]:
+                        - /url: /Skullcandy-Cancelling-Headphones-Microphone-Bluetooth/dp/B0C9L8ZR6Q/ref=pd_sbs_d_sccl_1_1/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0C9L8ZR6Q&psc=1
+                        - generic [ref=e669]:
+                          - generic [ref=e670]: INR20,924.13
+                          - generic [ref=e671]:
+                            - text: INR
+                            - generic [ref=e672]: 20,924.
+                            - text: "13"
+                      - text: INR 1,170.85 shipping
+                - listitem [ref=e673]:
+                  - generic [ref=e675]:
+                    - link [ref=e676] [cursor=pointer]:
+                      - /url: /Skullcandy-Bluetooth-Headphones-Multi-Sensory-Microphone/dp/B0DWCLTRVM/ref=pd_sbs_d_sccl_1_2/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWCLTRVM&psc=1
+                      - img [ref=e678]
+                    - generic [ref=e680]:
+                      - link "Skullcandy Crusher 540 Active Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Sweat and Water Resistant, 40 Hours Battery, Microphone for iPhone Android - Coal" [ref=e681] [cursor=pointer]:
+                        - /url: /Skullcandy-Bluetooth-Headphones-Multi-Sensory-Microphone/dp/B0DWCLTRVM/ref=pd_sbs_d_sccl_1_2/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWCLTRVM&psc=1
+                        - generic [ref=e683]: Skullcandy Crusher 540 Active Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Sweat and Water Resistant, 40 Hours Battery, Microphone for iPhone Android - Coal
+                      - link "4.5 out of 5 stars, 416 ratings" [ref=e686] [cursor=pointer]:
+                        - /url: /product-reviews/B0DWCLTRVM/ref=pd_sbs_d_sccl_1_2_cr/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWCLTRVM
+                        - generic [ref=e688]: 4.5 out of 5 stars
+                        - text: "416"
+                      - generic [ref=e689]:
+                        - link "INR16,358.66" [ref=e692] [cursor=pointer]:
+                          - /url: /Skullcandy-Bluetooth-Headphones-Multi-Sensory-Microphone/dp/B0DWCLTRVM/ref=pd_sbs_d_sccl_1_2/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWCLTRVM&psc=1
+                          - generic [ref=e694]:
+                            - generic [ref=e695]: INR16,358.66
+                            - generic [ref=e696]:
+                              - text: INR
+                              - generic [ref=e697]: 16,358.
+                              - text: "66"
+                        - generic [ref=e699]: Get it Jun 25 - Jul 10
+                - listitem [ref=e700]:
+                  - generic [ref=e702]:
+                    - link [ref=e703] [cursor=pointer]:
+                      - /url: /Skullcandy-Bluetooth-Headphones-Multi-Sensory-Microphone/dp/B08FCGH2RL/ref=pd_sbs_d_sccl_1_3/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B08FCGH2RL&psc=1
+                      - img [ref=e705]
+                    - generic [ref=e707]:
+                      - link "Skullcandy Crusher Evo Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Up to 40 Hours Battery, Microphone for iPhone Android - True Black" [ref=e708] [cursor=pointer]:
+                        - /url: /Skullcandy-Bluetooth-Headphones-Multi-Sensory-Microphone/dp/B08FCGH2RL/ref=pd_sbs_d_sccl_1_3/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B08FCGH2RL&psc=1
+                        - generic [ref=e710]: Skullcandy Crusher Evo Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Up to 40 Hours Battery, Microphone for iPhone Android - True Black
+                      - link "4.7 out of 5 stars, 19,237 ratings" [ref=e713] [cursor=pointer]:
+                        - /url: /product-reviews/B08FCGH2RL/ref=pd_sbs_d_sccl_1_3_cr/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B08FCGH2RL
+                        - generic [ref=e715]: 4.7 out of 5 stars
+                        - text: 19,237
+                      - generic [ref=e720]: Amazon's Choice
+                      - link "INR19,021.85" [ref=e724] [cursor=pointer]:
+                        - /url: /Skullcandy-Bluetooth-Headphones-Multi-Sensory-Microphone/dp/B08FCGH2RL/ref=pd_sbs_d_sccl_1_3/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B08FCGH2RL&psc=1
+                        - generic [ref=e726]:
+                          - generic [ref=e727]: INR19,021.85
+                          - generic [ref=e728]:
+                            - text: INR
+                            - generic [ref=e729]: 19,021.
+                            - text: "85"
+                      - text: INR 1,114.74 shipping
+                - listitem [ref=e730]:
+                  - generic [ref=e732]:
+                    - link [ref=e733] [cursor=pointer]:
+                      - /url: /Skullcandy-Headphones-Cancelling-Personalized-Microphone/dp/B0FJ43YBVQ/ref=pd_sbs_d_sccl_1_4/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0FJ43YBVQ&psc=1
+                      - img [ref=e735]
+                    - generic [ref=e737]:
+                      - link "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black" [ref=e738] [cursor=pointer]:
+                        - /url: /Skullcandy-Headphones-Cancelling-Personalized-Microphone/dp/B0FJ43YBVQ/ref=pd_sbs_d_sccl_1_4/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0FJ43YBVQ&psc=1
+                        - generic [ref=e740]: Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black
+                      - link "4.0 out of 5 stars, 271 ratings" [ref=e743] [cursor=pointer]:
+                        - /url: /product-reviews/B0FJ43YBVQ/ref=pd_sbs_d_sccl_1_4_cr/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0FJ43YBVQ
+                        - generic [ref=e745]: 4.0 out of 5 stars
+                        - text: "271"
+                      - link "INR15,217.29" [ref=e749] [cursor=pointer]:
+                        - /url: /Skullcandy-Headphones-Cancelling-Personalized-Microphone/dp/B0FJ43YBVQ/ref=pd_sbs_d_sccl_1_4/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0FJ43YBVQ&psc=1
+                        - generic [ref=e751]:
+                          - generic [ref=e752]: INR15,217.29
+                          - generic [ref=e753]:
+                            - text: INR
+                            - generic [ref=e754]: 15,217.
+                            - text: "29"
+                      - text: INR 1,119.49 shipping
+                - listitem [ref=e755]:
+                  - generic [ref=e757]:
+                    - link [ref=e758] [cursor=pointer]:
+                      - /url: /Skullcandy-Immersion-Multi-Sensory-PlayStation-Multi-Platform/dp/B0DWD3GVJL/ref=pd_sbs_d_sccl_1_5/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWD3GVJL&psc=1
+                      - img [ref=e760]
+                    - generic [ref=e762]:
+                      - link "Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and Comfort, THX Spatial Audio, Multi-Sensory Bass and Platform- Digi-Black, Removable Mic, PC, PlayStation, Nintendo" [ref=e763] [cursor=pointer]:
+                        - /url: /Skullcandy-Immersion-Multi-Sensory-PlayStation-Multi-Platform/dp/B0DWD3GVJL/ref=pd_sbs_d_sccl_1_5/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWD3GVJL&psc=1
+                        - generic [ref=e765]: Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and Comfort, THX Spatial Audio, Multi-Sensory Bass and Platform- Digi-Black, Removable Mic, PC, PlayStation, Nintendo
+                      - link "4.3 out of 5 stars, 286 ratings" [ref=e768] [cursor=pointer]:
+                        - /url: /product-reviews/B0DWD3GVJL/ref=pd_sbs_d_sccl_1_5_cr/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWD3GVJL
+                        - generic [ref=e770]: 4.3 out of 5 stars
+                        - text: "286"
+                      - link "INR21,925.68" [ref=e774] [cursor=pointer]:
+                        - /url: /Skullcandy-Immersion-Multi-Sensory-PlayStation-Multi-Platform/dp/B0DWD3GVJL/ref=pd_sbs_d_sccl_1_5/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0DWD3GVJL&psc=1
+                        - generic [ref=e776]:
+                          - generic [ref=e777]: INR21,925.68
+                          - generic [ref=e778]:
+                            - text: INR
+                            - generic [ref=e779]: 21,925.
+                            - text: "68"
+                      - text: INR 1,392.47 shipping
+                - listitem [ref=e780]:
+                  - generic [ref=e782]:
+                    - link [ref=e783] [cursor=pointer]:
+                      - /url: /Skullcandy-Canceling-Headphones-Microphone-Bluetooth/dp/B0CC72VQZP/ref=pd_sbs_d_sccl_1_6/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0CC72VQZP&psc=1
+                      - img [ref=e785]
+                    - generic [ref=e787]:
+                      - link "Skullcandy Crusher ANC XT 2 - True Black" [ref=e788] [cursor=pointer]:
+                        - /url: /Skullcandy-Canceling-Headphones-Microphone-Bluetooth/dp/B0CC72VQZP/ref=pd_sbs_d_sccl_1_6/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0CC72VQZP&psc=1
+                        - generic [ref=e790]: Skullcandy Crusher ANC XT 2 - True Black
+                      - link "4.4 out of 5 stars, 58 ratings" [ref=e793] [cursor=pointer]:
+                        - /url: /product-reviews/B0CC72VQZP/ref=pd_sbs_d_sccl_1_6_cr/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0CC72VQZP
+                        - generic [ref=e795]: 4.4 out of 5 stars
+                        - text: "58"
+                      - link "INR19,517.39" [ref=e799] [cursor=pointer]:
+                        - /url: /Skullcandy-Canceling-Headphones-Microphone-Bluetooth/dp/B0CC72VQZP/ref=pd_sbs_d_sccl_1_6/143-5694781-0715916?pd_rd_w=wUGDe&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222&pd_rd_i=B0CC72VQZP&psc=1
+                        - generic [ref=e801]:
+                          - generic [ref=e802]: INR19,517.39
+                          - generic [ref=e803]:
+                            - text: INR
+                            - generic [ref=e804]: 19,517.
+                            - text: "39"
+                      - text: INR 1,135.66 shipping
+        - generic [ref=e809]:
+          - separator [ref=e810]
+          - region "Products related to this item" [ref=e811]:
+            - generic [ref=e813]:
+              - heading "Products related to this item" [level=2] [ref=e814]
+              - link "Sponsored" [ref=e818] [cursor=pointer]:
+                - /url: "#sp_detail_feedbackForm"
+                - generic [ref=e819]:
+                  - text: Sponsored
+                  - img [ref=e820]
+            - list [ref=e828]:
+              - listitem [ref=e829]:
+                - generic [ref=e830]:
+                  - link "Skullcandy Crusher Evo Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Up to 40 Hours Battery, Microphone for iPhone Android - True Black" [ref=e831] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e834]
+                    - generic [ref=e835]: Skullcandy Crusher Evo Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise...
+                  - link "4.7 out of 5 stars 19,237 ratings" [ref=e837] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: 19,237
+                  - generic [ref=e839]:
+                    - link "Amazon's Choice":
+                      - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                      - generic [ref=e841] [cursor=pointer]: Amazon's Choice
+                  - 'link "-5% INR 19,774.70 List: INR 20,763.48 List: INR 20,763.48" [ref=e843] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - text: "-5%"
+                    - generic [ref=e844]:
+                      - generic [ref=e845]: INR 19,774.70
+                      - generic [ref=e846]:
+                        - text: INR
+                        - generic [ref=e847]:
+                          - text: 19,774
+                          - generic [ref=e848]: .
+                        - text: "70"
+                    - generic [ref=e849]: "List: INR 20,763.48"
+                    - generic [ref=e850]:
+                      - text: "List:"
+                      - generic [ref=e851]:
+                        - generic [ref=e852]: INR 20,763.48
+                        - text: INR20,763.48
+                  - link "Amazon Prime" [ref=e853] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e855]
+              - listitem [ref=e856]:
+                - generic [ref=e857]:
+                  - link "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black" [ref=e858] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI2NTIxMDYwOTMwMjo6Ojo&url=%2Fdp%2FB0C9L8ZR6Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0C9L8ZR6Q%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e861]
+                    - generic [ref=e862]: Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory ...
+                  - link "4.6 out of 5 stars 4,015 ratings" [ref=e864] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI2NTIxMDYwOTMwMjo6Ojo&url=%2Fdp%2FB0C9L8ZR6Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0C9L8ZR6Q%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: 4,015
+                  - 'link "-8% INR 21,752.26 List: INR 23,729.83 List: INR 23,729.83" [ref=e867] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI2NTIxMDYwOTMwMjo6Ojo&url=%2Fdp%2FB0C9L8ZR6Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0C9L8ZR6Q%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - text: "-8%"
+                    - generic [ref=e868]:
+                      - generic [ref=e869]: INR 21,752.26
+                      - generic [ref=e870]:
+                        - text: INR
+                        - generic [ref=e871]:
+                          - text: 21,752
+                          - generic [ref=e872]: .
+                        - text: "26"
+                    - generic [ref=e873]: "List: INR 23,729.83"
+                    - generic [ref=e874]:
+                      - text: "List:"
+                      - generic [ref=e875]:
+                        - generic [ref=e876]: INR 23,729.83
+                        - text: INR23,729.83
+                  - link "Amazon Prime" [ref=e877] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI2NTIxMDYwOTMwMjo6Ojo&url=%2Fdp%2FB0C9L8ZR6Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0C9L8ZR6Q%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e879]
+              - listitem [ref=e880]:
+                - generic [ref=e881]:
+                  - link "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black" [ref=e882] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTMxMTc3ODA3MTgwMjo6Ojo&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0FJ43YBVQ%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e885]
+                    - generic [ref=e886]: Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Aud...
+                  - link "4.0 out of 5 stars 271 ratings" [ref=e888] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTMxMTc3ODA3MTgwMjo6Ojo&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0FJ43YBVQ%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: "271"
+                  - link "INR 15,819.56" [ref=e891] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTMxMTc3ODA3MTgwMjo6Ojo&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0FJ43YBVQ%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - generic [ref=e892]:
+                      - generic [ref=e893]: INR 15,819.56
+                      - generic [ref=e894]:
+                        - text: INR
+                        - generic [ref=e895]:
+                          - text: 15,819
+                          - generic [ref=e896]: .
+                        - text: "56"
+                  - link "Amazon Prime" [ref=e897] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTMxMTc3ODA3MTgwMjo6Ojo&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0FJ43YBVQ%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e899]
+              - listitem [ref=e900]:
+                - generic [ref=e901]:
+                  - link "Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and Comfort, THX Spatial Audio, Multi-Sensory Bass and Platform- Digi-Black, Removable Mic, PC, PlayStation, Nintendo" [ref=e902] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e905]
+                    - generic [ref=e906]: Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and…
+                  - link "4.3 out of 5 stars 286 ratings" [ref=e908] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: "286"
+                  - 'link "-15% INR 22,793.45 List: INR 26,696.19 List: INR 26,696.19" [ref=e911] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - text: "-15%"
+                    - generic [ref=e912]:
+                      - generic [ref=e913]: INR 22,793.45
+                      - generic [ref=e914]:
+                        - text: INR
+                        - generic [ref=e915]:
+                          - text: 22,793
+                          - generic [ref=e916]: .
+                        - text: "45"
+                    - generic [ref=e917]: "List: INR 26,696.19"
+                    - generic [ref=e918]:
+                      - text: "List:"
+                      - generic [ref=e919]:
+                        - generic [ref=e920]: INR 26,696.19
+                        - text: INR26,696.19
+                  - link "Amazon Prime" [ref=e921] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e923]
+              - listitem [ref=e924]:
+                - generic [ref=e925]:
+                  - link "Skullcandy Crusher Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Up to 50 Hours Battery, Microphone for iPhone Android" [ref=e926] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e929]
+                    - generic [ref=e930]: Skullcandy Crusher Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Iso...
+                  - link "4.6 out of 5 stars 16,359 ratings" [ref=e932] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: 16,359
+                  - link "INR 11,398.70" [ref=e935] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - generic [ref=e936]:
+                      - generic [ref=e937]: INR 11,398.70
+                      - generic [ref=e938]:
+                        - text: INR
+                        - generic [ref=e939]:
+                          - text: 11,398
+                          - generic [ref=e940]: .
+                        - text: "70"
+                  - link "Amazon Prime" [ref=e941] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e943]
+              - listitem [ref=e944]:
+                - generic [ref=e945]:
+                  - link "Skullcandy Method 540 ANC Wireless Earbuds, Sound by Bose, Bluetooth Headphones, Premium Noise Cancelling, Up to 40 Hours Battery, Skull AI Compatible, Microphone for iPhone Android - True Black" [ref=e946] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyODUwMjo6Ojo&url=%2Fdp%2FB0GQ2NQNZC%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GQ2NQNZC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e949]
+                    - generic [ref=e950]: Skullcandy Method 540 ANC Wireless Earbuds, Sound by Bose, Bluetooth…
+                  - link "4.2 out of 5 stars 30 ratings" [ref=e952] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyODUwMjo6Ojo&url=%2Fdp%2FB0GQ2NQNZC%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GQ2NQNZC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: "30"
+                  - link "INR 14,387.80" [ref=e955] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyODUwMjo6Ojo&url=%2Fdp%2FB0GQ2NQNZC%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GQ2NQNZC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - generic [ref=e956]:
+                      - generic [ref=e957]: INR 14,387.80
+                      - generic [ref=e958]:
+                        - text: INR
+                        - generic [ref=e959]:
+                          - text: 14,387
+                          - generic [ref=e960]: .
+                        - text: "80"
+                  - link "Amazon Prime" [ref=e961] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyODUwMjo6Ojo&url=%2Fdp%2FB0GQ2NQNZC%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GQ2NQNZC%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e963]
+              - listitem [ref=e964]:
+                - generic [ref=e965]:
+                  - link "Skullcandy Push 720 Open Wireless Open Ear Bluetooth Earbuds, Headphones, Waterproof, Clip-On Lightweight, 30 Hours Battery, Wireless Charging Pouch, Microphone for iPhone Android - Black/Silver" [ref=e966] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img [ref=e969]
+                    - generic [ref=e970]: Skullcandy Push 720 Open Wireless Open Ear Bluetooth Earbuds, Headphones,…
+                  - link "4.0 out of 5 stars 350 ratings" [ref=e972] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                    - text: "350"
+                  - 'link "-33% INR 9,886.85 List: INR 14,830.78 List: INR 14,830.78" [ref=e975] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - text: "-33%"
+                    - generic [ref=e976]:
+                      - generic [ref=e977]: INR 9,886.85
+                      - generic [ref=e978]:
+                        - text: INR
+                        - generic [ref=e979]:
+                          - text: 9,886
+                          - generic [ref=e980]: .
+                        - text: "85"
+                    - generic [ref=e981]: "List: INR 14,830.78"
+                    - generic [ref=e982]:
+                      - text: "List:"
+                      - generic [ref=e983]:
+                        - generic [ref=e984]: INR 14,830.78
+                        - text: INR14,830.78
+                  - link "Amazon Prime" [ref=e985] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTozNzAzOTk3MDIzMzA4MTI2OjE3ODE1MDQ0NDk6c3BfZGV0YWlsOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DpHHjp%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                    - img "Amazon Prime" [ref=e987]
+        - generic [ref=e988]:
+          - generic [ref=e990]:
+            - separator [ref=e991]
+            - heading "From the manufacturer" [level=2] [ref=e992]
+            - generic [ref=e995]:
+              - generic [ref=e997]:
+                - img "Aviator 900 ANC" [ref=e998]
+                - heading "IMMERSE YOURSELF IN 360° AUDIO SOUNDSCAPES, PREMIUM ADAPTIVE NOISE CANCELING AND CUTTING-EDGE PERFORMANCE AND FEATURES." [level=3] [ref=e999]
+              - generic [ref=e1002]:
+                - generic [ref=e1003]:
+                  - paragraph [ref=e1004]:
+                    - img "Aviator 900 ANC" [ref=e1005]
+                  - heading "SMARTER NOISE CANCELING." [level=4] [ref=e1006]
+                  - paragraph [ref=e1007]: Premium 6-Mic Adaptive ANC automatically adjusts to your surroundings for a personalized quiet, cutting the engine hum mid-flight, softening street noise, or silencing your surroundings at home. Aviator delivers pure, uninterrupted sound that hits just right, wherever you are.
+                - generic [ref=e1008]:
+                  - paragraph [ref=e1009]:
+                    - img "Aviator 900 ANC" [ref=e1010]
+                  - heading "FLY AROUND THE WORLD ON A SINGLE CHARGE." [level=4] [ref=e1011]
+                  - paragraph [ref=e1012]: With up to 60 hours of battery life and a first-class retro-premium design, these headphones are built to keep up with you and your style. Whether you're crossing continents or commuting across town, you’ll get hours of uninterrupted listening, no outlet required.
+                - generic [ref=e1013]:
+                  - paragraph [ref=e1014]:
+                    - img "Aviator 900 ANC" [ref=e1015]
+                  - heading "SURROUND SOUND THAT MOVES WITH YOU." [level=4] [ref=e1016]
+                  - paragraph [ref=e1017]: THX Spatial Audio with Head Tracking creates a 360° soundscape that shifts as you move, just like real life. Dialogue stays centered, footsteps sneak up from behind, and music surrounds you with stunning realism, pulling you deeper into your favorite content.
+              - generic [ref=e1019]:
+                - heading "AVIATOR 900 ANC SETS A NEW STANDARD FOR LUXURY LISTENING. EFFORTLESS, ELEVATED, AND UNMISTAKABLY SKULLCANDY." [level=3] [ref=e1020]
+                - img "Aviator 900 ANC" [ref=e1021]
+              - img "Aviator 900 ANC" [ref=e1024]
+              - table [ref=e1029]:
+                - rowgroup [ref=e1030]:
+                  - row "Aviator 900 ANC Crusher ANC 2 Hesh 540 ANC Icon ANC" [ref=e1031]:
+                    - cell [ref=e1032]
+                    - columnheader "Aviator 900 ANC" [ref=e1033]:
+                      - link "Aviator 900 ANC" [ref=e1034] [cursor=pointer]:
+                        - /url: /dp/B0FJ44ZNKT?ref=emc_s_m_5_i_atc
+                        - generic [ref=e1036]: Aviator 900 ANC
+                    - columnheader "Crusher ANC 2" [ref=e1037]:
+                      - link "Crusher ANC 2" [ref=e1038] [cursor=pointer]:
+                        - /url: /dp/B0C9L8ZR6Q?ref=emc_s_m_5_i_atc
+                        - generic [ref=e1040]: Crusher ANC 2
+                    - columnheader "Hesh 540 ANC" [ref=e1041]:
+                      - link "Hesh 540 ANC" [ref=e1042] [cursor=pointer]:
+                        - /url: /dp/B0FJ43YBVQ?ref=emc_s_m_5_i_atc
+                        - generic [ref=e1044]: Hesh 540 ANC
+                    - columnheader "Icon ANC" [ref=e1045]:
+                      - link "Icon ANC" [ref=e1046] [cursor=pointer]:
+                        - /url: /dp/B0DK622V14?ref=emc_s_m_5_i_atc
+                        - generic [ref=e1048]: Icon ANC
+                  - row "Add to Cart Add to Cart Add to Cart Add to Cart" [ref=e1049]:
+                    - cell [ref=e1050]
+                    - cell "Add to Cart" [ref=e1051]:
+                      - generic [ref=e1055] [cursor=pointer]:
+                        - button "Add to Cart" [ref=e1056]
+                        - generic [ref=e1057]: Add to Cart
+                    - cell "Add to Cart" [ref=e1058]:
+                      - generic [ref=e1062] [cursor=pointer]:
+                        - button "Add to Cart" [ref=e1063]
+                        - generic [ref=e1064]: Add to Cart
+                    - cell "Add to Cart" [ref=e1065]:
+                      - generic [ref=e1069] [cursor=pointer]:
+                        - button "Add to Cart" [ref=e1070]
+                        - generic [ref=e1071]: Add to Cart
+                    - cell "Add to Cart" [ref=e1072]:
+                      - generic [ref=e1076] [cursor=pointer]:
+                        - button "Add to Cart" [ref=e1077]
+                        - generic [ref=e1078]: Add to Cart
+                  - row "Customer Reviews 4.2 out of 5 stars 292 4.6 out of 5 stars 4,015 4.0 out of 5 stars 271 4.3 out of 5 stars 749" [ref=e1079]:
+                    - rowheader "Customer Reviews" [ref=e1080]
+                    - cell "4.2 out of 5 stars 292" [ref=e1081]:
+                      - generic [ref=e1083]:
+                        - generic [ref=e1085]: 4.2 out of 5 stars
+                        - text: "292"
+                    - cell "4.6 out of 5 stars 4,015" [ref=e1086]:
+                      - generic [ref=e1088]:
+                        - generic [ref=e1090]: 4.6 out of 5 stars
+                        - text: 4,015
+                    - cell "4.0 out of 5 stars 271" [ref=e1091]:
+                      - generic [ref=e1093]:
+                        - generic [ref=e1095]: 4.0 out of 5 stars
+                        - text: "271"
+                    - cell "4.3 out of 5 stars 749" [ref=e1096]:
+                      - generic [ref=e1098]:
+                        - generic [ref=e1100]: 4.3 out of 5 stars
+                        - text: "749"
+                  - row "Price INR 24,728.69 INR 20,924.13 INR 15,217.29 INR 8,983.52" [ref=e1101]:
+                    - rowheader "Price" [ref=e1102]
+                    - cell "INR 24,728.69" [ref=e1103]:
+                      - generic [ref=e1104]:
+                        - generic [ref=e1105]: INR 24,728.69
+                        - generic [ref=e1106]:
+                          - text: INR
+                          - generic [ref=e1107]:
+                            - text: 24,728
+                            - generic [ref=e1108]: .
+                          - text: "69"
+                    - cell "INR 20,924.13" [ref=e1109]:
+                      - generic [ref=e1110]:
+                        - generic [ref=e1111]: INR 20,924.13
+                        - generic [ref=e1112]:
+                          - text: INR
+                          - generic [ref=e1113]:
+                            - text: 20,924
+                            - generic [ref=e1114]: .
+                          - text: "13"
+                    - cell "INR 15,217.29" [ref=e1115]:
+                      - generic [ref=e1116]:
+                        - generic [ref=e1117]: INR 15,217.29
+                        - generic [ref=e1118]:
+                          - text: INR
+                          - generic [ref=e1119]:
+                            - text: 15,217
+                            - generic [ref=e1120]: .
+                          - text: "29"
+                    - cell "INR 8,983.52" [ref=e1121]:
+                      - generic [ref=e1122]:
+                        - generic [ref=e1123]: INR 8,983.52
+                        - generic [ref=e1124]:
+                          - text: INR
+                          - generic [ref=e1125]:
+                            - text: 8,983
+                            - generic [ref=e1126]: .
+                          - text: "52"
+                  - row "Total Battery Life 50 Hours (ANC On), 60 Hours (ANC Off) 50 Hours (ANC On), 60 Hours (ANC Off) 50 Hours (ANC On), 60 Hours (ANC Off) 50 Hours (ANC On), 60 Hours (ANC Off)" [ref=e1127]:
+                    - rowheader "Total Battery Life" [ref=e1128]
+                    - cell "50 Hours (ANC On), 60 Hours (ANC Off)" [ref=e1129]
+                    - cell "50 Hours (ANC On), 60 Hours (ANC Off)" [ref=e1130]
+                    - cell "50 Hours (ANC On), 60 Hours (ANC Off)" [ref=e1131]
+                    - cell "50 Hours (ANC On), 60 Hours (ANC Off)" [ref=e1132]
+                  - row "Rapid Charge 10 Minute Charge = 4 Hours Playtime 10 Minute Charge = 4 Hours Playtime 10 Minute Charge = 4 Hours Playtime 10 Minute Charge = 4 Hours Playtime" [ref=e1133]:
+                    - rowheader "Rapid Charge" [ref=e1134]
+                    - cell "10 Minute Charge = 4 Hours Playtime" [ref=e1135]
+                    - cell "10 Minute Charge = 4 Hours Playtime" [ref=e1136]
+                    - cell "10 Minute Charge = 4 Hours Playtime" [ref=e1137]
+                    - cell "10 Minute Charge = 4 Hours Playtime" [ref=e1138]
+                  - row "Active Noise Canceling (ANC) Premium Adaptive 6-Mic ANC Adjustable 4-Mic ANC Adjustable 4-Mic ANC 2-Mic ANC" [ref=e1139]:
+                    - rowheader "Active Noise Canceling (ANC)" [ref=e1140]
+                    - cell "Premium Adaptive 6-Mic ANC" [ref=e1141]
+                    - cell "Adjustable 4-Mic ANC" [ref=e1142]
+                    - cell "Adjustable 4-Mic ANC" [ref=e1143]
+                    - cell "2-Mic ANC" [ref=e1144]
+                  - row "Spatial Audio THX Spatial Audio with Head Tracking no data THX Spatial Audio no data" [ref=e1145]:
+                    - rowheader "Spatial Audio" [ref=e1146]
+                    - cell "THX Spatial Audio with Head Tracking" [ref=e1147]
+                    - cell "no data" [ref=e1148]:
+                      - generic [ref=e1149]: no data
+                    - cell "THX Spatial Audio" [ref=e1150]
+                    - cell "no data" [ref=e1151]:
+                      - generic [ref=e1152]: no data
+                  - row "Stay-Aware Mode Adjustable Adjustable Adjustable Adjustable" [ref=e1153]:
+                    - rowheader "Stay-Aware Mode" [ref=e1154]
+                    - cell "Adjustable" [ref=e1155]
+                    - cell "Adjustable" [ref=e1156]
+                    - cell "Adjustable" [ref=e1157]
+                    - cell "Adjustable" [ref=e1158]
+                  - row "Wear Detection ✓ no data ✓ no data" [ref=e1159]:
+                    - rowheader "Wear Detection" [ref=e1160]
+                    - cell "✓" [ref=e1161]
+                    - cell "no data" [ref=e1162]:
+                      - generic [ref=e1163]: no data
+                    - cell "✓" [ref=e1164]
+                    - cell "no data" [ref=e1165]:
+                      - generic [ref=e1166]: no data
+                  - row "Personal Sound ✓ ✓ ✓ ✓" [ref=e1167]:
+                    - rowheader "Personal Sound" [ref=e1168]
+                    - cell "✓" [ref=e1169]
+                    - cell "✓" [ref=e1170]
+                    - cell "✓" [ref=e1171]
+                    - cell "✓" [ref=e1172]
+                  - row "Sweat/Water Resistant ✓ no data no data ✓" [ref=e1173]:
+                    - rowheader "Sweat/Water Resistant" [ref=e1174]
+                    - cell "✓" [ref=e1175]
+                    - cell "no data" [ref=e1176]:
+                      - generic [ref=e1177]: no data
+                    - cell "no data" [ref=e1178]:
+                      - generic [ref=e1179]: no data
+                    - cell "✓" [ref=e1180]
+                  - row "Portability Flat-Folding & Collapsible Flat-Folding & Collapsible Flat-Folding & Collapsible Collapsible" [ref=e1181]:
+                    - rowheader "Portability" [ref=e1182]
+                    - cell "Flat-Folding & Collapsible" [ref=e1183]
+                    - cell "Flat-Folding & Collapsible" [ref=e1184]
+                    - cell "Flat-Folding & Collapsible" [ref=e1185]
+                    - cell "Collapsible" [ref=e1186]
+                  - row "App Compatibility Skullcandy App Skullcandy App Skullcandy App Skullcandy App" [ref=e1187]:
+                    - rowheader "App Compatibility" [ref=e1188]
+                    - cell "Skullcandy App" [ref=e1189]
+                    - cell "Skullcandy App" [ref=e1190]
+                    - cell "Skullcandy App" [ref=e1191]
+                    - cell "Skullcandy App" [ref=e1192]
+          - generic [ref=e1194]:
+            - separator [ref=e1195]
+            - heading "From the brand" [level=2] [ref=e1196]
+            - generic [ref=e1201]:
+              - img "The Original Lifestyle Audio Brand" [ref=e1206]
+              - region "Featured content carousel" [ref=e1207]:
+                - list [ref=e1212]:
+                  - listitem
+                  - listitem [ref=e1213]:
+                    - paragraph [ref=e1218]: Skullcandy was born in 2003, at the crossroads of music and boardsports culture. Our office was a garage and home was the snow-covered slopes of the Rocky Mountains. Over the past 20 years we’ve gone global, but our core values remain and our connection to boardsports culture is what drives us.
+                  - listitem [ref=e1219]:
+                    - heading "Crusher Bass" [level=3] [ref=e1224]
+                  - listitem [ref=e1225]:
+                    - heading "Sound by Bose" [level=3] [ref=e1230]
+                  - listitem [ref=e1231]:
+                    - heading "The Best Value in Audio" [level=3] [ref=e1236]
+                  - listitem [ref=e1237]:
+                    - generic [ref=e1239]:
+                      - list [ref=e1240]:
+                        - listitem [ref=e1241]:
+                          - link "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active N..." [ref=e1242] [cursor=pointer]:
+                            - /url: /dp/B0F1N9YNSQ/ref=emc_bcc_2_i
+                            - img "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active N..." [ref=e1243]
+                        - listitem [ref=e1244]:
+                          - link "Skullcandy Method 360 ANC Wireless Earbuds, Sound by Bose, Bluetooth Headphones, Premium Noise Ca..." [ref=e1245] [cursor=pointer]:
+                            - /url: /dp/B0DWCGDT92/ref=emc_bcc_2_i
+                            - img "Skullcandy Method 360 ANC Wireless Earbuds, Sound by Bose, Bluetooth Headphones, Premium Noise Ca..." [ref=e1246]
+                        - listitem [ref=e1247]:
+                          - link "Skullcandy Smokin’ Buds Wireless Earbuds, Bluetooth Headphones, Noise Isolating Fit, Up to 20 Hou..." [ref=e1248] [cursor=pointer]:
+                            - /url: /dp/B0DWTYQ5JV/ref=emc_bcc_2_i
+                            - img "Skullcandy Smokin’ Buds Wireless Earbuds, Bluetooth Headphones, Noise Isolating Fit, Up to 20 Hou..." [ref=e1249]
+                        - listitem [ref=e1250]:
+                          - link "Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and Comfort, THX Spatial ..." [ref=e1251] [cursor=pointer]:
+                            - /url: /dp/B0DWD3FRK7/ref=emc_bcc_2_i
+                            - img "Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and Comfort, THX Spatial ..." [ref=e1252]
+                      - generic [ref=e1253]:
+                        - heading "Premium Sound, Smarter Price" [level=3] [ref=e1254]
+                        - paragraph [ref=e1255]:
+                          - link "Visit the Skullcandy Store" [ref=e1256] [cursor=pointer]:
+                            - /url: /stores/page/9F16B940-F912-43FE-888C-5BB1B86337A9?store_ref=storeRecs_dp_aplus
+                            - text: Visit the Store
+          - generic:
+            - navigation:
+              - navigation "Navigate within the product detail page":
+                - navigation "Back to top jump link":
+                  - generic:
+                    - generic: Top
+                - navigation "About this item widget jump link":
+                  - generic:
+                    - generic: About this item
+                - navigation "Similar widget jump link":
+                  - generic:
+                    - generic: Similar
+                - navigation "Product information widget jump link":
+                  - generic:
+                    - generic: Product information
+                - navigation "From the brand widget jump link":
+                  - generic:
+                    - generic: From the Brand
+                - navigation "Customer reviews widget jump link":
+                  - generic:
+                    - generic: Reviews
+              - navigation "Back to top Image jump link":
+                - img "Skullcandy Aviator 900 ANC Wireless Over-Ear Bluetooth Headphones, THX Spatial Audio with Head Tracking, Adaptive Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black"
+              - navigation "Back to top title jump link":
+                - generic: Skullcandy Aviator 900 ANC Wireless Over-Ear Bluetooth Headphones, THX Spatial Audio with Head Tracking, Adaptive Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - True Black
+          - generic [ref=e1262]:
+            - heading "Product Videos" [level=2] [ref=e1264]
+            - generic [ref=e1269]:
+              - region "Video Player" [ref=e1270]:
+                - application [ref=e1271]
+                - generic [ref=e1272]:
+                  - button "Play" [ref=e1273] [cursor=pointer]
+                  - slider "Progress Bar" [ref=e1276] [cursor=pointer]: .
+                  - generic [ref=e1277]: "-0:00"
+                  - button "Mute" [ref=e1278] [cursor=pointer]
+              - generic [ref=e1282]:
+                - generic [ref=e1284]: skullcandy
+                - generic [ref=e1286]: New Aviator 900 ANC with THX Spatial Audio and Head Tracking
+              - button "Play" [ref=e1287] [cursor=pointer]
+          - generic [ref=e1359]:
+            - separator [ref=e1360]
+            - generic [ref=e1362]:
+              - heading "Product information" [level=1] [ref=e1363]
+              - generic [ref=e1367]:
+                - generic [ref=e1368]:
+                  - generic [ref=e1370]:
+                    - button "Item details" [ref=e1373] [cursor=pointer]:
+                      - heading "Item details" [level=5] [ref=e1375]
+                    - button "Design" [ref=e1378] [cursor=pointer]:
+                      - heading "Design" [level=5] [ref=e1380]
+                    - button "Style" [ref=e1383] [cursor=pointer]:
+                      - heading "Style" [level=5] [ref=e1385]
+                    - button "Measurements" [ref=e1388] [cursor=pointer]:
+                      - heading "Measurements" [level=5] [ref=e1390]
+                  - generic [ref=e1391]:
+                    - generic [ref=e1393]:
+                      - heading "Warranty & Support" [level=3] [ref=e1394]
+                      - generic [ref=e1395]:
+                        - text: "Amazon.com Return Policy:"
+                        - generic [ref=e1396]:
+                          - text: "Amazon.com Voluntary 30-Day Return Guarantee: You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditions"
+                          - link "here" [ref=e1397] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200
+                          - text: .
+                      - generic [ref=e1398]:
+                        - text: Manufacturer’s warranty can be requested from customer service.
+                        - link "Click here" [ref=e1399] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=help_search_1-1?nodeId=201596310
+                        - text: to make a request to customer service.
+                    - generic [ref=e1401]:
+                      - heading "Feedback" [level=3] [ref=e1402]
+                      - generic [ref=e1407]:
+                        - text: Would you like to
+                        - button "tell us about a lower price?" [ref=e1409] [cursor=pointer]: tell us about a lower price?
+                - generic [ref=e1413]:
+                  - button "Audio" [ref=e1416] [cursor=pointer]:
+                    - heading "Audio" [level=5] [ref=e1418]
+                  - button "Additional details" [ref=e1421] [cursor=pointer]:
+                    - heading "Additional details" [level=5] [ref=e1423]
+                  - button "Connectivity" [ref=e1426] [cursor=pointer]:
+                    - heading "Connectivity" [level=5] [ref=e1428]
+                  - button "Controls" [ref=e1431] [cursor=pointer]:
+                    - heading "Controls" [level=5] [ref=e1433]
+                  - button "Battery" [ref=e1436] [cursor=pointer]:
+                    - heading "Battery" [level=5] [ref=e1438]
+          - generic [ref=e1441]:
+            - heading "Product Description" [level=2] [ref=e1444]
+            - paragraph [ref=e1446]: Immerse yourself in 360° audio soundscapes, premium adaptive noise canceling and cutting-edge performance and features. Wrapped in unrivaled comfort and an iconic, retro-inspired design, Aviator 900 ANC sets a new standard for luxury listening — effortless, elevated, and unmistakably Skullcandy.
+        - generic [ref=e1448]:
+          - separator [ref=e1449]
+          - heading "What's in the box" [level=2] [ref=e1450]
+          - generic [ref=e1451]:
+            - listitem [ref=e1452]: Aviator® 900 ANC Wireless Headphones
+            - listitem [ref=e1453]: Cable
+            - listitem [ref=e1454]: Protective Case
+            - listitem [ref=e1455]: USB-C Charging Cable
+            - listitem [ref=e1456]: User Guide
+        - generic [ref=e1458]:
+          - separator [ref=e1459]
+          - generic [ref=e1460]:
+            - 'heading "Top Brand: Skullcandy" [level=2] [ref=e1461]'
+            - generic [ref=e1462]:
+              - generic [ref=e1465]:
+                - generic [ref=e1466]: Highly Rated
+                - generic [ref=e1467]: 100K+ customers rate items from this brand highly
+              - generic [ref=e1470]:
+                - generic [ref=e1471]: Trending
+                - generic [ref=e1472]: 100K+ orders for this brand in past 3 months
+              - generic [ref=e1475]:
+                - generic [ref=e1476]: Low Returns
+                - generic [ref=e1477]: Customers usually keep items from this brand
+        - generic [ref=e1480]:
+          - separator [ref=e1481]
+          - region "Products related to this item" [ref=e1482]:
+            - generic [ref=e1484]:
+              - heading "Products related to this item" [level=2] [ref=e1485]
+              - link "Sponsored" [ref=e1489] [cursor=pointer]:
+                - /url: "#sp_detail2_feedbackForm"
+                - generic [ref=e1490]:
+                  - text: Sponsored
+                  - img [ref=e1491]
+            - list [ref=e1499]:
+              - listitem [ref=e1500]:
+                - generic [ref=e1501]:
+                  - link "Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory Bass, Active Noise Cancelling, Up to 60 Hours Battery, Microphone for iPhone Android - Hazard" [ref=e1502] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI2NzI5NzMyODgwMjo6Ojo&url=%2Fdp%2FB0GFM7HWPT%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GFM7HWPT%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1505]
+                    - generic [ref=e1506]: Skullcandy Crusher ANC 2 Wireless Over-Ear Bluetooth Headphones with Multi-Sensory ...
+                  - link "4.6 out of 5 stars 4,015 ratings" [ref=e1508] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI2NzI5NzMyODgwMjo6Ojo&url=%2Fdp%2FB0GFM7HWPT%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GFM7HWPT%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: 4,015
+                  - 'link "-8% INR 21,752.26 List: INR 23,729.83 List: INR 23,729.83" [ref=e1511] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI2NzI5NzMyODgwMjo6Ojo&url=%2Fdp%2FB0GFM7HWPT%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GFM7HWPT%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - text: "-8%"
+                    - generic [ref=e1512]:
+                      - generic [ref=e1513]: INR 21,752.26
+                      - generic [ref=e1514]:
+                        - text: INR
+                        - generic [ref=e1515]:
+                          - text: 21,752
+                          - generic [ref=e1516]: .
+                        - text: "26"
+                    - generic [ref=e1517]: "List: INR 23,729.83"
+                    - generic [ref=e1518]:
+                      - text: "List:"
+                      - generic [ref=e1519]:
+                        - generic [ref=e1520]: INR 23,729.83
+                        - text: INR23,729.83
+                  - link "Amazon Prime" [ref=e1521] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI2NzI5NzMyODgwMjo6Ojo&url=%2Fdp%2FB0GFM7HWPT%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GFM7HWPT%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1523]
+              - listitem [ref=e1524]:
+                - generic [ref=e1525]:
+                  - link "Skullcandy Crusher Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Up to 50 Hours Battery, Microphone for iPhone Android" [ref=e1526] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1529]
+                    - generic [ref=e1530]: Skullcandy Crusher Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Iso...
+                  - link "4.6 out of 5 stars 16,359 ratings" [ref=e1532] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: 16,359
+                  - link "INR 11,398.70" [ref=e1535] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - generic [ref=e1536]:
+                      - generic [ref=e1537]: INR 11,398.70
+                      - generic [ref=e1538]:
+                        - text: INR
+                        - generic [ref=e1539]:
+                          - text: 11,398
+                          - generic [ref=e1540]: .
+                        - text: "70"
+                  - link "Amazon Prime" [ref=e1541] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzMjkwMjo6Ojo&url=%2Fdp%2FB01DWH77GC%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB01DWH77GC%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1543]
+              - listitem [ref=e1544]:
+                - generic [ref=e1545]:
+                  - link "Skullcandy Hesh ANC Wireless Over-Ear Bluetooth Headphones, Active Noise Cancelling, Up to 22 Hrs Battery, Foldable Lightweight Design, Microphone for iPhone Android - Preppy Sage" [ref=e1546] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDYwMjo6Ojo&url=%2Fdp%2FB0DVH63P58%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DVH63P58%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1549]
+                    - generic [ref=e1550]: Skullcandy Hesh ANC Wireless Over-Ear Bluetooth Headphones, Active Noise Cancelling...
+                  - link "4.6 out of 5 stars 8,993 ratings" [ref=e1552] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDYwMjo6Ojo&url=%2Fdp%2FB0DVH63P58%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DVH63P58%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: 8,993
+                  - link "INR 12,754.33" [ref=e1555] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDYwMjo6Ojo&url=%2Fdp%2FB0DVH63P58%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DVH63P58%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - generic [ref=e1556]:
+                      - generic [ref=e1557]: INR 12,754.33
+                      - generic [ref=e1558]:
+                        - text: INR
+                        - generic [ref=e1559]:
+                          - text: 12,754
+                          - generic [ref=e1560]: .
+                        - text: "33"
+                  - link "Amazon Prime" [ref=e1561] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDYwMjo6Ojo&url=%2Fdp%2FB0DVH63P58%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DVH63P58%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1563]
+              - listitem [ref=e1564]:
+                - generic [ref=e1565]:
+                  - link "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - Bone" [ref=e1566] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzNDMwMjo6Ojo&url=%2Fdp%2FB0FJ4CQ994%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FJ4CQ994%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1569]
+                    - generic [ref=e1570]: Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Aud...
+                  - link "4.0 out of 5 stars 271 ratings" [ref=e1572] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzNDMwMjo6Ojo&url=%2Fdp%2FB0FJ4CQ994%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FJ4CQ994%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: "271"
+                  - link "INR 15,819.56" [ref=e1575] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzNDMwMjo6Ojo&url=%2Fdp%2FB0FJ4CQ994%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FJ4CQ994%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - generic [ref=e1576]:
+                      - generic [ref=e1577]: INR 15,819.56
+                      - generic [ref=e1578]:
+                        - text: INR
+                        - generic [ref=e1579]:
+                          - text: 15,819
+                          - generic [ref=e1580]: .
+                        - text: "56"
+                  - link "Amazon Prime" [ref=e1581] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUzNDMwMjo6Ojo&url=%2Fdp%2FB0FJ4CQ994%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FJ4CQ994%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1583]
+              - listitem [ref=e1584]:
+                - generic [ref=e1585]:
+                  - link "Skullcandy Crusher Evo Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise Isolating Over-Ear Fit, Up to 40 Hours Battery, Microphone for iPhone Android - True Black" [ref=e1586] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1589]
+                    - generic [ref=e1590]: Skullcandy Crusher Evo Wireless Bluetooth Headphones with Multi-Sensory Bass, Noise...
+                  - link "4.7 out of 5 stars 19,237 ratings" [ref=e1592] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: 19,237
+                  - generic [ref=e1594]:
+                    - link "Amazon's Choice":
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                      - generic [ref=e1596] [cursor=pointer]: Amazon's Choice
+                  - 'link "-5% INR 19,774.70 List: INR 20,763.48 List: INR 20,763.48" [ref=e1598] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - text: "-5%"
+                    - generic [ref=e1599]:
+                      - generic [ref=e1600]: INR 19,774.70
+                      - generic [ref=e1601]:
+                        - text: INR
+                        - generic [ref=e1602]:
+                          - text: 19,774
+                          - generic [ref=e1603]: .
+                        - text: "70"
+                    - generic [ref=e1604]: "List: INR 20,763.48"
+                    - generic [ref=e1605]:
+                      - text: "List:"
+                      - generic [ref=e1606]:
+                        - generic [ref=e1607]: INR 20,763.48
+                        - text: INR20,763.48
+                  - link "Amazon Prime" [ref=e1608] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI4MDI3OTYwMjkwMjo6Ojo&url=%2Fdp%2FB08FCGH2RL%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB08FCGH2RL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1610]
+              - listitem [ref=e1611]:
+                - generic [ref=e1612]:
+                  - link "Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and Comfort, THX Spatial Audio, Multi-Sensory Bass and Platform- Digi-Black, Removable Mic, PC, PlayStation, Nintendo" [ref=e1613] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1616]
+                    - generic [ref=e1617]: Skullcandy Crusher PLYR 720 Wireless Gaming Headset, Ultimate Immersion and…
+                  - link "4.3 out of 5 stars 286 ratings" [ref=e1619] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: "286"
+                  - 'link "-15% INR 22,793.45 List: INR 26,696.19 List: INR 26,696.19" [ref=e1622] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - text: "-15%"
+                    - generic [ref=e1623]:
+                      - generic [ref=e1624]: INR 22,793.45
+                      - generic [ref=e1625]:
+                        - text: INR
+                        - generic [ref=e1626]:
+                          - text: 22,793
+                          - generic [ref=e1627]: .
+                        - text: "45"
+                    - generic [ref=e1628]: "List: INR 26,696.19"
+                    - generic [ref=e1629]:
+                      - text: "List:"
+                      - generic [ref=e1630]:
+                        - generic [ref=e1631]: INR 26,696.19
+                        - text: INR26,696.19
+                  - link "Amazon Prime" [ref=e1632] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI5NTU3NjQwMTAwMjo6Ojo&url=%2Fdp%2FB0DWD3GVJL%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0DWD3GVJL%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1634]
+              - listitem [ref=e1635]:
+                - generic [ref=e1636]:
+                  - link "Skullcandy Push 720 Open Wireless Open Ear Bluetooth Earbuds, Headphones, Waterproof, Clip-On Lightweight, 30 Hours Battery, Wireless Charging Pouch, Microphone for iPhone Android - Black/Silver" [ref=e1637] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img [ref=e1640]
+                    - generic [ref=e1641]: Skullcandy Push 720 Open Wireless Open Ear Bluetooth Earbuds, Headphones,…
+                  - link "4.0 out of 5 stars 350 ratings" [ref=e1643] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                    - text: "350"
+                  - 'link "-33% INR 9,886.85 List: INR 14,830.78 List: INR 14,830.78" [ref=e1646] [cursor=pointer]':
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - text: "-33%"
+                    - generic [ref=e1647]:
+                      - generic [ref=e1648]: INR 9,886.85
+                      - generic [ref=e1649]:
+                        - text: INR
+                        - generic [ref=e1650]:
+                          - text: 9,886
+                          - generic [ref=e1651]: .
+                        - text: "85"
+                    - generic [ref=e1652]: "List: INR 14,830.78"
+                    - generic [ref=e1653]:
+                      - text: "List:"
+                      - generic [ref=e1654]:
+                        - generic [ref=e1655]: INR 14,830.78
+                        - text: INR14,830.78
+                  - link "Amazon Prime" [ref=e1656] [cursor=pointer]:
+                    - /url: /sspa/click?ie=UTF8&spc=MTo0ODAxMTMyMDA0MjMyOTU6MTc4MTUwNDQ0OTpzcF9kZXRhaWwyOjMwMTI3OTI0MjUyNDgwMjo6Ojo&url=%2Fdp%2FB0DYH933QN%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DYH933QN%26pd_rd_w%3DBfVH1%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DEMAXES9YSQXPA957HD0M%26pd_rd_wg%3DVgCI3%26pd_rd_r%3D921243f8-086d-4e44-bbf7-3884b35c5222%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                    - img "Amazon Prime" [ref=e1658]
+        - generic [ref=e1661]:
+          - separator [ref=e1662]
+          - generic [ref=e1663]:
+            - heading "Brands in this category on Amazon" [level=2] [ref=e1664]
+            - button "Leave feedback on Sponsored ad" [ref=e1669] [cursor=pointer]: Sponsored
+            - generic [ref=e1671]:
+              - button [disabled] [ref=e1674]
+              - list [ref=e1676]:
+                - listitem [ref=e1677]:
+                  - generic [ref=e1678]:
+                    - link "Sponsored ad from Skullcandy. Shop Skullcandy." [ref=e1679] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHE8RNdVGFVGn45vYHxhx94AAAGeyfCbAwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA2iMUW/clv1c_ek-wBYHXasbWHrcx-lUtTio7XXq-32I6fOcJOnm7ybSdplATf5JlxQcX-fMFXPuNrPfce42NUjLnEbfK920RlCOFQnBJljzCMCfLWgOEmcRVB4HJQgCKbff949NUxjK3NdFY-_Fj4s1EaA0KKvWlZ9UUpMTUNtXqjhTqziverNYe320Q1MpofKMqSQ5Qb9OSts0stCBpS3cY9Gc0M0zYxjkNSFo7YCqj2z4XvL4b-goqkQd4Ptai4izTQ8J118l4m8buS7FxsymQyvNjTwL2WaCwjLmTgj9z49BjfxgIcDWyKrwwMj06D3wmmGWQ6Zs-YbcFrU1dYL1Xa2rG0NazDGJwXFuP4MrMQp5Md5lu2lLWxOSV_86VrtdvO1wZHVhYl1smxYfvZd0iF1A4V7Cx2so1CZINJRDjlUaqiuY0cHZuuCL1jntRy4YCGVfEcR0BWIllfkkvtJWhjwMtiEAAn2kUzeAj844b7t_RDlUmJFiFsA_3rPl_bb_w0RA7AvDOMgHItfx1Zd630XV-YrmJ49HpbKz72_uny1XWZTeIVQu-Z4AZ7yLh-3kYDukxiiqm_QyVGVnRZIgonH67eaiPXTUg2XPQJLD1orkfZLFanxEGWJ57gd5mJyMmhIlQcUuDD3NppjkgQgFu1lZ873xWf-UmupECaqrDZ-TJZw8fbtRmQ6-kYg51DSZz1fiW7-MjC3-QS-hKwXPwuFKSTj4VleogMd7HQjAGv3Xf_n8mK4wYNhj62ppoU1kPklKv4PEys6nETJpOxC4jjVrd2GAxbalcH591wuCHiPGS11JegzyI5SSVAgeWeJCgX6oIwcKGg7cXpTA_c-2HPakrREAUYTm7BnlCIyrQQRqni6e-5SP0ngeCJxxX6hrUS4IT9k1-RUyWIQ9hhMFNQGz0lhJFkTV7iQ1hqySHyf1WhVzQDmTMBTnl8WW413h7Q9VOzEuAMdBfnUn0ZVPQlpGJP6yEZPkmOd1291li3j-X5n2I194M7tvci3CCeEEN8SbpM-RSRxOhqf404UMB-AOOBt-3LH61yL91BcU9wK1r-HqaVFCP3-_PGKDW8n-zcuxsCLCSIVqV1dMyRqITtxADoC5vybucAlaK0PoGsZplWeQKIS6owH3rTKFaVxJ8f64NRpecqbumgEaYfKhBZh-K0g6UVWgeUOC0NtH2ejhkDx7gOytKrbJse93AatcTfDsycgYBPhkZshWYseGqKflXJccqggZjJswfAqNL4_Bgjfj4US9yJQQc-Fs-CXez5zGdqrwvwE_nRwYfsiTR0e79hkMHe3OZDl5O_0qmZXtvmO7BNOn2LxrhJUMwqsQ_yMwILGm0uYhvYuKpStNaHemht1St-rVhkE6ovP5qmCOMequ8Hot6xlmPflh37t7lqdSXpGf5CPTU2OFonodvux7Y19VCOLdMQ86kikKLiyG9S9o-Fo3BkOV6zPKZ3gm-3TM298EbWm9XGdh3qJO9O3qcZxd0wG_rT_CwDU6BSZLzzMppWsRRHOVfaQVjwykh2fOhLAA0GvBpng5folHinSw_M4mvete14SNOjoPwf_GaY4TNwRFH7hnS/https://www.amazon.com/stores/page/0D621F1C-6AB4-41F5-9012-2D6592D836AB/?_encoding=UTF8&store_ref=SB_A00038263T0D28SGDDB8O-A0923548KK18ZZ48MWTT&pd_rd_plhdr=t&aaxitk=14acb5680813f77b7e6da9cecfa5f440&hsa_cr_id=0&lp_asins=B0DWCLTRVM%2CB0FM47VNCM%2CB0DWCGCS75&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from Skullcandy. Shop Skullcandy." [ref=e1680] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHE8RNdVGFVGn45vYHxhx94AAAGeyfCbAwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA2iMUW/clv1c_ek-wBYHXasbWHrcx-lUtTio7XXq-32I6fOcJOnm7ybSdplATf5JlxQcX-fMFXPuNrPfce42NUjLnEbfK920RlCOFQnBJljzCMCfLWgOEmcRVB4HJQgCKbff949NUxjK3NdFY-_Fj4s1EaA0KKvWlZ9UUpMTUNtXqjhTqziverNYe320Q1MpofKMqSQ5Qb9OSts0stCBpS3cY9Gc0M0zYxjkNSFo7YCqj2z4XvL4b-goqkQd4Ptai4izTQ8J118l4m8buS7FxsymQyvNjTwL2WaCwjLmTgj9z49BjfxgIcDWyKrwwMj06D3wmmGWQ6Zs-YbcFrU1dYL1Xa2rG0NazDGJwXFuP4MrMQp5Md5lu2lLWxOSV_86VrtdvO1wZHVhYl1smxYfvZd0iF1A4V7Cx2so1CZINJRDjlUaqiuY0cHZuuCL1jntRy4YCGVfEcR0BWIllfkkvtJWhjwMtiEAAn2kUzeAj844b7t_RDlUmJFiFsA_3rPl_bb_w0RA7AvDOMgHItfx1Zd630XV-YrmJ49HpbKz72_uny1XWZTeIVQu-Z4AZ7yLh-3kYDukxiiqm_QyVGVnRZIgonH67eaiPXTUg2XPQJLD1orkfZLFanxEGWJ57gd5mJyMmhIlQcUuDD3NppjkgQgFu1lZ873xWf-UmupECaqrDZ-TJZw8fbtRmQ6-kYg51DSZz1fiW7-MjC3-QS-hKwXPwuFKSTj4VleogMd7HQjAGv3Xf_n8mK4wYNhj62ppoU1kPklKv4PEys6nETJpOxC4jjVrd2GAxbalcH591wuCHiPGS11JegzyI5SSVAgeWeJCgX6oIwcKGg7cXpTA_c-2HPakrREAUYTm7BnlCIyrQQRqni6e-5SP0ngeCJxxX6hrUS4IT9k1-RUyWIQ9hhMFNQGz0lhJFkTV7iQ1hqySHyf1WhVzQDmTMBTnl8WW413h7Q9VOzEuAMdBfnUn0ZVPQlpGJP6yEZPkmOd1291li3j-X5n2I194M7tvci3CCeEEN8SbpM-RSRxOhqf404UMB-AOOBt-3LH61yL91BcU9wK1r-HqaVFCP3-_PGKDW8n-zcuxsCLCSIVqV1dMyRqITtxADoC5vybucAlaK0PoGsZplWeQKIS6owH3rTKFaVxJ8f64NRpecqbumgEaYfKhBZh-K0g6UVWgeUOC0NtH2ejhkDx7gOytKrbJse93AatcTfDsycgYBPhkZshWYseGqKflXJccqggZjJswfAqNL4_Bgjfj4US9yJQQc-Fs-CXez5zGdqrwvwE_nRwYfsiTR0e79hkMHe3OZDl5O_0qmZXtvmO7BNOn2LxrhJUMwqsQ_yMwILGm0uYhvYuKpStNaHemht1St-rVhkE6ovP5qmCOMequ8Hot6xlmPflh37t7lqdSXpGf5CPTU2OFonodvux7Y19VCOLdMQ86kikKLiyG9S9o-Fo3BkOV6zPKZ3gm-3TM298EbWm9XGdh3qJO9O3qcZxd0wG_rT_CwDU6BSZLzzMppWsRRHOVfaQVjwykh2fOhLAA0GvBpng5folHinSw_M4mvete14SNOjoPwf_GaY4TNwRFH7hnS/https://www.amazon.com/stores/page/0D621F1C-6AB4-41F5-9012-2D6592D836AB/?_encoding=UTF8&store_ref=SB_A00038263T0D28SGDDB8O-A0923548KK18ZZ48MWTT&pd_rd_plhdr=t&aaxitk=14acb5680813f77b7e6da9cecfa5f440&hsa_cr_id=0&lp_asins=B0DWCLTRVM%2CB0FM47VNCM%2CB0DWCGCS75&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_asin&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - img "Sponsored ad from Skullcandy. Shop Skullcandy." [ref=e1681]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHE8RNdVGFVGn45vYHxhx94AAAGeyfCbAwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA2iMUW/clv1c_ek-wBYHXasbWHrcx-lUtTio7XXq-32I6fOcJOnm7ybSdplATf5JlxQcX-fMFXPuNrPfce42NUjLnEbfK920RlCOFQnBJljzCMCfLWgOEmcRVB4HJQgCKbff949NUxjK3NdFY-_Fj4s1EaA0KKvWlZ9UUpMTUNtXqjhTqziverNYe320Q1MpofKMqSQ5Qb9OSts0stCBpS3cY9Gc0M0zYxjkNSFo7YCqj2z4XvL4b-goqkQd4Ptai4izTQ8J118l4m8buS7FxsymQyvNjTwL2WaCwjLmTgj9z49BjfxgIcDWyKrwwMj06D3wmmGWQ6Zs-YbcFrU1dYL1Xa2rG0NazDGJwXFuP4MrMQp5Md5lu2lLWxOSV_86VrtdvO1wZHVhYl1smxYfvZd0iF1A4V7Cx2so1CZINJRDjlUaqiuY0cHZuuCL1jntRy4YCGVfEcR0BWIllfkkvtJWhjwMtiEAAn2kUzeAj844b7t_RDlUmJFiFsA_3rPl_bb_w0RA7AvDOMgHItfx1Zd630XV-YrmJ49HpbKz72_uny1XWZTeIVQu-Z4AZ7yLh-3kYDukxiiqm_QyVGVnRZIgonH67eaiPXTUg2XPQJLD1orkfZLFanxEGWJ57gd5mJyMmhIlQcUuDD3NppjkgQgFu1lZ873xWf-UmupECaqrDZ-TJZw8fbtRmQ6-kYg51DSZz1fiW7-MjC3-QS-hKwXPwuFKSTj4VleogMd7HQjAGv3Xf_n8mK4wYNhj62ppoU1kPklKv4PEys6nETJpOxC4jjVrd2GAxbalcH591wuCHiPGS11JegzyI5SSVAgeWeJCgX6oIwcKGg7cXpTA_c-2HPakrREAUYTm7BnlCIyrQQRqni6e-5SP0ngeCJxxX6hrUS4IT9k1-RUyWIQ9hhMFNQGz0lhJFkTV7iQ1hqySHyf1WhVzQDmTMBTnl8WW413h7Q9VOzEuAMdBfnUn0ZVPQlpGJP6yEZPkmOd1291li3j-X5n2I194M7tvci3CCeEEN8SbpM-RSRxOhqf404UMB-AOOBt-3LH61yL91BcU9wK1r-HqaVFCP3-_PGKDW8n-zcuxsCLCSIVqV1dMyRqITtxADoC5vybucAlaK0PoGsZplWeQKIS6owH3rTKFaVxJ8f64NRpecqbumgEaYfKhBZh-K0g6UVWgeUOC0NtH2ejhkDx7gOytKrbJse93AatcTfDsycgYBPhkZshWYseGqKflXJccqggZjJswfAqNL4_Bgjfj4US9yJQQc-Fs-CXez5zGdqrwvwE_nRwYfsiTR0e79hkMHe3OZDl5O_0qmZXtvmO7BNOn2LxrhJUMwqsQ_yMwILGm0uYhvYuKpStNaHemht1St-rVhkE6ovP5qmCOMequ8Hot6xlmPflh37t7lqdSXpGf5CPTU2OFonodvux7Y19VCOLdMQ86kikKLiyG9S9o-Fo3BkOV6zPKZ3gm-3TM298EbWm9XGdh3qJO9O3qcZxd0wG_rT_CwDU6BSZLzzMppWsRRHOVfaQVjwykh2fOhLAA0GvBpng5folHinSw_M4mvete14SNOjoPwf_GaY4TNwRFH7hnS/https://www.amazon.com/stores/page/0D621F1C-6AB4-41F5-9012-2D6592D836AB/?_encoding=UTF8&store_ref=SB_A00038263T0D28SGDDB8O-A0923548KK18ZZ48MWTT&pd_rd_plhdr=t&aaxitk=14acb5680813f77b7e6da9cecfa5f440&hsa_cr_id=0&lp_asins=B0DWCLTRVM%2CB0FM47VNCM%2CB0DWCGCS75&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - generic:
+                            - link "Skullcandy" [ref=e1682] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHE8RNdVGFVGn45vYHxhx94AAAGeyfCbAwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA2iMUW/clv1c_ek-wBYHXasbWHrcx-lUtTio7XXq-32I6fOcJOnm7ybSdplATf5JlxQcX-fMFXPuNrPfce42NUjLnEbfK920RlCOFQnBJljzCMCfLWgOEmcRVB4HJQgCKbff949NUxjK3NdFY-_Fj4s1EaA0KKvWlZ9UUpMTUNtXqjhTqziverNYe320Q1MpofKMqSQ5Qb9OSts0stCBpS3cY9Gc0M0zYxjkNSFo7YCqj2z4XvL4b-goqkQd4Ptai4izTQ8J118l4m8buS7FxsymQyvNjTwL2WaCwjLmTgj9z49BjfxgIcDWyKrwwMj06D3wmmGWQ6Zs-YbcFrU1dYL1Xa2rG0NazDGJwXFuP4MrMQp5Md5lu2lLWxOSV_86VrtdvO1wZHVhYl1smxYfvZd0iF1A4V7Cx2so1CZINJRDjlUaqiuY0cHZuuCL1jntRy4YCGVfEcR0BWIllfkkvtJWhjwMtiEAAn2kUzeAj844b7t_RDlUmJFiFsA_3rPl_bb_w0RA7AvDOMgHItfx1Zd630XV-YrmJ49HpbKz72_uny1XWZTeIVQu-Z4AZ7yLh-3kYDukxiiqm_QyVGVnRZIgonH67eaiPXTUg2XPQJLD1orkfZLFanxEGWJ57gd5mJyMmhIlQcUuDD3NppjkgQgFu1lZ873xWf-UmupECaqrDZ-TJZw8fbtRmQ6-kYg51DSZz1fiW7-MjC3-QS-hKwXPwuFKSTj4VleogMd7HQjAGv3Xf_n8mK4wYNhj62ppoU1kPklKv4PEys6nETJpOxC4jjVrd2GAxbalcH591wuCHiPGS11JegzyI5SSVAgeWeJCgX6oIwcKGg7cXpTA_c-2HPakrREAUYTm7BnlCIyrQQRqni6e-5SP0ngeCJxxX6hrUS4IT9k1-RUyWIQ9hhMFNQGz0lhJFkTV7iQ1hqySHyf1WhVzQDmTMBTnl8WW413h7Q9VOzEuAMdBfnUn0ZVPQlpGJP6yEZPkmOd1291li3j-X5n2I194M7tvci3CCeEEN8SbpM-RSRxOhqf404UMB-AOOBt-3LH61yL91BcU9wK1r-HqaVFCP3-_PGKDW8n-zcuxsCLCSIVqV1dMyRqITtxADoC5vybucAlaK0PoGsZplWeQKIS6owH3rTKFaVxJ8f64NRpecqbumgEaYfKhBZh-K0g6UVWgeUOC0NtH2ejhkDx7gOytKrbJse93AatcTfDsycgYBPhkZshWYseGqKflXJccqggZjJswfAqNL4_Bgjfj4US9yJQQc-Fs-CXez5zGdqrwvwE_nRwYfsiTR0e79hkMHe3OZDl5O_0qmZXtvmO7BNOn2LxrhJUMwqsQ_yMwILGm0uYhvYuKpStNaHemht1St-rVhkE6ovP5qmCOMequ8Hot6xlmPflh37t7lqdSXpGf5CPTU2OFonodvux7Y19VCOLdMQ86kikKLiyG9S9o-Fo3BkOV6zPKZ3gm-3TM298EbWm9XGdh3qJO9O3qcZxd0wG_rT_CwDU6BSZLzzMppWsRRHOVfaQVjwykh2fOhLAA0GvBpng5folHinSw_M4mvete14SNOjoPwf_GaY4TNwRFH7hnS/https://www.amazon.com/stores/page/0D621F1C-6AB4-41F5-9012-2D6592D836AB/?_encoding=UTF8&store_ref=SB_A00038263T0D28SGDDB8O-A0923548KK18ZZ48MWTT&pd_rd_plhdr=t&aaxitk=14acb5680813f77b7e6da9cecfa5f440&hsa_cr_id=0&lp_asins=B0DWCLTRVM%2CB0FM47VNCM%2CB0DWCGCS75&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_logo&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - img "Skullcandy" [ref=e1683]
+                            - link:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHE8RNdVGFVGn45vYHxhx94AAAGeyfCbAwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA2iMUW/clv1c_ek-wBYHXasbWHrcx-lUtTio7XXq-32I6fOcJOnm7ybSdplATf5JlxQcX-fMFXPuNrPfce42NUjLnEbfK920RlCOFQnBJljzCMCfLWgOEmcRVB4HJQgCKbff949NUxjK3NdFY-_Fj4s1EaA0KKvWlZ9UUpMTUNtXqjhTqziverNYe320Q1MpofKMqSQ5Qb9OSts0stCBpS3cY9Gc0M0zYxjkNSFo7YCqj2z4XvL4b-goqkQd4Ptai4izTQ8J118l4m8buS7FxsymQyvNjTwL2WaCwjLmTgj9z49BjfxgIcDWyKrwwMj06D3wmmGWQ6Zs-YbcFrU1dYL1Xa2rG0NazDGJwXFuP4MrMQp5Md5lu2lLWxOSV_86VrtdvO1wZHVhYl1smxYfvZd0iF1A4V7Cx2so1CZINJRDjlUaqiuY0cHZuuCL1jntRy4YCGVfEcR0BWIllfkkvtJWhjwMtiEAAn2kUzeAj844b7t_RDlUmJFiFsA_3rPl_bb_w0RA7AvDOMgHItfx1Zd630XV-YrmJ49HpbKz72_uny1XWZTeIVQu-Z4AZ7yLh-3kYDukxiiqm_QyVGVnRZIgonH67eaiPXTUg2XPQJLD1orkfZLFanxEGWJ57gd5mJyMmhIlQcUuDD3NppjkgQgFu1lZ873xWf-UmupECaqrDZ-TJZw8fbtRmQ6-kYg51DSZz1fiW7-MjC3-QS-hKwXPwuFKSTj4VleogMd7HQjAGv3Xf_n8mK4wYNhj62ppoU1kPklKv4PEys6nETJpOxC4jjVrd2GAxbalcH591wuCHiPGS11JegzyI5SSVAgeWeJCgX6oIwcKGg7cXpTA_c-2HPakrREAUYTm7BnlCIyrQQRqni6e-5SP0ngeCJxxX6hrUS4IT9k1-RUyWIQ9hhMFNQGz0lhJFkTV7iQ1hqySHyf1WhVzQDmTMBTnl8WW413h7Q9VOzEuAMdBfnUn0ZVPQlpGJP6yEZPkmOd1291li3j-X5n2I194M7tvci3CCeEEN8SbpM-RSRxOhqf404UMB-AOOBt-3LH61yL91BcU9wK1r-HqaVFCP3-_PGKDW8n-zcuxsCLCSIVqV1dMyRqITtxADoC5vybucAlaK0PoGsZplWeQKIS6owH3rTKFaVxJ8f64NRpecqbumgEaYfKhBZh-K0g6UVWgeUOC0NtH2ejhkDx7gOytKrbJse93AatcTfDsycgYBPhkZshWYseGqKflXJccqggZjJswfAqNL4_Bgjfj4US9yJQQc-Fs-CXez5zGdqrwvwE_nRwYfsiTR0e79hkMHe3OZDl5O_0qmZXtvmO7BNOn2LxrhJUMwqsQ_yMwILGm0uYhvYuKpStNaHemht1St-rVhkE6ovP5qmCOMequ8Hot6xlmPflh37t7lqdSXpGf5CPTU2OFonodvux7Y19VCOLdMQ86kikKLiyG9S9o-Fo3BkOV6zPKZ3gm-3TM298EbWm9XGdh3qJO9O3qcZxd0wG_rT_CwDU6BSZLzzMppWsRRHOVfaQVjwykh2fOhLAA0GvBpng5folHinSw_M4mvete14SNOjoPwf_GaY4TNwRFH7hnS/https://www.amazon.com/stores/page/0D621F1C-6AB4-41F5-9012-2D6592D836AB/?_encoding=UTF8&store_ref=SB_A00038263T0D28SGDDB8O-A0923548KK18ZZ48MWTT&pd_rd_plhdr=t&aaxitk=14acb5680813f77b7e6da9cecfa5f440&hsa_cr_id=0&lp_asins=B0DWCLTRVM%2CB0FM47VNCM%2CB0DWCGCS75&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_hl&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                            - link "Shop Skullcandy" [ref=e1684] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHE8RNdVGFVGn45vYHxhx94AAAGeyfCbAwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA2iMUW/clv1c_ek-wBYHXasbWHrcx-lUtTio7XXq-32I6fOcJOnm7ybSdplATf5JlxQcX-fMFXPuNrPfce42NUjLnEbfK920RlCOFQnBJljzCMCfLWgOEmcRVB4HJQgCKbff949NUxjK3NdFY-_Fj4s1EaA0KKvWlZ9UUpMTUNtXqjhTqziverNYe320Q1MpofKMqSQ5Qb9OSts0stCBpS3cY9Gc0M0zYxjkNSFo7YCqj2z4XvL4b-goqkQd4Ptai4izTQ8J118l4m8buS7FxsymQyvNjTwL2WaCwjLmTgj9z49BjfxgIcDWyKrwwMj06D3wmmGWQ6Zs-YbcFrU1dYL1Xa2rG0NazDGJwXFuP4MrMQp5Md5lu2lLWxOSV_86VrtdvO1wZHVhYl1smxYfvZd0iF1A4V7Cx2so1CZINJRDjlUaqiuY0cHZuuCL1jntRy4YCGVfEcR0BWIllfkkvtJWhjwMtiEAAn2kUzeAj844b7t_RDlUmJFiFsA_3rPl_bb_w0RA7AvDOMgHItfx1Zd630XV-YrmJ49HpbKz72_uny1XWZTeIVQu-Z4AZ7yLh-3kYDukxiiqm_QyVGVnRZIgonH67eaiPXTUg2XPQJLD1orkfZLFanxEGWJ57gd5mJyMmhIlQcUuDD3NppjkgQgFu1lZ873xWf-UmupECaqrDZ-TJZw8fbtRmQ6-kYg51DSZz1fiW7-MjC3-QS-hKwXPwuFKSTj4VleogMd7HQjAGv3Xf_n8mK4wYNhj62ppoU1kPklKv4PEys6nETJpOxC4jjVrd2GAxbalcH591wuCHiPGS11JegzyI5SSVAgeWeJCgX6oIwcKGg7cXpTA_c-2HPakrREAUYTm7BnlCIyrQQRqni6e-5SP0ngeCJxxX6hrUS4IT9k1-RUyWIQ9hhMFNQGz0lhJFkTV7iQ1hqySHyf1WhVzQDmTMBTnl8WW413h7Q9VOzEuAMdBfnUn0ZVPQlpGJP6yEZPkmOd1291li3j-X5n2I194M7tvci3CCeEEN8SbpM-RSRxOhqf404UMB-AOOBt-3LH61yL91BcU9wK1r-HqaVFCP3-_PGKDW8n-zcuxsCLCSIVqV1dMyRqITtxADoC5vybucAlaK0PoGsZplWeQKIS6owH3rTKFaVxJ8f64NRpecqbumgEaYfKhBZh-K0g6UVWgeUOC0NtH2ejhkDx7gOytKrbJse93AatcTfDsycgYBPhkZshWYseGqKflXJccqggZjJswfAqNL4_Bgjfj4US9yJQQc-Fs-CXez5zGdqrwvwE_nRwYfsiTR0e79hkMHe3OZDl5O_0qmZXtvmO7BNOn2LxrhJUMwqsQ_yMwILGm0uYhvYuKpStNaHemht1St-rVhkE6ovP5qmCOMequ8Hot6xlmPflh37t7lqdSXpGf5CPTU2OFonodvux7Y19VCOLdMQ86kikKLiyG9S9o-Fo3BkOV6zPKZ3gm-3TM298EbWm9XGdh3qJO9O3qcZxd0wG_rT_CwDU6BSZLzzMppWsRRHOVfaQVjwykh2fOhLAA0GvBpng5folHinSw_M4mvete14SNOjoPwf_GaY4TNwRFH7hnS/https://www.amazon.com/stores/page/0D621F1C-6AB4-41F5-9012-2D6592D836AB/?_encoding=UTF8&store_ref=SB_A00038263T0D28SGDDB8O-A0923548KK18ZZ48MWTT&pd_rd_plhdr=t&aaxitk=14acb5680813f77b7e6da9cecfa5f440&hsa_cr_id=0&lp_asins=B0DWCLTRVM%2CB0FM47VNCM%2CB0DWCGCS75&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_cta&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - generic [ref=e1687]:
+                                - text: Shop
+                                - generic [ref=e1688]:
+                                  - text: Skullcandy
+                                  - img [ref=e1689]
+                - listitem [ref=e1691]:
+                  - generic [ref=e1692]:
+                    - link "Sponsored ad from Edifier. Shop Edifier." [ref=e1693] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHbnfmH5WneFNFcTYw8xVQoAAAGeyfCbBAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBKrwCF/clv1c_ek-wBXXWLbTWnOvbk7bok6bZkbhWJgkUALYYF9CyBF2AJNaNrlt-6Zc4vZMURYq0ffYsivLyzjXRPY3e6a9r0CBcZ-pNTaptG-DXkfZinAwGo7lYSQPoHHbYgrj1TFlsBWiTb5POlULD3c2hic-p-8XzAFyYlGXcsLwYD5WoRgQdjKokQl91880BCocK66FO2qUL4FVxC7fRReW6BlyFoSvZW4nf9EDx4Qf8j5KVFO0BItyJDTvjgxmloRbFcVzgrm35U981om2Ewuh8pcpEgAn-hLtANBj5tFZE_vqJRB0chbHLpGv12ATJoJIEIaL-j_Y5MZmMPup7mkQnjaS0CIaE0EodlMz4hRLQ7ba7akulnT-todjPkF6CVuctuuiRnXx3g8TjT6z5nUSOhoCAwUJVB2j71ms846mnuRiqADyOg565iWWCtN9vkf95RuHZFAt7Om8XMxRDboOdoDQuzhwZL9lvmQl34peZT53UqJSyca3FSCJZeILRFwS2V_-jX60CbfhpDn-fTEVP8mr83MAYpGWpUolkaXhPqUOrKv2Gc2aY3qL5ct_nB-rBFdrafgC7g5zZrX9C5IU70xGp1oRG4xiEaenNl5pbM7yOKFB5IFDaW6v0vEInp1dYW1dzH33eE35al0CF29UZLTRr6X8JOESHqn0M8jYHswHuostXGwm3VMNEXJifGCGAOczo_etwmlvFD3K7C_wyXX7w6WIMl3v5_xPJAe-M1T2QidNir9h2U2MAmIatbdSgOFehan4cvWGq2qo2rkI5yy_vKTk3uOMEHwE8rB-MN5a4Oro3HyJsGna99t7YLNQ7rEPEyMRwujz8ps4F2oH8MRFJgS8iwjBN7NYDveQxpVl0lLfBrcdUPfx-gY5VaAKI8AGIGRh420c_tlXOEi-GQENvhoJTYXvS89Awq-VZZGApc8t8qNSWFlm-m86HwUyknc1pZhnGlbNgA_LxfB-qa0i1KKC4HGb2f-NTjBy1nvluVuXXKUGSTpgWcHN6JNS2YYwdN6kJjzV8LVTXYz61SE7b6QMvu9fCS293iiKCEmfOIiuD_0YGy2EnFvFz-5zGIk1Gt4StErA5DUj-5rSfiJ2k0kgm3L_0ATjNHnZd11DwAvtuqIF_cWi7rKzxaZCITLbLPv0FbyQE4PAJZeTtUzf8ojXtNfxCEC42HQxxajhGW9kfApt4pLM_lpMhizU3DteDSfgTcR2CbXqZYhsCFO3poL_Ht_reYW7unixZcgebYKNBLlw19KeI6aikFMYER9NJFbTQh-Nf4XoUYlDVwBF4GoLKOyU50GGN11h6In_gvAw7X8DXG18vmC7lNr4JqXphNP8jDztfePA3HJ4_1Bhf2Ji1lUS1XkFV1AbFQdPIok1T3P2JWqdTOn7nBnU2neVwVzVJx_LwfuZyw-ZIsO0XZy_vzWTyRfjLfHB6ivXyRdod26v2ZDJsCwagIid2Mj2pzJlSHDPgJx-f4miTQF56u5ia5icryU8VWPVhiaVoKQzFiEYbgkbysJi_ewPESg/https://www.amazon.com/stores/page/A5AA7F7E-0D18-40B8-9616-740E7480B532/?_encoding=UTF8&store_ref=SB_A0897709I5TAIQMJ6L03-A06186081CJMIQSP9DX8E&pd_rd_plhdr=t&aaxitk=640682b9c4c733dd50bc87f01e999264&hsa_cr_id=0&lp_asins=B0F6LV656P%2CB0F6LTFTW9%2CB0F6LPDWWC&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from Edifier. Shop Edifier." [ref=e1694] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHbnfmH5WneFNFcTYw8xVQoAAAGeyfCbBAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBKrwCF/clv1c_ek-wBXXWLbTWnOvbk7bok6bZkbhWJgkUALYYF9CyBF2AJNaNrlt-6Zc4vZMURYq0ffYsivLyzjXRPY3e6a9r0CBcZ-pNTaptG-DXkfZinAwGo7lYSQPoHHbYgrj1TFlsBWiTb5POlULD3c2hic-p-8XzAFyYlGXcsLwYD5WoRgQdjKokQl91880BCocK66FO2qUL4FVxC7fRReW6BlyFoSvZW4nf9EDx4Qf8j5KVFO0BItyJDTvjgxmloRbFcVzgrm35U981om2Ewuh8pcpEgAn-hLtANBj5tFZE_vqJRB0chbHLpGv12ATJoJIEIaL-j_Y5MZmMPup7mkQnjaS0CIaE0EodlMz4hRLQ7ba7akulnT-todjPkF6CVuctuuiRnXx3g8TjT6z5nUSOhoCAwUJVB2j71ms846mnuRiqADyOg565iWWCtN9vkf95RuHZFAt7Om8XMxRDboOdoDQuzhwZL9lvmQl34peZT53UqJSyca3FSCJZeILRFwS2V_-jX60CbfhpDn-fTEVP8mr83MAYpGWpUolkaXhPqUOrKv2Gc2aY3qL5ct_nB-rBFdrafgC7g5zZrX9C5IU70xGp1oRG4xiEaenNl5pbM7yOKFB5IFDaW6v0vEInp1dYW1dzH33eE35al0CF29UZLTRr6X8JOESHqn0M8jYHswHuostXGwm3VMNEXJifGCGAOczo_etwmlvFD3K7C_wyXX7w6WIMl3v5_xPJAe-M1T2QidNir9h2U2MAmIatbdSgOFehan4cvWGq2qo2rkI5yy_vKTk3uOMEHwE8rB-MN5a4Oro3HyJsGna99t7YLNQ7rEPEyMRwujz8ps4F2oH8MRFJgS8iwjBN7NYDveQxpVl0lLfBrcdUPfx-gY5VaAKI8AGIGRh420c_tlXOEi-GQENvhoJTYXvS89Awq-VZZGApc8t8qNSWFlm-m86HwUyknc1pZhnGlbNgA_LxfB-qa0i1KKC4HGb2f-NTjBy1nvluVuXXKUGSTpgWcHN6JNS2YYwdN6kJjzV8LVTXYz61SE7b6QMvu9fCS293iiKCEmfOIiuD_0YGy2EnFvFz-5zGIk1Gt4StErA5DUj-5rSfiJ2k0kgm3L_0ATjNHnZd11DwAvtuqIF_cWi7rKzxaZCITLbLPv0FbyQE4PAJZeTtUzf8ojXtNfxCEC42HQxxajhGW9kfApt4pLM_lpMhizU3DteDSfgTcR2CbXqZYhsCFO3poL_Ht_reYW7unixZcgebYKNBLlw19KeI6aikFMYER9NJFbTQh-Nf4XoUYlDVwBF4GoLKOyU50GGN11h6In_gvAw7X8DXG18vmC7lNr4JqXphNP8jDztfePA3HJ4_1Bhf2Ji1lUS1XkFV1AbFQdPIok1T3P2JWqdTOn7nBnU2neVwVzVJx_LwfuZyw-ZIsO0XZy_vzWTyRfjLfHB6ivXyRdod26v2ZDJsCwagIid2Mj2pzJlSHDPgJx-f4miTQF56u5ia5icryU8VWPVhiaVoKQzFiEYbgkbysJi_ewPESg/https://www.amazon.com/stores/page/A5AA7F7E-0D18-40B8-9616-740E7480B532/?_encoding=UTF8&store_ref=SB_A0897709I5TAIQMJ6L03-A06186081CJMIQSP9DX8E&pd_rd_plhdr=t&aaxitk=640682b9c4c733dd50bc87f01e999264&hsa_cr_id=0&lp_asins=B0F6LV656P%2CB0F6LTFTW9%2CB0F6LPDWWC&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_asin&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - img "Sponsored ad from Edifier. Shop Edifier." [ref=e1695]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHbnfmH5WneFNFcTYw8xVQoAAAGeyfCbBAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBKrwCF/clv1c_ek-wBXXWLbTWnOvbk7bok6bZkbhWJgkUALYYF9CyBF2AJNaNrlt-6Zc4vZMURYq0ffYsivLyzjXRPY3e6a9r0CBcZ-pNTaptG-DXkfZinAwGo7lYSQPoHHbYgrj1TFlsBWiTb5POlULD3c2hic-p-8XzAFyYlGXcsLwYD5WoRgQdjKokQl91880BCocK66FO2qUL4FVxC7fRReW6BlyFoSvZW4nf9EDx4Qf8j5KVFO0BItyJDTvjgxmloRbFcVzgrm35U981om2Ewuh8pcpEgAn-hLtANBj5tFZE_vqJRB0chbHLpGv12ATJoJIEIaL-j_Y5MZmMPup7mkQnjaS0CIaE0EodlMz4hRLQ7ba7akulnT-todjPkF6CVuctuuiRnXx3g8TjT6z5nUSOhoCAwUJVB2j71ms846mnuRiqADyOg565iWWCtN9vkf95RuHZFAt7Om8XMxRDboOdoDQuzhwZL9lvmQl34peZT53UqJSyca3FSCJZeILRFwS2V_-jX60CbfhpDn-fTEVP8mr83MAYpGWpUolkaXhPqUOrKv2Gc2aY3qL5ct_nB-rBFdrafgC7g5zZrX9C5IU70xGp1oRG4xiEaenNl5pbM7yOKFB5IFDaW6v0vEInp1dYW1dzH33eE35al0CF29UZLTRr6X8JOESHqn0M8jYHswHuostXGwm3VMNEXJifGCGAOczo_etwmlvFD3K7C_wyXX7w6WIMl3v5_xPJAe-M1T2QidNir9h2U2MAmIatbdSgOFehan4cvWGq2qo2rkI5yy_vKTk3uOMEHwE8rB-MN5a4Oro3HyJsGna99t7YLNQ7rEPEyMRwujz8ps4F2oH8MRFJgS8iwjBN7NYDveQxpVl0lLfBrcdUPfx-gY5VaAKI8AGIGRh420c_tlXOEi-GQENvhoJTYXvS89Awq-VZZGApc8t8qNSWFlm-m86HwUyknc1pZhnGlbNgA_LxfB-qa0i1KKC4HGb2f-NTjBy1nvluVuXXKUGSTpgWcHN6JNS2YYwdN6kJjzV8LVTXYz61SE7b6QMvu9fCS293iiKCEmfOIiuD_0YGy2EnFvFz-5zGIk1Gt4StErA5DUj-5rSfiJ2k0kgm3L_0ATjNHnZd11DwAvtuqIF_cWi7rKzxaZCITLbLPv0FbyQE4PAJZeTtUzf8ojXtNfxCEC42HQxxajhGW9kfApt4pLM_lpMhizU3DteDSfgTcR2CbXqZYhsCFO3poL_Ht_reYW7unixZcgebYKNBLlw19KeI6aikFMYER9NJFbTQh-Nf4XoUYlDVwBF4GoLKOyU50GGN11h6In_gvAw7X8DXG18vmC7lNr4JqXphNP8jDztfePA3HJ4_1Bhf2Ji1lUS1XkFV1AbFQdPIok1T3P2JWqdTOn7nBnU2neVwVzVJx_LwfuZyw-ZIsO0XZy_vzWTyRfjLfHB6ivXyRdod26v2ZDJsCwagIid2Mj2pzJlSHDPgJx-f4miTQF56u5ia5icryU8VWPVhiaVoKQzFiEYbgkbysJi_ewPESg/https://www.amazon.com/stores/page/A5AA7F7E-0D18-40B8-9616-740E7480B532/?_encoding=UTF8&store_ref=SB_A0897709I5TAIQMJ6L03-A06186081CJMIQSP9DX8E&pd_rd_plhdr=t&aaxitk=640682b9c4c733dd50bc87f01e999264&hsa_cr_id=0&lp_asins=B0F6LV656P%2CB0F6LTFTW9%2CB0F6LPDWWC&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - generic:
+                            - link "Edifier" [ref=e1696] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHbnfmH5WneFNFcTYw8xVQoAAAGeyfCbBAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBKrwCF/clv1c_ek-wBXXWLbTWnOvbk7bok6bZkbhWJgkUALYYF9CyBF2AJNaNrlt-6Zc4vZMURYq0ffYsivLyzjXRPY3e6a9r0CBcZ-pNTaptG-DXkfZinAwGo7lYSQPoHHbYgrj1TFlsBWiTb5POlULD3c2hic-p-8XzAFyYlGXcsLwYD5WoRgQdjKokQl91880BCocK66FO2qUL4FVxC7fRReW6BlyFoSvZW4nf9EDx4Qf8j5KVFO0BItyJDTvjgxmloRbFcVzgrm35U981om2Ewuh8pcpEgAn-hLtANBj5tFZE_vqJRB0chbHLpGv12ATJoJIEIaL-j_Y5MZmMPup7mkQnjaS0CIaE0EodlMz4hRLQ7ba7akulnT-todjPkF6CVuctuuiRnXx3g8TjT6z5nUSOhoCAwUJVB2j71ms846mnuRiqADyOg565iWWCtN9vkf95RuHZFAt7Om8XMxRDboOdoDQuzhwZL9lvmQl34peZT53UqJSyca3FSCJZeILRFwS2V_-jX60CbfhpDn-fTEVP8mr83MAYpGWpUolkaXhPqUOrKv2Gc2aY3qL5ct_nB-rBFdrafgC7g5zZrX9C5IU70xGp1oRG4xiEaenNl5pbM7yOKFB5IFDaW6v0vEInp1dYW1dzH33eE35al0CF29UZLTRr6X8JOESHqn0M8jYHswHuostXGwm3VMNEXJifGCGAOczo_etwmlvFD3K7C_wyXX7w6WIMl3v5_xPJAe-M1T2QidNir9h2U2MAmIatbdSgOFehan4cvWGq2qo2rkI5yy_vKTk3uOMEHwE8rB-MN5a4Oro3HyJsGna99t7YLNQ7rEPEyMRwujz8ps4F2oH8MRFJgS8iwjBN7NYDveQxpVl0lLfBrcdUPfx-gY5VaAKI8AGIGRh420c_tlXOEi-GQENvhoJTYXvS89Awq-VZZGApc8t8qNSWFlm-m86HwUyknc1pZhnGlbNgA_LxfB-qa0i1KKC4HGb2f-NTjBy1nvluVuXXKUGSTpgWcHN6JNS2YYwdN6kJjzV8LVTXYz61SE7b6QMvu9fCS293iiKCEmfOIiuD_0YGy2EnFvFz-5zGIk1Gt4StErA5DUj-5rSfiJ2k0kgm3L_0ATjNHnZd11DwAvtuqIF_cWi7rKzxaZCITLbLPv0FbyQE4PAJZeTtUzf8ojXtNfxCEC42HQxxajhGW9kfApt4pLM_lpMhizU3DteDSfgTcR2CbXqZYhsCFO3poL_Ht_reYW7unixZcgebYKNBLlw19KeI6aikFMYER9NJFbTQh-Nf4XoUYlDVwBF4GoLKOyU50GGN11h6In_gvAw7X8DXG18vmC7lNr4JqXphNP8jDztfePA3HJ4_1Bhf2Ji1lUS1XkFV1AbFQdPIok1T3P2JWqdTOn7nBnU2neVwVzVJx_LwfuZyw-ZIsO0XZy_vzWTyRfjLfHB6ivXyRdod26v2ZDJsCwagIid2Mj2pzJlSHDPgJx-f4miTQF56u5ia5icryU8VWPVhiaVoKQzFiEYbgkbysJi_ewPESg/https://www.amazon.com/stores/page/A5AA7F7E-0D18-40B8-9616-740E7480B532/?_encoding=UTF8&store_ref=SB_A0897709I5TAIQMJ6L03-A06186081CJMIQSP9DX8E&pd_rd_plhdr=t&aaxitk=640682b9c4c733dd50bc87f01e999264&hsa_cr_id=0&lp_asins=B0F6LV656P%2CB0F6LTFTW9%2CB0F6LPDWWC&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_logo&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - img "Edifier" [ref=e1697]
+                            - link:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHbnfmH5WneFNFcTYw8xVQoAAAGeyfCbBAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBKrwCF/clv1c_ek-wBXXWLbTWnOvbk7bok6bZkbhWJgkUALYYF9CyBF2AJNaNrlt-6Zc4vZMURYq0ffYsivLyzjXRPY3e6a9r0CBcZ-pNTaptG-DXkfZinAwGo7lYSQPoHHbYgrj1TFlsBWiTb5POlULD3c2hic-p-8XzAFyYlGXcsLwYD5WoRgQdjKokQl91880BCocK66FO2qUL4FVxC7fRReW6BlyFoSvZW4nf9EDx4Qf8j5KVFO0BItyJDTvjgxmloRbFcVzgrm35U981om2Ewuh8pcpEgAn-hLtANBj5tFZE_vqJRB0chbHLpGv12ATJoJIEIaL-j_Y5MZmMPup7mkQnjaS0CIaE0EodlMz4hRLQ7ba7akulnT-todjPkF6CVuctuuiRnXx3g8TjT6z5nUSOhoCAwUJVB2j71ms846mnuRiqADyOg565iWWCtN9vkf95RuHZFAt7Om8XMxRDboOdoDQuzhwZL9lvmQl34peZT53UqJSyca3FSCJZeILRFwS2V_-jX60CbfhpDn-fTEVP8mr83MAYpGWpUolkaXhPqUOrKv2Gc2aY3qL5ct_nB-rBFdrafgC7g5zZrX9C5IU70xGp1oRG4xiEaenNl5pbM7yOKFB5IFDaW6v0vEInp1dYW1dzH33eE35al0CF29UZLTRr6X8JOESHqn0M8jYHswHuostXGwm3VMNEXJifGCGAOczo_etwmlvFD3K7C_wyXX7w6WIMl3v5_xPJAe-M1T2QidNir9h2U2MAmIatbdSgOFehan4cvWGq2qo2rkI5yy_vKTk3uOMEHwE8rB-MN5a4Oro3HyJsGna99t7YLNQ7rEPEyMRwujz8ps4F2oH8MRFJgS8iwjBN7NYDveQxpVl0lLfBrcdUPfx-gY5VaAKI8AGIGRh420c_tlXOEi-GQENvhoJTYXvS89Awq-VZZGApc8t8qNSWFlm-m86HwUyknc1pZhnGlbNgA_LxfB-qa0i1KKC4HGb2f-NTjBy1nvluVuXXKUGSTpgWcHN6JNS2YYwdN6kJjzV8LVTXYz61SE7b6QMvu9fCS293iiKCEmfOIiuD_0YGy2EnFvFz-5zGIk1Gt4StErA5DUj-5rSfiJ2k0kgm3L_0ATjNHnZd11DwAvtuqIF_cWi7rKzxaZCITLbLPv0FbyQE4PAJZeTtUzf8ojXtNfxCEC42HQxxajhGW9kfApt4pLM_lpMhizU3DteDSfgTcR2CbXqZYhsCFO3poL_Ht_reYW7unixZcgebYKNBLlw19KeI6aikFMYER9NJFbTQh-Nf4XoUYlDVwBF4GoLKOyU50GGN11h6In_gvAw7X8DXG18vmC7lNr4JqXphNP8jDztfePA3HJ4_1Bhf2Ji1lUS1XkFV1AbFQdPIok1T3P2JWqdTOn7nBnU2neVwVzVJx_LwfuZyw-ZIsO0XZy_vzWTyRfjLfHB6ivXyRdod26v2ZDJsCwagIid2Mj2pzJlSHDPgJx-f4miTQF56u5ia5icryU8VWPVhiaVoKQzFiEYbgkbysJi_ewPESg/https://www.amazon.com/stores/page/A5AA7F7E-0D18-40B8-9616-740E7480B532/?_encoding=UTF8&store_ref=SB_A0897709I5TAIQMJ6L03-A06186081CJMIQSP9DX8E&pd_rd_plhdr=t&aaxitk=640682b9c4c733dd50bc87f01e999264&hsa_cr_id=0&lp_asins=B0F6LV656P%2CB0F6LTFTW9%2CB0F6LPDWWC&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_hl&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                            - link "Shop Edifier" [ref=e1698] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHbnfmH5WneFNFcTYw8xVQoAAAGeyfCbBAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBKrwCF/clv1c_ek-wBXXWLbTWnOvbk7bok6bZkbhWJgkUALYYF9CyBF2AJNaNrlt-6Zc4vZMURYq0ffYsivLyzjXRPY3e6a9r0CBcZ-pNTaptG-DXkfZinAwGo7lYSQPoHHbYgrj1TFlsBWiTb5POlULD3c2hic-p-8XzAFyYlGXcsLwYD5WoRgQdjKokQl91880BCocK66FO2qUL4FVxC7fRReW6BlyFoSvZW4nf9EDx4Qf8j5KVFO0BItyJDTvjgxmloRbFcVzgrm35U981om2Ewuh8pcpEgAn-hLtANBj5tFZE_vqJRB0chbHLpGv12ATJoJIEIaL-j_Y5MZmMPup7mkQnjaS0CIaE0EodlMz4hRLQ7ba7akulnT-todjPkF6CVuctuuiRnXx3g8TjT6z5nUSOhoCAwUJVB2j71ms846mnuRiqADyOg565iWWCtN9vkf95RuHZFAt7Om8XMxRDboOdoDQuzhwZL9lvmQl34peZT53UqJSyca3FSCJZeILRFwS2V_-jX60CbfhpDn-fTEVP8mr83MAYpGWpUolkaXhPqUOrKv2Gc2aY3qL5ct_nB-rBFdrafgC7g5zZrX9C5IU70xGp1oRG4xiEaenNl5pbM7yOKFB5IFDaW6v0vEInp1dYW1dzH33eE35al0CF29UZLTRr6X8JOESHqn0M8jYHswHuostXGwm3VMNEXJifGCGAOczo_etwmlvFD3K7C_wyXX7w6WIMl3v5_xPJAe-M1T2QidNir9h2U2MAmIatbdSgOFehan4cvWGq2qo2rkI5yy_vKTk3uOMEHwE8rB-MN5a4Oro3HyJsGna99t7YLNQ7rEPEyMRwujz8ps4F2oH8MRFJgS8iwjBN7NYDveQxpVl0lLfBrcdUPfx-gY5VaAKI8AGIGRh420c_tlXOEi-GQENvhoJTYXvS89Awq-VZZGApc8t8qNSWFlm-m86HwUyknc1pZhnGlbNgA_LxfB-qa0i1KKC4HGb2f-NTjBy1nvluVuXXKUGSTpgWcHN6JNS2YYwdN6kJjzV8LVTXYz61SE7b6QMvu9fCS293iiKCEmfOIiuD_0YGy2EnFvFz-5zGIk1Gt4StErA5DUj-5rSfiJ2k0kgm3L_0ATjNHnZd11DwAvtuqIF_cWi7rKzxaZCITLbLPv0FbyQE4PAJZeTtUzf8ojXtNfxCEC42HQxxajhGW9kfApt4pLM_lpMhizU3DteDSfgTcR2CbXqZYhsCFO3poL_Ht_reYW7unixZcgebYKNBLlw19KeI6aikFMYER9NJFbTQh-Nf4XoUYlDVwBF4GoLKOyU50GGN11h6In_gvAw7X8DXG18vmC7lNr4JqXphNP8jDztfePA3HJ4_1Bhf2Ji1lUS1XkFV1AbFQdPIok1T3P2JWqdTOn7nBnU2neVwVzVJx_LwfuZyw-ZIsO0XZy_vzWTyRfjLfHB6ivXyRdod26v2ZDJsCwagIid2Mj2pzJlSHDPgJx-f4miTQF56u5ia5icryU8VWPVhiaVoKQzFiEYbgkbysJi_ewPESg/https://www.amazon.com/stores/page/A5AA7F7E-0D18-40B8-9616-740E7480B532/?_encoding=UTF8&store_ref=SB_A0897709I5TAIQMJ6L03-A06186081CJMIQSP9DX8E&pd_rd_plhdr=t&aaxitk=640682b9c4c733dd50bc87f01e999264&hsa_cr_id=0&lp_asins=B0F6LV656P%2CB0F6LTFTW9%2CB0F6LPDWWC&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_cta&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - generic [ref=e1701]:
+                                - text: Shop
+                                - generic [ref=e1702]:
+                                  - text: Edifier
+                                  - img [ref=e1703]
+                - listitem [ref=e1705]:
+                  - generic [ref=e1706]:
+                    - link "Sponsored ad from FJHBL. Shop FJHBL." [ref=e1707] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JP76j20pgNAwWTXN_1tNvhIAAAGeyfCbBgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA1g831/clv1c_ek-YBQfWFbbazTM3YlNR34IoBl2ZtCAUKBYdswT2Ke7U8nM8iNa53u5PSVoJpi_wcjWix8ZT38cJhLSJzuPvbL2A0cyFCcvL2ypkjFHRxNC0jXCLhClKGkjgYnt1q8gS2ImbL4Jya3MuL3yCLw7_n9YT4NyRskVqI5QwDDO835YTVYNxAoRJ07xu9dqx_RdI-ZrAo89KASH85f2tto_wlvM7nd-xSo6luTj0OW3kEQze-FrsZcm9vtDmeIRFz-XjSznMerP-SgSVuChh7b8IWe_oD94wgVsrxjUv7kJzWXblaExxF2isJvY7VdNxz9Tg8hIhI06CVnN81CgW8SfD1f1sWSTJhEnzgJSAlDX3ZF1M6REr0Ii8kXRO2nk5_od442LyVM9fQJHGL4MwLXp1LH3rhE7LJYqbodMuk-5oYL66C5Z5rvKyJq9EHDg1oMyT8mJAn-5ZzFJAslRqizVKGcM0W2vDfteZZPFmSz7cXRFA7AWzVTzcNjOmyEcD-N42pT2KteBO8_hPsT8Z6jdNAnUfnOm5eSQfed6UMgOWvfNH790Wie2iVKkbyt-e5gWPJCvZUwzcNhXEy8M9ddPl4tEcpcJ1IwabTcy7jwzhkvH9oxcoZzPqmY8s7djDK6pNdngNfHhUG-FTTyxNEV6Nltm7JerSis-a4iBDEq1QW2GUIKjfA3eTefA4XIQwlEbskYBY80UpTk5phNm_hMvnSnncF-C1PN6PaXTg4jfEgbjUXMydLQQm8suPZZbP_pLLKBkH0MEinqjuyNTNEfvvB4w8QOOjZ4zk5e9ACbA8mV7QJYJ5QNZlpWEFogodqpIAFcUka42bkBpP81qiEFKxSk52A4qmLSzYKp4WX0fP-HPX7hoJlnMsGeO6PbL1v702D4ACoTgSi3jHGyWCbOy-Iin1XHO8WlHIAWAm_HXB_6m9pAEMxZOM0fnHEkomUYcZEBgURwWBa4XBvd0zFlbmFccBkts2gMrfXYYbak8nCEgcw0wZHcK25ALFKTktSW712o2meCSwac6-9dhw7ZofNO087dqh4Tg1ie7asAr0R_-tgu9lijMHXOBLY97wtId1WS_JI_7pjUuOA3FUy5bVswiufJwnNyhExS7aPx_rIMZTNOtblN5BXj5aCsFe3TCNBl0I31s3UMullfKNPSpT_pjVBf8pLR5zgc_r-g4Q5FPKeH_XDUG1t23_jc2xLzzDCA1mAmFlze1v-9vS-Zp5auOwQb13fq5M4iVJtZ9Vocnn6Ysnpl8-JKqM-v-vdeBMhW05XrYZ__UHNmNALBqiqKA1xalNyTswe_daezA0rtoIOtrKwBNWOESLmIBV-KPB3WfR28_enn_Q8qnrBVB5fAnmPsidd1DL4aD_fCUslwUgTNa3EEUZakRFijC_gB9ikh2SYJqJVIwSZz8ClvEs9DDZBZouL8oTf2-65qBElgj4PDm0YZ667T_X0gtKko1Z7kQ3lRdg-NOBYIth-9utLdTLwCevWs-CA8vf0UiRa93fXcSkYkfe6AcGtpaBgrpAhhqNOnq2n4s/https://www.amazon.com/stores/page/7E49E3E4-900A-4194-9DC2-74BE0C8D3726/?_encoding=UTF8&store_ref=SB_A07893293DM8CYE3U1ZFP-A04125322N7XUBLE7U4JR&pd_rd_plhdr=t&aaxitk=e683a6a8c9dcda4b3d2c61a24878cd24&hsa_cr_id=0&lp_asins=B0FPGBFFCX%2CB0FPG94XSL%2CB0FPGBP9K3&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from FJHBL. Shop FJHBL." [ref=e1708] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JP76j20pgNAwWTXN_1tNvhIAAAGeyfCbBgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA1g831/clv1c_ek-YBQfWFbbazTM3YlNR34IoBl2ZtCAUKBYdswT2Ke7U8nM8iNa53u5PSVoJpi_wcjWix8ZT38cJhLSJzuPvbL2A0cyFCcvL2ypkjFHRxNC0jXCLhClKGkjgYnt1q8gS2ImbL4Jya3MuL3yCLw7_n9YT4NyRskVqI5QwDDO835YTVYNxAoRJ07xu9dqx_RdI-ZrAo89KASH85f2tto_wlvM7nd-xSo6luTj0OW3kEQze-FrsZcm9vtDmeIRFz-XjSznMerP-SgSVuChh7b8IWe_oD94wgVsrxjUv7kJzWXblaExxF2isJvY7VdNxz9Tg8hIhI06CVnN81CgW8SfD1f1sWSTJhEnzgJSAlDX3ZF1M6REr0Ii8kXRO2nk5_od442LyVM9fQJHGL4MwLXp1LH3rhE7LJYqbodMuk-5oYL66C5Z5rvKyJq9EHDg1oMyT8mJAn-5ZzFJAslRqizVKGcM0W2vDfteZZPFmSz7cXRFA7AWzVTzcNjOmyEcD-N42pT2KteBO8_hPsT8Z6jdNAnUfnOm5eSQfed6UMgOWvfNH790Wie2iVKkbyt-e5gWPJCvZUwzcNhXEy8M9ddPl4tEcpcJ1IwabTcy7jwzhkvH9oxcoZzPqmY8s7djDK6pNdngNfHhUG-FTTyxNEV6Nltm7JerSis-a4iBDEq1QW2GUIKjfA3eTefA4XIQwlEbskYBY80UpTk5phNm_hMvnSnncF-C1PN6PaXTg4jfEgbjUXMydLQQm8suPZZbP_pLLKBkH0MEinqjuyNTNEfvvB4w8QOOjZ4zk5e9ACbA8mV7QJYJ5QNZlpWEFogodqpIAFcUka42bkBpP81qiEFKxSk52A4qmLSzYKp4WX0fP-HPX7hoJlnMsGeO6PbL1v702D4ACoTgSi3jHGyWCbOy-Iin1XHO8WlHIAWAm_HXB_6m9pAEMxZOM0fnHEkomUYcZEBgURwWBa4XBvd0zFlbmFccBkts2gMrfXYYbak8nCEgcw0wZHcK25ALFKTktSW712o2meCSwac6-9dhw7ZofNO087dqh4Tg1ie7asAr0R_-tgu9lijMHXOBLY97wtId1WS_JI_7pjUuOA3FUy5bVswiufJwnNyhExS7aPx_rIMZTNOtblN5BXj5aCsFe3TCNBl0I31s3UMullfKNPSpT_pjVBf8pLR5zgc_r-g4Q5FPKeH_XDUG1t23_jc2xLzzDCA1mAmFlze1v-9vS-Zp5auOwQb13fq5M4iVJtZ9Vocnn6Ysnpl8-JKqM-v-vdeBMhW05XrYZ__UHNmNALBqiqKA1xalNyTswe_daezA0rtoIOtrKwBNWOESLmIBV-KPB3WfR28_enn_Q8qnrBVB5fAnmPsidd1DL4aD_fCUslwUgTNa3EEUZakRFijC_gB9ikh2SYJqJVIwSZz8ClvEs9DDZBZouL8oTf2-65qBElgj4PDm0YZ667T_X0gtKko1Z7kQ3lRdg-NOBYIth-9utLdTLwCevWs-CA8vf0UiRa93fXcSkYkfe6AcGtpaBgrpAhhqNOnq2n4s/https://www.amazon.com/stores/page/7E49E3E4-900A-4194-9DC2-74BE0C8D3726/?_encoding=UTF8&store_ref=SB_A07893293DM8CYE3U1ZFP-A04125322N7XUBLE7U4JR&pd_rd_plhdr=t&aaxitk=e683a6a8c9dcda4b3d2c61a24878cd24&hsa_cr_id=0&lp_asins=B0FPGBFFCX%2CB0FPG94XSL%2CB0FPGBP9K3&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_asin&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - img "Sponsored ad from FJHBL. Shop FJHBL." [ref=e1709]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JP76j20pgNAwWTXN_1tNvhIAAAGeyfCbBgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA1g831/clv1c_ek-YBQfWFbbazTM3YlNR34IoBl2ZtCAUKBYdswT2Ke7U8nM8iNa53u5PSVoJpi_wcjWix8ZT38cJhLSJzuPvbL2A0cyFCcvL2ypkjFHRxNC0jXCLhClKGkjgYnt1q8gS2ImbL4Jya3MuL3yCLw7_n9YT4NyRskVqI5QwDDO835YTVYNxAoRJ07xu9dqx_RdI-ZrAo89KASH85f2tto_wlvM7nd-xSo6luTj0OW3kEQze-FrsZcm9vtDmeIRFz-XjSznMerP-SgSVuChh7b8IWe_oD94wgVsrxjUv7kJzWXblaExxF2isJvY7VdNxz9Tg8hIhI06CVnN81CgW8SfD1f1sWSTJhEnzgJSAlDX3ZF1M6REr0Ii8kXRO2nk5_od442LyVM9fQJHGL4MwLXp1LH3rhE7LJYqbodMuk-5oYL66C5Z5rvKyJq9EHDg1oMyT8mJAn-5ZzFJAslRqizVKGcM0W2vDfteZZPFmSz7cXRFA7AWzVTzcNjOmyEcD-N42pT2KteBO8_hPsT8Z6jdNAnUfnOm5eSQfed6UMgOWvfNH790Wie2iVKkbyt-e5gWPJCvZUwzcNhXEy8M9ddPl4tEcpcJ1IwabTcy7jwzhkvH9oxcoZzPqmY8s7djDK6pNdngNfHhUG-FTTyxNEV6Nltm7JerSis-a4iBDEq1QW2GUIKjfA3eTefA4XIQwlEbskYBY80UpTk5phNm_hMvnSnncF-C1PN6PaXTg4jfEgbjUXMydLQQm8suPZZbP_pLLKBkH0MEinqjuyNTNEfvvB4w8QOOjZ4zk5e9ACbA8mV7QJYJ5QNZlpWEFogodqpIAFcUka42bkBpP81qiEFKxSk52A4qmLSzYKp4WX0fP-HPX7hoJlnMsGeO6PbL1v702D4ACoTgSi3jHGyWCbOy-Iin1XHO8WlHIAWAm_HXB_6m9pAEMxZOM0fnHEkomUYcZEBgURwWBa4XBvd0zFlbmFccBkts2gMrfXYYbak8nCEgcw0wZHcK25ALFKTktSW712o2meCSwac6-9dhw7ZofNO087dqh4Tg1ie7asAr0R_-tgu9lijMHXOBLY97wtId1WS_JI_7pjUuOA3FUy5bVswiufJwnNyhExS7aPx_rIMZTNOtblN5BXj5aCsFe3TCNBl0I31s3UMullfKNPSpT_pjVBf8pLR5zgc_r-g4Q5FPKeH_XDUG1t23_jc2xLzzDCA1mAmFlze1v-9vS-Zp5auOwQb13fq5M4iVJtZ9Vocnn6Ysnpl8-JKqM-v-vdeBMhW05XrYZ__UHNmNALBqiqKA1xalNyTswe_daezA0rtoIOtrKwBNWOESLmIBV-KPB3WfR28_enn_Q8qnrBVB5fAnmPsidd1DL4aD_fCUslwUgTNa3EEUZakRFijC_gB9ikh2SYJqJVIwSZz8ClvEs9DDZBZouL8oTf2-65qBElgj4PDm0YZ667T_X0gtKko1Z7kQ3lRdg-NOBYIth-9utLdTLwCevWs-CA8vf0UiRa93fXcSkYkfe6AcGtpaBgrpAhhqNOnq2n4s/https://www.amazon.com/stores/page/7E49E3E4-900A-4194-9DC2-74BE0C8D3726/?_encoding=UTF8&store_ref=SB_A07893293DM8CYE3U1ZFP-A04125322N7XUBLE7U4JR&pd_rd_plhdr=t&aaxitk=e683a6a8c9dcda4b3d2c61a24878cd24&hsa_cr_id=0&lp_asins=B0FPGBFFCX%2CB0FPG94XSL%2CB0FPGBP9K3&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - generic:
+                            - link "FJHBL" [ref=e1710] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JP76j20pgNAwWTXN_1tNvhIAAAGeyfCbBgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA1g831/clv1c_ek-YBQfWFbbazTM3YlNR34IoBl2ZtCAUKBYdswT2Ke7U8nM8iNa53u5PSVoJpi_wcjWix8ZT38cJhLSJzuPvbL2A0cyFCcvL2ypkjFHRxNC0jXCLhClKGkjgYnt1q8gS2ImbL4Jya3MuL3yCLw7_n9YT4NyRskVqI5QwDDO835YTVYNxAoRJ07xu9dqx_RdI-ZrAo89KASH85f2tto_wlvM7nd-xSo6luTj0OW3kEQze-FrsZcm9vtDmeIRFz-XjSznMerP-SgSVuChh7b8IWe_oD94wgVsrxjUv7kJzWXblaExxF2isJvY7VdNxz9Tg8hIhI06CVnN81CgW8SfD1f1sWSTJhEnzgJSAlDX3ZF1M6REr0Ii8kXRO2nk5_od442LyVM9fQJHGL4MwLXp1LH3rhE7LJYqbodMuk-5oYL66C5Z5rvKyJq9EHDg1oMyT8mJAn-5ZzFJAslRqizVKGcM0W2vDfteZZPFmSz7cXRFA7AWzVTzcNjOmyEcD-N42pT2KteBO8_hPsT8Z6jdNAnUfnOm5eSQfed6UMgOWvfNH790Wie2iVKkbyt-e5gWPJCvZUwzcNhXEy8M9ddPl4tEcpcJ1IwabTcy7jwzhkvH9oxcoZzPqmY8s7djDK6pNdngNfHhUG-FTTyxNEV6Nltm7JerSis-a4iBDEq1QW2GUIKjfA3eTefA4XIQwlEbskYBY80UpTk5phNm_hMvnSnncF-C1PN6PaXTg4jfEgbjUXMydLQQm8suPZZbP_pLLKBkH0MEinqjuyNTNEfvvB4w8QOOjZ4zk5e9ACbA8mV7QJYJ5QNZlpWEFogodqpIAFcUka42bkBpP81qiEFKxSk52A4qmLSzYKp4WX0fP-HPX7hoJlnMsGeO6PbL1v702D4ACoTgSi3jHGyWCbOy-Iin1XHO8WlHIAWAm_HXB_6m9pAEMxZOM0fnHEkomUYcZEBgURwWBa4XBvd0zFlbmFccBkts2gMrfXYYbak8nCEgcw0wZHcK25ALFKTktSW712o2meCSwac6-9dhw7ZofNO087dqh4Tg1ie7asAr0R_-tgu9lijMHXOBLY97wtId1WS_JI_7pjUuOA3FUy5bVswiufJwnNyhExS7aPx_rIMZTNOtblN5BXj5aCsFe3TCNBl0I31s3UMullfKNPSpT_pjVBf8pLR5zgc_r-g4Q5FPKeH_XDUG1t23_jc2xLzzDCA1mAmFlze1v-9vS-Zp5auOwQb13fq5M4iVJtZ9Vocnn6Ysnpl8-JKqM-v-vdeBMhW05XrYZ__UHNmNALBqiqKA1xalNyTswe_daezA0rtoIOtrKwBNWOESLmIBV-KPB3WfR28_enn_Q8qnrBVB5fAnmPsidd1DL4aD_fCUslwUgTNa3EEUZakRFijC_gB9ikh2SYJqJVIwSZz8ClvEs9DDZBZouL8oTf2-65qBElgj4PDm0YZ667T_X0gtKko1Z7kQ3lRdg-NOBYIth-9utLdTLwCevWs-CA8vf0UiRa93fXcSkYkfe6AcGtpaBgrpAhhqNOnq2n4s/https://www.amazon.com/stores/page/7E49E3E4-900A-4194-9DC2-74BE0C8D3726/?_encoding=UTF8&store_ref=SB_A07893293DM8CYE3U1ZFP-A04125322N7XUBLE7U4JR&pd_rd_plhdr=t&aaxitk=e683a6a8c9dcda4b3d2c61a24878cd24&hsa_cr_id=0&lp_asins=B0FPGBFFCX%2CB0FPG94XSL%2CB0FPGBP9K3&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_logo&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - img "FJHBL" [ref=e1711]
+                            - link:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JP76j20pgNAwWTXN_1tNvhIAAAGeyfCbBgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA1g831/clv1c_ek-YBQfWFbbazTM3YlNR34IoBl2ZtCAUKBYdswT2Ke7U8nM8iNa53u5PSVoJpi_wcjWix8ZT38cJhLSJzuPvbL2A0cyFCcvL2ypkjFHRxNC0jXCLhClKGkjgYnt1q8gS2ImbL4Jya3MuL3yCLw7_n9YT4NyRskVqI5QwDDO835YTVYNxAoRJ07xu9dqx_RdI-ZrAo89KASH85f2tto_wlvM7nd-xSo6luTj0OW3kEQze-FrsZcm9vtDmeIRFz-XjSznMerP-SgSVuChh7b8IWe_oD94wgVsrxjUv7kJzWXblaExxF2isJvY7VdNxz9Tg8hIhI06CVnN81CgW8SfD1f1sWSTJhEnzgJSAlDX3ZF1M6REr0Ii8kXRO2nk5_od442LyVM9fQJHGL4MwLXp1LH3rhE7LJYqbodMuk-5oYL66C5Z5rvKyJq9EHDg1oMyT8mJAn-5ZzFJAslRqizVKGcM0W2vDfteZZPFmSz7cXRFA7AWzVTzcNjOmyEcD-N42pT2KteBO8_hPsT8Z6jdNAnUfnOm5eSQfed6UMgOWvfNH790Wie2iVKkbyt-e5gWPJCvZUwzcNhXEy8M9ddPl4tEcpcJ1IwabTcy7jwzhkvH9oxcoZzPqmY8s7djDK6pNdngNfHhUG-FTTyxNEV6Nltm7JerSis-a4iBDEq1QW2GUIKjfA3eTefA4XIQwlEbskYBY80UpTk5phNm_hMvnSnncF-C1PN6PaXTg4jfEgbjUXMydLQQm8suPZZbP_pLLKBkH0MEinqjuyNTNEfvvB4w8QOOjZ4zk5e9ACbA8mV7QJYJ5QNZlpWEFogodqpIAFcUka42bkBpP81qiEFKxSk52A4qmLSzYKp4WX0fP-HPX7hoJlnMsGeO6PbL1v702D4ACoTgSi3jHGyWCbOy-Iin1XHO8WlHIAWAm_HXB_6m9pAEMxZOM0fnHEkomUYcZEBgURwWBa4XBvd0zFlbmFccBkts2gMrfXYYbak8nCEgcw0wZHcK25ALFKTktSW712o2meCSwac6-9dhw7ZofNO087dqh4Tg1ie7asAr0R_-tgu9lijMHXOBLY97wtId1WS_JI_7pjUuOA3FUy5bVswiufJwnNyhExS7aPx_rIMZTNOtblN5BXj5aCsFe3TCNBl0I31s3UMullfKNPSpT_pjVBf8pLR5zgc_r-g4Q5FPKeH_XDUG1t23_jc2xLzzDCA1mAmFlze1v-9vS-Zp5auOwQb13fq5M4iVJtZ9Vocnn6Ysnpl8-JKqM-v-vdeBMhW05XrYZ__UHNmNALBqiqKA1xalNyTswe_daezA0rtoIOtrKwBNWOESLmIBV-KPB3WfR28_enn_Q8qnrBVB5fAnmPsidd1DL4aD_fCUslwUgTNa3EEUZakRFijC_gB9ikh2SYJqJVIwSZz8ClvEs9DDZBZouL8oTf2-65qBElgj4PDm0YZ667T_X0gtKko1Z7kQ3lRdg-NOBYIth-9utLdTLwCevWs-CA8vf0UiRa93fXcSkYkfe6AcGtpaBgrpAhhqNOnq2n4s/https://www.amazon.com/stores/page/7E49E3E4-900A-4194-9DC2-74BE0C8D3726/?_encoding=UTF8&store_ref=SB_A07893293DM8CYE3U1ZFP-A04125322N7XUBLE7U4JR&pd_rd_plhdr=t&aaxitk=e683a6a8c9dcda4b3d2c61a24878cd24&hsa_cr_id=0&lp_asins=B0FPGBFFCX%2CB0FPG94XSL%2CB0FPGBP9K3&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_hl&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                            - link "Shop FJHBL" [ref=e1712] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JP76j20pgNAwWTXN_1tNvhIAAAGeyfCbBgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICA1g831/clv1c_ek-YBQfWFbbazTM3YlNR34IoBl2ZtCAUKBYdswT2Ke7U8nM8iNa53u5PSVoJpi_wcjWix8ZT38cJhLSJzuPvbL2A0cyFCcvL2ypkjFHRxNC0jXCLhClKGkjgYnt1q8gS2ImbL4Jya3MuL3yCLw7_n9YT4NyRskVqI5QwDDO835YTVYNxAoRJ07xu9dqx_RdI-ZrAo89KASH85f2tto_wlvM7nd-xSo6luTj0OW3kEQze-FrsZcm9vtDmeIRFz-XjSznMerP-SgSVuChh7b8IWe_oD94wgVsrxjUv7kJzWXblaExxF2isJvY7VdNxz9Tg8hIhI06CVnN81CgW8SfD1f1sWSTJhEnzgJSAlDX3ZF1M6REr0Ii8kXRO2nk5_od442LyVM9fQJHGL4MwLXp1LH3rhE7LJYqbodMuk-5oYL66C5Z5rvKyJq9EHDg1oMyT8mJAn-5ZzFJAslRqizVKGcM0W2vDfteZZPFmSz7cXRFA7AWzVTzcNjOmyEcD-N42pT2KteBO8_hPsT8Z6jdNAnUfnOm5eSQfed6UMgOWvfNH790Wie2iVKkbyt-e5gWPJCvZUwzcNhXEy8M9ddPl4tEcpcJ1IwabTcy7jwzhkvH9oxcoZzPqmY8s7djDK6pNdngNfHhUG-FTTyxNEV6Nltm7JerSis-a4iBDEq1QW2GUIKjfA3eTefA4XIQwlEbskYBY80UpTk5phNm_hMvnSnncF-C1PN6PaXTg4jfEgbjUXMydLQQm8suPZZbP_pLLKBkH0MEinqjuyNTNEfvvB4w8QOOjZ4zk5e9ACbA8mV7QJYJ5QNZlpWEFogodqpIAFcUka42bkBpP81qiEFKxSk52A4qmLSzYKp4WX0fP-HPX7hoJlnMsGeO6PbL1v702D4ACoTgSi3jHGyWCbOy-Iin1XHO8WlHIAWAm_HXB_6m9pAEMxZOM0fnHEkomUYcZEBgURwWBa4XBvd0zFlbmFccBkts2gMrfXYYbak8nCEgcw0wZHcK25ALFKTktSW712o2meCSwac6-9dhw7ZofNO087dqh4Tg1ie7asAr0R_-tgu9lijMHXOBLY97wtId1WS_JI_7pjUuOA3FUy5bVswiufJwnNyhExS7aPx_rIMZTNOtblN5BXj5aCsFe3TCNBl0I31s3UMullfKNPSpT_pjVBf8pLR5zgc_r-g4Q5FPKeH_XDUG1t23_jc2xLzzDCA1mAmFlze1v-9vS-Zp5auOwQb13fq5M4iVJtZ9Vocnn6Ysnpl8-JKqM-v-vdeBMhW05XrYZ__UHNmNALBqiqKA1xalNyTswe_daezA0rtoIOtrKwBNWOESLmIBV-KPB3WfR28_enn_Q8qnrBVB5fAnmPsidd1DL4aD_fCUslwUgTNa3EEUZakRFijC_gB9ikh2SYJqJVIwSZz8ClvEs9DDZBZouL8oTf2-65qBElgj4PDm0YZ667T_X0gtKko1Z7kQ3lRdg-NOBYIth-9utLdTLwCevWs-CA8vf0UiRa93fXcSkYkfe6AcGtpaBgrpAhhqNOnq2n4s/https://www.amazon.com/stores/page/7E49E3E4-900A-4194-9DC2-74BE0C8D3726/?_encoding=UTF8&store_ref=SB_A07893293DM8CYE3U1ZFP-A04125322N7XUBLE7U4JR&pd_rd_plhdr=t&aaxitk=e683a6a8c9dcda4b3d2c61a24878cd24&hsa_cr_id=0&lp_asins=B0FPGBFFCX%2CB0FPG94XSL%2CB0FPGBP9K3&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_cta&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - generic [ref=e1715]:
+                                - text: Shop
+                                - generic [ref=e1716]:
+                                  - text: FJHBL
+                                  - img [ref=e1717]
+                - listitem [ref=e1719]:
+                  - generic [ref=e1720]:
+                    - link "Sponsored ad from AROWKE. Shop AROWKE." [ref=e1721] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHsB4NSkFbk4uc4Pm_Fnh34AAAGeyfCbBwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICC3AeeG/clv1c_ek-YBQfWFbbazTM3YutPkS7wvzpWfQ8UKBYdswT2Ke7X8hGyiNq5ycyUIRC4vIBsmxaUexWtQlcHsbbKFFbwYFQlZV9DxQba-idhBss4vLw-kRXgWd6NNE055u14TkKHAx0njYp_Br45LH_4ePkF2wOaptf0ttTqHk3yzgEaVAbf227eDglp3IBctvUv1v9k1pWG1FlaOQMQBSVZ9EvcZETSZUY7cDqKGu4kYC8tIRM6fdnp2OctBx1qqhB4e-qFc_NiYV1oOxBDYrtVN5B4fAU9oVhBcNnNRgKruneYKihhoWE64fU06nhbjyrTwigIhDD2jgD6Jizyz53sX5BnFS-v_g-1WKzUVI5OFwlp6woUaF1EMJgrsqL0rzn3BXrZvOCSr_h5R4ANlBWmOFbHU-p0HCEGsFoKwmV0hyORXLo7yEHZySIRTi0CIDP5Hz7xA4crnFz-TQArvOqLGdW5Tdmo8-4r978DGMCFOBK64NMVihG_LflD52ptOWzKJIcpfjwDVtygVOptn_g-mFmt9VysOY4KROBoxhNfKW05Fmm18bOZJ5smf49mjcQxXEWbD5VMRTaGo4HYzkKp7utp9jC7Dze75OMriU_G7sNdeSzFFUTvDGnov5fEP4RdFuhPIZw9feX0W0OtbEyHDWvt72blCAWjJBcKg5N0t5Hi43W5QlxP0VQ_rY6eWuMO6ReHdR5NNDpNt7ZUOqS6n_vnSv3s0_6x5fCYWHDg4LYoZPpkkB0UBlaf0DRhHOtTWdWYCAEDKZRgu4dLTOgCwGOT0BRvLviLHceq43swABpYpdw8-2vlQ2-XtrBZM-Mg7fNlWFbyutVfFsp6m4Rfo9m6SkBw85wPMzvBsKv-xNVE0JzHBSN1Xc9YrPGZOAZUHWF8Fe6O1hzHNmC_68ukNJC3yDiuY83fQDRvz7G9cRg5ScT9q1Fs_AfwART2s37iswUGPEtxSMfQ1sh5-oHjZ1X1x855Nshp1rPFGyfbfpAPiuULaHdCqB_T5xY6puiWZiEVAmyiOU_L0ZSYtHm57EbfTXSBlOoA0Up2zjFmh100yCd2yeONHTe4XlZJHH3lYkJ48tCmQVksjBhSWmtbAOnUIcccO8LbLnV_878RxL7TvvV9UsNE0wkYBVMP3_EbEQpfkNZQ8M-UxnbCGsIkpJK_ayaHDQSZcBstlJrvHRMBAbqAbl61cmA9SXM3i9LZAdbDZgOkYm0fze1vr1RzYh4eOsDpC89ulgYp5cWR39v7Rig0A-Z9z5GayTdJIsLZq0onpk-nlNQgsivdRrfOVCugbikaaqShcPC4UMssLC49LhB408RyJP1upoCk48v8lYX1FlpebC2tM2Khqg43KPzotHBP0ru3LK7qg4iTxfZDcldEQIAqGV0jfxEmJsSuE2Nb1RFyCCEPC3VxR-lr1adu_t20Flb9wfS-H26XpV8imo8YiTD0NJWC2-xTq7ni1C8kRsVEhQxg-ZORaGtB-9cvLSDLIDin2lriaYp-V1uyXpdn_cKgJuLRxZGDFyzztYDdRfvC3zbXNtQ/https://www.amazon.com/stores/page/ABBC8057-E53B-4C44-AB30-CF0B0DACB14A/?_encoding=UTF8&store_ref=SB_A04055322QAN7IZ7WLPV2-A0046266HIP1043P4UJT&pd_rd_plhdr=t&aaxitk=0572fc4e6c52981cf511ea6b6f65fab6&hsa_cr_id=0&lp_asins=B0FC5S1ZJJ%2CB0FW45BLK5%2CB0FX3ZS2F8&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from AROWKE. Shop AROWKE." [ref=e1722] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHsB4NSkFbk4uc4Pm_Fnh34AAAGeyfCbBwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICC3AeeG/clv1c_ek-YBQfWFbbazTM3YutPkS7wvzpWfQ8UKBYdswT2Ke7X8hGyiNq5ycyUIRC4vIBsmxaUexWtQlcHsbbKFFbwYFQlZV9DxQba-idhBss4vLw-kRXgWd6NNE055u14TkKHAx0njYp_Br45LH_4ePkF2wOaptf0ttTqHk3yzgEaVAbf227eDglp3IBctvUv1v9k1pWG1FlaOQMQBSVZ9EvcZETSZUY7cDqKGu4kYC8tIRM6fdnp2OctBx1qqhB4e-qFc_NiYV1oOxBDYrtVN5B4fAU9oVhBcNnNRgKruneYKihhoWE64fU06nhbjyrTwigIhDD2jgD6Jizyz53sX5BnFS-v_g-1WKzUVI5OFwlp6woUaF1EMJgrsqL0rzn3BXrZvOCSr_h5R4ANlBWmOFbHU-p0HCEGsFoKwmV0hyORXLo7yEHZySIRTi0CIDP5Hz7xA4crnFz-TQArvOqLGdW5Tdmo8-4r978DGMCFOBK64NMVihG_LflD52ptOWzKJIcpfjwDVtygVOptn_g-mFmt9VysOY4KROBoxhNfKW05Fmm18bOZJ5smf49mjcQxXEWbD5VMRTaGo4HYzkKp7utp9jC7Dze75OMriU_G7sNdeSzFFUTvDGnov5fEP4RdFuhPIZw9feX0W0OtbEyHDWvt72blCAWjJBcKg5N0t5Hi43W5QlxP0VQ_rY6eWuMO6ReHdR5NNDpNt7ZUOqS6n_vnSv3s0_6x5fCYWHDg4LYoZPpkkB0UBlaf0DRhHOtTWdWYCAEDKZRgu4dLTOgCwGOT0BRvLviLHceq43swABpYpdw8-2vlQ2-XtrBZM-Mg7fNlWFbyutVfFsp6m4Rfo9m6SkBw85wPMzvBsKv-xNVE0JzHBSN1Xc9YrPGZOAZUHWF8Fe6O1hzHNmC_68ukNJC3yDiuY83fQDRvz7G9cRg5ScT9q1Fs_AfwART2s37iswUGPEtxSMfQ1sh5-oHjZ1X1x855Nshp1rPFGyfbfpAPiuULaHdCqB_T5xY6puiWZiEVAmyiOU_L0ZSYtHm57EbfTXSBlOoA0Up2zjFmh100yCd2yeONHTe4XlZJHH3lYkJ48tCmQVksjBhSWmtbAOnUIcccO8LbLnV_878RxL7TvvV9UsNE0wkYBVMP3_EbEQpfkNZQ8M-UxnbCGsIkpJK_ayaHDQSZcBstlJrvHRMBAbqAbl61cmA9SXM3i9LZAdbDZgOkYm0fze1vr1RzYh4eOsDpC89ulgYp5cWR39v7Rig0A-Z9z5GayTdJIsLZq0onpk-nlNQgsivdRrfOVCugbikaaqShcPC4UMssLC49LhB408RyJP1upoCk48v8lYX1FlpebC2tM2Khqg43KPzotHBP0ru3LK7qg4iTxfZDcldEQIAqGV0jfxEmJsSuE2Nb1RFyCCEPC3VxR-lr1adu_t20Flb9wfS-H26XpV8imo8YiTD0NJWC2-xTq7ni1C8kRsVEhQxg-ZORaGtB-9cvLSDLIDin2lriaYp-V1uyXpdn_cKgJuLRxZGDFyzztYDdRfvC3zbXNtQ/https://www.amazon.com/stores/page/ABBC8057-E53B-4C44-AB30-CF0B0DACB14A/?_encoding=UTF8&store_ref=SB_A04055322QAN7IZ7WLPV2-A0046266HIP1043P4UJT&pd_rd_plhdr=t&aaxitk=0572fc4e6c52981cf511ea6b6f65fab6&hsa_cr_id=0&lp_asins=B0FC5S1ZJJ%2CB0FW45BLK5%2CB0FX3ZS2F8&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_asin&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - img "Sponsored ad from AROWKE. Shop AROWKE." [ref=e1723]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHsB4NSkFbk4uc4Pm_Fnh34AAAGeyfCbBwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICC3AeeG/clv1c_ek-YBQfWFbbazTM3YutPkS7wvzpWfQ8UKBYdswT2Ke7X8hGyiNq5ycyUIRC4vIBsmxaUexWtQlcHsbbKFFbwYFQlZV9DxQba-idhBss4vLw-kRXgWd6NNE055u14TkKHAx0njYp_Br45LH_4ePkF2wOaptf0ttTqHk3yzgEaVAbf227eDglp3IBctvUv1v9k1pWG1FlaOQMQBSVZ9EvcZETSZUY7cDqKGu4kYC8tIRM6fdnp2OctBx1qqhB4e-qFc_NiYV1oOxBDYrtVN5B4fAU9oVhBcNnNRgKruneYKihhoWE64fU06nhbjyrTwigIhDD2jgD6Jizyz53sX5BnFS-v_g-1WKzUVI5OFwlp6woUaF1EMJgrsqL0rzn3BXrZvOCSr_h5R4ANlBWmOFbHU-p0HCEGsFoKwmV0hyORXLo7yEHZySIRTi0CIDP5Hz7xA4crnFz-TQArvOqLGdW5Tdmo8-4r978DGMCFOBK64NMVihG_LflD52ptOWzKJIcpfjwDVtygVOptn_g-mFmt9VysOY4KROBoxhNfKW05Fmm18bOZJ5smf49mjcQxXEWbD5VMRTaGo4HYzkKp7utp9jC7Dze75OMriU_G7sNdeSzFFUTvDGnov5fEP4RdFuhPIZw9feX0W0OtbEyHDWvt72blCAWjJBcKg5N0t5Hi43W5QlxP0VQ_rY6eWuMO6ReHdR5NNDpNt7ZUOqS6n_vnSv3s0_6x5fCYWHDg4LYoZPpkkB0UBlaf0DRhHOtTWdWYCAEDKZRgu4dLTOgCwGOT0BRvLviLHceq43swABpYpdw8-2vlQ2-XtrBZM-Mg7fNlWFbyutVfFsp6m4Rfo9m6SkBw85wPMzvBsKv-xNVE0JzHBSN1Xc9YrPGZOAZUHWF8Fe6O1hzHNmC_68ukNJC3yDiuY83fQDRvz7G9cRg5ScT9q1Fs_AfwART2s37iswUGPEtxSMfQ1sh5-oHjZ1X1x855Nshp1rPFGyfbfpAPiuULaHdCqB_T5xY6puiWZiEVAmyiOU_L0ZSYtHm57EbfTXSBlOoA0Up2zjFmh100yCd2yeONHTe4XlZJHH3lYkJ48tCmQVksjBhSWmtbAOnUIcccO8LbLnV_878RxL7TvvV9UsNE0wkYBVMP3_EbEQpfkNZQ8M-UxnbCGsIkpJK_ayaHDQSZcBstlJrvHRMBAbqAbl61cmA9SXM3i9LZAdbDZgOkYm0fze1vr1RzYh4eOsDpC89ulgYp5cWR39v7Rig0A-Z9z5GayTdJIsLZq0onpk-nlNQgsivdRrfOVCugbikaaqShcPC4UMssLC49LhB408RyJP1upoCk48v8lYX1FlpebC2tM2Khqg43KPzotHBP0ru3LK7qg4iTxfZDcldEQIAqGV0jfxEmJsSuE2Nb1RFyCCEPC3VxR-lr1adu_t20Flb9wfS-H26XpV8imo8YiTD0NJWC2-xTq7ni1C8kRsVEhQxg-ZORaGtB-9cvLSDLIDin2lriaYp-V1uyXpdn_cKgJuLRxZGDFyzztYDdRfvC3zbXNtQ/https://www.amazon.com/stores/page/ABBC8057-E53B-4C44-AB30-CF0B0DACB14A/?_encoding=UTF8&store_ref=SB_A04055322QAN7IZ7WLPV2-A0046266HIP1043P4UJT&pd_rd_plhdr=t&aaxitk=0572fc4e6c52981cf511ea6b6f65fab6&hsa_cr_id=0&lp_asins=B0FC5S1ZJJ%2CB0FW45BLK5%2CB0FX3ZS2F8&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_bkgd&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                          - generic:
+                            - link "AROWKE" [ref=e1724] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHsB4NSkFbk4uc4Pm_Fnh34AAAGeyfCbBwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICC3AeeG/clv1c_ek-YBQfWFbbazTM3YutPkS7wvzpWfQ8UKBYdswT2Ke7X8hGyiNq5ycyUIRC4vIBsmxaUexWtQlcHsbbKFFbwYFQlZV9DxQba-idhBss4vLw-kRXgWd6NNE055u14TkKHAx0njYp_Br45LH_4ePkF2wOaptf0ttTqHk3yzgEaVAbf227eDglp3IBctvUv1v9k1pWG1FlaOQMQBSVZ9EvcZETSZUY7cDqKGu4kYC8tIRM6fdnp2OctBx1qqhB4e-qFc_NiYV1oOxBDYrtVN5B4fAU9oVhBcNnNRgKruneYKihhoWE64fU06nhbjyrTwigIhDD2jgD6Jizyz53sX5BnFS-v_g-1WKzUVI5OFwlp6woUaF1EMJgrsqL0rzn3BXrZvOCSr_h5R4ANlBWmOFbHU-p0HCEGsFoKwmV0hyORXLo7yEHZySIRTi0CIDP5Hz7xA4crnFz-TQArvOqLGdW5Tdmo8-4r978DGMCFOBK64NMVihG_LflD52ptOWzKJIcpfjwDVtygVOptn_g-mFmt9VysOY4KROBoxhNfKW05Fmm18bOZJ5smf49mjcQxXEWbD5VMRTaGo4HYzkKp7utp9jC7Dze75OMriU_G7sNdeSzFFUTvDGnov5fEP4RdFuhPIZw9feX0W0OtbEyHDWvt72blCAWjJBcKg5N0t5Hi43W5QlxP0VQ_rY6eWuMO6ReHdR5NNDpNt7ZUOqS6n_vnSv3s0_6x5fCYWHDg4LYoZPpkkB0UBlaf0DRhHOtTWdWYCAEDKZRgu4dLTOgCwGOT0BRvLviLHceq43swABpYpdw8-2vlQ2-XtrBZM-Mg7fNlWFbyutVfFsp6m4Rfo9m6SkBw85wPMzvBsKv-xNVE0JzHBSN1Xc9YrPGZOAZUHWF8Fe6O1hzHNmC_68ukNJC3yDiuY83fQDRvz7G9cRg5ScT9q1Fs_AfwART2s37iswUGPEtxSMfQ1sh5-oHjZ1X1x855Nshp1rPFGyfbfpAPiuULaHdCqB_T5xY6puiWZiEVAmyiOU_L0ZSYtHm57EbfTXSBlOoA0Up2zjFmh100yCd2yeONHTe4XlZJHH3lYkJ48tCmQVksjBhSWmtbAOnUIcccO8LbLnV_878RxL7TvvV9UsNE0wkYBVMP3_EbEQpfkNZQ8M-UxnbCGsIkpJK_ayaHDQSZcBstlJrvHRMBAbqAbl61cmA9SXM3i9LZAdbDZgOkYm0fze1vr1RzYh4eOsDpC89ulgYp5cWR39v7Rig0A-Z9z5GayTdJIsLZq0onpk-nlNQgsivdRrfOVCugbikaaqShcPC4UMssLC49LhB408RyJP1upoCk48v8lYX1FlpebC2tM2Khqg43KPzotHBP0ru3LK7qg4iTxfZDcldEQIAqGV0jfxEmJsSuE2Nb1RFyCCEPC3VxR-lr1adu_t20Flb9wfS-H26XpV8imo8YiTD0NJWC2-xTq7ni1C8kRsVEhQxg-ZORaGtB-9cvLSDLIDin2lriaYp-V1uyXpdn_cKgJuLRxZGDFyzztYDdRfvC3zbXNtQ/https://www.amazon.com/stores/page/ABBC8057-E53B-4C44-AB30-CF0B0DACB14A/?_encoding=UTF8&store_ref=SB_A04055322QAN7IZ7WLPV2-A0046266HIP1043P4UJT&pd_rd_plhdr=t&aaxitk=0572fc4e6c52981cf511ea6b6f65fab6&hsa_cr_id=0&lp_asins=B0FC5S1ZJJ%2CB0FW45BLK5%2CB0FX3ZS2F8&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_logo&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - img "AROWKE" [ref=e1725]
+                            - link:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHsB4NSkFbk4uc4Pm_Fnh34AAAGeyfCbBwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICC3AeeG/clv1c_ek-YBQfWFbbazTM3YutPkS7wvzpWfQ8UKBYdswT2Ke7X8hGyiNq5ycyUIRC4vIBsmxaUexWtQlcHsbbKFFbwYFQlZV9DxQba-idhBss4vLw-kRXgWd6NNE055u14TkKHAx0njYp_Br45LH_4ePkF2wOaptf0ttTqHk3yzgEaVAbf227eDglp3IBctvUv1v9k1pWG1FlaOQMQBSVZ9EvcZETSZUY7cDqKGu4kYC8tIRM6fdnp2OctBx1qqhB4e-qFc_NiYV1oOxBDYrtVN5B4fAU9oVhBcNnNRgKruneYKihhoWE64fU06nhbjyrTwigIhDD2jgD6Jizyz53sX5BnFS-v_g-1WKzUVI5OFwlp6woUaF1EMJgrsqL0rzn3BXrZvOCSr_h5R4ANlBWmOFbHU-p0HCEGsFoKwmV0hyORXLo7yEHZySIRTi0CIDP5Hz7xA4crnFz-TQArvOqLGdW5Tdmo8-4r978DGMCFOBK64NMVihG_LflD52ptOWzKJIcpfjwDVtygVOptn_g-mFmt9VysOY4KROBoxhNfKW05Fmm18bOZJ5smf49mjcQxXEWbD5VMRTaGo4HYzkKp7utp9jC7Dze75OMriU_G7sNdeSzFFUTvDGnov5fEP4RdFuhPIZw9feX0W0OtbEyHDWvt72blCAWjJBcKg5N0t5Hi43W5QlxP0VQ_rY6eWuMO6ReHdR5NNDpNt7ZUOqS6n_vnSv3s0_6x5fCYWHDg4LYoZPpkkB0UBlaf0DRhHOtTWdWYCAEDKZRgu4dLTOgCwGOT0BRvLviLHceq43swABpYpdw8-2vlQ2-XtrBZM-Mg7fNlWFbyutVfFsp6m4Rfo9m6SkBw85wPMzvBsKv-xNVE0JzHBSN1Xc9YrPGZOAZUHWF8Fe6O1hzHNmC_68ukNJC3yDiuY83fQDRvz7G9cRg5ScT9q1Fs_AfwART2s37iswUGPEtxSMfQ1sh5-oHjZ1X1x855Nshp1rPFGyfbfpAPiuULaHdCqB_T5xY6puiWZiEVAmyiOU_L0ZSYtHm57EbfTXSBlOoA0Up2zjFmh100yCd2yeONHTe4XlZJHH3lYkJ48tCmQVksjBhSWmtbAOnUIcccO8LbLnV_878RxL7TvvV9UsNE0wkYBVMP3_EbEQpfkNZQ8M-UxnbCGsIkpJK_ayaHDQSZcBstlJrvHRMBAbqAbl61cmA9SXM3i9LZAdbDZgOkYm0fze1vr1RzYh4eOsDpC89ulgYp5cWR39v7Rig0A-Z9z5GayTdJIsLZq0onpk-nlNQgsivdRrfOVCugbikaaqShcPC4UMssLC49LhB408RyJP1upoCk48v8lYX1FlpebC2tM2Khqg43KPzotHBP0ru3LK7qg4iTxfZDcldEQIAqGV0jfxEmJsSuE2Nb1RFyCCEPC3VxR-lr1adu_t20Flb9wfS-H26XpV8imo8YiTD0NJWC2-xTq7ni1C8kRsVEhQxg-ZORaGtB-9cvLSDLIDin2lriaYp-V1uyXpdn_cKgJuLRxZGDFyzztYDdRfvC3zbXNtQ/https://www.amazon.com/stores/page/ABBC8057-E53B-4C44-AB30-CF0B0DACB14A/?_encoding=UTF8&store_ref=SB_A04055322QAN7IZ7WLPV2-A0046266HIP1043P4UJT&pd_rd_plhdr=t&aaxitk=0572fc4e6c52981cf511ea6b6f65fab6&hsa_cr_id=0&lp_asins=B0FC5S1ZJJ%2CB0FW45BLK5%2CB0FX3ZS2F8&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_hl&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                            - link "Shop AROWKE" [ref=e1726] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHsB4NSkFbk4uc4Pm_Fnh34AAAGeyfCbBwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICC3AeeG/clv1c_ek-YBQfWFbbazTM3YutPkS7wvzpWfQ8UKBYdswT2Ke7X8hGyiNq5ycyUIRC4vIBsmxaUexWtQlcHsbbKFFbwYFQlZV9DxQba-idhBss4vLw-kRXgWd6NNE055u14TkKHAx0njYp_Br45LH_4ePkF2wOaptf0ttTqHk3yzgEaVAbf227eDglp3IBctvUv1v9k1pWG1FlaOQMQBSVZ9EvcZETSZUY7cDqKGu4kYC8tIRM6fdnp2OctBx1qqhB4e-qFc_NiYV1oOxBDYrtVN5B4fAU9oVhBcNnNRgKruneYKihhoWE64fU06nhbjyrTwigIhDD2jgD6Jizyz53sX5BnFS-v_g-1WKzUVI5OFwlp6woUaF1EMJgrsqL0rzn3BXrZvOCSr_h5R4ANlBWmOFbHU-p0HCEGsFoKwmV0hyORXLo7yEHZySIRTi0CIDP5Hz7xA4crnFz-TQArvOqLGdW5Tdmo8-4r978DGMCFOBK64NMVihG_LflD52ptOWzKJIcpfjwDVtygVOptn_g-mFmt9VysOY4KROBoxhNfKW05Fmm18bOZJ5smf49mjcQxXEWbD5VMRTaGo4HYzkKp7utp9jC7Dze75OMriU_G7sNdeSzFFUTvDGnov5fEP4RdFuhPIZw9feX0W0OtbEyHDWvt72blCAWjJBcKg5N0t5Hi43W5QlxP0VQ_rY6eWuMO6ReHdR5NNDpNt7ZUOqS6n_vnSv3s0_6x5fCYWHDg4LYoZPpkkB0UBlaf0DRhHOtTWdWYCAEDKZRgu4dLTOgCwGOT0BRvLviLHceq43swABpYpdw8-2vlQ2-XtrBZM-Mg7fNlWFbyutVfFsp6m4Rfo9m6SkBw85wPMzvBsKv-xNVE0JzHBSN1Xc9YrPGZOAZUHWF8Fe6O1hzHNmC_68ukNJC3yDiuY83fQDRvz7G9cRg5ScT9q1Fs_AfwART2s37iswUGPEtxSMfQ1sh5-oHjZ1X1x855Nshp1rPFGyfbfpAPiuULaHdCqB_T5xY6puiWZiEVAmyiOU_L0ZSYtHm57EbfTXSBlOoA0Up2zjFmh100yCd2yeONHTe4XlZJHH3lYkJ48tCmQVksjBhSWmtbAOnUIcccO8LbLnV_878RxL7TvvV9UsNE0wkYBVMP3_EbEQpfkNZQ8M-UxnbCGsIkpJK_ayaHDQSZcBstlJrvHRMBAbqAbl61cmA9SXM3i9LZAdbDZgOkYm0fze1vr1RzYh4eOsDpC89ulgYp5cWR39v7Rig0A-Z9z5GayTdJIsLZq0onpk-nlNQgsivdRrfOVCugbikaaqShcPC4UMssLC49LhB408RyJP1upoCk48v8lYX1FlpebC2tM2Khqg43KPzotHBP0ru3LK7qg4iTxfZDcldEQIAqGV0jfxEmJsSuE2Nb1RFyCCEPC3VxR-lr1adu_t20Flb9wfS-H26XpV8imo8YiTD0NJWC2-xTq7ni1C8kRsVEhQxg-ZORaGtB-9cvLSDLIDin2lriaYp-V1uyXpdn_cKgJuLRxZGDFyzztYDdRfvC3zbXNtQ/https://www.amazon.com/stores/page/ABBC8057-E53B-4C44-AB30-CF0B0DACB14A/?_encoding=UTF8&store_ref=SB_A04055322QAN7IZ7WLPV2-A0046266HIP1043P4UJT&pd_rd_plhdr=t&aaxitk=0572fc4e6c52981cf511ea6b6f65fab6&hsa_cr_id=0&lp_asins=B0FC5S1ZJJ%2CB0FW45BLK5%2CB0FX3ZS2F8&lp_query=Headphones&lp_slot=desktop-arbies&lp_page_asin=B0FJ44ZNKT&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_cta&pd_rd_w=5NMlb&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=EMAXES9YSQXPA957HD0M&pd_rd_wg=VgCI3&pd_rd_r=921243f8-086d-4e44-bbf7-3884b35c5222
+                              - generic [ref=e1729]:
+                                - text: Shop
+                                - generic [ref=e1730]:
+                                  - text: AROWKE
+                                  - img [ref=e1731]
+              - button [ref=e1735] [cursor=pointer]
+        - generic "Top reviews" [ref=e1738]:
+          - separator [ref=e1739]
+          - generic [ref=e1741]:
+            - generic [ref=e1742]:
+              - generic [ref=e1747]:
+                - heading "Customer reviews" [level=2] [ref=e1749]
+                - generic [ref=e1751]:
+                  - generic [ref=e1753]:
+                    - generic [ref=e1756]: 4.2 out of 5 stars
+                    - generic [ref=e1759]: 4.2 out of 5
+                  - generic [ref=e1760]: 292 global ratings
+                - list [ref=e1765]:
+                  - listitem [ref=e1766]:
+                    - link "68 percent of reviews have 5 stars" [ref=e1769] [cursor=pointer]:
+                      - /url: /portal/customer-reviews/B0FJ44ZNKT/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar
+                      - generic [ref=e1770]: 5 star
+                      - progressbar [ref=e1772]
+                      - generic [ref=e1773]: 68%
+                  - listitem [ref=e1774]:
+                    - link "14 percent of reviews have 4 stars" [ref=e1777] [cursor=pointer]:
+                      - /url: /portal/customer-reviews/B0FJ44ZNKT/ref=acr_dp_hist_4?ie=UTF8&filterByStar=four_star&reviewerType=all_reviews#reviews-filter-bar
+                      - generic [ref=e1778]: 4 star
+                      - progressbar [ref=e1780]
+                      - generic [ref=e1781]: 14%
+                  - listitem [ref=e1782]:
+                    - link "5 percent of reviews have 3 stars" [ref=e1785] [cursor=pointer]:
+                      - /url: /portal/customer-reviews/B0FJ44ZNKT/ref=acr_dp_hist_3?ie=UTF8&filterByStar=three_star&reviewerType=all_reviews#reviews-filter-bar
+                      - generic [ref=e1786]: 3 star
+                      - progressbar [ref=e1788]
+                      - generic [ref=e1789]: 5%
+                  - listitem [ref=e1790]:
+                    - link "5 percent of reviews have 2 stars" [ref=e1793] [cursor=pointer]:
+                      - /url: /portal/customer-reviews/B0FJ44ZNKT/ref=acr_dp_hist_2?ie=UTF8&filterByStar=two_star&reviewerType=all_reviews#reviews-filter-bar
+                      - generic [ref=e1794]: 2 star
+                      - progressbar [ref=e1796]
+                      - generic [ref=e1797]: 5%
+                  - listitem [ref=e1798]:
+                    - link "8 percent of reviews have 1 stars" [ref=e1801] [cursor=pointer]:
+                      - /url: /portal/customer-reviews/B0FJ44ZNKT/ref=acr_dp_hist_1?ie=UTF8&filterByStar=one_star&reviewerType=all_reviews#reviews-filter-bar
+                      - generic [ref=e1802]: 1 star
+                      - progressbar [ref=e1804]
+                      - generic [ref=e1805]: 8%
+                - button "How customer reviews and ratings work" [ref=e1810] [cursor=pointer]: How customer reviews and ratings work
+              - separator [ref=e1812]
+              - separator [ref=e1813]
+              - generic [ref=e1816]:
+                - iframe [ref=e1817]:
+                  - generic [ref=f7e4]:
+                    - link "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black" [ref=f7e5] [cursor=pointer]:
+                      - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RCeW0gWI154KDWpjLkBlRGsAAAGeyfCa4QEAAAH0BABvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDyFhoS/clv1c_ek8OM3GX57OOBXc78KNgvdKqdv0M1EbHQeSGBse9yWX0Rrys5TFA-QW8ACagwUHxvVzrpo8mWOVTK9k6enqnVlKCJtDfe5neHWyBq87iBtUz4uiuUu44ZJjbfpTpLSGczB9XKYA_wl-AitWA28n16ZmCMCU-TRwKMMF2zbYItpRfwIkVuvrEHBFMAFfqMWQqD7UffdgUi5BXhIyYJBOolML2uDRXY5Ls9-nhBloa6PEtenafYndQsrjTjEt292C48rfeBzg9TilaHk_a80b3H23QQLU1HH26_JbJc0ffeUNew3JeOlL_jmoZtn_55H15JtYchZKfMTbDRZg03TK3G_tew2M0AHdUgcYjYeLfLATFQXhLJWynXGEa0cN2oA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MjQ1MTYyMTU3NzQyNzYwOjE3ODE1MDQ0NDk6c3BfY3JyX3NoYXJlZDozMDEzMzIyMjYyMTc3MDI6Ojo6&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_crr_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9jcnJfc2hhcmVk
+                    - img "Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black" [ref=f7e9]
+                    - generic [ref=f7e11]: Skullcandy Hesh 540 ANC Wireless Over-Ear Bluetooth Headphones with THX Spatial Audio, Active Noise Cancelling, Personalized Sound, Up to 65 Hours Battery, Microphone for iPhone Android - True Black
+                    - generic [ref=f7e12]:
+                      - generic [ref=f7e13]:
+                        - link "271" [ref=f7e15] [cursor=pointer]:
+                          - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RCeW0gWI154KDWpjLkBlRGsAAAGeyfCa4QEAAAH0BABvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDyFhoS/clv1c_ek8OM3GX57OOBXc78KNgvdKqdv0M1EbHQeSGBse9yWX0Rrys5TFA-QW8ACagwUHxvVzrpo8mWOVTK9k6enqnVlKCJtDfe5neHWyBq87iBtUz4uiuUu44ZJjbfpTpLSGczB9XKYA_wl-AitWA28n16ZmCMCU-TRwKMMF2zbYItpRfwIkVuvrEHBFMAFfqMWQqD7UffdgUi5BXhIyYJBOolML2uDRXY5Ls9-nhBloa6PEtenafYndQsrjTjEt292C48rfeBzg9TilaHk_a80b3H23QQLU1HH26_JbJc0ffeUNew3JeOlL_jmoZtn_55H15JtYchZKfMTbDRZg03TK3G_tew2M0AHdUgcYjYeLfLATFQXhLJWynXGEa0cN2oA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MjQ1MTYyMTU3NzQyNzYwOjE3ODE1MDQ0NDk6c3BfY3JyX3NoYXJlZDozMDEzMzIyMjYyMTc3MDI6Ojo6&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_crr_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9jcnJfc2hhcmVk#customerReviews
+                          - text: "271"
+                        - generic [ref=f7e17]: INR 15,819.56
+                      - link "Shop now" [ref=f7e21] [cursor=pointer]:
+                        - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RCeW0gWI154KDWpjLkBlRGsAAAGeyfCa4QEAAAH0BABvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDyFhoS/clv1c_ek8OM3GX57OOBXc78KNgvdKqdv0M1EbHQeSGBse9yWX0Rrys5TFA-QW8ACagwUHxvVzrpo8mWOVTK9k6enqnVlKCJtDfe5neHWyBq87iBtUz4uiuUu44ZJjbfpTpLSGczB9XKYA_wl-AitWA28n16ZmCMCU-TRwKMMF2zbYItpRfwIkVuvrEHBFMAFfqMWQqD7UffdgUi5BXhIyYJBOolML2uDRXY5Ls9-nhBloa6PEtenafYndQsrjTjEt292C48rfeBzg9TilaHk_a80b3H23QQLU1HH26_JbJc0ffeUNew3JeOlL_jmoZtn_55H15JtYchZKfMTbDRZg03TK3G_tew2M0AHdUgcYjYeLfLATFQXhLJWynXGEa0cN2oA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MjQ1MTYyMTU3NzQyNzYwOjE3ODE1MDQ0NDk6c3BfY3JyX3NoYXJlZDozMDEzMzIyMjYyMTc3MDI6Ojo6&url=%2Fdp%2FB0FJ43YBVQ%2Fref%3Dsspa_dk_crr_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9jcnJfc2hhcmVk
+                - button "Leave feedback on Sponsored ad" [ref=e1819] [cursor=pointer]:
+                  - generic [ref=e1820]: Sponsored
+            - generic [ref=e1825]:
+              - generic [ref=e1829]:
+                - heading "Customers say" [level=3] [ref=e1830]
+                - generic [ref=e1832]: Customers praise these headphones for their sound quality, particularly noting the bass boost, and appreciate their noise cancellation, comfort, and appearance. The fit is comfortable over the ears, and one customer mentions they hold well during gym sessions. Moreover, the battery life receives positive feedback, with customers noting incredible charging times. However, opinions about value for money are mixed, with some finding them great for the price while others say they're not worth the cost. Additionally, reliability receives mixed reviews, with some saying they work great while others report issues.
+                - generic [ref=e1833]:
+                  - generic [ref=e1834]:
+                    - generic [ref=e1835]: AI Generated from the text of customer reviews
+                    - img [ref=e1836]
+                    - generic [ref=e1837]: Generated from the text of customer reviews
+                  - heading "Select to learn more" [level=4] [ref=e1838]
+                  - tablist "Select to learn more" [ref=e1839]:
+                    - generic [ref=e1840]:
+                      - tab "Positive aspect, sound quality, 79 mentions" [ref=e1844]:
+                        - button "Sound quality(79)" [ref=e1845] [cursor=pointer]:
+                          - generic [ref=e1846]:
+                            - img [ref=e1847]
+                            - generic [ref=e1849]: Sound quality(79)
+                      - tab "Positive aspect, noise cancellation, 22 mentions" [ref=e1854]:
+                        - button "Noise cancellation(22)" [ref=e1855] [cursor=pointer]:
+                          - generic [ref=e1856]:
+                            - img [ref=e1857]
+                            - generic [ref=e1859]: Noise cancellation(22)
+                      - tab "Positive aspect, comfort, 19 mentions" [ref=e1864]:
+                        - button "Comfort(19)" [ref=e1865] [cursor=pointer]:
+                          - generic [ref=e1866]:
+                            - img [ref=e1867]
+                            - generic [ref=e1869]: Comfort(19)
+                      - tab "Positive aspect, appearance, 17 mentions" [ref=e1874]:
+                        - button "Appearance(17)" [ref=e1875] [cursor=pointer]:
+                          - generic [ref=e1876]:
+                            - img [ref=e1877]
+                            - generic [ref=e1879]: Appearance(17)
+                      - tab "Positive aspect, fit, 11 mentions" [ref=e1884]:
+                        - button "Fit(11)" [ref=e1885] [cursor=pointer]:
+                          - generic [ref=e1886]:
+                            - img [ref=e1887]
+                            - generic [ref=e1889]: Fit(11)
+                      - tab "Positive aspect, battery life, 10 mentions" [ref=e1894]:
+                        - button "Battery life(10)" [ref=e1895] [cursor=pointer]:
+                          - generic [ref=e1896]:
+                            - img [ref=e1897]
+                            - generic [ref=e1899]: Battery life(10)
+                      - tab "Mixed aspect, value for money, 17 mentions" [ref=e1904]:
+                        - button "Value for money(17)" [ref=e1905] [cursor=pointer]:
+                          - generic [ref=e1906]:
+                            - img [ref=e1907]
+                            - generic [ref=e1909]: Value for money(17)
+                      - tab "Mixed aspect, reliability, 11 mentions" [ref=e1914]:
+                        - button "Reliability(11)" [ref=e1915] [cursor=pointer]:
+                          - generic [ref=e1916]:
+                            - img [ref=e1917]
+                            - generic [ref=e1919]: Reliability(11)
+              - generic [ref=e1922]:
+                - group [ref=e1925]:
+                  - generic [ref=e1926]:
+                    - heading "Reviews with images" [level=3] [ref=e1928]
+                    - link "See all photos" [ref=e1931] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                  - group [ref=e1935]:
+                    - list [ref=e1936]:
+                      - listitem [ref=e1937]:
+                        - button "Customer Image, click to open customer review" [ref=e1939] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1940]
+                      - listitem [ref=e1942]:
+                        - button "Customer Image, click to open customer review" [ref=e1944] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1945]
+                      - listitem [ref=e1947]:
+                        - button "Customer Image, click to open customer review" [ref=e1949] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1950]
+                      - listitem [ref=e1952]:
+                        - button "Customer Image, click to open customer review" [ref=e1954] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1955]
+                      - listitem [ref=e1957]:
+                        - button "Customer Image, click to open customer review" [ref=e1959] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1960]
+                      - listitem [ref=e1962]:
+                        - button "Customer Image, click to open customer review" [ref=e1964] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1965]
+                      - listitem [ref=e1967]:
+                        - button "Customer Image, click to open customer review" [ref=e1969] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1970]
+                      - listitem [ref=e1972]:
+                        - button "Customer Image, click to open customer review" [ref=e1974] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1975]
+                      - listitem [ref=e1977]:
+                        - button "Customer Image, click to open customer review" [ref=e1979] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1980]
+                      - listitem [ref=e1982]:
+                        - button "Customer Image, click to open customer review" [ref=e1984] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1985]
+                      - listitem [ref=e1987]:
+                        - button "Customer Image, click to open customer review" [ref=e1989] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1990]
+                      - listitem [ref=e1992]:
+                        - button "Customer Image, click to open customer review" [ref=e1994] [cursor=pointer]:
+                          - img "Customer Image, click to open customer review" [ref=e1995]
+                - separator [ref=e1997]
+              - generic [ref=e2002]:
+                - generic [ref=e2003]:
+                  - heading "Top reviews from the United States" [level=3] [ref=e2004]
+                  - list [ref=e2005]:
+                    - listitem [ref=e2006]:
+                      - generic [ref=e2009]:
+                        - link "DeathTheKid" [ref=e2011] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AELGOYRNW3C2LFXT6AJ4E447G6VQ?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2014]
+                          - generic [ref=e2016]: DeathTheKid
+                        - generic [ref=e2019]: 5 out of 5 stars
+                        - link "Very impressed and would def buy again" [ref=e2020] [cursor=pointer]:
+                          - /url: /review/R2YC7VOMM05E02/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - heading "Very impressed and would def buy again" [level=5] [ref=e2021]
+                        - generic [ref=e2022]: Reviewed in the United States on April 26, 2026
+                        - generic [ref=e2023]:
+                          - 'link "Color: True Black" [ref=e2024] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2027] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - generic [ref=e2036]:
+                          - paragraph [ref=e2037]: I’ve had this for over a year now and can honestly say these are great. Stylish and comfortable. Holds well on my head during gym sessions and doesn’t slip off easily. Battery lasts ages sometimes I can go a week of daily use and not charge it. The quick charge is actually impressive as it does charge almost all the way in 10 mins not sure how that works compared to a full charge taking longer but it’s saved me on times when I’m going out and forgot to charge.
+                          - paragraph
+                          - paragraph [ref=e2038]: I currently have it paired to my laptop and phone and steam deck and can switch back and forth easily.
+                          - paragraph
+                          - paragraph [ref=e2039]: All the modes and eq control in the app are also great and really gets the sound to what you would personally like. The bass is nice and once the bass boost is activated it gets even better. It’s not a crusher 2 but it’s still great. The ANC is also great and can drown out most loud noises easily.
+                        - generic [ref=e2040]: One person found this helpful
+                        - generic [ref=e2042]:
+                          - generic [ref=e2046] [cursor=pointer]:
+                            - button "Helpful" [ref=e2047]
+                            - generic [ref=e2049]: Helpful
+                          - img [ref=e2050]
+                          - button "Report Review" [ref=e2052] [cursor=pointer]: Report
+                    - listitem [ref=e2053]:
+                      - generic [ref=e2056]:
+                        - link "Romas" [ref=e2058] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AG5FDQIT7D4AK56ZOHBPQPNZCVNA?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2061]
+                          - generic [ref=e2063]: Romas
+                        - generic [ref=e2066]: 5 out of 5 stars
+                        - 'link "Button controls: nothing can beat that." [ref=e2067] [cursor=pointer]':
+                          - /url: /review/R2NOWKL3FWIDDB/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - 'heading "Button controls: nothing can beat that." [level=5] [ref=e2068]'
+                        - generic [ref=e2069]: Reviewed in the United States on May 31, 2026
+                        - generic [ref=e2070]:
+                          - 'link "Color: True Black" [ref=e2071] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2074] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2084]: Overall, very good product. Like the button controls, like the sound, like the different sound modes. Still judging if earcups are large enough for my ears. There is some rubbing on the top of my ears, so I will see if it fits me. Now I can wear them comfortably for a couple of hours, but then I need to adjust them. We'll be using them for a while and see if it fits me, but overall very nice product, very good looking, so happy.
+                        - generic [ref=e2085]: One person found this helpful
+                        - generic [ref=e2087]:
+                          - generic [ref=e2091] [cursor=pointer]:
+                            - button "Helpful" [ref=e2092]
+                            - generic [ref=e2094]: Helpful
+                          - img [ref=e2095]
+                          - button "Report Review" [ref=e2097] [cursor=pointer]: Report
+                    - listitem [ref=e2098]:
+                      - generic [ref=e2101]:
+                        - link "Sarah Chaffee" [ref=e2103] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AFC63KG4UX4TWZHY42HD7CCKMGYQ?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2106]
+                          - generic [ref=e2108]: Sarah Chaffee
+                        - generic [ref=e2111]: 4 out of 5 stars
+                        - link "Devices" [ref=e2112] [cursor=pointer]:
+                          - /url: /review/RSYW0H5MQN0ET/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - heading "Devices" [level=5] [ref=e2113]
+                        - generic [ref=e2114]: Reviewed in the United States on May 9, 2026
+                        - generic [ref=e2115]:
+                          - 'link "Color: Tortoise" [ref=e2116] [cursor=pointer]':
+                            - /url: /product-reviews/B0G98M8PFX/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2119] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - generic [ref=e2128]:
+                          - paragraph [ref=e2129]: I like and don't like them at the same time.
+                          - paragraph [ref=e2130]: My ears are very sensitive so these are the third pair of expensive headphones I have bought in the last year.
+                          - paragraph [ref=e2131]: They have pretty good sound quality, they are a little bit to big for my head. They also connect easily to multiple devices
+                        - generic [ref=e2133]:
+                          - generic [ref=e2137] [cursor=pointer]:
+                            - button "Helpful" [ref=e2138]
+                            - generic [ref=e2140]: Helpful
+                          - img [ref=e2141]
+                          - button "Report Review" [ref=e2143] [cursor=pointer]: Report
+                    - listitem [ref=e2144]:
+                      - generic [ref=e2147]:
+                        - link "Andrew Perrin" [ref=e2149] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AGPELHQROIGAUDZKRDIODPBI4JDA?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2152]
+                          - generic [ref=e2154]: Andrew Perrin
+                        - generic [ref=e2157]: 5 out of 5 stars
+                        - link "Best headphones" [ref=e2158] [cursor=pointer]:
+                          - /url: /review/R318O1QOCRK6U1/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - heading "Best headphones" [level=5] [ref=e2159]
+                        - generic [ref=e2160]: Reviewed in the United States on June 9, 2026
+                        - generic [ref=e2161]:
+                          - 'link "Color: True Black" [ref=e2162] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2165] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2175]: Best headphones I’ve ever bought. Great quality and sound. Very light and rarely have to charge the battery. Also noise canceling is very good, definitely worth the money.
+                        - generic [ref=e2177]:
+                          - generic [ref=e2181] [cursor=pointer]:
+                            - button "Helpful" [ref=e2182]
+                            - generic [ref=e2184]: Helpful
+                          - img [ref=e2185]
+                          - button "Report Review" [ref=e2187] [cursor=pointer]: Report
+                    - listitem [ref=e2188]:
+                      - generic [ref=e2191]:
+                        - link "Steven Werlein" [ref=e2193] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AGH5B6AZ6YH5PD7OZKQDJV7PSZCA?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2196]
+                          - generic [ref=e2198]: Steven Werlein
+                        - generic [ref=e2201]: 5 out of 5 stars
+                        - link "Metalhead approved!" [ref=e2202] [cursor=pointer]:
+                          - /url: /review/R28IQE6JE03SCH/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - heading "Metalhead approved!" [level=5] [ref=e2203]
+                        - generic [ref=e2204]: Reviewed in the United States on June 2, 2026
+                        - generic [ref=e2205]:
+                          - 'link "Color: True Black" [ref=e2206] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2209] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2219]: My experience with Skullcandy, while limited has been mixed. I took a chance with these and couldn't be happier. I mainly listen to various types of heavy metal and was one of the many taken in by that brand that claims to be made especially for HEAVY metal. You know the one. These are leaps and bounds beyond that brand, particularly if you want clear and crisp sound. Seriously, I have tested them on many types of music and they sound great with everything from Bach to Black Sabbath and the Kingston Trio to King Diamond. The personalized hearing profile isn't a gimmick. Combining it with a custom EQ brings out the best in everything. Sweat resistance is also a nice touch for gym use. Highly recommended.
+                        - generic [ref=e2221]:
+                          - generic [ref=e2225] [cursor=pointer]:
+                            - button "Helpful" [ref=e2226]
+                            - generic [ref=e2228]: Helpful
+                          - img [ref=e2229]
+                          - button "Report Review" [ref=e2231] [cursor=pointer]: Report
+                    - listitem [ref=e2232]:
+                      - generic [ref=e2235]:
+                        - link "C. Robinson" [ref=e2237] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AEVWDDQVUIDZX7TQHLN5ZZOHGJDQ?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2240]
+                          - generic [ref=e2242]: C. Robinson
+                        - generic [ref=e2245]: 1 out of 5 stars
+                        - 'link "NO: DO NOT BUY" [ref=e2246] [cursor=pointer]':
+                          - /url: /review/R21HZSCVZMEWZ7/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - 'heading "NO: DO NOT BUY" [level=5] [ref=e2247]'
+                        - generic [ref=e2248]: Reviewed in the United States on October 3, 2025
+                        - generic [ref=e2249]:
+                          - 'link "Color: True Black" [ref=e2250] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2253] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - generic [ref=e2256]:
+                          - generic [ref=e2262]:
+                            - paragraph [ref=e2263]: "10/26/2025 updated review: there is no mute function? What the heck? How can there not be a mute button? Also, these headphones are NOT compatible with DISCORD. They were not designed, tested, or tailored to be used with DISCORD??? The problem is that there is no independent source for the microphone audio, which causes discord to bug because it does not allow input audio to be same as output audio. So the consequence is that output audio sounds like it’s underwater/drowned and faint and terrible quality, when you’re on a discord call, unless you use another microphone."
+                            - paragraph [ref=e2264]: I paid $200 for these headphones that can’t work with DISCORD. I have to use microphone from my WEBCAM. I’m returning this, changing my review to a 1 star, and getting a pair of Hyper X wireless instead.
+                            - paragraph
+                            - paragraph [ref=e2265]: 08/15/2025 Excellent headphones 5 stars
+                            - paragraph [ref=e2266]: "- make sure your wifi antenna is connected to your PC it is the same antenna that broadcasts the Bluetooth signal. I had a lot of headache trying to figure out why the Bluetooth connection was so bad, but this fixed it instantly."
+                            - paragraph [ref=e2267]: "- I haven’t really figured out how to mute my microphone while on discord/phone call. If this is not an included feature in the buttons I would be shocked and this would be a pretty glaring miss, since this is a fundamental feature for gamers, or for anyone that needs to mute/unmute rapidly. Otherwise phenomenal headphones, quality comfort, and they look sooo good !!! Also very important: the noise cancellation is actually great on these!!! So many other headphones noise cancel is pathetic, but this one is actually pretty great. I don’t like that this model is not supported by the PC software app. However, to be honest, it is supported by the mobile phone app, which I think is actually just better and more practical anyways. Phone app works great v nice. Best headphones yet and this is my 3rd pair of high quality gaming headphones. I’ve had two steel series before and these are better in my opinion"
+                          - button "Read more" [ref=e2271] [cursor=pointer]:
+                            - generic [ref=e2273]: Read more
+                        - generic [ref=e2274]: 3 people found this helpful
+                        - generic [ref=e2276]:
+                          - generic [ref=e2280] [cursor=pointer]:
+                            - button "Helpful" [ref=e2281]
+                            - generic [ref=e2283]: Helpful
+                          - img [ref=e2284]
+                          - button "Report Review" [ref=e2286] [cursor=pointer]: Report
+                    - listitem [ref=e2287]:
+                      - generic [ref=e2290]:
+                        - link "Jasmyn" [ref=e2292] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AFBQSIVHEZYVHDQVC23MPYSCI5TA?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2295]
+                          - generic [ref=e2297]: Jasmyn
+                        - generic [ref=e2300]: 5 out of 5 stars
+                        - link "I'm glad I purchased" [ref=e2301] [cursor=pointer]:
+                          - /url: /review/R5X5CVGF5210S/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - heading "I'm glad I purchased" [level=5] [ref=e2302]
+                        - generic [ref=e2303]: Reviewed in the United States on May 31, 2026
+                        - generic [ref=e2304]:
+                          - 'link "Color: Tortoise" [ref=e2305] [cursor=pointer]':
+                            - /url: /product-reviews/B0G98M8PFX/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2308] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2318]: Love the look, love the quality, love the noise canceling feature
+                        - generic [ref=e2320]:
+                          - generic [ref=e2324] [cursor=pointer]:
+                            - button "Helpful" [ref=e2325]
+                            - generic [ref=e2327]: Helpful
+                          - img [ref=e2328]
+                          - button "Report Review" [ref=e2330] [cursor=pointer]: Report
+                    - listitem [ref=e2331]:
+                      - generic [ref=e2334]:
+                        - link "Margo" [ref=e2336] [cursor=pointer]:
+                          - /url: /gp/profile/amzn1.account.AG3C5JDR6HUCXJVTSL7HLDZKVN3A?ref=cm_cr_dp_d_bdcrb_top
+                          - img [ref=e2339]
+                          - generic [ref=e2341]: Margo
+                        - generic [ref=e2344]: 5 out of 5 stars
+                        - link "You can customize the earmuffs, the trap heat when you sweat cuz of the leather." [ref=e2345] [cursor=pointer]:
+                          - /url: /review/R2XVB16O70MHO5/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8
+                          - heading "You can customize the earmuffs, the trap heat when you sweat cuz of the leather." [level=5] [ref=e2346]
+                        - generic [ref=e2347]: Reviewed in the United States on December 19, 2025
+                        - generic [ref=e2348]:
+                          - 'link "Color: True Black" [ref=e2349] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2352] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2362]: Ts tuff son, it didn’t have the bass i was expecting but still fire tho. There like expensive earmuffs with crazy noise cancellations. And the clamp to your head perfectly. Very comfy too. Jus DONT lay down with them.
+                        - generic [ref=e2363]: One person found this helpful
+                        - generic [ref=e2365]:
+                          - generic [ref=e2369] [cursor=pointer]:
+                            - button "Helpful" [ref=e2370]
+                            - generic [ref=e2372]: Helpful
+                          - img [ref=e2373]
+                          - button "Report Review" [ref=e2375] [cursor=pointer]: Report
+                - link "See more reviews" [ref=e2377] [cursor=pointer]:
+                  - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_show_all_top?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews
+                  - generic [ref=e2378]: See more reviews
+                - generic [ref=e2379]:
+                  - heading "Top reviews from other countries" [level=3] [ref=e2380]
+                  - list [ref=e2381]:
+                    - generic [ref=e2385] [cursor=pointer]:
+                      - button "Translate all reviews to English" [ref=e2386]
+                      - generic [ref=e2387]: Translate all reviews to English
+                    - listitem [ref=e2388]:
+                      - generic [ref=e2391]:
+                        - generic [ref=e2393]:
+                          - img [ref=e2396]
+                          - generic [ref=e2398]: Smac
+                        - generic [ref=e2401]: 5 out of 5 stars
+                        - heading "Good around headphones for the price." [level=5] [ref=e2402]
+                        - generic [ref=e2403]: Reviewed in Canada on May 13, 2026
+                        - generic [ref=e2404]:
+                          - 'link "Color: True Black" [ref=e2405] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2408] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - generic [ref=e2417]:
+                          - paragraph [ref=e2418]: Very stylish. Bought them on sale.
+                          - paragraph [ref=e2419]: Out of the box sound is alittle meh.
+                          - paragraph [ref=e2420]: Playing with the equalizer and enabling Bass boost will greatly enhance the sound tough.
+                        - button "Report Review" [ref=e2424] [cursor=pointer]: Report
+                    - listitem [ref=e2425]:
+                      - generic [ref=e2428]:
+                        - generic [ref=e2430]:
+                          - img [ref=e2433]
+                          - generic [ref=e2435]: Silas Theiß
+                        - generic [ref=e2438]: 1 out of 5 stars
+                        - heading "Schlechte Qualität" [level=5] [ref=e2439]
+                        - generic [ref=e2440]: Reviewed in Germany on June 11, 2026
+                        - generic [ref=e2441]:
+                          - 'link "Color: True Black" [ref=e2442] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2445] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - generic [ref=e2454]:
+                          - paragraph [ref=e2455]: Anc funktioniert nicht habe die einen tag lang getestet
+                          - paragraph [ref=e2456]: Habe die crusher evo 2 kosten wenn die im Angebot sind 130euro die sind viel besser und wenn die nicht im Angebot sind 200 aber die sind wesentlich besser
+                        - button "Report Review" [ref=e2460] [cursor=pointer]: Report
+                        - link "Translate review to English" [ref=e2463] [cursor=pointer]:
+                          - /url: javascript:void(0)
+                    - listitem [ref=e2464]:
+                      - generic [ref=e2467]:
+                        - generic [ref=e2469]:
+                          - img [ref=e2472]
+                          - generic [ref=e2474]: Carlos Joulins Moya
+                        - generic [ref=e2477]: 5 out of 5 stars
+                        - heading "De los mejores y más ignorados" [level=5] [ref=e2478]
+                        - generic [ref=e2479]: Reviewed in Spain on December 18, 2025
+                        - generic [ref=e2480]:
+                          - 'link "Color: True Black" [ref=e2481] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2484] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2494]: Estos auriculares son de inicio y sin ajuste alguno, de los que mejor suenan del mercado. El sonido es muy detallado pero con dinámica. Además el confort es supremo. Los más cómodos que he probado y he probado casi todos. Los controles por cruceta una genialidad. La cancelación de ruido es deficiente sin embargo. Si es tu prioridad, estos no son los tuyos. El modo de transparencia está bastante conseguido, no obstante. Los único malo es que no venga con una funda rígida. La bolsa de viaje no vale para nada.
+                        - button "Report Review" [ref=e2498] [cursor=pointer]: Report
+                        - link "Translate review to English" [ref=e2501] [cursor=pointer]:
+                          - /url: javascript:void(0)
+                    - listitem [ref=e2502]:
+                      - generic [ref=e2505]:
+                        - generic [ref=e2507]:
+                          - img [ref=e2510]
+                          - generic [ref=e2512]: Alistair
+                        - generic [ref=e2515]: 5 out of 5 stars
+                        - heading "Comfy, decent sound, crossbody bag included!" [level=5] [ref=e2516]
+                        - generic [ref=e2517]: Reviewed in the United Kingdom on May 12, 2026
+                        - generic [ref=e2518]:
+                          - 'link "Color: True Black" [ref=e2519] [cursor=pointer]':
+                            - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2522] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2532]: Great headphones with a unique tuning for casual music lovers, be sure to download the app and turn off “adaptive ANC” it lowers the level of ANC, tight bass not too overwhelming, very comfortable for long listening sessions, handy should bag provided too stash the headphones when not being used
+                        - button "Report Review" [ref=e2536] [cursor=pointer]: Report
+                    - listitem [ref=e2537]:
+                      - generic [ref=e2540]:
+                        - generic [ref=e2542]:
+                          - img [ref=e2545]
+                          - generic [ref=e2547]: Amber
+                        - generic [ref=e2550]: 3 out of 5 stars
+                        - heading "Cool design. Lacking sound quality" [level=5] [ref=e2551]
+                        - generic [ref=e2552]: Reviewed in Australia on May 25, 2026
+                        - generic [ref=e2553]:
+                          - 'link "Color: Tortoise" [ref=e2554] [cursor=pointer]':
+                            - /url: /product-reviews/B0G98M8PFX/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - link "Verified Purchase" [ref=e2557] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                        - paragraph [ref=e2567]: The design is awesome but the sound quality is really low.
+                        - button "Report Review" [ref=e2571] [cursor=pointer]: Report
+                - link "See more reviews" [ref=e2573] [cursor=pointer]:
+                  - /url: /product-reviews/B0FJ44ZNKT/ref=cm_cr_dp_d_show_all_top?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews
+                  - generic [ref=e2574]: See more reviews
+    - complementary "Your recently viewed items and featured recommendations"
+    - generic [ref=e2579]:
+      - button "Back to top" [ref=e2580] [cursor=pointer]:
+        - generic [ref=e2581]: Back to top
+      - generic [ref=e2582]:
+        - generic [ref=e2583]:
+          - heading "Get to Know Us" [level=6] [ref=e2584]
+          - list [ref=e2585]:
+            - listitem [ref=e2586]:
+              - link "Careers" [ref=e2587] [cursor=pointer]:
+                - /url: https://www.amazon.jobs
+            - listitem [ref=e2588]:
+              - link "Blog" [ref=e2589] [cursor=pointer]:
+                - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e2590]:
+              - link "About Amazon" [ref=e2591] [cursor=pointer]:
+                - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e2592]:
+              - link "Investor Relations" [ref=e2593] [cursor=pointer]:
+                - /url: https://www.amazon.com/ir
+            - listitem [ref=e2594]:
+              - link "Amazon Devices" [ref=e2595] [cursor=pointer]:
+                - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+            - listitem [ref=e2596]:
+              - link "Amazon Science" [ref=e2597] [cursor=pointer]:
+                - /url: https://www.amazon.science
+        - generic [ref=e2599]:
+          - heading "Make Money with Us" [level=6] [ref=e2600]
+          - list [ref=e2601]:
+            - listitem [ref=e2602]:
+              - link "Sell products on Amazon" [ref=e2603] [cursor=pointer]:
+                - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+            - listitem [ref=e2604]:
+              - link "Sell on Amazon Business" [ref=e2605] [cursor=pointer]:
+                - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+            - listitem [ref=e2606]:
+              - link "Sell apps on Amazon" [ref=e2607] [cursor=pointer]:
+                - /url: https://developer.amazon.com
+            - listitem [ref=e2608]:
+              - link "Become an Affiliate" [ref=e2609] [cursor=pointer]:
+                - /url: https://affiliate-program.amazon.com/
+            - listitem [ref=e2610]:
+              - link "Advertise Your Products" [ref=e2611] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+            - listitem [ref=e2612]:
+              - link "Self-Publish with Us" [ref=e2613] [cursor=pointer]:
+                - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+            - listitem [ref=e2614]:
+              - link "Host an Amazon Hub" [ref=e2615] [cursor=pointer]:
+                - /url: https://go.thehub-amazon.com/amazon-hub-locker
+            - listitem [ref=e2616]:
+              - text: ›
+              - link "See More Make Money with Us" [ref=e2617] [cursor=pointer]:
+                - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+        - generic [ref=e2619]:
+          - heading "Amazon Payment Products" [level=6] [ref=e2620]
+          - list [ref=e2621]:
+            - listitem [ref=e2622]:
+              - link "Amazon Business Card" [ref=e2623] [cursor=pointer]:
+                - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+            - listitem [ref=e2624]:
+              - link "Shop with Points" [ref=e2625] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+            - listitem [ref=e2626]:
+              - link "Reload Your Balance" [ref=e2627] [cursor=pointer]:
+                - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+            - listitem [ref=e2628]:
+              - link "Amazon Currency Converter" [ref=e2629] [cursor=pointer]:
+                - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+        - generic [ref=e2631]:
+          - heading "Let Us Help You" [level=6] [ref=e2632]
+          - list [ref=e2633]:
+            - listitem [ref=e2634]:
+              - link "Amazon and COVID-19" [ref=e2635] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+            - listitem [ref=e2636]:
+              - link "Your Account" [ref=e2637] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+            - listitem [ref=e2638]:
+              - link "Your Orders" [ref=e2639] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+            - listitem [ref=e2640]:
+              - link "Shipping Rates & Policies" [ref=e2641] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+            - listitem [ref=e2642]:
+              - link "Returns & Replacements" [ref=e2643] [cursor=pointer]:
+                - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+            - listitem [ref=e2644]:
+              - link "Manage Your Content and Devices" [ref=e2645] [cursor=pointer]:
+                - /url: /gp/digital/fiona/manage?ref_=footer_myk
+            - listitem [ref=e2646]:
+              - link "Help" [ref=e2647] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+      - generic [ref=e2649]:
+        - link "Amazon US Home" [ref=e2652] [cursor=pointer]:
+          - /url: /?ref_=footer_logo
+        - generic [ref=e2655]:
+          - generic [ref=e2656]:
+            - link "Choose a language for shopping. Current selection is English." [ref=e2657] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+              - generic [ref=e2659]: English
+            - button "Expand to Change Language or Country" [ref=e2660] [cursor=pointer]
+          - link "₹ INR - Indian Rupee" [ref=e2661] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2FSkullcandy-Bluetooth-Headphones-Cancelling-Microphone%2Fdp%2FB0FJ44ZNKT%2Fref%3Dsr_1_1_sspa
+            - generic [ref=e2662]: ₹
+            - generic [ref=e2663]: INR - Indian Rupee
+          - button "Choose a country/region for shopping. The current selection is United States." [ref=e2664] [cursor=pointer]:
+            - generic [ref=e2666]: United States
+      - navigation "More on Amazon" [ref=e2667]:
+        - generic "More on Amazon" [ref=e2668]:
+          - list [ref=e2669]:
+            - listitem [ref=e2670]:
+              - link "Amazon Music Stream millions of songs" [ref=e2671] [cursor=pointer]:
+                - /url: https://music.amazon.com?ref=dm_aff_amz_com
+                - heading "Amazon Music" [level=5] [ref=e2672]
+                - generic [ref=e2673]:
+                  - text: Stream millions
+                  - text: of songs
+            - listitem [ref=e2674]
+            - listitem [ref=e2675]:
+              - link "Amazon Ads Reach customers wherever they spend their time" [ref=e2676] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+                - heading "Amazon Ads" [level=5] [ref=e2677]
+                - generic [ref=e2678]:
+                  - text: Reach customers
+                  - text: wherever they
+                  - text: spend their time
+            - listitem [ref=e2679]
+            - listitem [ref=e2680]:
+              - link "6pm Score deals on fashion brands" [ref=e2681] [cursor=pointer]:
+                - /url: https://www.6pm.com
+                - heading "6pm" [level=5] [ref=e2682]
+                - generic [ref=e2683]:
+                  - text: Score deals
+                  - text: on fashion brands
+            - listitem [ref=e2684]
+            - listitem [ref=e2685]:
+              - link "AbeBooks Books, art & collectibles" [ref=e2686] [cursor=pointer]:
+                - /url: https://www.abebooks.com
+                - heading "AbeBooks" [level=5] [ref=e2687]
+                - generic [ref=e2688]:
+                  - text: Books, art
+                  - text: "& collectibles"
+            - listitem [ref=e2689]
+            - listitem [ref=e2690]:
+              - link "ACX Audiobook Publishing Made Easy" [ref=e2691] [cursor=pointer]:
+                - /url: https://www.acx.com/
+                - heading "ACX" [level=5] [ref=e2692]
+                - generic [ref=e2693]:
+                  - text: Audiobook Publishing
+                  - text: Made Easy
+            - listitem [ref=e2694]
+            - listitem [ref=e2695]:
+              - link "Sell on Amazon Start a Selling Account" [ref=e2696] [cursor=pointer]:
+                - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+                - heading "Sell on Amazon" [level=5] [ref=e2697]
+                - generic [ref=e2698]: Start a Selling Account
+            - listitem [ref=e2699]
+            - listitem [ref=e2700]:
+              - link "Veeqo Shipping Software Inventory Management" [ref=e2701] [cursor=pointer]:
+                - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+                - heading "Veeqo" [level=5] [ref=e2702]
+                - generic [ref=e2703]:
+                  - text: Shipping Software
+                  - text: Inventory Management
+          - list [ref=e2704]:
+            - listitem [ref=e2705]:
+              - link "Amazon Business Everything For Your Business" [ref=e2706] [cursor=pointer]:
+                - /url: /business?ref_=footer_retail_b2b
+                - heading "Amazon Business" [level=5] [ref=e2707]
+                - generic [ref=e2708]:
+                  - text: Everything For
+                  - text: Your Business
+            - listitem [ref=e2709]
+            - listitem [ref=e2710]:
+              - link "AmazonGlobal Ship Orders Internationally" [ref=e2711] [cursor=pointer]:
+                - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+                - heading "AmazonGlobal" [level=5] [ref=e2712]
+                - generic [ref=e2713]:
+                  - text: Ship Orders
+                  - text: Internationally
+            - listitem [ref=e2714]
+            - listitem [ref=e2715]:
+              - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e2716] [cursor=pointer]:
+                - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+                - heading "Amazon Web Services" [level=5] [ref=e2717]
+                - generic [ref=e2718]:
+                  - text: Scalable Cloud
+                  - text: Computing Services
+            - listitem [ref=e2719]
+            - listitem [ref=e2720]:
+              - link "Audible Listen to Books & Original Audio Performances" [ref=e2721] [cursor=pointer]:
+                - /url: https://www.audible.com
+                - heading "Audible" [level=5] [ref=e2722]
+                - generic [ref=e2723]:
+                  - text: Listen to Books & Original
+                  - text: Audio Performances
+            - listitem [ref=e2724]
+            - listitem [ref=e2725]:
+              - link "Box Office Mojo Find Movie Box Office Data" [ref=e2726] [cursor=pointer]:
+                - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+                - heading "Box Office Mojo" [level=5] [ref=e2727]
+                - generic [ref=e2728]:
+                  - text: Find Movie
+                  - text: Box Office Data
+            - listitem [ref=e2729]
+            - listitem [ref=e2730]:
+              - link "Goodreads Book reviews & recommendations" [ref=e2731] [cursor=pointer]:
+                - /url: https://www.goodreads.com
+                - heading "Goodreads" [level=5] [ref=e2732]
+                - generic [ref=e2733]:
+                  - text: Book reviews
+                  - text: "& recommendations"
+            - listitem [ref=e2734]
+            - listitem [ref=e2735]:
+              - link "IMDb Movies, TV & Celebrities" [ref=e2736] [cursor=pointer]:
+                - /url: https://www.imdb.com
+                - heading "IMDb" [level=5] [ref=e2737]
+                - generic [ref=e2738]:
+                  - text: Movies, TV
+                  - text: "& Celebrities"
+          - list [ref=e2739]:
+            - listitem [ref=e2740]:
+              - link "IMDbPro Get Info Entertainment Professionals Need" [ref=e2741] [cursor=pointer]:
+                - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+                - heading "IMDbPro" [level=5] [ref=e2742]
+                - generic [ref=e2743]:
+                  - text: Get Info Entertainment
+                  - text: Professionals Need
+            - listitem [ref=e2744]
+            - listitem [ref=e2745]:
+              - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e2746] [cursor=pointer]:
+                - /url: https://kdp.amazon.com
+                - heading "Kindle Direct Publishing" [level=5] [ref=e2747]
+                - generic [ref=e2748]:
+                  - text: Indie Digital & Print Publishing
+                  - text: Made Easy
+            - listitem [ref=e2749]
+            - listitem [ref=e2750]:
+              - link "Prime Video Direct Video Distribution Made Easy" [ref=e2751] [cursor=pointer]:
+                - /url: https://videodirect.amazon.com/home/landing
+                - heading "Prime Video Direct" [level=5] [ref=e2752]
+                - generic [ref=e2753]:
+                  - text: Video Distribution
+                  - text: Made Easy
+            - listitem [ref=e2754]
+            - listitem [ref=e2755]:
+              - link "Shopbop Designer Fashion Brands" [ref=e2756] [cursor=pointer]:
+                - /url: https://www.shopbop.com
+                - heading "Shopbop" [level=5] [ref=e2757]
+                - generic [ref=e2758]:
+                  - text: Designer
+                  - text: Fashion Brands
+            - listitem [ref=e2759]
+            - listitem [ref=e2760]:
+              - link "Woot! Deals and Shenanigans" [ref=e2761] [cursor=pointer]:
+                - /url: https://www.woot.com/
+                - heading "Woot!" [level=5] [ref=e2762]
+                - generic [ref=e2763]:
+                  - text: Deals and
+                  - text: Shenanigans
+            - listitem [ref=e2764]
+            - listitem [ref=e2765]:
+              - link "Zappos Shoes & Clothing" [ref=e2766] [cursor=pointer]:
+                - /url: https://www.zappos.com
+                - heading "Zappos" [level=5] [ref=e2767]
+                - generic [ref=e2768]:
+                  - text: Shoes &
+                  - text: Clothing
+            - listitem [ref=e2769]
+            - listitem [ref=e2770]:
+              - link "Ring Smart Home Security Systems" [ref=e2771] [cursor=pointer]:
+                - /url: https://ring.com
+                - heading "Ring" [level=5] [ref=e2772]
+                - generic [ref=e2773]:
+                  - text: Smart Home
+                  - text: Security Systems
+          - list [ref=e2774]:
+            - listitem [ref=e2775]
+            - listitem [ref=e2776]
+            - listitem [ref=e2777]:
+              - link "eero WiFi Stream 4K Video in Every Room" [ref=e2778] [cursor=pointer]:
+                - /url: https://eero.com/
+                - heading "eero WiFi" [level=5] [ref=e2779]
+                - generic [ref=e2780]:
+                  - text: Stream 4K Video
+                  - text: in Every Room
+            - listitem [ref=e2781]
+            - listitem [ref=e2782]:
+              - link "Blink Smart Security for Every Home" [ref=e2783] [cursor=pointer]:
+                - /url: https://blinkforhome.com/?ref=nav_footer
+                - heading "Blink" [level=5] [ref=e2784]
+                - generic [ref=e2785]:
+                  - text: Smart Security
+                  - text: for Every Home
+            - listitem [ref=e2786]
+            - listitem [ref=e2787]:
+              - link "Neighbors App Real-Time Crime & Safety Alerts" [ref=e2788] [cursor=pointer]:
+                - /url: https://shop.ring.com/pages/neighbors-app
+                - heading "Neighbors App" [level=5] [ref=e2789]
+                - generic [ref=e2790]:
+                  - text: Real-Time Crime
+                  - text: "& Safety Alerts"
+            - listitem [ref=e2791]
+            - listitem [ref=e2792]:
+              - link "PillPack Pharmacy Simplified" [ref=e2793] [cursor=pointer]:
+                - /url: https://www.pillpack.com
+                - heading "PillPack" [level=5] [ref=e2794]
+                - generic [ref=e2795]: Pharmacy Simplified
+            - listitem [ref=e2796]
+            - listitem [ref=e2797]
+            - listitem [ref=e2798]
+            - listitem [ref=e2799]
+      - generic [ref=e2800]:
+        - list [ref=e2801]:
+          - listitem [ref=e2802]:
+            - link "Conditions of Use" [ref=e2803] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+          - listitem [ref=e2804]:
+            - link "Privacy Notice" [ref=e2805] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+          - listitem [ref=e2806]:
+            - link "Consumer Health Data Privacy Disclosure" [ref=e2807] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+          - listitem [ref=e2808]:
+            - link "Your Ads Privacy Choices" [ref=e2809] [cursor=pointer]:
+              - /url: /privacyprefs?ref_=footer_iba
+          - listitem [ref=e2810]
+        - generic [ref=e2812]: © 1996-2026, Amazon.com, Inc. or its affiliates
+    - iframe [ref=e2814]:
+      - iframe [ref=f8e2]:
+        - generic [active]:
+          - img [ref=f9e1]
+          - img [ref=f9e2]
+          - img [ref=f9e3]
+          - img [ref=f9e4]
+          - img [ref=f9e5]
+          - img [ref=f9e6]
+          - img [ref=f9e7]
+          - img [ref=f9e8]
+          - img [ref=f9e9]
+          - img [ref=f9e10]
+          - img [ref=f9e11]
+          - img [ref=f9e12]
+          - img [ref=f9e13]
+          - img [ref=f9e14]
+          - img [ref=f9e15]
+          - img [ref=f9e16]
+          - img [ref=f9e17]
+          - img [ref=f9e18]
+  - generic: "Test: amzn-nv-flyout-healthy-choice"
+  - generic: "Test: nav-rufus-disc-txt"
+  - generic: "Test: a-truncate-cut"
+  - generic: "Test: sp-cc-wrapper"
+  - generic: "Test: .mo-wp"
+  - generic: "Test: .a-image-container"
+  - generic: "Test: sp-cc"
+  - generic: "Test: .amzn-box-inner"
+  - generic: "Test: .js-order-card"
+  - generic: "Test: pldn-deep-link"
+  - generic: "Test: add-to-cart-btn"
+  - generic: "Test: amzn-nav-app-banner-container"
+  - generic: "Test: .sparkle-container"
+```
+
+# Test source
+
+```ts
+  35  |         // Add a small delay to ensure all content is rendered
+  36  |         await this.page.waitForTimeout(1500);
+  37  |         
+  38  |         // Use evaluate to extract titles directly from the page with multiple selector strategies
+  39  |         const titles = await this.page.evaluate(() => {
+  40  |             const result: string[] = [];
+  41  |             
+  42  |             // Strategy 1: Look for all h2 elements that might contain product titles
+  43  |             const h2s = document.querySelectorAll('h2');
+  44  |             h2s.forEach(h2 => {
+  45  |                 // Get the first link's span text if it exists
+  46  |                 const span = h2.querySelector('a span');
+  47  |                 if (span) {
+  48  |                     const text = span.textContent?.trim();
+  49  |                     if (text && text.length > 0) {
+  50  |                         result.push(text);
+  51  |                     }
+  52  |                 }
+  53  |                 // If no span in link, try to get h2's text directly
+  54  |                 else if (result.length === 0) {
+  55  |                     const text = h2.textContent?.trim();
+  56  |                     if (text && text.length > 5) { // Avoid short labels
+  57  |                         result.push(text);
+  58  |                     }
+  59  |                 }
+  60  |             });
+  61  |             
+  62  |             return result;
+  63  |         });
+  64  |         
+  65  |         return titles;
+  66  |     }
+  67  | 
+  68  |     async selectProduct(productIndex: number) {
+  69  |         // Add a delay to ensure products are rendered
+  70  |         await this.page.waitForTimeout(2000);
+  71  |         
+  72  |         // Use evaluate to find and click the product using multiple strategies
+  73  |         await this.page.evaluate((index: number) => {
+  74  |             let clickableElements: HTMLElement[] = [];
+  75  |             
+  76  |             // Strategy 1: Look for h2 elements with links (traditional product listings)
+  77  |             const h2Elements = document.querySelectorAll('h2');
+  78  |             h2Elements.forEach(h2 => {
+  79  |                 const link = h2.querySelector('a');
+  80  |                 if (link && link.href) {
+  81  |                     clickableElements.push(link);
+  82  |                 }
+  83  |             });
+  84  |             
+  85  |             // Strategy 2: If no h2s with links, look for divs with class containing "s-asin" that have clickable links
+  86  |             if (clickableElements.length === 0) {
+  87  |                 const asinDivs = document.querySelectorAll('[class*="s-asin"] a');
+  88  |                 asinDivs.forEach(link => {
+  89  |                     if ((link as HTMLAnchorElement).href && !clickableElements.includes(link as HTMLElement)) {
+  90  |                         clickableElements.push(link as HTMLElement);
+  91  |                     }
+  92  |                 });
+  93  |             }
+  94  |             
+  95  |             // Strategy 3: Look for any h2 within [data-component-type="s-search-result"]
+  96  |             if (clickableElements.length === 0) {
+  97  |                 const searchResults = document.querySelectorAll('[data-component-type="s-search-result"]');
+  98  |                 searchResults.forEach(result => {
+  99  |                     const h2 = result.querySelector('h2');
+  100 |                     if (h2) {
+  101 |                         const link = h2.querySelector('a');
+  102 |                         if (link && (link as HTMLAnchorElement).href) {
+  103 |                             clickableElements.push(link as HTMLElement);
+  104 |                         }
+  105 |                     }
+  106 |                 });
+  107 |             }
+  108 |             
+  109 |             // Strategy 4: Look for role="heading" within product containers
+  110 |             if (clickableElements.length === 0) {
+  111 |                 const headings = document.querySelectorAll('[role="heading"]');
+  112 |                 headings.forEach(heading => {
+  113 |                     const link = heading.querySelector('a');
+  114 |                     if (link && (link as HTMLAnchorElement).href && link.textContent && link.textContent.trim().length > 5) {
+  115 |                         clickableElements.push(link as HTMLElement);
+  116 |                     }
+  117 |                 });
+  118 |             }
+  119 |             
+  120 |             if (clickableElements.length === 0) {
+  121 |                 throw new Error('No clickable product elements found on the page');
+  122 |             }
+  123 |             
+  124 |             if (index >= clickableElements.length) {
+  125 |                 throw new Error(`Product index ${index} out of range. Only ${clickableElements.length} products found.`);
+  126 |             }
+  127 |             
+  128 |             // Click the element
+  129 |             (clickableElements[index] as HTMLAnchorElement).click();
+  130 |         }, productIndex);
+  131 |         
+  132 |         // Wait for navigation or page load
+  133 |         await this.page.waitForLoadState('networkidle').catch(() => {
+  134 |             // If networkidle fails, just wait a bit
+> 135 |             return this.page.waitForTimeout(2000);
+      |                              ^ Error: page.waitForTimeout: Target page, context or browser has been closed
+  136 |         });
+  137 |     }
+  138 | 
+  139 |     async selectProductByName(productName: string) {
+  140 |         await this.page.locator(`h2 a:has-text("${productName}")`).click();
+  141 |     }
+  142 | 
+  143 |     async filterByPriceRange(minPrice: string, maxPrice: string) {
+  144 |         await this.minPriceInput.fill(minPrice);
+  145 |         await this.maxPriceInput.fill(maxPrice);
+  146 |         await this.applyPriceButton.click();
+  147 |     }
+  148 | 
+  149 |     async sortByOption(sortOption: string) {
+  150 |         // Options: 'price-asc-rank', 'price-desc-rank', 'review-rank', 'date-desc-rank'
+  151 |         await this.sortDropdown.selectOption(sortOption);
+  152 |     }
+  153 | 
+  154 |     async filterByRating(stars: number) {
+  155 |         // Filter by star rating (4 stars and up, etc.)
+  156 |         await this.page.locator(`[aria-label="${stars} Stars & Up"]`).click();
+  157 |     }
+  158 | 
+  159 |     async verifyProductsDisplayed(): Promise<boolean> {
+  160 |         return await this.searchResultsContainer.first().isVisible();
+  161 |     }
+  162 | 
+  163 |     async waitForSearchResults() {
+  164 |         await this.page.waitForSelector('[data-component-type="s-search-result"]');
+  165 |     }
+  166 | }
+  167 | 
+```

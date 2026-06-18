@@ -1,0 +1,3102 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: EnhancedProductFlow.spec.ts >> Amazon Product Flow - Enhanced >> should proceed to checkout
+- Location: src\tests\EnhancedProductFlow.spec.ts:167:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-component-type="s-search-result"]').first().locator('h2 a')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Shortcuts menu" [ref=e3]:
+      - heading "Skip to" [level=2] [ref=e4]
+      - list "Skip to" [ref=e5]:
+        - listitem [ref=e6]:
+          - link "main content" [ref=e7] [cursor=pointer]:
+            - /url: "#skippedLink"
+            - text: Main content
+        - listitem [ref=e8]:
+          - link "Results" [ref=e9] [cursor=pointer]:
+            - /url: .s-asin a:has(h2)
+        - listitem [ref=e10]:
+          - link "Filters" [ref=e11] [cursor=pointer]:
+            - /url: "#s-refinements > div.a-section > div:first-child"
+      - separator [ref=e12]
+      - heading "Keyboard shortcuts" [level=2] [ref=e13]
+      - list "Keyboard shortcuts" [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Search, alt, forward slash" [ref=e16] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e17]:
+              - generic [ref=e18]: Search
+              - generic [ref=e19]:
+                - generic [ref=e20]: alt
+                - generic [ref=e21]: +
+                - generic [ref=e22]: /
+        - listitem [ref=e23]:
+          - link "Cart, shift, alt, c" [ref=e24] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e25]:
+              - generic [ref=e26]: Cart
+              - generic [ref=e27]:
+                - generic [ref=e28]: shift
+                - generic [ref=e29]: +
+                - generic [ref=e30]: alt
+                - generic [ref=e31]: +
+                - generic [ref=e32]: C
+        - listitem [ref=e33]:
+          - link "Home, shift, alt, h" [ref=e34] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e35]:
+              - generic [ref=e36]: Home
+              - generic [ref=e37]:
+                - generic [ref=e38]: shift
+                - generic [ref=e39]: +
+                - generic [ref=e40]: alt
+                - generic [ref=e41]: +
+                - generic [ref=e42]: H
+        - listitem [ref=e43]:
+          - link "Your orders, shift, alt, o" [ref=e44] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e45]:
+              - generic [ref=e46]: Orders
+              - generic [ref=e47]:
+                - generic [ref=e48]: shift
+                - generic [ref=e49]: +
+                - generic [ref=e50]: alt
+                - generic [ref=e51]: +
+                - generic [ref=e52]: O
+        - listitem [ref=e53]:
+          - button "Show/hide shortcuts, shift, alt, z" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: Show/Hide shortcuts
+              - generic [ref=e57]:
+                - generic [ref=e58]: shift
+                - generic [ref=e59]: +
+                - generic [ref=e60]: alt
+                - generic [ref=e61]: +
+                - generic [ref=e62]: Z
+      - generic [ref=e68]: To move between items, use your keyboard's up or down arrows.
+    - banner [ref=e69]:
+      - navigation "Primary" [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - link "Amazon" [ref=e74] [cursor=pointer]:
+              - /url: /ref=nav_logo
+            - button "Deliver to India" [ref=e77] [cursor=pointer]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: Deliver to
+                - generic [ref=e81]: India
+          - search [ref=e84]:
+            - generic [ref=e87]:
+              - generic [ref=e89]: All
+              - combobox "Select the department you want to search in" [ref=e91] [cursor=pointer]:
+                - option "All Departments" [selected]
+                - option "Arts & Crafts"
+                - option "Automotive"
+                - option "Baby"
+                - option "Beauty & Personal Care"
+                - option "Books"
+                - option "Boys' Fashion"
+                - option "Computers"
+                - option "Deals"
+                - option "Digital Music"
+                - option "Electronics"
+                - option "Girls' Fashion"
+                - option "Health & Household"
+                - option "Home & Kitchen"
+                - option "Industrial & Scientific"
+                - option "Kindle Store"
+                - option "Luggage"
+                - option "Men's Fashion"
+                - option "Movies & TV"
+                - option "Music, CDs & Vinyl"
+                - option "Pet Supplies"
+                - option "Prime Video"
+                - option "Software"
+                - option "Sports & Outdoors"
+                - option "Tools & Home Improvement"
+                - option "Toys & Games"
+                - option "Video Games"
+                - option "Women's Fashion"
+            - searchbox "Search Amazon" [ref=e94]: Smart Watch
+            - generic "Go" [ref=e97] [cursor=pointer]:
+              - button "Go" [ref=e98]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=e102] [cursor=pointer]:
+                - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+                - generic [ref=e105]:
+                  - img "United States" [ref=e106]
+                  - generic [ref=e107]: EN
+              - button "Expand to Change Language or Country" [ref=e108] [cursor=pointer]
+            - generic [ref=e109]:
+              - link "Hello, sign in Account & Lists" [ref=e110] [cursor=pointer]:
+                - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DSmart%2BWatch%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                - generic [ref=e112]: Hello, sign in
+                - generic [ref=e113]: Account & Lists
+              - button "Expand Account and Lists" [ref=e114] [cursor=pointer]
+            - link "Returns & Orders" [ref=e115] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=nav_orders_first
+              - generic [ref=e116]: Returns
+              - generic [ref=e117]: "& Orders"
+            - link "0 items in cart" [ref=e118] [cursor=pointer]:
+              - /url: /gp/cart/view.html?ref_=nav_cart
+              - generic [ref=e120]: "0"
+              - generic [ref=e123]: Cart
+        - alertdialog "International Shopping Transition Alert" [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e129]:
+              - text: We're showing you items that ship to
+              - strong [ref=e130]: India
+              - text: . To see items that ship to a different country, change your delivery address.
+            - generic [ref=e131]:
+              - generic [ref=e133] [cursor=pointer]:
+                - button "Submit" [ref=e134]
+                - generic [ref=e135]: Dismiss
+              - generic [ref=e137] [cursor=pointer]:
+                - button "Submit" [ref=e138]
+                - generic [ref=e139]: Change Address
+        - generic [ref=e140]:
+          - button "Open All Categories Menu" [ref=e142] [cursor=pointer]:
+            - generic [ref=e144]: All
+          - list [ref=e148]:
+            - listitem [ref=e149]:
+              - link "Today's Deals" [ref=e151] [cursor=pointer]:
+                - /url: /gp/goldbox?ref_=nav_cs_gb
+            - listitem [ref=e152]:
+              - link "Gift Cards" [ref=e154] [cursor=pointer]:
+                - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+            - listitem [ref=e155]:
+              - link "Sell" [ref=e157] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+            - listitem [ref=e158]:
+              - link "Registry" [ref=e160] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+            - listitem [ref=e161]:
+              - link "Prime Video" [ref=e163] [cursor=pointer]:
+                - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+            - listitem [ref=e164]:
+              - link "Customer Service" [ref=e166] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+            - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=e167] [cursor=pointer]:
+              - /url: /gp/help/customer/accessibility
+              - text: Disability Customer Support
+        - dialog [ref=e170]
+    - generic [ref=e172]:
+      - 'heading "1-16 of over 40,000 results for \"Smart Watch\" Sort by: Featured" [level=1] [ref=e175]':
+        - generic [ref=e176]:
+          - heading "1-16 of over 40,000 results for \"Smart Watch\"" [level=2] [ref=e179]
+          - generic [ref=e184]:
+            - generic [ref=e185]: "Sort by:"
+            - combobox "Sort by:" [ref=e186]:
+              - option "Featured" [selected]
+              - 'option "Price: Low to High"'
+              - 'option "Price: High to Low"'
+              - option "Avg. Customer Review"
+              - option "Newest Arrivals"
+              - option "Best Sellers"
+            - generic [ref=e189] [cursor=pointer]: Sort by:Featured
+      - generic [ref=e191]:
+        - generic [ref=e193]:
+          - generic [ref=e195]:
+            - generic [ref=e197]:
+              - generic [ref=e200]:
+                - heading "Results" [level=2] [ref=e201]
+                - generic [ref=e202]: Check each product page for other buying options.
+              - generic:
+                - list:
+                  - listitem [ref=e203]:
+                    - generic [ref=e211]:
+                      - link [ref=e217] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMDc2MDIwNDg0NDAwMjo6MDo6&url=%2FWHOOP-Life-12-Month-Membership-Pressure%2Fdp%2FB0DY2PB7RB%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e219]
+                      - generic [ref=e222]:
+                        - generic [ref=e223]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e226] [cursor=pointer]:
+                            - generic [ref=e227]: Sponsored
+                          - link "Sponsored Ad - WHOOP 5.0/MG Activity Tracker - 12 Month Membership - Health and Fitness Wearable – 24/7 Activity and Sleep Tracker, Personalized Coaching, Menstrual Cycle Insights – 14+ Days Battery Life" [ref=e229] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMDc2MDIwNDg0NDAwMjo6MDo6&url=%2FWHOOP-Life-12-Month-Membership-Pressure%2Fdp%2FB0DY2PB7RB%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - WHOOP 5.0/MG Activity Tracker - 12 Month Membership - Health and Fitness Wearable – 24/7 Activity and Sleep Tracker, Personalized Coaching, Menstrual Cycle Insights – 14+ Days Battery Life" [level=2] [ref=e230]: WHOOP 5.0/MG Activity Tracker - 12 Month Membership - Health and Fitness Wearable – 24/7 Activity and Sleep Tracker, Personalized Coaching, Menstrual Cycle Insights – 14+ Days Battery Life
+                        - generic [ref=e231]:
+                          - generic [ref=e232]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e234] [cursor=pointer]:
+                              - generic [ref=e236]: 4.3 out of 5 stars
+                            - link "3,551 ratings" [ref=e240] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMDc2MDIwNDg0NDAwMjo6MDo6&url=%2FWHOOP-Life-12-Month-Membership-Pressure%2Fdp%2FB0DY2PB7RB%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                              - text: (3.5K)
+                          - generic [ref=e241]: 3K+ bought in past month
+                        - link "See options" [ref=e253] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMDc2MDIwNDg0NDAwMjo6MDo6&url=%2FWHOOP-Life-12-Month-Membership-Pressure%2Fdp%2FB0DY2PB7RB%2Fref%3Dsr_1_1_so_BIOMETRIC_MONITOR%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                  - listitem [ref=e256]:
+                    - generic [ref=e264]:
+                      - link [ref=e270] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMTIzNDYyMDI3MzYwMjo6MDo6&url=%2FiBesi-Watches-Bluetooth-Calling-Touchscreen%2Fdp%2FB0H14RZH3B%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e272]
+                      - generic [ref=e275]:
+                        - generic [ref=e276]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e279] [cursor=pointer]:
+                            - generic [ref=e280]: Sponsored
+                          - link "Sponsored Ad - iBesi Smart Watches for Women Men with Alexa Built-in, Bluetooth Calling Fitness Tracker with 1.85 Inch HD Touchscreen, IP68, 120+ Sports Modes, Heart Rate Sleep Monitor, for iPhone Android (Pink)" [ref=e282] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMTIzNDYyMDI3MzYwMjo6MDo6&url=%2FiBesi-Watches-Bluetooth-Calling-Touchscreen%2Fdp%2FB0H14RZH3B%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - iBesi Smart Watches for Women Men with Alexa Built-in, Bluetooth Calling Fitness Tracker with 1.85 Inch HD Touchscreen, IP68, 120+ Sports Modes, Heart Rate Sleep Monitor, for iPhone Android (Pink)" [level=2] [ref=e283]: iBesi Smart Watches for Women Men with Alexa Built-in, Bluetooth Calling Fitness Tracker with 1.85 Inch HD Touchscreen, IP68, 120+ Sports Modes, Heart Rate Sleep Monitor, for iPhone Android (Pink)
+                        - generic [ref=e285]:
+                          - text: "4.9"
+                          - button "4.9 out of 5 stars, rating details" [ref=e287] [cursor=pointer]:
+                            - generic [ref=e289]: 4.9 out of 5 stars
+                          - link "20 ratings" [ref=e293] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMTIzNDYyMDI3MzYwMjo6MDo6&url=%2FiBesi-Watches-Bluetooth-Calling-Touchscreen%2Fdp%2FB0H14RZH3B%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                            - text: (20)
+                        - link "See options" [ref=e305] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYXRmOjMwMTIzNDYyMDI3MzYwMjo6MDo6&url=%2FiBesi-Watches-Bluetooth-Calling-Touchscreen%2Fdp%2FB0H14RZH3B%2Fref%3Dsr_1_2_so_WEARABLE_COMPUTER%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                  - listitem [ref=e308]:
+                    - generic [ref=e314]:
+                      - link [ref=e320] [cursor=pointer]:
+                        - /url: /Smartwatch-Bluetooth-Waterproof-Pedometer-Compatible/dp/B0H1PS2SC8/ref=sr_1_3?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-3
+                        - img [ref=e322]
+                      - generic [ref=e325]:
+                        - link "Smart Watch for Men Women, 1.83\" HD Touch Screen Smartwatch with Bluetooth Call, 5 ATM Waterproof, 130+ Sport Modes Fitness Tracker Heart Rate Sleep Monitor Pedometer, Compatible with Android iPhone" [ref=e327] [cursor=pointer]:
+                          - /url: /Smartwatch-Bluetooth-Waterproof-Pedometer-Compatible/dp/B0H1PS2SC8/ref=sr_1_3?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-3
+                          - heading "Smart Watch for Men Women, 1.83\" HD Touch Screen Smartwatch with Bluetooth Call, 5 ATM Waterproof, 130+ Sport Modes Fitness Tracker Heart Rate Sleep Monitor Pedometer, Compatible with Android iPhone" [level=2] [ref=e328]
+                        - generic [ref=e330]:
+                          - text: "4.8"
+                          - button "4.8 out of 5 stars, rating details" [ref=e332] [cursor=pointer]:
+                            - generic [ref=e334]: 4.8 out of 5 stars
+                          - link "163 ratings" [ref=e338] [cursor=pointer]:
+                            - /url: /Smartwatch-Bluetooth-Waterproof-Pedometer-Compatible/dp/B0H1PS2SC8/ref=sr_1_3?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-3#customerReviews
+                            - text: (163)
+                        - generic [ref=e341]:
+                          - link "See options" [ref=e350] [cursor=pointer]:
+                            - /url: /Smartwatch-Bluetooth-Waterproof-Pedometer-Compatible/dp/B0H1PS2SC8/ref=sr_1_3_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-3
+                          - generic [ref=e352]:
+                            - text: No featured offers available
+                            - text: INR 1,904.79
+                            - link "(3 new offers)" [ref=e354] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0H1PS2SC8/ref=sr_1_3_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-3
+                  - listitem [ref=e357]:
+                    - generic [ref=e363]:
+                      - link [ref=e369] [cursor=pointer]:
+                        - /url: /Csasan-Smartwatch-Waterproof-Activity-Trackers/dp/B0GY4LC3J9/ref=sr_1_4?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-4
+                        - img [ref=e371]
+                      - generic [ref=e374]:
+                        - link "Csasan Smart Watch for Men Women(Answer/Make Call), 1.91\" HD Screen Smartwatch Heart Rate/Sleep/Steps Monitor, 100+ Sports Fitness Watch, IP68 Waterproof Activity Trackers for Android iOS Pink" [ref=e376] [cursor=pointer]:
+                          - /url: /Csasan-Smartwatch-Waterproof-Activity-Trackers/dp/B0GY4LC3J9/ref=sr_1_4?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-4
+                          - heading "Csasan Smart Watch for Men Women(Answer/Make Call), 1.91\" HD Screen Smartwatch Heart Rate/Sleep/Steps Monitor, 100+ Sports Fitness Watch, IP68 Waterproof Activity Trackers for Android iOS Pink" [level=2] [ref=e377]
+                        - generic [ref=e378]:
+                          - generic [ref=e379]:
+                            - text: "4.8"
+                            - button "4.8 out of 5 stars, rating details" [ref=e381] [cursor=pointer]:
+                              - generic [ref=e383]: 4.8 out of 5 stars
+                            - link "83 ratings" [ref=e387] [cursor=pointer]:
+                              - /url: /Csasan-Smartwatch-Waterproof-Activity-Trackers/dp/B0GY4LC3J9/ref=sr_1_4?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-4#customerReviews
+                              - text: (83)
+                          - generic [ref=e388]: 50+ bought in past month
+                        - generic [ref=e391]:
+                          - link "See options" [ref=e400] [cursor=pointer]:
+                            - /url: /Csasan-Smartwatch-Waterproof-Activity-Trackers/dp/B0GY4LC3J9/ref=sr_1_4_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-4
+                          - generic [ref=e402]:
+                            - text: No featured offers available
+                            - text: INR 9,432.46
+                            - link "(1 new offer)" [ref=e404] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GY4LC3J9/ref=sr_1_4_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-4
+                  - listitem [ref=e407]:
+                    - generic [ref=e413]:
+                      - generic [ref=e415]:
+                        - generic "Amazon's Choice" [ref=e418]:
+                          - generic [ref=e427]: Overall Pick
+                        - link [ref=e432] [cursor=pointer]:
+                          - /url: /SAMSUNG-Display-Watchfaces-Exercise-International/dp/B0CW3VWC3X/ref=sr_1_5?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-5
+                          - img [ref=e434]
+                      - generic [ref=e437]:
+                        - link "SAMSUNG Galaxy FIT 3 [2024] 1.6\" AMOLED Display | 14 Days Battery Life | 100+ Watchfaces | 100+ Exercise Modes | International Model - (Gray)" [ref=e439] [cursor=pointer]:
+                          - /url: /SAMSUNG-Display-Watchfaces-Exercise-International/dp/B0CW3VWC3X/ref=sr_1_5?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-5
+                          - heading "SAMSUNG Galaxy FIT 3 [2024] 1.6\" AMOLED Display | 14 Days Battery Life | 100+ Watchfaces | 100+ Exercise Modes | International Model - (Gray)" [level=2] [ref=e440]
+                        - generic [ref=e442]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e444] [cursor=pointer]:
+                            - generic [ref=e446]: 4.4 out of 5 stars
+                          - link "5,629 ratings" [ref=e450] [cursor=pointer]:
+                            - /url: /SAMSUNG-Display-Watchfaces-Exercise-International/dp/B0CW3VWC3X/ref=sr_1_5?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-5#customerReviews
+                            - text: (5.6K)
+                        - generic [ref=e453]:
+                          - link "See options" [ref=e462] [cursor=pointer]:
+                            - /url: /SAMSUNG-Display-Watchfaces-Exercise-International/dp/B0CW3VWC3X/ref=sr_1_5_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-5
+                          - generic [ref=e464]:
+                            - text: No featured offers available
+                            - text: INR 4,326.03
+                            - link "(11 new offers)" [ref=e466] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CW3VWC3X/ref=sr_1_5_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-5
+            - generic [ref=e476]:
+              - link "Sponsored video, click to navigate to featured product page. Smartwatch for Women, Compatible with Android & iPhone, 1.8'' Fitness Tracker Watch with Alexa, Call & Notification Alerts, Heart Rate & Sleep Monitor, 120 Sports Modes, Waterproof Watch for Women" [ref=e480] [cursor=pointer]:
+                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JDEnDyP3CnMusUYCPDofVwIAAAGetaqGlAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBmO-3q/clv1c_ek-wBPHXFbbWzjK3YjsYrxfcOWxCnjqPwnbduiVjPTt488n03tgfHyo7Y2HhHBgVReUIO5Pd1GN1usvLTBI-cPB2aJTtzJHTq6xlTxUl1K-yWkc7eu8mO2_qrnm1InwyJgNv8a7bspxKyZVCIWb3_cKWosysNnXonIz9yjWG7NaeXW4pBpmR3sH-JjR6wgo_u0Sbi7Ht3sRM1e_H21L0cioueAZqhA33xX9CP5zHSwKnCBik-zcYbT7maGICWOJHlEFz1v28kKI1kK3JPqyZLqPLwV_Jz9Qsu_Nqu3dPWk_DCcRPSmxUpojnUkOFqKsEBcwKnezqUqybexMYGPJmHculpgnIUDb8qoyMS5UtPeGkyredrtSgGdbA8CVKKnt97heTKZLJx37_CSMb884Jx1UcUhBoqAfFwFMEnPFwyECGtKrrGbajRf1jlP85ZZEKZhD7WkqSAuiGJv0tj8HcUhvyS0RWQx3fz1dvFPzxI4Nmobsmt8LswSxihNgfA8ZKhWrW8PboAUBh8g1mwLVYXlicX4GtTSq4K8JTCBEjmisw_zHJ6tlh1caeYALsPUDgDWIn1-bnzitm-MWrSqIbZsyF3cMjvhzIGaJpQ1kpskZZWcz8XLhAglTFAO_GS5FN-ONSKLuMmxAVQDlm3ISQ4O7V0krRGziM4tAub2Hdjs0F4m8eeZ7yeQ2f4ZuYx-x8-GyLnprArf8mBALA7F4fcmE27z0XXabWNtirvFAk__dCG1RdQgQLxdsdWMyhH0G4fko7PpktlpaW8zOORhVV7vpivzp62HX-ceX6wD1ayPEZSmyOp0bUK2PO2FCv7FZqbZYmyvPUER5KSiYXadTYX1MGe3u3m_USw17H28KmHdjxRepFvFUfqqjROvLJASCN9iO6_3gMzYYV2_kZmrgqkrUccInGNc3Tjxqf_1FCnVx6iNu4pZLeQ-C5f-aGytdsNEm1M_7ZW7ilWqs2SuWkq1mipP4eRZbc18tMTHgcsNpfWDhptqRVtdbA0dFqM5zUdqiIUQTwQo_CneSRpN984TT1ATuTzwD6DDlpVuUGeykixmJuDVIke69CyhnM3h-ygDGgbBGILNcFqpBZaHCIiUVo7oF6wDq4vcWAYjCjtP5y5v7PZCCOdmW0BttGYrfOmJd0dMCf54PK_fIofHwLzHcLiXJ6_j2LvX-_08AWd6Rg8RAdSd_9he0rCp8xmGQFLgjb-xZW7GSTmoZJ0XwCRq-IhP9wanak-yrIow_gFzsonvcmb7dt4bayihPNlBNzTLQll8zjfzS06mbPypuBoMf7_zScc3-oGQKdTTL5lwaLooU2uZhd3oiFa-wU0EWHNIBnEJBbfAz-aAU0ZTEqUCO0_joHXwUZFC5WjfeiKXfIRX5ammzqkAJqtUijsUvpDctr0ZRxoNkD1ErmXHJrzOIRIv_d8uhubs_X_3EidrwW_Jh2-NGhu5c2JLllrTQ4KAB_r5yOv-HjwDNdPEByh46hizuBTS0gd5PTyNIWP-BR_AlgKvTase9DQhzQmo57Qx_gGzgUhCuZanSNhBAxfkFEuxlWeiJTaTp2pw8Uh0HbobO7i18WFNowty5ScAaO6V0Quoi8zS2gfWZJ_8wLjf2aM2-d8ywbbaj6RSdZduupmIA7J5kEa4E6fVhAXphl9U6Nqal4UbKjSjNf918/https://www.amazon.com/dp/B0CGRB4QHY?pd_rd_i=B0CGRB4QHY&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=Kf7hF&pd_rd_w=ckEYu&pd_rd_r=803a4c0e-e748-4fa6-865b-9ac6350f2914
+                - generic "Sponsored video, click to navigate to featured product page. Smartwatch for Women, Compatible with Android & iPhone, 1.8'' Fitness Tracker Watch with Alexa, Call & Notification Alerts, Heart Rate & Sleep Monitor, 120 Sports Modes, Waterproof Watch for Women" [ref=e481]
+              - generic [ref=e489]:
+                - link [ref=e495] [cursor=pointer]:
+                  - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JDEnDyP3CnMusUYCPDofVwIAAAGetaqGlAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBmO-3q/clv1c_ek-wBPHXFbbWzjK3YjsYrxfcOWxCnjqPwnbduiVjPTt488n03tgfHyo7Y2HhHBgVReUIO5Pd1GN1usvLTBI-cPB2aJTtzJHTq6xlTxUl1K-yWkc7eu8mO2_qrnm1InwyJgNv8a7bspxKyZVCIWb3_cKWosysNnXonIz9yjWG7NaeXW4pBpmR3sH-JjR6wgo_u0Sbi7Ht3sRM1e_H21L0cioueAZqhA33xX9CP5zHSwKnCBik-zcYbT7maGICWOJHlEFz1v28kKI1kK3JPqyZLqPLwV_Jz9Qsu_Nqu3dPWk_DCcRPSmxUpojnUkOFqKsEBcwKnezqUqybexMYGPJmHculpgnIUDb8qoyMS5UtPeGkyredrtSgGdbA8CVKKnt97heTKZLJx37_CSMb884Jx1UcUhBoqAfFwFMEnPFwyECGtKrrGbajRf1jlP85ZZEKZhD7WkqSAuiGJv0tj8HcUhvyS0RWQx3fz1dvFPzxI4Nmobsmt8LswSxihNgfA8ZKhWrW8PboAUBh8g1mwLVYXlicX4GtTSq4K8JTCBEjmisw_zHJ6tlh1caeYALsPUDgDWIn1-bnzitm-MWrSqIbZsyF3cMjvhzIGaJpQ1kpskZZWcz8XLhAglTFAO_GS5FN-ONSKLuMmxAVQDlm3ISQ4O7V0krRGziM4tAub2Hdjs0F4m8eeZ7yeQ2f4ZuYx-x8-GyLnprArf8mBALA7F4fcmE27z0XXabWNtirvFAk__dCG1RdQgQLxdsdWMyhH0G4fko7PpktlpaW8zOORhVV7vpivzp62HX-ceX6wD1ayPEZSmyOp0bUK2PO2FCv7FZqbZYmyvPUER5KSiYXadTYX1MGe3u3m_USw17H28KmHdjxRepFvFUfqqjROvLJASCN9iO6_3gMzYYV2_kZmrgqkrUccInGNc3Tjxqf_1FCnVx6iNu4pZLeQ-C5f-aGytdsNEm1M_7ZW7ilWqs2SuWkq1mipP4eRZbc18tMTHgcsNpfWDhptqRVtdbA0dFqM5zUdqiIUQTwQo_CneSRpN984TT1ATuTzwD6DDlpVuUGeykixmJuDVIke69CyhnM3h-ygDGgbBGILNcFqpBZaHCIiUVo7oF6wDq4vcWAYjCjtP5y5v7PZCCOdmW0BttGYrfOmJd0dMCf54PK_fIofHwLzHcLiXJ6_j2LvX-_08AWd6Rg8RAdSd_9he0rCp8xmGQFLgjb-xZW7GSTmoZJ0XwCRq-IhP9wanak-yrIow_gFzsonvcmb7dt4bayihPNlBNzTLQll8zjfzS06mbPypuBoMf7_zScc3-oGQKdTTL5lwaLooU2uZhd3oiFa-wU0EWHNIBnEJBbfAz-aAU0ZTEqUCO0_joHXwUZFC5WjfeiKXfIRX5ammzqkAJqtUijsUvpDctr0ZRxoNkD1ErmXHJrzOIRIv_d8uhubs_X_3EidrwW_Jh2-NGhu5c2JLllrTQ4KAB_r5yOv-HjwDNdPEByh46hizuBTS0gd5PTyNIWP-BR_AlgKvTase9DQhzQmo57Qx_gGzgUhCuZanSNhBAxfkFEuxlWeiJTaTp2pw8Uh0HbobO7i18WFNowty5ScAaO6V0Quoi8zS2gfWZJ_8wLjf2aM2-d8ywbbaj6RSdZduupmIA7J5kEa4E6fVhAXphl9U6Nqal4UbKjSjNf918/https://www.amazon.com/Quican-Lifestyle-Bluetooth-Smartwatch-Compatible/dp/B0CGRB4QHY/ref=sxin_16_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&cv_ct_cx=Smart+Watch&keywords=Smart+Watch&pd_rd_i=B0CGRB4QHY&pd_rd_r=803a4c0e-e748-4fa6-865b-9ac6350f2914&pd_rd_w=ckEYu&pd_rd_wg=Kf7hF&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=BTZ97E04CA67MP37A3P0&qid=1781164311&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776
+                  - img [ref=e497]
+                - generic [ref=e500]:
+                  - generic [ref=e501]:
+                    - generic [ref=e504] [cursor=pointer]: Sponsored
+                    - link "Smartwatch for Women, Compatible with Android & iPhone, 1.8'' Fitness Tracker Watch with Alexa, Call & Notification Alerts, Heart Rate & Sleep Monitor, 120 Sports Modes, Waterproof Watch for Women" [ref=e506] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JDEnDyP3CnMusUYCPDofVwIAAAGetaqGlAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBmO-3q/clv1c_ek-wBPHXFbbWzjK3YjsYrxfcOWxCnjqPwnbduiVjPTt488n03tgfHyo7Y2HhHBgVReUIO5Pd1GN1usvLTBI-cPB2aJTtzJHTq6xlTxUl1K-yWkc7eu8mO2_qrnm1InwyJgNv8a7bspxKyZVCIWb3_cKWosysNnXonIz9yjWG7NaeXW4pBpmR3sH-JjR6wgo_u0Sbi7Ht3sRM1e_H21L0cioueAZqhA33xX9CP5zHSwKnCBik-zcYbT7maGICWOJHlEFz1v28kKI1kK3JPqyZLqPLwV_Jz9Qsu_Nqu3dPWk_DCcRPSmxUpojnUkOFqKsEBcwKnezqUqybexMYGPJmHculpgnIUDb8qoyMS5UtPeGkyredrtSgGdbA8CVKKnt97heTKZLJx37_CSMb884Jx1UcUhBoqAfFwFMEnPFwyECGtKrrGbajRf1jlP85ZZEKZhD7WkqSAuiGJv0tj8HcUhvyS0RWQx3fz1dvFPzxI4Nmobsmt8LswSxihNgfA8ZKhWrW8PboAUBh8g1mwLVYXlicX4GtTSq4K8JTCBEjmisw_zHJ6tlh1caeYALsPUDgDWIn1-bnzitm-MWrSqIbZsyF3cMjvhzIGaJpQ1kpskZZWcz8XLhAglTFAO_GS5FN-ONSKLuMmxAVQDlm3ISQ4O7V0krRGziM4tAub2Hdjs0F4m8eeZ7yeQ2f4ZuYx-x8-GyLnprArf8mBALA7F4fcmE27z0XXabWNtirvFAk__dCG1RdQgQLxdsdWMyhH0G4fko7PpktlpaW8zOORhVV7vpivzp62HX-ceX6wD1ayPEZSmyOp0bUK2PO2FCv7FZqbZYmyvPUER5KSiYXadTYX1MGe3u3m_USw17H28KmHdjxRepFvFUfqqjROvLJASCN9iO6_3gMzYYV2_kZmrgqkrUccInGNc3Tjxqf_1FCnVx6iNu4pZLeQ-C5f-aGytdsNEm1M_7ZW7ilWqs2SuWkq1mipP4eRZbc18tMTHgcsNpfWDhptqRVtdbA0dFqM5zUdqiIUQTwQo_CneSRpN984TT1ATuTzwD6DDlpVuUGeykixmJuDVIke69CyhnM3h-ygDGgbBGILNcFqpBZaHCIiUVo7oF6wDq4vcWAYjCjtP5y5v7PZCCOdmW0BttGYrfOmJd0dMCf54PK_fIofHwLzHcLiXJ6_j2LvX-_08AWd6Rg8RAdSd_9he0rCp8xmGQFLgjb-xZW7GSTmoZJ0XwCRq-IhP9wanak-yrIow_gFzsonvcmb7dt4bayihPNlBNzTLQll8zjfzS06mbPypuBoMf7_zScc3-oGQKdTTL5lwaLooU2uZhd3oiFa-wU0EWHNIBnEJBbfAz-aAU0ZTEqUCO0_joHXwUZFC5WjfeiKXfIRX5ammzqkAJqtUijsUvpDctr0ZRxoNkD1ErmXHJrzOIRIv_d8uhubs_X_3EidrwW_Jh2-NGhu5c2JLllrTQ4KAB_r5yOv-HjwDNdPEByh46hizuBTS0gd5PTyNIWP-BR_AlgKvTase9DQhzQmo57Qx_gGzgUhCuZanSNhBAxfkFEuxlWeiJTaTp2pw8Uh0HbobO7i18WFNowty5ScAaO6V0Quoi8zS2gfWZJ_8wLjf2aM2-d8ywbbaj6RSdZduupmIA7J5kEa4E6fVhAXphl9U6Nqal4UbKjSjNf918/https://www.amazon.com/Quican-Lifestyle-Bluetooth-Smartwatch-Compatible/dp/B0CGRB4QHY/ref=sxin_16_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&cv_ct_cx=Smart+Watch&keywords=Smart+Watch&pd_rd_i=B0CGRB4QHY&pd_rd_r=803a4c0e-e748-4fa6-865b-9ac6350f2914&pd_rd_w=ckEYu&pd_rd_wg=Kf7hF&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=BTZ97E04CA67MP37A3P0&qid=1781164311&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776
+                      - heading "Smartwatch for Women, Compatible with Android & iPhone, 1.8'' Fitness Tracker Watch with Alexa, Call & Notification Alerts, Heart Rate & Sleep Monitor, 120 Sports Modes, Waterproof Watch for Women" [level=2] [ref=e507]
+                  - generic [ref=e508]:
+                    - generic [ref=e509]:
+                      - text: "4.4"
+                      - button "4.4 out of 5 stars, rating details" [ref=e511] [cursor=pointer]:
+                        - generic [ref=e513]: 4.4 out of 5 stars
+                      - link "3,957 ratings" [ref=e517] [cursor=pointer]:
+                        - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JDEnDyP3CnMusUYCPDofVwIAAAGetaqGlAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBmO-3q/clv1c_ek-wBPHXFbbWzjK3YjsYrxfcOWxCnjqPwnbduiVjPTt488n03tgfHyo7Y2HhHBgVReUIO5Pd1GN1usvLTBI-cPB2aJTtzJHTq6xlTxUl1K-yWkc7eu8mO2_qrnm1InwyJgNv8a7bspxKyZVCIWb3_cKWosysNnXonIz9yjWG7NaeXW4pBpmR3sH-JjR6wgo_u0Sbi7Ht3sRM1e_H21L0cioueAZqhA33xX9CP5zHSwKnCBik-zcYbT7maGICWOJHlEFz1v28kKI1kK3JPqyZLqPLwV_Jz9Qsu_Nqu3dPWk_DCcRPSmxUpojnUkOFqKsEBcwKnezqUqybexMYGPJmHculpgnIUDb8qoyMS5UtPeGkyredrtSgGdbA8CVKKnt97heTKZLJx37_CSMb884Jx1UcUhBoqAfFwFMEnPFwyECGtKrrGbajRf1jlP85ZZEKZhD7WkqSAuiGJv0tj8HcUhvyS0RWQx3fz1dvFPzxI4Nmobsmt8LswSxihNgfA8ZKhWrW8PboAUBh8g1mwLVYXlicX4GtTSq4K8JTCBEjmisw_zHJ6tlh1caeYALsPUDgDWIn1-bnzitm-MWrSqIbZsyF3cMjvhzIGaJpQ1kpskZZWcz8XLhAglTFAO_GS5FN-ONSKLuMmxAVQDlm3ISQ4O7V0krRGziM4tAub2Hdjs0F4m8eeZ7yeQ2f4ZuYx-x8-GyLnprArf8mBALA7F4fcmE27z0XXabWNtirvFAk__dCG1RdQgQLxdsdWMyhH0G4fko7PpktlpaW8zOORhVV7vpivzp62HX-ceX6wD1ayPEZSmyOp0bUK2PO2FCv7FZqbZYmyvPUER5KSiYXadTYX1MGe3u3m_USw17H28KmHdjxRepFvFUfqqjROvLJASCN9iO6_3gMzYYV2_kZmrgqkrUccInGNc3Tjxqf_1FCnVx6iNu4pZLeQ-C5f-aGytdsNEm1M_7ZW7ilWqs2SuWkq1mipP4eRZbc18tMTHgcsNpfWDhptqRVtdbA0dFqM5zUdqiIUQTwQo_CneSRpN984TT1ATuTzwD6DDlpVuUGeykixmJuDVIke69CyhnM3h-ygDGgbBGILNcFqpBZaHCIiUVo7oF6wDq4vcWAYjCjtP5y5v7PZCCOdmW0BttGYrfOmJd0dMCf54PK_fIofHwLzHcLiXJ6_j2LvX-_08AWd6Rg8RAdSd_9he0rCp8xmGQFLgjb-xZW7GSTmoZJ0XwCRq-IhP9wanak-yrIow_gFzsonvcmb7dt4bayihPNlBNzTLQll8zjfzS06mbPypuBoMf7_zScc3-oGQKdTTL5lwaLooU2uZhd3oiFa-wU0EWHNIBnEJBbfAz-aAU0ZTEqUCO0_joHXwUZFC5WjfeiKXfIRX5ammzqkAJqtUijsUvpDctr0ZRxoNkD1ErmXHJrzOIRIv_d8uhubs_X_3EidrwW_Jh2-NGhu5c2JLllrTQ4KAB_r5yOv-HjwDNdPEByh46hizuBTS0gd5PTyNIWP-BR_AlgKvTase9DQhzQmo57Qx_gGzgUhCuZanSNhBAxfkFEuxlWeiJTaTp2pw8Uh0HbobO7i18WFNowty5ScAaO6V0Quoi8zS2gfWZJ_8wLjf2aM2-d8ywbbaj6RSdZduupmIA7J5kEa4E6fVhAXphl9U6Nqal4UbKjSjNf918/https://www.amazon.com/Quican-Lifestyle-Bluetooth-Smartwatch-Compatible/dp/B0CGRB4QHY/ref=sxin_16_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&cv_ct_cx=Smart+Watch&keywords=Smart+Watch&pd_rd_i=B0CGRB4QHY&pd_rd_r=803a4c0e-e748-4fa6-865b-9ac6350f2914&pd_rd_w=ckEYu&pd_rd_wg=Kf7hF&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=BTZ97E04CA67MP37A3P0&qid=1781164311&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776#customerReviews
+                        - text: (3.9K)
+                    - generic [ref=e518]: 1K+ bought in past month
+            - generic [ref=e524]:
+              - heading "More results" [level=2] [ref=e528]
+              - generic:
+                - list:
+                  - listitem [ref=e529]:
+                    - generic [ref=e535]:
+                      - link [ref=e541] [cursor=pointer]:
+                        - /url: /Ultra-Clear-Fitness-Tracker-Smartwatch-Waterproof/dp/B0D7VG4754/ref=sr_1_6?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-6
+                        - img [ref=e543]
+                      - generic [ref=e546]:
+                        - link "Smart Watch for Women, Answer/Make Call, 1.32'' AMOLED Ultra-Clear Screen Fitness Tracker with Heart Rate/Sleep/SpO2 Monitor, Smartwatch for iPhone/Samsung/Android, 110+ Sport Modes, 3ATM Waterproof" [ref=e548] [cursor=pointer]:
+                          - /url: /Ultra-Clear-Fitness-Tracker-Smartwatch-Waterproof/dp/B0D7VG4754/ref=sr_1_6?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-6
+                          - heading "Smart Watch for Women, Answer/Make Call, 1.32'' AMOLED Ultra-Clear Screen Fitness Tracker with Heart Rate/Sleep/SpO2 Monitor, Smartwatch for iPhone/Samsung/Android, 110+ Sport Modes, 3ATM Waterproof" [level=2] [ref=e549]
+                        - generic [ref=e550]:
+                          - generic [ref=e551]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e553] [cursor=pointer]:
+                              - generic [ref=e555]: 4.4 out of 5 stars
+                            - link "3,960 ratings" [ref=e559] [cursor=pointer]:
+                              - /url: /Ultra-Clear-Fitness-Tracker-Smartwatch-Waterproof/dp/B0D7VG4754/ref=sr_1_6?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-6#customerReviews
+                              - text: (3.9K)
+                          - generic [ref=e560]: 3K+ bought in past month
+                        - generic [ref=e563]:
+                          - button "Carbon impact" [ref=e572] [cursor=pointer]:
+                            - generic [ref=e573]: Carbon impact
+                          - link "See options" [ref=e581] [cursor=pointer]:
+                            - /url: /Ultra-Clear-Fitness-Tracker-Smartwatch-Waterproof/dp/B0D7VG4754/ref=sr_1_6_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-6
+                          - generic [ref=e583]:
+                            - text: No featured offers available
+                            - text: INR 6,669.14
+                            - link "(1 new offer)" [ref=e585] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D7VG4754/ref=sr_1_6_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-6
+                  - listitem [ref=e588]:
+                    - generic [ref=e596]:
+                      - generic [ref=e598]:
+                        - group "Best Sellerin Women's Smartwatches" [ref=e604]:
+                          - generic "Best Seller" [ref=e606]
+                        - link [ref=e610] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMTEwNzM5NjY0NjkwMjo6MDo6&url=%2FSmart-Watch-Women-Men-Fitness%2Fdp%2FB0FKT28PP7%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                          - img [ref=e612]
+                      - generic [ref=e615]:
+                        - generic [ref=e616]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e619] [cursor=pointer]:
+                            - generic [ref=e620]: Sponsored
+                          - 'link "Sponsored Ad - Smart Watch for Women Men Fitness: Smart Watch for iPhone&Android Bluetooth Call with SpO2 Sleep Heart Rate Monitor,IP68,Fitness Tracker with 120+Sport,Reloj Inteligente 30 Day+Battery Life, 2 Bands" [ref=e622] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMTEwNzM5NjY0NjkwMjo6MDo6&url=%2FSmart-Watch-Women-Men-Fitness%2Fdp%2FB0FKT28PP7%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - 'heading "Sponsored Ad - Smart Watch for Women Men Fitness: Smart Watch for iPhone&Android Bluetooth Call with SpO2 Sleep Heart Rate Monitor,IP68,Fitness Tracker with 120+Sport,Reloj Inteligente 30 Day+Battery Life, 2 Bands" [level=2] [ref=e623]': "Smart Watch for Women Men Fitness: Smart Watch for iPhone&Android Bluetooth Call with SpO2 Sleep Heart Rate Monitor,IP68,Fitness Tracker with 120+Sport,Reloj Inteligente 30 Day+Battery Life, 2 Bands"
+                        - generic [ref=e625]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e627] [cursor=pointer]:
+                            - generic [ref=e629]: 4.1 out of 5 stars
+                          - link "2,291 ratings" [ref=e633] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMTEwNzM5NjY0NjkwMjo6MDo6&url=%2FSmart-Watch-Women-Men-Fitness%2Fdp%2FB0FKT28PP7%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                            - text: (2.2K)
+                        - generic [ref=e636]:
+                          - button "Small Business" [ref=e645] [cursor=pointer]:
+                            - generic [ref=e646]: Small Business
+                          - link "See options" [ref=e654] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMTEwNzM5NjY0NjkwMjo6MDo6&url=%2FSmart-Watch-Women-Men-Fitness%2Fdp%2FB0FKT28PP7%2Fref%3Dsr_1_7_so_WEARABLE_COMPUTER%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                  - listitem [ref=e657]:
+                    - generic [ref=e663]:
+                      - link [ref=e669] [cursor=pointer]:
+                        - /url: /Military-Smartwatch-Extra-Long-Flashlight-Waterproof/dp/B0GXZGMH2T/ref=sr_1_8?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-8
+                        - img [ref=e671]
+                      - generic [ref=e674]:
+                        - link "Smart Watches for Men (Answer/Make Call), 1.53\" HD Military Smartwatch, 50+ Days Extra-Long Battery Life Fitness Tracker, Flashlight/110+Sports/Heart Rate/Sleep Monitor/IP68 Waterproof Android iOS" [ref=e676] [cursor=pointer]:
+                          - /url: /Military-Smartwatch-Extra-Long-Flashlight-Waterproof/dp/B0GXZGMH2T/ref=sr_1_8?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-8
+                          - heading "Smart Watches for Men (Answer/Make Call), 1.53\" HD Military Smartwatch, 50+ Days Extra-Long Battery Life Fitness Tracker, Flashlight/110+Sports/Heart Rate/Sleep Monitor/IP68 Waterproof Android iOS" [level=2] [ref=e677]
+                        - generic [ref=e679]:
+                          - text: "4.8"
+                          - button "4.8 out of 5 stars, rating details" [ref=e681] [cursor=pointer]:
+                            - generic [ref=e683]: 4.8 out of 5 stars
+                          - link "62 ratings" [ref=e687] [cursor=pointer]:
+                            - /url: /Military-Smartwatch-Extra-Long-Flashlight-Waterproof/dp/B0GXZGMH2T/ref=sr_1_8?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-8#customerReviews
+                            - text: (62)
+                        - generic [ref=e690]:
+                          - link "See options" [ref=e699] [cursor=pointer]:
+                            - /url: /Military-Smartwatch-Extra-Long-Flashlight-Waterproof/dp/B0GXZGMH2T/ref=sr_1_8_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-8
+                          - generic [ref=e701]:
+                            - text: No featured offers available
+                            - text: INR 3,143.52
+                            - link "(1 new offer)" [ref=e703] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GXZGMH2T/ref=sr_1_8_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-8
+                  - listitem [ref=e706]:
+                    - generic [ref=e712]:
+                      - link [ref=e718] [cursor=pointer]:
+                        - /url: /TORJALPH-Compatible-Samsung-Waterproof-Bluetooh/dp/B09TR2NNJS/ref=sr_1_9?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-9
+                        - img [ref=e720]
+                      - generic [ref=e723]:
+                        - link "Smart Watch for Men Women Compatible with iPhone Samsung Android Phone 1.69 inch Full Touch Screen IP68 Waterproof Bluetooh Fitness Tracker Heart Rate/Sleep Monitor (Black)" [ref=e725] [cursor=pointer]:
+                          - /url: /TORJALPH-Compatible-Samsung-Waterproof-Bluetooh/dp/B09TR2NNJS/ref=sr_1_9?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-9
+                          - heading "Smart Watch for Men Women Compatible with iPhone Samsung Android Phone 1.69 inch Full Touch Screen IP68 Waterproof Bluetooh Fitness Tracker Heart Rate/Sleep Monitor (Black)" [level=2] [ref=e726]
+                        - generic [ref=e727]:
+                          - generic [ref=e728]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e730] [cursor=pointer]:
+                              - generic [ref=e732]: 4.3 out of 5 stars
+                            - link "4,471 ratings" [ref=e736] [cursor=pointer]:
+                              - /url: /TORJALPH-Compatible-Samsung-Waterproof-Bluetooh/dp/B09TR2NNJS/ref=sr_1_9?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-9#customerReviews
+                              - text: (4.4K)
+                          - generic [ref=e737]: 2K+ bought in past month
+                        - generic [ref=e740]:
+                          - link "See options" [ref=e749] [cursor=pointer]:
+                            - /url: /TORJALPH-Compatible-Samsung-Waterproof-Bluetooh/dp/B09TR2NNJS/ref=sr_1_9_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-9
+                          - generic [ref=e751]:
+                            - text: No featured offers available
+                            - text: INR 2,285.94
+                            - link "(1 new offer)" [ref=e753] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B09TR2NNJS/ref=sr_1_9_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-9
+                  - listitem [ref=e756]:
+                    - generic [ref=e762]:
+                      - link [ref=e768] [cursor=pointer]:
+                        - /url: /Touchscreen-Fitness-Tracker-Waterproof-Smartwatch/dp/B0FWR4VJ87/ref=sr_1_10?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-10
+                        - img [ref=e770]
+                      - generic [ref=e773]:
+                        - link "Smart Watch for Men Women (Answer/Make Call), 1.83\" HD Touchscreen Fitness Tracker, 110+ Sport Modes, Fitness Watch with Heart Rate/Sleep Monitor/Step, IP68 Waterproof Smartwatch for iPhone Android" [ref=e775] [cursor=pointer]:
+                          - /url: /Touchscreen-Fitness-Tracker-Waterproof-Smartwatch/dp/B0FWR4VJ87/ref=sr_1_10?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-10
+                          - heading "Smart Watch for Men Women (Answer/Make Call), 1.83\" HD Touchscreen Fitness Tracker, 110+ Sport Modes, Fitness Watch with Heart Rate/Sleep Monitor/Step, IP68 Waterproof Smartwatch for iPhone Android" [level=2] [ref=e776]
+                        - generic [ref=e777]:
+                          - generic [ref=e778]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e780] [cursor=pointer]:
+                              - generic [ref=e782]: 4.2 out of 5 stars
+                            - link "1,344 ratings" [ref=e786] [cursor=pointer]:
+                              - /url: /Touchscreen-Fitness-Tracker-Waterproof-Smartwatch/dp/B0FWR4VJ87/ref=sr_1_10?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-10#customerReviews
+                              - text: (1.3K)
+                          - generic [ref=e787]: 500+ bought in past month
+                        - generic [ref=e790]:
+                          - link "See options" [ref=e799] [cursor=pointer]:
+                            - /url: /Touchscreen-Fitness-Tracker-Waterproof-Smartwatch/dp/B0FWR4VJ87/ref=sr_1_10_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-10
+                          - generic [ref=e801]:
+                            - text: No featured offers available
+                            - text: INR 1,237.78
+                            - link "(2 new offers)" [ref=e803] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0FWR4VJ87/ref=sr_1_10_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-10
+                  - listitem [ref=e806]:
+                    - generic [ref=e812]:
+                      - link [ref=e818] [cursor=pointer]:
+                        - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NBJ61/ref=sr_1_11?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-11
+                        - img [ref=e820]
+                      - generic [ref=e823]:
+                        - link "Garmin vívoactive 5, Health and Fitness GPS Smartwatch, AMOLED Display, Up to 11 Days of Battery, Ivory" [ref=e825] [cursor=pointer]:
+                          - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NBJ61/ref=sr_1_11?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-11
+                          - heading "Garmin vívoactive 5, Health and Fitness GPS Smartwatch, AMOLED Display, Up to 11 Days of Battery, Ivory" [level=2] [ref=e826]
+                        - generic [ref=e827]:
+                          - generic [ref=e828]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e830] [cursor=pointer]:
+                              - generic [ref=e832]: 4.4 out of 5 stars
+                            - link "10,874 ratings" [ref=e836] [cursor=pointer]:
+                              - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NBJ61/ref=sr_1_11?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-11#customerReviews
+                              - text: (10.8K)
+                          - generic [ref=e837]: 5K+ bought in past month
+                        - generic [ref=e840]:
+                          - link "See options" [ref=e849] [cursor=pointer]:
+                            - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NBJ61/ref=sr_1_11_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-11
+                          - generic [ref=e851]:
+                            - text: No featured offers available
+                            - text: INR 16,194.03
+                            - link "(8 used & new offers)" [ref=e853] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CG6NBJ61/ref=sr_1_11_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-11
+                  - listitem [ref=e856]:
+                    - generic [ref=e864]:
+                      - link [ref=e870] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDk5MTM5NTI1ODUwMjo6MDo6&url=%2FGoogle-Pixel-Watch-45mm-Smartwatch%2Fdp%2FB0FJW6Y44N%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e872]
+                      - generic [ref=e875]:
+                        - generic [ref=e876]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e879] [cursor=pointer]:
+                            - generic [ref=e880]: Sponsored
+                          - link "Sponsored Ad - Google Pixel Watch 4 (45mm) - Android - 2 Years of Data -Heart Rate,Sleep & Fitness Tracking - 40hr Battery - Matte Black Aluminum Case - Obsidian Active Band - LTE (2025) -Google Pixel Watch app" [ref=e882] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDk5MTM5NTI1ODUwMjo6MDo6&url=%2FGoogle-Pixel-Watch-45mm-Smartwatch%2Fdp%2FB0FJW6Y44N%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - Google Pixel Watch 4 (45mm) - Android - 2 Years of Data -Heart Rate,Sleep & Fitness Tracking - 40hr Battery - Matte Black Aluminum Case - Obsidian Active Band - LTE (2025) -Google Pixel Watch app" [level=2] [ref=e883]: Google Pixel Watch 4 (45mm) - Android - 2 Years of Data -Heart Rate,Sleep & Fitness Tracking - 40hr Battery - Matte Black Aluminum Case - Obsidian Active Band - LTE (2025) -Google Pixel Watch app
+                        - generic [ref=e884]:
+                          - generic [ref=e885]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e887] [cursor=pointer]:
+                              - generic [ref=e889]: 4.4 out of 5 stars
+                            - link "213 ratings" [ref=e893] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDk5MTM5NTI1ODUwMjo6MDo6&url=%2FGoogle-Pixel-Watch-45mm-Smartwatch%2Fdp%2FB0FJW6Y44N%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                              - text: (213)
+                          - generic [ref=e894]: 100+ bought in past month
+                        - generic [ref=e897]:
+                          - generic [ref=e900]:
+                            - generic [ref=e901]: Price, product page
+                            - 'link "INR 41,925.33 List: INR 47,642.55 List: INR 47,642.55" [ref=e902] [cursor=pointer]':
+                              - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDk5MTM5NTI1ODUwMjo6MDo6&url=%2FGoogle-Pixel-Watch-45mm-Smartwatch%2Fdp%2FB0FJW6Y44N%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e903]:
+                                - generic [ref=e904]: INR 41,925.33
+                                - generic [ref=e905]:
+                                  - text: INR
+                                  - generic [ref=e906]:
+                                    - text: 41,925
+                                    - generic [ref=e907]: .
+                                  - text: "33"
+                              - generic [ref=e908]: "List: INR 47,642.55"
+                              - generic [ref=e909]:
+                                - text: "List:"
+                                - generic [ref=e910]:
+                                  - generic [ref=e911]: INR 47,642.55
+                                  - text: INR47,642.55
+                          - generic [ref=e912]:
+                            - generic [ref=e918]: INR 978.60 delivery Fri, Jul 3
+                            - generic [ref=e919]: Ships to India
+                          - button "Safer chemicals +1 more" [ref=e926] [cursor=pointer]:
+                            - generic [ref=e927]: Safer chemicals +1 more
+                          - button "Add to cart" [ref=e943] [cursor=pointer]
+            - generic [ref=e949]:
+              - generic [ref=e954]:
+                - heading "From frequently shopped brands" [level=2] [ref=e956]
+                - generic [ref=e957]:
+                  - button "View Sponsored information or leave ad feedback" [ref=e959] [cursor=pointer]: Sponsored
+                  - text: "| Based on number of views and purchases"
+              - region "From frequently shopped brands" [ref=e961]:
+                - list [ref=e967]:
+                  - listitem "1 of 4" [ref=e968]:
+                    - generic [ref=e974]:
+                      - link [ref=e977] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjYwMjo6MTo6&url=%2FSamsung-Bluetooth-Smartwatch-Coaching-Tracking%2Fdp%2FB0F7QD4HSD%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7QD4HSD%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3Dxgiu4nU4EN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=xgiu4nU4EN
+                        - img [ref=e979]
+                      - generic [ref=e980]:
+                        - link "Sponsored Ad - Samsung Galaxy Watch 8 (2025) 40mm Bluetooth Smartwatch, Cushion Design, Fitness Tracker, Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, Graphite [US Version, 2 Yr Warranty]" [ref=e982] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjYwMjo6MTo6&url=%2FSamsung-Bluetooth-Smartwatch-Coaching-Tracking%2Fdp%2FB0F7QD4HSD%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7QD4HSD%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3Dxgiu4nU4EN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=xgiu4nU4EN
+                          - heading "Sponsored Ad - Samsung Galaxy Watch 8 (2025) 40mm Bluetooth Smartwatch, Cushion Design, Fitness Tracker, Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, Graphite [US Version, 2 Yr Warranty]" [level=2] [ref=e983]: Samsung Galaxy Watch 8 (2025) 40mm Bluetooth Smartwatch, Cushion Design, Fitness Tracker, Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, Graphite [US Version, 2 Yr Warranty]
+                        - generic [ref=e984]:
+                          - generic [ref=e985]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e987] [cursor=pointer]:
+                              - generic [ref=e989]: 4.6 out of 5 stars
+                            - link "1,361 ratings" [ref=e993] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjYwMjo6MTo6&url=%2FSamsung-Bluetooth-Smartwatch-Coaching-Tracking%2Fdp%2FB0F7QD4HSD%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7QD4HSD%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3Dxgiu4nU4EN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=xgiu4nU4EN#customerReviews
+                              - text: (1.3K)
+                          - generic [ref=e994]: 1K+ bought in past month
+                        - link "See options" [ref=e1003] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjYwMjo6MTo6&url=%2FSamsung-Bluetooth-Smartwatch-Coaching-Tracking%2Fdp%2FB0F7QD4HSD%2Fref%3Dsxin_26_pa_sp_search_thematic_so_WEARABLE_COMPUTER%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7QD4HSD%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3Dxgiu4nU4EN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=xgiu4nU4EN
+                  - listitem "2 of 4" [ref=e1004]:
+                    - generic [ref=e1010]:
+                      - link [ref=e1013] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjgwMjo6Mjo6&url=%2FSamsung-Smartwatch-Titanium-Advanced-Coaching%2Fdp%2FB0F7PQDB7K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7PQDB7K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DXuob51VoXS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Xuob51VoXS
+                        - img [ref=e1015]
+                      - generic [ref=e1016]:
+                        - link "Sponsored Ad - Samsung Galaxy Watch Ultra (2025) 47mm LTE Smartwatch, Titanium Casing, Advanced Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, GPS, Titanium White [US Version, 2 Yr Warranty]" [ref=e1018] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjgwMjo6Mjo6&url=%2FSamsung-Smartwatch-Titanium-Advanced-Coaching%2Fdp%2FB0F7PQDB7K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7PQDB7K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DXuob51VoXS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Xuob51VoXS
+                          - heading "Sponsored Ad - Samsung Galaxy Watch Ultra (2025) 47mm LTE Smartwatch, Titanium Casing, Advanced Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, GPS, Titanium White [US Version, 2 Yr Warranty]" [level=2] [ref=e1019]: Samsung Galaxy Watch Ultra (2025) 47mm LTE Smartwatch, Titanium Casing, Advanced Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, GPS, Titanium White [US Version, 2 Yr Warranty]
+                        - generic [ref=e1021]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=e1023] [cursor=pointer]:
+                            - generic [ref=e1025]: 4.6 out of 5 stars
+                          - link "503 ratings" [ref=e1029] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjgwMjo6Mjo6&url=%2FSamsung-Smartwatch-Titanium-Advanced-Coaching%2Fdp%2FB0F7PQDB7K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7PQDB7K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DXuob51VoXS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Xuob51VoXS#customerReviews
+                            - text: (503)
+                        - generic [ref=e1032]:
+                          - generic [ref=e1033]: Price, product page
+                          - 'link "INR 51,722.74 List: INR 61,935.60 List: INR 61,935.60" [ref=e1034] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE1Nzg2NTcyNjgwMjo6Mjo6&url=%2FSamsung-Smartwatch-Titanium-Advanced-Coaching%2Fdp%2FB0F7PQDB7K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F7PQDB7K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DXuob51VoXS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Xuob51VoXS
+                            - generic [ref=e1035]:
+                              - generic [ref=e1036]: INR 51,722.74
+                              - generic [ref=e1037]:
+                                - text: INR
+                                - generic [ref=e1038]:
+                                  - text: 51,722
+                                  - generic [ref=e1039]: .
+                                - text: "74"
+                            - generic [ref=e1040]: "List: INR 61,935.60"
+                            - generic [ref=e1041]:
+                              - text: "List:"
+                              - generic [ref=e1042]:
+                                - generic [ref=e1043]: INR 61,935.60
+                                - text: INR61,935.60
+                        - generic [ref=e1051]: INR 997.65 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e1066] [cursor=pointer]
+                  - listitem "3 of 4" [ref=e1067]:
+                    - generic [ref=e1073]:
+                      - link [ref=e1076] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEyNzU0MDUzMjYwMjo6Mzo6&url=%2FFitbit-Advanced-Smartwatch-Graphite-Included%2Fdp%2FB0B4N2T7GL%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0B4N2T7GL%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DBvZ4S6zJNf%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=BvZ4S6zJNf
+                        - img [ref=e1078]
+                      - generic [ref=e1079]:
+                        - link "Sponsored Ad - Fitbit Sense 2 Advanced Health and Fitness Smartwatch with Stress and Sleep Tools - 3-Month Google Health Premium Membership Included - ECG App, SpO2, 24/7 Heart Rate, and GPS - Shadow Grey/Graphite" [ref=e1081] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEyNzU0MDUzMjYwMjo6Mzo6&url=%2FFitbit-Advanced-Smartwatch-Graphite-Included%2Fdp%2FB0B4N2T7GL%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0B4N2T7GL%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DBvZ4S6zJNf%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=BvZ4S6zJNf
+                          - heading "Sponsored Ad - Fitbit Sense 2 Advanced Health and Fitness Smartwatch with Stress and Sleep Tools - 3-Month Google Health Premium Membership Included - ECG App, SpO2, 24/7 Heart Rate, and GPS - Shadow Grey/Graphite" [level=2] [ref=e1082]: Fitbit Sense 2 Advanced Health and Fitness Smartwatch with Stress and Sleep Tools - 3-Month Google Health Premium Membership Included - ECG App, SpO2, 24/7 Heart Rate, and GPS - Shadow Grey/Graphite
+                        - generic [ref=e1084]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1086] [cursor=pointer]:
+                            - generic [ref=e1088]: 4.1 out of 5 stars
+                          - link "9,969 ratings" [ref=e1092] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEyNzU0MDUzMjYwMjo6Mzo6&url=%2FFitbit-Advanced-Smartwatch-Graphite-Included%2Fdp%2FB0B4N2T7GL%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0B4N2T7GL%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DBvZ4S6zJNf%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=BvZ4S6zJNf#customerReviews
+                            - text: (9.9K)
+                        - button "Alexa Built-in" [ref=e1100] [cursor=pointer]:
+                          - generic [ref=e1101]: Alexa Built-in
+                        - link "See options" [ref=e1110] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEyNzU0MDUzMjYwMjo6Mzo6&url=%2FFitbit-Advanced-Smartwatch-Graphite-Included%2Fdp%2FB0B4N2T7GL%2Fref%3Dsxin_26_pa_sp_search_thematic_so_WEARABLE_COMPUTER%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0B4N2T7GL%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DBvZ4S6zJNf%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=BvZ4S6zJNf
+                  - listitem "4 of 4" [ref=e1111]:
+                    - generic [ref=e1117]:
+                      - link [ref=e1120] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI3NTIwNzExNzcwMjo6NDo6&url=%2FMilitary-Outdoor-Smartwatch-Battery-Flashlight%2Fdp%2FB0F4JRH16K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F4JRH16K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DwIOKabyXay%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=wIOKabyXay
+                        - img [ref=e1122]
+                      - generic [ref=e1123]:
+                        - link "Sponsored Ad - Military Smart Watch for Men(Answer/Make Calls),Outdoor Smartwatch with 100 Days Battery/Flashlight/Compass/Heart Rate/SpO2/Sleep Monitor/2 Straps, Rugged Fitness Watch for iPhone/Android Phones" [ref=e1125] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI3NTIwNzExNzcwMjo6NDo6&url=%2FMilitary-Outdoor-Smartwatch-Battery-Flashlight%2Fdp%2FB0F4JRH16K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F4JRH16K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DwIOKabyXay%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=wIOKabyXay
+                          - heading "Sponsored Ad - Military Smart Watch for Men(Answer/Make Calls),Outdoor Smartwatch with 100 Days Battery/Flashlight/Compass/Heart Rate/SpO2/Sleep Monitor/2 Straps, Rugged Fitness Watch for iPhone/Android Phones" [level=2] [ref=e1126]: Military Smart Watch for Men(Answer/Make Calls),Outdoor Smartwatch with 100 Days Battery/Flashlight/Compass/Heart Rate/SpO2/Sleep Monitor/2 Straps, Rugged Fitness Watch for iPhone/Android Phones
+                        - generic [ref=e1127]:
+                          - generic [ref=e1128]:
+                            - text: "4.1"
+                            - button "4.1 out of 5 stars, rating details" [ref=e1130] [cursor=pointer]:
+                              - generic [ref=e1132]: 4.1 out of 5 stars
+                            - link "1,279 ratings" [ref=e1136] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI3NTIwNzExNzcwMjo6NDo6&url=%2FMilitary-Outdoor-Smartwatch-Battery-Flashlight%2Fdp%2FB0F4JRH16K%2Fref%3Dsxin_26_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F4JRH16K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DwIOKabyXay%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=wIOKabyXay#customerReviews
+                              - text: (1.2K)
+                          - generic [ref=e1137]: 300+ bought in past month
+                        - button "Carbon impact" [ref=e1145] [cursor=pointer]:
+                          - generic [ref=e1146]: Carbon impact
+                        - link "See options" [ref=e1155] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMDgzODIxNjYxNTY2MTcwOjE3ODExNjQzMTI6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI3NTIwNzExNzcwMjo6NDo6&url=%2FMilitary-Outdoor-Smartwatch-Battery-Flashlight%2Fdp%2FB0F4JRH16K%2Fref%3Dsxin_26_pa_sp_search_thematic_so_WEARABLE_COMPUTER%3Fcontent-id%3Damzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%253Aamzn1.sym.71e21d01-9c92-451d-b99d-ee0a33f40110%26cv_ct_cx%3DSmart%2BWatch%26keywords%3DSmart%2BWatch%26pd_rd_i%3DB0F4JRH16K%26pd_rd_r%3D803a4c0e-e748-4fa6-865b-9ac6350f2914%26pd_rd_w%3D0C2uk%26pd_rd_wg%3DKf7hF%26pf_rd_p%3D71e21d01-9c92-451d-b99d-ee0a33f40110%26pf_rd_r%3DBTZ97E04CA67MP37A3P0%26qid%3D1781164311%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons%26aref%3DwIOKabyXay%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=wIOKabyXay
+            - generic [ref=e1157]:
+              - heading "More results" [level=2] [ref=e1161]
+              - generic:
+                - list:
+                  - listitem [ref=e1162]:
+                    - generic [ref=e1168]:
+                      - link [ref=e1174] [cursor=pointer]:
+                        - /url: /Smartwatch-Monitor-Waterproof-Bluetooth-Control/dp/B0GTYS9GRW/ref=sr_1_13?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-13
+                        - img [ref=e1176]
+                      - generic [ref=e1179]:
+                        - link "TRAUSI Touchscreen Smartwatch with Bluetooth Call, 100 Modes and Sleep Notifications, Waterproof Watch for iPhone Black" [ref=e1181] [cursor=pointer]:
+                          - /url: /Smartwatch-Monitor-Waterproof-Bluetooth-Control/dp/B0GTYS9GRW/ref=sr_1_13?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-13
+                          - heading "TRAUSI Touchscreen Smartwatch with Bluetooth Call, 100 Modes and Sleep Notifications, Waterproof Watch for iPhone Black" [level=2] [ref=e1182]
+                        - generic [ref=e1183]:
+                          - generic [ref=e1184]:
+                            - text: "3.8"
+                            - button "3.8 out of 5 stars, rating details" [ref=e1186] [cursor=pointer]:
+                              - generic [ref=e1188]: 3.8 out of 5 stars
+                            - link "32 ratings" [ref=e1192] [cursor=pointer]:
+                              - /url: /Smartwatch-Monitor-Waterproof-Bluetooth-Control/dp/B0GTYS9GRW/ref=sr_1_13?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-13#customerReviews
+                              - text: (32)
+                          - generic [ref=e1193]: 4K+ bought in past month
+                        - generic [ref=e1196]:
+                          - link "See options" [ref=e1205] [cursor=pointer]:
+                            - /url: /Smartwatch-Monitor-Waterproof-Bluetooth-Control/dp/B0GTYS9GRW/ref=sr_1_13_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-13
+                          - generic [ref=e1207]:
+                            - text: No featured offers available
+                            - text: INR 19,914.03
+                            - link "(2 used & new offers)" [ref=e1209] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GTYS9GRW/ref=sr_1_13_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-13
+                  - listitem [ref=e1212]:
+                    - generic [ref=e1218]:
+                      - link [ref=e1224] [cursor=pointer]:
+                        - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NR413/ref=sr_1_14?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-14
+                        - img [ref=e1226]
+                      - generic [ref=e1229]:
+                        - link "Garmin Vívoactive 5, Health and Fitness GPS Smartwatch, AMOLED Display, Up to 11 Days of Battery, Slate Aluminum Bezel with Black Case and Silicone Band" [ref=e1231] [cursor=pointer]:
+                          - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NR413/ref=sr_1_14?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-14
+                          - heading "Garmin Vívoactive 5, Health and Fitness GPS Smartwatch, AMOLED Display, Up to 11 Days of Battery, Slate Aluminum Bezel with Black Case and Silicone Band" [level=2] [ref=e1232]
+                        - generic [ref=e1233]:
+                          - generic [ref=e1234]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e1236] [cursor=pointer]:
+                              - generic [ref=e1238]: 4.4 out of 5 stars
+                            - link "10,874 ratings" [ref=e1242] [cursor=pointer]:
+                              - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NR413/ref=sr_1_14?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-14#customerReviews
+                              - text: (10.8K)
+                          - generic [ref=e1243]: 2K+ bought in past month
+                        - generic [ref=e1246]:
+                          - link "See options" [ref=e1255] [cursor=pointer]:
+                            - /url: /Garmin-v%C3%ADvoactive-Fitness-Smartwatch-Display/dp/B0CG6NR413/ref=sr_1_14_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-14
+                          - generic [ref=e1257]:
+                            - text: No featured offers available
+                            - text: INR 16,194.03
+                            - link "(11 used & new offers)" [ref=e1259] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CG6NR413/ref=sr_1_14_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-14
+                  - listitem [ref=e1262]:
+                    - generic [ref=e1268]:
+                      - link [ref=e1274] [cursor=pointer]:
+                        - /url: /Garmin-Forerunner-Smartwatch-Colorful-Training/dp/B0CT3SGHXL/ref=sr_1_15?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-15
+                        - img [ref=e1276]
+                      - generic [ref=e1279]:
+                        - link "Garmin Forerunner 165, Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black" [ref=e1281] [cursor=pointer]:
+                          - /url: /Garmin-Forerunner-Smartwatch-Colorful-Training/dp/B0CT3SGHXL/ref=sr_1_15?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-15
+                          - heading "Garmin Forerunner 165, Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black" [level=2] [ref=e1282]
+                        - generic [ref=e1283]:
+                          - generic [ref=e1284]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e1286] [cursor=pointer]:
+                              - generic [ref=e1288]: 4.7 out of 5 stars
+                            - link "4,037 ratings" [ref=e1292] [cursor=pointer]:
+                              - /url: /Garmin-Forerunner-Smartwatch-Colorful-Training/dp/B0CT3SGHXL/ref=sr_1_15?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-15#customerReviews
+                              - text: (4K)
+                          - generic [ref=e1293]: 6K+ bought in past month
+                        - generic [ref=e1296]:
+                          - link "See options" [ref=e1305] [cursor=pointer]:
+                            - /url: /Garmin-Forerunner-Smartwatch-Colorful-Training/dp/B0CT3SGHXL/ref=sr_1_15_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-15
+                          - generic [ref=e1307]:
+                            - text: No featured offers available
+                            - text: INR 18,099.77
+                            - link "(11 used & new offers)" [ref=e1309] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CT3SGHXL/ref=sr_1_15_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-15
+                  - listitem [ref=e1312]:
+                    - generic [ref=e1318]:
+                      - link [ref=e1324] [cursor=pointer]:
+                        - /url: /Samsung-Bluetooth-Smartwatch-Coaching-Tracking/dp/B0F7PZNZQD/ref=sr_1_16?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-16
+                        - img [ref=e1326]
+                      - generic [ref=e1329]:
+                        - link "Samsung Galaxy Watch 8 (2025) 44mm Bluetooth Smartwatch, Cushion Design, Fitness Tracker, Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, Graphite [US Version, 2 Yr Warranty]" [ref=e1331] [cursor=pointer]:
+                          - /url: /Samsung-Bluetooth-Smartwatch-Coaching-Tracking/dp/B0F7PZNZQD/ref=sr_1_16?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-16
+                          - heading "Samsung Galaxy Watch 8 (2025) 44mm Bluetooth Smartwatch, Cushion Design, Fitness Tracker, Sleep Coaching, Running Coach, Energy Score, Heart Rate Tracking, Graphite [US Version, 2 Yr Warranty]" [level=2] [ref=e1332]
+                        - generic [ref=e1333]:
+                          - generic [ref=e1334]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1336] [cursor=pointer]:
+                              - generic [ref=e1338]: 4.6 out of 5 stars
+                            - link "1,361 ratings" [ref=e1342] [cursor=pointer]:
+                              - /url: /Samsung-Bluetooth-Smartwatch-Coaching-Tracking/dp/B0F7PZNZQD/ref=sr_1_16?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-16#customerReviews
+                              - text: (1.3K)
+                          - generic [ref=e1343]: 500+ bought in past month
+                        - generic [ref=e1346]:
+                          - generic [ref=e1349]:
+                            - generic [ref=e1350]: Price, product page
+                            - 'link "INR 30,490.89 List: INR 36,208.11 List: INR 36,208.11" [ref=e1351] [cursor=pointer]':
+                              - /url: /Samsung-Bluetooth-Smartwatch-Coaching-Tracking/dp/B0F7PZNZQD/ref=sr_1_16?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-16
+                              - generic [ref=e1352]:
+                                - generic [ref=e1353]: INR 30,490.89
+                                - generic [ref=e1354]:
+                                  - text: INR
+                                  - generic [ref=e1355]:
+                                    - text: 30,490
+                                    - generic [ref=e1356]: .
+                                  - text: "89"
+                              - generic [ref=e1357]: "List: INR 36,208.11"
+                              - generic [ref=e1358]:
+                                - text: "List:"
+                                - generic [ref=e1359]:
+                                  - generic [ref=e1360]: INR 36,208.11
+                                  - text: INR36,208.11
+                          - generic [ref=e1361]:
+                            - generic [ref=e1367]: INR 965.26 delivery Fri, Jul 3
+                            - generic [ref=e1368]: Ships to India
+                          - button "Add to cart" [ref=e1383] [cursor=pointer]
+                          - generic [ref=e1385]:
+                            - text: More Buying Choices
+                            - text: INR 24,087.60
+                            - link "(2+ used & new offers)" [ref=e1387] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0F7PZNZQD/ref=sr_1_16_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-16
+                  - listitem [ref=e1390]:
+                    - generic [ref=e1398]:
+                      - link [ref=e1404] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDYzNDA0NjIwODIwMjo6MDo6&url=%2FTORJALPH-Compatible-Samsung-Waterproof-Bluetooh%2Fdp%2FB09TR2NNJS%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1406]
+                      - generic [ref=e1409]:
+                        - generic [ref=e1410]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1413] [cursor=pointer]:
+                            - generic [ref=e1414]: Sponsored
+                          - link "Sponsored Ad - Smart Watch for Men Women Compatible with iPhone Samsung Android Phone 1.69 inch Full Touch Screen IP68 Waterproof Bluetooh Fitness Tracker Heart Rate/Sleep Monitor (Black)" [ref=e1416] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDYzNDA0NjIwODIwMjo6MDo6&url=%2FTORJALPH-Compatible-Samsung-Waterproof-Bluetooh%2Fdp%2FB09TR2NNJS%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - Smart Watch for Men Women Compatible with iPhone Samsung Android Phone 1.69 inch Full Touch Screen IP68 Waterproof Bluetooh Fitness Tracker Heart Rate/Sleep Monitor (Black)" [level=2] [ref=e1417]: Smart Watch for Men Women Compatible with iPhone Samsung Android Phone 1.69 inch Full Touch Screen IP68 Waterproof Bluetooh Fitness Tracker Heart Rate/Sleep Monitor (Black)
+                        - generic [ref=e1418]:
+                          - generic [ref=e1419]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1421] [cursor=pointer]:
+                              - generic [ref=e1423]: 4.3 out of 5 stars
+                            - link "4,471 ratings" [ref=e1427] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDYzNDA0NjIwODIwMjo6MDo6&url=%2FTORJALPH-Compatible-Samsung-Waterproof-Bluetooh%2Fdp%2FB09TR2NNJS%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                              - text: (4.4K)
+                          - generic [ref=e1428]: Positively reviewed for ease of setup
+                          - generic [ref=e1429]: 2K+ bought in past month
+                        - link "See options" [ref=e1441] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfbXRmOjMwMDYzNDA0NjIwODIwMjo6MDo6&url=%2FTORJALPH-Compatible-Samsung-Waterproof-Bluetooh%2Fdp%2FB09TR2NNJS%2Fref%3Dsr_1_17_so_WEARABLE_COMPUTER%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                  - listitem [ref=e1444]:
+                    - generic [ref=e1450]:
+                      - link [ref=e1456] [cursor=pointer]:
+                        - /url: /Garmin-Instinct%C2%AE-Smartwatch-Monitoring-Wrist-Based/dp/B0DSC72873/ref=sr_1_18?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-18
+                        - img [ref=e1458]
+                      - generic [ref=e1461]:
+                        - link "Garmin Instinct® E 45mm, Rugged Outdoor GPS Smartwatch, 24/7 Health Monitoring, Wrist-Based Heart Rate, Up to 16 Days of Battery Life, Charcoal" [ref=e1463] [cursor=pointer]:
+                          - /url: /Garmin-Instinct%C2%AE-Smartwatch-Monitoring-Wrist-Based/dp/B0DSC72873/ref=sr_1_18?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-18
+                          - heading "Garmin Instinct® E 45mm, Rugged Outdoor GPS Smartwatch, 24/7 Health Monitoring, Wrist-Based Heart Rate, Up to 16 Days of Battery Life, Charcoal" [level=2] [ref=e1464]
+                        - generic [ref=e1466]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=e1468] [cursor=pointer]:
+                            - generic [ref=e1470]: 4.5 out of 5 stars
+                          - link "434 ratings" [ref=e1474] [cursor=pointer]:
+                            - /url: /Garmin-Instinct%C2%AE-Smartwatch-Monitoring-Wrist-Based/dp/B0DSC72873/ref=sr_1_18?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-18#customerReviews
+                            - text: (434)
+                        - generic [ref=e1477]:
+                          - generic [ref=e1480]:
+                            - generic [ref=e1481]: Price, product page
+                            - 'link "INR 19,056.45 List: INR 28,585.15 List: INR 28,585.15" [ref=e1482] [cursor=pointer]':
+                              - /url: /Garmin-Instinct%C2%AE-Smartwatch-Monitoring-Wrist-Based/dp/B0DSC72873/ref=sr_1_18?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-18
+                              - generic [ref=e1483]:
+                                - generic [ref=e1484]: INR 19,056.45
+                                - generic [ref=e1485]:
+                                  - text: INR
+                                  - generic [ref=e1486]:
+                                    - text: 19,056
+                                    - generic [ref=e1487]: .
+                                  - text: "45"
+                              - generic [ref=e1488]: "List: INR 28,585.15"
+                              - generic [ref=e1489]:
+                                - text: "List:"
+                                - generic [ref=e1490]:
+                                  - generic [ref=e1491]: INR 28,585.15
+                                  - text: INR28,585.15
+                          - generic [ref=e1492]:
+                            - generic [ref=e1498]: INR 935.72 delivery Jun 22 - Jul 7
+                            - generic [ref=e1499]: Ships to India
+                          - button "Add to cart" [ref=e1514] [cursor=pointer]
+                          - generic [ref=e1516]:
+                            - text: More Buying Choices
+                            - text: INR 16,194.03
+                            - link "(10+ used & new offers)" [ref=e1518] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0DSC72873/ref=sr_1_18_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-18
+                  - listitem [ref=e1521]:
+                    - generic [ref=e1527]:
+                      - link [ref=e1533] [cursor=pointer]:
+                        - /url: /Smartwatch-Android-Bluetooth-Fitness-Waterproof/dp/B0D4TBR3DJ/ref=sr_1_19?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-19
+                        - img [ref=e1535]
+                      - generic [ref=e1538]:
+                        - link "Smart Watch for Women Men, Smartwatch for iPhone & Android Bluetooth (Answer/Call) Built-in Alexa, 1.91\" HD Fitness Tracker with 105+ Sport Modes, IP68 Waterproof, Sleep/Heart Rate/SpO2/Stress Monitor" [ref=e1540] [cursor=pointer]:
+                          - /url: /Smartwatch-Android-Bluetooth-Fitness-Waterproof/dp/B0D4TBR3DJ/ref=sr_1_19?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-19
+                          - heading "Smart Watch for Women Men, Smartwatch for iPhone & Android Bluetooth (Answer/Call) Built-in Alexa, 1.91\" HD Fitness Tracker with 105+ Sport Modes, IP68 Waterproof, Sleep/Heart Rate/SpO2/Stress Monitor" [level=2] [ref=e1541]
+                        - generic [ref=e1542]:
+                          - generic [ref=e1543]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1545] [cursor=pointer]:
+                              - generic [ref=e1547]: 4.3 out of 5 stars
+                            - link "3,115 ratings" [ref=e1551] [cursor=pointer]:
+                              - /url: /Smartwatch-Android-Bluetooth-Fitness-Waterproof/dp/B0D4TBR3DJ/ref=sr_1_19?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-19#customerReviews
+                              - text: (3.1K)
+                          - generic [ref=e1552]: 2K+ bought in past month
+                        - generic [ref=e1555]:
+                          - button "Carbon impact" [ref=e1564] [cursor=pointer]:
+                            - generic [ref=e1565]: Carbon impact
+                          - link "See options" [ref=e1573] [cursor=pointer]:
+                            - /url: /Smartwatch-Android-Bluetooth-Fitness-Waterproof/dp/B0D4TBR3DJ/ref=sr_1_19_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-19
+                          - generic [ref=e1575]:
+                            - text: No featured offers available
+                            - text: INR 4,518.51
+                            - link "(2 used & new offers)" [ref=e1577] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D4TBR3DJ/ref=sr_1_19_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-19
+                  - listitem [ref=e1580]:
+                    - generic [ref=e1586]:
+                      - link [ref=e1592] [cursor=pointer]:
+                        - /url: /KEEPONFIT-Waterproof-Bluetooth-Activity-Pedometer/dp/B0FBW6SJ55/ref=sr_1_20?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-20
+                        - img [ref=e1594]
+                      - generic [ref=e1597]:
+                        - link "KEEPONFIT Smart Watches for Women Android/iPhone, IP68 Waterproof Fitness Tracker with Bluetooth Calls(Answer&Make), Activity Pedometer/Heart Rate/SpO2 Monitor/100+ Sports Model" [ref=e1599] [cursor=pointer]:
+                          - /url: /KEEPONFIT-Waterproof-Bluetooth-Activity-Pedometer/dp/B0FBW6SJ55/ref=sr_1_20?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-20
+                          - heading "KEEPONFIT Smart Watches for Women Android/iPhone, IP68 Waterproof Fitness Tracker with Bluetooth Calls(Answer&Make), Activity Pedometer/Heart Rate/SpO2 Monitor/100+ Sports Model" [level=2] [ref=e1600]
+                        - generic [ref=e1601]:
+                          - generic [ref=e1602]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e1604] [cursor=pointer]:
+                              - generic [ref=e1606]: 4.4 out of 5 stars
+                            - link "1,566 ratings" [ref=e1610] [cursor=pointer]:
+                              - /url: /KEEPONFIT-Waterproof-Bluetooth-Activity-Pedometer/dp/B0FBW6SJ55/ref=sr_1_20?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-20#customerReviews
+                              - text: (1.5K)
+                          - generic [ref=e1611]: 2K+ bought in past month
+                        - generic [ref=e1614]:
+                          - link "See options" [ref=e1623] [cursor=pointer]:
+                            - /url: /KEEPONFIT-Waterproof-Bluetooth-Activity-Pedometer/dp/B0FBW6SJ55/ref=sr_1_20_so_WEARABLE_COMPUTER?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-20
+                          - generic [ref=e1625]:
+                            - text: No featured offers available
+                            - text: INR 4,763.40
+                            - link "(1 new offer)" [ref=e1627] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0FBW6SJ55/ref=sr_1_20_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-20
+                  - listitem [ref=e1630]:
+                    - generic [ref=e1636]:
+                      - link [ref=e1642] [cursor=pointer]:
+                        - /url: /Android-Waterproof-Activity-Bluetooth-Smartwatch/dp/B0D7PVLVSB/ref=sr_1_21?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-21
+                        - img [ref=e1644]
+                      - generic [ref=e1647]:
+                        - link "Smart Watch for Women Android & iPhone, Alexa Built-in, IP68 Waterproof Activity Fitness Tracker with Bluetooth Call (Answer/Make), 1.8\" Smartwatch with Heart Rate/SpO2/Sleep Monitor, 100+ Sports Mode" [ref=e1649] [cursor=pointer]:
+                          - /url: /Android-Waterproof-Activity-Bluetooth-Smartwatch/dp/B0D7PVLVSB/ref=sr_1_21?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-21
+                          - heading "Smart Watch for Women Android & iPhone, Alexa Built-in, IP68 Waterproof Activity Fitness Tracker with Bluetooth Call (Answer/Make), 1.8\" Smartwatch with Heart Rate/SpO2/Sleep Monitor, 100+ Sports Mode" [level=2] [ref=e1650]
+                        - generic [ref=e1651]:
+                          - generic [ref=e1652]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1654] [cursor=pointer]:
+                              - generic [ref=e1656]: 4.3 out of 5 stars
+                            - link "9,445 ratings" [ref=e1660] [cursor=pointer]:
+                              - /url: /Android-Waterproof-Activity-Bluetooth-Smartwatch/dp/B0D7PVLVSB/ref=sr_1_21?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-21#customerReviews
+                              - text: (9.4K)
+                          - generic [ref=e1661]: 1K+ bought in past month
+                        - generic [ref=e1664]:
+                          - button "Carbon impact" [ref=e1673] [cursor=pointer]:
+                            - generic [ref=e1674]: Carbon impact
+                          - link "See options" [ref=e1682] [cursor=pointer]:
+                            - /url: /Android-Waterproof-Activity-Bluetooth-Smartwatch/dp/B0D7PVLVSB/ref=sr_1_21_so_CONSUMER_ELECTRONICS?dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&dib_tag=se&keywords=Smart+Watch&qid=1781164311&sr=8-21
+                          - generic [ref=e1684]:
+                            - text: No featured offers available
+                            - text: INR 4,334.61
+                            - link "(3 used & new offers)" [ref=e1686] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D7PVLVSB/ref=sr_1_21_olp?keywords=Smart+Watch&dib_tag=se&dib=eyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE&qid=1781164311&sr=8-21
+                  - listitem [ref=e1689]:
+                    - generic [ref=e1697]:
+                      - link [ref=e1703] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYnRmOjMwMTI5NzkyNjMwMTgwMjo6MDo6&url=%2FWatches-Fitness-Bluetooth-Waterproof-Compatible%2Fdp%2FB0GWQZ4K7D%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                        - img [ref=e1705]
+                      - generic [ref=e1708]:
+                        - generic [ref=e1709]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1712] [cursor=pointer]:
+                            - generic [ref=e1713]: Sponsored
+                          - link "Sponsored Ad - Smart Watches for Men Women, 1.85\" HD Touch Screen Fitness Watch with 7 Days Battery Life, Bluetooth Call, Heart Rate Sleep Monitor, IP68 Waterproof Sports Tracker Compatible with Android & iOS" [ref=e1715] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYnRmOjMwMTI5NzkyNjMwMTgwMjo6MDo6&url=%2FWatches-Fitness-Bluetooth-Waterproof-Compatible%2Fdp%2FB0GWQZ4K7D%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                            - heading "Sponsored Ad - Smart Watches for Men Women, 1.85\" HD Touch Screen Fitness Watch with 7 Days Battery Life, Bluetooth Call, Heart Rate Sleep Monitor, IP68 Waterproof Sports Tracker Compatible with Android & iOS" [level=2] [ref=e1716]: Smart Watches for Men Women, 1.85" HD Touch Screen Fitness Watch with 7 Days Battery Life, Bluetooth Call, Heart Rate Sleep Monitor, IP68 Waterproof Sports Tracker Compatible with Android & iOS
+                        - generic [ref=e1717]:
+                          - generic [ref=e1718]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1720] [cursor=pointer]:
+                              - generic [ref=e1722]: 4.6 out of 5 stars
+                            - link "17 ratings" [ref=e1726] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYnRmOjMwMTI5NzkyNjMwMTgwMjo6MDo6&url=%2FWatches-Fitness-Bluetooth-Waterproof-Compatible%2Fdp%2FB0GWQZ4K7D%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1#customerReviews
+                              - text: (17)
+                          - generic [ref=e1727]: 100+ bought in past month
+                        - link "See options" [ref=e1739] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo2NzA4NTM2Mzc0MjA2Mjg2OjE3ODExNjQzMTI6c3BfYnRmOjMwMTI5NzkyNjMwMTgwMjo6MDo6&url=%2FWatches-Fitness-Bluetooth-Waterproof-Compatible%2Fdp%2FB0GWQZ4K7D%2Fref%3Dsr_1_22_so_WEARABLE_COMPUTER%3Fdib%3DeyJ2IjoiMSJ9.PHPrebfrpCK28Nsj_3AZGM5KOB3eDoMlyf10kzEofn8AOuaJpuONyBOufHbpTyRNv1XiyGf4WUiEHWKr6tZBCzZz3hH01hd3u-0zSFgXhmgXrrVmn0eJPRTSerjzWYJS9j_p3cV2SMiHQzZ8CPEIBXSk8fS-xIkPf_74iB14FoXeld1Ir1rjJWzZUNGlDgpGDt9BhhWiHPKEpIMTkqjgUtOHaiQuyyM5It_iwBoVA-Y.9YnU6mbjmq-czLuGjfGWAAruUCHUbpUBuL5YYAao1RE%26dib_tag%3Dse%26keywords%3DSmart%2BWatch%26qid%3D1781164311%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+            - generic [ref=e1749]:
+              - link "Sponsored video, click to navigate to featured product page. Quican Smart Watch for Women Men (2 Bands), 1.85\" AMOLED Smartwatch for iPhone & Android Phones, Heart Rate/ SpO2/ Sleep Monitor, 3ATM Waterproof, Calls & Messages, 120+ Sports Modes Fitness Tracker" [ref=e1753] [cursor=pointer]:
+                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JCzeTBjPMmx0AKhay2mhBM0AAAGetaqGpAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICDcQB7u/clv1c_ek-wBIHXFcbWDn2nI6tsJ16WpAySuUaPTrwGIF7ym5nYARfqVWwFOgg9dJXJlxHtTeRtCt2qYz0FXn8wiZGcUAB2xX342_9DM2jl7rUg1K-ymuKrabX81mBwMvhytViFlOySdQY38HKEAFj4LUOxm4XqKF2ek1Sa0q7UPwcqjIMNTbu9P-YheoK5op9idbvAkKBEzQB1mQnW07Blg2DAcwB67NUzGEQ81q58hOD6E6XBt8tNgUcmvQqboPmTg-3myr_aESeWSu9n1fY_FJxT_tJg4B872nTtg6VE28hC6pSZ3HXUXV8Yd_D4eiaMS_uyUl3YNMVxcgri922oUQcTBjuwvPJzQweModK-_e0kdtOdhdRUB8V3Sru-J-So41_3FXrG8SGzGuNUuV7oc6OkUZuDwk4Dk86lufnb5lOqu7N5AoDzoom-RuVBC9u7YxVEhrRXeNzwvEeUX83LQkIakyjU7IoH-T6M82Q9JSivemD28Jwfv7s9SuEz2ESlwvD0YqfTKy1AwEu_91dcpGgTIsAH3mxEklPbDwXzU3vudXEljAihN1oIXBR1bCIUTloJQUwVjBSn5DqW6pT4wi0LwHwtog9hGAB9FG62r0LfSEQXfjb0RytKoPotizOK_gAeOzcdFxp7ZMf_Td8vR6O-RnJVrKWhQRBhO42VWqDGax3XaHfHVa3b1K_WyKK69xOxrSgt4HcnFUj835UnloLL7GyEVZm0YeCXY8FkmBRRCO9ckfpBQ5XCpHB3-VR80-Kuy1Wj4D12i6Qc1zBMQYBUfpaAugAN_LEx1BV4eZ0y5y1tislPCf_JgqxKqVLX7FBqbbYWXS6fG_zctVrx5P0a14XUm12fiMsRw17H28MphNPMVPSbj9LjrY9-kkZ0poTVxf9Of0RGMcLIFX5cOhDjYha7xSoWPhZP6pppxODY34AtrzU1oXdX4ItwO23fZHZZSD06uRZiV61QFRsdIlT9gZpEJaMu2jhsPZeG0SBeK5psRJqg8aid8sJ54mKG1wzOODEpcTRgKKiHSLLLLpyWQGZ_CP1EUsPW3xOCi1klwMki5ehB0qOuXzIPA0VrYmNVq5wmcK83Go3MUJ8MD_cb_DJmZTVWV2MuALc-kQ0aWO7EZTmDH-vOas9v1dRHWPviXo_IQUf7eyfF7yRqJmYo1E2ZL8zgl_DGlmjMiYeawJDe1jO0MQDVHO2P6Ol6I6XftDEb67PuC-8Picbb4-jUA1Hk1bPDGctu1RFoD9OKiDuuPP6k43V6IT22zQ2Oq9GFUqvKPVgWWefWQ--N1QqcTXSXjXFSIcDk6VJvRxX5txmLrgV3uRpS3ojlS-z0sUVgVZBnEHJbHAz-awU0ZTkqUNO0wtUa0TZkeqjqOHwKE2jAhea0t6e1Xto8A85Q3_dIlg8fhIN5YNkD3Avm3HNrzOIRIn9MCPGYRId7B2b1lDcr-Jgi6w4InY1-N1btJkUxweXk5QJV7B3M6GYQasD6X9kkWIBJchAEUk1kcYFuLXzGNPWUZd-NIk2DyyIKpfSOjxRGYqdBOXTO-PCzzxpuSaWk7woQS-lHGvJNIfOpjRT10iFpSagbDKaHrJljQ15Da1JULVM4mRVPef5ocNvTv35_PkWady17Yar6JedARYtROUD_qJ9Kn4E7_dhDhbA6YWMP2Xd-ZhR1GYtQxeI/https://www.amazon.com/dp/B0H1BN7MBF?pd_rd_i=B0H1BN7MBF&pf_rd_p=37132d36-da68-4ed0-8d23-842f0825e4d6&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_w=S0dqz&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7
+                - generic "Sponsored video, click to navigate to featured product page. Quican Smart Watch for Women Men (2 Bands), 1.85\" AMOLED Smartwatch for iPhone & Android Phones, Heart Rate/ SpO2/ Sleep Monitor, 3ATM Waterproof, Calls & Messages, 120+ Sports Modes Fitness Tracker" [ref=e1754]
+              - generic [ref=e1762]:
+                - link [ref=e1768] [cursor=pointer]:
+                  - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JCzeTBjPMmx0AKhay2mhBM0AAAGetaqGpAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICDcQB7u/clv1c_ek-wBIHXFcbWDn2nI6tsJ16WpAySuUaPTrwGIF7ym5nYARfqVWwFOgg9dJXJlxHtTeRtCt2qYz0FXn8wiZGcUAB2xX342_9DM2jl7rUg1K-ymuKrabX81mBwMvhytViFlOySdQY38HKEAFj4LUOxm4XqKF2ek1Sa0q7UPwcqjIMNTbu9P-YheoK5op9idbvAkKBEzQB1mQnW07Blg2DAcwB67NUzGEQ81q58hOD6E6XBt8tNgUcmvQqboPmTg-3myr_aESeWSu9n1fY_FJxT_tJg4B872nTtg6VE28hC6pSZ3HXUXV8Yd_D4eiaMS_uyUl3YNMVxcgri922oUQcTBjuwvPJzQweModK-_e0kdtOdhdRUB8V3Sru-J-So41_3FXrG8SGzGuNUuV7oc6OkUZuDwk4Dk86lufnb5lOqu7N5AoDzoom-RuVBC9u7YxVEhrRXeNzwvEeUX83LQkIakyjU7IoH-T6M82Q9JSivemD28Jwfv7s9SuEz2ESlwvD0YqfTKy1AwEu_91dcpGgTIsAH3mxEklPbDwXzU3vudXEljAihN1oIXBR1bCIUTloJQUwVjBSn5DqW6pT4wi0LwHwtog9hGAB9FG62r0LfSEQXfjb0RytKoPotizOK_gAeOzcdFxp7ZMf_Td8vR6O-RnJVrKWhQRBhO42VWqDGax3XaHfHVa3b1K_WyKK69xOxrSgt4HcnFUj835UnloLL7GyEVZm0YeCXY8FkmBRRCO9ckfpBQ5XCpHB3-VR80-Kuy1Wj4D12i6Qc1zBMQYBUfpaAugAN_LEx1BV4eZ0y5y1tislPCf_JgqxKqVLX7FBqbbYWXS6fG_zctVrx5P0a14XUm12fiMsRw17H28MphNPMVPSbj9LjrY9-kkZ0poTVxf9Of0RGMcLIFX5cOhDjYha7xSoWPhZP6pppxODY34AtrzU1oXdX4ItwO23fZHZZSD06uRZiV61QFRsdIlT9gZpEJaMu2jhsPZeG0SBeK5psRJqg8aid8sJ54mKG1wzOODEpcTRgKKiHSLLLLpyWQGZ_CP1EUsPW3xOCi1klwMki5ehB0qOuXzIPA0VrYmNVq5wmcK83Go3MUJ8MD_cb_DJmZTVWV2MuALc-kQ0aWO7EZTmDH-vOas9v1dRHWPviXo_IQUf7eyfF7yRqJmYo1E2ZL8zgl_DGlmjMiYeawJDe1jO0MQDVHO2P6Ol6I6XftDEb67PuC-8Picbb4-jUA1Hk1bPDGctu1RFoD9OKiDuuPP6k43V6IT22zQ2Oq9GFUqvKPVgWWefWQ--N1QqcTXSXjXFSIcDk6VJvRxX5txmLrgV3uRpS3ojlS-z0sUVgVZBnEHJbHAz-awU0ZTkqUNO0wtUa0TZkeqjqOHwKE2jAhea0t6e1Xto8A85Q3_dIlg8fhIN5YNkD3Avm3HNrzOIRIn9MCPGYRId7B2b1lDcr-Jgi6w4InY1-N1btJkUxweXk5QJV7B3M6GYQasD6X9kkWIBJchAEUk1kcYFuLXzGNPWUZd-NIk2DyyIKpfSOjxRGYqdBOXTO-PCzzxpuSaWk7woQS-lHGvJNIfOpjRT10iFpSagbDKaHrJljQ15Da1JULVM4mRVPef5ocNvTv35_PkWady17Yar6JedARYtROUD_qJ9Kn4E7_dhDhbA6YWMP2Xd-ZhR1GYtQxeI/https://www.amazon.com/Quican-Smartwatch-Android-Waterproof-Messages/dp/B0H1BN7MBF/ref=sxbs_sbv_search_btf?content-id=amzn1.sym.37132d36-da68-4ed0-8d23-842f0825e4d6%3Aamzn1.sym.37132d36-da68-4ed0-8d23-842f0825e4d6&cv_ct_cx=Smart+Watch&keywords=Smart+Watch&pd_rd_i=B0H1BN7MBF&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&pd_rd_w=S0dqz&pd_rd_wg=M69oT&pf_rd_p=37132d36-da68-4ed0-8d23-842f0825e4d6&pf_rd_r=BTZ97E04CA67MP37A3P0&qid=1781164311&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-a61ee601-6e56-4862-a8a2-1d3da5a5406f
+                  - img [ref=e1770]
+                - generic [ref=e1773]:
+                  - generic [ref=e1774]:
+                    - generic [ref=e1777] [cursor=pointer]: Sponsored
+                    - link "Quican Smart Watch for Women Men (2 Bands), 1.85\" AMOLED Smartwatch for iPhone & Android Phones, Heart Rate/ SpO2/ Sleep Monitor, 3ATM Waterproof, Calls & Messages, 120+ Sports Modes Fitness Tracker" [ref=e1779] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JCzeTBjPMmx0AKhay2mhBM0AAAGetaqGpAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICDcQB7u/clv1c_ek-wBIHXFcbWDn2nI6tsJ16WpAySuUaPTrwGIF7ym5nYARfqVWwFOgg9dJXJlxHtTeRtCt2qYz0FXn8wiZGcUAB2xX342_9DM2jl7rUg1K-ymuKrabX81mBwMvhytViFlOySdQY38HKEAFj4LUOxm4XqKF2ek1Sa0q7UPwcqjIMNTbu9P-YheoK5op9idbvAkKBEzQB1mQnW07Blg2DAcwB67NUzGEQ81q58hOD6E6XBt8tNgUcmvQqboPmTg-3myr_aESeWSu9n1fY_FJxT_tJg4B872nTtg6VE28hC6pSZ3HXUXV8Yd_D4eiaMS_uyUl3YNMVxcgri922oUQcTBjuwvPJzQweModK-_e0kdtOdhdRUB8V3Sru-J-So41_3FXrG8SGzGuNUuV7oc6OkUZuDwk4Dk86lufnb5lOqu7N5AoDzoom-RuVBC9u7YxVEhrRXeNzwvEeUX83LQkIakyjU7IoH-T6M82Q9JSivemD28Jwfv7s9SuEz2ESlwvD0YqfTKy1AwEu_91dcpGgTIsAH3mxEklPbDwXzU3vudXEljAihN1oIXBR1bCIUTloJQUwVjBSn5DqW6pT4wi0LwHwtog9hGAB9FG62r0LfSEQXfjb0RytKoPotizOK_gAeOzcdFxp7ZMf_Td8vR6O-RnJVrKWhQRBhO42VWqDGax3XaHfHVa3b1K_WyKK69xOxrSgt4HcnFUj835UnloLL7GyEVZm0YeCXY8FkmBRRCO9ckfpBQ5XCpHB3-VR80-Kuy1Wj4D12i6Qc1zBMQYBUfpaAugAN_LEx1BV4eZ0y5y1tislPCf_JgqxKqVLX7FBqbbYWXS6fG_zctVrx5P0a14XUm12fiMsRw17H28MphNPMVPSbj9LjrY9-kkZ0poTVxf9Of0RGMcLIFX5cOhDjYha7xSoWPhZP6pppxODY34AtrzU1oXdX4ItwO23fZHZZSD06uRZiV61QFRsdIlT9gZpEJaMu2jhsPZeG0SBeK5psRJqg8aid8sJ54mKG1wzOODEpcTRgKKiHSLLLLpyWQGZ_CP1EUsPW3xOCi1klwMki5ehB0qOuXzIPA0VrYmNVq5wmcK83Go3MUJ8MD_cb_DJmZTVWV2MuALc-kQ0aWO7EZTmDH-vOas9v1dRHWPviXo_IQUf7eyfF7yRqJmYo1E2ZL8zgl_DGlmjMiYeawJDe1jO0MQDVHO2P6Ol6I6XftDEb67PuC-8Picbb4-jUA1Hk1bPDGctu1RFoD9OKiDuuPP6k43V6IT22zQ2Oq9GFUqvKPVgWWefWQ--N1QqcTXSXjXFSIcDk6VJvRxX5txmLrgV3uRpS3ojlS-z0sUVgVZBnEHJbHAz-awU0ZTkqUNO0wtUa0TZkeqjqOHwKE2jAhea0t6e1Xto8A85Q3_dIlg8fhIN5YNkD3Avm3HNrzOIRIn9MCPGYRId7B2b1lDcr-Jgi6w4InY1-N1btJkUxweXk5QJV7B3M6GYQasD6X9kkWIBJchAEUk1kcYFuLXzGNPWUZd-NIk2DyyIKpfSOjxRGYqdBOXTO-PCzzxpuSaWk7woQS-lHGvJNIfOpjRT10iFpSagbDKaHrJljQ15Da1JULVM4mRVPef5ocNvTv35_PkWady17Yar6JedARYtROUD_qJ9Kn4E7_dhDhbA6YWMP2Xd-ZhR1GYtQxeI/https://www.amazon.com/Quican-Smartwatch-Android-Waterproof-Messages/dp/B0H1BN7MBF/ref=sxbs_sbv_search_btf?content-id=amzn1.sym.37132d36-da68-4ed0-8d23-842f0825e4d6%3Aamzn1.sym.37132d36-da68-4ed0-8d23-842f0825e4d6&cv_ct_cx=Smart+Watch&keywords=Smart+Watch&pd_rd_i=B0H1BN7MBF&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&pd_rd_w=S0dqz&pd_rd_wg=M69oT&pf_rd_p=37132d36-da68-4ed0-8d23-842f0825e4d6&pf_rd_r=BTZ97E04CA67MP37A3P0&qid=1781164311&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-a61ee601-6e56-4862-a8a2-1d3da5a5406f
+                      - heading "Quican Smart Watch for Women Men (2 Bands), 1.85\" AMOLED Smartwatch for iPhone & Android Phones, Heart Rate/ SpO2/ Sleep Monitor, 3ATM Waterproof, Calls & Messages, 120+ Sports Modes Fitness Tracker" [level=2] [ref=e1780]
+                  - generic [ref=e1782]:
+                    - text: "4.9"
+                    - button "4.9 out of 5 stars, rating details" [ref=e1784] [cursor=pointer]:
+                      - generic [ref=e1786]: 4.9 out of 5 stars
+                    - link "57 ratings" [ref=e1790] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JCzeTBjPMmx0AKhay2mhBM0AAAGetaqGpAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICDcQB7u/clv1c_ek-wBIHXFcbWDn2nI6tsJ16WpAySuUaPTrwGIF7ym5nYARfqVWwFOgg9dJXJlxHtTeRtCt2qYz0FXn8wiZGcUAB2xX342_9DM2jl7rUg1K-ymuKrabX81mBwMvhytViFlOySdQY38HKEAFj4LUOxm4XqKF2ek1Sa0q7UPwcqjIMNTbu9P-YheoK5op9idbvAkKBEzQB1mQnW07Blg2DAcwB67NUzGEQ81q58hOD6E6XBt8tNgUcmvQqboPmTg-3myr_aESeWSu9n1fY_FJxT_tJg4B872nTtg6VE28hC6pSZ3HXUXV8Yd_D4eiaMS_uyUl3YNMVxcgri922oUQcTBjuwvPJzQweModK-_e0kdtOdhdRUB8V3Sru-J-So41_3FXrG8SGzGuNUuV7oc6OkUZuDwk4Dk86lufnb5lOqu7N5AoDzoom-RuVBC9u7YxVEhrRXeNzwvEeUX83LQkIakyjU7IoH-T6M82Q9JSivemD28Jwfv7s9SuEz2ESlwvD0YqfTKy1AwEu_91dcpGgTIsAH3mxEklPbDwXzU3vudXEljAihN1oIXBR1bCIUTloJQUwVjBSn5DqW6pT4wi0LwHwtog9hGAB9FG62r0LfSEQXfjb0RytKoPotizOK_gAeOzcdFxp7ZMf_Td8vR6O-RnJVrKWhQRBhO42VWqDGax3XaHfHVa3b1K_WyKK69xOxrSgt4HcnFUj835UnloLL7GyEVZm0YeCXY8FkmBRRCO9ckfpBQ5XCpHB3-VR80-Kuy1Wj4D12i6Qc1zBMQYBUfpaAugAN_LEx1BV4eZ0y5y1tislPCf_JgqxKqVLX7FBqbbYWXS6fG_zctVrx5P0a14XUm12fiMsRw17H28MphNPMVPSbj9LjrY9-kkZ0poTVxf9Of0RGMcLIFX5cOhDjYha7xSoWPhZP6pppxODY34AtrzU1oXdX4ItwO23fZHZZSD06uRZiV61QFRsdIlT9gZpEJaMu2jhsPZeG0SBeK5psRJqg8aid8sJ54mKG1wzOODEpcTRgKKiHSLLLLpyWQGZ_CP1EUsPW3xOCi1klwMki5ehB0qOuXzIPA0VrYmNVq5wmcK83Go3MUJ8MD_cb_DJmZTVWV2MuALc-kQ0aWO7EZTmDH-vOas9v1dRHWPviXo_IQUf7eyfF7yRqJmYo1E2ZL8zgl_DGlmjMiYeawJDe1jO0MQDVHO2P6Ol6I6XftDEb67PuC-8Picbb4-jUA1Hk1bPDGctu1RFoD9OKiDuuPP6k43V6IT22zQ2Oq9GFUqvKPVgWWefWQ--N1QqcTXSXjXFSIcDk6VJvRxX5txmLrgV3uRpS3ojlS-z0sUVgVZBnEHJbHAz-awU0ZTkqUNO0wtUa0TZkeqjqOHwKE2jAhea0t6e1Xto8A85Q3_dIlg8fhIN5YNkD3Avm3HNrzOIRIn9MCPGYRId7B2b1lDcr-Jgi6w4InY1-N1btJkUxweXk5QJV7B3M6GYQasD6X9kkWIBJchAEUk1kcYFuLXzGNPWUZd-NIk2DyyIKpfSOjxRGYqdBOXTO-PCzzxpuSaWk7woQS-lHGvJNIfOpjRT10iFpSagbDKaHrJljQ15Da1JULVM4mRVPef5ocNvTv35_PkWady17Yar6JedARYtROUD_qJ9Kn4E7_dhDhbA6YWMP2Xd-ZhR1GYtQxeI/https://www.amazon.com/Quican-Smartwatch-Android-Waterproof-Messages/dp/B0H1BN7MBF/ref=sxbs_sbv_search_btf?content-id=amzn1.sym.37132d36-da68-4ed0-8d23-842f0825e4d6%3Aamzn1.sym.37132d36-da68-4ed0-8d23-842f0825e4d6&cv_ct_cx=Smart+Watch&keywords=Smart+Watch&pd_rd_i=B0H1BN7MBF&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&pd_rd_w=S0dqz&pd_rd_wg=M69oT&pf_rd_p=37132d36-da68-4ed0-8d23-842f0825e4d6&pf_rd_r=BTZ97E04CA67MP37A3P0&qid=1781164311&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-a61ee601-6e56-4862-a8a2-1d3da5a5406f#customerReviews
+                      - text: (57)
+            - generic [ref=e1800]:
+              - generic "Related searches in Smart Watch" [ref=e1801]:
+                - heading "Related searches" [level=2] [ref=e1804]
+              - list [ref=e1806]:
+                - generic [ref=e1807]:
+                  - link "smart watches for women" [ref=e1808] [cursor=pointer]:
+                    - /url: /s?k=smart+watches+for+women&ref=rsl_sug_0_0&pd_rd_w=RDk9L&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&qid=1781164311
+                    - listitem [ref=e1809]:
+                      - generic [ref=e1815]: smart watches for women
+                  - link "smart watch for kids" [ref=e1816] [cursor=pointer]:
+                    - /url: /s?k=smart+watch+for+kids&ref=rsl_sug_0_3&pd_rd_w=RDk9L&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&qid=1781164311
+                    - listitem [ref=e1817]:
+                      - generic [ref=e1823]: smart watch for kids
+                - generic [ref=e1824]:
+                  - link "smart watches for men" [ref=e1825] [cursor=pointer]:
+                    - /url: /s?k=smart+watches+for+men&ref=rsl_sug_0_1&pd_rd_w=RDk9L&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&qid=1781164311
+                    - listitem [ref=e1826]:
+                      - generic [ref=e1832]: smart watches for men
+                  - link "fitbit" [ref=e1833] [cursor=pointer]:
+                    - /url: /s?k=fitbit&ref=rsl_sug_0_4&pd_rd_w=RDk9L&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&qid=1781164311
+                    - listitem [ref=e1834]:
+                      - generic [ref=e1840]: fitbit
+                - generic [ref=e1841]:
+                  - link "smart watch for android phones" [ref=e1842] [cursor=pointer]:
+                    - /url: /s?k=smart+watch+for+android+phones&ref=rsl_sug_0_2&pd_rd_w=RDk9L&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&qid=1781164311
+                    - listitem [ref=e1843]:
+                      - generic [ref=e1849]: smart watch for android phones
+                  - link "smart watch samsung watch" [ref=e1850] [cursor=pointer]:
+                    - /url: /s?k=smart+watch+samsung+watch&ref=rsl_sug_0_5&pd_rd_w=RDk9L&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=M69oT&pd_rd_r=731d0803-d7a1-4ed0-b145-7646eeb092f7&qid=1781164311
+                    - listitem [ref=e1851]:
+                      - generic [ref=e1857]: smart watch samsung watch
+            - navigation "pagination" [ref=e1860]:
+              - list [ref=e1862]:
+                - listitem [ref=e1863]:
+                  - button "Previous" [disabled] [ref=e1865]:
+                    - img [ref=e1866]
+                    - text: Previous
+                - listitem [ref=e1868]:
+                  - button "Page 1" [ref=e1870]: "1"
+                - listitem [ref=e1871]:
+                  - button "Go to page 2" [ref=e1873] [cursor=pointer]: "2"
+                - listitem [ref=e1874]:
+                  - button "Go to page 3" [ref=e1876] [cursor=pointer]: "3"
+                - button [disabled] [ref=e1877]:
+                  - img [ref=e1878]: ...
+                - button "20" [disabled] [ref=e1880]
+                - listitem [ref=e1881]:
+                  - button "Go to next page, page 2" [ref=e1883] [cursor=pointer]:
+                    - text: Next
+                    - img [ref=e1884]
+            - generic [ref=e1888]:
+              - separator [ref=e1889]
+              - generic [ref=e1890]:
+                - heading "Brands related to your search" [ref=e1891]
+                - button "Leave feedback on Sponsored ad" [ref=e1896] [cursor=pointer]: Sponsored
+                - generic [ref=e1900]:
+                  - generic [ref=e1902]:
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBOLETemH8byhAJlXj_M_-0AAAGetaqHXgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDrZ4MH/clv1c_ek-wBAfWbcbaXT1XZ5sY2gDJ7TFWToMXp55fJr-qzu8GUB0KBJ7zmR2Bk08z61qa5PZM2VihCgbJ_dZdLxL-EWDxi5iBw-gPGQ2h9RjW5PgC47mASjPkDGbYgrv2KkdaBUVPPn14WPNBcbnfJzYSa1HaqsF8FoNi8mXxRj2umFY_TickZAizjwoq_dhLeb35cLzD11_7zyeJcqf5reLlu-CXH1W1BskpuFdnAJeXiPRRAIqPvET2YPA2f8U0_wXgykxB-3MS4JihrTzVo_xBfBEIMC2zYaCm__Ei_MCK2fHwSLoNmJuMyQ-yXAb3r3hejhzYO8DJHHR85Ij2AWeSZv2sxrL1hEHzYH6T3zhqNoZqGP4xFVYibnvrFev1pIvhO1En9gKNvD43sJLwrAnKDutX6SJ-khBe4fRx8cmIhxcIs7x-En2zNqvptfJUdK3UN7OGVPnIruNvsoG2LO12qjXlnaCMYUi17cZvplWDww3VuvPEHIVcKy7s7SyIqW1_QVCIABylJI0qk-O5JZmW-sKW1QvO7-3B1U7pmkuaC2h5QC3IDvEmrVUCJg6APjq-WXgKm3puyYRrSwcn3Wiz_sFuCmLjn_5N8-fynlfzjlJWs8Kvth4jt7fV5kSP6jGkn6mOSzQUuxcwdb6F6u7pMvV_ICt6orPdzNgFIEkPWQQivLYQFNbBYdO9X496MMO46nJAQE6Kd_P-t7hmoxTZKdskPM62u6bERs2_8nbwOHSH2RR-Cz4kbAcya3HQIs7e_XUQvUBqWB9cV-HJyUQv_33PIDrotkzMVUqfaxA1ns2O0jvN2rjYsbvTbvSMEIxYna_mYEsTMGJMxIEdaFUPvZnQBH08iD5S7W8oesiwnZ5t9X3sSSSZGBbJ77UZmrsRhPiyR2NSTZw0eKLXUBWyKgCIPP0urveA6Ka4O0f7LQDbaz5RILphSc0ydA23L4iidz5F5zlcuaR1gj__hg1sEeS6v1-ieBnQc53ZexcFBKby3TTL5a9dPd7PzFGRNdgoZ62dVyx9VgSc8xui3zhXEUvvuJcQBQ3hquKWrDIN2A-U8SsX6fhh-mPeG-UT9X23hFImUR0NwNtInzxj-7qf8Lf4XO6p_yZy8xIOvD20uZDRUISssIZQOHAr8fDriExO6EDLqMdLfADpVE7NvjfhVObw-GHVkC83d3gH8WxMOIRdKMnV3N4YdwIOJAMDkLqx8ELZFxMoH9Zrin0UD4DVuK15jjEmFDR9T9o4ydEOMuV9A0j1qKo2GCgJxLg5k6pBLZR-IF_7lKbsDng9-AkQ8eX1locfG3xSmcfkwk9MdBZ9AI1V6Jl-Y0M8__WhUDWs7CXAzK45_OFWgP3XfvUfFXp2-PzT51fnX4gzJD2JzCklMDrDqb1ZcxsbTuED1aZefkQOD3ZS0wePbPqJn9hXp7pgtOvfBOgWBma4l4uF0x2tH2rkN-WG8iC1ud9ASjscDMm_wF3r8FI2cuMhD2Ad7F3sLUT8Z24KR65MaDXJVQHXU9HLmwr_GOZkB0OAiFwJs-hN-Rgcig4J5mRowvswhDgUq5Vj7hyQ_yYUsxdYMjQYbDHFx8Iyaqgar5haySKE3B4Oe0tX5Bni-LGRkhBAUoQmdyLG9GbaQC_qQBJMSGkj9cVhrKM_RITGMODFALEpGUCHJ7x0pjbWKaVmRDlUJOzQlMZG/https://www.amazon.com/stores/page/D9FA17A5-0F54-4B3F-89D0-6B56027F8BCD/?_encoding=UTF8&store_ref=SB_A038300813N8P526674KF-A0842433CHF3MITURERL&pd_rd_plhdr=t&aaxitk=6440732357b70bdfeb0169641631f4bc&hsa_cr_id=0&lp_asins=B0B4N7LSM6%2CB0B4MV1TGL&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                        - link "Fitbit Sense" [ref=e1903] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBOLETemH8byhAJlXj_M_-0AAAGetaqHXgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDrZ4MH/clv1c_ek-wBAfWbcbaXT1XZ5sY2gDJ7TFWToMXp55fJr-qzu8GUB0KBJ7zmR2Bk08z61qa5PZM2VihCgbJ_dZdLxL-EWDxi5iBw-gPGQ2h9RjW5PgC47mASjPkDGbYgrv2KkdaBUVPPn14WPNBcbnfJzYSa1HaqsF8FoNi8mXxRj2umFY_TickZAizjwoq_dhLeb35cLzD11_7zyeJcqf5reLlu-CXH1W1BskpuFdnAJeXiPRRAIqPvET2YPA2f8U0_wXgykxB-3MS4JihrTzVo_xBfBEIMC2zYaCm__Ei_MCK2fHwSLoNmJuMyQ-yXAb3r3hejhzYO8DJHHR85Ij2AWeSZv2sxrL1hEHzYH6T3zhqNoZqGP4xFVYibnvrFev1pIvhO1En9gKNvD43sJLwrAnKDutX6SJ-khBe4fRx8cmIhxcIs7x-En2zNqvptfJUdK3UN7OGVPnIruNvsoG2LO12qjXlnaCMYUi17cZvplWDww3VuvPEHIVcKy7s7SyIqW1_QVCIABylJI0qk-O5JZmW-sKW1QvO7-3B1U7pmkuaC2h5QC3IDvEmrVUCJg6APjq-WXgKm3puyYRrSwcn3Wiz_sFuCmLjn_5N8-fynlfzjlJWs8Kvth4jt7fV5kSP6jGkn6mOSzQUuxcwdb6F6u7pMvV_ICt6orPdzNgFIEkPWQQivLYQFNbBYdO9X496MMO46nJAQE6Kd_P-t7hmoxTZKdskPM62u6bERs2_8nbwOHSH2RR-Cz4kbAcya3HQIs7e_XUQvUBqWB9cV-HJyUQv_33PIDrotkzMVUqfaxA1ns2O0jvN2rjYsbvTbvSMEIxYna_mYEsTMGJMxIEdaFUPvZnQBH08iD5S7W8oesiwnZ5t9X3sSSSZGBbJ77UZmrsRhPiyR2NSTZw0eKLXUBWyKgCIPP0urveA6Ka4O0f7LQDbaz5RILphSc0ydA23L4iidz5F5zlcuaR1gj__hg1sEeS6v1-ieBnQc53ZexcFBKby3TTL5a9dPd7PzFGRNdgoZ62dVyx9VgSc8xui3zhXEUvvuJcQBQ3hquKWrDIN2A-U8SsX6fhh-mPeG-UT9X23hFImUR0NwNtInzxj-7qf8Lf4XO6p_yZy8xIOvD20uZDRUISssIZQOHAr8fDriExO6EDLqMdLfADpVE7NvjfhVObw-GHVkC83d3gH8WxMOIRdKMnV3N4YdwIOJAMDkLqx8ELZFxMoH9Zrin0UD4DVuK15jjEmFDR9T9o4ydEOMuV9A0j1qKo2GCgJxLg5k6pBLZR-IF_7lKbsDng9-AkQ8eX1locfG3xSmcfkwk9MdBZ9AI1V6Jl-Y0M8__WhUDWs7CXAzK45_OFWgP3XfvUfFXp2-PzT51fnX4gzJD2JzCklMDrDqb1ZcxsbTuED1aZefkQOD3ZS0wePbPqJn9hXp7pgtOvfBOgWBma4l4uF0x2tH2rkN-WG8iC1ud9ASjscDMm_wF3r8FI2cuMhD2Ad7F3sLUT8Z24KR65MaDXJVQHXU9HLmwr_GOZkB0OAiFwJs-hN-Rgcig4J5mRowvswhDgUq5Vj7hyQ_yYUsxdYMjQYbDHFx8Iyaqgar5haySKE3B4Oe0tX5Bni-LGRkhBAUoQmdyLG9GbaQC_qQBJMSGkj9cVhrKM_RITGMODFALEpGUCHJ7x0pjbWKaVmRDlUJOzQlMZG/https://www.amazon.com/stores/page/D9FA17A5-0F54-4B3F-89D0-6B56027F8BCD/?_encoding=UTF8&store_ref=SB_A038300813N8P526674KF-A0842433CHF3MITURERL&pd_rd_plhdr=t&aaxitk=6440732357b70bdfeb0169641631f4bc&hsa_cr_id=0&lp_asins=B0B4N7LSM6%2CB0B4MV1TGL&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                          - img "Fitbit Sense" [ref=e1904]
+                        - generic [ref=e1906]:
+                          - generic [ref=e1907]:
+                            - link [ref=e1908] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBOLETemH8byhAJlXj_M_-0AAAGetaqHXgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDrZ4MH/clv1c_ek-wBAfWbcbaXT1XZ5sY2gDJ7TFWToMXp55fJr-qzu8GUB0KBJ7zmR2Bk08z61qa5PZM2VihCgbJ_dZdLxL-EWDxi5iBw-gPGQ2h9RjW5PgC47mASjPkDGbYgrv2KkdaBUVPPn14WPNBcbnfJzYSa1HaqsF8FoNi8mXxRj2umFY_TickZAizjwoq_dhLeb35cLzD11_7zyeJcqf5reLlu-CXH1W1BskpuFdnAJeXiPRRAIqPvET2YPA2f8U0_wXgykxB-3MS4JihrTzVo_xBfBEIMC2zYaCm__Ei_MCK2fHwSLoNmJuMyQ-yXAb3r3hejhzYO8DJHHR85Ij2AWeSZv2sxrL1hEHzYH6T3zhqNoZqGP4xFVYibnvrFev1pIvhO1En9gKNvD43sJLwrAnKDutX6SJ-khBe4fRx8cmIhxcIs7x-En2zNqvptfJUdK3UN7OGVPnIruNvsoG2LO12qjXlnaCMYUi17cZvplWDww3VuvPEHIVcKy7s7SyIqW1_QVCIABylJI0qk-O5JZmW-sKW1QvO7-3B1U7pmkuaC2h5QC3IDvEmrVUCJg6APjq-WXgKm3puyYRrSwcn3Wiz_sFuCmLjn_5N8-fynlfzjlJWs8Kvth4jt7fV5kSP6jGkn6mOSzQUuxcwdb6F6u7pMvV_ICt6orPdzNgFIEkPWQQivLYQFNbBYdO9X496MMO46nJAQE6Kd_P-t7hmoxTZKdskPM62u6bERs2_8nbwOHSH2RR-Cz4kbAcya3HQIs7e_XUQvUBqWB9cV-HJyUQv_33PIDrotkzMVUqfaxA1ns2O0jvN2rjYsbvTbvSMEIxYna_mYEsTMGJMxIEdaFUPvZnQBH08iD5S7W8oesiwnZ5t9X3sSSSZGBbJ77UZmrsRhPiyR2NSTZw0eKLXUBWyKgCIPP0urveA6Ka4O0f7LQDbaz5RILphSc0ydA23L4iidz5F5zlcuaR1gj__hg1sEeS6v1-ieBnQc53ZexcFBKby3TTL5a9dPd7PzFGRNdgoZ62dVyx9VgSc8xui3zhXEUvvuJcQBQ3hquKWrDIN2A-U8SsX6fhh-mPeG-UT9X23hFImUR0NwNtInzxj-7qf8Lf4XO6p_yZy8xIOvD20uZDRUISssIZQOHAr8fDriExO6EDLqMdLfADpVE7NvjfhVObw-GHVkC83d3gH8WxMOIRdKMnV3N4YdwIOJAMDkLqx8ELZFxMoH9Zrin0UD4DVuK15jjEmFDR9T9o4ydEOMuV9A0j1qKo2GCgJxLg5k6pBLZR-IF_7lKbsDng9-AkQ8eX1locfG3xSmcfkwk9MdBZ9AI1V6Jl-Y0M8__WhUDWs7CXAzK45_OFWgP3XfvUfFXp2-PzT51fnX4gzJD2JzCklMDrDqb1ZcxsbTuED1aZefkQOD3ZS0wePbPqJn9hXp7pgtOvfBOgWBma4l4uF0x2tH2rkN-WG8iC1ud9ASjscDMm_wF3r8FI2cuMhD2Ad7F3sLUT8Z24KR65MaDXJVQHXU9HLmwr_GOZkB0OAiFwJs-hN-Rgcig4J5mRowvswhDgUq5Vj7hyQ_yYUsxdYMjQYbDHFx8Iyaqgar5haySKE3B4Oe0tX5Bni-LGRkhBAUoQmdyLG9GbaQC_qQBJMSGkj9cVhrKM_RITGMODFALEpGUCHJ7x0pjbWKaVmRDlUJOzQlMZG/https://www.amazon.com/stores/page/D9FA17A5-0F54-4B3F-89D0-6B56027F8BCD/?_encoding=UTF8&store_ref=SB_A038300813N8P526674KF-A0842433CHF3MITURERL&pd_rd_plhdr=t&aaxitk=6440732357b70bdfeb0169641631f4bc&hsa_cr_id=0&lp_asins=B0B4N7LSM6%2CB0B4MV1TGL&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                            - link "Fitbit Sense" [ref=e1909] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBOLETemH8byhAJlXj_M_-0AAAGetaqHXgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDrZ4MH/clv1c_ek-wBAfWbcbaXT1XZ5sY2gDJ7TFWToMXp55fJr-qzu8GUB0KBJ7zmR2Bk08z61qa5PZM2VihCgbJ_dZdLxL-EWDxi5iBw-gPGQ2h9RjW5PgC47mASjPkDGbYgrv2KkdaBUVPPn14WPNBcbnfJzYSa1HaqsF8FoNi8mXxRj2umFY_TickZAizjwoq_dhLeb35cLzD11_7zyeJcqf5reLlu-CXH1W1BskpuFdnAJeXiPRRAIqPvET2YPA2f8U0_wXgykxB-3MS4JihrTzVo_xBfBEIMC2zYaCm__Ei_MCK2fHwSLoNmJuMyQ-yXAb3r3hejhzYO8DJHHR85Ij2AWeSZv2sxrL1hEHzYH6T3zhqNoZqGP4xFVYibnvrFev1pIvhO1En9gKNvD43sJLwrAnKDutX6SJ-khBe4fRx8cmIhxcIs7x-En2zNqvptfJUdK3UN7OGVPnIruNvsoG2LO12qjXlnaCMYUi17cZvplWDww3VuvPEHIVcKy7s7SyIqW1_QVCIABylJI0qk-O5JZmW-sKW1QvO7-3B1U7pmkuaC2h5QC3IDvEmrVUCJg6APjq-WXgKm3puyYRrSwcn3Wiz_sFuCmLjn_5N8-fynlfzjlJWs8Kvth4jt7fV5kSP6jGkn6mOSzQUuxcwdb6F6u7pMvV_ICt6orPdzNgFIEkPWQQivLYQFNbBYdO9X496MMO46nJAQE6Kd_P-t7hmoxTZKdskPM62u6bERs2_8nbwOHSH2RR-Cz4kbAcya3HQIs7e_XUQvUBqWB9cV-HJyUQv_33PIDrotkzMVUqfaxA1ns2O0jvN2rjYsbvTbvSMEIxYna_mYEsTMGJMxIEdaFUPvZnQBH08iD5S7W8oesiwnZ5t9X3sSSSZGBbJ77UZmrsRhPiyR2NSTZw0eKLXUBWyKgCIPP0urveA6Ka4O0f7LQDbaz5RILphSc0ydA23L4iidz5F5zlcuaR1gj__hg1sEeS6v1-ieBnQc53ZexcFBKby3TTL5a9dPd7PzFGRNdgoZ62dVyx9VgSc8xui3zhXEUvvuJcQBQ3hquKWrDIN2A-U8SsX6fhh-mPeG-UT9X23hFImUR0NwNtInzxj-7qf8Lf4XO6p_yZy8xIOvD20uZDRUISssIZQOHAr8fDriExO6EDLqMdLfADpVE7NvjfhVObw-GHVkC83d3gH8WxMOIRdKMnV3N4YdwIOJAMDkLqx8ELZFxMoH9Zrin0UD4DVuK15jjEmFDR9T9o4ydEOMuV9A0j1qKo2GCgJxLg5k6pBLZR-IF_7lKbsDng9-AkQ8eX1locfG3xSmcfkwk9MdBZ9AI1V6Jl-Y0M8__WhUDWs7CXAzK45_OFWgP3XfvUfFXp2-PzT51fnX4gzJD2JzCklMDrDqb1ZcxsbTuED1aZefkQOD3ZS0wePbPqJn9hXp7pgtOvfBOgWBma4l4uF0x2tH2rkN-WG8iC1ud9ASjscDMm_wF3r8FI2cuMhD2Ad7F3sLUT8Z24KR65MaDXJVQHXU9HLmwr_GOZkB0OAiFwJs-hN-Rgcig4J5mRowvswhDgUq5Vj7hyQ_yYUsxdYMjQYbDHFx8Iyaqgar5haySKE3B4Oe0tX5Bni-LGRkhBAUoQmdyLG9GbaQC_qQBJMSGkj9cVhrKM_RITGMODFALEpGUCHJ7x0pjbWKaVmRDlUJOzQlMZG/https://www.amazon.com/stores/page/D9FA17A5-0F54-4B3F-89D0-6B56027F8BCD/?_encoding=UTF8&store_ref=SB_A038300813N8P526674KF-A0842433CHF3MITURERL&pd_rd_plhdr=t&aaxitk=6440732357b70bdfeb0169641631f4bc&hsa_cr_id=0&lp_asins=B0B4N7LSM6%2CB0B4MV1TGL&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                              - img "Fitbit Sense" [ref=e1911]
+                          - generic [ref=e1912]:
+                            - link [ref=e1913] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBOLETemH8byhAJlXj_M_-0AAAGetaqHXgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDrZ4MH/clv1c_ek-wBAfWbcbaXT1XZ5sY2gDJ7TFWToMXp55fJr-qzu8GUB0KBJ7zmR2Bk08z61qa5PZM2VihCgbJ_dZdLxL-EWDxi5iBw-gPGQ2h9RjW5PgC47mASjPkDGbYgrv2KkdaBUVPPn14WPNBcbnfJzYSa1HaqsF8FoNi8mXxRj2umFY_TickZAizjwoq_dhLeb35cLzD11_7zyeJcqf5reLlu-CXH1W1BskpuFdnAJeXiPRRAIqPvET2YPA2f8U0_wXgykxB-3MS4JihrTzVo_xBfBEIMC2zYaCm__Ei_MCK2fHwSLoNmJuMyQ-yXAb3r3hejhzYO8DJHHR85Ij2AWeSZv2sxrL1hEHzYH6T3zhqNoZqGP4xFVYibnvrFev1pIvhO1En9gKNvD43sJLwrAnKDutX6SJ-khBe4fRx8cmIhxcIs7x-En2zNqvptfJUdK3UN7OGVPnIruNvsoG2LO12qjXlnaCMYUi17cZvplWDww3VuvPEHIVcKy7s7SyIqW1_QVCIABylJI0qk-O5JZmW-sKW1QvO7-3B1U7pmkuaC2h5QC3IDvEmrVUCJg6APjq-WXgKm3puyYRrSwcn3Wiz_sFuCmLjn_5N8-fynlfzjlJWs8Kvth4jt7fV5kSP6jGkn6mOSzQUuxcwdb6F6u7pMvV_ICt6orPdzNgFIEkPWQQivLYQFNbBYdO9X496MMO46nJAQE6Kd_P-t7hmoxTZKdskPM62u6bERs2_8nbwOHSH2RR-Cz4kbAcya3HQIs7e_XUQvUBqWB9cV-HJyUQv_33PIDrotkzMVUqfaxA1ns2O0jvN2rjYsbvTbvSMEIxYna_mYEsTMGJMxIEdaFUPvZnQBH08iD5S7W8oesiwnZ5t9X3sSSSZGBbJ77UZmrsRhPiyR2NSTZw0eKLXUBWyKgCIPP0urveA6Ka4O0f7LQDbaz5RILphSc0ydA23L4iidz5F5zlcuaR1gj__hg1sEeS6v1-ieBnQc53ZexcFBKby3TTL5a9dPd7PzFGRNdgoZ62dVyx9VgSc8xui3zhXEUvvuJcQBQ3hquKWrDIN2A-U8SsX6fhh-mPeG-UT9X23hFImUR0NwNtInzxj-7qf8Lf4XO6p_yZy8xIOvD20uZDRUISssIZQOHAr8fDriExO6EDLqMdLfADpVE7NvjfhVObw-GHVkC83d3gH8WxMOIRdKMnV3N4YdwIOJAMDkLqx8ELZFxMoH9Zrin0UD4DVuK15jjEmFDR9T9o4ydEOMuV9A0j1qKo2GCgJxLg5k6pBLZR-IF_7lKbsDng9-AkQ8eX1locfG3xSmcfkwk9MdBZ9AI1V6Jl-Y0M8__WhUDWs7CXAzK45_OFWgP3XfvUfFXp2-PzT51fnX4gzJD2JzCklMDrDqb1ZcxsbTuED1aZefkQOD3ZS0wePbPqJn9hXp7pgtOvfBOgWBma4l4uF0x2tH2rkN-WG8iC1ud9ASjscDMm_wF3r8FI2cuMhD2Ad7F3sLUT8Z24KR65MaDXJVQHXU9HLmwr_GOZkB0OAiFwJs-hN-Rgcig4J5mRowvswhDgUq5Vj7hyQ_yYUsxdYMjQYbDHFx8Iyaqgar5haySKE3B4Oe0tX5Bni-LGRkhBAUoQmdyLG9GbaQC_qQBJMSGkj9cVhrKM_RITGMODFALEpGUCHJ7x0pjbWKaVmRDlUJOzQlMZG/https://www.amazon.com/stores/page/D9FA17A5-0F54-4B3F-89D0-6B56027F8BCD/?_encoding=UTF8&store_ref=SB_A038300813N8P526674KF-A0842433CHF3MITURERL&pd_rd_plhdr=t&aaxitk=6440732357b70bdfeb0169641631f4bc&hsa_cr_id=0&lp_asins=B0B4N7LSM6%2CB0B4MV1TGL&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                            - link "Whole health on a whole new level." [ref=e1914] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBOLETemH8byhAJlXj_M_-0AAAGetaqHXgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDrZ4MH/clv1c_ek-wBAfWbcbaXT1XZ5sY2gDJ7TFWToMXp55fJr-qzu8GUB0KBJ7zmR2Bk08z61qa5PZM2VihCgbJ_dZdLxL-EWDxi5iBw-gPGQ2h9RjW5PgC47mASjPkDGbYgrv2KkdaBUVPPn14WPNBcbnfJzYSa1HaqsF8FoNi8mXxRj2umFY_TickZAizjwoq_dhLeb35cLzD11_7zyeJcqf5reLlu-CXH1W1BskpuFdnAJeXiPRRAIqPvET2YPA2f8U0_wXgykxB-3MS4JihrTzVo_xBfBEIMC2zYaCm__Ei_MCK2fHwSLoNmJuMyQ-yXAb3r3hejhzYO8DJHHR85Ij2AWeSZv2sxrL1hEHzYH6T3zhqNoZqGP4xFVYibnvrFev1pIvhO1En9gKNvD43sJLwrAnKDutX6SJ-khBe4fRx8cmIhxcIs7x-En2zNqvptfJUdK3UN7OGVPnIruNvsoG2LO12qjXlnaCMYUi17cZvplWDww3VuvPEHIVcKy7s7SyIqW1_QVCIABylJI0qk-O5JZmW-sKW1QvO7-3B1U7pmkuaC2h5QC3IDvEmrVUCJg6APjq-WXgKm3puyYRrSwcn3Wiz_sFuCmLjn_5N8-fynlfzjlJWs8Kvth4jt7fV5kSP6jGkn6mOSzQUuxcwdb6F6u7pMvV_ICt6orPdzNgFIEkPWQQivLYQFNbBYdO9X496MMO46nJAQE6Kd_P-t7hmoxTZKdskPM62u6bERs2_8nbwOHSH2RR-Cz4kbAcya3HQIs7e_XUQvUBqWB9cV-HJyUQv_33PIDrotkzMVUqfaxA1ns2O0jvN2rjYsbvTbvSMEIxYna_mYEsTMGJMxIEdaFUPvZnQBH08iD5S7W8oesiwnZ5t9X3sSSSZGBbJ77UZmrsRhPiyR2NSTZw0eKLXUBWyKgCIPP0urveA6Ka4O0f7LQDbaz5RILphSc0ydA23L4iidz5F5zlcuaR1gj__hg1sEeS6v1-ieBnQc53ZexcFBKby3TTL5a9dPd7PzFGRNdgoZ62dVyx9VgSc8xui3zhXEUvvuJcQBQ3hquKWrDIN2A-U8SsX6fhh-mPeG-UT9X23hFImUR0NwNtInzxj-7qf8Lf4XO6p_yZy8xIOvD20uZDRUISssIZQOHAr8fDriExO6EDLqMdLfADpVE7NvjfhVObw-GHVkC83d3gH8WxMOIRdKMnV3N4YdwIOJAMDkLqx8ELZFxMoH9Zrin0UD4DVuK15jjEmFDR9T9o4ydEOMuV9A0j1qKo2GCgJxLg5k6pBLZR-IF_7lKbsDng9-AkQ8eX1locfG3xSmcfkwk9MdBZ9AI1V6Jl-Y0M8__WhUDWs7CXAzK45_OFWgP3XfvUfFXp2-PzT51fnX4gzJD2JzCklMDrDqb1ZcxsbTuED1aZefkQOD3ZS0wePbPqJn9hXp7pgtOvfBOgWBma4l4uF0x2tH2rkN-WG8iC1ud9ASjscDMm_wF3r8FI2cuMhD2Ad7F3sLUT8Z24KR65MaDXJVQHXU9HLmwr_GOZkB0OAiFwJs-hN-Rgcig4J5mRowvswhDgUq5Vj7hyQ_yYUsxdYMjQYbDHFx8Iyaqgar5haySKE3B4Oe0tX5Bni-LGRkhBAUoQmdyLG9GbaQC_qQBJMSGkj9cVhrKM_RITGMODFALEpGUCHJ7x0pjbWKaVmRDlUJOzQlMZG/https://www.amazon.com/stores/page/D9FA17A5-0F54-4B3F-89D0-6B56027F8BCD/?_encoding=UTF8&store_ref=SB_A038300813N8P526674KF-A0842433CHF3MITURERL&pd_rd_plhdr=t&aaxitk=6440732357b70bdfeb0169641631f4bc&hsa_cr_id=0&lp_asins=B0B4N7LSM6%2CB0B4MV1TGL&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                              - generic [ref=e1916]:
+                                - generic [ref=e1917]: Whole health on a whole new level.
+                                - generic [ref=e1918]: Whole health on a whole new level.
+                  - generic [ref=e1920]:
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNdAlzo3SiiPHd1BRArmIZwAAAGetaqHXwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDdAmV0/clv1c_ek-wBHfWbbbaXQ4WY9qoyp97Nk4ubomoFPNJXrhGzd6MUE4evYYQTQiK5lFKDOnV4olz6IfdXigCeCFsV5eRmSf_gTq87M_cRnEn9tRhvdS0GJFtFK8AQmQo4vhnrCazGb6GZpCwGHVDBKXrew9u3hgboNiC5hUz2iSQz76kyPLP-ZWbr6k3y9tKJGzPGxfZhLnIz-rKnAbNs-3k36DGe07QPf-dzio8EaifWLOcCcqj-OLF05NBo7Yv4Nn9dOerhHCU-gNhZE3tk0cX78h0dmmw9XwcSNNxZLs0SlLKWQGqb9XtmfOHN-a1MIh3Xnl82fbynH4NMCUDPU3AMX0GPLQVaVTAG-t4BSxPG0U3Xv-Thqj8FHx0LfVWGBIjwfEKIt64li9ZCRhmQK4BdwNPH8MZ8qAh0mDA2ZrfsE-vp8EzFf-DZQuwu0quq2ZMaSJohnGO8nmEawP81XlL72Q6Emyk6haNuyf2KE25SEmscA3z8qxo9BmQY4FBzz-3Sx6Y6WkjjN7rwau5ZM050NyDkqQuYnoO2MQtwMU2xfu73NSOyV6EjVI5Q5hOEtp0siYAYBzxY7cNa8esj2KW27g4CCL8IkvfLJlDt_LPCYv4NQM4DVvzdxXOQjQs9KWaCOw85VI0zizZlCDRvTSxSSnJgiiFnokfJQ1ig2Y-nsLzzLqYgLYSV3MLl0I49rnSQuQBAnY5hqwTm0JdsBjWrBw_88qj85TECWGDtmRkz3xHeHMCaOZoz4A95hg9ZqEw6Gi60WH0bGZTou0v-o1PYPcrVGg3a7g1Bifh9EiNCwoTOvuVWexw4OfyEW7iZWWHQ5P4SdvuCquv0ddqHYorsGG8MG3DsewpMY4cESeBmBXBPo--4CFp8K4kHfXRqyBsYIr9eBFC2BuZQOKbduMrmjd5DmRm-bmzRj6uiQedyH4z-yspT-ofSTCUVnYTZakaYuDJX2Pa6pr6aNfRwFg38bRKHxQK6F32Aba4u6a0K_IdTeNPArZ14Axiqz2tmwd5F0g5GbRzFOsHf1VdHXiSKsU4nUeYrdYq4ERmRgGMRkfN70cmxXS0ps0F3Xg5fnccP92tVN3wUirCeaJ-ncYtp_x8Jgb5fCGKXAJegVWLtllWNUGoiCKw260CYv8ROVgVREX93OhOZTGQCnrTgOb3CCeUPDbUJosrbOecPCIW16qgAuCNzTmimM5ekHA94jUlsc8nRS1qiYo7fmCe7zGOdH3GXiVv2Uz2EXsFjxZElrsz0ttuIL_8_hxyS6jAqK89gl1Yl_BJ_zc7MggbN7R14kx_wiTPppHfCCIJChGRWvUFnuXAyZIOsJtkX98MWl3h5ZuFQ_-sd0Zp0gYXARPiLOQJThcwHks6Lx8hf67GkCJazW8F6VtZgL1QA4arAeLRr-fUZCkJkcLiMOWN3UWrToUMYo34bUwz1zx6aS3vpDMUTcTbl-Io_ca8w1W6uc6pziDWrmPFZ2FNVFzTb1uv7hr-tW9s_tr1OjrwAbgHI-fIdBd2Xd2sXWz8c-OQsh-TcnP1yNw3kG87EmOSrK_OZ51VlLi8mG_LFUVaHhkZkhO2qXCaBthPGBoSUYgQhg9IVXKGocQyc3QzuIVmujoWqjMTCnI_2Qk6ql6bncp8XD_QSBuYUMgbKJkmPZkl_atx3gPKcQD6XPLwZ0xXvW-TF4u_NAVH5rA/https://www.amazon.com/stores/page/6BC5B6C3-5BDF-4491-B9FC-E2E9AF112138/?_encoding=UTF8&store_ref=SB_A0665056TUL15SERKBZT-A023152729OHE82NSG3&pd_rd_plhdr=t&aaxitk=f9f51f5ed18207f4e2cbfaff5b36ad76&hsa_cr_id=0&lp_asins=B0FJWD6W8J%2CB0FJWPF7GN%2CB0FJWRJLXX&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                        - link "Google" [ref=e1921] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNdAlzo3SiiPHd1BRArmIZwAAAGetaqHXwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDdAmV0/clv1c_ek-wBHfWbbbaXQ4WY9qoyp97Nk4ubomoFPNJXrhGzd6MUE4evYYQTQiK5lFKDOnV4olz6IfdXigCeCFsV5eRmSf_gTq87M_cRnEn9tRhvdS0GJFtFK8AQmQo4vhnrCazGb6GZpCwGHVDBKXrew9u3hgboNiC5hUz2iSQz76kyPLP-ZWbr6k3y9tKJGzPGxfZhLnIz-rKnAbNs-3k36DGe07QPf-dzio8EaifWLOcCcqj-OLF05NBo7Yv4Nn9dOerhHCU-gNhZE3tk0cX78h0dmmw9XwcSNNxZLs0SlLKWQGqb9XtmfOHN-a1MIh3Xnl82fbynH4NMCUDPU3AMX0GPLQVaVTAG-t4BSxPG0U3Xv-Thqj8FHx0LfVWGBIjwfEKIt64li9ZCRhmQK4BdwNPH8MZ8qAh0mDA2ZrfsE-vp8EzFf-DZQuwu0quq2ZMaSJohnGO8nmEawP81XlL72Q6Emyk6haNuyf2KE25SEmscA3z8qxo9BmQY4FBzz-3Sx6Y6WkjjN7rwau5ZM050NyDkqQuYnoO2MQtwMU2xfu73NSOyV6EjVI5Q5hOEtp0siYAYBzxY7cNa8esj2KW27g4CCL8IkvfLJlDt_LPCYv4NQM4DVvzdxXOQjQs9KWaCOw85VI0zizZlCDRvTSxSSnJgiiFnokfJQ1ig2Y-nsLzzLqYgLYSV3MLl0I49rnSQuQBAnY5hqwTm0JdsBjWrBw_88qj85TECWGDtmRkz3xHeHMCaOZoz4A95hg9ZqEw6Gi60WH0bGZTou0v-o1PYPcrVGg3a7g1Bifh9EiNCwoTOvuVWexw4OfyEW7iZWWHQ5P4SdvuCquv0ddqHYorsGG8MG3DsewpMY4cESeBmBXBPo--4CFp8K4kHfXRqyBsYIr9eBFC2BuZQOKbduMrmjd5DmRm-bmzRj6uiQedyH4z-yspT-ofSTCUVnYTZakaYuDJX2Pa6pr6aNfRwFg38bRKHxQK6F32Aba4u6a0K_IdTeNPArZ14Axiqz2tmwd5F0g5GbRzFOsHf1VdHXiSKsU4nUeYrdYq4ERmRgGMRkfN70cmxXS0ps0F3Xg5fnccP92tVN3wUirCeaJ-ncYtp_x8Jgb5fCGKXAJegVWLtllWNUGoiCKw260CYv8ROVgVREX93OhOZTGQCnrTgOb3CCeUPDbUJosrbOecPCIW16qgAuCNzTmimM5ekHA94jUlsc8nRS1qiYo7fmCe7zGOdH3GXiVv2Uz2EXsFjxZElrsz0ttuIL_8_hxyS6jAqK89gl1Yl_BJ_zc7MggbN7R14kx_wiTPppHfCCIJChGRWvUFnuXAyZIOsJtkX98MWl3h5ZuFQ_-sd0Zp0gYXARPiLOQJThcwHks6Lx8hf67GkCJazW8F6VtZgL1QA4arAeLRr-fUZCkJkcLiMOWN3UWrToUMYo34bUwz1zx6aS3vpDMUTcTbl-Io_ca8w1W6uc6pziDWrmPFZ2FNVFzTb1uv7hr-tW9s_tr1OjrwAbgHI-fIdBd2Xd2sXWz8c-OQsh-TcnP1yNw3kG87EmOSrK_OZ51VlLi8mG_LFUVaHhkZkhO2qXCaBthPGBoSUYgQhg9IVXKGocQyc3QzuIVmujoWqjMTCnI_2Qk6ql6bncp8XD_QSBuYUMgbKJkmPZkl_atx3gPKcQD6XPLwZ0xXvW-TF4u_NAVH5rA/https://www.amazon.com/stores/page/6BC5B6C3-5BDF-4491-B9FC-E2E9AF112138/?_encoding=UTF8&store_ref=SB_A0665056TUL15SERKBZT-A023152729OHE82NSG3&pd_rd_plhdr=t&aaxitk=f9f51f5ed18207f4e2cbfaff5b36ad76&hsa_cr_id=0&lp_asins=B0FJWD6W8J%2CB0FJWPF7GN%2CB0FJWRJLXX&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                          - img "Google" [ref=e1922]
+                        - generic [ref=e1924]:
+                          - generic [ref=e1925]:
+                            - link [ref=e1926] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNdAlzo3SiiPHd1BRArmIZwAAAGetaqHXwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDdAmV0/clv1c_ek-wBHfWbbbaXQ4WY9qoyp97Nk4ubomoFPNJXrhGzd6MUE4evYYQTQiK5lFKDOnV4olz6IfdXigCeCFsV5eRmSf_gTq87M_cRnEn9tRhvdS0GJFtFK8AQmQo4vhnrCazGb6GZpCwGHVDBKXrew9u3hgboNiC5hUz2iSQz76kyPLP-ZWbr6k3y9tKJGzPGxfZhLnIz-rKnAbNs-3k36DGe07QPf-dzio8EaifWLOcCcqj-OLF05NBo7Yv4Nn9dOerhHCU-gNhZE3tk0cX78h0dmmw9XwcSNNxZLs0SlLKWQGqb9XtmfOHN-a1MIh3Xnl82fbynH4NMCUDPU3AMX0GPLQVaVTAG-t4BSxPG0U3Xv-Thqj8FHx0LfVWGBIjwfEKIt64li9ZCRhmQK4BdwNPH8MZ8qAh0mDA2ZrfsE-vp8EzFf-DZQuwu0quq2ZMaSJohnGO8nmEawP81XlL72Q6Emyk6haNuyf2KE25SEmscA3z8qxo9BmQY4FBzz-3Sx6Y6WkjjN7rwau5ZM050NyDkqQuYnoO2MQtwMU2xfu73NSOyV6EjVI5Q5hOEtp0siYAYBzxY7cNa8esj2KW27g4CCL8IkvfLJlDt_LPCYv4NQM4DVvzdxXOQjQs9KWaCOw85VI0zizZlCDRvTSxSSnJgiiFnokfJQ1ig2Y-nsLzzLqYgLYSV3MLl0I49rnSQuQBAnY5hqwTm0JdsBjWrBw_88qj85TECWGDtmRkz3xHeHMCaOZoz4A95hg9ZqEw6Gi60WH0bGZTou0v-o1PYPcrVGg3a7g1Bifh9EiNCwoTOvuVWexw4OfyEW7iZWWHQ5P4SdvuCquv0ddqHYorsGG8MG3DsewpMY4cESeBmBXBPo--4CFp8K4kHfXRqyBsYIr9eBFC2BuZQOKbduMrmjd5DmRm-bmzRj6uiQedyH4z-yspT-ofSTCUVnYTZakaYuDJX2Pa6pr6aNfRwFg38bRKHxQK6F32Aba4u6a0K_IdTeNPArZ14Axiqz2tmwd5F0g5GbRzFOsHf1VdHXiSKsU4nUeYrdYq4ERmRgGMRkfN70cmxXS0ps0F3Xg5fnccP92tVN3wUirCeaJ-ncYtp_x8Jgb5fCGKXAJegVWLtllWNUGoiCKw260CYv8ROVgVREX93OhOZTGQCnrTgOb3CCeUPDbUJosrbOecPCIW16qgAuCNzTmimM5ekHA94jUlsc8nRS1qiYo7fmCe7zGOdH3GXiVv2Uz2EXsFjxZElrsz0ttuIL_8_hxyS6jAqK89gl1Yl_BJ_zc7MggbN7R14kx_wiTPppHfCCIJChGRWvUFnuXAyZIOsJtkX98MWl3h5ZuFQ_-sd0Zp0gYXARPiLOQJThcwHks6Lx8hf67GkCJazW8F6VtZgL1QA4arAeLRr-fUZCkJkcLiMOWN3UWrToUMYo34bUwz1zx6aS3vpDMUTcTbl-Io_ca8w1W6uc6pziDWrmPFZ2FNVFzTb1uv7hr-tW9s_tr1OjrwAbgHI-fIdBd2Xd2sXWz8c-OQsh-TcnP1yNw3kG87EmOSrK_OZ51VlLi8mG_LFUVaHhkZkhO2qXCaBthPGBoSUYgQhg9IVXKGocQyc3QzuIVmujoWqjMTCnI_2Qk6ql6bncp8XD_QSBuYUMgbKJkmPZkl_atx3gPKcQD6XPLwZ0xXvW-TF4u_NAVH5rA/https://www.amazon.com/stores/page/6BC5B6C3-5BDF-4491-B9FC-E2E9AF112138/?_encoding=UTF8&store_ref=SB_A0665056TUL15SERKBZT-A023152729OHE82NSG3&pd_rd_plhdr=t&aaxitk=f9f51f5ed18207f4e2cbfaff5b36ad76&hsa_cr_id=0&lp_asins=B0FJWD6W8J%2CB0FJWPF7GN%2CB0FJWRJLXX&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                            - link "Google" [ref=e1927] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNdAlzo3SiiPHd1BRArmIZwAAAGetaqHXwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDdAmV0/clv1c_ek-wBHfWbbbaXQ4WY9qoyp97Nk4ubomoFPNJXrhGzd6MUE4evYYQTQiK5lFKDOnV4olz6IfdXigCeCFsV5eRmSf_gTq87M_cRnEn9tRhvdS0GJFtFK8AQmQo4vhnrCazGb6GZpCwGHVDBKXrew9u3hgboNiC5hUz2iSQz76kyPLP-ZWbr6k3y9tKJGzPGxfZhLnIz-rKnAbNs-3k36DGe07QPf-dzio8EaifWLOcCcqj-OLF05NBo7Yv4Nn9dOerhHCU-gNhZE3tk0cX78h0dmmw9XwcSNNxZLs0SlLKWQGqb9XtmfOHN-a1MIh3Xnl82fbynH4NMCUDPU3AMX0GPLQVaVTAG-t4BSxPG0U3Xv-Thqj8FHx0LfVWGBIjwfEKIt64li9ZCRhmQK4BdwNPH8MZ8qAh0mDA2ZrfsE-vp8EzFf-DZQuwu0quq2ZMaSJohnGO8nmEawP81XlL72Q6Emyk6haNuyf2KE25SEmscA3z8qxo9BmQY4FBzz-3Sx6Y6WkjjN7rwau5ZM050NyDkqQuYnoO2MQtwMU2xfu73NSOyV6EjVI5Q5hOEtp0siYAYBzxY7cNa8esj2KW27g4CCL8IkvfLJlDt_LPCYv4NQM4DVvzdxXOQjQs9KWaCOw85VI0zizZlCDRvTSxSSnJgiiFnokfJQ1ig2Y-nsLzzLqYgLYSV3MLl0I49rnSQuQBAnY5hqwTm0JdsBjWrBw_88qj85TECWGDtmRkz3xHeHMCaOZoz4A95hg9ZqEw6Gi60WH0bGZTou0v-o1PYPcrVGg3a7g1Bifh9EiNCwoTOvuVWexw4OfyEW7iZWWHQ5P4SdvuCquv0ddqHYorsGG8MG3DsewpMY4cESeBmBXBPo--4CFp8K4kHfXRqyBsYIr9eBFC2BuZQOKbduMrmjd5DmRm-bmzRj6uiQedyH4z-yspT-ofSTCUVnYTZakaYuDJX2Pa6pr6aNfRwFg38bRKHxQK6F32Aba4u6a0K_IdTeNPArZ14Axiqz2tmwd5F0g5GbRzFOsHf1VdHXiSKsU4nUeYrdYq4ERmRgGMRkfN70cmxXS0ps0F3Xg5fnccP92tVN3wUirCeaJ-ncYtp_x8Jgb5fCGKXAJegVWLtllWNUGoiCKw260CYv8ROVgVREX93OhOZTGQCnrTgOb3CCeUPDbUJosrbOecPCIW16qgAuCNzTmimM5ekHA94jUlsc8nRS1qiYo7fmCe7zGOdH3GXiVv2Uz2EXsFjxZElrsz0ttuIL_8_hxyS6jAqK89gl1Yl_BJ_zc7MggbN7R14kx_wiTPppHfCCIJChGRWvUFnuXAyZIOsJtkX98MWl3h5ZuFQ_-sd0Zp0gYXARPiLOQJThcwHks6Lx8hf67GkCJazW8F6VtZgL1QA4arAeLRr-fUZCkJkcLiMOWN3UWrToUMYo34bUwz1zx6aS3vpDMUTcTbl-Io_ca8w1W6uc6pziDWrmPFZ2FNVFzTb1uv7hr-tW9s_tr1OjrwAbgHI-fIdBd2Xd2sXWz8c-OQsh-TcnP1yNw3kG87EmOSrK_OZ51VlLi8mG_LFUVaHhkZkhO2qXCaBthPGBoSUYgQhg9IVXKGocQyc3QzuIVmujoWqjMTCnI_2Qk6ql6bncp8XD_QSBuYUMgbKJkmPZkl_atx3gPKcQD6XPLwZ0xXvW-TF4u_NAVH5rA/https://www.amazon.com/stores/page/6BC5B6C3-5BDF-4491-B9FC-E2E9AF112138/?_encoding=UTF8&store_ref=SB_A0665056TUL15SERKBZT-A023152729OHE82NSG3&pd_rd_plhdr=t&aaxitk=f9f51f5ed18207f4e2cbfaff5b36ad76&hsa_cr_id=0&lp_asins=B0FJWD6W8J%2CB0FJWPF7GN%2CB0FJWRJLXX&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                              - img "Google" [ref=e1929]
+                          - generic [ref=e1930]:
+                            - link [ref=e1931] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNdAlzo3SiiPHd1BRArmIZwAAAGetaqHXwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDdAmV0/clv1c_ek-wBHfWbbbaXQ4WY9qoyp97Nk4ubomoFPNJXrhGzd6MUE4evYYQTQiK5lFKDOnV4olz6IfdXigCeCFsV5eRmSf_gTq87M_cRnEn9tRhvdS0GJFtFK8AQmQo4vhnrCazGb6GZpCwGHVDBKXrew9u3hgboNiC5hUz2iSQz76kyPLP-ZWbr6k3y9tKJGzPGxfZhLnIz-rKnAbNs-3k36DGe07QPf-dzio8EaifWLOcCcqj-OLF05NBo7Yv4Nn9dOerhHCU-gNhZE3tk0cX78h0dmmw9XwcSNNxZLs0SlLKWQGqb9XtmfOHN-a1MIh3Xnl82fbynH4NMCUDPU3AMX0GPLQVaVTAG-t4BSxPG0U3Xv-Thqj8FHx0LfVWGBIjwfEKIt64li9ZCRhmQK4BdwNPH8MZ8qAh0mDA2ZrfsE-vp8EzFf-DZQuwu0quq2ZMaSJohnGO8nmEawP81XlL72Q6Emyk6haNuyf2KE25SEmscA3z8qxo9BmQY4FBzz-3Sx6Y6WkjjN7rwau5ZM050NyDkqQuYnoO2MQtwMU2xfu73NSOyV6EjVI5Q5hOEtp0siYAYBzxY7cNa8esj2KW27g4CCL8IkvfLJlDt_LPCYv4NQM4DVvzdxXOQjQs9KWaCOw85VI0zizZlCDRvTSxSSnJgiiFnokfJQ1ig2Y-nsLzzLqYgLYSV3MLl0I49rnSQuQBAnY5hqwTm0JdsBjWrBw_88qj85TECWGDtmRkz3xHeHMCaOZoz4A95hg9ZqEw6Gi60WH0bGZTou0v-o1PYPcrVGg3a7g1Bifh9EiNCwoTOvuVWexw4OfyEW7iZWWHQ5P4SdvuCquv0ddqHYorsGG8MG3DsewpMY4cESeBmBXBPo--4CFp8K4kHfXRqyBsYIr9eBFC2BuZQOKbduMrmjd5DmRm-bmzRj6uiQedyH4z-yspT-ofSTCUVnYTZakaYuDJX2Pa6pr6aNfRwFg38bRKHxQK6F32Aba4u6a0K_IdTeNPArZ14Axiqz2tmwd5F0g5GbRzFOsHf1VdHXiSKsU4nUeYrdYq4ERmRgGMRkfN70cmxXS0ps0F3Xg5fnccP92tVN3wUirCeaJ-ncYtp_x8Jgb5fCGKXAJegVWLtllWNUGoiCKw260CYv8ROVgVREX93OhOZTGQCnrTgOb3CCeUPDbUJosrbOecPCIW16qgAuCNzTmimM5ekHA94jUlsc8nRS1qiYo7fmCe7zGOdH3GXiVv2Uz2EXsFjxZElrsz0ttuIL_8_hxyS6jAqK89gl1Yl_BJ_zc7MggbN7R14kx_wiTPppHfCCIJChGRWvUFnuXAyZIOsJtkX98MWl3h5ZuFQ_-sd0Zp0gYXARPiLOQJThcwHks6Lx8hf67GkCJazW8F6VtZgL1QA4arAeLRr-fUZCkJkcLiMOWN3UWrToUMYo34bUwz1zx6aS3vpDMUTcTbl-Io_ca8w1W6uc6pziDWrmPFZ2FNVFzTb1uv7hr-tW9s_tr1OjrwAbgHI-fIdBd2Xd2sXWz8c-OQsh-TcnP1yNw3kG87EmOSrK_OZ51VlLi8mG_LFUVaHhkZkhO2qXCaBthPGBoSUYgQhg9IVXKGocQyc3QzuIVmujoWqjMTCnI_2Qk6ql6bncp8XD_QSBuYUMgbKJkmPZkl_atx3gPKcQD6XPLwZ0xXvW-TF4u_NAVH5rA/https://www.amazon.com/stores/page/6BC5B6C3-5BDF-4491-B9FC-E2E9AF112138/?_encoding=UTF8&store_ref=SB_A0665056TUL15SERKBZT-A023152729OHE82NSG3&pd_rd_plhdr=t&aaxitk=f9f51f5ed18207f4e2cbfaff5b36ad76&hsa_cr_id=0&lp_asins=B0FJWD6W8J%2CB0FJWPF7GN%2CB0FJWRJLXX&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                            - link "Precision Crafted. Performance Ready." [ref=e1932] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNdAlzo3SiiPHd1BRArmIZwAAAGetaqHXwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDdAmV0/clv1c_ek-wBHfWbbbaXQ4WY9qoyp97Nk4ubomoFPNJXrhGzd6MUE4evYYQTQiK5lFKDOnV4olz6IfdXigCeCFsV5eRmSf_gTq87M_cRnEn9tRhvdS0GJFtFK8AQmQo4vhnrCazGb6GZpCwGHVDBKXrew9u3hgboNiC5hUz2iSQz76kyPLP-ZWbr6k3y9tKJGzPGxfZhLnIz-rKnAbNs-3k36DGe07QPf-dzio8EaifWLOcCcqj-OLF05NBo7Yv4Nn9dOerhHCU-gNhZE3tk0cX78h0dmmw9XwcSNNxZLs0SlLKWQGqb9XtmfOHN-a1MIh3Xnl82fbynH4NMCUDPU3AMX0GPLQVaVTAG-t4BSxPG0U3Xv-Thqj8FHx0LfVWGBIjwfEKIt64li9ZCRhmQK4BdwNPH8MZ8qAh0mDA2ZrfsE-vp8EzFf-DZQuwu0quq2ZMaSJohnGO8nmEawP81XlL72Q6Emyk6haNuyf2KE25SEmscA3z8qxo9BmQY4FBzz-3Sx6Y6WkjjN7rwau5ZM050NyDkqQuYnoO2MQtwMU2xfu73NSOyV6EjVI5Q5hOEtp0siYAYBzxY7cNa8esj2KW27g4CCL8IkvfLJlDt_LPCYv4NQM4DVvzdxXOQjQs9KWaCOw85VI0zizZlCDRvTSxSSnJgiiFnokfJQ1ig2Y-nsLzzLqYgLYSV3MLl0I49rnSQuQBAnY5hqwTm0JdsBjWrBw_88qj85TECWGDtmRkz3xHeHMCaOZoz4A95hg9ZqEw6Gi60WH0bGZTou0v-o1PYPcrVGg3a7g1Bifh9EiNCwoTOvuVWexw4OfyEW7iZWWHQ5P4SdvuCquv0ddqHYorsGG8MG3DsewpMY4cESeBmBXBPo--4CFp8K4kHfXRqyBsYIr9eBFC2BuZQOKbduMrmjd5DmRm-bmzRj6uiQedyH4z-yspT-ofSTCUVnYTZakaYuDJX2Pa6pr6aNfRwFg38bRKHxQK6F32Aba4u6a0K_IdTeNPArZ14Axiqz2tmwd5F0g5GbRzFOsHf1VdHXiSKsU4nUeYrdYq4ERmRgGMRkfN70cmxXS0ps0F3Xg5fnccP92tVN3wUirCeaJ-ncYtp_x8Jgb5fCGKXAJegVWLtllWNUGoiCKw260CYv8ROVgVREX93OhOZTGQCnrTgOb3CCeUPDbUJosrbOecPCIW16qgAuCNzTmimM5ekHA94jUlsc8nRS1qiYo7fmCe7zGOdH3GXiVv2Uz2EXsFjxZElrsz0ttuIL_8_hxyS6jAqK89gl1Yl_BJ_zc7MggbN7R14kx_wiTPppHfCCIJChGRWvUFnuXAyZIOsJtkX98MWl3h5ZuFQ_-sd0Zp0gYXARPiLOQJThcwHks6Lx8hf67GkCJazW8F6VtZgL1QA4arAeLRr-fUZCkJkcLiMOWN3UWrToUMYo34bUwz1zx6aS3vpDMUTcTbl-Io_ca8w1W6uc6pziDWrmPFZ2FNVFzTb1uv7hr-tW9s_tr1OjrwAbgHI-fIdBd2Xd2sXWz8c-OQsh-TcnP1yNw3kG87EmOSrK_OZ51VlLi8mG_LFUVaHhkZkhO2qXCaBthPGBoSUYgQhg9IVXKGocQyc3QzuIVmujoWqjMTCnI_2Qk6ql6bncp8XD_QSBuYUMgbKJkmPZkl_atx3gPKcQD6XPLwZ0xXvW-TF4u_NAVH5rA/https://www.amazon.com/stores/page/6BC5B6C3-5BDF-4491-B9FC-E2E9AF112138/?_encoding=UTF8&store_ref=SB_A0665056TUL15SERKBZT-A023152729OHE82NSG3&pd_rd_plhdr=t&aaxitk=f9f51f5ed18207f4e2cbfaff5b36ad76&hsa_cr_id=0&lp_asins=B0FJWD6W8J%2CB0FJWPF7GN%2CB0FJWRJLXX&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                              - generic [ref=e1934]:
+                                - generic [ref=e1935]: Precision Crafted. Performance Ready.
+                                - generic [ref=e1936]: Precision Crafted. Performance Ready.
+                  - generic [ref=e1938]:
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JG7KaOwHJYglCnConcu3aF0AAAGetaqHYAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDf1HX5/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaH-biNc36ij2NcyhZN33pDi0NcPTnhM8n-eVQbHrGi0QgxDQpT9f0pT13hP21UHQaD-8lYPVr3GsQXjRSWXOrULC77-o1c9nsXUGQ88mSVpkbrgsvHI8Pn8vIL4F-bmkXkgPzoj5epwpsL8eWxjlA0fVFcudr6wjWg7XTF6kZXEy_4THR8NSaJYEiYmtWVxN-wDmKGA5eXiMRRoCUeZuCwMoetT_d6V1q0M3OU4qhkBtW5MOSTxcHULNNRzFX-tlY_sQz74XMkZI1iqXv--pDqnVXV-75lm_l4nc_ybhOWZwl8Q0XMUCChfG26YFJHoUD-KiU7Bq2vfSdx4eHL6nV8DWOk27szLkNsAT9fN5WJuV833iX6A02k0y4U6RrmmUa0Boq-kNnxXtkGWfZeWOETdKjA3YJfVFSQy6mQcuJPkT4yktG4E8iA6Ef9BXxk8q6Paqfae1qnDaWyUJfqAIQS4zcX5uw0LsKtSSfzr_Bb8MwxOyC9UI07aOmZNqYjztL0GpbEPGOoWGXwPvEDXfx7xNppPKH-ZYZRV3f3O6l0_uwvuzVeu2JhSxa84J2i8jGmSvB85y9CDU8NyyrBYrt8cxQDt2cHNpvX3JXqzowdLj7V4sbRq2Ke93dJfk4hIA7MiyDV4JipCv-PJIwyTGHjsyI-rr2gB776anxEO6J977BtVs5iuEqWyvhcybz6v1KLy_hvH_GxiYklH7mm6OhW63kkNEIJLcfuYtY5lpBql0Y-j82_wwUK3iE5QyjCgIJsJMkwQlC30GbGTGkZzykAI0uS1VmqIYPfMi8ZBS7qlrZWEQP8OYwpa8BNnRE1dEquEbuu34zPTVFWg0hA7HZKdLYlNx-Ayl7uxZ1YpKB7RyU7cVWOheSCs2TKurLRRWP5jUap0Eh7AR163rEL_5h2y32yPGD6KG_b0SjIvxq22jRkqzBE7fYnB66-HzxiM3hUuIwDhzMKDCfALQo3Kgrjz_ERINnlvexeV2uAguMvoK3miiMCxWxRLsp60uVdlo-tCBbTMmDTYWk6tDJTBEaPXJpaEUkFxStpwFroKqcIpQWV5DUpSpJ9FgBRauIwGd98psww3KMrruLxJu0vcsvYjCnp_QNg_nqxWw9f2th3jzp2-bGfOjl_sfgeCb_XrrFtKsjhnuquJLDE9EsNPhFZXhk54n4NJkpe2h3KZ1AywA1kpbIPYDCyvvXyWbo62FpWuvss1nFtnLu2zIXsoRKuP-iNesZXENlN0azE1fwauIT09F964ozyYGFUGfsfvewSLfexRWVKE0IzLutjtLVxUMbWaPZo9-nuRKop_5KiU6s1DsuNsALjsiLQOi5DWcUOkzOxtrytoyJ4I_j9rUndvMYU8y9_KGI2tdzI_w4mZ3_OG7VHB6CmodtroNcUheHuKgOKtqIpQSTszHZXWcYb94YlqKDqPgeJXpxIlfRQ7649tJHor4agcD8Wh0IQrLSJMniFnr_dwVetDvbvBha-SS023lQ-WmjtAdXd0IyWQpZSy-gMBWuI4wprAZfPpBhCieBbzwibNwxU8jc-9D7f0bzScPbuiF1PK6Y0AinOCFuIjvP50ubXeEN-RJVJFesPOW9RUHd1j6cRW0D-KJx5HQFnr8zvzRaC1b6uz5r1MnGTxq2mjTWvmxoPMHLXlJ0/https://www.amazon.com/stores/page/D8356AF8-38D4-4CFE-80DA-2D25CFE9BCC9/?_encoding=UTF8&store_ref=SB_A092275516HQNKVXNK5YQ-A00381023MQRODNWKGYH3&pd_rd_plhdr=t&aaxitk=9a16e2bb628cd267227dfb41754cbf70&hsa_cr_id=0&lp_asins=B0G1YXJQ7Z%2CB0G1YM1HYM%2CB0G1YHNFWM&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                        - link "iWatch" [ref=e1939] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JG7KaOwHJYglCnConcu3aF0AAAGetaqHYAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDf1HX5/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaH-biNc36ij2NcyhZN33pDi0NcPTnhM8n-eVQbHrGi0QgxDQpT9f0pT13hP21UHQaD-8lYPVr3GsQXjRSWXOrULC77-o1c9nsXUGQ88mSVpkbrgsvHI8Pn8vIL4F-bmkXkgPzoj5epwpsL8eWxjlA0fVFcudr6wjWg7XTF6kZXEy_4THR8NSaJYEiYmtWVxN-wDmKGA5eXiMRRoCUeZuCwMoetT_d6V1q0M3OU4qhkBtW5MOSTxcHULNNRzFX-tlY_sQz74XMkZI1iqXv--pDqnVXV-75lm_l4nc_ybhOWZwl8Q0XMUCChfG26YFJHoUD-KiU7Bq2vfSdx4eHL6nV8DWOk27szLkNsAT9fN5WJuV833iX6A02k0y4U6RrmmUa0Boq-kNnxXtkGWfZeWOETdKjA3YJfVFSQy6mQcuJPkT4yktG4E8iA6Ef9BXxk8q6Paqfae1qnDaWyUJfqAIQS4zcX5uw0LsKtSSfzr_Bb8MwxOyC9UI07aOmZNqYjztL0GpbEPGOoWGXwPvEDXfx7xNppPKH-ZYZRV3f3O6l0_uwvuzVeu2JhSxa84J2i8jGmSvB85y9CDU8NyyrBYrt8cxQDt2cHNpvX3JXqzowdLj7V4sbRq2Ke93dJfk4hIA7MiyDV4JipCv-PJIwyTGHjsyI-rr2gB776anxEO6J977BtVs5iuEqWyvhcybz6v1KLy_hvH_GxiYklH7mm6OhW63kkNEIJLcfuYtY5lpBql0Y-j82_wwUK3iE5QyjCgIJsJMkwQlC30GbGTGkZzykAI0uS1VmqIYPfMi8ZBS7qlrZWEQP8OYwpa8BNnRE1dEquEbuu34zPTVFWg0hA7HZKdLYlNx-Ayl7uxZ1YpKB7RyU7cVWOheSCs2TKurLRRWP5jUap0Eh7AR163rEL_5h2y32yPGD6KG_b0SjIvxq22jRkqzBE7fYnB66-HzxiM3hUuIwDhzMKDCfALQo3Kgrjz_ERINnlvexeV2uAguMvoK3miiMCxWxRLsp60uVdlo-tCBbTMmDTYWk6tDJTBEaPXJpaEUkFxStpwFroKqcIpQWV5DUpSpJ9FgBRauIwGd98psww3KMrruLxJu0vcsvYjCnp_QNg_nqxWw9f2th3jzp2-bGfOjl_sfgeCb_XrrFtKsjhnuquJLDE9EsNPhFZXhk54n4NJkpe2h3KZ1AywA1kpbIPYDCyvvXyWbo62FpWuvss1nFtnLu2zIXsoRKuP-iNesZXENlN0azE1fwauIT09F964ozyYGFUGfsfvewSLfexRWVKE0IzLutjtLVxUMbWaPZo9-nuRKop_5KiU6s1DsuNsALjsiLQOi5DWcUOkzOxtrytoyJ4I_j9rUndvMYU8y9_KGI2tdzI_w4mZ3_OG7VHB6CmodtroNcUheHuKgOKtqIpQSTszHZXWcYb94YlqKDqPgeJXpxIlfRQ7649tJHor4agcD8Wh0IQrLSJMniFnr_dwVetDvbvBha-SS023lQ-WmjtAdXd0IyWQpZSy-gMBWuI4wprAZfPpBhCieBbzwibNwxU8jc-9D7f0bzScPbuiF1PK6Y0AinOCFuIjvP50ubXeEN-RJVJFesPOW9RUHd1j6cRW0D-KJx5HQFnr8zvzRaC1b6uz5r1MnGTxq2mjTWvmxoPMHLXlJ0/https://www.amazon.com/stores/page/D8356AF8-38D4-4CFE-80DA-2D25CFE9BCC9/?_encoding=UTF8&store_ref=SB_A092275516HQNKVXNK5YQ-A00381023MQRODNWKGYH3&pd_rd_plhdr=t&aaxitk=9a16e2bb628cd267227dfb41754cbf70&hsa_cr_id=0&lp_asins=B0G1YXJQ7Z%2CB0G1YM1HYM%2CB0G1YHNFWM&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                          - img "iWatch" [ref=e1940]
+                        - generic [ref=e1942]:
+                          - generic [ref=e1943]:
+                            - link [ref=e1944] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JG7KaOwHJYglCnConcu3aF0AAAGetaqHYAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDf1HX5/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaH-biNc36ij2NcyhZN33pDi0NcPTnhM8n-eVQbHrGi0QgxDQpT9f0pT13hP21UHQaD-8lYPVr3GsQXjRSWXOrULC77-o1c9nsXUGQ88mSVpkbrgsvHI8Pn8vIL4F-bmkXkgPzoj5epwpsL8eWxjlA0fVFcudr6wjWg7XTF6kZXEy_4THR8NSaJYEiYmtWVxN-wDmKGA5eXiMRRoCUeZuCwMoetT_d6V1q0M3OU4qhkBtW5MOSTxcHULNNRzFX-tlY_sQz74XMkZI1iqXv--pDqnVXV-75lm_l4nc_ybhOWZwl8Q0XMUCChfG26YFJHoUD-KiU7Bq2vfSdx4eHL6nV8DWOk27szLkNsAT9fN5WJuV833iX6A02k0y4U6RrmmUa0Boq-kNnxXtkGWfZeWOETdKjA3YJfVFSQy6mQcuJPkT4yktG4E8iA6Ef9BXxk8q6Paqfae1qnDaWyUJfqAIQS4zcX5uw0LsKtSSfzr_Bb8MwxOyC9UI07aOmZNqYjztL0GpbEPGOoWGXwPvEDXfx7xNppPKH-ZYZRV3f3O6l0_uwvuzVeu2JhSxa84J2i8jGmSvB85y9CDU8NyyrBYrt8cxQDt2cHNpvX3JXqzowdLj7V4sbRq2Ke93dJfk4hIA7MiyDV4JipCv-PJIwyTGHjsyI-rr2gB776anxEO6J977BtVs5iuEqWyvhcybz6v1KLy_hvH_GxiYklH7mm6OhW63kkNEIJLcfuYtY5lpBql0Y-j82_wwUK3iE5QyjCgIJsJMkwQlC30GbGTGkZzykAI0uS1VmqIYPfMi8ZBS7qlrZWEQP8OYwpa8BNnRE1dEquEbuu34zPTVFWg0hA7HZKdLYlNx-Ayl7uxZ1YpKB7RyU7cVWOheSCs2TKurLRRWP5jUap0Eh7AR163rEL_5h2y32yPGD6KG_b0SjIvxq22jRkqzBE7fYnB66-HzxiM3hUuIwDhzMKDCfALQo3Kgrjz_ERINnlvexeV2uAguMvoK3miiMCxWxRLsp60uVdlo-tCBbTMmDTYWk6tDJTBEaPXJpaEUkFxStpwFroKqcIpQWV5DUpSpJ9FgBRauIwGd98psww3KMrruLxJu0vcsvYjCnp_QNg_nqxWw9f2th3jzp2-bGfOjl_sfgeCb_XrrFtKsjhnuquJLDE9EsNPhFZXhk54n4NJkpe2h3KZ1AywA1kpbIPYDCyvvXyWbo62FpWuvss1nFtnLu2zIXsoRKuP-iNesZXENlN0azE1fwauIT09F964ozyYGFUGfsfvewSLfexRWVKE0IzLutjtLVxUMbWaPZo9-nuRKop_5KiU6s1DsuNsALjsiLQOi5DWcUOkzOxtrytoyJ4I_j9rUndvMYU8y9_KGI2tdzI_w4mZ3_OG7VHB6CmodtroNcUheHuKgOKtqIpQSTszHZXWcYb94YlqKDqPgeJXpxIlfRQ7649tJHor4agcD8Wh0IQrLSJMniFnr_dwVetDvbvBha-SS023lQ-WmjtAdXd0IyWQpZSy-gMBWuI4wprAZfPpBhCieBbzwibNwxU8jc-9D7f0bzScPbuiF1PK6Y0AinOCFuIjvP50ubXeEN-RJVJFesPOW9RUHd1j6cRW0D-KJx5HQFnr8zvzRaC1b6uz5r1MnGTxq2mjTWvmxoPMHLXlJ0/https://www.amazon.com/stores/page/D8356AF8-38D4-4CFE-80DA-2D25CFE9BCC9/?_encoding=UTF8&store_ref=SB_A092275516HQNKVXNK5YQ-A00381023MQRODNWKGYH3&pd_rd_plhdr=t&aaxitk=9a16e2bb628cd267227dfb41754cbf70&hsa_cr_id=0&lp_asins=B0G1YXJQ7Z%2CB0G1YM1HYM%2CB0G1YHNFWM&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                            - link "iWatch" [ref=e1945] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JG7KaOwHJYglCnConcu3aF0AAAGetaqHYAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDf1HX5/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaH-biNc36ij2NcyhZN33pDi0NcPTnhM8n-eVQbHrGi0QgxDQpT9f0pT13hP21UHQaD-8lYPVr3GsQXjRSWXOrULC77-o1c9nsXUGQ88mSVpkbrgsvHI8Pn8vIL4F-bmkXkgPzoj5epwpsL8eWxjlA0fVFcudr6wjWg7XTF6kZXEy_4THR8NSaJYEiYmtWVxN-wDmKGA5eXiMRRoCUeZuCwMoetT_d6V1q0M3OU4qhkBtW5MOSTxcHULNNRzFX-tlY_sQz74XMkZI1iqXv--pDqnVXV-75lm_l4nc_ybhOWZwl8Q0XMUCChfG26YFJHoUD-KiU7Bq2vfSdx4eHL6nV8DWOk27szLkNsAT9fN5WJuV833iX6A02k0y4U6RrmmUa0Boq-kNnxXtkGWfZeWOETdKjA3YJfVFSQy6mQcuJPkT4yktG4E8iA6Ef9BXxk8q6Paqfae1qnDaWyUJfqAIQS4zcX5uw0LsKtSSfzr_Bb8MwxOyC9UI07aOmZNqYjztL0GpbEPGOoWGXwPvEDXfx7xNppPKH-ZYZRV3f3O6l0_uwvuzVeu2JhSxa84J2i8jGmSvB85y9CDU8NyyrBYrt8cxQDt2cHNpvX3JXqzowdLj7V4sbRq2Ke93dJfk4hIA7MiyDV4JipCv-PJIwyTGHjsyI-rr2gB776anxEO6J977BtVs5iuEqWyvhcybz6v1KLy_hvH_GxiYklH7mm6OhW63kkNEIJLcfuYtY5lpBql0Y-j82_wwUK3iE5QyjCgIJsJMkwQlC30GbGTGkZzykAI0uS1VmqIYPfMi8ZBS7qlrZWEQP8OYwpa8BNnRE1dEquEbuu34zPTVFWg0hA7HZKdLYlNx-Ayl7uxZ1YpKB7RyU7cVWOheSCs2TKurLRRWP5jUap0Eh7AR163rEL_5h2y32yPGD6KG_b0SjIvxq22jRkqzBE7fYnB66-HzxiM3hUuIwDhzMKDCfALQo3Kgrjz_ERINnlvexeV2uAguMvoK3miiMCxWxRLsp60uVdlo-tCBbTMmDTYWk6tDJTBEaPXJpaEUkFxStpwFroKqcIpQWV5DUpSpJ9FgBRauIwGd98psww3KMrruLxJu0vcsvYjCnp_QNg_nqxWw9f2th3jzp2-bGfOjl_sfgeCb_XrrFtKsjhnuquJLDE9EsNPhFZXhk54n4NJkpe2h3KZ1AywA1kpbIPYDCyvvXyWbo62FpWuvss1nFtnLu2zIXsoRKuP-iNesZXENlN0azE1fwauIT09F964ozyYGFUGfsfvewSLfexRWVKE0IzLutjtLVxUMbWaPZo9-nuRKop_5KiU6s1DsuNsALjsiLQOi5DWcUOkzOxtrytoyJ4I_j9rUndvMYU8y9_KGI2tdzI_w4mZ3_OG7VHB6CmodtroNcUheHuKgOKtqIpQSTszHZXWcYb94YlqKDqPgeJXpxIlfRQ7649tJHor4agcD8Wh0IQrLSJMniFnr_dwVetDvbvBha-SS023lQ-WmjtAdXd0IyWQpZSy-gMBWuI4wprAZfPpBhCieBbzwibNwxU8jc-9D7f0bzScPbuiF1PK6Y0AinOCFuIjvP50ubXeEN-RJVJFesPOW9RUHd1j6cRW0D-KJx5HQFnr8zvzRaC1b6uz5r1MnGTxq2mjTWvmxoPMHLXlJ0/https://www.amazon.com/stores/page/D8356AF8-38D4-4CFE-80DA-2D25CFE9BCC9/?_encoding=UTF8&store_ref=SB_A092275516HQNKVXNK5YQ-A00381023MQRODNWKGYH3&pd_rd_plhdr=t&aaxitk=9a16e2bb628cd267227dfb41754cbf70&hsa_cr_id=0&lp_asins=B0G1YXJQ7Z%2CB0G1YM1HYM%2CB0G1YHNFWM&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                              - img "iWatch" [ref=e1947]
+                          - generic [ref=e1948]:
+                            - link [ref=e1949] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JG7KaOwHJYglCnConcu3aF0AAAGetaqHYAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDf1HX5/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaH-biNc36ij2NcyhZN33pDi0NcPTnhM8n-eVQbHrGi0QgxDQpT9f0pT13hP21UHQaD-8lYPVr3GsQXjRSWXOrULC77-o1c9nsXUGQ88mSVpkbrgsvHI8Pn8vIL4F-bmkXkgPzoj5epwpsL8eWxjlA0fVFcudr6wjWg7XTF6kZXEy_4THR8NSaJYEiYmtWVxN-wDmKGA5eXiMRRoCUeZuCwMoetT_d6V1q0M3OU4qhkBtW5MOSTxcHULNNRzFX-tlY_sQz74XMkZI1iqXv--pDqnVXV-75lm_l4nc_ybhOWZwl8Q0XMUCChfG26YFJHoUD-KiU7Bq2vfSdx4eHL6nV8DWOk27szLkNsAT9fN5WJuV833iX6A02k0y4U6RrmmUa0Boq-kNnxXtkGWfZeWOETdKjA3YJfVFSQy6mQcuJPkT4yktG4E8iA6Ef9BXxk8q6Paqfae1qnDaWyUJfqAIQS4zcX5uw0LsKtSSfzr_Bb8MwxOyC9UI07aOmZNqYjztL0GpbEPGOoWGXwPvEDXfx7xNppPKH-ZYZRV3f3O6l0_uwvuzVeu2JhSxa84J2i8jGmSvB85y9CDU8NyyrBYrt8cxQDt2cHNpvX3JXqzowdLj7V4sbRq2Ke93dJfk4hIA7MiyDV4JipCv-PJIwyTGHjsyI-rr2gB776anxEO6J977BtVs5iuEqWyvhcybz6v1KLy_hvH_GxiYklH7mm6OhW63kkNEIJLcfuYtY5lpBql0Y-j82_wwUK3iE5QyjCgIJsJMkwQlC30GbGTGkZzykAI0uS1VmqIYPfMi8ZBS7qlrZWEQP8OYwpa8BNnRE1dEquEbuu34zPTVFWg0hA7HZKdLYlNx-Ayl7uxZ1YpKB7RyU7cVWOheSCs2TKurLRRWP5jUap0Eh7AR163rEL_5h2y32yPGD6KG_b0SjIvxq22jRkqzBE7fYnB66-HzxiM3hUuIwDhzMKDCfALQo3Kgrjz_ERINnlvexeV2uAguMvoK3miiMCxWxRLsp60uVdlo-tCBbTMmDTYWk6tDJTBEaPXJpaEUkFxStpwFroKqcIpQWV5DUpSpJ9FgBRauIwGd98psww3KMrruLxJu0vcsvYjCnp_QNg_nqxWw9f2th3jzp2-bGfOjl_sfgeCb_XrrFtKsjhnuquJLDE9EsNPhFZXhk54n4NJkpe2h3KZ1AywA1kpbIPYDCyvvXyWbo62FpWuvss1nFtnLu2zIXsoRKuP-iNesZXENlN0azE1fwauIT09F964ozyYGFUGfsfvewSLfexRWVKE0IzLutjtLVxUMbWaPZo9-nuRKop_5KiU6s1DsuNsALjsiLQOi5DWcUOkzOxtrytoyJ4I_j9rUndvMYU8y9_KGI2tdzI_w4mZ3_OG7VHB6CmodtroNcUheHuKgOKtqIpQSTszHZXWcYb94YlqKDqPgeJXpxIlfRQ7649tJHor4agcD8Wh0IQrLSJMniFnr_dwVetDvbvBha-SS023lQ-WmjtAdXd0IyWQpZSy-gMBWuI4wprAZfPpBhCieBbzwibNwxU8jc-9D7f0bzScPbuiF1PK6Y0AinOCFuIjvP50ubXeEN-RJVJFesPOW9RUHd1j6cRW0D-KJx5HQFnr8zvzRaC1b6uz5r1MnGTxq2mjTWvmxoPMHLXlJ0/https://www.amazon.com/stores/page/D8356AF8-38D4-4CFE-80DA-2D25CFE9BCC9/?_encoding=UTF8&store_ref=SB_A092275516HQNKVXNK5YQ-A00381023MQRODNWKGYH3&pd_rd_plhdr=t&aaxitk=9a16e2bb628cd267227dfb41754cbf70&hsa_cr_id=0&lp_asins=B0G1YXJQ7Z%2CB0G1YM1HYM%2CB0G1YHNFWM&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                            - link "Waterproof AMOLED Display Watch with Bluetooth" [ref=e1950] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JG7KaOwHJYglCnConcu3aF0AAAGetaqHYAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDf1HX5/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaH-biNc36ij2NcyhZN33pDi0NcPTnhM8n-eVQbHrGi0QgxDQpT9f0pT13hP21UHQaD-8lYPVr3GsQXjRSWXOrULC77-o1c9nsXUGQ88mSVpkbrgsvHI8Pn8vIL4F-bmkXkgPzoj5epwpsL8eWxjlA0fVFcudr6wjWg7XTF6kZXEy_4THR8NSaJYEiYmtWVxN-wDmKGA5eXiMRRoCUeZuCwMoetT_d6V1q0M3OU4qhkBtW5MOSTxcHULNNRzFX-tlY_sQz74XMkZI1iqXv--pDqnVXV-75lm_l4nc_ybhOWZwl8Q0XMUCChfG26YFJHoUD-KiU7Bq2vfSdx4eHL6nV8DWOk27szLkNsAT9fN5WJuV833iX6A02k0y4U6RrmmUa0Boq-kNnxXtkGWfZeWOETdKjA3YJfVFSQy6mQcuJPkT4yktG4E8iA6Ef9BXxk8q6Paqfae1qnDaWyUJfqAIQS4zcX5uw0LsKtSSfzr_Bb8MwxOyC9UI07aOmZNqYjztL0GpbEPGOoWGXwPvEDXfx7xNppPKH-ZYZRV3f3O6l0_uwvuzVeu2JhSxa84J2i8jGmSvB85y9CDU8NyyrBYrt8cxQDt2cHNpvX3JXqzowdLj7V4sbRq2Ke93dJfk4hIA7MiyDV4JipCv-PJIwyTGHjsyI-rr2gB776anxEO6J977BtVs5iuEqWyvhcybz6v1KLy_hvH_GxiYklH7mm6OhW63kkNEIJLcfuYtY5lpBql0Y-j82_wwUK3iE5QyjCgIJsJMkwQlC30GbGTGkZzykAI0uS1VmqIYPfMi8ZBS7qlrZWEQP8OYwpa8BNnRE1dEquEbuu34zPTVFWg0hA7HZKdLYlNx-Ayl7uxZ1YpKB7RyU7cVWOheSCs2TKurLRRWP5jUap0Eh7AR163rEL_5h2y32yPGD6KG_b0SjIvxq22jRkqzBE7fYnB66-HzxiM3hUuIwDhzMKDCfALQo3Kgrjz_ERINnlvexeV2uAguMvoK3miiMCxWxRLsp60uVdlo-tCBbTMmDTYWk6tDJTBEaPXJpaEUkFxStpwFroKqcIpQWV5DUpSpJ9FgBRauIwGd98psww3KMrruLxJu0vcsvYjCnp_QNg_nqxWw9f2th3jzp2-bGfOjl_sfgeCb_XrrFtKsjhnuquJLDE9EsNPhFZXhk54n4NJkpe2h3KZ1AywA1kpbIPYDCyvvXyWbo62FpWuvss1nFtnLu2zIXsoRKuP-iNesZXENlN0azE1fwauIT09F964ozyYGFUGfsfvewSLfexRWVKE0IzLutjtLVxUMbWaPZo9-nuRKop_5KiU6s1DsuNsALjsiLQOi5DWcUOkzOxtrytoyJ4I_j9rUndvMYU8y9_KGI2tdzI_w4mZ3_OG7VHB6CmodtroNcUheHuKgOKtqIpQSTszHZXWcYb94YlqKDqPgeJXpxIlfRQ7649tJHor4agcD8Wh0IQrLSJMniFnr_dwVetDvbvBha-SS023lQ-WmjtAdXd0IyWQpZSy-gMBWuI4wprAZfPpBhCieBbzwibNwxU8jc-9D7f0bzScPbuiF1PK6Y0AinOCFuIjvP50ubXeEN-RJVJFesPOW9RUHd1j6cRW0D-KJx5HQFnr8zvzRaC1b6uz5r1MnGTxq2mjTWvmxoPMHLXlJ0/https://www.amazon.com/stores/page/D8356AF8-38D4-4CFE-80DA-2D25CFE9BCC9/?_encoding=UTF8&store_ref=SB_A092275516HQNKVXNK5YQ-A00381023MQRODNWKGYH3&pd_rd_plhdr=t&aaxitk=9a16e2bb628cd267227dfb41754cbf70&hsa_cr_id=0&lp_asins=B0G1YXJQ7Z%2CB0G1YM1HYM%2CB0G1YHNFWM&lp_query=Smart%20Watch&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=mGW2v&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=BTZ97E04CA67MP37A3P0&pd_rd_wg=IBN2x&pd_rd_r=33115ef9-8df9-4050-8030-de207ed645a4
+                              - generic [ref=e1952]:
+                                - generic [ref=e1953]: Waterproof AMOLED Display Watch with Bluetooth
+                                - generic [ref=e1954]: Waterproof AMOLED Display Watch with Bluetooth
+            - generic [ref=e1960]:
+              - heading "Need help?" [level=2] [ref=e1963]
+              - generic [ref=e1964]:
+                - link "Visit the help section" [ref=e1965] [cursor=pointer]:
+                  - /url: /gp/help/customer/display.html?nodeId=468556
+                - text: or
+                - link "contact us" [ref=e1966] [cursor=pointer]:
+                  - /url: /gp/help/customer/contact-us
+            - generic [ref=e1969]:
+              - iframe [ref=e1970]:
+                - generic [ref=f1e4]:
+                  - link "SOUYIE 2026 Smart Watch Fitness Trackers for Women, 1.47″ HD Curved Screen, 24/7 Health Monitor, Sleep Tracker, 110+ Sports Modes Pedometer Step Tracker, Waterproof Activity Tracker for Android iOS" [ref=f1e7] [cursor=pointer]:
+                    - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RCMEG8RGgkNBK566tXJ8tycAAAGetaqHGAEAAAH0AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCjJ7q9/clv1c_ek8OM3GX57OOBXc78KNgvS_gOEiGWYSzwmkAjUwDix34OULe7jEAPrXIKZ7q7tXKxo4PPUW8pu7ZpYIwsObO85jPY4L67YjHaLRmA3WS0bnDeX3n_9qjOJbpLE-6Y9vnWRsMDgZ4Kl-AitV8-WVjMsjgoaFNexliMIO-SHf78dMvYW-sKJMw-iNFlNtRbPCRXimjLIaFMc0FnM9JBYHtxllPq40KsH3YOT_1--4OkU088z_NOhMcY2yNJhrgfx0Ep1pUcLlwmTwqkvVHA_5qc_DUEDoIDBaoX1_ckqvKCc-QWGLh6wcgGHHxY7KmWCiEdl9WIgGNajN3xi4EpEwNVBDXibJrI0pJwOVxfHdcgo9zWIe-R9mbviwNE6PD8mo/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2OTI0MTE2MDcwMDc1NzE2OjE3ODExNjQzMTE6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAxMzE3NjA4NjUxNjAyOjo6Og&url=%2Fdp%2FB0GY3Q27PR%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+                  - generic [ref=f1e8]:
+                    - img "SOUYIE 2026 Smart Watch Fitness Trackers for Women, 1.47″ HD Curved Screen, 24/7 Health Monitor, Sleep Tracker, 110+ Sports Modes Pedometer Step Tracker, Waterproof Activity Tracker for Android iOS" [ref=f1e10]
+                    - generic [ref=f1e11]:
+                      - generic [ref=f1e12]: SOUYIE 2026 Smart Watch Fitness Trackers for Women, 1.47″ HD Curved Screen, 24/7 Health...
+                      - generic [ref=f1e13]:
+                        - text: INR 13,476.73
+                        - link "1" [ref=f1e14] [cursor=pointer]:
+                          - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RCMEG8RGgkNBK566tXJ8tycAAAGetaqHGAEAAAH0AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCjJ7q9/clv1c_ek8OM3GX57OOBXc78KNgvS_gOEiGWYSzwmkAjUwDix34OULe7jEAPrXIKZ7q7tXKxo4PPUW8pu7ZpYIwsObO85jPY4L67YjHaLRmA3WS0bnDeX3n_9qjOJbpLE-6Y9vnWRsMDgZ4Kl-AitV8-WVjMsjgoaFNexliMIO-SHf78dMvYW-sKJMw-iNFlNtRbPCRXimjLIaFMc0FnM9JBYHtxllPq40KsH3YOT_1--4OkU088z_NOhMcY2yNJhrgfx0Ep1pUcLlwmTwqkvVHA_5qc_DUEDoIDBaoX1_ckqvKCc-QWGLh6wcgGHHxY7KmWCiEdl9WIgGNajN3xi4EpEwNVBDXibJrI0pJwOVxfHdcgo9zWIe-R9mbviwNE6PD8mo/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2OTI0MTE2MDcwMDc1NzE2OjE3ODExNjQzMTE6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAxMzE3NjA4NjUxNjAyOjo6Og&url=%2Fdp%2FB0GY3Q27PR%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA#customerReviews
+                          - text: "1"
+                    - link "Shop now" [ref=f1e18] [cursor=pointer]:
+                      - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RCMEG8RGgkNBK566tXJ8tycAAAGetaqHGAEAAAH0AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCjJ7q9/clv1c_ek8OM3GX57OOBXc78KNgvS_gOEiGWYSzwmkAjUwDix34OULe7jEAPrXIKZ7q7tXKxo4PPUW8pu7ZpYIwsObO85jPY4L67YjHaLRmA3WS0bnDeX3n_9qjOJbpLE-6Y9vnWRsMDgZ4Kl-AitV8-WVjMsjgoaFNexliMIO-SHf78dMvYW-sKJMw-iNFlNtRbPCRXimjLIaFMc0FnM9JBYHtxllPq40KsH3YOT_1--4OkU088z_NOhMcY2yNJhrgfx0Ep1pUcLlwmTwqkvVHA_5qc_DUEDoIDBaoX1_ckqvKCc-QWGLh6wcgGHHxY7KmWCiEdl9WIgGNajN3xi4EpEwNVBDXibJrI0pJwOVxfHdcgo9zWIe-R9mbviwNE6PD8mo/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2OTI0MTE2MDcwMDc1NzE2OjE3ODExNjQzMTE6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAxMzE3NjA4NjUxNjAyOjo6Og&url=%2Fdp%2FB0GY3Q27PR%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+              - button "Leave feedback on Sponsored ad" [ref=e1972] [cursor=pointer]:
+                - generic [ref=e1973]: Sponsored
+          - link "Go back to filtering menu" [ref=e1975] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForFilterOptions"
+        - generic [ref=e1977]:
+          - link "Skip to main search results" [ref=e1978] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e1984]:
+            - group [ref=e1985]:
+              - heading "Popular Shopping Ideas" [level=2] [ref=e1986]
+              - list [ref=e1987]:
+                - listitem [ref=e1988]:
+                  - link "Android" [ref=e1990] [cursor=pointer]:
+                    - /url: /s?k=android+smart+watch&ref=sr_nr_p_rag_integrated_qb_0
+                - listitem [ref=e1991]:
+                  - link "Ios" [ref=e1993] [cursor=pointer]:
+                    - /url: /s?k=ios+smart+watch&ref=sr_nr_p_rag_integrated_qb_1
+                - listitem [ref=e1994]:
+                  - link "Round Face" [ref=e1996] [cursor=pointer]:
+                    - /url: /s?k=smart+watch+round+face&ref=sr_nr_p_rag_integrated_qb_2
+                - listitem [ref=e1997]:
+                  - link "Large Screen" [ref=e1999] [cursor=pointer]:
+                    - /url: /s?k=large+screen+smart+watch&ref=sr_nr_p_rag_integrated_qb_3
+                - listitem [ref=e2000]:
+                  - button "See more" [ref=e2003] [cursor=pointer]: See more
+            - separator [ref=e2005]
+            - group "Customer Reviews" [ref=e2006]:
+              - heading "Customer Reviews" [level=2] [ref=e2007]
+              - list "Customer Reviews" [ref=e2008]:
+                - listitem [ref=e2009]:
+                  - link "Apply 4 Stars & Up filter to narrow results" [ref=e2012] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_72%3A1248879011&dc&qid=1781164311&rnid=1248877011&ref=sr_nr_p_72_1&ds=v1%3ACLhJzoFGMp4pQbB%2FGWyfuIKYHiAkZOsi%2BY2JwmDzfr8
+                    - generic [ref=e2014]: 4 Stars
+                    - text: "& Up"
+            - group "Brands" [ref=e2015]:
+              - heading "Brands" [level=2] [ref=e2016]
+              - list "Brands" [ref=e2017]:
+                - listitem "Popular Shopping Ideas" [ref=e2018]:
+                  - link "Apply Samsung filter to narrow results" [ref=e2020] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A46655&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_1&ds=v1%3ATSSzixFMnUvDdmCHrhHfAIXYJJhpe5m0ga4Rkm9eqmQ
+                    - checkbox [ref=e2023]
+                    - text: Samsung
+                - listitem "Popular Shopping Ideas" [ref=e2025]:
+                  - link "Apply Apple filter to narrow results" [ref=e2027] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A110955&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_2&ds=v1%3AdsmBCKJqrG6B1gaK8oF89XxS4YkRqEnD1YwKQOy9QjQ
+                    - checkbox [ref=e2030]
+                    - text: Apple
+                - listitem "Popular Shopping Ideas" [ref=e2032]:
+                  - link "Apply Fitbit filter to narrow results" [ref=e2034] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A213215&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_3&ds=v1%3Ayby3Mb1PJRbycrLiADWSOGDcIk4b%2BY4XDUuvVnQVNH0
+                    - checkbox [ref=e2037]
+                    - text: Fitbit
+                - listitem "Popular Shopping Ideas" [ref=e2039]:
+                  - link "Apply Amazfit filter to narrow results" [ref=e2041] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A321923&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_4&ds=v1%3AfKCt1WpJAMnAtoxe2H1ROrhz6xPEfYNU9fOAe3WjLfc
+                    - checkbox [ref=e2044]
+                    - text: Amazfit
+                - listitem "Popular Shopping Ideas" [ref=e2046]:
+                  - link "Apply POLAR filter to narrow results" [ref=e2048] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A255287&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_5&ds=v1%3ApbTxyLMeAkC%2Bi4XGRuNmVQKsBxx6gg4SPS4ri3rOyio
+                    - checkbox [ref=e2051]
+                    - text: POLAR
+                - listitem "Popular Shopping Ideas" [ref=e2053]:
+                  - link "Apply SUUNTO filter to narrow results" [ref=e2055] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A393232&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_6&ds=v1%3AnOeayYrBIBy3fMatwSv5pj%2BMEQTGVfAbtNnh3OMTnA8
+                    - checkbox [ref=e2058]
+                    - text: SUUNTO
+                - listitem "Popular Shopping Ideas" [ref=e2060]:
+                  - link "Apply Timex filter to narrow results" [ref=e2062] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_123%3A222214&dc&qid=1781164311&rnid=85457740011&ref=sr_nr_p_123_7&ds=v1%3ATsxE4qLYpJCjDsjmo5CxRFcAz0v3xuqFUW0Hqa2x6d0
+                    - checkbox [ref=e2065]
+                    - text: Timex
+                - listitem [ref=e2067]:
+                  - button "See more, Brands" [ref=e2070] [cursor=pointer]: See more
+              - heading "Amazon Sports" [level=2] [ref=e2072]
+              - list "Amazon Sports" [ref=e2073]:
+                - listitem "Popular Shopping Ideas" [ref=e2074]:
+                  - link "Apply Premium Brands filter to narrow results" [ref=e2076] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004227705091%3A21451213011&dc&qid=1781164311&rnid=14630382011&ref=sr_nr_p_n_g-1004227705091_1&ds=v1%3A1H5FVVGLauvEqbRrcOdwbXSDXIY95b9Qh1jcpCm8DZY
+                    - checkbox [ref=e2079]
+                    - text: Premium Brands
+                - listitem "Popular Shopping Ideas" [ref=e2081]:
+                  - link "Apply Top Brands filter to narrow results" [ref=e2083] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004227705091%3A14630392011&dc&qid=1781164311&rnid=14630382011&ref=sr_nr_p_n_g-1004227705091_2&ds=v1%3AfP%2FvGLYsD1QWqkYqa2sBtI%2FVvaP9ZQ5kEl7CtLoHeog
+                    - checkbox [ref=e2086]
+                    - text: Top Brands
+            - group "Special Features" [ref=e2088]:
+              - heading "Special Features" [level=2] [ref=e2089]
+              - list "Special Features" [ref=e2090]:
+                - listitem "Popular Shopping Ideas" [ref=e2091]:
+                  - link "Apply Activity Tracker filter to narrow results" [ref=e2093] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966741011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_1&ds=v1%3AEOspCBQIH3viSrUjpwZpmPf6uqwGEHeY857NAVxlOWw
+                    - checkbox [ref=e2096]
+                    - text: Activity Tracker
+                - listitem "Popular Shopping Ideas" [ref=e2098]:
+                  - link "Apply Alarm Clock filter to narrow results" [ref=e2100] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966781011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_2&ds=v1%3AR7zyCcyPPOzN69iq4LDULWSe2MTCGfic4i56r1fATVo
+                    - checkbox [ref=e2103]
+                    - text: Alarm Clock
+                - listitem "Popular Shopping Ideas" [ref=e2105]:
+                  - link "Apply GPS filter to narrow results" [ref=e2107] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966765011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_3&ds=v1%3AvIjire68gnqmmFr%2FtlrQZcdx9O15H%2Fa14p6sy3yv99o
+                    - checkbox [ref=e2110]
+                    - text: GPS
+                - listitem "Popular Shopping Ideas" [ref=e2112]:
+                  - link "Apply Camera filter to narrow results" [ref=e2114] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966770011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_4&ds=v1%3AQjYQi3y4OgX1Ql30NMsjbfXgFkdUKisESOKQmD%2FrtF0
+                    - checkbox [ref=e2117]
+                    - text: Camera
+                - listitem "Popular Shopping Ideas" [ref=e2119]:
+                  - link "Apply Time Display filter to narrow results" [ref=e2121] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966750011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_5&ds=v1%3AwPPX3MBJ5gpa9NNLv8ysdXEK50paoHLUFIp4w56TtlI
+                    - checkbox [ref=e2124]
+                    - text: Time Display
+                - listitem "Popular Shopping Ideas" [ref=e2126]:
+                  - link "Apply Accelerometer filter to narrow results" [ref=e2128] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966762011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_6&ds=v1%3AzEh3C9I%2FC%2FZw3m6H84t3fWMsyZ84V76sOFmtoAAy7PA
+                    - checkbox [ref=e2131]
+                    - text: Accelerometer
+                - listitem "Popular Shopping Ideas" [ref=e2133]:
+                  - link "Apply Always On Display filter to narrow results" [ref=e2135] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305562111%3A23966778011&dc&qid=1781164311&rnid=23966723011&ref=sr_nr_p_n_g-1003305562111_7&ds=v1%3AGOacX9NeuolVD%2FyOPoi9RfVYt9VMHqFF21VDdt0oe7w
+                    - checkbox [ref=e2138]
+                    - text: Always On Display
+                - listitem [ref=e2140]:
+                  - button "See more, Special Features" [ref=e2143] [cursor=pointer]: See more
+            - group "Deals & Discounts" [ref=e2145]:
+              - heading "Deals & Discounts" [level=2] [ref=e2146]
+              - list "Deals & Discounts" [ref=e2147]:
+                - listitem [ref=e2148]:
+                  - link "All Discounts" [ref=e2150] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_deal_type%3A23566065011&dc&qid=1781164311&rnid=23566063011&ref=sr_nr_p_n_deal_type_1&ds=v1%3AblIVF9L6YhRyaxKidZ01v%2BqZx9F43j%2B2r1RfJonjXjk
+                - listitem [ref=e2151]:
+                  - link "Buy More, Save More" [ref=e2153] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_deal_type%3A210906365011&dc&qid=1781164311&rnid=23566063011&ref=sr_nr_p_n_deal_type_2&ds=v1%3Ab%2B4sBM0WIT3kBV78hKduXs%2FDDj24LPT0NswOUdzn%2Fs0
+                - listitem [ref=e2154]:
+                  - link "Coupons" [ref=e2156] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_deal_type%3A210906366011&dc&qid=1781164311&rnid=23566063011&ref=sr_nr_p_n_deal_type_3&ds=v1%3Aoy0BGzSuq8FdqZkpzxhEkAS6BfGgplmCJhKL7reFcho
+                - listitem [ref=e2157]:
+                  - link "Today's Deals" [ref=e2159] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_deal_type%3A23566064011&dc&qid=1781164311&rnid=23566063011&ref=sr_nr_p_n_deal_type_4&ds=v1%3A7kOX4DPIwnwc2gK%2FytZ%2BagPirMlgxqRXy7kMvR9vxTw
+            - group "Compatible Phone Models" [ref=e2160]:
+              - heading "Compatible Phone Models" [level=2] [ref=e2161]
+              - list "Compatible Phone Models" [ref=e2162]:
+                - listitem "Popular Shopping Ideas" [ref=e2163]:
+                  - link "Apply Android Devices filter to narrow results" [ref=e2165] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101013590440111%3A82343552011&dc&qid=1781164311&rnid=82343544011&ref=sr_nr_p_n_g-101013590440111_1&ds=v1%3AMyPNPfvz4BNnkIIVprtm%2B9pgR6sNfqsJtdZr%2F5ET62Y
+                    - checkbox [ref=e2168]
+                    - text: Android Devices
+                - listitem "Popular Shopping Ideas" [ref=e2170]:
+                  - link "Apply iOS Devices filter to narrow results" [ref=e2172] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101013590440111%3A82343553011&dc&qid=1781164311&rnid=82343544011&ref=sr_nr_p_n_g-101013590440111_2&ds=v1%3ADwVhPIDLDnJgGw9TM8wYN1LZkgC7v8lB2VG4ixvQfHI
+                    - checkbox [ref=e2175]
+                    - text: iOS Devices
+            - group "Condition" [ref=e2177]:
+              - heading "Condition" [level=2] [ref=e2178]
+              - list "Condition" [ref=e2179]:
+                - listitem "Popular Shopping Ideas" [ref=e2180]:
+                  - link "Apply New filter to narrow results" [ref=e2182] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_condition-type%3A2224371011&dc&qid=1781164311&rnid=2224369011&ref=sr_nr_p_n_condition-type_1&ds=v1%3AR%2BQTU3oAiOlyZa57bxb0Db1tUa04brrGtVrFYIaWka8
+                    - checkbox [ref=e2185]
+                    - text: New
+                - listitem "Popular Shopping Ideas" [ref=e2187]:
+                  - link "Apply Renewed filter to narrow results" [ref=e2189] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_condition-type%3A16907720011&dc&qid=1781164311&rnid=2224369011&ref=sr_nr_p_n_condition-type_2&ds=v1%3ATnvIYLGeyjJgbfaXa0inZsz796tVWURsu2FEsY0wEUM
+                    - checkbox [ref=e2192]
+                    - text: Renewed
+                - listitem "Popular Shopping Ideas" [ref=e2194]:
+                  - link "Apply Used filter to narrow results" [ref=e2196] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_condition-type%3A2224373011&dc&qid=1781164311&rnid=2224369011&ref=sr_nr_p_n_condition-type_3&ds=v1%3AA%2Bd7shTwLP1OgJcG7YC%2BNobGQtHywXW7mV7v6%2BAa1Ag
+                    - checkbox [ref=e2199]
+                    - text: Used
+            - group "Water Resistance Level" [ref=e2201]:
+              - heading "Water Resistance Level" [level=2] [ref=e2202]
+              - list "Water Resistance Level" [ref=e2203]:
+                - listitem "Popular Shopping Ideas" [ref=e2204]:
+                  - link "Apply Not Water Resistant filter to narrow results" [ref=e2206] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246264091%3A23484212011&dc&qid=1781164311&rnid=11636674011&ref=sr_nr_p_n_g-1004246264091_1&ds=v1%3AoCh8r0ksqsayBp7W2xNHQoAdAdpaokdgWepcKhz9Cq0
+                    - checkbox [ref=e2209]
+                    - text: Not Water Resistant
+                - listitem "Popular Shopping Ideas" [ref=e2211]:
+                  - link "Apply Water-Resistant filter to narrow results" [ref=e2213] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246264091%3A11636675011&dc&qid=1781164311&rnid=11636674011&ref=sr_nr_p_n_g-1004246264091_2&ds=v1%3A9Po2PNhqFVdtkUEqBlcy83rGj8f%2F%2FodYrFkVz7J%2FL9U
+                    - checkbox [ref=e2216]
+                    - text: Water-Resistant
+                - listitem "Popular Shopping Ideas" [ref=e2218]:
+                  - link "Apply Waterproof filter to narrow results" [ref=e2220] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246264091%3A11636676011&dc&qid=1781164311&rnid=11636674011&ref=sr_nr_p_n_g-1004246264091_3&ds=v1%3Af9rJlEdiiCmBqcQA%2BUzl7o1Nlymlq%2FL5z6k9Le%2FQ5HY
+                    - checkbox [ref=e2223]
+                    - text: Waterproof
+            - group "Band Color" [ref=e2225]:
+              - heading "Band Color" [level=2] [ref=e2226]
+              - list "Band Color" [ref=e2227]:
+                - listitem [ref=e2228]:
+                  - generic:
+                    - link "Apply Black filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896040011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_1&ds=v1%3AP0eMXVBiNOa9r%2BOYPzMmyTbh9Bt4lfGkWet%2FA%2FuZ3Hc
+                - listitem [ref=e2230]:
+                  - generic:
+                    - link "Apply Grey filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896041011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_2&ds=v1%3AuNqEPGdZLHH3IeKNtUl%2BRu7AJoY5%2F9%2FY%2B2qXDQKR37A
+                - listitem [ref=e2232]:
+                  - generic:
+                    - link "Apply White filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896042011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_3&ds=v1%3AwkANkP4TRl7Riz3PJ1EZa5Y0mM9y0fUVAzu3w900Zlc
+                - listitem [ref=e2234]:
+                  - generic:
+                    - link "Apply Brown filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896043011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_4&ds=v1%3ASx8XG24HyWmGxpLr3gM9pw4S5vWBQmhCpYK4PkARR4E
+                - listitem [ref=e2236]:
+                  - generic:
+                    - link "Apply Beige filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896044011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_5&ds=v1%3A5UE%2FrAvIUaVXFGu9Bvx3O90n5tRdmG5dx0s1dDsZJtQ
+                - listitem [ref=e2238]:
+                  - generic:
+                    - link "Apply Red filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896045011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_6&ds=v1%3AHzCfCxnPonttBPddxDKvodu3FUcsoc6fx4eQHW%2FYxS8
+                - listitem [ref=e2240]:
+                  - generic:
+                    - link "Apply Pink filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896046011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_7&ds=v1%3ATy2OY%2BEhROFpumyAUIKa%2FcE8jfF7fmgjSWzkEsWeaHQ
+                - listitem [ref=e2242]:
+                  - generic:
+                    - link "Apply Orange filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896047011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_8&ds=v1%3AHQ4lWKrKVe2GtwCVxnL3HLmM%2BnBnGiWMA2j8iimDt1s
+                - listitem [ref=e2244]:
+                  - generic:
+                    - link "Apply Yellow filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896048011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_9&ds=v1%3A7pZrNc%2BOha0qIKYIY%2FkWqcs76MFlTZ0xdCviqYYE1CQ
+                - listitem [ref=e2246]:
+                  - generic:
+                    - link "Apply Green filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896049011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_10&ds=v1%3A16JO%2FuXtVjKt0TqwA5xaS%2Bdb8yaJsN1dsp%2BraITOVZU
+                - listitem [ref=e2248]:
+                  - generic:
+                    - link "Apply Blue filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896050011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_11&ds=v1%3AMQl7MHSPWNgMiystyjMp9CVyVzat234Bl8as7FX4Wds
+                - listitem [ref=e2250]:
+                  - generic:
+                    - link "Apply Purple filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896051011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_12&ds=v1%3AO7seOdDHLgM3IoAPFb4jBK2H9QC1SuVW8FBbL6X1hV8
+                - listitem [ref=e2252]:
+                  - generic:
+                    - link "Apply Gold filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896052011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_13&ds=v1%3A6JZnu98YJm%2Fsga%2BkucD5x%2F%2BnqY5dcYMS7MJEvURanV8
+                - listitem [ref=e2254]:
+                  - generic:
+                    - link "Apply Silver filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004149082091%3A6896053011&dc&qid=1781164311&rnid=6896039011&ref=sr_nr_p_n_g-1004149082091_14&ds=v1%3ACA4vET%2B2B07a7%2FfMloEhh0kKwJYGrE81%2BtpyHd3QZTM
+            - group "Connectivity Technology" [ref=e2256]:
+              - heading "Connectivity Technology" [level=2] [ref=e2257]
+              - list "Connectivity Technology" [ref=e2258]:
+                - listitem "Popular Shopping Ideas" [ref=e2259]:
+                  - link "Apply Bluetooth filter to narrow results" [ref=e2261] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003496913111%3A25689142011&dc&qid=1781164311&rnid=25689136011&ref=sr_nr_p_n_g-1003496913111_1&ds=v1%3Awqq8lLgVfNmRYZBMim8fL4KRX1sIsWvKXyl4OECQ%2BTU
+                    - checkbox [ref=e2264]
+                    - text: Bluetooth
+                - listitem "Popular Shopping Ideas" [ref=e2266]:
+                  - link "Apply USB filter to narrow results" [ref=e2268] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003496913111%3A25689146011&dc&qid=1781164311&rnid=25689136011&ref=sr_nr_p_n_g-1003496913111_2&ds=v1%3Ae8iesSTq7stm%2FFOL0hXTk6JLcMY8%2BteTOa%2FmnFkT99A
+                    - checkbox [ref=e2271]
+                    - text: USB
+                - listitem "Popular Shopping Ideas" [ref=e2273]:
+                  - link "Apply Wi-Fi filter to narrow results" [ref=e2275] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003496913111%3A25689144011&dc&qid=1781164311&rnid=25689136011&ref=sr_nr_p_n_g-1003496913111_3&ds=v1%3ATp2MYexuBBy7s0eA5DhbM3OagtGnqmLHbOOOoZKz1t4
+                    - checkbox [ref=e2278]
+                    - text: Wi-Fi
+                - listitem "Popular Shopping Ideas" [ref=e2280]:
+                  - link "Apply Cellular filter to narrow results" [ref=e2282] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003496913111%3A25689137011&dc&qid=1781164311&rnid=25689136011&ref=sr_nr_p_n_g-1003496913111_4&ds=v1%3AeUbVEirdI6VQ0m2KCV7%2B%2FKOd6Blyaqns67HwlprjiGI
+                    - checkbox [ref=e2285]
+                    - text: Cellular
+                - listitem "Popular Shopping Ideas" [ref=e2287]:
+                  - link "Apply NFC filter to narrow results" [ref=e2289] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003496913111%3A118645606011&dc&qid=1781164311&rnid=25689136011&ref=sr_nr_p_n_g-1003496913111_5&ds=v1%3ALxdfKrEbCFBr5zRmg8hRC%2BScW9LfX54CK1FY7p5VF58
+                    - checkbox [ref=e2292]
+                    - text: NFC
+            - group "Health & Fitness Features" [ref=e2294]:
+              - heading "Health & Fitness Features" [level=2] [ref=e2295]
+              - list "Health & Fitness Features" [ref=e2296]:
+                - listitem "Popular Shopping Ideas" [ref=e2297]:
+                  - link "Apply Activity Tracker filter to narrow results" [ref=e2299] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474262011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_1&ds=v1%3A1b3U%2F%2BdBV5sxxltwEOtcsSWaYm24bGyv5prGa1nJNXs
+                    - checkbox [ref=e2302]
+                    - text: Activity Tracker
+                - listitem "Popular Shopping Ideas" [ref=e2304]:
+                  - link "Apply Multisport Tracker filter to narrow results" [ref=e2306] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474269011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_2&ds=v1%3A5QvUSiA0zHfxDLR%2F9LCISjeLPLJoPjH9W8Qq3ILD0Y8
+                    - checkbox [ref=e2309]
+                    - text: Multisport Tracker
+                - listitem "Popular Shopping Ideas" [ref=e2311]:
+                  - link "Apply Heart Rate Monitor filter to narrow results" [ref=e2313] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474268011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_3&ds=v1%3ARqYSevjiPnKowLZHNJmDEHKKZtCjgae0sQeR0arpdd4
+                    - checkbox [ref=e2316]
+                    - text: Heart Rate Monitor
+                - listitem "Popular Shopping Ideas" [ref=e2318]:
+                  - link "Apply Pedometer filter to narrow results" [ref=e2320] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474270011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_4&ds=v1%3AhBKhjbD3JlSDl3VxOh49vdD7CMnDJD14ZnR1LYCFmPU
+                    - checkbox [ref=e2323]
+                    - text: Pedometer
+                - listitem "Popular Shopping Ideas" [ref=e2325]:
+                  - link "Apply Blood Pressure Monitor filter to narrow results" [ref=e2327] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474263011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_5&ds=v1%3AD0jge6l66Ggamx8NaOwTY99QUNat5Lps7Db15%2F6zd0U
+                    - checkbox [ref=e2330]
+                    - text: Blood Pressure Monitor
+                - listitem "Popular Shopping Ideas" [ref=e2332]:
+                  - link "Apply Calorie Tracker filter to narrow results" [ref=e2334] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474265011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_6&ds=v1%3ATsZxYVRKQGC9C7dDMdK04gx2vZcI4jWAkhUxdIaa9Jc
+                    - checkbox [ref=e2337]
+                    - text: Calorie Tracker
+                - listitem "Popular Shopping Ideas" [ref=e2339]:
+                  - link "Apply Distance Tracker filter to narrow results" [ref=e2341] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1001308966111%3A18474266011&dc&qid=1781164311&rnid=18474261011&ref=sr_nr_p_n_g-1001308966111_7&ds=v1%3A1DqBYI%2BXhUlaDCeg%2FmJ7NU524cJE1fxwqCQna0z5qyU
+                    - checkbox [ref=e2344]
+                    - text: Distance Tracker
+                - listitem [ref=e2346]:
+                  - button "See more, Health & Fitness Features" [ref=e2349] [cursor=pointer]: See more
+            - group "Shape" [ref=e2351]:
+              - heading "Shape" [level=2] [ref=e2352]
+              - list "Shape" [ref=e2353]:
+                - listitem "Popular Shopping Ideas" [ref=e2354]:
+                  - link "Apply Round filter to narrow results" [ref=e2356] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003148304111%3A23747355011&dc&qid=1781164311&rnid=23747351011&ref=sr_nr_p_n_g-1003148304111_1&ds=v1%3Aa2lP81ZNLdlIMjuJZBtN1GjQ5utkUGl%2F7XIgG67TiU4
+                    - checkbox [ref=e2359]
+                    - text: Round
+                - listitem "Popular Shopping Ideas" [ref=e2361]:
+                  - link "Apply Rectangular filter to narrow results" [ref=e2363] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003148304111%3A23747354011&dc&qid=1781164311&rnid=23747351011&ref=sr_nr_p_n_g-1003148304111_2&ds=v1%3A68Jvez1y1wRrKiRT5fg1rp86sQUTTkGJ26XZ3SNTM3w
+                    - checkbox [ref=e2366]
+                    - text: Rectangular
+                - listitem "Popular Shopping Ideas" [ref=e2368]:
+                  - link "Apply Square filter to narrow results" [ref=e2370] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003148304111%3A23747352011&dc&qid=1781164311&rnid=23747351011&ref=sr_nr_p_n_g-1003148304111_3&ds=v1%3AzkPi3ocHuYs1%2Fji8a4IWQHIUn3qGbmhs3s3jm3B4Jv4
+                    - checkbox [ref=e2373]
+                    - text: Square
+                - listitem "Popular Shopping Ideas" [ref=e2375]:
+                  - link "Apply Octagonal filter to narrow results" [ref=e2377] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003148304111%3A122324563011&dc&qid=1781164311&rnid=23747351011&ref=sr_nr_p_n_g-1003148304111_4&ds=v1%3AET6RWwvhKI0w5T3Qw3CTq9%2FRYbrGSCUYpsTDaE107tQ
+                    - checkbox [ref=e2380]
+                    - text: Octagonal
+                - listitem "Popular Shopping Ideas" [ref=e2382]:
+                  - link "Apply Oval filter to narrow results" [ref=e2384] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003148304111%3A23747353011&dc&qid=1781164311&rnid=23747351011&ref=sr_nr_p_n_g-1003148304111_5&ds=v1%3AYTb24%2Fi%2BiZ8zwXTsKxGkWHWAn7HGwzfTunkYmTXDDDA
+                    - checkbox [ref=e2387]
+                    - text: Oval
+            - group "Metrics Measured" [ref=e2389]:
+              - heading "Metrics Measured" [level=2] [ref=e2390]
+              - list "Metrics Measured" [ref=e2391]:
+                - listitem "Popular Shopping Ideas" [ref=e2392]:
+                  - link "Apply Step Count filter to narrow results" [ref=e2394] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576454011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_1&ds=v1%3ABs2fsPbBtD6x%2FaVi25R%2BPW2%2Bi%2B7ZUuWeZ%2FaHoF%2BzXF0
+                    - checkbox [ref=e2397]
+                    - text: Step Count
+                - listitem "Popular Shopping Ideas" [ref=e2399]:
+                  - link "Apply Heart Rate filter to narrow results" [ref=e2401] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576456011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_2&ds=v1%3Ato3tIf8hW7IlDrP9K4XY%2BIEhluo6RzrF5Ec28iUb%2FfU
+                    - checkbox [ref=e2404]
+                    - text: Heart Rate
+                - listitem "Popular Shopping Ideas" [ref=e2406]:
+                  - link "Apply Sleep Duration filter to narrow results" [ref=e2408] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576449011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_3&ds=v1%3AeMKkuJ4Z69cs7vU0K%2FGksjbbJJ%2Bj3hl5Gwlia3yQLFU
+                    - checkbox [ref=e2411]
+                    - text: Sleep Duration
+                - listitem "Popular Shopping Ideas" [ref=e2413]:
+                  - link "Apply Blood Oxygen (SpO2) filter to narrow results" [ref=e2415] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576453011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_4&ds=v1%3Ah3bKfpuVLwNFdbwBbLIs%2BypJfo6buU93ZSRzS0yhilM
+                    - checkbox [ref=e2418]
+                    - text: Blood Oxygen (SpO2)
+                - listitem "Popular Shopping Ideas" [ref=e2420]:
+                  - link "Apply Blood Pressure filter to narrow results" [ref=e2422] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576460011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_5&ds=v1%3A2%2FdcV8MlIGAf%2F2irzFb72FGUmrCExV1d7QmGZiFfY0w
+                    - checkbox [ref=e2425]
+                    - text: Blood Pressure
+                - listitem "Popular Shopping Ideas" [ref=e2427]:
+                  - link "Apply Breath Rate filter to narrow results" [ref=e2429] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576452011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_6&ds=v1%3Ao4W1rAFHHgmndnwrxKiO8mCUDCF9PIeiTAyc1tCsKSk
+                    - checkbox [ref=e2432]
+                    - text: Breath Rate
+                - listitem "Popular Shopping Ideas" [ref=e2434]:
+                  - link "Apply Calories Burned filter to narrow results" [ref=e2436] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015134034111%3A120576450011&dc&qid=1781164311&rnid=120576379011&ref=sr_nr_p_n_g-101015134034111_7&ds=v1%3ASDCBSc2CpjyhrmKip%2BAqMUs6Bk99Ob6pYEHfmhzKaGM
+                    - checkbox [ref=e2439]
+                    - text: Calories Burned
+                - listitem [ref=e2441]:
+                  - button "See more, Metrics Measured" [ref=e2444] [cursor=pointer]: See more
+            - group "Department" [ref=e2446]:
+              - heading "Department" [level=2] [ref=e2447]
+              - list "Department" [ref=e2448]:
+                - listitem "Popular Shopping Ideas" [ref=e2449]:
+                  - link "Apply Men filter to narrow results" [ref=e2451] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246260091%3A10075311011&dc&qid=1781164311&rnid=10075310011&ref=sr_nr_p_n_g-1004246260091_1&ds=v1%3AD3%2B9g2ePkFFO4FN01IMDXQ8mVgPulHKHRI%2Fk47zUwDE
+                    - checkbox [ref=e2454]
+                    - text: Men
+                - listitem "Popular Shopping Ideas" [ref=e2456]:
+                  - link "Apply Women filter to narrow results" [ref=e2458] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246260091%3A10075312011&dc&qid=1781164311&rnid=10075310011&ref=sr_nr_p_n_g-1004246260091_2&ds=v1%3AoVTr3620KinBXbE7yll3B3%2BDIMArp8ah6wr3hrAPlss
+                    - checkbox [ref=e2461]
+                    - text: Women
+                - listitem "Popular Shopping Ideas" [ref=e2463]:
+                  - link "Apply Boys filter to narrow results" [ref=e2465] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246260091%3A10075313011&dc&qid=1781164311&rnid=10075310011&ref=sr_nr_p_n_g-1004246260091_3&ds=v1%3AVh6L8X6jctlMnxQCHPurcl%2Fx2RyGrO%2FLq2fedxZTZb8
+                    - checkbox [ref=e2468]
+                    - text: Boys
+                - listitem "Popular Shopping Ideas" [ref=e2470]:
+                  - link "Apply Girls filter to narrow results" [ref=e2472] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004246260091%3A10075314011&dc&qid=1781164311&rnid=10075310011&ref=sr_nr_p_n_g-1004246260091_4&ds=v1%3AmaLJ9pQ2UEJZPiW0BhW7gZQc9LBGg9WB3vbe3qJChyI
+                    - checkbox [ref=e2475]
+                    - text: Girls
+            - group "Target Audience" [ref=e2477]:
+              - heading "Target Audience" [level=2] [ref=e2478]
+              - list "Target Audience" [ref=e2479]:
+                - listitem "Popular Shopping Ideas" [ref=e2480]:
+                  - link "Apply Men filter to narrow results" [ref=e2482] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935489011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_1&ds=v1%3AL2eIzbKqlA7He1vSqq6I%2BR9R%2BoKYpf8l%2BieOuHlM%2FUY
+                    - checkbox [ref=e2485]
+                    - text: Men
+                - listitem "Popular Shopping Ideas" [ref=e2487]:
+                  - link "Apply Unisex Adults filter to narrow results" [ref=e2489] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935482011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_2&ds=v1%3Aoxkjpiy3%2BT7KLTdVan76iGZlskGqTrhefwQvaZ4%2BBWI
+                    - checkbox [ref=e2492]
+                    - text: Unisex Adults
+                - listitem "Popular Shopping Ideas" [ref=e2494]:
+                  - link "Apply Women filter to narrow results" [ref=e2496] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935481011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_3&ds=v1%3AlUiyL6bgZ3li6fulcibGrjyzFVRsi9VsW6MZpxtAcSo
+                    - checkbox [ref=e2499]
+                    - text: Women
+                - listitem "Popular Shopping Ideas" [ref=e2501]:
+                  - link "Apply Boys filter to narrow results" [ref=e2503] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935484011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_4&ds=v1%3Atdsv5c8cFrvofbVSKtVb%2BpAypyil5VDYwIL9eCmiN10
+                    - checkbox [ref=e2506]
+                    - text: Boys
+                - listitem "Popular Shopping Ideas" [ref=e2508]:
+                  - link "Apply Baby Boys filter to narrow results" [ref=e2510] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935483011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_5&ds=v1%3Ar2PUt%2BzPo6pm4hWfykTeVDbJNpoeEETP3Tu4U7hHw1Y
+                    - checkbox [ref=e2513]
+                    - text: Baby Boys
+                - listitem "Popular Shopping Ideas" [ref=e2515]:
+                  - link "Apply Baby Girls filter to narrow results" [ref=e2517] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935487011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_6&ds=v1%3AKiRkbDdEbSfbw%2B63stlrrMmQgqg5hM%2B9gtTShsTKWSc
+                    - checkbox [ref=e2520]
+                    - text: Baby Girls
+                - listitem "Popular Shopping Ideas" [ref=e2522]:
+                  - link "Apply Girls filter to narrow results" [ref=e2524] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003495478111%3A24935488011&dc&qid=1781164311&rnid=24935480011&ref=sr_nr_p_n_g-1003495478111_7&ds=v1%3A7mzkY32%2FA%2FTy4zWoNWcn%2FdCIHlPGdvysffqD7DfQjLA
+                    - checkbox [ref=e2527]
+                    - text: Girls
+                - listitem [ref=e2529]:
+                  - button "See more, Target Audience" [ref=e2532] [cursor=pointer]: See more
+            - group "Compatible Devices" [ref=e2534]:
+              - heading "Compatible Devices" [level=2] [ref=e2535]
+              - list "Compatible Devices" [ref=e2536]:
+                - listitem "Popular Shopping Ideas" [ref=e2537]:
+                  - link "Apply Laptop filter to narrow results" [ref=e2539] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101014842762111%3A117987611011&dc&qid=1781164311&rnid=117987468011&ref=sr_nr_p_n_g-101014842762111_1&ds=v1%3AJrcJT0PAH7Bl%2BPVjDhD66TSB5JjXutTvS5GGNMUABNQ
+                    - checkbox [ref=e2542]
+                    - text: Laptop
+                - listitem "Popular Shopping Ideas" [ref=e2544]:
+                  - link "Apply PC filter to narrow results" [ref=e2546] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101014842762111%3A117987612011&dc&qid=1781164311&rnid=117987468011&ref=sr_nr_p_n_g-101014842762111_2&ds=v1%3AcStIu0QjMfXG09Z0TgPFUIrhyLDYdeeq7b9KWvH2SZc
+                    - checkbox [ref=e2549]
+                    - text: PC
+                - listitem "Popular Shopping Ideas" [ref=e2551]:
+                  - link "Apply Smartphone filter to narrow results" [ref=e2553] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101014842762111%3A117987609011&dc&qid=1781164311&rnid=117987468011&ref=sr_nr_p_n_g-101014842762111_3&ds=v1%3AbNgxcBoGTbGvmnyg%2BAb6%2FDcUkcg6Pn2ZNRKe%2FG8vf0A
+                    - checkbox [ref=e2556]
+                    - text: Smartphone
+                - listitem "Popular Shopping Ideas" [ref=e2558]:
+                  - link "Apply Tablet filter to narrow results" [ref=e2560] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101014842762111%3A117987610011&dc&qid=1781164311&rnid=117987468011&ref=sr_nr_p_n_g-101014842762111_4&ds=v1%3Aw1KfTFJ%2Bwf1dycMHLDI0tuEjrvXGsM8Derexfasu%2FJQ
+                    - checkbox [ref=e2563]
+                    - text: Tablet
+            - group "Sport Type" [ref=e2565]:
+              - heading "Sport Type" [level=2] [ref=e2566]
+              - list "Sport Type" [ref=e2567]:
+                - listitem "Popular Shopping Ideas" [ref=e2568]:
+                  - link "Apply Running filter to narrow results" [ref=e2570] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161573011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_1&ds=v1%3AuA7%2BbPtyC2Pp0hkszyJJCMif2NlDQ%2BtF9rC240g2F24
+                    - checkbox [ref=e2573]
+                    - text: Running
+                - listitem "Popular Shopping Ideas" [ref=e2575]:
+                  - link "Apply Fitness filter to narrow results" [ref=e2577] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161553011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_2&ds=v1%3Atux9R8p6OMU%2BnAjys7f9jhTFQ4v%2FLXVr9GP2I%2FoVUGY
+                    - checkbox [ref=e2580]
+                    - text: Fitness
+                - listitem "Popular Shopping Ideas" [ref=e2582]:
+                  - link "Apply Walking filter to narrow results" [ref=e2584] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161567011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_3&ds=v1%3A%2Fou3DAacKeUTIN84InVfezKRdtAKYr%2BpbWa%2B2nks%2F40
+                    - checkbox [ref=e2587]
+                    - text: Walking
+                - listitem "Popular Shopping Ideas" [ref=e2589]:
+                  - link "Apply Badminton filter to narrow results" [ref=e2591] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161554011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_4&ds=v1%3AcMlCgl9Yhg%2F5RSUsGmKFUBJbnzJtRRR74tqiFeejBuM
+                    - checkbox [ref=e2594]
+                    - text: Badminton
+                - listitem "Popular Shopping Ideas" [ref=e2596]:
+                  - link "Apply Basketball filter to narrow results" [ref=e2598] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161552011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_5&ds=v1%3AEr0%2BhR0ZQ3VHFPhke98YRbQZCiyXf%2BfnK7n7KCq37Io
+                    - checkbox [ref=e2601]
+                    - text: Basketball
+                - listitem "Popular Shopping Ideas" [ref=e2603]:
+                  - link "Apply Boating filter to narrow results" [ref=e2605] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161572011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_6&ds=v1%3A1iGM0d5ccQ63gKiX54Zh4JwwjrMWfKIzT6as3%2FEYbao
+                    - checkbox [ref=e2608]
+                    - text: Boating
+                - listitem "Popular Shopping Ideas" [ref=e2610]:
+                  - link "Apply Climbing filter to narrow results" [ref=e2612] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003468809111%3A25161565011&dc&qid=1781164311&rnid=25161540011&ref=sr_nr_p_n_g-1003468809111_7&ds=v1%3A7eRJGbanqERidunY%2BO1p8hqk9bD4IpTAyz3CyInTrjM
+                    - checkbox [ref=e2615]
+                    - text: Climbing
+                - listitem [ref=e2617]:
+                  - button "See more, Sport Type" [ref=e2620] [cursor=pointer]: See more
+            - group "Display Type" [ref=e2622]:
+              - heading "Display Type" [level=2] [ref=e2623]
+              - list "Display Type" [ref=e2624]:
+                - listitem "Popular Shopping Ideas" [ref=e2625]:
+                  - link "Apply AMOLED filter to narrow results" [ref=e2627] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966726011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_1&ds=v1%3ALQzsT7RVHI7Kq3L5gvMi5X7hpE7GipsDaEA%2FOYbFlAg
+                    - checkbox [ref=e2630]
+                    - text: AMOLED
+                - listitem "Popular Shopping Ideas" [ref=e2632]:
+                  - link "Apply Analog filter to narrow results" [ref=e2634] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966725011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_2&ds=v1%3Alsmi3KY0ZxyycEfHVABvQOKK5VeDPW6UTxdEZoZ5W68
+                    - checkbox [ref=e2637]
+                    - text: Analog
+                - listitem "Popular Shopping Ideas" [ref=e2639]:
+                  - link "Apply Analog-Digital filter to narrow results" [ref=e2641] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966729011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_3&ds=v1%3AyCfrcTjUw%2FSKd9wr904Af1bozO2KPPX6ppEUR7mNZbs
+                    - checkbox [ref=e2644]
+                    - text: Analog-Digital
+                - listitem "Popular Shopping Ideas" [ref=e2646]:
+                  - link "Apply LCD filter to narrow results" [ref=e2648] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966724011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_4&ds=v1%3Atylv1oCngLmz1%2FQwFwBKnVeBSrPjxI0Z68FR8k9PzH8
+                    - checkbox [ref=e2651]
+                    - text: LCD
+                - listitem "Popular Shopping Ideas" [ref=e2653]:
+                  - link "Apply LED filter to narrow results" [ref=e2655] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966728011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_5&ds=v1%3AsZRGuwun284BT%2BvGLyW0GuTaT8Gjp0ovoByukx4S65g
+                    - checkbox [ref=e2658]
+                    - text: LED
+                - listitem "Popular Shopping Ideas" [ref=e2660]:
+                  - link "Apply OLED filter to narrow results" [ref=e2662] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966730011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_6&ds=v1%3AitYuCmPLjyJb%2FSwiWeXeHogHJHWnrlov%2FlaoTxFHVeE
+                    - checkbox [ref=e2665]
+                    - text: OLED
+                - listitem "Popular Shopping Ideas" [ref=e2667]:
+                  - link "Apply No Display filter to narrow results" [ref=e2669] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A23966727011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_7&ds=v1%3AmJFLGVFEbltoaARF5YH2TtZniku44ePnhNjFJX0sHGc
+                    - checkbox [ref=e2672]
+                    - text: No Display
+                - listitem "Popular Shopping Ideas" [ref=e2674]:
+                  - link "Apply Digital filter to narrow results" [ref=e2676] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304778111%3A78743026011&dc&qid=1781164311&rnid=23966721011&ref=sr_nr_p_n_g-1003304778111_8&ds=v1%3AISH2%2BpaDpEqyHkUSocd4KuDrBursin8YCTaPgfCMNsE
+                    - checkbox [ref=e2679]
+                    - text: Digital
+            - group "Style" [ref=e2681]:
+              - heading "Style" [level=2] [ref=e2682]
+              - list "Style" [ref=e2683]:
+                - listitem "Popular Shopping Ideas" [ref=e2684]:
+                  - link "Apply Modern filter to narrow results" [ref=e2686] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953543011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_1&ds=v1%3AFHXult7Fd5k6zjZmPj3LQK%2FJCeIqiHaAziObya66jKQ
+                    - checkbox [ref=e2689]
+                    - text: Modern
+                - listitem "Popular Shopping Ideas" [ref=e2691]:
+                  - link "Apply Casual filter to narrow results" [ref=e2693] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953546011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_2&ds=v1%3AElTcRXcTM8NDSVJBenkZf9F6SZ1Jr7oO96XWyQSJQhI
+                    - checkbox [ref=e2696]
+                    - text: Casual
+                - listitem "Popular Shopping Ideas" [ref=e2698]:
+                  - link "Apply Classic filter to narrow results" [ref=e2700] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953544011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_3&ds=v1%3AMrVQRJ4EKb2GBaDf%2BbS11zgOG7wDJyLc%2Fv3z26K%2FnJ8
+                    - checkbox [ref=e2703]
+                    - text: Classic
+                - listitem "Popular Shopping Ideas" [ref=e2705]:
+                  - link "Apply Bohemian filter to narrow results" [ref=e2707] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A214322147011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_4&ds=v1%3Ayh6dppCqG7pYIOSJVylBlKTcr4MG7exSW4xKa%2Ban1%2Bw
+                    - checkbox [ref=e2710]
+                    - text: Bohemian
+                - listitem "Popular Shopping Ideas" [ref=e2712]:
+                  - link "Apply Hybrid filter to narrow results" [ref=e2714] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953541011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_5&ds=v1%3AyeeCHuAEPwPuFEGQA9AzBiC%2FY%2FAGsykuIfAUTYWEtVA
+                    - checkbox [ref=e2717]
+                    - text: Hybrid
+                - listitem "Popular Shopping Ideas" [ref=e2719]:
+                  - link "Apply Minimalist filter to narrow results" [ref=e2721] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953540011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_6&ds=v1%3AJFyT9ZNOyROLtxSQ%2B%2FW9CvOZrWlvFu3wkh7rbn7ivr0
+                    - checkbox [ref=e2724]
+                    - text: Minimalist
+                - listitem "Popular Shopping Ideas" [ref=e2726]:
+                  - link "Apply Retro filter to narrow results" [ref=e2728] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953542011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_7&ds=v1%3AxFLncgnCje3VexkPb9kOtpedrtoNoRRgwHZFBFzM3T8
+                    - checkbox [ref=e2731]
+                    - text: Retro
+                - listitem "Popular Shopping Ideas" [ref=e2733]:
+                  - link "Apply Tactical filter to narrow results" [ref=e2735] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305093111%3A23953545011&dc&qid=1781164311&rnid=23953538011&ref=sr_nr_p_n_g-1003305093111_8&ds=v1%3As4xq0gEcA6TFlgYbPy6KoYirJGIxQmvZgRey8JmuzAI
+                    - checkbox [ref=e2738]
+                    - text: Tactical
+            - group "Screen Size" [ref=e2740]:
+              - heading "Screen Size" [level=2] [ref=e2741]
+              - list "Screen Size" [ref=e2742]:
+                - listitem "Popular Shopping Ideas" [ref=e2743]:
+                  - link "Apply Up to 32.9 mm filter to narrow results" [ref=e2745] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003532321111%3A41942832011&dc&qid=1781164311&rnid=41941890011&ref=sr_nr_p_n_g-1003532321111_1&ds=v1%3AN5YHqr9JN6MfjbsGJQwgzAEVmJai%2FRaYC052wUjJU1A
+                    - checkbox [ref=e2748]
+                    - text: Up to 32.9 mm
+                - listitem "Popular Shopping Ideas" [ref=e2750]:
+                  - link "Apply 33.0 to 34.9 mm filter to narrow results" [ref=e2752] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003532321111%3A41942830011&dc&qid=1781164311&rnid=41941890011&ref=sr_nr_p_n_g-1003532321111_2&ds=v1%3AOW24PmRlaAy4aU%2BUtaWq7thuCCe86drZ0gYE07A8gaM
+                    - checkbox [ref=e2755]
+                    - text: 33.0 to 34.9 mm
+                - listitem "Popular Shopping Ideas" [ref=e2757]:
+                  - link "Apply 35.0 to 36.9 mm filter to narrow results" [ref=e2759] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003532321111%3A41942831011&dc&qid=1781164311&rnid=41941890011&ref=sr_nr_p_n_g-1003532321111_3&ds=v1%3AVAXoCJ%2FOqSXMB4ReLlRgq8EEJ1YFZY2jM%2FtJ4XPHRis
+                    - checkbox [ref=e2762]
+                    - text: 35.0 to 36.9 mm
+                - listitem "Popular Shopping Ideas" [ref=e2764]:
+                  - link "Apply 37.0 mm & above filter to narrow results" [ref=e2766] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003532321111%3A41942833011&dc&qid=1781164311&rnid=41941890011&ref=sr_nr_p_n_g-1003532321111_4&ds=v1%3AFd798RM45qeSK0GmazuXTTOJCwSDpBo01M%2BfOx0h3w4
+                    - checkbox [ref=e2769]
+                    - text: 37.0 mm & above
+            - group "Case Diameter" [ref=e2771]:
+              - heading "Case Diameter" [level=2] [ref=e2772]
+              - list "Case Diameter" [ref=e2773]:
+                - listitem "Popular Shopping Ideas" [ref=e2774]:
+                  - link "Apply Under 20mm filter to narrow results" [ref=e2776] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A2205707011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_1&ds=v1%3A8xVGEZyqBhobDlidjbquFwhgsF1ViZtDNW9nGAG7aT4
+                    - checkbox [ref=e2779]
+                    - text: Under 20mm
+                - listitem "Popular Shopping Ideas" [ref=e2781]:
+                  - link "Apply 20mm to 24mm filter to narrow results" [ref=e2783] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A8755754011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_2&ds=v1%3A%2FwdGippXPpdhozT62eqKxGwJ2H%2B4UEBy7SY7TGFlAO0
+                    - checkbox [ref=e2786]
+                    - text: 20mm to 24mm
+                - listitem "Popular Shopping Ideas" [ref=e2788]:
+                  - generic [ref=e2789]:
+                    - checkbox [disabled] [ref=e2792]
+                    - text: 25mm to 29mm
+                - listitem "Popular Shopping Ideas" [ref=e2794]:
+                  - link "Apply 30mm to 34mm filter to narrow results" [ref=e2796] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A8755756011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_4&ds=v1%3AhWHeQaUFLKj08m9YeB%2FQfTM%2FEKiFNqMQCaugYSE7Tk8
+                    - checkbox [ref=e2799]
+                    - text: 30mm to 34mm
+                - listitem "Popular Shopping Ideas" [ref=e2801]:
+                  - link "Apply 35mm to 39mm filter to narrow results" [ref=e2803] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A8755757011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_5&ds=v1%3AY0FjPejtVoJVGKd3h9yXVdecsy8K1bLghOlgQuAh48o
+                    - checkbox [ref=e2806]
+                    - text: 35mm to 39mm
+                - listitem "Popular Shopping Ideas" [ref=e2808]:
+                  - link "Apply 40mm to 44mm filter to narrow results" [ref=e2810] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A8755758011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_6&ds=v1%3AT0fYdAgPA0G%2FA0%2BXQUW%2FsXm08I8t5wPQ6E7oD3Vq72s
+                    - checkbox [ref=e2813]
+                    - text: 40mm to 44mm
+                - listitem "Popular Shopping Ideas" [ref=e2815]:
+                  - link "Apply 45mm to 49mm filter to narrow results" [ref=e2817] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A8755759011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_7&ds=v1%3AJEjBEyyqHtUU2gu6CUIN2KospzjMlNvdj3QKvhBXwTE
+                    - checkbox [ref=e2820]
+                    - text: 45mm to 49mm
+                - listitem "Popular Shopping Ideas" [ref=e2822]:
+                  - link "Apply 50mm & Over filter to narrow results" [ref=e2824] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1004149113091%3A2205711011&dc&qid=1781164311&rnid=2205641011&ref=sr_nr_p_n_g-1004149113091_8&ds=v1%3A2gCD6aHTe05cZ%2BZy7VDM2Gqud5GDeN65lqgt3A6ktDU
+                    - checkbox [ref=e2827]
+                    - text: 50mm & Over
+            - group "Band Material Type" [ref=e2829]:
+              - heading "Band Material Type" [level=2] [ref=e2830]
+              - list "Band Material Type" [ref=e2831]:
+                - listitem "Popular Shopping Ideas" [ref=e2832]:
+                  - link "Apply Silicone filter to narrow results" [ref=e2834] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A23966736011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_1&ds=v1%3ANo2%2BWgQGU5G0HIAq2%2FaGF9pF15HwRfvLDEtwuigb5pw
+                    - checkbox [ref=e2837]
+                    - text: Silicone
+                - listitem "Popular Shopping Ideas" [ref=e2839]:
+                  - link "Apply Stainless Steel filter to narrow results" [ref=e2841] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A23966733011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_2&ds=v1%3Afrkz2yq1ox4v5a%2FK1bFZ3vvTbXzvvSTNzrL6N73DdXA
+                    - checkbox [ref=e2844]
+                    - text: Stainless Steel
+                - listitem "Popular Shopping Ideas" [ref=e2846]:
+                  - link "Apply Nylon filter to narrow results" [ref=e2848] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A23966738011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_3&ds=v1%3AdNcV0HX1rjXweO9wLGUZPwogfSxpaucURNmELFp1y5M
+                    - checkbox [ref=e2851]
+                    - text: Nylon
+                - listitem "Popular Shopping Ideas" [ref=e2853]:
+                  - link "Apply Aluminium filter to narrow results" [ref=e2855] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A214322310011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_4&ds=v1%3AsXMYtny7LwM18oc7hNTeM8p9MIAV3LPDIi9C8ybz5PE
+                    - checkbox [ref=e2858]
+                    - text: Aluminium
+                - listitem "Popular Shopping Ideas" [ref=e2860]:
+                  - link "Apply Faux Leather filter to narrow results" [ref=e2862] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A23966731011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_5&ds=v1%3ABAEn0YDeiwvbGix%2Fqm6r4bJ0emne8eeN17Ztzbz8FYQ
+                    - checkbox [ref=e2865]
+                    - text: Faux Leather
+                - listitem "Popular Shopping Ideas" [ref=e2867]:
+                  - link "Apply Fluoroelastomer filter to narrow results" [ref=e2869] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A23966732011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_6&ds=v1%3A%2B%2BMkRM7BQuRtVHU7tXZz0b1wI5rH4IFAqAb%2FIyNL9eU
+                    - checkbox [ref=e2872]
+                    - text: Fluoroelastomer
+                - listitem "Popular Shopping Ideas" [ref=e2874]:
+                  - link "Apply Leather filter to narrow results" [ref=e2876] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003304515111%3A23966737011&dc&qid=1781164311&rnid=23966722011&ref=sr_nr_p_n_g-1003304515111_7&ds=v1%3Aj3%2FvLi8094nphHqYqdvvoNNjOcnwIrQt4pNd5SsPS%2F4
+                    - checkbox [ref=e2879]
+                    - text: Leather
+                - listitem [ref=e2881]:
+                  - button "See more, Band Material Type" [ref=e2884] [cursor=pointer]: See more
+            - group "GPS" [ref=e2886]:
+              - heading "GPS" [level=2] [ref=e2887]
+              - list "GPS" [ref=e2888]:
+                - listitem "Popular Shopping Ideas" [ref=e2889]:
+                  - link "Apply Built-in GPS filter to narrow results" [ref=e2891] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002507292111%3A23534284011&dc&qid=1781164311&rnid=23534185011&ref=sr_nr_p_n_g-1002507292111_1&ds=v1%3AawZpVqZ%2F9sEwGPAvJfKM4pxyGAlYfqRAahY9DOApmlA
+                    - checkbox [ref=e2894]
+                    - text: Built-in GPS
+                - listitem "Popular Shopping Ideas" [ref=e2896]:
+                  - link "Apply GPS Via Smartphone filter to narrow results" [ref=e2898] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002507292111%3A23534283011&dc&qid=1781164311&rnid=23534185011&ref=sr_nr_p_n_g-1002507292111_2&ds=v1%3AyKAfEf%2By4aOilRNejBACaph4M5JWYlG%2Ft5YDa11Q7ZU
+                    - checkbox [ref=e2901]
+                    - text: GPS Via Smartphone
+                - listitem "Popular Shopping Ideas" [ref=e2903]:
+                  - link "Apply No GPS filter to narrow results" [ref=e2905] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002507292111%3A23534282011&dc&qid=1781164311&rnid=23534185011&ref=sr_nr_p_n_g-1002507292111_3&ds=v1%3ANYLwvAXoaPR%2FWoRQuxdSdyz4%2BihCCgq40DhcHtcxQcI
+                    - checkbox [ref=e2908]
+                    - text: No GPS
+            - group "Controller Type" [ref=e2910]:
+              - heading "Controller Type" [level=2] [ref=e2911]
+              - list "Controller Type" [ref=e2912]:
+                - listitem "Popular Shopping Ideas" [ref=e2913]:
+                  - link "Apply Amazon Alexa filter to narrow results" [ref=e2915] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003491469111%3A24834032011&dc&qid=1781164311&rnid=24834029011&ref=sr_nr_p_n_g-1003491469111_1&ds=v1%3AKfCaGpxURj9UgDbOZjrzs%2B4G3a4Z4VUxnDTsO91qItw
+                    - checkbox [ref=e2918]
+                    - text: Amazon Alexa
+                - listitem "Popular Shopping Ideas" [ref=e2920]:
+                  - link "Apply Google Assistant filter to narrow results" [ref=e2922] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003491469111%3A24834031011&dc&qid=1781164311&rnid=24834029011&ref=sr_nr_p_n_g-1003491469111_2&ds=v1%3A1khAOJr%2BQBP8OuGATW2c89dNHiJi6wvr8LF7lch7URM
+                    - checkbox [ref=e2925]
+                    - text: Google Assistant
+                - listitem "Popular Shopping Ideas" [ref=e2927]:
+                  - link "Apply Siri filter to narrow results" [ref=e2929] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003491469111%3A24834030011&dc&qid=1781164311&rnid=24834029011&ref=sr_nr_p_n_g-1003491469111_3&ds=v1%3Avr5g5x3MfqWJ%2BZ7zQsDvMXMFzHEvlV%2BJQP0FvPsEg2w
+                    - checkbox [ref=e2932]
+                    - text: Siri
+            - group "Color" [ref=e2934]:
+              - heading "Color" [level=2] [ref=e2935]
+              - list "Color" [ref=e2936]:
+                - listitem [ref=e2937]:
+                  - generic:
+                    - link "Apply Black filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343349011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_1&ds=v1%3Axf1lSe2Uis6Og0B6QV5sgxxzE2qAJgqpDfdVVIHcnS0
+                - listitem [ref=e2939]:
+                  - generic:
+                    - link "Apply Silvers filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343362011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_2&ds=v1%3ALdaQyhqbJbenLVw3JZ0wSsybacSWepOI8Y4S%2BJhpQS8
+                - listitem [ref=e2941]:
+                  - generic:
+                    - link "Apply Golds filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343353011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_3&ds=v1%3AeOKFxe5xddmK5dH%2B%2BDxIW7QjiMvgPVgLDKM9kT%2F39VY
+                - listitem [ref=e2943]:
+                  - generic:
+                    - link "Apply Greys filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343354011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_4&ds=v1%3ARzlyvsL4NrWJgKg29QUPNHpTiSgbPNqAZvu%2Bz1bpx7c
+                - listitem [ref=e2945]:
+                  - generic:
+                    - link "Apply White filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343363011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_5&ds=v1%3AdvmB0HEGypTkdYv6RJdr4P3uuVpMorqKP2fmHVlryAM
+                - listitem [ref=e2947]:
+                  - generic:
+                    - link "Apply Browns filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343351011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_6&ds=v1%3Ay%2Bh5t5GPAyMNaoxpBaKK6EZFP0P7hzsxnzSHlyARjtM
+                - listitem [ref=e2949]:
+                  - generic:
+                    - link "Apply Beige filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343348011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_7&ds=v1%3AhcascYDPWOFdj%2FzIUAkeroc0NbGu9k9DG46qlZ0P%2FrE
+                - listitem [ref=e2951]:
+                  - generic:
+                    - link "Apply Reds filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343361011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_8&ds=v1%3AK1U%2FtWz%2BZhp0%2BBzYqPwpB5hCp65AszEE7se1ttTdegE
+                - listitem [ref=e2953]:
+                  - generic:
+                    - link "Apply Pinks filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343359011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_9&ds=v1%3Az1usuebxypaVjtdQdrVJyQvP6sNREzk3vGhazG6zagM
+                - listitem [ref=e2955]:
+                  - generic:
+                    - link "Apply Oranges filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343358011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_10&ds=v1%3AiuhfGKlXhtecDAkm2pj%2FlH3lsLhj7%2F7tjZfCn1lqAZA
+                - listitem [ref=e2957]:
+                  - generic:
+                    - link "Apply Yellows filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343364011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_11&ds=v1%3AWizPV4%2BbdaHLMb3%2BlgDwS5zQ13sP0X4HmhkX3zZooSk
+                - listitem [ref=e2959]:
+                  - generic:
+                    - link "Apply Greens filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343355011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_12&ds=v1%3AOXZEglCTuguauabVOHk%2FNxjFzTn2801TrIqkMsZRinE
+                - listitem [ref=e2961]:
+                  - generic:
+                    - link "Apply Blues filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343350011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_13&ds=v1%3AkWjPy2i9PycGpyvaOZxLzoQIJsghaSOpe2qZ2ar8qPw
+                - listitem [ref=e2963]:
+                  - generic:
+                    - link "Apply Purples filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343360011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_14&ds=v1%3AJMC8bGkami8ElGyoKXFpVt0jcI6kb3AJi80gP3mrfZI
+                - listitem [ref=e2965]:
+                  - generic:
+                    - link "Apply Multi filter to narrow results":
+                      - /url: /s?k=Smart+Watch&rh=p_n_g-1004232833091%3A2343357011&dc&qid=1781164311&rnid=2343347011&ref=sr_nr_p_n_g-1004232833091_15&ds=v1%3Ae%2BTEYat7lBjcbPFrP6rKWFNL1vp%2FmgbVYPbDbhp2Y%2F8
+            - group "Operating System" [ref=e2967]:
+              - heading "Operating System" [level=2] [ref=e2968]
+              - list "Operating System" [ref=e2969]:
+                - listitem "Popular Shopping Ideas" [ref=e2970]:
+                  - link "Apply Android Wear filter to narrow results" [ref=e2972] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A23496328011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_1&ds=v1%3A3tcSWKUnsAa58bLYOMSyZa1y6v90o%2BIzw6aUgXF5UNY
+                    - checkbox [ref=e2975]
+                    - text: Android Wear
+                - listitem "Popular Shopping Ideas" [ref=e2977]:
+                  - link "Apply watchOS filter to narrow results" [ref=e2979] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A23496335011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_2&ds=v1%3A38n%2BEsZuayUQQTVlM0UVsI5uZqrsq1GinhTwJbWj55I
+                    - checkbox [ref=e2982]
+                    - text: watchOS
+                - listitem "Popular Shopping Ideas" [ref=e2984]:
+                  - link "Apply AsteroidOS filter to narrow results" [ref=e2986] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A23496334011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_3&ds=v1%3AuxlYjXVvuDHsHZW8LHGCdJXo6Ao4UL5WdYKl7OhroF0
+                    - checkbox [ref=e2989]
+                    - text: AsteroidOS
+                - listitem "Popular Shopping Ideas" [ref=e2991]:
+                  - link "Apply Tizen filter to narrow results" [ref=e2993] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A23496332011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_4&ds=v1%3AI3kBpiSiBwyjbxGyn8JenOQB4NZubihHZungnuv9VnQ
+                    - checkbox [ref=e2996]
+                    - text: Tizen
+                - listitem "Popular Shopping Ideas" [ref=e2998]:
+                  - link "Apply Ubuntu Touch filter to narrow results" [ref=e3000] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A23496333011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_5&ds=v1%3AJ7RWNjHRiVt05MxTIzaKrPZqqbZj0f0m5hbI2hT%2FqUQ
+                    - checkbox [ref=e3003]
+                    - text: Ubuntu Touch
+                - listitem "Popular Shopping Ideas" [ref=e3005]:
+                  - link "Apply watchOS 1 filter to narrow results" [ref=e3007] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A122316402011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_6&ds=v1%3AY46WMC300hUcxS3I8s9HbMHzJvMrRR0yOe%2FPB0t6rCc
+                    - checkbox [ref=e3010]
+                    - text: watchOS 1
+                - listitem "Popular Shopping Ideas" [ref=e3012]:
+                  - link "Apply watchOS 7 filter to narrow results" [ref=e3014] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A122316401011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_7&ds=v1%3A5kXVFZcvGLUcZMfFTQUCoedVWQVu2wkmvQUt4DDPCJM
+                    - checkbox [ref=e3017]
+                    - text: watchOS 7
+                - listitem "Popular Shopping Ideas" [ref=e3019]:
+                  - link "Apply watchOS 8 filter to narrow results" [ref=e3021] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A122316398011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_8&ds=v1%3AS4SXY13j08ZjHdu%2B4oxzqI1mVwtC1Rcf%2FRxly%2B%2F4k0I
+                    - checkbox [ref=e3024]
+                    - text: watchOS 8
+                - listitem "Popular Shopping Ideas" [ref=e3026]:
+                  - link "Apply Wear OS filter to narrow results" [ref=e3028] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A23496331011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_9&ds=v1%3AWsWL0Ho%2FSARSPT3mvDnzBU3y0qOG4r88RC7%2BOaU5wSE
+                    - checkbox [ref=e3031]
+                    - text: Wear OS
+                - listitem "Popular Shopping Ideas" [ref=e3033]:
+                  - link "Apply Wear OS 3.0 filter to narrow results" [ref=e3035] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A122316399011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_10&ds=v1%3AHKa5E6bDpnwOHbVZ7v6lfzLcmFrO4wNQUDl85u5dnfM
+                    - checkbox [ref=e3038]
+                    - text: Wear OS 3.0
+                - listitem "Popular Shopping Ideas" [ref=e3040]:
+                  - link "Apply Zepp OS filter to narrow results" [ref=e3042] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1002213433111%3A122316400011&dc&qid=1781164311&rnid=23496320011&ref=sr_nr_p_n_g-1002213433111_11&ds=v1%3AJsRuf%2BPk4p36hWIxs7l62O0jPKj4Nisr4qDA%2BCkfDKQ
+                    - checkbox [ref=e3045]
+                    - text: Zepp OS
+            - group "Supported Satellite Navigation System" [ref=e3047]:
+              - heading "Supported Satellite Navigation System" [level=2] [ref=e3048]
+              - list "Supported Satellite Navigation System" [ref=e3049]:
+                - listitem "Popular Shopping Ideas" [ref=e3050]:
+                  - link "Apply BeiDou filter to narrow results" [ref=e3052] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537918111%3A122342415011&dc&qid=1781164311&rnid=122342370011&ref=sr_nr_p_n_g-101015537918111_1&ds=v1%3A1PPj2l7rYBa5R236GspadDCjbyDKvklz1twt3idEsjE
+                    - checkbox [ref=e3055]
+                    - text: BeiDou
+                - listitem "Popular Shopping Ideas" [ref=e3057]:
+                  - link "Apply Galileo filter to narrow results" [ref=e3059] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537918111%3A122342411011&dc&qid=1781164311&rnid=122342370011&ref=sr_nr_p_n_g-101015537918111_2&ds=v1%3AMX6gkYn2TWr0cQMwgz83uFJOtb9YqldoV%2FinWXFS%2BCY
+                    - checkbox [ref=e3062]
+                    - text: Galileo
+                - listitem "Popular Shopping Ideas" [ref=e3064]:
+                  - link "Apply GLONASS filter to narrow results" [ref=e3066] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537918111%3A122342410011&dc&qid=1781164311&rnid=122342370011&ref=sr_nr_p_n_g-101015537918111_3&ds=v1%3A%2BMPkmnxqH7puV69Q0c2DOUqr5C4FEBA7szjAEQN1318
+                    - checkbox [ref=e3069]
+                    - text: GLONASS
+                - listitem "Popular Shopping Ideas" [ref=e3071]:
+                  - link "Apply GPS filter to narrow results" [ref=e3073] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537918111%3A122342412011&dc&qid=1781164311&rnid=122342370011&ref=sr_nr_p_n_g-101015537918111_4&ds=v1%3A%2BK4L%2B08PIgLMf%2BuKhGTRcQ1yDINUClKHVKh4kOOdzZQ
+                    - checkbox [ref=e3076]
+                    - text: GPS
+                - listitem "Popular Shopping Ideas" [ref=e3078]:
+                  - link "Apply NavIC filter to narrow results" [ref=e3080] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537918111%3A122342413011&dc&qid=1781164311&rnid=122342370011&ref=sr_nr_p_n_g-101015537918111_5&ds=v1%3A%2BMVXV3Qx5ZRUBcnlW%2FgB9PM%2BGVErBKlUk4cVEm5svNk
+                    - checkbox [ref=e3083]
+                    - text: NavIC
+                - listitem "Popular Shopping Ideas" [ref=e3085]:
+                  - link "Apply QZSS filter to narrow results" [ref=e3087] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537918111%3A122342414011&dc&qid=1781164311&rnid=122342370011&ref=sr_nr_p_n_g-101015537918111_6&ds=v1%3A4pdoL8ycqlR1epVqSox4XPnHcOUI4ZcNROxdykvUYyc
+                    - checkbox [ref=e3090]
+                    - text: QZSS
+            - group "Seller" [ref=e3092]:
+              - heading "Seller" [level=2] [ref=e3093]
+              - list "Seller" [ref=e3094]:
+                - listitem "Popular Shopping Ideas" [ref=e3095]:
+                  - link "Apply SLy filter to narrow results" [ref=e3097] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_6%3AA2ZUOQ4S20WEL9&dc&qid=1781164311&rnid=303116011&ref=sr_nr_p_6_1&ds=v1%3AFrvrd2R6OjAKOLp5Us%2BQdo30PiW%2BXvL9yp3MvwyQGaw
+                    - checkbox [ref=e3100]
+                    - text: SLy
+                - listitem "Popular Shopping Ideas" [ref=e3102]:
+                  - link "Apply AEMALL filter to narrow results" [ref=e3104] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_6%3AA24NG3WDJ3TCJP&dc&qid=1781164311&rnid=303116011&ref=sr_nr_p_6_2&ds=v1%3AQ%2FawPffv3IQffqxMv9NUtOgxt9yokZeDwHrNQALeqAQ
+                    - checkbox [ref=e3107]
+                    - text: AEMALL
+                - listitem [ref=e3109]:
+                  - button "See more, Seller" [ref=e3112] [cursor=pointer]: See more
+            - group "Sustainability Features" [ref=e3114]:
+              - heading "Sustainability Features" [level=2] [ref=e3115]
+              - list "Sustainability Features" [ref=e3116]:
+                - listitem [ref=e3117]:
+                  - link "Any Feature" [ref=e3119] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_cpf_labels%3A121136630011&dc&qid=1781164311&rnid=116845681011&ref=sr_nr_p_n_cpf_labels_1&ds=v1%3AnyLCPLVi0LWiSWGvck3ZokzMfwrUSv1P%2FOkVDXsMDA4
+                - listitem [ref=e3120]:
+                  - link "Carbon Impact" [ref=e3122] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_cpf_labels%3A116845688011&dc&qid=1781164311&rnid=116845681011&ref=sr_nr_p_n_cpf_labels_2&ds=v1%3ADl8e88R65qBf9MjBJNf4MjDeNDcTDD3k7GcJPICc1kc
+                - listitem [ref=e3123]:
+                  - button "See more, Sustainability Features" [ref=e3126] [cursor=pointer]: See more
+            - group "Battery Average Life" [ref=e3128]:
+              - heading "Battery Average Life" [level=2] [ref=e3129]
+              - list "Battery Average Life" [ref=e3130]:
+                - listitem "Popular Shopping Ideas" [ref=e3131]:
+                  - link "Apply Up to 166 h filter to narrow results" [ref=e3133] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003486032111%3A32912296011&dc&qid=1781164311&rnid=32911992011&ref=sr_nr_p_n_g-1003486032111_1&ds=v1%3AZf7gsbYPWwvb%2F835A1GBtBuD38waeBAlEQ7m60xmx00
+                    - checkbox [ref=e3136]
+                    - text: Up to 166 h
+                - listitem "Popular Shopping Ideas" [ref=e3138]:
+                  - link "Apply 167 to 203 h filter to narrow results" [ref=e3140] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003486032111%3A32912300011&dc&qid=1781164311&rnid=32911992011&ref=sr_nr_p_n_g-1003486032111_2&ds=v1%3Au9idgJ08xk1B1l60gwmz0Z5pHuutwP5RfHu5zrDv%2FNI
+                    - checkbox [ref=e3143]
+                    - text: 167 to 203 h
+                - listitem "Popular Shopping Ideas" [ref=e3145]:
+                  - link "Apply 204 to 240 h filter to narrow results" [ref=e3147] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003486032111%3A32912298011&dc&qid=1781164311&rnid=32911992011&ref=sr_nr_p_n_g-1003486032111_3&ds=v1%3ACpLVB2ulb2NlwpkPTI4SIJrxjE4zlzL8GR2FDi3PT60
+                    - checkbox [ref=e3150]
+                    - text: 204 to 240 h
+                - listitem "Popular Shopping Ideas" [ref=e3152]:
+                  - link "Apply 241 h & above filter to narrow results" [ref=e3154] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003486032111%3A32912302011&dc&qid=1781164311&rnid=32911992011&ref=sr_nr_p_n_g-1003486032111_4&ds=v1%3AxbEre6sETp8x6ID19mH6FULSV6r1yWTCGOqcKfZFNmI
+                    - checkbox [ref=e3157]
+                    - text: 241 h & above
+            - group "Communication Feature" [ref=e3159]:
+              - heading "Communication Feature" [level=2] [ref=e3160]
+              - list "Communication Feature" [ref=e3161]:
+                - listitem "Popular Shopping Ideas" [ref=e3162]:
+                  - link "Apply Email filter to narrow results" [ref=e3164] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015984627111%3A204454894011&dc&qid=1781164311&rnid=204454889011&ref=sr_nr_p_n_g-101015984627111_1&ds=v1%3AtCJaW9h8Jq3cQ5HYBY1r18tMDpFhYZ%2FbHhIEou2CbAg
+                    - checkbox [ref=e3167]
+                    - text: Email
+                - listitem "Popular Shopping Ideas" [ref=e3169]:
+                  - link "Apply Notification filter to narrow results" [ref=e3171] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015984627111%3A204454890011&dc&qid=1781164311&rnid=204454889011&ref=sr_nr_p_n_g-101015984627111_2&ds=v1%3AinFUZsAVMNbV6Af5oCaNP3USQc4%2BGTRjeKGRw0gd4Hg
+                    - checkbox [ref=e3174]
+                    - text: Notification
+                - listitem "Popular Shopping Ideas" [ref=e3176]:
+                  - link "Apply Phone Call filter to narrow results" [ref=e3178] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015984627111%3A204454893011&dc&qid=1781164311&rnid=204454889011&ref=sr_nr_p_n_g-101015984627111_3&ds=v1%3ASY0138RJmvP7pU85n9D9V%2FnfltT6cUys8IJ4MqTryzs
+                    - checkbox [ref=e3181]
+                    - text: Phone Call
+                - listitem "Popular Shopping Ideas" [ref=e3183]:
+                  - link "Apply Text Message filter to narrow results" [ref=e3185] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015984627111%3A204454891011&dc&qid=1781164311&rnid=204454889011&ref=sr_nr_p_n_g-101015984627111_4&ds=v1%3AwoV0ZgVJg2J8KXROGyQSq%2B%2FbGCMvspCEzs5TwLV%2FN14
+                    - checkbox [ref=e3188]
+                    - text: Text Message
+                - listitem "Popular Shopping Ideas" [ref=e3190]:
+                  - link "Apply Video Call filter to narrow results" [ref=e3192] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015984627111%3A204454895011&dc&qid=1781164311&rnid=204454889011&ref=sr_nr_p_n_g-101015984627111_5&ds=v1%3AULFnqINvN46vD8uOjGeoUzOE4IRz4IgTfg%2BFNj2tjjY
+                    - checkbox [ref=e3195]
+                    - text: Video Call
+                - listitem "Popular Shopping Ideas" [ref=e3197]:
+                  - link "Apply Voice Call filter to narrow results" [ref=e3199] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015984627111%3A204454892011&dc&qid=1781164311&rnid=204454889011&ref=sr_nr_p_n_g-101015984627111_6&ds=v1%3Aklqdasm%2BugWV34tEmeaBfftZqRLdY6qfVeleQ74aSw0
+                    - checkbox [ref=e3202]
+                    - text: Voice Call
+            - group "Smart Home Compatibility" [ref=e3204]:
+              - heading "Smart Home Compatibility" [level=2] [ref=e3205]
+              - list "Smart Home Compatibility" [ref=e3206]:
+                - listitem "Popular Shopping Ideas" [ref=e3207]:
+                  - link "Apply Not Smart Home Compatible filter to narrow results" [ref=e3209] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017806293111%3A219255620011&dc&qid=1781164311&rnid=219255617011&ref=sr_nr_p_n_g-101017806293111_1&ds=v1%3AgcwU2OTnOBu6ZuzW2DQ1vmdD8e6zV%2BOZwC51VkUk%2FgE
+                    - checkbox [ref=e3212]
+                    - text: Not Smart Home Compatible
+                - listitem "Popular Shopping Ideas" [ref=e3214]:
+                  - link "Apply Smart Home Compatible filter to narrow results" [ref=e3216] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017806293111%3A219255621011&dc&qid=1781164311&rnid=219255617011&ref=sr_nr_p_n_g-101017806293111_2&ds=v1%3ACRYbM%2Bj3I9Hh1SO4NAXjoAmPGum6S7NO%2BK4bbEUSUPA
+                    - checkbox [ref=e3219]
+                    - text: Smart Home Compatible
+            - group "Maximum Display Brightness" [ref=e3221]:
+              - heading "Maximum Display Brightness" [level=2] [ref=e3222]
+              - list "Maximum Display Brightness" [ref=e3223]:
+                - listitem "Popular Shopping Ideas" [ref=e3224]:
+                  - link "Apply Up to 499 filter to narrow results" [ref=e3226] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537038111%3A122339574011&dc&qid=1781164311&rnid=122338268011&ref=sr_nr_p_n_g-101015537038111_1&ds=v1%3AEYWH1WcJJ%2BtsyoDf7ex8gg1sj%2FrtFHvEN585drrYbQ4
+                    - checkbox [ref=e3229]
+                    - text: Up to 499
+                - listitem "Popular Shopping Ideas" [ref=e3231]:
+                  - link "Apply 500 to 549 filter to narrow results" [ref=e3233] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537038111%3A122339573011&dc&qid=1781164311&rnid=122338268011&ref=sr_nr_p_n_g-101015537038111_2&ds=v1%3AyDHxzlUTJO0AiZbDTcDjjWsoVfwPe88O4WRh1JsbaKk
+                    - checkbox [ref=e3236]
+                    - text: 500 to 549
+                - listitem "Popular Shopping Ideas" [ref=e3238]:
+                  - link "Apply 550 to 599 filter to narrow results" [ref=e3240] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537038111%3A122339575011&dc&qid=1781164311&rnid=122338268011&ref=sr_nr_p_n_g-101015537038111_3&ds=v1%3Ar9SkgpA3gGPZvdixA5%2BxltfIPOb5GXVNgEeprCvWzWA
+                    - checkbox [ref=e3243]
+                    - text: 550 to 599
+                - listitem "Popular Shopping Ideas" [ref=e3245]:
+                  - link "Apply 600 & above filter to narrow results" [ref=e3247] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537038111%3A122339576011&dc&qid=1781164311&rnid=122338268011&ref=sr_nr_p_n_g-101015537038111_4&ds=v1%3A3eEaCUT2%2BcsNoIjBKkCO4Wwj1T6HGslqwTMt%2Bc57gSM
+                    - checkbox [ref=e3250]
+                    - text: 600 & above
+            - group "Depth" [ref=e3252]:
+              - heading "Depth" [level=2] [ref=e3253]
+              - list "Depth" [ref=e3254]:
+                - listitem "Popular Shopping Ideas" [ref=e3255]:
+                  - link "Apply Up to 1 in filter to narrow results" [ref=e3257] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536534111%3A122339589011&dc&qid=1781164311&rnid=122338270011&ref=sr_nr_p_n_g-101015536534111_1&ds=v1%3AR3ARI%2B4a0gzlLcD4Ih%2BC7EbjyhisSgV5IOB8S5n2Tx8
+                    - checkbox [ref=e3260]
+                    - text: Up to 1 in
+                - listitem "Popular Shopping Ideas" [ref=e3262]:
+                  - link "Apply 1 to 1.9 in filter to narrow results" [ref=e3264] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536534111%3A122339587011&dc&qid=1781164311&rnid=122338270011&ref=sr_nr_p_n_g-101015536534111_2&ds=v1%3A29N0cbDvziyyBhRVafHlPxViYUnnaFCjhUbetParcL4
+                    - checkbox [ref=e3267]
+                    - text: 1 to 1.9 in
+                - listitem "Popular Shopping Ideas" [ref=e3269]:
+                  - link "Apply 2 to 2.9 in filter to narrow results" [ref=e3271] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536534111%3A122339588011&dc&qid=1781164311&rnid=122338270011&ref=sr_nr_p_n_g-101015536534111_3&ds=v1%3A%2BdvvMNSlGAfSP98sjLqPap7kzkGe2psWWhGQUmRNdP4
+                    - checkbox [ref=e3274]
+                    - text: 2 to 2.9 in
+                - listitem "Popular Shopping Ideas" [ref=e3276]:
+                  - link "Apply 3 in & above filter to narrow results" [ref=e3278] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536534111%3A122339586011&dc&qid=1781164311&rnid=122338270011&ref=sr_nr_p_n_g-101015536534111_4&ds=v1%3AZDdHLiZ1engiY6RECW47GIKTLDaWcwDIFFdnPiVZomQ
+                    - checkbox [ref=e3281]
+                    - text: 3 in & above
+            - group "Water Resistance Depth" [ref=e3283]:
+              - heading "Water Resistance Depth" [level=2] [ref=e3284]
+              - list "Water Resistance Depth" [ref=e3285]:
+                - listitem "Popular Shopping Ideas" [ref=e3286]:
+                  - link "Apply Up to 94 ft filter to narrow results" [ref=e3288] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838435011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_1&ds=v1%3AI%2Bais3hbN5qYqHKXLOPiRxDdG3AFhyxhsz3%2FmgctyOk
+                    - checkbox [ref=e3291]
+                    - text: Up to 94 ft
+                - listitem "Popular Shopping Ideas" [ref=e3293]:
+                  - link "Apply 95 to 149 ft filter to narrow results" [ref=e3295] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838440011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_2&ds=v1%3ABOvL%2FKUSDAOUKad%2BdKTPtq%2FeJtMe9f7XOIf6CGnYBNg
+                    - checkbox [ref=e3298]
+                    - text: 95 to 149 ft
+                - listitem "Popular Shopping Ideas" [ref=e3300]:
+                  - link "Apply 150 ft & above filter to narrow results" [ref=e3302] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838434011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_3&ds=v1%3AN0cVygmptG3uWFgWGpaWiBSb1KPBE3E4yYEDMbCwPRY
+                    - checkbox [ref=e3305]
+                    - text: 150 ft & above
+                - listitem "Popular Shopping Ideas" [ref=e3307]:
+                  - link "Apply Up to 29 m filter to narrow results" [ref=e3309] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838439011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_4&ds=v1%3AhJLbl4hhuIRZWVt2Ns6X%2Fzi9TYVunXe%2FJtWzWwpATHk
+                    - checkbox [ref=e3312]
+                    - text: Up to 29 m
+                - listitem "Popular Shopping Ideas" [ref=e3314]:
+                  - link "Apply 30 to 39 m filter to narrow results" [ref=e3316] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838437011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_5&ds=v1%3A9HrhGJSnRfeolcgqy9uWQAMcyFqKtNhMT1d4BOnS2HU
+                    - checkbox [ref=e3319]
+                    - text: 30 to 39 m
+                - listitem "Popular Shopping Ideas" [ref=e3321]:
+                  - link "Apply 40 to 49 m filter to narrow results" [ref=e3323] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838438011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_6&ds=v1%3AKlRprB0eY%2BdtcC3oiD3xzuqoQ6Kka7D1ljr9qVK4IUA
+                    - checkbox [ref=e3326]
+                    - text: 40 to 49 m
+                - listitem "Popular Shopping Ideas" [ref=e3328]:
+                  - link "Apply 50 m & above filter to narrow results" [ref=e3330] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017342851111%3A214838436011&dc&qid=1781164311&rnid=214838433011&ref=sr_nr_p_n_g-101017342851111_7&ds=v1%3Ax08o%2BFNvfkhudE0uO%2FsboVNRwPtbQ%2BdQFZbnnmGFvdQ
+                    - checkbox [ref=e3333]
+                    - text: 50 m & above
+            - group "Width" [ref=e3335]:
+              - heading "Width" [level=2] [ref=e3336]
+              - list "Width" [ref=e3337]:
+                - listitem "Popular Shopping Ideas" [ref=e3338]:
+                  - link "Apply Up to 1 in filter to narrow results" [ref=e3340] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536881111%3A122339599011&dc&qid=1781164311&rnid=122338273011&ref=sr_nr_p_n_g-101015536881111_1&ds=v1%3AFnSeGjmmYdY3lJbX5r6fs7GTVgCF%2FOP10JVs1HM6G7Q
+                    - checkbox [ref=e3343]
+                    - text: Up to 1 in
+                - listitem "Popular Shopping Ideas" [ref=e3345]:
+                  - link "Apply 1 to 1.9 in filter to narrow results" [ref=e3347] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536881111%3A122339600011&dc&qid=1781164311&rnid=122338273011&ref=sr_nr_p_n_g-101015536881111_2&ds=v1%3AL6DGoUWuX39dzutekIjncH2uab3p2zQhTQelJmd5mvY
+                    - checkbox [ref=e3350]
+                    - text: 1 to 1.9 in
+                - listitem "Popular Shopping Ideas" [ref=e3352]:
+                  - link "Apply 2 to 2.9 in filter to narrow results" [ref=e3354] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536881111%3A122339601011&dc&qid=1781164311&rnid=122338273011&ref=sr_nr_p_n_g-101015536881111_3&ds=v1%3AXrXTxBIGGZ7AkZfybvEoJ67ODkqBSh0WIZb895IyTl8
+                    - checkbox [ref=e3357]
+                    - text: 2 to 2.9 in
+                - listitem "Popular Shopping Ideas" [ref=e3359]:
+                  - link "Apply 3 in & above filter to narrow results" [ref=e3361] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536881111%3A122339598011&dc&qid=1781164311&rnid=122338273011&ref=sr_nr_p_n_g-101015536881111_4&ds=v1%3Am5NRmZ7onEh7k2wjR7V2Ij7XsxxIkTNcaOP3qW0jmQU
+                    - checkbox [ref=e3364]
+                    - text: 3 in & above
+            - group "Height" [ref=e3366]:
+              - heading "Height" [level=2] [ref=e3367]
+              - list "Height" [ref=e3368]:
+                - listitem "Popular Shopping Ideas" [ref=e3369]:
+                  - link "Apply Up to 1 in filter to narrow results" [ref=e3371] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536685111%3A122339530011&dc&qid=1781164311&rnid=122338266011&ref=sr_nr_p_n_g-101015536685111_1&ds=v1%3ApEGYszRPW6MkskqjxUFOtgF7vRSfNX9c%2Bx7awrVdxIY
+                    - checkbox [ref=e3374]
+                    - text: Up to 1 in
+                - listitem "Popular Shopping Ideas" [ref=e3376]:
+                  - link "Apply 1 to 1.9 in filter to narrow results" [ref=e3378] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536685111%3A122339527011&dc&qid=1781164311&rnid=122338266011&ref=sr_nr_p_n_g-101015536685111_2&ds=v1%3AVRfmfZ3nxlGvEBBFQV7DnelE%2B2%2FWRP3vPuEsfUVHYuI
+                    - checkbox [ref=e3381]
+                    - text: 1 to 1.9 in
+                - listitem "Popular Shopping Ideas" [ref=e3383]:
+                  - link "Apply 2 to 2.9 in filter to narrow results" [ref=e3385] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536685111%3A122339529011&dc&qid=1781164311&rnid=122338266011&ref=sr_nr_p_n_g-101015536685111_3&ds=v1%3APV87r1LZMsqIo726yYq%2BwMHHG9bdOHoTea5PdSJKeY8
+                    - checkbox [ref=e3388]
+                    - text: 2 to 2.9 in
+                - listitem "Popular Shopping Ideas" [ref=e3390]:
+                  - link "Apply 3 in & above filter to narrow results" [ref=e3392] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015536685111%3A122339528011&dc&qid=1781164311&rnid=122338266011&ref=sr_nr_p_n_g-101015536685111_4&ds=v1%3AqtBN4fQIlUvf0UAZ71benQpVI6V5TMNrxKkKHr%2BYOVE
+                    - checkbox [ref=e3395]
+                    - text: 3 in & above
+            - group "RAM Size" [ref=e3397]:
+              - heading "RAM Size" [level=2] [ref=e3398]
+              - list "RAM Size" [ref=e3399]:
+                - listitem "Popular Shopping Ideas" [ref=e3400]:
+                  - link "Apply Up to 59 MB filter to narrow results" [ref=e3402] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537186111%3A122339605011&dc&qid=1781164311&rnid=122338274011&ref=sr_nr_p_n_g-101015537186111_1&ds=v1%3A33TgwDSagN5Bp50yf3Mb3JSvN1b6XuSVf3DBxzbtaoY
+                    - checkbox [ref=e3405]
+                    - text: Up to 59 MB
+                - listitem "Popular Shopping Ideas" [ref=e3407]:
+                  - link "Apply 95 to 149 MB filter to narrow results" [ref=e3409] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537186111%3A122339602011&dc&qid=1781164311&rnid=122338274011&ref=sr_nr_p_n_g-101015537186111_2&ds=v1%3AY0nw7QauF%2FilxOsaUQFhCsgvGkDr%2BjOGoOOQs4XUCio
+                    - checkbox [ref=e3412]
+                    - text: 95 to 149 MB
+                - listitem "Popular Shopping Ideas" [ref=e3414]:
+                  - link "Apply 150 MB & above filter to narrow results" [ref=e3416] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537186111%3A122339604011&dc&qid=1781164311&rnid=122338274011&ref=sr_nr_p_n_g-101015537186111_3&ds=v1%3AVHMYzSWDR3lpm8RVHepE%2FokobwJ4%2BOtWe6ixL2UYBXA
+                    - checkbox [ref=e3419]
+                    - text: 150 MB & above
+            - group "Warranty Type" [ref=e3421]:
+              - heading "Warranty Type" [level=2] [ref=e3422]
+              - list "Warranty Type" [ref=e3423]:
+                - listitem "Popular Shopping Ideas" [ref=e3424]:
+                  - link "Apply Extended filter to narrow results" [ref=e3426] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538058111%3A122339607011&dc&qid=1781164311&rnid=122338275011&ref=sr_nr_p_n_g-101015538058111_1&ds=v1%3AagpskB6cXSRxLJivu3WHbhkWU4q%2FXAXkvbTldvwFLRU
+                    - checkbox [ref=e3429]
+                    - text: Extended
+                - listitem "Popular Shopping Ideas" [ref=e3431]:
+                  - link "Apply Lifetime filter to narrow results" [ref=e3433] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538058111%3A122339606011&dc&qid=1781164311&rnid=122338275011&ref=sr_nr_p_n_g-101015538058111_2&ds=v1%3AInLOQMSbk3GLG6h86H2J7AXGdMadSjN5H%2Fmyu6omG%2Fc
+                    - checkbox [ref=e3436]
+                    - text: Lifetime
+                - listitem "Popular Shopping Ideas" [ref=e3438]:
+                  - link "Apply Limited filter to narrow results" [ref=e3440] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538058111%3A122339608011&dc&qid=1781164311&rnid=122338275011&ref=sr_nr_p_n_g-101015538058111_3&ds=v1%3AFdcAFwdfUxNU%2FOP8zwLs8gGH51NncQtHeYCv0Exj4Sg
+                    - checkbox [ref=e3443]
+                    - text: Limited
+            - group "Health Monitoring Features" [ref=e3445]:
+              - heading "Health Monitoring Features" [level=2] [ref=e3446]
+              - list "Health Monitoring Features" [ref=e3447]:
+                - listitem "Popular Shopping Ideas" [ref=e3448]:
+                  - link "Apply Blood Oxygen Monitoring (SpO2) filter to narrow results" [ref=e3450] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885288011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_1&ds=v1%3A0oAlrff5Gfq%2FYVF2NsdwdYeLuwfmdiaE5NIZBIa%2Fo%2FM
+                    - checkbox [ref=e3453]
+                    - text: Blood Oxygen Monitoring (SpO2)
+                - listitem "Popular Shopping Ideas" [ref=e3455]:
+                  - link "Apply Blood Pressure Monitoring filter to narrow results" [ref=e3457] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885294011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_2&ds=v1%3A%2BUniJYYzfnO%2B97Kn6ohSUgUcSYl%2F7s2Nfr2zm6IXhag
+                    - checkbox [ref=e3460]
+                    - text: Blood Pressure Monitoring
+                - listitem "Popular Shopping Ideas" [ref=e3462]:
+                  - link "Apply Electrocardiogram (ECG) Monitoring filter to narrow results" [ref=e3464] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885282011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_3&ds=v1%3ADqvMFClLjkvWxLIWN%2FWcr7YH4PAQ1yS%2FeI73FzwShcM
+                    - checkbox [ref=e3467]
+                    - text: Electrocardiogram (ECG) Monitoring
+                - listitem "Popular Shopping Ideas" [ref=e3469]:
+                  - link "Apply Energy Expenditure Tracking filter to narrow results" [ref=e3471] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885292011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_4&ds=v1%3AMEu%2FcTMTtGMhMb%2FWk%2FqDmZmFkwxpCsNZV4kT8Bnesmo
+                    - checkbox [ref=e3474]
+                    - text: Energy Expenditure Tracking
+                - listitem "Popular Shopping Ideas" [ref=e3476]:
+                  - link "Apply Fertility Tracking filter to narrow results" [ref=e3478] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885297011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_5&ds=v1%3APxxALaTJ9O6zBnA%2F7pEu3OFNBDUiLuKs0Q%2FUUomJmLQ
+                    - checkbox [ref=e3481]
+                    - text: Fertility Tracking
+                - listitem "Popular Shopping Ideas" [ref=e3483]:
+                  - link "Apply Heart Rate Monitoring filter to narrow results" [ref=e3485] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885289011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_6&ds=v1%3A7PMxSQhJorwtiQ9V0Xrd1H1impVY37YCo3hi15wLcqU
+                    - checkbox [ref=e3488]
+                    - text: Heart Rate Monitoring
+                - listitem "Popular Shopping Ideas" [ref=e3490]:
+                  - link "Apply Hydration Tracking filter to narrow results" [ref=e3492] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017395069111%3A214885281011&dc&qid=1781164311&rnid=214885279011&ref=sr_nr_p_n_g-101017395069111_7&ds=v1%3Aj3ecg974j82P55M1LsOa7uIIRCGzT1UJdElIwAZmId0
+                    - checkbox [ref=e3495]
+                    - text: Hydration Tracking
+                - listitem [ref=e3497]:
+                  - button "See more, Health Monitoring Features" [ref=e3500] [cursor=pointer]: See more
+            - group "Battery Charge Time" [ref=e3502]:
+              - heading "Battery Charge Time" [level=2] [ref=e3503]
+              - list "Battery Charge Time" [ref=e3504]:
+                - listitem "Popular Shopping Ideas" [ref=e3505]:
+                  - link "Apply Up to 1.9 h filter to narrow results" [ref=e3507] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538703111%3A122339594011&dc&qid=1781164311&rnid=122338272011&ref=sr_nr_p_n_g-101015538703111_1&ds=v1%3AYEahlRZYeDzsaLvREWN540rtycImDjcYGXaKLvW3eKc
+                    - checkbox [ref=e3510]
+                    - text: Up to 1.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3512]:
+                  - link "Apply 2 to 2.9 h filter to narrow results" [ref=e3514] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538703111%3A122339597011&dc&qid=1781164311&rnid=122338272011&ref=sr_nr_p_n_g-101015538703111_2&ds=v1%3A%2Fsqay6c3S0R6H%2ByeRddf7XYFj%2BdRNQdm%2Fn1Z7254PqQ
+                    - checkbox [ref=e3517]
+                    - text: 2 to 2.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3519]:
+                  - link "Apply 3 to 3.9 h filter to narrow results" [ref=e3521] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538703111%3A122339595011&dc&qid=1781164311&rnid=122338272011&ref=sr_nr_p_n_g-101015538703111_3&ds=v1%3ARBDU7Bm1uJifkWZLCjhB0ZaCijQxbb9ewFjzARP3NYc
+                    - checkbox [ref=e3524]
+                    - text: 3 to 3.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3526]:
+                  - link "Apply 4 h & above filter to narrow results" [ref=e3528] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538703111%3A122339596011&dc&qid=1781164311&rnid=122338272011&ref=sr_nr_p_n_g-101015538703111_4&ds=v1%3AWS643fxBMtcVieDCo6v4iTObmaWV5nsGq1ELIKTI0Vg
+                    - checkbox [ref=e3531]
+                    - text: 4 h & above
+            - group "Case Material Type" [ref=e3533]:
+              - heading "Case Material Type" [level=2] [ref=e3534]
+              - list "Case Material Type" [ref=e3535]:
+                - listitem "Popular Shopping Ideas" [ref=e3536]:
+                  - link "Apply Stainless Steel filter to narrow results" [ref=e3538] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A23953491011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_1&ds=v1%3AH0ayDeZU1rjxF3bwbcWzJFcWXF095VVmHW1E3tPVl6M
+                    - checkbox [ref=e3541]
+                    - text: Stainless Steel
+                - listitem "Popular Shopping Ideas" [ref=e3543]:
+                  - link "Apply Aluminum filter to narrow results" [ref=e3545] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A23953493011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_2&ds=v1%3AIeUNnRrUqN3EfBuVTFQ2z3hm0VMUfHcr%2B639e8K7ks8
+                    - checkbox [ref=e3548]
+                    - text: Aluminum
+                - listitem "Popular Shopping Ideas" [ref=e3550]:
+                  - link "Apply Plastic filter to narrow results" [ref=e3552] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A23953488011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_3&ds=v1%3AtPVIO1AT8xhhHmP44C64udxKrdFekQ3ZS9sdKbWyDNs
+                    - checkbox [ref=e3555]
+                    - text: Plastic
+                - listitem "Popular Shopping Ideas" [ref=e3557]:
+                  - link "Apply Acrylonitrile Butadiene Styrene (ABS) filter to narrow results" [ref=e3559] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A85022037011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_4&ds=v1%3A8eFWM0ISkfaii6DUM2OVrZli5Reb3secb9mCFGNP6%2FY
+                    - checkbox [ref=e3562]
+                    - text: Acrylonitrile Butadiene Styrene (ABS)
+                - listitem "Popular Shopping Ideas" [ref=e3564]:
+                  - link "Apply Alloy Steel filter to narrow results" [ref=e3566] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A122131252011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_5&ds=v1%3AMID4akjOg7evcA%2FCt8GuwbdPX4xggmd3I1EqAHPP%2FEk
+                    - checkbox [ref=e3569]
+                    - text: Alloy Steel
+                - listitem "Popular Shopping Ideas" [ref=e3571]:
+                  - link "Apply Metal filter to narrow results" [ref=e3573] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A85022038011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_6&ds=v1%3A3DuG5P9uDu9vL1k42yo4uku9KP98w7YGPPUPzo2z4mI
+                    - checkbox [ref=e3576]
+                    - text: Metal
+                - listitem "Popular Shopping Ideas" [ref=e3578]:
+                  - link "Apply Nylon filter to narrow results" [ref=e3580] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003305498111%3A23953492011&dc&qid=1781164311&rnid=23953485011&ref=sr_nr_p_n_g-1003305498111_7&ds=v1%3A3TyfiklHeOFippNvRqokZQsdVltozk0f7cy52NFGGfo
+                    - checkbox [ref=e3583]
+                    - text: Nylon
+                - listitem [ref=e3585]:
+                  - button "See more, Case Material Type" [ref=e3588] [cursor=pointer]: See more
+            - group "Cellular Technology" [ref=e3590]:
+              - heading "Cellular Technology" [level=2] [ref=e3591]
+              - list "Cellular Technology" [ref=e3592]:
+                - listitem "Popular Shopping Ideas" [ref=e3593]:
+                  - link "Apply 2G filter to narrow results" [ref=e3595] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015535585111%3A122339580011&dc&qid=1781164311&rnid=122338269011&ref=sr_nr_p_n_g-101015535585111_1&ds=v1%3AklH10fqZrQb8Q%2B9IZP590%2F6GkkdJ8o5FYiUqUbZ8YMs
+                    - checkbox [ref=e3598]
+                    - text: 2G
+                - listitem "Popular Shopping Ideas" [ref=e3600]:
+                  - link "Apply 4G filter to narrow results" [ref=e3602] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015535585111%3A122339581011&dc&qid=1781164311&rnid=122338269011&ref=sr_nr_p_n_g-101015535585111_2&ds=v1%3ASeJbyNJ35dBDzrtAZBxYWPrymafH7NgGvOBREsjMTmk
+                    - checkbox [ref=e3605]
+                    - text: 4G
+                - listitem "Popular Shopping Ideas" [ref=e3607]:
+                  - link "Apply 5G filter to narrow results" [ref=e3609] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015535585111%3A122339579011&dc&qid=1781164311&rnid=122338269011&ref=sr_nr_p_n_g-101015535585111_3&ds=v1%3AkhDzJP2kBcwD%2F0yFL3Yvv69wc0q6SfbJwY2mLecS8F8
+                    - checkbox [ref=e3612]
+                    - text: 5G
+                - listitem "Popular Shopping Ideas" [ref=e3614]:
+                  - link "Apply GSM filter to narrow results" [ref=e3616] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015535585111%3A122339583011&dc&qid=1781164311&rnid=122338269011&ref=sr_nr_p_n_g-101015535585111_4&ds=v1%3AhrWX8iSdclTnWBtdzJ8gi4ZMFl6JSyDRadPWT3KqS00
+                    - checkbox [ref=e3619]
+                    - text: GSM
+                - listitem "Popular Shopping Ideas" [ref=e3621]:
+                  - link "Apply LTE filter to narrow results" [ref=e3623] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015535585111%3A122339585011&dc&qid=1781164311&rnid=122338269011&ref=sr_nr_p_n_g-101015535585111_5&ds=v1%3AytvuNSKBPO3KnPUwzURbmNmP3v02alHMpPn5G%2FezMYw
+                    - checkbox [ref=e3626]
+                    - text: LTE
+            - group "Display Resolution" [ref=e3628]:
+              - heading "Display Resolution" [level=2] [ref=e3629]
+              - list "Display Resolution" [ref=e3630]:
+                - listitem "Popular Shopping Ideas" [ref=e3631]:
+                  - link "Apply 128 x 96 filter to narrow results" [ref=e3633] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339572011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_1&ds=v1%3AHsh5OL91uLhifCQ4eK59h6V%2FhRha%2BiQF3VBBWXLJNQo
+                    - checkbox [ref=e3636]
+                    - text: 128 x 96
+                - listitem "Popular Shopping Ideas" [ref=e3638]:
+                  - link "Apply 176 x 176 filter to narrow results" [ref=e3640] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339562011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_2&ds=v1%3AGOaD1knqUAudqvWEY5idmqoRpg4l92lHO5YlQcGhvJE
+                    - checkbox [ref=e3643]
+                    - text: 176 x 176
+                - listitem "Popular Shopping Ideas" [ref=e3645]:
+                  - link "Apply 218 x 218 filter to narrow results" [ref=e3647] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339556011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_3&ds=v1%3AH6DAsmsEqcSQApPTAbYPCxuK4G57dBjkoEmZFFjD1Ls
+                    - checkbox [ref=e3650]
+                    - text: 218 x 218
+                - listitem "Popular Shopping Ideas" [ref=e3652]:
+                  - link "Apply 240 x 204 filter to narrow results" [ref=e3654] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339554011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_4&ds=v1%3AS7uioDo6DwV%2Fs5wmKwsTSN%2BDQd3xRMnKhD1jEttsCoU
+                    - checkbox [ref=e3657]
+                    - text: 240 x 204
+                - listitem "Popular Shopping Ideas" [ref=e3659]:
+                  - link "Apply 240 x 240 filter to narrow results" [ref=e3661] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339547011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_5&ds=v1%3AaDIXIaWe1eeeGNYViRBCijOo2YfBHOUjpWjdnkTXBgE
+                    - checkbox [ref=e3664]
+                    - text: 240 x 240
+                - listitem "Popular Shopping Ideas" [ref=e3666]:
+                  - link "Apply 240 x 280 filter to narrow results" [ref=e3668] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339545011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_6&ds=v1%3As6Wg12v%2B%2FcEwARmwX3yJmOWtxhpOROSGhhXf82JtWTc
+                    - checkbox [ref=e3671]
+                    - text: 240 x 280
+                - listitem "Popular Shopping Ideas" [ref=e3673]:
+                  - link "Apply 240 x 282 filter to narrow results" [ref=e3675] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015537240111%3A122339544011&dc&qid=1781164311&rnid=122338267011&ref=sr_nr_p_n_g-101015537240111_7&ds=v1%3AxsUZcNdayKrXPjTx%2BNobNoE5b3mdtznd5DQrlLRASp4
+                    - checkbox [ref=e3678]
+                    - text: 240 x 282
+                - listitem [ref=e3680]:
+                  - button "See more, Display Resolution" [ref=e3683] [cursor=pointer]: See more
+            - group "Wearable Computer Type" [ref=e3685]:
+              - heading "Wearable Computer Type" [level=2] [ref=e3686]
+              - list "Wearable Computer Type" [ref=e3687]:
+                - listitem "Popular Shopping Ideas" [ref=e3688]:
+                  - link "Apply Activity Tracker filter to narrow results" [ref=e3690] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538195111%3A122342420011&dc&qid=1781164311&rnid=122342371011&ref=sr_nr_p_n_g-101015538195111_1&ds=v1%3A89aUNwQRBZlqOvqrZSRMjwXxsBqI%2FRhY8wa5UwpHqcg
+                    - checkbox [ref=e3693]
+                    - text: Activity Tracker
+                - listitem "Popular Shopping Ideas" [ref=e3695]:
+                  - link "Apply Pet Activity Tracker filter to narrow results" [ref=e3697] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538195111%3A122342417011&dc&qid=1781164311&rnid=122342371011&ref=sr_nr_p_n_g-101015538195111_2&ds=v1%3AE6uixwLGuWS2vZzaBzE%2Fxgfhf%2Fz0462%2BBJ9rS6Q5iJk
+                    - checkbox [ref=e3700]
+                    - text: Pet Activity Tracker
+                - listitem "Popular Shopping Ideas" [ref=e3702]:
+                  - link "Apply Smart Ring filter to narrow results" [ref=e3704] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538195111%3A122342418011&dc&qid=1781164311&rnid=122342371011&ref=sr_nr_p_n_g-101015538195111_3&ds=v1%3AMHuOyINHhwuwYMwA3QGu5PLMKkEOjY85y1XIUlrnZXY
+                    - checkbox [ref=e3707]
+                    - text: Smart Ring
+                - listitem "Popular Shopping Ideas" [ref=e3709]:
+                  - link "Apply Smart Watch filter to narrow results" [ref=e3711] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015538195111%3A122342419011&dc&qid=1781164311&rnid=122342371011&ref=sr_nr_p_n_g-101015538195111_4&ds=v1%3ATCyciAZbxbZtHrLXGf8BAIvWTl%2Fm1oC89llK2Svuz%2Bc
+                    - checkbox [ref=e3714]
+                    - text: Smart Watch
+            - group "International Protection Rating" [ref=e3716]:
+              - heading "International Protection Rating" [level=2] [ref=e3717]
+              - list "International Protection Rating" [ref=e3718]:
+                - listitem "Popular Shopping Ideas" [ref=e3719]:
+                  - link "Apply IP68 filter to narrow results" [ref=e3721] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940532011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_1&ds=v1%3AUKb%2FRc7VoDHViUUnxR88pMOpRiiZ%2BmBLSiluIIlCHhM
+                    - checkbox [ref=e3724]
+                    - text: IP68
+                - listitem "Popular Shopping Ideas" [ref=e3726]:
+                  - link "Apply IP20 filter to narrow results" [ref=e3728] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940537011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_2&ds=v1%3ARL1KTuDDoSd5JaNczqZjanCCF7JaYGBip9IrwWyGcE0
+                    - checkbox [ref=e3731]
+                    - text: IP20
+                - listitem "Popular Shopping Ideas" [ref=e3733]:
+                  - link "Apply IP54 filter to narrow results" [ref=e3735] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940525011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_3&ds=v1%3A33I9NZ6iMRffYc5hSFXXpx3juZQVc%2FxDdxVDgOG0rpU
+                    - checkbox [ref=e3738]
+                    - text: IP54
+                - listitem "Popular Shopping Ideas" [ref=e3740]:
+                  - link "Apply IP65 filter to narrow results" [ref=e3742] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940524011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_4&ds=v1%3A01aLiUA1PDvGVOHO19i9ElDuK3Sy8PaU5rEoZ8gm7NE
+                    - checkbox [ref=e3745]
+                    - text: IP65
+                - listitem "Popular Shopping Ideas" [ref=e3747]:
+                  - link "Apply IP67 filter to narrow results" [ref=e3749] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940538011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_5&ds=v1%3AoUQL08O7GgxssQ7q%2Bk157H41crt2kebf7JTubbdaZfk
+                    - checkbox [ref=e3752]
+                    - text: IP67
+                - listitem "Popular Shopping Ideas" [ref=e3754]:
+                  - link "Apply IPX4 filter to narrow results" [ref=e3756] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940530011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_6&ds=v1%3AJUILXbW4OTrLAedcRX6rMgH6tsZLUOYyr8n%2FVwV1y0I
+                    - checkbox [ref=e3759]
+                    - text: IPX4
+                - listitem "Popular Shopping Ideas" [ref=e3761]:
+                  - link "Apply IPX7 filter to narrow results" [ref=e3763] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-1003299497111%3A23940529011&dc&qid=1781164311&rnid=23940438011&ref=sr_nr_p_n_g-1003299497111_7&ds=v1%3ALIW76%2FlgnTamYillzkbYC8JvVt0gA%2BSh8ZoYEsbokBc
+                    - checkbox [ref=e3766]
+                    - text: IPX7
+                - listitem [ref=e3768]:
+                  - button "See more, International Protection Rating" [ref=e3771] [cursor=pointer]: See more
+            - group "Wireless Communication Standard" [ref=e3773]:
+              - heading "Wireless Communication Standard" [level=2] [ref=e3774]
+              - list "Wireless Communication Standard" [ref=e3775]:
+                - listitem "Popular Shopping Ideas" [ref=e3776]:
+                  - link "Apply 2.4 GHz Radio Frequency filter to narrow results" [ref=e3778] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347791011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_1&ds=v1%3A3bngCvvKn4N5PXd4kBJFyvQnzQkXHixR%2FjdwtbmWrus
+                    - checkbox [ref=e3781]
+                    - text: 2.4 GHz Radio Frequency
+                - listitem "Popular Shopping Ideas" [ref=e3783]:
+                  - link "Apply 5 GHz Radio Frequency filter to narrow results" [ref=e3785] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347770011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_2&ds=v1%3AxmUmBa29ObsBgxZNRo8N2009yWsHWrjnLtkTd%2FxVCM0
+                    - checkbox [ref=e3788]
+                    - text: 5 GHz Radio Frequency
+                - listitem "Popular Shopping Ideas" [ref=e3790]:
+                  - link "Apply 5.8 GHz Radio Frequency filter to narrow results" [ref=e3792] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347794011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_3&ds=v1%3ALiA%2BCWjD3lsm1XujvbQX%2BBx1FdFH%2FGKDoEbryx7o95s
+                    - checkbox [ref=e3795]
+                    - text: 5.8 GHz Radio Frequency
+                - listitem "Popular Shopping Ideas" [ref=e3797]:
+                  - link "Apply 802.11a/b/g/n/ac filter to narrow results" [ref=e3799] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347774011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_4&ds=v1%3AdqlbDaXagCihbzTQng2%2BpudbWEI2yEIZcesCX%2BspIlk
+                    - checkbox [ref=e3802]
+                    - text: 802.11a/b/g/n/ac
+                - listitem "Popular Shopping Ideas" [ref=e3804]:
+                  - link "Apply 802.11ac filter to narrow results" [ref=e3806] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347779011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_5&ds=v1%3APdNX0axPAz7b6Xc7l9syyhMMfxb6vc5bkoKaMV59o3g
+                    - checkbox [ref=e3809]
+                    - text: 802.11ac
+                - listitem "Popular Shopping Ideas" [ref=e3811]:
+                  - link "Apply 802.11ax filter to narrow results" [ref=e3813] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347789011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_6&ds=v1%3A%2Fepa82nd%2BSUZN%2FN9YCCpKNkBKyyubmDe8vFlEB1u4Vo
+                    - checkbox [ref=e3816]
+                    - text: 802.11ax
+                - listitem "Popular Shopping Ideas" [ref=e3818]:
+                  - link "Apply 802.11b filter to narrow results" [ref=e3820] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101015563299111%3A122347787011&dc&qid=1781164311&rnid=122347710011&ref=sr_nr_p_n_g-101015563299111_7&ds=v1%3Abf46senvCX96s%2FXz7J6uHrsJyIsD71LMMT4FxDJ3yOE
+                    - checkbox [ref=e3823]
+                    - text: 802.11b
+                - listitem [ref=e3825]:
+                  - button "See more, Wireless Communication Standard" [ref=e3828] [cursor=pointer]: See more
+            - group "Wireless Service Provider" [ref=e3830]:
+              - heading "Wireless Service Provider" [level=2] [ref=e3831]
+              - list "Wireless Service Provider" [ref=e3832]:
+                - listitem "Popular Shopping Ideas" [ref=e3833]:
+                  - link "Apply Unlocked for All Carriers filter to narrow results" [ref=e3835] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472896011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3A33R8IDNWmE5afY1sw8vjZ%2BXe4PbPFOBAkLnd8cqLMW4
+                    - checkbox [ref=e3838]
+                    - text: Unlocked for All Carriers
+                - listitem "Popular Shopping Ideas" [ref=e3840]:
+                  - link "Apply ALGAR filter to narrow results" [ref=e3842] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472856011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_2&ds=v1%3AWH0h9iJISoOI42mmaper7zbqY%2F0wscnzgwIbw%2FBK4ns
+                    - checkbox [ref=e3845]
+                    - text: ALGAR
+                - listitem "Popular Shopping Ideas" [ref=e3847]:
+                  - link "Apply BASE filter to narrow results" [ref=e3849] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472864011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_3&ds=v1%3AzrO7lwMzsGwga5EuHDchM3w4AB%2FGExykCVs4HrZqwUg
+                    - checkbox [ref=e3852]
+                    - text: BASE
+                - listitem "Popular Shopping Ideas" [ref=e3854]:
+                  - link "Apply Blau filter to narrow results" [ref=e3856] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472832011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_4&ds=v1%3AxfaZQyXSehgl2kCLzqodASuIav74RQjNIO3QGL7p2Ug
+                    - checkbox [ref=e3859]
+                    - text: Blau
+                - listitem "Popular Shopping Ideas" [ref=e3861]:
+                  - link "Apply Blue filter to narrow results" [ref=e3863] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472899011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_5&ds=v1%3AMv4sK35MECyQ%2FWteVmvti5h2tLLmIR7nWdZ%2FlEfJs3M
+                    - checkbox [ref=e3866]
+                    - text: Blue
+                - listitem "Popular Shopping Ideas" [ref=e3868]:
+                  - link "Apply Du filter to narrow results" [ref=e3870] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472904011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_6&ds=v1%3AAP3rw9QlUfYpxzXUG95uc%2BSYDjGyXP81o3Tr51VAZdc
+                    - checkbox [ref=e3873]
+                    - text: Du
+                - listitem "Popular Shopping Ideas" [ref=e3875]:
+                  - link "Apply Go Mobile filter to narrow results" [ref=e3877] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_feature_browse-bin%3A215472922011&dc&qid=1781164311&rnid=215472812011&ref=sr_nr_p_n_feature_browse-bin_7&ds=v1%3AF8XSP3H9Ac%2Fv6rHwYI7YIJuErvdHRsvxKTkFStFqbHg
+                    - checkbox [ref=e3880]
+                    - text: Go Mobile
+                - listitem [ref=e3882]:
+                  - button "See more, Wireless Service Provider" [ref=e3885] [cursor=pointer]: See more
+            - group "CPU Model Generation" [ref=e3887]:
+              - heading "CPU Model Generation" [level=2] [ref=e3888]
+              - list "CPU Model Generation" [ref=e3889]:
+                - listitem "Popular Shopping Ideas" [ref=e3890]:
+                  - link "Apply 1st Generation filter to narrow results" [ref=e3892] [cursor=pointer]:
+                    - /url: /s?k=Smart+Watch&rh=p_n_g-101017248073111%3A213408724011&dc&qid=1781164311&rnid=213408714011&ref=sr_nr_p_n_g-101017248073111_1&ds=v1%3AGLRu3SSvmzF%2FSz95NvpswJvKw0HUxf%2BdvZryRdl4LA8
+                    - checkbox [ref=e3895]
+                    - text: 1st Generation
+    - complementary "Your recently viewed items and featured recommendations"
+    - generic [ref=e3897]:
+      - button "Back to top" [ref=e3898] [cursor=pointer]:
+        - generic [ref=e3899]: Back to top
+      - generic [ref=e3900]:
+        - generic [ref=e3901]:
+          - heading "Get to Know Us" [level=6] [ref=e3902]
+          - list [ref=e3903]:
+            - listitem [ref=e3904]:
+              - link "Careers" [ref=e3905] [cursor=pointer]:
+                - /url: https://www.amazon.jobs
+            - listitem [ref=e3906]:
+              - link "Blog" [ref=e3907] [cursor=pointer]:
+                - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e3908]:
+              - link "About Amazon" [ref=e3909] [cursor=pointer]:
+                - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e3910]:
+              - link "Investor Relations" [ref=e3911] [cursor=pointer]:
+                - /url: https://www.amazon.com/ir
+            - listitem [ref=e3912]:
+              - link "Amazon Devices" [ref=e3913] [cursor=pointer]:
+                - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+            - listitem [ref=e3914]:
+              - link "Amazon Science" [ref=e3915] [cursor=pointer]:
+                - /url: https://www.amazon.science
+        - generic [ref=e3917]:
+          - heading "Make Money with Us" [level=6] [ref=e3918]
+          - list [ref=e3919]:
+            - listitem [ref=e3920]:
+              - link "Sell products on Amazon" [ref=e3921] [cursor=pointer]:
+                - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+            - listitem [ref=e3922]:
+              - link "Sell on Amazon Business" [ref=e3923] [cursor=pointer]:
+                - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+            - listitem [ref=e3924]:
+              - link "Sell apps on Amazon" [ref=e3925] [cursor=pointer]:
+                - /url: https://developer.amazon.com
+            - listitem [ref=e3926]:
+              - link "Become an Affiliate" [ref=e3927] [cursor=pointer]:
+                - /url: https://affiliate-program.amazon.com/
+            - listitem [ref=e3928]:
+              - link "Advertise Your Products" [ref=e3929] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+            - listitem [ref=e3930]:
+              - link "Self-Publish with Us" [ref=e3931] [cursor=pointer]:
+                - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+            - listitem [ref=e3932]:
+              - link "Host an Amazon Hub" [ref=e3933] [cursor=pointer]:
+                - /url: https://go.thehub-amazon.com/amazon-hub-locker
+            - listitem [ref=e3934]:
+              - text: ›
+              - link "See More Make Money with Us" [ref=e3935] [cursor=pointer]:
+                - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+        - generic [ref=e3937]:
+          - heading "Amazon Payment Products" [level=6] [ref=e3938]
+          - list [ref=e3939]:
+            - listitem [ref=e3940]:
+              - link "Amazon Business Card" [ref=e3941] [cursor=pointer]:
+                - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+            - listitem [ref=e3942]:
+              - link "Shop with Points" [ref=e3943] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+            - listitem [ref=e3944]:
+              - link "Reload Your Balance" [ref=e3945] [cursor=pointer]:
+                - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+            - listitem [ref=e3946]:
+              - link "Amazon Currency Converter" [ref=e3947] [cursor=pointer]:
+                - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+        - generic [ref=e3949]:
+          - heading "Let Us Help You" [level=6] [ref=e3950]
+          - list [ref=e3951]:
+            - listitem [ref=e3952]:
+              - link "Amazon and COVID-19" [ref=e3953] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+            - listitem [ref=e3954]:
+              - link "Your Account" [ref=e3955] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+            - listitem [ref=e3956]:
+              - link "Your Orders" [ref=e3957] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+            - listitem [ref=e3958]:
+              - link "Shipping Rates & Policies" [ref=e3959] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+            - listitem [ref=e3960]:
+              - link "Returns & Replacements" [ref=e3961] [cursor=pointer]:
+                - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+            - listitem [ref=e3962]:
+              - link "Manage Your Content and Devices" [ref=e3963] [cursor=pointer]:
+                - /url: /gp/digital/fiona/manage?ref_=footer_myk
+            - listitem [ref=e3964]:
+              - link "Help" [ref=e3965] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+      - generic [ref=e3967]:
+        - link "Amazon US Home" [ref=e3970] [cursor=pointer]:
+          - /url: /?ref_=footer_logo
+        - generic [ref=e3973]:
+          - generic [ref=e3974]:
+            - link "Choose a language for shopping. Current selection is English." [ref=e3975] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+              - generic [ref=e3977]: English
+            - button "Expand to Change Language or Country" [ref=e3978] [cursor=pointer]
+          - link "₹ INR - Indian Rupee" [ref=e3979] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2Fs%3Fk%3DSmart%2BWatch%26ref%3Dnb_sb_nosss%2Fref%3Dnb_sb_noss
+            - generic [ref=e3980]: ₹
+            - generic [ref=e3981]: INR - Indian Rupee
+          - button "Choose a country/region for shopping. The current selection is United States." [ref=e3982] [cursor=pointer]:
+            - generic [ref=e3984]: United States
+      - navigation "More on Amazon" [ref=e3985]:
+        - generic "More on Amazon" [ref=e3986]:
+          - list [ref=e3987]:
+            - listitem [ref=e3988]:
+              - link "Amazon Music Stream millions of songs" [ref=e3989] [cursor=pointer]:
+                - /url: https://music.amazon.com?ref=dm_aff_amz_com
+                - heading "Amazon Music" [level=5] [ref=e3990]
+                - generic [ref=e3991]:
+                  - text: Stream millions
+                  - text: of songs
+            - listitem [ref=e3992]
+            - listitem [ref=e3993]:
+              - link "Amazon Ads Reach customers wherever they spend their time" [ref=e3994] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+                - heading "Amazon Ads" [level=5] [ref=e3995]
+                - generic [ref=e3996]:
+                  - text: Reach customers
+                  - text: wherever they
+                  - text: spend their time
+            - listitem [ref=e3997]
+            - listitem [ref=e3998]:
+              - link "6pm Score deals on fashion brands" [ref=e3999] [cursor=pointer]:
+                - /url: https://www.6pm.com
+                - heading "6pm" [level=5] [ref=e4000]
+                - generic [ref=e4001]:
+                  - text: Score deals
+                  - text: on fashion brands
+            - listitem [ref=e4002]
+            - listitem [ref=e4003]:
+              - link "AbeBooks Books, art & collectibles" [ref=e4004] [cursor=pointer]:
+                - /url: https://www.abebooks.com
+                - heading "AbeBooks" [level=5] [ref=e4005]
+                - generic [ref=e4006]:
+                  - text: Books, art
+                  - text: "& collectibles"
+            - listitem [ref=e4007]
+            - listitem [ref=e4008]:
+              - link "ACX Audiobook Publishing Made Easy" [ref=e4009] [cursor=pointer]:
+                - /url: https://www.acx.com/
+                - heading "ACX" [level=5] [ref=e4010]
+                - generic [ref=e4011]:
+                  - text: Audiobook Publishing
+                  - text: Made Easy
+            - listitem [ref=e4012]
+            - listitem [ref=e4013]:
+              - link "Sell on Amazon Start a Selling Account" [ref=e4014] [cursor=pointer]:
+                - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+                - heading "Sell on Amazon" [level=5] [ref=e4015]
+                - generic [ref=e4016]: Start a Selling Account
+            - listitem [ref=e4017]
+            - listitem [ref=e4018]:
+              - link "Veeqo Shipping Software Inventory Management" [ref=e4019] [cursor=pointer]:
+                - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+                - heading "Veeqo" [level=5] [ref=e4020]
+                - generic [ref=e4021]:
+                  - text: Shipping Software
+                  - text: Inventory Management
+          - list [ref=e4022]:
+            - listitem [ref=e4023]:
+              - link "Amazon Business Everything For Your Business" [ref=e4024] [cursor=pointer]:
+                - /url: /business?ref_=footer_retail_b2b
+                - heading "Amazon Business" [level=5] [ref=e4025]
+                - generic [ref=e4026]:
+                  - text: Everything For
+                  - text: Your Business
+            - listitem [ref=e4027]
+            - listitem [ref=e4028]:
+              - link "AmazonGlobal Ship Orders Internationally" [ref=e4029] [cursor=pointer]:
+                - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+                - heading "AmazonGlobal" [level=5] [ref=e4030]
+                - generic [ref=e4031]:
+                  - text: Ship Orders
+                  - text: Internationally
+            - listitem [ref=e4032]
+            - listitem [ref=e4033]:
+              - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e4034] [cursor=pointer]:
+                - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+                - heading "Amazon Web Services" [level=5] [ref=e4035]
+                - generic [ref=e4036]:
+                  - text: Scalable Cloud
+                  - text: Computing Services
+            - listitem [ref=e4037]
+            - listitem [ref=e4038]:
+              - link "Audible Listen to Books & Original Audio Performances" [ref=e4039] [cursor=pointer]:
+                - /url: https://www.audible.com
+                - heading "Audible" [level=5] [ref=e4040]
+                - generic [ref=e4041]:
+                  - text: Listen to Books & Original
+                  - text: Audio Performances
+            - listitem [ref=e4042]
+            - listitem [ref=e4043]:
+              - link "Box Office Mojo Find Movie Box Office Data" [ref=e4044] [cursor=pointer]:
+                - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+                - heading "Box Office Mojo" [level=5] [ref=e4045]
+                - generic [ref=e4046]:
+                  - text: Find Movie
+                  - text: Box Office Data
+            - listitem [ref=e4047]
+            - listitem [ref=e4048]:
+              - link "Goodreads Book reviews & recommendations" [ref=e4049] [cursor=pointer]:
+                - /url: https://www.goodreads.com
+                - heading "Goodreads" [level=5] [ref=e4050]
+                - generic [ref=e4051]:
+                  - text: Book reviews
+                  - text: "& recommendations"
+            - listitem [ref=e4052]
+            - listitem [ref=e4053]:
+              - link "IMDb Movies, TV & Celebrities" [ref=e4054] [cursor=pointer]:
+                - /url: https://www.imdb.com
+                - heading "IMDb" [level=5] [ref=e4055]
+                - generic [ref=e4056]:
+                  - text: Movies, TV
+                  - text: "& Celebrities"
+          - list [ref=e4057]:
+            - listitem [ref=e4058]:
+              - link "IMDbPro Get Info Entertainment Professionals Need" [ref=e4059] [cursor=pointer]:
+                - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+                - heading "IMDbPro" [level=5] [ref=e4060]
+                - generic [ref=e4061]:
+                  - text: Get Info Entertainment
+                  - text: Professionals Need
+            - listitem [ref=e4062]
+            - listitem [ref=e4063]:
+              - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e4064] [cursor=pointer]:
+                - /url: https://kdp.amazon.com
+                - heading "Kindle Direct Publishing" [level=5] [ref=e4065]
+                - generic [ref=e4066]:
+                  - text: Indie Digital & Print Publishing
+                  - text: Made Easy
+            - listitem [ref=e4067]
+            - listitem [ref=e4068]:
+              - link "Prime Video Direct Video Distribution Made Easy" [ref=e4069] [cursor=pointer]:
+                - /url: https://videodirect.amazon.com/home/landing
+                - heading "Prime Video Direct" [level=5] [ref=e4070]
+                - generic [ref=e4071]:
+                  - text: Video Distribution
+                  - text: Made Easy
+            - listitem [ref=e4072]
+            - listitem [ref=e4073]:
+              - link "Shopbop Designer Fashion Brands" [ref=e4074] [cursor=pointer]:
+                - /url: https://www.shopbop.com
+                - heading "Shopbop" [level=5] [ref=e4075]
+                - generic [ref=e4076]:
+                  - text: Designer
+                  - text: Fashion Brands
+            - listitem [ref=e4077]
+            - listitem [ref=e4078]:
+              - link "Woot! Deals and Shenanigans" [ref=e4079] [cursor=pointer]:
+                - /url: https://www.woot.com/
+                - heading "Woot!" [level=5] [ref=e4080]
+                - generic [ref=e4081]:
+                  - text: Deals and
+                  - text: Shenanigans
+            - listitem [ref=e4082]
+            - listitem [ref=e4083]:
+              - link "Zappos Shoes & Clothing" [ref=e4084] [cursor=pointer]:
+                - /url: https://www.zappos.com
+                - heading "Zappos" [level=5] [ref=e4085]
+                - generic [ref=e4086]:
+                  - text: Shoes &
+                  - text: Clothing
+            - listitem [ref=e4087]
+            - listitem [ref=e4088]:
+              - link "Ring Smart Home Security Systems" [ref=e4089] [cursor=pointer]:
+                - /url: https://ring.com
+                - heading "Ring" [level=5] [ref=e4090]
+                - generic [ref=e4091]:
+                  - text: Smart Home
+                  - text: Security Systems
+          - list [ref=e4092]:
+            - listitem [ref=e4093]
+            - listitem [ref=e4094]
+            - listitem [ref=e4095]:
+              - link "eero WiFi Stream 4K Video in Every Room" [ref=e4096] [cursor=pointer]:
+                - /url: https://eero.com/
+                - heading "eero WiFi" [level=5] [ref=e4097]
+                - generic [ref=e4098]:
+                  - text: Stream 4K Video
+                  - text: in Every Room
+            - listitem [ref=e4099]
+            - listitem [ref=e4100]:
+              - link "Blink Smart Security for Every Home" [ref=e4101] [cursor=pointer]:
+                - /url: https://blinkforhome.com/?ref=nav_footer
+                - heading "Blink" [level=5] [ref=e4102]
+                - generic [ref=e4103]:
+                  - text: Smart Security
+                  - text: for Every Home
+            - listitem [ref=e4104]
+            - listitem [ref=e4105]:
+              - link "Neighbors App Real-Time Crime & Safety Alerts" [ref=e4106] [cursor=pointer]:
+                - /url: https://shop.ring.com/pages/neighbors-app
+                - heading "Neighbors App" [level=5] [ref=e4107]
+                - generic [ref=e4108]:
+                  - text: Real-Time Crime
+                  - text: "& Safety Alerts"
+            - listitem [ref=e4109]
+            - listitem [ref=e4110]:
+              - link "PillPack Pharmacy Simplified" [ref=e4111] [cursor=pointer]:
+                - /url: https://www.pillpack.com
+                - heading "PillPack" [level=5] [ref=e4112]
+                - generic [ref=e4113]: Pharmacy Simplified
+            - listitem [ref=e4114]
+            - listitem [ref=e4115]
+            - listitem [ref=e4116]
+            - listitem [ref=e4117]
+      - generic [ref=e4118]:
+        - list [ref=e4119]:
+          - listitem [ref=e4120]:
+            - link "Conditions of Use" [ref=e4121] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+          - listitem [ref=e4122]:
+            - link "Privacy Notice" [ref=e4123] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+          - listitem [ref=e4124]:
+            - link "Consumer Health Data Privacy Disclosure" [ref=e4125] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+          - listitem [ref=e4126]:
+            - link "Your Ads Privacy Choices" [ref=e4127] [cursor=pointer]:
+              - /url: /privacyprefs?ref_=footer_iba
+          - listitem [ref=e4128]
+        - generic [ref=e4130]: © 1996-2026, Amazon.com, Inc. or its affiliates
+    - iframe [ref=e4132]:
+      - iframe [ref=f3e2]:
+        - generic [active]:
+          - img [ref=f4e1]
+          - img [ref=f4e2]
+          - img [ref=f4e3]
+          - img [ref=f4e4]
+          - img [ref=f4e5]
+          - img [ref=f4e6]
+          - img [ref=f4e7]
+          - img [ref=f4e8]
+          - img [ref=f4e9]
+          - img [ref=f4e10]
+          - img [ref=f4e11]
+          - img [ref=f4e12]
+          - img [ref=f4e13]
+          - img [ref=f4e14]
+          - img [ref=f4e15]
+          - img [ref=f4e16]
+          - img [ref=f4e17]
+          - img [ref=f4e18]
+          - img [ref=f4e19]
+          - img [ref=f4e20]
+          - img [ref=f4e21]
+          - img [ref=f4e22]
+          - img [ref=f4e23]
+          - img [ref=f4e24]
+          - img [ref=f4e25]
+          - img [ref=f4e26]
+          - img [ref=f4e27]
+          - img [ref=f4e28]
+          - img [ref=f4e29]
+          - img [ref=f4e30]
+          - img [ref=f4e31]
+          - img [ref=f4e32]
+          - img [ref=f4e33]
+          - img [ref=f4e34]
+          - img [ref=f4e35]
+          - img [ref=f4e36]
+          - img [ref=f4e37]
+          - img [ref=f4e38]
+          - img [ref=f4e39]
+          - img [ref=f4e40]
+          - img [ref=f4e41]
+          - img [ref=f4e42]
+          - img [ref=f4e43]
+  - generic: "Test: amzn-nv-flyout-healthy-choice"
+  - generic: "Test: nav-rufus-disc-txt"
+  - generic: "Test: a-truncate-cut"
+  - generic: "Test: sp-cc-wrapper"
+  - generic: "Test: .mo-wp"
+  - generic: "Test: .a-image-container"
+  - generic: "Test: sp-cc"
+  - generic: "Test: .amzn-box-inner"
+  - generic: "Test: .js-order-card"
+  - generic: "Test: pldn-deep-link"
+  - generic: "Test: add-to-cart-btn"
+  - generic: "Test: amzn-nav-app-banner-container"
+  - generic: "Test: .sparkle-container"
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from '@playwright/test';
+  2  | import { BasePage } from './BasePage';
+  3  | 
+  4  | export class SearchResultsPage extends BasePage {
+  5  |     readonly searchResultsContainer: Locator;
+  6  |     readonly productTitle: Locator;
+  7  |     readonly priceFilter: Locator;
+  8  |     readonly minPriceInput: Locator;
+  9  |     readonly maxPriceInput: Locator;
+  10 |     readonly applyPriceButton: Locator;
+  11 |     readonly ratingFilter: Locator;
+  12 |     readonly sortDropdown: Locator;
+  13 |     readonly productItem: Locator;
+  14 |     readonly productCount: Locator;
+  15 | 
+  16 |     constructor(page: Page) {
+  17 |         super(page);
+  18 |         this.searchResultsContainer = page.locator('[data-component-type="s-search-result"]');
+  19 |         this.productTitle = page.locator('h2 a span');
+  20 |         this.priceFilter = page.locator('input[aria-label*="price"]');
+  21 |         this.minPriceInput = page.locator('input[aria-label*="min"]');
+  22 |         this.maxPriceInput = page.locator('input[aria-label*="max"]');
+  23 |         this.applyPriceButton = page.locator('input[aria-label*="Go"]');
+  24 |         this.ratingFilter = page.locator('i.a-icon-star-small span');
+  25 |         this.sortDropdown = page.locator('select#s-result-sort-select');
+  26 |         this.productItem = page.locator('[data-component-type="s-search-result"]');
+  27 |         this.productCount = page.locator('.sg-col-inner');
+  28 |     }
+  29 | 
+  30 |     async getProductCount(): Promise<number> {
+  31 |         return await this.productItem.count();
+  32 |     }
+  33 | 
+  34 |     async getProductTitles(): Promise<string[]> {
+  35 |         const titles: string[] = [];
+  36 |         const items = await this.productTitle.all();
+  37 |         for (const item of items) {
+  38 |             titles.push(await item.textContent() || '');
+  39 |         }
+  40 |         return titles;
+  41 |     }
+  42 | 
+  43 |     async selectProduct(productIndex: number) {
+  44 |         const products = this.page.locator('[data-component-type="s-search-result"]');
+  45 |         const firstProduct = products.nth(productIndex);
+> 46 |         await firstProduct.locator('h2 a').click();
+     |                                            ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  47 |     }
+  48 | 
+  49 |     async selectProductByName(productName: string) {
+  50 |         await this.page.locator(`h2 a:has-text("${productName}")`).click();
+  51 |     }
+  52 | 
+  53 |     async filterByPriceRange(minPrice: string, maxPrice: string) {
+  54 |         await this.minPriceInput.fill(minPrice);
+  55 |         await this.maxPriceInput.fill(maxPrice);
+  56 |         await this.applyPriceButton.click();
+  57 |     }
+  58 | 
+  59 |     async sortByOption(sortOption: string) {
+  60 |         // Options: 'price-asc-rank', 'price-desc-rank', 'review-rank', 'date-desc-rank'
+  61 |         await this.sortDropdown.selectOption(sortOption);
+  62 |     }
+  63 | 
+  64 |     async filterByRating(stars: number) {
+  65 |         // Filter by star rating (4 stars and up, etc.)
+  66 |         await this.page.locator(`[aria-label="${stars} Stars & Up"]`).click();
+  67 |     }
+  68 | 
+  69 |     async verifyProductsDisplayed(): Promise<boolean> {
+  70 |         return await this.searchResultsContainer.first().isVisible();
+  71 |     }
+  72 | 
+  73 |     async waitForSearchResults() {
+  74 |         await this.page.waitForSelector('[data-component-type="s-search-result"]');
+  75 |     }
+  76 | }
+  77 | 
+```

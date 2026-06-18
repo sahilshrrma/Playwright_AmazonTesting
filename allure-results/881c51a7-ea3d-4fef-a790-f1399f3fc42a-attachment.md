@@ -1,0 +1,2687 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: EnhancedProductFlow.spec.ts >> Amazon Product Flow - Enhanced >> should get product price independently
+- Location: src\tests\EnhancedProductFlow.spec.ts:137:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-component-type="s-search-result"]').first().locator('h2 a')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Shortcuts menu" [ref=e3]:
+      - heading "Skip to" [level=2] [ref=e4]
+      - list "Skip to" [ref=e5]:
+        - listitem [ref=e6]:
+          - link "main content" [ref=e7] [cursor=pointer]:
+            - /url: "#skippedLink"
+            - text: Main content
+        - listitem [ref=e8]:
+          - link "Results" [ref=e9] [cursor=pointer]:
+            - /url: .s-asin a:has(h2)
+        - listitem [ref=e10]:
+          - link "Filters" [ref=e11] [cursor=pointer]:
+            - /url: "#s-refinements > div.a-section > div:first-child"
+      - separator [ref=e12]
+      - heading "Keyboard shortcuts" [level=2] [ref=e13]
+      - list "Keyboard shortcuts" [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Search, alt, forward slash" [ref=e16] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e17]:
+              - generic [ref=e18]: Search
+              - generic [ref=e19]:
+                - generic [ref=e20]: alt
+                - generic [ref=e21]: +
+                - generic [ref=e22]: /
+        - listitem [ref=e23]:
+          - link "Cart, shift, alt, c" [ref=e24] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e25]:
+              - generic [ref=e26]: Cart
+              - generic [ref=e27]:
+                - generic [ref=e28]: shift
+                - generic [ref=e29]: +
+                - generic [ref=e30]: alt
+                - generic [ref=e31]: +
+                - generic [ref=e32]: C
+        - listitem [ref=e33]:
+          - link "Home, shift, alt, h" [ref=e34] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e35]:
+              - generic [ref=e36]: Home
+              - generic [ref=e37]:
+                - generic [ref=e38]: shift
+                - generic [ref=e39]: +
+                - generic [ref=e40]: alt
+                - generic [ref=e41]: +
+                - generic [ref=e42]: H
+        - listitem [ref=e43]:
+          - link "Your orders, shift, alt, o" [ref=e44] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e45]:
+              - generic [ref=e46]: Orders
+              - generic [ref=e47]:
+                - generic [ref=e48]: shift
+                - generic [ref=e49]: +
+                - generic [ref=e50]: alt
+                - generic [ref=e51]: +
+                - generic [ref=e52]: O
+        - listitem [ref=e53]:
+          - button "Show/hide shortcuts, shift, alt, z" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: Show/Hide shortcuts
+              - generic [ref=e57]:
+                - generic [ref=e58]: shift
+                - generic [ref=e59]: +
+                - generic [ref=e60]: alt
+                - generic [ref=e61]: +
+                - generic [ref=e62]: Z
+      - generic [ref=e68]: To move between items, use your keyboard's up or down arrows.
+    - banner [ref=e69]:
+      - navigation "Primary" [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - link "Amazon" [ref=e74] [cursor=pointer]:
+              - /url: /ref=nav_logo
+            - button "Deliver to India" [ref=e77] [cursor=pointer]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: Deliver to
+                - generic [ref=e81]: India
+          - search [ref=e84]:
+            - generic [ref=e87]:
+              - generic [ref=e89]: All
+              - combobox "Select the department you want to search in" [ref=e91] [cursor=pointer]:
+                - option "All Departments" [selected]
+                - option "Arts & Crafts"
+                - option "Automotive"
+                - option "Baby"
+                - option "Beauty & Personal Care"
+                - option "Books"
+                - option "Boys' Fashion"
+                - option "Computers"
+                - option "Deals"
+                - option "Digital Music"
+                - option "Electronics"
+                - option "Girls' Fashion"
+                - option "Health & Household"
+                - option "Home & Kitchen"
+                - option "Industrial & Scientific"
+                - option "Kindle Store"
+                - option "Luggage"
+                - option "Men's Fashion"
+                - option "Movies & TV"
+                - option "Music, CDs & Vinyl"
+                - option "Pet Supplies"
+                - option "Prime Video"
+                - option "Software"
+                - option "Sports & Outdoors"
+                - option "Tools & Home Improvement"
+                - option "Toys & Games"
+                - option "Video Games"
+                - option "Women's Fashion"
+            - searchbox "Search Amazon" [ref=e94]: Keyboard
+            - generic "Go" [ref=e97] [cursor=pointer]:
+              - button "Go" [ref=e98]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=e102] [cursor=pointer]:
+                - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+                - generic [ref=e105]:
+                  - img "United States" [ref=e106]
+                  - generic [ref=e107]: EN
+              - button "Expand to Change Language or Country" [ref=e108] [cursor=pointer]
+            - generic [ref=e109]:
+              - link "Hello, sign in Account & Lists" [ref=e110] [cursor=pointer]:
+                - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DKeyboard%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                - generic [ref=e112]: Hello, sign in
+                - generic [ref=e113]: Account & Lists
+              - button "Expand Account and Lists" [ref=e114] [cursor=pointer]
+            - link "Returns & Orders" [ref=e115] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=nav_orders_first
+              - generic [ref=e116]: Returns
+              - generic [ref=e117]: "& Orders"
+            - link "0 items in cart" [ref=e118] [cursor=pointer]:
+              - /url: /gp/cart/view.html?ref_=nav_cart
+              - generic [ref=e120]: "0"
+              - generic [ref=e123]: Cart
+        - alertdialog "International Shopping Transition Alert" [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e129]:
+              - text: We're showing you items that ship to
+              - strong [ref=e130]: India
+              - text: . To see items that ship to a different country, change your delivery address.
+            - generic [ref=e131]:
+              - generic [ref=e133] [cursor=pointer]:
+                - button "Submit" [ref=e134]
+                - generic [ref=e135]: Dismiss
+              - generic [ref=e137] [cursor=pointer]:
+                - button "Submit" [ref=e138]
+                - generic [ref=e139]: Change Address
+        - generic [ref=e140]:
+          - button "Open All Categories Menu" [ref=e142] [cursor=pointer]:
+            - generic [ref=e144]: All
+          - list [ref=e148]:
+            - listitem [ref=e149]:
+              - link "Today's Deals" [ref=e151] [cursor=pointer]:
+                - /url: /gp/goldbox?ref_=nav_cs_gb
+            - listitem [ref=e152]:
+              - link "Gift Cards" [ref=e154] [cursor=pointer]:
+                - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+            - listitem [ref=e155]:
+              - link "Sell" [ref=e157] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+            - listitem [ref=e158]:
+              - link "Prime Video" [ref=e160] [cursor=pointer]:
+                - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+            - listitem [ref=e161]:
+              - link "Registry" [ref=e163] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+            - listitem [ref=e164]:
+              - link "Customer Service" [ref=e166] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+            - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=e167] [cursor=pointer]:
+              - /url: /gp/help/customer/accessibility
+              - text: Disability Customer Support
+        - dialog [ref=e170]
+    - generic [ref=e172]:
+      - 'heading "1-16 of over 90,000 results for \"Keyboard\" Sort by: Featured" [level=1] [ref=e175]':
+        - generic [ref=e176]:
+          - heading "1-16 of over 90,000 results for \"Keyboard\"" [level=2] [ref=e179]
+          - generic [ref=e184]:
+            - generic [ref=e185]: "Sort by:"
+            - combobox "Sort by:" [ref=e186]:
+              - option "Featured" [selected]
+              - 'option "Price: Low to High"'
+              - 'option "Price: High to Low"'
+              - option "Avg. Customer Review"
+              - option "Newest Arrivals"
+              - option "Best Sellers"
+            - generic [ref=e189] [cursor=pointer]: Sort by:Featured
+      - generic [ref=e191]:
+        - generic [ref=e193]:
+          - generic [ref=e195]:
+            - generic [ref=e197]:
+              - generic [ref=e200]:
+                - heading "Results" [level=2] [ref=e201]
+                - generic [ref=e202]: Check each product page for other buying options.
+              - generic:
+                - list:
+                  - listitem [ref=e203]:
+                    - generic [ref=e211]:
+                      - link [ref=e217] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e219]
+                      - generic [ref=e222]:
+                        - generic [ref=e223]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e226] [cursor=pointer]:
+                            - generic [ref=e227]: Sponsored
+                          - link "Sponsored Ad - Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey" [ref=e229] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey" [level=2] [ref=e230]: Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey
+                        - generic [ref=e232]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e234] [cursor=pointer]:
+                            - generic [ref=e236]: 4.2 out of 5 stars
+                          - link "93 ratings" [ref=e240] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                            - text: (93)
+                        - generic [ref=e243]:
+                          - generic [ref=e246]:
+                            - generic [ref=e247]: Price, product page
+                            - link "INR 4,754.75" [ref=e248] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                              - generic [ref=e249]:
+                                - generic [ref=e250]: INR 4,754.75
+                                - generic [ref=e251]:
+                                  - text: INR
+                                  - generic [ref=e252]:
+                                    - text: 4,754
+                                    - generic [ref=e253]: .
+                                  - text: "75"
+                          - generic [ref=e254]:
+                            - generic [ref=e260]: INR 1,207.95 delivery Tue, Jul 7
+                            - generic [ref=e261]: Ships to India
+                          - button "Add to cart" [ref=e276] [cursor=pointer]
+                  - listitem [ref=e279]:
+                    - generic [ref=e287]:
+                      - link [ref=e293] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEzMjA0NDY4MTM5MDI6OjA6Og&url=%2FSnpurdiri-Keyboard-Backlit-Ultra-Compact-Business%2Fdp%2FB0GXZSR865%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e295]
+                      - generic [ref=e298]:
+                        - generic [ref=e299]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e302] [cursor=pointer]:
+                            - generic [ref=e303]: Sponsored
+                          - link "Sponsored Ad - Snpurdiri 60% Wired Gaming Keyboard, 61 Keys RGB Backlit Ultra-Compact Contour Line Small Gaming Keyboard, for PC/Mac Gamer, Typist, Travel, Easy to Carry on Business Trip (White)" [ref=e305] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEzMjA0NDY4MTM5MDI6OjA6Og&url=%2FSnpurdiri-Keyboard-Backlit-Ultra-Compact-Business%2Fdp%2FB0GXZSR865%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - Snpurdiri 60% Wired Gaming Keyboard, 61 Keys RGB Backlit Ultra-Compact Contour Line Small Gaming Keyboard, for PC/Mac Gamer, Typist, Travel, Easy to Carry on Business Trip (White)" [level=2] [ref=e306]: Snpurdiri 60% Wired Gaming Keyboard, 61 Keys RGB Backlit Ultra-Compact Contour Line Small Gaming Keyboard, for PC/Mac Gamer, Typist, Travel, Easy to Carry on Business Trip (White)
+                        - link "See options" [ref=e318] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2F0ZjozMDEzMjA0NDY4MTM5MDI6OjA6Og&url=%2FSnpurdiri-Keyboard-Backlit-Ultra-Compact-Business%2Fdp%2FB0GXZSR865%2Fref%3Dsr_1_2_so_KEYBOARDS%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                  - listitem [ref=e321]:
+                    - generic [ref=e327]:
+                      - generic [ref=e329]:
+                        - generic "Amazon's Choice" [ref=e332]:
+                          - generic [ref=e341]: Overall Pick
+                        - link [ref=e346] [cursor=pointer]:
+                          - /url: /Redragon-K521-Mechanical-Multimedia-Anti-Ghosting/dp/B0DRFGNWV1/ref=sr_1_3?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-3
+                          - img [ref=e348]
+                      - generic [ref=e351]:
+                        - link "Redragon K521 Upgrade Rainbow LED Gaming Keyboard, 104 Keys Wired Mechanical Feeling Keyboard with Multimedia Keys, One-Touch Backlit, Anti-Ghosting, Compatible with PC, Mac, PS4/5, Xbox" [ref=e353] [cursor=pointer]:
+                          - /url: /Redragon-K521-Mechanical-Multimedia-Anti-Ghosting/dp/B0DRFGNWV1/ref=sr_1_3?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-3
+                          - heading "Redragon K521 Upgrade Rainbow LED Gaming Keyboard, 104 Keys Wired Mechanical Feeling Keyboard with Multimedia Keys, One-Touch Backlit, Anti-Ghosting, Compatible with PC, Mac, PS4/5, Xbox" [level=2] [ref=e354]
+                        - generic [ref=e355]:
+                          - generic [ref=e356]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e358] [cursor=pointer]:
+                              - generic [ref=e360]: 4.4 out of 5 stars
+                            - link "9,116 ratings" [ref=e364] [cursor=pointer]:
+                              - /url: /Redragon-K521-Mechanical-Multimedia-Anti-Ghosting/dp/B0DRFGNWV1/ref=sr_1_3?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-3#customerReviews
+                              - text: (9.1K)
+                          - generic [ref=e365]: 1K+ bought in past month
+                        - generic [ref=e368]:
+                          - link "See options" [ref=e377] [cursor=pointer]:
+                            - /url: /Redragon-K521-Mechanical-Multimedia-Anti-Ghosting/dp/B0DRFGNWV1/ref=sr_1_3_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-3
+                          - generic [ref=e379]:
+                            - text: No featured offers available
+                            - text: INR 1,520.87
+                            - link "(1 new offer)" [ref=e381] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0DRFGNWV1/ref=sr_1_3_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-3
+                  - listitem [ref=e384]:
+                    - generic [ref=e390]:
+                      - generic [ref=e392]:
+                        - group "Best Sellerin PC Gaming Keyboards" [ref=e398]:
+                          - generic "Best Seller" [ref=e400]
+                        - link [ref=e404] [cursor=pointer]:
+                          - /url: /F75-Pro/dp/B0D14N2QZF/ref=sr_1_4?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-4
+                          - img [ref=e406]
+                      - generic [ref=e409]:
+                        - link "AULA F75 Pro Wireless Mechanical Keyboard,75% Hot Swappable Custom Keyboard with Knob,RGB Backlit,Pre-lubed Reaper Switches,Side Printed PBT Keycaps,2.4GHz/USB-C/BT5.0 Mechanical Gaming Keyboards" [ref=e411] [cursor=pointer]:
+                          - /url: /F75-Pro/dp/B0D14N2QZF/ref=sr_1_4?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-4
+                          - heading "AULA F75 Pro Wireless Mechanical Keyboard,75% Hot Swappable Custom Keyboard with Knob,RGB Backlit,Pre-lubed Reaper Switches,Side Printed PBT Keycaps,2.4GHz/USB-C/BT5.0 Mechanical Gaming Keyboards" [level=2] [ref=e412]
+                        - generic [ref=e413]:
+                          - generic [ref=e414]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e416] [cursor=pointer]:
+                              - generic [ref=e418]: 4.7 out of 5 stars
+                            - link "1,590 ratings" [ref=e422] [cursor=pointer]:
+                              - /url: /F75-Pro/dp/B0D14N2QZF/ref=sr_1_4?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-4#customerReviews
+                              - text: (1.5K)
+                          - generic [ref=e423]: 3K+ bought in past month
+                        - generic [ref=e426]:
+                          - button "Recycled materials +2 more" [ref=e435] [cursor=pointer]:
+                            - generic [ref=e436]: Recycled materials +2 more
+                          - link "See options" [ref=e444] [cursor=pointer]:
+                            - /url: /F75-Pro/dp/B0D14N2QZF/ref=sr_1_4_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-4
+                          - generic [ref=e446]:
+                            - text: No featured offers available
+                            - text: INR 6,657.03
+                            - link "(2 new offers)" [ref=e448] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D14N2QZF/ref=sr_1_4_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-4
+                  - listitem [ref=e451]:
+                    - generic [ref=e457]:
+                      - link [ref=e463] [cursor=pointer]:
+                        - /url: /Logitech-Wireless-Ergonomic-Keyboard-Wrist/dp/B07ZWK2TQT/ref=sr_1_5?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-5
+                        - img [ref=e465]
+                      - generic [ref=e468]:
+                        - link "Logitech Ergo K860 Wireless Ergonomic Keyboard - Split Keyboard, Wrist Rest, Natural Typing, Stain-Resistant Fabric, Bluetooth and USB Connectivity, Compatible with Windows/Mac, Black" [ref=e470] [cursor=pointer]:
+                          - /url: /Logitech-Wireless-Ergonomic-Keyboard-Wrist/dp/B07ZWK2TQT/ref=sr_1_5?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-5
+                          - heading "Logitech Ergo K860 Wireless Ergonomic Keyboard - Split Keyboard, Wrist Rest, Natural Typing, Stain-Resistant Fabric, Bluetooth and USB Connectivity, Compatible with Windows/Mac, Black" [level=2] [ref=e471]
+                        - generic [ref=e472]:
+                          - generic [ref=e473]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e475] [cursor=pointer]:
+                              - generic [ref=e477]: 4.5 out of 5 stars
+                            - link "7,936 ratings" [ref=e481] [cursor=pointer]:
+                              - /url: /Logitech-Wireless-Ergonomic-Keyboard-Wrist/dp/B07ZWK2TQT/ref=sr_1_5?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-5#customerReviews
+                              - text: (7.9K)
+                          - generic [ref=e482]: 4K+ bought in past month
+                        - generic [ref=e485]:
+                          - link "See options" [ref=e494] [cursor=pointer]:
+                            - /url: /Logitech-Wireless-Ergonomic-Keyboard-Wrist/dp/B07ZWK2TQT/ref=sr_1_5_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-5
+                          - generic [ref=e496]:
+                            - text: No featured offers available
+                            - text: INR 6,181.46
+                            - link "(13 used & new offers)" [ref=e498] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B07ZWK2TQT/ref=sr_1_5_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-5
+            - generic [ref=e504]:
+              - generic [ref=e509]:
+                - heading "Customers frequently viewed" [level=2] [ref=e511]
+                - button "View Sponsored information or leave ad feedback" [ref=e514] [cursor=pointer]: Sponsored
+              - region "Customers frequently viewed" [ref=e516]:
+                - list [ref=e522]:
+                  - listitem "1 of 5" [ref=e523]:
+                    - generic [ref=e529]:
+                      - link [ref=e532] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTAwNjgxNjI2OTMwMjo6MDo6&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=IKDyJ4JjQN
+                        - img [ref=e534]
+                      - generic [ref=e535]:
+                        - link "Sponsored Ad - Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey" [ref=e537] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTAwNjgxNjI2OTMwMjo6MDo6&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=IKDyJ4JjQN
+                          - heading "Sponsored Ad - Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey" [level=2] [ref=e538]: Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey
+                        - generic [ref=e540]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e542] [cursor=pointer]:
+                            - generic [ref=e544]: 4.2 out of 5 stars
+                          - link "93 ratings" [ref=e548] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTAwNjgxNjI2OTMwMjo6MDo6&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=IKDyJ4JjQN#customerReviews
+                            - text: (93)
+                        - generic [ref=e551]:
+                          - generic [ref=e552]: Price, product page
+                          - link "INR 4,754.75" [ref=e553] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTAwNjgxNjI2OTMwMjo6MDo6&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=IKDyJ4JjQN
+                            - generic [ref=e554]:
+                              - generic [ref=e555]: INR 4,754.75
+                              - generic [ref=e556]:
+                                - text: INR
+                                - generic [ref=e557]:
+                                  - text: 4,754
+                                  - generic [ref=e558]: .
+                                - text: "75"
+                        - generic [ref=e566]: INR 1,207.95 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e581] [cursor=pointer]
+                  - listitem "2 of 5" [ref=e582]:
+                    - generic [ref=e588]:
+                      - link [ref=e591] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNjM1MzU1NTIwMjo6MTo6&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JPgRkEToPF
+                        - img [ref=e593]
+                      - generic [ref=e594]:
+                        - link "Sponsored Ad - Kensington Slim Type Wired Keyboard (K72357USA),Black" [ref=e596] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNjM1MzU1NTIwMjo6MTo6&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JPgRkEToPF
+                          - heading "Sponsored Ad - Kensington Slim Type Wired Keyboard (K72357USA),Black" [level=2] [ref=e597]: Kensington Slim Type Wired Keyboard (K72357USA),Black
+                        - generic [ref=e598]:
+                          - generic [ref=e599]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e601] [cursor=pointer]:
+                              - generic [ref=e603]: 4.5 out of 5 stars
+                            - link "1,603 ratings" [ref=e607] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNjM1MzU1NTIwMjo6MTo6&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JPgRkEToPF#customerReviews
+                              - text: (1.6K)
+                          - generic [ref=e608]: 100+ bought in past month
+                        - generic [ref=e611]:
+                          - generic [ref=e612]: Price, product page
+                          - link "INR 2,463.45" [ref=e613] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNjM1MzU1NTIwMjo6MTo6&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JPgRkEToPF
+                            - generic [ref=e614]:
+                              - generic [ref=e615]: INR 2,463.45
+                              - generic [ref=e616]:
+                                - text: INR
+                                - generic [ref=e617]:
+                                  - text: 2,463
+                                  - generic [ref=e618]: .
+                                - text: "45"
+                        - generic [ref=e626]: INR 1,400.08 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e641] [cursor=pointer]
+                  - listitem "3 of 5" [ref=e642]:
+                    - generic [ref=e648]:
+                      - link [ref=e651] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjIwMDA4MzczNzg0MTcxMTo6Mjo6&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=E7QDbYRHXU
+                        - img [ref=e653]
+                      - generic [ref=e654]:
+                        - link "Sponsored Ad - Perixx PERIDUO-713 Wireless Mini Keyboard and Mouse Combo, Retro Round Key Caps, Pastel Pink, US English Layout" [ref=e656] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjIwMDA4MzczNzg0MTcxMTo6Mjo6&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=E7QDbYRHXU
+                          - heading "Sponsored Ad - Perixx PERIDUO-713 Wireless Mini Keyboard and Mouse Combo, Retro Round Key Caps, Pastel Pink, US English Layout" [level=2] [ref=e657]: Perixx PERIDUO-713 Wireless Mini Keyboard and Mouse Combo, Retro Round Key Caps, Pastel Pink, US English Layout
+                        - generic [ref=e658]:
+                          - generic [ref=e659]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e661] [cursor=pointer]:
+                              - generic [ref=e663]: 4.3 out of 5 stars
+                            - link "2,459 ratings" [ref=e667] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjIwMDA4MzczNzg0MTcxMTo6Mjo6&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=E7QDbYRHXU#customerReviews
+                              - text: (2.4K)
+                          - generic [ref=e668]: 50+ bought in past month
+                        - generic [ref=e671]:
+                          - generic [ref=e672]: Price, product page
+                          - link "INR 3,328.04" [ref=e673] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjIwMDA4MzczNzg0MTcxMTo6Mjo6&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=E7QDbYRHXU
+                            - generic [ref=e674]:
+                              - generic [ref=e675]: INR 3,328.04
+                              - generic [ref=e676]:
+                                - text: INR
+                                - generic [ref=e677]:
+                                  - text: 3,328
+                                  - generic [ref=e678]: .
+                                - text: "04"
+                        - generic [ref=e686]: INR 1,207.95 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e701] [cursor=pointer]
+                  - listitem "4 of 5" [ref=e702]:
+                    - generic [ref=e708]:
+                      - link [ref=e711] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIwMTg0MTY4NTgwMjo6Mzo6&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=YuGXB2xVxw
+                        - img [ref=e713]
+                      - generic [ref=e714]:
+                        - link "Sponsored Ad - ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black" [ref=e716] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIwMTg0MTY4NTgwMjo6Mzo6&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=YuGXB2xVxw
+                          - heading "Sponsored Ad - ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black" [level=2] [ref=e717]: ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black
+                        - generic [ref=e718]:
+                          - generic [ref=e719]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e721] [cursor=pointer]:
+                              - generic [ref=e723]: 4.5 out of 5 stars
+                            - link "17 ratings" [ref=e727] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIwMTg0MTY4NTgwMjo6Mzo6&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=YuGXB2xVxw#customerReviews
+                              - text: (17)
+                          - generic [ref=e728]: 50+ bought in past month
+                        - generic [ref=e731]:
+                          - generic [ref=e732]: Price, product page
+                          - 'link "INR 30,435.53 List: INR 34,240.09 List: INR 34,240.09" [ref=e733] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIwMTg0MTY4NTgwMjo6Mzo6&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=YuGXB2xVxw
+                            - generic [ref=e734]:
+                              - generic [ref=e735]: INR 30,435.53
+                              - generic [ref=e736]:
+                                - text: INR
+                                - generic [ref=e737]:
+                                  - text: 30,435
+                                  - generic [ref=e738]: .
+                                - text: "53"
+                            - generic [ref=e739]: "List: INR 34,240.09"
+                            - generic [ref=e740]:
+                              - text: "List:"
+                              - generic [ref=e741]:
+                                - generic [ref=e742]: INR 34,240.09
+                                - text: INR34,240.09
+                        - generic [ref=e750]: INR 2,129.60 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e765] [cursor=pointer]
+                  - listitem "5 of 5" [ref=e766]:
+                    - generic [ref=e772]:
+                      - link [ref=e775] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEwNDc3NDA3ODAwMjo6NDo6&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=M3pdX49fHr
+                        - img [ref=e777]
+                      - generic [ref=e778]:
+                        - link "Sponsored Ad - Lenovo 100 Wireless Keyboard and Mouse Combo – Cordless Set with Spill Resistant Quiet Keys – 3-Zone Keyboard - Ambidextrous Mouse – Compact Design – Wireless USB -Black" [ref=e780] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEwNDc3NDA3ODAwMjo6NDo6&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=M3pdX49fHr
+                          - heading "Sponsored Ad - Lenovo 100 Wireless Keyboard and Mouse Combo – Cordless Set with Spill Resistant Quiet Keys – 3-Zone Keyboard - Ambidextrous Mouse – Compact Design – Wireless USB -Black" [level=2] [ref=e781]: Lenovo 100 Wireless Keyboard and Mouse Combo – Cordless Set with Spill Resistant Quiet Keys – 3-Zone Keyboard - Ambidextrous Mouse – Compact Design – Wireless USB -Black
+                        - generic [ref=e782]:
+                          - generic [ref=e783]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e785] [cursor=pointer]:
+                              - generic [ref=e787]: 4.2 out of 5 stars
+                            - link "569 ratings" [ref=e791] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEwNDc3NDA3ODAwMjo6NDo6&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=M3pdX49fHr#customerReviews
+                              - text: (569)
+                          - generic [ref=e792]: 300+ bought in past month
+                        - generic [ref=e795]:
+                          - generic [ref=e796]: Price, product page
+                          - link "INR 2,662.24" [ref=e797] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozNTUzNzc5NTc3NDk0NDAzOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDEwNDc3NDA3ODAwMjo6NDo6&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%253Aamzn1.sym.f1e24090-399e-445e-b618-1765f1ce436c%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3D10781890-ccf2-4736-b838-a015a2f80bcb%26pd_rd_w%3Dyzd2i%26pd_rd_wg%3DAm4mZ%26pf_rd_p%3Df1e24090-399e-445e-b618-1765f1ce436c%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-72da3c38-bbeb-4ec6-a5c8-94f3516831b3-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=M3pdX49fHr
+                            - generic [ref=e798]:
+                              - generic [ref=e799]: INR 2,662.24
+                              - generic [ref=e800]:
+                                - text: INR
+                                - generic [ref=e801]:
+                                  - text: 2,662
+                                  - generic [ref=e802]: .
+                                - text: "24"
+                        - generic [ref=e810]: INR 1,263.11 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e825] [cursor=pointer]
+            - generic [ref=e827]:
+              - heading "More results" [level=2] [ref=e831]
+              - generic:
+                - list:
+                  - listitem [ref=e832]:
+                    - generic [ref=e838]:
+                      - link [ref=e844] [cursor=pointer]:
+                        - /url: /Amazon-Basics-Keyboard-Windows-Full-Sized/dp/B07WJ5D3H4/ref=sr_1_6?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-6
+                        - img [ref=e846]
+                      - generic [ref=e849]:
+                        - link "Amazon Basics Wired QWERTY Keyboard, Works with Windows, Plug and Play, Easy to Use with Media Control, Full-Sized, Black" [ref=e851] [cursor=pointer]:
+                          - /url: /Amazon-Basics-Keyboard-Windows-Full-Sized/dp/B07WJ5D3H4/ref=sr_1_6?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-6
+                          - heading "Amazon Basics Wired QWERTY Keyboard, Works with Windows, Plug and Play, Easy to Use with Media Control, Full-Sized, Black" [level=2] [ref=e852]
+                        - generic [ref=e853]:
+                          - generic [ref=e854]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e856] [cursor=pointer]:
+                              - generic [ref=e858]: 4.5 out of 5 stars
+                            - link "9,673 ratings" [ref=e862] [cursor=pointer]:
+                              - /url: /Amazon-Basics-Keyboard-Windows-Full-Sized/dp/B07WJ5D3H4/ref=sr_1_6?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-6#customerReviews
+                              - text: (9.6K)
+                          - generic [ref=e863]: 9K+ bought in past month
+                        - generic [ref=e866]:
+                          - generic [ref=e869]:
+                            - generic [ref=e870]: Price, product page
+                            - link "INR 1,112.83" [ref=e871] [cursor=pointer]:
+                              - /url: /Amazon-Basics-Keyboard-Windows-Full-Sized/dp/B07WJ5D3H4/ref=sr_1_6?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-6
+                              - generic [ref=e872]:
+                                - generic [ref=e873]: INR 1,112.83
+                                - generic [ref=e874]:
+                                  - text: INR
+                                  - generic [ref=e875]:
+                                    - text: 1,112
+                                    - generic [ref=e876]: .
+                                  - text: "83"
+                          - generic [ref=e877]:
+                            - generic [ref=e883]: INR 1,125.20 delivery Jun 24 - Jul 9
+                            - generic [ref=e884]: Ships to India
+                          - button "Add to cart" [ref=e899] [cursor=pointer]
+                          - generic [ref=e901]:
+                            - text: More Buying Choices
+                            - text: INR 997.75
+                            - link "(2+ used & new offers)" [ref=e903] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B07WJ5D3H4/ref=sr_1_6_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-6
+                  - listitem [ref=e906]:
+                    - generic [ref=e914]:
+                      - link [ref=e920] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3MTYzNTM1NTUyMDI6OjA6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e922]
+                      - generic [ref=e925]:
+                        - generic [ref=e926]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e929] [cursor=pointer]:
+                            - generic [ref=e930]: Sponsored
+                          - link "Sponsored Ad - Kensington Slim Type Wired Keyboard (K72357USA),Black" [ref=e932] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3MTYzNTM1NTUyMDI6OjA6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - Kensington Slim Type Wired Keyboard (K72357USA),Black" [level=2] [ref=e933]: Kensington Slim Type Wired Keyboard (K72357USA),Black
+                        - generic [ref=e934]:
+                          - generic [ref=e935]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e937] [cursor=pointer]:
+                              - generic [ref=e939]: 4.5 out of 5 stars
+                            - link "1,603 ratings" [ref=e943] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3MTYzNTM1NTUyMDI6OjA6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                              - text: (1.6K)
+                          - generic [ref=e944]: Positively reviewed for typing speed
+                          - generic [ref=e945]: 100+ bought in past month
+                        - generic [ref=e948]:
+                          - generic [ref=e951]:
+                            - generic [ref=e952]: Price, product page
+                            - link "INR 2,463.45" [ref=e953] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3MTYzNTM1NTUyMDI6OjA6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsr_1_7_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e954]:
+                                - generic [ref=e955]: INR 2,463.45
+                                - generic [ref=e956]:
+                                  - text: INR
+                                  - generic [ref=e957]:
+                                    - text: 2,463
+                                    - generic [ref=e958]: .
+                                  - text: "45"
+                          - generic [ref=e959]:
+                            - generic [ref=e965]: INR 1,400.08 delivery Tue, Jul 7
+                            - generic [ref=e966]: Ships to India
+                          - button "Add to cart" [ref=e981] [cursor=pointer]
+                  - listitem [ref=e984]:
+                    - generic [ref=e990]:
+                      - link [ref=e996] [cursor=pointer]:
+                        - /url: /SteelSeries-Apex-RGB-Gaming-Keyboard/dp/B07ZGDPT4M/ref=sr_1_8?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-8
+                        - img [ref=e998]
+                      - generic [ref=e1001]:
+                        - link "SteelSeries Apex 3 RGB Gaming Keyboard – 10-Zone RGB Illumination – IP32 Water Resistant – Premium Magnetic Wrist Rest (Whisper Quiet Gaming Switch)" [ref=e1003] [cursor=pointer]:
+                          - /url: /SteelSeries-Apex-RGB-Gaming-Keyboard/dp/B07ZGDPT4M/ref=sr_1_8?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-8
+                          - heading "SteelSeries Apex 3 RGB Gaming Keyboard – 10-Zone RGB Illumination – IP32 Water Resistant – Premium Magnetic Wrist Rest (Whisper Quiet Gaming Switch)" [level=2] [ref=e1004]
+                        - generic [ref=e1005]:
+                          - generic [ref=e1006]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1008] [cursor=pointer]:
+                              - generic [ref=e1010]: 4.6 out of 5 stars
+                            - link "7,985 ratings" [ref=e1014] [cursor=pointer]:
+                              - /url: /SteelSeries-Apex-RGB-Gaming-Keyboard/dp/B07ZGDPT4M/ref=sr_1_8?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-8#customerReviews
+                              - text: (7.9K)
+                          - generic [ref=e1015]: 1K+ bought in past month
+                        - generic [ref=e1018]:
+                          - generic [ref=e1021]:
+                            - generic [ref=e1022]: Price, product page
+                            - 'link "INR 4,754.75 List: INR 5,230.32 List: INR 5,230.32" [ref=e1023] [cursor=pointer]':
+                              - /url: /SteelSeries-Apex-RGB-Gaming-Keyboard/dp/B07ZGDPT4M/ref=sr_1_8?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-8
+                              - generic [ref=e1024]:
+                                - generic [ref=e1025]: INR 4,754.75
+                                - generic [ref=e1026]:
+                                  - text: INR
+                                  - generic [ref=e1027]:
+                                    - text: 4,754
+                                    - generic [ref=e1028]: .
+                                  - text: "75"
+                              - generic [ref=e1029]: "List: INR 5,230.32"
+                              - generic [ref=e1030]:
+                                - text: "List:"
+                                - generic [ref=e1031]:
+                                  - generic [ref=e1032]: INR 5,230.32
+                                  - text: INR5,230.32
+                          - generic [ref=e1033]:
+                            - generic [ref=e1039]: INR 1,473.32 delivery Tue, Jul 7
+                            - generic [ref=e1040]: Ships to India
+                          - button "Add to cart" [ref=e1055] [cursor=pointer]
+                          - generic [ref=e1057]:
+                            - text: More Buying Choices
+                            - text: INR 4,251.60
+                            - link "(2+ used & new offers)" [ref=e1059] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B07ZGDPT4M/ref=sr_1_8_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-8
+                  - listitem [ref=e1062]:
+                    - generic [ref=e1068]:
+                      - link [ref=e1074] [cursor=pointer]:
+                        - /url: /Logitech-Mechanical-Illuminated-Performance-Bluetooth/dp/B09LK1P1RD/ref=sr_1_9?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-9
+                        - img [ref=e1076]
+                      - generic [ref=e1079]:
+                        - link "Logitech MX Mechanical Wireless Illuminated Performance Keyboard, Tactile Quiet Switches, Backlit Keys, Bluetooth, USB-C, macOS, Windows, Linux, iOS, Android, Metal, ‎Graphite" [ref=e1081] [cursor=pointer]:
+                          - /url: /Logitech-Mechanical-Illuminated-Performance-Bluetooth/dp/B09LK1P1RD/ref=sr_1_9?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-9
+                          - heading "Logitech MX Mechanical Wireless Illuminated Performance Keyboard, Tactile Quiet Switches, Backlit Keys, Bluetooth, USB-C, macOS, Windows, Linux, iOS, Android, Metal, ‎Graphite" [level=2] [ref=e1082]
+                        - generic [ref=e1083]:
+                          - generic [ref=e1084]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e1086] [cursor=pointer]:
+                              - generic [ref=e1088]: 4.2 out of 5 stars
+                            - link "2,198 ratings" [ref=e1092] [cursor=pointer]:
+                              - /url: /Logitech-Mechanical-Illuminated-Performance-Bluetooth/dp/B09LK1P1RD/ref=sr_1_9?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-9#customerReviews
+                              - text: (2.1K)
+                          - generic [ref=e1093]: 1K+ bought in past month
+                        - generic [ref=e1096]:
+                          - link "See options" [ref=e1105] [cursor=pointer]:
+                            - /url: /Logitech-Mechanical-Illuminated-Performance-Bluetooth/dp/B09LK1P1RD/ref=sr_1_9_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-9
+                          - generic [ref=e1107]:
+                            - text: No featured offers available
+                            - text: INR 10,434.96
+                            - link "(18 used & new offers)" [ref=e1109] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B09LK1P1RD/ref=sr_1_9_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-9
+                  - listitem [ref=e1112]:
+                    - generic [ref=e1118]:
+                      - link [ref=e1124] [cursor=pointer]:
+                        - /url: /GEODMAER-Keyboard-Ultra-Compact-Anti-Ghosting-No-Conflict/dp/B0D3CZYCH2/ref=sr_1_10?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-10
+                        - img [ref=e1126]
+                      - generic [ref=e1129]:
+                        - link "GEODMAER 65% Gaming Keyboard, Wired Backlit Mini Keyboard, Ultra-Compact Anti-Ghosting No-Conflict 68 Keys Membrane Gaming Wired Keyboard for PC Laptop Windows Gamer" [ref=e1131] [cursor=pointer]:
+                          - /url: /GEODMAER-Keyboard-Ultra-Compact-Anti-Ghosting-No-Conflict/dp/B0D3CZYCH2/ref=sr_1_10?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-10
+                          - heading "GEODMAER 65% Gaming Keyboard, Wired Backlit Mini Keyboard, Ultra-Compact Anti-Ghosting No-Conflict 68 Keys Membrane Gaming Wired Keyboard for PC Laptop Windows Gamer" [level=2] [ref=e1132]
+                        - generic [ref=e1133]:
+                          - generic [ref=e1134]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e1136] [cursor=pointer]:
+                              - generic [ref=e1138]: 4.4 out of 5 stars
+                            - link "1,485 ratings" [ref=e1142] [cursor=pointer]:
+                              - /url: /GEODMAER-Keyboard-Ultra-Compact-Anti-Ghosting-No-Conflict/dp/B0D3CZYCH2/ref=sr_1_10?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-10#customerReviews
+                              - text: (1.4K)
+                          - generic [ref=e1143]: 1K+ bought in past month
+                        - generic [ref=e1146]:
+                          - link "See options" [ref=e1155] [cursor=pointer]:
+                            - /url: /GEODMAER-Keyboard-Ultra-Compact-Anti-Ghosting-No-Conflict/dp/B0D3CZYCH2/ref=sr_1_10_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-10
+                          - generic [ref=e1157]:
+                            - text: No featured offers available
+                            - text: INR 1,533.24
+                            - link "(3 used & new offers)" [ref=e1159] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D3CZYCH2/ref=sr_1_10_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-10
+                  - listitem [ref=e1162]:
+                    - generic [ref=e1168]:
+                      - link [ref=e1174] [cursor=pointer]:
+                        - /url: /Logitech-MK345-Wireless-Combo-Right-Handed/dp/B00QXT5T3U/ref=sr_1_11?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-11
+                        - img [ref=e1176]
+                      - generic [ref=e1179]:
+                        - link "Logitech MK345 Wireless Keyboard and Mouse Combo with Palm Rest, 2.4 GHz USB Receiver, Compatible with PC, Laptop, Black" [ref=e1181] [cursor=pointer]:
+                          - /url: /Logitech-MK345-Wireless-Combo-Right-Handed/dp/B00QXT5T3U/ref=sr_1_11?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-11
+                          - heading "Logitech MK345 Wireless Keyboard and Mouse Combo with Palm Rest, 2.4 GHz USB Receiver, Compatible with PC, Laptop, Black" [level=2] [ref=e1182]
+                        - generic [ref=e1183]:
+                          - generic [ref=e1184]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1186] [cursor=pointer]:
+                              - generic [ref=e1188]: 4.5 out of 5 stars
+                            - link "41,116 ratings" [ref=e1192] [cursor=pointer]:
+                              - /url: /Logitech-MK345-Wireless-Combo-Right-Handed/dp/B00QXT5T3U/ref=sr_1_11?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-11#customerReviews
+                              - text: (41.1K)
+                          - generic [ref=e1193]: 10K+ bought in past month
+                        - generic [ref=e1196]:
+                          - link "See options" [ref=e1205] [cursor=pointer]:
+                            - /url: /Logitech-MK345-Wireless-Combo-Right-Handed/dp/B00QXT5T3U/ref=sr_1_11_so_KEYBOARD_MOUSE_SET?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-11
+                          - generic [ref=e1207]:
+                            - text: No featured offers available
+                            - text: INR 3,518.27
+                            - link "(31 used & new offers)" [ref=e1209] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B00QXT5T3U/ref=sr_1_11_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-11
+                  - listitem [ref=e1212]:
+                    - generic [ref=e1220]:
+                      - link [ref=e1226] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3OTM2ODM1NjU1MDI6OjA6Og&url=%2FKensington-Wireless-Desktop-Keyboard-K75562NA%2Fdp%2FB0DK4XXP1D%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1228]
+                      - generic [ref=e1231]:
+                        - generic [ref=e1232]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1235] [cursor=pointer]:
+                            - generic [ref=e1236]: Sponsored
+                          - link "Sponsored Ad - Kensington KM150 EQ Wireless Desktop Set, Wireless Keyboard & Mouse (K75562NA)" [ref=e1238] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3OTM2ODM1NjU1MDI6OjA6Og&url=%2FKensington-Wireless-Desktop-Keyboard-K75562NA%2Fdp%2FB0DK4XXP1D%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - Kensington KM150 EQ Wireless Desktop Set, Wireless Keyboard & Mouse (K75562NA)" [level=2] [ref=e1239]: Kensington KM150 EQ Wireless Desktop Set, Wireless Keyboard & Mouse (K75562NA)
+                        - generic [ref=e1241]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e1243] [cursor=pointer]:
+                            - generic [ref=e1245]: 4.0 out of 5 stars
+                          - link "5 ratings" [ref=e1249] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3OTM2ODM1NjU1MDI6OjA6Og&url=%2FKensington-Wireless-Desktop-Keyboard-K75562NA%2Fdp%2FB0DK4XXP1D%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                            - text: (5)
+                        - generic [ref=e1252]:
+                          - generic [ref=e1255]:
+                            - generic [ref=e1256]: Price, product page
+                            - 'link "INR 2,472.01 List: INR 2,852.47 List: INR 2,852.47" [ref=e1257] [cursor=pointer]':
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDA3OTM2ODM1NjU1MDI6OjA6Og&url=%2FKensington-Wireless-Desktop-Keyboard-K75562NA%2Fdp%2FB0DK4XXP1D%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e1258]:
+                                - generic [ref=e1259]: INR 2,472.01
+                                - generic [ref=e1260]:
+                                  - text: INR
+                                  - generic [ref=e1261]:
+                                    - text: 2,472
+                                    - generic [ref=e1262]: .
+                                  - text: "01"
+                              - generic [ref=e1263]: "List: INR 2,852.47"
+                              - generic [ref=e1264]:
+                                - text: "List:"
+                                - generic [ref=e1265]:
+                                  - generic [ref=e1266]: INR 2,852.47
+                                  - text: INR2,852.47
+                          - generic [ref=e1267]:
+                            - generic [ref=e1273]: INR 1,256.46 delivery Tue, Jul 14
+                            - generic [ref=e1274]: Ships to India
+                            - generic "Only 10 left in stock - order soon." [ref=e1276]
+                          - button "Add to cart" [ref=e1291] [cursor=pointer]
+            - generic [ref=e1301]:
+              - link "Sponsored video, click to navigate to featured product page. SOLAKAKA A75 75% Wireless Mechanical Keyboard, Hot Swappable Gaming Keyboard with Multifunction Knob & RGB, Gasket Mounted Creamy Keyboard, PBT Keycaps, Compact Layout for Win/Mac/PC" [ref=e1305] [cursor=pointer]:
+                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNJU0xHGSEUbGXLS_IqLoLMAAAGeycfSOwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDP2n44/clv1c_ek-wBHfWLbTaXU6htg-GIYmmfgTDGFzAlWMJ-95mzxDLORvVC3wWIy3W2TgWb1b7Ylpl60Mw-h7OpK9O-WLGkSHFA_FZypH5mklMRDemzMA4rhfol59Y5_xY4fNC8hrb6p45CKfEMteXnfcPguYe6Rhbo9iQhtV_2iSRz7qk4O5_GcBGBpJWhgV54M9dhmL6iKDOZEVVGVNQ2cx9NyYjA8CZH3WVTm6M_ARNB0At4SidNszdmnu_EWtOUll7mlUT1llGpWain8fb2Sz0HB00qUpb5qFPIN86nxDybMIslXb6Z9ateRDXkN7mB9wYwggNhTpqRCfioC2SSl2sKd3BrsIC8uE2W4LaLYsleP_JUjtjsrCiO8tUGyOOsVjVydHxLXYJ30W4wznpS-UrCnBiy4mJ28TjpHqV5-1gUjUootk-OKhVB-XwSA1GmpmCELyZkmBTlPIS21Hg2Q0xGbJ0iFOIth5l5Wd0i0a_pEkKaPmjW245Lwkbl6PzyHuL7gCSLrXjMwQ0QT8UcGCMuOtMJOC3QYEgodyHr0O8ZQ_Ec3KQF2Ail4_ArnZlIQjNM_3wLKP6ScwFFPEfyZa7DP7o-TcjzsfFwtzlN3AdMVmOc1pFZ5Kcj0s2STY8XcDWWIFRvg3VRgZe_cdBlkipVafRrzCygmTxLnKIyNhK50rhE9ZN4retFCNv8geA8N7LNJ8rrB9dqdTOFBQ37-Mfxun--M0ullyyPFIAtrCxfJ6HJ6YNTDVMnfMR6frrOD1pRqmo10JSB573Nzfye2lIb2vqu2L8UM_Uo-yE04ykFrOfji6b9IuASCoZ1CGJekQ2CUXprw95QiVLSoY_4HNhVT5SsZW_YRyLyZp8ti9wT80dwowingJlGLM2k56MaoaxKfgSVZwE6bdzCqZEXKiMDoi4MMr4JZyh5ffJvHNSxPeB5efe9sI4oomGo-ebsh-3--XVI6k6bSEkDwIhv1mEFrZZlWHesQdMN-8oEXj74MviC7_tbmzF2siz-cL9Ce65N2Pevr5zEMf6ju2SSceHcwBavcSEC-v46H-AWruChim8NdSpGkHpGKOP1IiXU6nq0-CL2s8AOLke8tsRuDMN9z5ZEK5e9q8r3IG4PCbVfeNP9FJJNAG6-A19qAZ33WkVhZeXEK1EmBlGPLtjUKD9Mfw4xwMKexO6XkkP2qrj7xfrE7w3DUb1IvlPmlw541_GJUiQKwVseZ3cC62Ch2Vpo9GORcVijQuwzKSKy5Is6wCD-zruIf3JaOUAE-SnY4ebtAMFeOT68hpr8inN-PPobzk08wUhSHRGJwbt3tpMsrutrvushLN2Rzz4wSv-IkptmGpKLgko-vPNDmrPv9F6FU0QpDSfqgWy_lxPQFj7BV5BE3-ixDqi-U_F5GxREA-kz9ReIO8jsLt5XnqSsa8d75sjljDFtiqoV-SYRgKfAB38Dh19xu6KWTcDXkNYExjAalypg9-uQKuW15RU_jkPUZNAHMRnseGtVu7cFJ64aidSt-G1h89ypUH8CacfDEgrnJ0AC9t9eMHqr5dsqZycQ8tP6wMzJpJ1uU6-vSKIbmly_kzD_ddVrhdXNabdtmKnP_F0F_I2ZsfYU2bAf4Mput13qbUOc5rs1B_7TkIs1eXwm0sS3gAkkjLBuEjySjZGlGmBimruCxFOxA/https://www.amazon.com/dp/B0FPQ8GRMB?pd_rd_i=B0FPQ8GRMB&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=Am4mZ&pd_rd_w=28Zek&pd_rd_r=10781890-ccf2-4736-b838-a015a2f80bcb
+                - generic "Sponsored video, click to navigate to featured product page. SOLAKAKA A75 75% Wireless Mechanical Keyboard, Hot Swappable Gaming Keyboard with Multifunction Knob & RGB, Gasket Mounted Creamy Keyboard, PBT Keycaps, Compact Layout for Win/Mac/PC" [ref=e1306]
+              - generic [ref=e1314]:
+                - link [ref=e1320] [cursor=pointer]:
+                  - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNJU0xHGSEUbGXLS_IqLoLMAAAGeycfSOwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDP2n44/clv1c_ek-wBHfWLbTaXU6htg-GIYmmfgTDGFzAlWMJ-95mzxDLORvVC3wWIy3W2TgWb1b7Ylpl60Mw-h7OpK9O-WLGkSHFA_FZypH5mklMRDemzMA4rhfol59Y5_xY4fNC8hrb6p45CKfEMteXnfcPguYe6Rhbo9iQhtV_2iSRz7qk4O5_GcBGBpJWhgV54M9dhmL6iKDOZEVVGVNQ2cx9NyYjA8CZH3WVTm6M_ARNB0At4SidNszdmnu_EWtOUll7mlUT1llGpWain8fb2Sz0HB00qUpb5qFPIN86nxDybMIslXb6Z9ateRDXkN7mB9wYwggNhTpqRCfioC2SSl2sKd3BrsIC8uE2W4LaLYsleP_JUjtjsrCiO8tUGyOOsVjVydHxLXYJ30W4wznpS-UrCnBiy4mJ28TjpHqV5-1gUjUootk-OKhVB-XwSA1GmpmCELyZkmBTlPIS21Hg2Q0xGbJ0iFOIth5l5Wd0i0a_pEkKaPmjW245Lwkbl6PzyHuL7gCSLrXjMwQ0QT8UcGCMuOtMJOC3QYEgodyHr0O8ZQ_Ec3KQF2Ail4_ArnZlIQjNM_3wLKP6ScwFFPEfyZa7DP7o-TcjzsfFwtzlN3AdMVmOc1pFZ5Kcj0s2STY8XcDWWIFRvg3VRgZe_cdBlkipVafRrzCygmTxLnKIyNhK50rhE9ZN4retFCNv8geA8N7LNJ8rrB9dqdTOFBQ37-Mfxun--M0ullyyPFIAtrCxfJ6HJ6YNTDVMnfMR6frrOD1pRqmo10JSB573Nzfye2lIb2vqu2L8UM_Uo-yE04ykFrOfji6b9IuASCoZ1CGJekQ2CUXprw95QiVLSoY_4HNhVT5SsZW_YRyLyZp8ti9wT80dwowingJlGLM2k56MaoaxKfgSVZwE6bdzCqZEXKiMDoi4MMr4JZyh5ffJvHNSxPeB5efe9sI4oomGo-ebsh-3--XVI6k6bSEkDwIhv1mEFrZZlWHesQdMN-8oEXj74MviC7_tbmzF2siz-cL9Ce65N2Pevr5zEMf6ju2SSceHcwBavcSEC-v46H-AWruChim8NdSpGkHpGKOP1IiXU6nq0-CL2s8AOLke8tsRuDMN9z5ZEK5e9q8r3IG4PCbVfeNP9FJJNAG6-A19qAZ33WkVhZeXEK1EmBlGPLtjUKD9Mfw4xwMKexO6XkkP2qrj7xfrE7w3DUb1IvlPmlw541_GJUiQKwVseZ3cC62Ch2Vpo9GORcVijQuwzKSKy5Is6wCD-zruIf3JaOUAE-SnY4ebtAMFeOT68hpr8inN-PPobzk08wUhSHRGJwbt3tpMsrutrvushLN2Rzz4wSv-IkptmGpKLgko-vPNDmrPv9F6FU0QpDSfqgWy_lxPQFj7BV5BE3-ixDqi-U_F5GxREA-kz9ReIO8jsLt5XnqSsa8d75sjljDFtiqoV-SYRgKfAB38Dh19xu6KWTcDXkNYExjAalypg9-uQKuW15RU_jkPUZNAHMRnseGtVu7cFJ64aidSt-G1h89ypUH8CacfDEgrnJ0AC9t9eMHqr5dsqZycQ8tP6wMzJpJ1uU6-vSKIbmly_kzD_ddVrhdXNabdtmKnP_F0F_I2ZsfYU2bAf4Mput13qbUOc5rs1B_7TkIs1eXwm0sS3gAkkjLBuEjySjZGlGmBimruCxFOxA/https://www.amazon.com/SOLAKAKA-Wireless-Mechanical-Swappable-Multifunction/dp/B0FPQ8GRMB/ref=sxin_26_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&cv_ct_cx=Keyboard&keywords=Keyboard&pd_rd_i=B0FPQ8GRMB&pd_rd_r=10781890-ccf2-4736-b838-a015a2f80bcb&pd_rd_w=28Zek&pd_rd_wg=Am4mZ&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=1EJFNXVVB1K480YAT0JH&qid=1781501776&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776
+                  - img [ref=e1322]
+                - generic [ref=e1325]:
+                  - generic [ref=e1326]:
+                    - generic [ref=e1329] [cursor=pointer]: Sponsored
+                    - link "SOLAKAKA A75 75% Wireless Mechanical Keyboard, Hot Swappable Gaming Keyboard with Multifunction Knob & RGB, Gasket Mounted Creamy Keyboard, PBT Keycaps, Compact Layout for Win/Mac/PC" [ref=e1331] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNJU0xHGSEUbGXLS_IqLoLMAAAGeycfSOwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDP2n44/clv1c_ek-wBHfWLbTaXU6htg-GIYmmfgTDGFzAlWMJ-95mzxDLORvVC3wWIy3W2TgWb1b7Ylpl60Mw-h7OpK9O-WLGkSHFA_FZypH5mklMRDemzMA4rhfol59Y5_xY4fNC8hrb6p45CKfEMteXnfcPguYe6Rhbo9iQhtV_2iSRz7qk4O5_GcBGBpJWhgV54M9dhmL6iKDOZEVVGVNQ2cx9NyYjA8CZH3WVTm6M_ARNB0At4SidNszdmnu_EWtOUll7mlUT1llGpWain8fb2Sz0HB00qUpb5qFPIN86nxDybMIslXb6Z9ateRDXkN7mB9wYwggNhTpqRCfioC2SSl2sKd3BrsIC8uE2W4LaLYsleP_JUjtjsrCiO8tUGyOOsVjVydHxLXYJ30W4wznpS-UrCnBiy4mJ28TjpHqV5-1gUjUootk-OKhVB-XwSA1GmpmCELyZkmBTlPIS21Hg2Q0xGbJ0iFOIth5l5Wd0i0a_pEkKaPmjW245Lwkbl6PzyHuL7gCSLrXjMwQ0QT8UcGCMuOtMJOC3QYEgodyHr0O8ZQ_Ec3KQF2Ail4_ArnZlIQjNM_3wLKP6ScwFFPEfyZa7DP7o-TcjzsfFwtzlN3AdMVmOc1pFZ5Kcj0s2STY8XcDWWIFRvg3VRgZe_cdBlkipVafRrzCygmTxLnKIyNhK50rhE9ZN4retFCNv8geA8N7LNJ8rrB9dqdTOFBQ37-Mfxun--M0ullyyPFIAtrCxfJ6HJ6YNTDVMnfMR6frrOD1pRqmo10JSB573Nzfye2lIb2vqu2L8UM_Uo-yE04ykFrOfji6b9IuASCoZ1CGJekQ2CUXprw95QiVLSoY_4HNhVT5SsZW_YRyLyZp8ti9wT80dwowingJlGLM2k56MaoaxKfgSVZwE6bdzCqZEXKiMDoi4MMr4JZyh5ffJvHNSxPeB5efe9sI4oomGo-ebsh-3--XVI6k6bSEkDwIhv1mEFrZZlWHesQdMN-8oEXj74MviC7_tbmzF2siz-cL9Ce65N2Pevr5zEMf6ju2SSceHcwBavcSEC-v46H-AWruChim8NdSpGkHpGKOP1IiXU6nq0-CL2s8AOLke8tsRuDMN9z5ZEK5e9q8r3IG4PCbVfeNP9FJJNAG6-A19qAZ33WkVhZeXEK1EmBlGPLtjUKD9Mfw4xwMKexO6XkkP2qrj7xfrE7w3DUb1IvlPmlw541_GJUiQKwVseZ3cC62Ch2Vpo9GORcVijQuwzKSKy5Is6wCD-zruIf3JaOUAE-SnY4ebtAMFeOT68hpr8inN-PPobzk08wUhSHRGJwbt3tpMsrutrvushLN2Rzz4wSv-IkptmGpKLgko-vPNDmrPv9F6FU0QpDSfqgWy_lxPQFj7BV5BE3-ixDqi-U_F5GxREA-kz9ReIO8jsLt5XnqSsa8d75sjljDFtiqoV-SYRgKfAB38Dh19xu6KWTcDXkNYExjAalypg9-uQKuW15RU_jkPUZNAHMRnseGtVu7cFJ64aidSt-G1h89ypUH8CacfDEgrnJ0AC9t9eMHqr5dsqZycQ8tP6wMzJpJ1uU6-vSKIbmly_kzD_ddVrhdXNabdtmKnP_F0F_I2ZsfYU2bAf4Mput13qbUOc5rs1B_7TkIs1eXwm0sS3gAkkjLBuEjySjZGlGmBimruCxFOxA/https://www.amazon.com/SOLAKAKA-Wireless-Mechanical-Swappable-Multifunction/dp/B0FPQ8GRMB/ref=sxin_26_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&cv_ct_cx=Keyboard&keywords=Keyboard&pd_rd_i=B0FPQ8GRMB&pd_rd_r=10781890-ccf2-4736-b838-a015a2f80bcb&pd_rd_w=28Zek&pd_rd_wg=Am4mZ&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=1EJFNXVVB1K480YAT0JH&qid=1781501776&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776
+                      - heading "SOLAKAKA A75 75% Wireless Mechanical Keyboard, Hot Swappable Gaming Keyboard with Multifunction Knob & RGB, Gasket Mounted Creamy Keyboard, PBT Keycaps, Compact Layout for Win/Mac/PC" [level=2] [ref=e1332]
+                  - generic [ref=e1333]:
+                    - generic [ref=e1334]:
+                      - text: "4.8"
+                      - button "4.8 out of 5 stars, rating details" [ref=e1336] [cursor=pointer]:
+                        - generic [ref=e1338]: 4.8 out of 5 stars
+                      - link "78 ratings" [ref=e1342] [cursor=pointer]:
+                        - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNJU0xHGSEUbGXLS_IqLoLMAAAGeycfSOwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDP2n44/clv1c_ek-wBHfWLbTaXU6htg-GIYmmfgTDGFzAlWMJ-95mzxDLORvVC3wWIy3W2TgWb1b7Ylpl60Mw-h7OpK9O-WLGkSHFA_FZypH5mklMRDemzMA4rhfol59Y5_xY4fNC8hrb6p45CKfEMteXnfcPguYe6Rhbo9iQhtV_2iSRz7qk4O5_GcBGBpJWhgV54M9dhmL6iKDOZEVVGVNQ2cx9NyYjA8CZH3WVTm6M_ARNB0At4SidNszdmnu_EWtOUll7mlUT1llGpWain8fb2Sz0HB00qUpb5qFPIN86nxDybMIslXb6Z9ateRDXkN7mB9wYwggNhTpqRCfioC2SSl2sKd3BrsIC8uE2W4LaLYsleP_JUjtjsrCiO8tUGyOOsVjVydHxLXYJ30W4wznpS-UrCnBiy4mJ28TjpHqV5-1gUjUootk-OKhVB-XwSA1GmpmCELyZkmBTlPIS21Hg2Q0xGbJ0iFOIth5l5Wd0i0a_pEkKaPmjW245Lwkbl6PzyHuL7gCSLrXjMwQ0QT8UcGCMuOtMJOC3QYEgodyHr0O8ZQ_Ec3KQF2Ail4_ArnZlIQjNM_3wLKP6ScwFFPEfyZa7DP7o-TcjzsfFwtzlN3AdMVmOc1pFZ5Kcj0s2STY8XcDWWIFRvg3VRgZe_cdBlkipVafRrzCygmTxLnKIyNhK50rhE9ZN4retFCNv8geA8N7LNJ8rrB9dqdTOFBQ37-Mfxun--M0ullyyPFIAtrCxfJ6HJ6YNTDVMnfMR6frrOD1pRqmo10JSB573Nzfye2lIb2vqu2L8UM_Uo-yE04ykFrOfji6b9IuASCoZ1CGJekQ2CUXprw95QiVLSoY_4HNhVT5SsZW_YRyLyZp8ti9wT80dwowingJlGLM2k56MaoaxKfgSVZwE6bdzCqZEXKiMDoi4MMr4JZyh5ffJvHNSxPeB5efe9sI4oomGo-ebsh-3--XVI6k6bSEkDwIhv1mEFrZZlWHesQdMN-8oEXj74MviC7_tbmzF2siz-cL9Ce65N2Pevr5zEMf6ju2SSceHcwBavcSEC-v46H-AWruChim8NdSpGkHpGKOP1IiXU6nq0-CL2s8AOLke8tsRuDMN9z5ZEK5e9q8r3IG4PCbVfeNP9FJJNAG6-A19qAZ33WkVhZeXEK1EmBlGPLtjUKD9Mfw4xwMKexO6XkkP2qrj7xfrE7w3DUb1IvlPmlw541_GJUiQKwVseZ3cC62Ch2Vpo9GORcVijQuwzKSKy5Is6wCD-zruIf3JaOUAE-SnY4ebtAMFeOT68hpr8inN-PPobzk08wUhSHRGJwbt3tpMsrutrvushLN2Rzz4wSv-IkptmGpKLgko-vPNDmrPv9F6FU0QpDSfqgWy_lxPQFj7BV5BE3-ixDqi-U_F5GxREA-kz9ReIO8jsLt5XnqSsa8d75sjljDFtiqoV-SYRgKfAB38Dh19xu6KWTcDXkNYExjAalypg9-uQKuW15RU_jkPUZNAHMRnseGtVu7cFJ64aidSt-G1h89ypUH8CacfDEgrnJ0AC9t9eMHqr5dsqZycQ8tP6wMzJpJ1uU6-vSKIbmly_kzD_ddVrhdXNabdtmKnP_F0F_I2ZsfYU2bAf4Mput13qbUOc5rs1B_7TkIs1eXwm0sS3gAkkjLBuEjySjZGlGmBimruCxFOxA/https://www.amazon.com/SOLAKAKA-Wireless-Mechanical-Swappable-Multifunction/dp/B0FPQ8GRMB/ref=sxin_26_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&cv_ct_cx=Keyboard&keywords=Keyboard&pd_rd_i=B0FPQ8GRMB&pd_rd_r=10781890-ccf2-4736-b838-a015a2f80bcb&pd_rd_w=28Zek&pd_rd_wg=Am4mZ&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=1EJFNXVVB1K480YAT0JH&qid=1781501776&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776#customerReviews
+                        - text: (78)
+                    - generic [ref=e1343]: 200+ bought in past month
+            - generic [ref=e1349]:
+              - heading "More results" [level=2] [ref=e1353]
+              - generic:
+                - list:
+                  - listitem [ref=e1354]:
+                    - generic [ref=e1360]:
+                      - link [ref=e1366] [cursor=pointer]:
+                        - /url: /Redragon-Programmable-Hot-Swappable-Anti-Ghosting-Double-Shot/dp/B0CF3VGQFL/ref=sr_1_13?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-13
+                        - img [ref=e1368]
+                      - generic [ref=e1371]:
+                        - link "Redragon Mechanical Gaming Keyboard Wired, 11 Programmable Backlit Modes, Hot-Swappable Red Switch, Anti-Ghosting, Double-Shot PBT Keycaps, Light Up Keyboard for PC Mac" [ref=e1373] [cursor=pointer]:
+                          - /url: /Redragon-Programmable-Hot-Swappable-Anti-Ghosting-Double-Shot/dp/B0CF3VGQFL/ref=sr_1_13?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-13
+                          - heading "Redragon Mechanical Gaming Keyboard Wired, 11 Programmable Backlit Modes, Hot-Swappable Red Switch, Anti-Ghosting, Double-Shot PBT Keycaps, Light Up Keyboard for PC Mac" [level=2] [ref=e1374]
+                        - generic [ref=e1375]:
+                          - generic [ref=e1376]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1378] [cursor=pointer]:
+                              - generic [ref=e1380]: 4.3 out of 5 stars
+                            - link "6,592 ratings" [ref=e1384] [cursor=pointer]:
+                              - /url: /Redragon-Programmable-Hot-Swappable-Anti-Ghosting-Double-Shot/dp/B0CF3VGQFL/ref=sr_1_13?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-13#customerReviews
+                              - text: (6.5K)
+                          - generic [ref=e1385]: 2K+ bought in past month
+                        - generic [ref=e1388]:
+                          - link "See options" [ref=e1397] [cursor=pointer]:
+                            - /url: /Redragon-Programmable-Hot-Swappable-Anti-Ghosting-Double-Shot/dp/B0CF3VGQFL/ref=sr_1_13_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-13
+                          - generic [ref=e1399]:
+                            - text: No featured offers available
+                            - text: INR 2,852.47
+                            - link "(4 new offers)" [ref=e1401] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CF3VGQFL/ref=sr_1_13_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-13
+                  - listitem [ref=e1404]:
+                    - generic [ref=e1410]:
+                      - link [ref=e1416] [cursor=pointer]:
+                        - /url: /Logitech-Ergonomic-Cushioned-Comfortable-Easy-Switch/dp/B0BTNY72VD/ref=sr_1_14?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-14
+                        - img [ref=e1418]
+                      - generic [ref=e1421]:
+                        - link "Logitech Wave Keys Wireless Ergonomic Keyboard with Cushioned Palm Rest, Comfortable Natural Typing, Easy-Switch, Bluetooth, Logi Bolt Receiver, for Multi-OS, Windows/Mac - Graphite" [ref=e1423] [cursor=pointer]:
+                          - /url: /Logitech-Ergonomic-Cushioned-Comfortable-Easy-Switch/dp/B0BTNY72VD/ref=sr_1_14?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-14
+                          - heading "Logitech Wave Keys Wireless Ergonomic Keyboard with Cushioned Palm Rest, Comfortable Natural Typing, Easy-Switch, Bluetooth, Logi Bolt Receiver, for Multi-OS, Windows/Mac - Graphite" [level=2] [ref=e1424]
+                        - generic [ref=e1425]:
+                          - generic [ref=e1426]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1428] [cursor=pointer]:
+                              - generic [ref=e1430]: 4.3 out of 5 stars
+                            - link "2,808 ratings" [ref=e1434] [cursor=pointer]:
+                              - /url: /Logitech-Ergonomic-Cushioned-Comfortable-Easy-Switch/dp/B0BTNY72VD/ref=sr_1_14?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-14#customerReviews
+                              - text: (2.8K)
+                          - generic [ref=e1435]: 3K+ bought in past month
+                        - generic [ref=e1438]:
+                          - button "Safer chemicals +1 more" [ref=e1447] [cursor=pointer]:
+                            - generic [ref=e1448]: Safer chemicals +1 more
+                          - link "See options" [ref=e1456] [cursor=pointer]:
+                            - /url: /Logitech-Ergonomic-Cushioned-Comfortable-Easy-Switch/dp/B0BTNY72VD/ref=sr_1_14_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-14
+                          - generic [ref=e1458]:
+                            - text: No featured offers available
+                            - text: INR 5,041.04
+                            - link "(7 used & new offers)" [ref=e1460] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0BTNY72VD/ref=sr_1_14_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-14
+                  - listitem [ref=e1463]:
+                    - generic [ref=e1469]:
+                      - link [ref=e1475] [cursor=pointer]:
+                        - /url: /Logitech-Signature-Wireless-Keyboard-Bluetooth/dp/B0CT4Q7Y2V/ref=sr_1_15?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-15
+                        - img [ref=e1477]
+                      - generic [ref=e1480]:
+                        - link "Logitech Signature Slim K950 Wireless Keyboard, Sleek Design, Switch Typing Between Devices, Quiet Typing, Bluetooth, Multi-OS, Windows, Mac, Chrome - Graphite" [ref=e1482] [cursor=pointer]:
+                          - /url: /Logitech-Signature-Wireless-Keyboard-Bluetooth/dp/B0CT4Q7Y2V/ref=sr_1_15?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-15
+                          - heading "Logitech Signature Slim K950 Wireless Keyboard, Sleek Design, Switch Typing Between Devices, Quiet Typing, Bluetooth, Multi-OS, Windows, Mac, Chrome - Graphite" [level=2] [ref=e1483]
+                        - generic [ref=e1484]:
+                          - generic [ref=e1485]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1487] [cursor=pointer]:
+                              - generic [ref=e1489]: 4.5 out of 5 stars
+                            - link "411 ratings" [ref=e1493] [cursor=pointer]:
+                              - /url: /Logitech-Signature-Wireless-Keyboard-Bluetooth/dp/B0CT4Q7Y2V/ref=sr_1_15?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-15#customerReviews
+                              - text: (411)
+                          - generic [ref=e1494]: 1K+ bought in past month
+                        - generic [ref=e1497]:
+                          - link "See options" [ref=e1506] [cursor=pointer]:
+                            - /url: /Logitech-Signature-Wireless-Keyboard-Bluetooth/dp/B0CT4Q7Y2V/ref=sr_1_15_so_KEYBOARD_MOUSE_SET?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-15
+                          - generic [ref=e1508]:
+                            - text: No featured offers available
+                            - text: INR 5,613.63
+                            - link "(24 used & new offers)" [ref=e1510] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CT4Q7Y2V/ref=sr_1_15_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-15
+                  - listitem [ref=e1513]:
+                    - generic [ref=e1519]:
+                      - generic [ref=e1521]:
+                        - group "Best Sellerin Computer Keyboards" [ref=e1527]:
+                          - generic "Best Seller" [ref=e1529]
+                        - link [ref=e1533] [cursor=pointer]:
+                          - /url: /Logitech-Programmable-Backlighting-Bluetooth-Rechargeable/dp/B0BKVZK4TH/ref=sr_1_16?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-16
+                          - img [ref=e1535]
+                      - generic [ref=e1538]:
+                        - link "Logitech MX Keys S Wireless Keyboard, Low Profile, Fluid Precise Quiet Typing, Programmable Keys, Backlighting, Bluetooth, USB C Rechargeable, for Windows PC, Linux, Chrome, Mac - Pale Grey" [ref=e1540] [cursor=pointer]:
+                          - /url: /Logitech-Programmable-Backlighting-Bluetooth-Rechargeable/dp/B0BKVZK4TH/ref=sr_1_16?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-16
+                          - heading "Logitech MX Keys S Wireless Keyboard, Low Profile, Fluid Precise Quiet Typing, Programmable Keys, Backlighting, Bluetooth, USB C Rechargeable, for Windows PC, Linux, Chrome, Mac - Pale Grey" [level=2] [ref=e1541]
+                        - generic [ref=e1542]:
+                          - generic [ref=e1543]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e1545] [cursor=pointer]:
+                              - generic [ref=e1547]: 4.4 out of 5 stars
+                            - link "3,575 ratings" [ref=e1551] [cursor=pointer]:
+                              - /url: /Logitech-Programmable-Backlighting-Bluetooth-Rechargeable/dp/B0BKVZK4TH/ref=sr_1_16?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-16#customerReviews
+                              - text: (3.5K)
+                          - generic [ref=e1552]: 1K+ bought in past month
+                        - generic [ref=e1555]:
+                          - link "See options" [ref=e1564] [cursor=pointer]:
+                            - /url: /Logitech-Programmable-Backlighting-Bluetooth-Rechargeable/dp/B0BKVZK4TH/ref=sr_1_16_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-16
+                          - generic [ref=e1566]:
+                            - text: No featured offers available
+                            - text: INR 8,715.30
+                            - link "(11 used & new offers)" [ref=e1568] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0BKVZK4TH/ref=sr_1_16_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-16
+                  - listitem [ref=e1571]:
+                    - generic [ref=e1579]:
+                      - link [ref=e1585] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDEyMDE4NDE2ODU4MDI6OjA6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1587]
+                      - generic [ref=e1590]:
+                        - generic [ref=e1591]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1594] [cursor=pointer]:
+                            - generic [ref=e1595]: Sponsored
+                          - link "Sponsored Ad - ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black" [ref=e1597] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDEyMDE4NDE2ODU4MDI6OjA6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black" [level=2] [ref=e1598]: ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black
+                        - generic [ref=e1599]:
+                          - generic [ref=e1600]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1602] [cursor=pointer]:
+                              - generic [ref=e1604]: 4.5 out of 5 stars
+                            - link "17 ratings" [ref=e1608] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDEyMDE4NDE2ODU4MDI6OjA6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                              - text: (17)
+                          - generic [ref=e1609]: 50+ bought in past month
+                        - generic [ref=e1612]:
+                          - generic [ref=e1615]:
+                            - generic [ref=e1616]: Price, product page
+                            - 'link "INR 30,435.53 List: INR 34,240.09 List: INR 34,240.09" [ref=e1617] [cursor=pointer]':
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX210ZjozMDEyMDE4NDE2ODU4MDI6OjA6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsr_1_17_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e1618]:
+                                - generic [ref=e1619]: INR 30,435.53
+                                - generic [ref=e1620]:
+                                  - text: INR
+                                  - generic [ref=e1621]:
+                                    - text: 30,435
+                                    - generic [ref=e1622]: .
+                                  - text: "53"
+                              - generic [ref=e1623]: "List: INR 34,240.09"
+                              - generic [ref=e1624]:
+                                - text: "List:"
+                                - generic [ref=e1625]:
+                                  - generic [ref=e1626]: INR 34,240.09
+                                  - text: INR34,240.09
+                          - generic [ref=e1627]:
+                            - generic [ref=e1633]: INR 2,129.60 delivery Tue, Jul 7
+                            - generic [ref=e1634]: Ships to India
+                          - button "Add to cart" [ref=e1649] [cursor=pointer]
+                  - listitem [ref=e1652]:
+                    - generic [ref=e1658]:
+                      - link [ref=e1664] [cursor=pointer]:
+                        - /url: /AULA-Keyboard-Wireless-Bluetooth-Keyboards/dp/B0F8VYDRDP/ref=sr_1_18?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-18
+                        - img [ref=e1666]
+                      - generic [ref=e1669]:
+                        - link "AULA 99 Key Keyboard, Wireless Gaming Keyboard Bluetooth Computer Keyboards Creamy Cute with Number Pad RGB Backlit Tri-Mode BT/2.4GHz/USB-C - Pink" [ref=e1671] [cursor=pointer]:
+                          - /url: /AULA-Keyboard-Wireless-Bluetooth-Keyboards/dp/B0F8VYDRDP/ref=sr_1_18?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-18
+                          - heading "AULA 99 Key Keyboard, Wireless Gaming Keyboard Bluetooth Computer Keyboards Creamy Cute with Number Pad RGB Backlit Tri-Mode BT/2.4GHz/USB-C - Pink" [level=2] [ref=e1672]
+                        - generic [ref=e1673]:
+                          - generic [ref=e1674]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1676] [cursor=pointer]:
+                              - generic [ref=e1678]: 4.3 out of 5 stars
+                            - link "1,749 ratings" [ref=e1682] [cursor=pointer]:
+                              - /url: /AULA-Keyboard-Wireless-Bluetooth-Keyboards/dp/B0F8VYDRDP/ref=sr_1_18?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-18#customerReviews
+                              - text: (1.7K)
+                          - generic [ref=e1683]: 1K+ bought in past month
+                        - generic [ref=e1686]:
+                          - button "Recycled materials +2 more" [ref=e1695] [cursor=pointer]:
+                            - generic [ref=e1696]: Recycled materials +2 more
+                          - link "See options" [ref=e1704] [cursor=pointer]:
+                            - /url: /AULA-Keyboard-Wireless-Bluetooth-Keyboards/dp/B0F8VYDRDP/ref=sr_1_18_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-18
+                          - generic [ref=e1706]:
+                            - text: No featured offers available
+                            - text: INR 2,662.24
+                            - link "(2 used & new offers)" [ref=e1708] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0F8VYDRDP/ref=sr_1_18_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-18
+                  - listitem [ref=e1711]:
+                    - generic [ref=e1717]:
+                      - link [ref=e1723] [cursor=pointer]:
+                        - /url: /AULA-F99-Mechanical-Bluetooth-Swappable/dp/B0CLLHSWRL/ref=sr_1_19?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-19
+                        - img [ref=e1725]
+                      - generic [ref=e1728]:
+                        - link "AULA F99 Wireless Mechanical Keyboard,Tri-Mode BT5.0/2.4GHz/USB-C Hot Swappable Custom Keyboard,Pre-lubed Linear Switches,RGB Backlit Computer Gaming Keyboards for PC/Tablet/PS/Xbox" [ref=e1730] [cursor=pointer]:
+                          - /url: /AULA-F99-Mechanical-Bluetooth-Swappable/dp/B0CLLHSWRL/ref=sr_1_19?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-19
+                          - heading "AULA F99 Wireless Mechanical Keyboard,Tri-Mode BT5.0/2.4GHz/USB-C Hot Swappable Custom Keyboard,Pre-lubed Linear Switches,RGB Backlit Computer Gaming Keyboards for PC/Tablet/PS/Xbox" [level=2] [ref=e1731]
+                        - generic [ref=e1732]:
+                          - generic [ref=e1733]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1735] [cursor=pointer]:
+                              - generic [ref=e1737]: 4.5 out of 5 stars
+                            - link "2,996 ratings" [ref=e1741] [cursor=pointer]:
+                              - /url: /AULA-F99-Mechanical-Bluetooth-Swappable/dp/B0CLLHSWRL/ref=sr_1_19?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-19#customerReviews
+                              - text: (2.9K)
+                          - generic [ref=e1742]: 1K+ bought in past month
+                        - generic [ref=e1745]:
+                          - button "Recycled materials +2 more" [ref=e1754] [cursor=pointer]:
+                            - generic [ref=e1755]: Recycled materials +2 more
+                          - link "See options" [ref=e1763] [cursor=pointer]:
+                            - /url: /AULA-F99-Mechanical-Bluetooth-Swappable/dp/B0CLLHSWRL/ref=sr_1_19_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-19
+                          - generic [ref=e1765]:
+                            - text: No featured offers available
+                            - text: INR 6,166.24
+                            - link "(3 used & new offers)" [ref=e1767] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CLLHSWRL/ref=sr_1_19_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-19
+                  - listitem [ref=e1770]:
+                    - generic [ref=e1776]:
+                      - link [ref=e1782] [cursor=pointer]:
+                        - /url: /TECKNET-All-Metal-Illumination-Anti-ghosting-Resistance/dp/B0D17C3ZVJ/ref=sr_1_20?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-20
+                        - img [ref=e1784]
+                      - generic [ref=e1787]:
+                        - link "TECKNET Wired Gaming Keyboard, USB Wired Computer Keyboard, 15-Zone RGB Illumination, IP32 Water Resistance, 25 Anti-ghosting Keys, All-Metal Panel (Whisper Quiet Design)" [ref=e1789] [cursor=pointer]:
+                          - /url: /TECKNET-All-Metal-Illumination-Anti-ghosting-Resistance/dp/B0D17C3ZVJ/ref=sr_1_20?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-20
+                          - heading "TECKNET Wired Gaming Keyboard, USB Wired Computer Keyboard, 15-Zone RGB Illumination, IP32 Water Resistance, 25 Anti-ghosting Keys, All-Metal Panel (Whisper Quiet Design)" [level=2] [ref=e1790]
+                        - generic [ref=e1791]:
+                          - generic [ref=e1792]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e1794] [cursor=pointer]:
+                              - generic [ref=e1796]: 4.4 out of 5 stars
+                            - link "4,177 ratings" [ref=e1800] [cursor=pointer]:
+                              - /url: /TECKNET-All-Metal-Illumination-Anti-ghosting-Resistance/dp/B0D17C3ZVJ/ref=sr_1_20?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-20#customerReviews
+                              - text: (4.1K)
+                          - generic [ref=e1801]: 2K+ bought in past month
+                        - generic [ref=e1804]:
+                          - button "Recycled materials +2 more" [ref=e1813] [cursor=pointer]:
+                            - generic [ref=e1814]: Recycled materials +2 more
+                          - link "See options" [ref=e1822] [cursor=pointer]:
+                            - /url: /TECKNET-All-Metal-Illumination-Anti-ghosting-Resistance/dp/B0D17C3ZVJ/ref=sr_1_20_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-20
+                          - generic [ref=e1824]:
+                            - text: No featured offers available
+                            - text: INR 2,186.67
+                            - link "(7 used & new offers)" [ref=e1826] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D17C3ZVJ/ref=sr_1_20_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-20
+                  - listitem [ref=e1829]:
+                    - generic [ref=e1835]:
+                      - link [ref=e1841] [cursor=pointer]:
+                        - /url: /Logitech-Full-Size-Mechanical-Anti-Ghosting-Keys-White/dp/B08Z6X4NK3/ref=sr_1_21?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-21
+                        - img [ref=e1843]
+                      - generic [ref=e1846]:
+                        - link "Logitech G413 SE Full-Size Mechanical Gaming Keyboard - Backlit Keyboard with Tactile Mechanical Switches, Anti-Ghosting, Compatible with Windows, macOS - Black Aluminum" [ref=e1848] [cursor=pointer]:
+                          - /url: /Logitech-Full-Size-Mechanical-Anti-Ghosting-Keys-White/dp/B08Z6X4NK3/ref=sr_1_21?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-21
+                          - heading "Logitech G413 SE Full-Size Mechanical Gaming Keyboard - Backlit Keyboard with Tactile Mechanical Switches, Anti-Ghosting, Compatible with Windows, macOS - Black Aluminum" [level=2] [ref=e1849]
+                        - generic [ref=e1850]:
+                          - generic [ref=e1851]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1853] [cursor=pointer]:
+                              - generic [ref=e1855]: 4.6 out of 5 stars
+                            - link "1,581 ratings" [ref=e1859] [cursor=pointer]:
+                              - /url: /Logitech-Full-Size-Mechanical-Anti-Ghosting-Keys-White/dp/B08Z6X4NK3/ref=sr_1_21?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-21#customerReviews
+                              - text: (1.5K)
+                          - generic [ref=e1860]: 2K+ bought in past month
+                        - generic [ref=e1863]:
+                          - link "See options" [ref=e1872] [cursor=pointer]:
+                            - /url: /Logitech-Full-Size-Mechanical-Anti-Ghosting-Keys-White/dp/B08Z6X4NK3/ref=sr_1_21_so_KEYBOARDS?dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&dib_tag=se&keywords=Keyboard&qid=1781501776&sr=8-21
+                          - generic [ref=e1874]:
+                            - text: No featured offers available
+                            - text: INR 4,732.87
+                            - link "(19 used & new offers)" [ref=e1876] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B08Z6X4NK3/ref=sr_1_21_olp?keywords=Keyboard&dib_tag=se&dib=eyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU&qid=1781501776&sr=8-21
+                  - listitem [ref=e1879]:
+                    - generic [ref=e1887]:
+                      - link [ref=e1893] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2J0ZjozMDEzMTE4NDAzMzEzMDI6OjA6Og&url=%2FHero-68-Keyboard-Magnetic-Keyboards%2Fdp%2FB0GX644JXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                        - img [ref=e1895]
+                      - generic [ref=e1898]:
+                        - generic [ref=e1899]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1902] [cursor=pointer]:
+                            - generic [ref=e1903]: Sponsored
+                          - link "Sponsored Ad - Aula Hero 68 HE Wired Gaming Keyboard, Hall Effect Keyboard with Magnetic Switch, Rapid Trigger Mode, 8KHz Polling Rate, PBT Keycaps, RGB Lightbox&Backlit, 65% White Small Keyboards for Gamer/PC" [ref=e1905] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2J0ZjozMDEzMTE4NDAzMzEzMDI6OjA6Og&url=%2FHero-68-Keyboard-Magnetic-Keyboards%2Fdp%2FB0GX644JXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                            - heading "Sponsored Ad - Aula Hero 68 HE Wired Gaming Keyboard, Hall Effect Keyboard with Magnetic Switch, Rapid Trigger Mode, 8KHz Polling Rate, PBT Keycaps, RGB Lightbox&Backlit, 65% White Small Keyboards for Gamer/PC" [level=2] [ref=e1906]: Aula Hero 68 HE Wired Gaming Keyboard, Hall Effect Keyboard with Magnetic Switch, Rapid Trigger Mode, 8KHz Polling Rate, PBT Keycaps, RGB Lightbox&Backlit, 65% White Small Keyboards for Gamer/PC
+                        - generic [ref=e1907]:
+                          - generic [ref=e1908]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1910] [cursor=pointer]:
+                              - generic [ref=e1912]: 4.5 out of 5 stars
+                            - link "2 ratings" [ref=e1916] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2J0ZjozMDEzMTE4NDAzMzEzMDI6OjA6Og&url=%2FHero-68-Keyboard-Magnetic-Keyboards%2Fdp%2FB0GX644JXS%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1#customerReviews
+                              - text: (2)
+                          - generic [ref=e1917]: New on Amazon in past month
+                        - link "See options" [ref=e1929] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo0NTE3NzU2NDc1ODM2NjoxNzgxNTAxNzc2OnNwX2J0ZjozMDEzMTE4NDAzMzEzMDI6OjA6Og&url=%2FHero-68-Keyboard-Magnetic-Keyboards%2Fdp%2FB0GX644JXS%2Fref%3Dsr_1_22_so_KEYBOARDS%3Fdib%3DeyJ2IjoiMSJ9.6A8dLEcDp7WbFjkMrx9VrOY6Hvdx4AcpkPLE6CRLjKSPNO4HFRQxYBB-7PcJCvgukR5RBIgtECtxatpPIu8ThiaxU6f2wFqGBS3qSIYCnc9fotKHFQOIOioki97bH9elyyiVr0qcPeO1KqUYA8fyeMN3nJ2J_NLAYMef8aF34IC5ce8n3KOGc_Nnt79AYl5ZfVrxd7_YgwuDcYVmgb9xqDk0A__-uytFVKJ9T7fRbkg.jalTBFDB5vrWKrbbyl-xgnNKhIo6Jo0Fj-bmLXHl3wU%26dib_tag%3Dse%26keywords%3DKeyboard%26qid%3D1781501776%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+            - generic [ref=e1935]:
+              - generic [ref=e1940]:
+                - heading "Seen on social media" [level=2] [ref=e1942]
+                - button "View Sponsored information or leave ad feedback" [ref=e1945] [cursor=pointer]: Sponsored
+              - region "Seen on social media" [ref=e1947]:
+                - list [ref=e1953]:
+                  - listitem "1 of 5" [ref=e1954]:
+                    - generic [ref=e1960]:
+                      - link [ref=e1963] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=IKDyJ4JjQN
+                        - img [ref=e1965]
+                      - generic [ref=e1966]:
+                        - link "Sponsored Ad - Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey" [ref=e1968] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=IKDyJ4JjQN
+                          - heading "Sponsored Ad - Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey" [level=2] [ref=e1969]: Lenovo 700 Modern Wireless Keyboard, 2.4 GHz Dongle & Dual Bluetooth Connection, AES-128 Encryption, 36 Month Battery Life, Luna Grey
+                        - generic [ref=e1971]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e1973] [cursor=pointer]:
+                            - generic [ref=e1975]: 4.2 out of 5 stars
+                          - link "93 ratings" [ref=e1979] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=IKDyJ4JjQN#customerReviews
+                            - text: (93)
+                        - generic [ref=e1982]:
+                          - generic [ref=e1983]: Price, product page
+                          - link "INR 4,754.75" [ref=e1984] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEwMDY4MTYyNjkzMDI6OjA6Og&url=%2FLenovo-Wireless-Bluetooth-Connection-Encryption%2Fdp%2FB0FR8C3NGP%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0FR8C3NGP%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DIKDyJ4JjQN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=IKDyJ4JjQN
+                            - generic [ref=e1985]:
+                              - generic [ref=e1986]: INR 4,754.75
+                              - generic [ref=e1987]:
+                                - text: INR
+                                - generic [ref=e1988]:
+                                  - text: 4,754
+                                  - generic [ref=e1989]: .
+                                - text: "75"
+                        - generic [ref=e1997]: INR 1,207.95 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e2012] [cursor=pointer]
+                  - listitem "2 of 5" [ref=e2013]:
+                    - generic [ref=e2019]:
+                      - link [ref=e2022] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA3MTYzNTM1NTUyMDI6OjE6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JPgRkEToPF
+                        - img [ref=e2024]
+                      - generic [ref=e2025]:
+                        - link "Sponsored Ad - Kensington Slim Type Wired Keyboard (K72357USA),Black" [ref=e2027] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA3MTYzNTM1NTUyMDI6OjE6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JPgRkEToPF
+                          - heading "Sponsored Ad - Kensington Slim Type Wired Keyboard (K72357USA),Black" [level=2] [ref=e2028]: Kensington Slim Type Wired Keyboard (K72357USA),Black
+                        - generic [ref=e2029]:
+                          - generic [ref=e2030]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e2032] [cursor=pointer]:
+                              - generic [ref=e2034]: 4.5 out of 5 stars
+                            - link "1,603 ratings" [ref=e2038] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA3MTYzNTM1NTUyMDI6OjE6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JPgRkEToPF#customerReviews
+                              - text: (1.6K)
+                          - generic [ref=e2039]: 100+ bought in past month
+                        - generic [ref=e2042]:
+                          - generic [ref=e2043]: Price, product page
+                          - link "INR 2,463.45" [ref=e2044] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA3MTYzNTM1NTUyMDI6OjE6Og&url=%2FKensington-Slim-Wired-Keyboard-K72357USA%2Fdp%2FB00426HI8U%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB00426HI8U%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJPgRkEToPF%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JPgRkEToPF
+                            - generic [ref=e2045]:
+                              - generic [ref=e2046]: INR 2,463.45
+                              - generic [ref=e2047]:
+                                - text: INR
+                                - generic [ref=e2048]:
+                                  - text: 2,463
+                                  - generic [ref=e2049]: .
+                                - text: "45"
+                        - generic [ref=e2057]: INR 1,400.08 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e2072] [cursor=pointer]
+                  - listitem "3 of 5" [ref=e2073]:
+                    - generic [ref=e2079]:
+                      - link [ref=e2082] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMDE4NDE2ODU4MDI6OjI6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=YuGXB2xVxw
+                        - img [ref=e2084]
+                      - generic [ref=e2085]:
+                        - link "Sponsored Ad - ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black" [ref=e2087] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMDE4NDE2ODU4MDI6OjI6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=YuGXB2xVxw
+                          - heading "Sponsored Ad - ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black" [level=2] [ref=e2088]: ASUS ROG Azoth 96 HE Wireless Hall Effect Gaming Keyboard – 96% Full-Size, Tri-Mode, Hot Swappable Magnetic Switch, Rapid Trigger, Speed Tap, 8K Hz Polling, Color OLED Screen, PBT Keycaps – Black
+                        - generic [ref=e2089]:
+                          - generic [ref=e2090]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e2092] [cursor=pointer]:
+                              - generic [ref=e2094]: 4.5 out of 5 stars
+                            - link "17 ratings" [ref=e2098] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMDE4NDE2ODU4MDI6OjI6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=YuGXB2xVxw#customerReviews
+                              - text: (17)
+                          - generic [ref=e2099]: 50+ bought in past month
+                        - generic [ref=e2102]:
+                          - generic [ref=e2103]: Price, product page
+                          - 'link "INR 30,435.53 List: INR 34,240.09 List: INR 34,240.09" [ref=e2104] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMDE4NDE2ODU4MDI6OjI6Og&url=%2FASUS-ROG-96-HE-Wireless%2Fdp%2FB0GJXBMY43%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0GJXBMY43%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DYuGXB2xVxw%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=YuGXB2xVxw
+                            - generic [ref=e2105]:
+                              - generic [ref=e2106]: INR 30,435.53
+                              - generic [ref=e2107]:
+                                - text: INR
+                                - generic [ref=e2108]:
+                                  - text: 30,435
+                                  - generic [ref=e2109]: .
+                                - text: "53"
+                            - generic [ref=e2110]: "List: INR 34,240.09"
+                            - generic [ref=e2111]:
+                              - text: "List:"
+                              - generic [ref=e2112]:
+                                - generic [ref=e2113]: INR 34,240.09
+                                - text: INR34,240.09
+                        - generic [ref=e2121]: INR 2,129.60 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e2136] [cursor=pointer]
+                  - listitem "4 of 5" [ref=e2137]:
+                    - generic [ref=e2143]:
+                      - link [ref=e2146] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAxMDQ3NzQwNzgwMDI6OjM6Og&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=M3pdX49fHr
+                        - img [ref=e2148]
+                      - generic [ref=e2149]:
+                        - link "Sponsored Ad - Lenovo 100 Wireless Keyboard and Mouse Combo – Cordless Set with Spill Resistant Quiet Keys – 3-Zone Keyboard - Ambidextrous Mouse – Compact Design – Wireless USB -Black" [ref=e2151] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAxMDQ3NzQwNzgwMDI6OjM6Og&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=M3pdX49fHr
+                          - heading "Sponsored Ad - Lenovo 100 Wireless Keyboard and Mouse Combo – Cordless Set with Spill Resistant Quiet Keys – 3-Zone Keyboard - Ambidextrous Mouse – Compact Design – Wireless USB -Black" [level=2] [ref=e2152]: Lenovo 100 Wireless Keyboard and Mouse Combo – Cordless Set with Spill Resistant Quiet Keys – 3-Zone Keyboard - Ambidextrous Mouse – Compact Design – Wireless USB -Black
+                        - generic [ref=e2153]:
+                          - generic [ref=e2154]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e2156] [cursor=pointer]:
+                              - generic [ref=e2158]: 4.2 out of 5 stars
+                            - link "569 ratings" [ref=e2162] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAxMDQ3NzQwNzgwMDI6OjM6Og&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=M3pdX49fHr#customerReviews
+                              - text: (569)
+                          - generic [ref=e2163]: 300+ bought in past month
+                        - generic [ref=e2166]:
+                          - generic [ref=e2167]: Price, product page
+                          - link "INR 2,662.24" [ref=e2168] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAxMDQ3NzQwNzgwMDI6OjM6Og&url=%2FLenovo-Wireless-Keyboard-Mouse-Combo%2Fdp%2FB0BXYRYCKW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB0BXYRYCKW%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DM3pdX49fHr%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=M3pdX49fHr
+                            - generic [ref=e2169]:
+                              - generic [ref=e2170]: INR 2,662.24
+                              - generic [ref=e2171]:
+                                - text: INR
+                                - generic [ref=e2172]:
+                                  - text: 2,662
+                                  - generic [ref=e2173]: .
+                                - text: "24"
+                        - generic [ref=e2181]: INR 1,263.11 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e2196] [cursor=pointer]
+                  - listitem "5 of 5" [ref=e2197]:
+                    - generic [ref=e2203]:
+                      - link [ref=e2206] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjoyMDAwODM3Mzc4NDE3MTE6OjQ6Og&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=E7QDbYRHXU
+                        - img [ref=e2208]
+                      - generic [ref=e2209]:
+                        - link "Sponsored Ad - Perixx PERIDUO-713 Wireless Mini Keyboard and Mouse Combo, Retro Round Key Caps, Pastel Pink, US English Layout" [ref=e2211] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjoyMDAwODM3Mzc4NDE3MTE6OjQ6Og&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=E7QDbYRHXU
+                          - heading "Sponsored Ad - Perixx PERIDUO-713 Wireless Mini Keyboard and Mouse Combo, Retro Round Key Caps, Pastel Pink, US English Layout" [level=2] [ref=e2212]: Perixx PERIDUO-713 Wireless Mini Keyboard and Mouse Combo, Retro Round Key Caps, Pastel Pink, US English Layout
+                        - generic [ref=e2213]:
+                          - generic [ref=e2214]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e2216] [cursor=pointer]:
+                              - generic [ref=e2218]: 4.3 out of 5 stars
+                            - link "2,459 ratings" [ref=e2222] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjoyMDAwODM3Mzc4NDE3MTE6OjQ6Og&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=E7QDbYRHXU#customerReviews
+                              - text: (2.4K)
+                          - generic [ref=e2223]: 50+ bought in past month
+                        - generic [ref=e2226]:
+                          - generic [ref=e2227]: Price, product page
+                          - link "INR 3,328.04" [ref=e2228] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3NTYyMzE4NDQ5MTMxNDEyOjE3ODE1MDE3NzY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjoyMDAwODM3Mzc4NDE3MTE6OjQ6Og&url=%2FPerixx-PERIDUO-713-Wireless-Keyboard-English%2Fdp%2FB087RR7JWQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26cv_ct_cx%3DKeyboard%26keywords%3DKeyboard%26pd_rd_i%3DB087RR7JWQ%26pd_rd_r%3Dfcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7%26pd_rd_w%3DSHEzX%26pd_rd_wg%3D4XimD%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D1EJFNXVVB1K480YAT0JH%26qid%3D1781501776%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DE7QDbYRHXU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=E7QDbYRHXU
+                            - generic [ref=e2229]:
+                              - generic [ref=e2230]: INR 3,328.04
+                              - generic [ref=e2231]:
+                                - text: INR
+                                - generic [ref=e2232]:
+                                  - text: 3,328
+                                  - generic [ref=e2233]: .
+                                - text: "04"
+                        - generic [ref=e2241]: INR 1,207.95 delivery Tue, Jul 7
+                        - button "Add to cart" [ref=e2256] [cursor=pointer]
+            - generic [ref=e2262]:
+              - generic "Related searches in Keyboard" [ref=e2263]:
+                - heading "Related searches" [level=2] [ref=e2266]
+              - list [ref=e2268]:
+                - generic [ref=e2269]:
+                  - link "keyboard piano" [ref=e2270] [cursor=pointer]:
+                    - /url: /s?k=keyboard+piano&ref=rsl_sug_0_0&pd_rd_w=XIAqB&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=4XimD&pd_rd_r=fcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7&qid=1781501776
+                    - listitem [ref=e2271]:
+                      - generic [ref=e2277]: keyboard piano
+                  - link "keyboard wireless" [ref=e2278] [cursor=pointer]:
+                    - /url: /s?k=keyboard+wireless&ref=rsl_sug_0_3&pd_rd_w=XIAqB&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=4XimD&pd_rd_r=fcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7&qid=1781501776
+                    - listitem [ref=e2279]:
+                      - generic [ref=e2285]: keyboard wireless
+                - generic [ref=e2286]:
+                  - link "mouse" [ref=e2287] [cursor=pointer]:
+                    - /url: /s?k=mouse&ref=rsl_sug_0_1&pd_rd_w=XIAqB&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=4XimD&pd_rd_r=fcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7&qid=1781501776
+                    - listitem [ref=e2288]:
+                      - generic [ref=e2294]: mouse
+                  - link "wireless keyboard" [ref=e2295] [cursor=pointer]:
+                    - /url: /s?k=wireless+keyboard&ref=rsl_sug_0_4&pd_rd_w=XIAqB&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=4XimD&pd_rd_r=fcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7&qid=1781501776
+                    - listitem [ref=e2296]:
+                      - generic [ref=e2302]: wireless keyboard
+                - generic [ref=e2303]:
+                  - link "gaming keyboard" [ref=e2304] [cursor=pointer]:
+                    - /url: /s?k=gaming+keyboard&ref=rsl_sug_0_2&pd_rd_w=XIAqB&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=4XimD&pd_rd_r=fcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7&qid=1781501776
+                    - listitem [ref=e2305]:
+                      - generic [ref=e2311]: gaming keyboard
+                  - link "keyboard mouse combo" [ref=e2312] [cursor=pointer]:
+                    - /url: /s?k=keyboard+mouse+combo&ref=rsl_sug_0_5&pd_rd_w=XIAqB&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=4XimD&pd_rd_r=fcf020fb-2bbf-4e14-8331-0a6e1d4d8ef7&qid=1781501776
+                    - listitem [ref=e2313]:
+                      - generic [ref=e2319]: keyboard mouse combo
+            - navigation "pagination" [ref=e2322]:
+              - list [ref=e2324]:
+                - listitem [ref=e2325]:
+                  - button "Previous" [disabled] [ref=e2327]:
+                    - img [ref=e2328]
+                    - text: Previous
+                - listitem [ref=e2330]:
+                  - button "Page 1" [ref=e2332]: "1"
+                - listitem [ref=e2333]:
+                  - button "Go to page 2" [ref=e2335] [cursor=pointer]: "2"
+                - listitem [ref=e2336]:
+                  - button "Go to page 3" [ref=e2338] [cursor=pointer]: "3"
+                - button [disabled] [ref=e2339]:
+                  - img [ref=e2340]: ...
+                - button "20" [disabled] [ref=e2342]
+                - listitem [ref=e2343]:
+                  - button "Go to next page, page 2" [ref=e2345] [cursor=pointer]:
+                    - text: Next
+                    - img [ref=e2346]
+            - generic [ref=e2350]:
+              - separator [ref=e2351]
+              - generic [ref=e2352]:
+                - heading "Brands related to your search" [ref=e2353]
+                - button "Leave feedback on Sponsored ad" [ref=e2358] [cursor=pointer]: Sponsored
+                - generic [ref=e2362]:
+                  - generic [ref=e2364]:
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JEyd2fngJlxnxAL8URDOGSQAAAGeycfTPwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBuTzFe/clv1c_ek-IBPHXFbbWzjK3YoscrxfcOWxCnjoP720D0Lbg2qrGAnOjOBBusQtQ0xiyHBgWbaUIO6PdtAOIDwYZXFKyMHArYJmMqSd34l-1ICERx9J0k3BvraLycGKk39g0oWZ9f8hJld4pdOzSIq7Ycn3no08t532cmGFa0sQ2STO82rb3GaqdFw3iFmENsXUZLkI_hye3gObvnwnew7AlslwgkvKfn328jMQchMdQMlWc6Ras6r-TKT1wY7CvS0cPZ1-5DsBKc2eeaU3HDmkFTgfcIqdWPW7FFFLYg71p0cs72UDPLJZBcSTbLMOeONC6MW2d_iTBvilEnRIZH29UsCTP0QQMOSQNhliWHPqzaI2ogMwStaAWSYyuHU-7rhsw9AeCBTqhJAuf755sjg0jE6ZJgwsbTxJ2FX9kkSCu_CyvpPLkZqHzfY6FD4tDlFRdclrWC_pP4H0zz3ZM8loteJPp7xKU8kpN4_pygpcQQ19Cp29b_iC-Fqy-e2tydxUi_Y2No4S7ZSnrqKf6LRsiIpJpRiSBztR5zhuvnhsSvg5I6vw2u29nnpCrZA-hhwn8sd-KCxEVVNAVB8Af1XTt-8xmZdmEA_EWxk8aYr4CwulcWphFdJb9FRYBZoUp1fuBo0CgVXBMfOBMRbgvl8BsWeyXs8cjrr8YFXSSB5_Z5aIeEdB1NW6GnaaoUKNV0yKEnxUAknExZqwTm1JdsBjWlRw_88onNbCS9DHn9g_FaxYZHhHNwvtgVE6AuuqMikLJ-vWWSshRiNp-EOyfDehrZSMt8aa-Q_b0pSUWurxju6mJIbzO95Iyn1Tu2ksRMSX-50DufdH2CjF21pHikzIWnsyXT6LilEx_nksYQCLz95yfFPgdfTxnGiWaMKH2XuCjdpQEg5F11M93Y-Sry9vCqP7i6HPi-1ruXAzwZstmmSb-x81S6I942PmdlsH9DbFamHnZDM9MtKwVCcz11NqhScmOdcYWxI2SeiLAU9WEYq90ZUf42UYEeLYpamSPdfUwLcDzGExGiZFOn-YiwiPbgrbaUGZzgQWC5eR37q5lP8rB7on5LWQGE7GBI70kg9UlCvB6boOEs1XwxCZ7lURXUlYeVAMVd87uXz0hnK4nKK56epW6iEYMAiaecr1pozuHrWlJTis710C5a0lH8IFX4HQtAuMxySv_IrJ-vk0F2-jcIs6yMRWraDoYSY1-akJnQQNWgkJy7g_3sCf5OEIGAk5jOfHpc94zTpBOlYpPSXEWWbdJ88mQazs_gvmfqUt-a2zG0hMHAloQTJgD49L5LYGQGoTTE9RqF7meklaFFDsT0pYrbhx7zOBBXGBf7TWizp5iwdhtVAqLGAgLGjVwcTBqYGXoLzAYiORLYyuYQfKiMjnnIAuNEKT-ugBx_SnYvsJu5xBgTm7yJTDJrMowZdPQvDg_BYxs67t5xOjRNVp62vJdTclZv1NztqiHvwclbi1V-QMjGL618KN3FTUo36Yyl-YHTiyvzVvLyhHGBDMW-qD2_4KEgO9Cuvm5Ros1l_KXxVs-vOudoncwq8sb6i0JeK3ZJGHfk0aflMmkn5orUcLECvCQdeuvjKzTpXA0isN4vkRTYJsqCnNojEywqE0Y6irV9EJkwCi8XIMQ10UUX0gdwuyvw5_MQu9q_lHI2qwUIKoto2Qw34uauS8/https://www.amazon.com/stores/page/0C475117-0B4E-4A37-8762-AD3A221283B0/?_encoding=UTF8&store_ref=SB_A055945519AF32JGF7L9F-A06203142AW0G0OLIGSTJ&pd_rd_plhdr=t&aaxitk=ef0cb64a499e8ec24840aa8c8fbb6fee&hsa_cr_id=3454676290001&lp_asins=B08MKSNYJD%2CB08MKJR83P&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                        - link "Keychron" [ref=e2365] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JEyd2fngJlxnxAL8URDOGSQAAAGeycfTPwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBuTzFe/clv1c_ek-IBPHXFbbWzjK3YoscrxfcOWxCnjoP720D0Lbg2qrGAnOjOBBusQtQ0xiyHBgWbaUIO6PdtAOIDwYZXFKyMHArYJmMqSd34l-1ICERx9J0k3BvraLycGKk39g0oWZ9f8hJld4pdOzSIq7Ycn3no08t532cmGFa0sQ2STO82rb3GaqdFw3iFmENsXUZLkI_hye3gObvnwnew7AlslwgkvKfn328jMQchMdQMlWc6Ras6r-TKT1wY7CvS0cPZ1-5DsBKc2eeaU3HDmkFTgfcIqdWPW7FFFLYg71p0cs72UDPLJZBcSTbLMOeONC6MW2d_iTBvilEnRIZH29UsCTP0QQMOSQNhliWHPqzaI2ogMwStaAWSYyuHU-7rhsw9AeCBTqhJAuf755sjg0jE6ZJgwsbTxJ2FX9kkSCu_CyvpPLkZqHzfY6FD4tDlFRdclrWC_pP4H0zz3ZM8loteJPp7xKU8kpN4_pygpcQQ19Cp29b_iC-Fqy-e2tydxUi_Y2No4S7ZSnrqKf6LRsiIpJpRiSBztR5zhuvnhsSvg5I6vw2u29nnpCrZA-hhwn8sd-KCxEVVNAVB8Af1XTt-8xmZdmEA_EWxk8aYr4CwulcWphFdJb9FRYBZoUp1fuBo0CgVXBMfOBMRbgvl8BsWeyXs8cjrr8YFXSSB5_Z5aIeEdB1NW6GnaaoUKNV0yKEnxUAknExZqwTm1JdsBjWlRw_88onNbCS9DHn9g_FaxYZHhHNwvtgVE6AuuqMikLJ-vWWSshRiNp-EOyfDehrZSMt8aa-Q_b0pSUWurxju6mJIbzO95Iyn1Tu2ksRMSX-50DufdH2CjF21pHikzIWnsyXT6LilEx_nksYQCLz95yfFPgdfTxnGiWaMKH2XuCjdpQEg5F11M93Y-Sry9vCqP7i6HPi-1ruXAzwZstmmSb-x81S6I942PmdlsH9DbFamHnZDM9MtKwVCcz11NqhScmOdcYWxI2SeiLAU9WEYq90ZUf42UYEeLYpamSPdfUwLcDzGExGiZFOn-YiwiPbgrbaUGZzgQWC5eR37q5lP8rB7on5LWQGE7GBI70kg9UlCvB6boOEs1XwxCZ7lURXUlYeVAMVd87uXz0hnK4nKK56epW6iEYMAiaecr1pozuHrWlJTis710C5a0lH8IFX4HQtAuMxySv_IrJ-vk0F2-jcIs6yMRWraDoYSY1-akJnQQNWgkJy7g_3sCf5OEIGAk5jOfHpc94zTpBOlYpPSXEWWbdJ88mQazs_gvmfqUt-a2zG0hMHAloQTJgD49L5LYGQGoTTE9RqF7meklaFFDsT0pYrbhx7zOBBXGBf7TWizp5iwdhtVAqLGAgLGjVwcTBqYGXoLzAYiORLYyuYQfKiMjnnIAuNEKT-ugBx_SnYvsJu5xBgTm7yJTDJrMowZdPQvDg_BYxs67t5xOjRNVp62vJdTclZv1NztqiHvwclbi1V-QMjGL618KN3FTUo36Yyl-YHTiyvzVvLyhHGBDMW-qD2_4KEgO9Cuvm5Ros1l_KXxVs-vOudoncwq8sb6i0JeK3ZJGHfk0aflMmkn5orUcLECvCQdeuvjKzTpXA0isN4vkRTYJsqCnNojEywqE0Y6irV9EJkwCi8XIMQ10UUX0gdwuyvw5_MQu9q_lHI2qwUIKoto2Qw34uauS8/https://www.amazon.com/stores/page/0C475117-0B4E-4A37-8762-AD3A221283B0/?_encoding=UTF8&store_ref=SB_A055945519AF32JGF7L9F-A06203142AW0G0OLIGSTJ&pd_rd_plhdr=t&aaxitk=ef0cb64a499e8ec24840aa8c8fbb6fee&hsa_cr_id=3454676290001&lp_asins=B08MKSNYJD%2CB08MKJR83P&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                          - img "Keychron" [ref=e2366]
+                        - generic [ref=e2368]:
+                          - generic [ref=e2369]:
+                            - link [ref=e2370] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JEyd2fngJlxnxAL8URDOGSQAAAGeycfTPwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBuTzFe/clv1c_ek-IBPHXFbbWzjK3YoscrxfcOWxCnjoP720D0Lbg2qrGAnOjOBBusQtQ0xiyHBgWbaUIO6PdtAOIDwYZXFKyMHArYJmMqSd34l-1ICERx9J0k3BvraLycGKk39g0oWZ9f8hJld4pdOzSIq7Ycn3no08t532cmGFa0sQ2STO82rb3GaqdFw3iFmENsXUZLkI_hye3gObvnwnew7AlslwgkvKfn328jMQchMdQMlWc6Ras6r-TKT1wY7CvS0cPZ1-5DsBKc2eeaU3HDmkFTgfcIqdWPW7FFFLYg71p0cs72UDPLJZBcSTbLMOeONC6MW2d_iTBvilEnRIZH29UsCTP0QQMOSQNhliWHPqzaI2ogMwStaAWSYyuHU-7rhsw9AeCBTqhJAuf755sjg0jE6ZJgwsbTxJ2FX9kkSCu_CyvpPLkZqHzfY6FD4tDlFRdclrWC_pP4H0zz3ZM8loteJPp7xKU8kpN4_pygpcQQ19Cp29b_iC-Fqy-e2tydxUi_Y2No4S7ZSnrqKf6LRsiIpJpRiSBztR5zhuvnhsSvg5I6vw2u29nnpCrZA-hhwn8sd-KCxEVVNAVB8Af1XTt-8xmZdmEA_EWxk8aYr4CwulcWphFdJb9FRYBZoUp1fuBo0CgVXBMfOBMRbgvl8BsWeyXs8cjrr8YFXSSB5_Z5aIeEdB1NW6GnaaoUKNV0yKEnxUAknExZqwTm1JdsBjWlRw_88onNbCS9DHn9g_FaxYZHhHNwvtgVE6AuuqMikLJ-vWWSshRiNp-EOyfDehrZSMt8aa-Q_b0pSUWurxju6mJIbzO95Iyn1Tu2ksRMSX-50DufdH2CjF21pHikzIWnsyXT6LilEx_nksYQCLz95yfFPgdfTxnGiWaMKH2XuCjdpQEg5F11M93Y-Sry9vCqP7i6HPi-1ruXAzwZstmmSb-x81S6I942PmdlsH9DbFamHnZDM9MtKwVCcz11NqhScmOdcYWxI2SeiLAU9WEYq90ZUf42UYEeLYpamSPdfUwLcDzGExGiZFOn-YiwiPbgrbaUGZzgQWC5eR37q5lP8rB7on5LWQGE7GBI70kg9UlCvB6boOEs1XwxCZ7lURXUlYeVAMVd87uXz0hnK4nKK56epW6iEYMAiaecr1pozuHrWlJTis710C5a0lH8IFX4HQtAuMxySv_IrJ-vk0F2-jcIs6yMRWraDoYSY1-akJnQQNWgkJy7g_3sCf5OEIGAk5jOfHpc94zTpBOlYpPSXEWWbdJ88mQazs_gvmfqUt-a2zG0hMHAloQTJgD49L5LYGQGoTTE9RqF7meklaFFDsT0pYrbhx7zOBBXGBf7TWizp5iwdhtVAqLGAgLGjVwcTBqYGXoLzAYiORLYyuYQfKiMjnnIAuNEKT-ugBx_SnYvsJu5xBgTm7yJTDJrMowZdPQvDg_BYxs67t5xOjRNVp62vJdTclZv1NztqiHvwclbi1V-QMjGL618KN3FTUo36Yyl-YHTiyvzVvLyhHGBDMW-qD2_4KEgO9Cuvm5Ros1l_KXxVs-vOudoncwq8sb6i0JeK3ZJGHfk0aflMmkn5orUcLECvCQdeuvjKzTpXA0isN4vkRTYJsqCnNojEywqE0Y6irV9EJkwCi8XIMQ10UUX0gdwuyvw5_MQu9q_lHI2qwUIKoto2Qw34uauS8/https://www.amazon.com/stores/page/0C475117-0B4E-4A37-8762-AD3A221283B0/?_encoding=UTF8&store_ref=SB_A055945519AF32JGF7L9F-A06203142AW0G0OLIGSTJ&pd_rd_plhdr=t&aaxitk=ef0cb64a499e8ec24840aa8c8fbb6fee&hsa_cr_id=3454676290001&lp_asins=B08MKSNYJD%2CB08MKJR83P&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                            - link "Keychron" [ref=e2371] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JEyd2fngJlxnxAL8URDOGSQAAAGeycfTPwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBuTzFe/clv1c_ek-IBPHXFbbWzjK3YoscrxfcOWxCnjoP720D0Lbg2qrGAnOjOBBusQtQ0xiyHBgWbaUIO6PdtAOIDwYZXFKyMHArYJmMqSd34l-1ICERx9J0k3BvraLycGKk39g0oWZ9f8hJld4pdOzSIq7Ycn3no08t532cmGFa0sQ2STO82rb3GaqdFw3iFmENsXUZLkI_hye3gObvnwnew7AlslwgkvKfn328jMQchMdQMlWc6Ras6r-TKT1wY7CvS0cPZ1-5DsBKc2eeaU3HDmkFTgfcIqdWPW7FFFLYg71p0cs72UDPLJZBcSTbLMOeONC6MW2d_iTBvilEnRIZH29UsCTP0QQMOSQNhliWHPqzaI2ogMwStaAWSYyuHU-7rhsw9AeCBTqhJAuf755sjg0jE6ZJgwsbTxJ2FX9kkSCu_CyvpPLkZqHzfY6FD4tDlFRdclrWC_pP4H0zz3ZM8loteJPp7xKU8kpN4_pygpcQQ19Cp29b_iC-Fqy-e2tydxUi_Y2No4S7ZSnrqKf6LRsiIpJpRiSBztR5zhuvnhsSvg5I6vw2u29nnpCrZA-hhwn8sd-KCxEVVNAVB8Af1XTt-8xmZdmEA_EWxk8aYr4CwulcWphFdJb9FRYBZoUp1fuBo0CgVXBMfOBMRbgvl8BsWeyXs8cjrr8YFXSSB5_Z5aIeEdB1NW6GnaaoUKNV0yKEnxUAknExZqwTm1JdsBjWlRw_88onNbCS9DHn9g_FaxYZHhHNwvtgVE6AuuqMikLJ-vWWSshRiNp-EOyfDehrZSMt8aa-Q_b0pSUWurxju6mJIbzO95Iyn1Tu2ksRMSX-50DufdH2CjF21pHikzIWnsyXT6LilEx_nksYQCLz95yfFPgdfTxnGiWaMKH2XuCjdpQEg5F11M93Y-Sry9vCqP7i6HPi-1ruXAzwZstmmSb-x81S6I942PmdlsH9DbFamHnZDM9MtKwVCcz11NqhScmOdcYWxI2SeiLAU9WEYq90ZUf42UYEeLYpamSPdfUwLcDzGExGiZFOn-YiwiPbgrbaUGZzgQWC5eR37q5lP8rB7on5LWQGE7GBI70kg9UlCvB6boOEs1XwxCZ7lURXUlYeVAMVd87uXz0hnK4nKK56epW6iEYMAiaecr1pozuHrWlJTis710C5a0lH8IFX4HQtAuMxySv_IrJ-vk0F2-jcIs6yMRWraDoYSY1-akJnQQNWgkJy7g_3sCf5OEIGAk5jOfHpc94zTpBOlYpPSXEWWbdJ88mQazs_gvmfqUt-a2zG0hMHAloQTJgD49L5LYGQGoTTE9RqF7meklaFFDsT0pYrbhx7zOBBXGBf7TWizp5iwdhtVAqLGAgLGjVwcTBqYGXoLzAYiORLYyuYQfKiMjnnIAuNEKT-ugBx_SnYvsJu5xBgTm7yJTDJrMowZdPQvDg_BYxs67t5xOjRNVp62vJdTclZv1NztqiHvwclbi1V-QMjGL618KN3FTUo36Yyl-YHTiyvzVvLyhHGBDMW-qD2_4KEgO9Cuvm5Ros1l_KXxVs-vOudoncwq8sb6i0JeK3ZJGHfk0aflMmkn5orUcLECvCQdeuvjKzTpXA0isN4vkRTYJsqCnNojEywqE0Y6irV9EJkwCi8XIMQ10UUX0gdwuyvw5_MQu9q_lHI2qwUIKoto2Qw34uauS8/https://www.amazon.com/stores/page/0C475117-0B4E-4A37-8762-AD3A221283B0/?_encoding=UTF8&store_ref=SB_A055945519AF32JGF7L9F-A06203142AW0G0OLIGSTJ&pd_rd_plhdr=t&aaxitk=ef0cb64a499e8ec24840aa8c8fbb6fee&hsa_cr_id=3454676290001&lp_asins=B08MKSNYJD%2CB08MKJR83P&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                              - img "Keychron" [ref=e2373]
+                          - generic [ref=e2374]:
+                            - link [ref=e2375] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JEyd2fngJlxnxAL8URDOGSQAAAGeycfTPwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBuTzFe/clv1c_ek-IBPHXFbbWzjK3YoscrxfcOWxCnjoP720D0Lbg2qrGAnOjOBBusQtQ0xiyHBgWbaUIO6PdtAOIDwYZXFKyMHArYJmMqSd34l-1ICERx9J0k3BvraLycGKk39g0oWZ9f8hJld4pdOzSIq7Ycn3no08t532cmGFa0sQ2STO82rb3GaqdFw3iFmENsXUZLkI_hye3gObvnwnew7AlslwgkvKfn328jMQchMdQMlWc6Ras6r-TKT1wY7CvS0cPZ1-5DsBKc2eeaU3HDmkFTgfcIqdWPW7FFFLYg71p0cs72UDPLJZBcSTbLMOeONC6MW2d_iTBvilEnRIZH29UsCTP0QQMOSQNhliWHPqzaI2ogMwStaAWSYyuHU-7rhsw9AeCBTqhJAuf755sjg0jE6ZJgwsbTxJ2FX9kkSCu_CyvpPLkZqHzfY6FD4tDlFRdclrWC_pP4H0zz3ZM8loteJPp7xKU8kpN4_pygpcQQ19Cp29b_iC-Fqy-e2tydxUi_Y2No4S7ZSnrqKf6LRsiIpJpRiSBztR5zhuvnhsSvg5I6vw2u29nnpCrZA-hhwn8sd-KCxEVVNAVB8Af1XTt-8xmZdmEA_EWxk8aYr4CwulcWphFdJb9FRYBZoUp1fuBo0CgVXBMfOBMRbgvl8BsWeyXs8cjrr8YFXSSB5_Z5aIeEdB1NW6GnaaoUKNV0yKEnxUAknExZqwTm1JdsBjWlRw_88onNbCS9DHn9g_FaxYZHhHNwvtgVE6AuuqMikLJ-vWWSshRiNp-EOyfDehrZSMt8aa-Q_b0pSUWurxju6mJIbzO95Iyn1Tu2ksRMSX-50DufdH2CjF21pHikzIWnsyXT6LilEx_nksYQCLz95yfFPgdfTxnGiWaMKH2XuCjdpQEg5F11M93Y-Sry9vCqP7i6HPi-1ruXAzwZstmmSb-x81S6I942PmdlsH9DbFamHnZDM9MtKwVCcz11NqhScmOdcYWxI2SeiLAU9WEYq90ZUf42UYEeLYpamSPdfUwLcDzGExGiZFOn-YiwiPbgrbaUGZzgQWC5eR37q5lP8rB7on5LWQGE7GBI70kg9UlCvB6boOEs1XwxCZ7lURXUlYeVAMVd87uXz0hnK4nKK56epW6iEYMAiaecr1pozuHrWlJTis710C5a0lH8IFX4HQtAuMxySv_IrJ-vk0F2-jcIs6yMRWraDoYSY1-akJnQQNWgkJy7g_3sCf5OEIGAk5jOfHpc94zTpBOlYpPSXEWWbdJ88mQazs_gvmfqUt-a2zG0hMHAloQTJgD49L5LYGQGoTTE9RqF7meklaFFDsT0pYrbhx7zOBBXGBf7TWizp5iwdhtVAqLGAgLGjVwcTBqYGXoLzAYiORLYyuYQfKiMjnnIAuNEKT-ugBx_SnYvsJu5xBgTm7yJTDJrMowZdPQvDg_BYxs67t5xOjRNVp62vJdTclZv1NztqiHvwclbi1V-QMjGL618KN3FTUo36Yyl-YHTiyvzVvLyhHGBDMW-qD2_4KEgO9Cuvm5Ros1l_KXxVs-vOudoncwq8sb6i0JeK3ZJGHfk0aflMmkn5orUcLECvCQdeuvjKzTpXA0isN4vkRTYJsqCnNojEywqE0Y6irV9EJkwCi8XIMQ10UUX0gdwuyvw5_MQu9q_lHI2qwUIKoto2Qw34uauS8/https://www.amazon.com/stores/page/0C475117-0B4E-4A37-8762-AD3A221283B0/?_encoding=UTF8&store_ref=SB_A055945519AF32JGF7L9F-A06203142AW0G0OLIGSTJ&pd_rd_plhdr=t&aaxitk=ef0cb64a499e8ec24840aa8c8fbb6fee&hsa_cr_id=3454676290001&lp_asins=B08MKSNYJD%2CB08MKJR83P&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                            - link "Keychron K10 104-Key Bluetooth Mechanical Keyboard" [ref=e2376] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JEyd2fngJlxnxAL8URDOGSQAAAGeycfTPwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBuTzFe/clv1c_ek-IBPHXFbbWzjK3YoscrxfcOWxCnjoP720D0Lbg2qrGAnOjOBBusQtQ0xiyHBgWbaUIO6PdtAOIDwYZXFKyMHArYJmMqSd34l-1ICERx9J0k3BvraLycGKk39g0oWZ9f8hJld4pdOzSIq7Ycn3no08t532cmGFa0sQ2STO82rb3GaqdFw3iFmENsXUZLkI_hye3gObvnwnew7AlslwgkvKfn328jMQchMdQMlWc6Ras6r-TKT1wY7CvS0cPZ1-5DsBKc2eeaU3HDmkFTgfcIqdWPW7FFFLYg71p0cs72UDPLJZBcSTbLMOeONC6MW2d_iTBvilEnRIZH29UsCTP0QQMOSQNhliWHPqzaI2ogMwStaAWSYyuHU-7rhsw9AeCBTqhJAuf755sjg0jE6ZJgwsbTxJ2FX9kkSCu_CyvpPLkZqHzfY6FD4tDlFRdclrWC_pP4H0zz3ZM8loteJPp7xKU8kpN4_pygpcQQ19Cp29b_iC-Fqy-e2tydxUi_Y2No4S7ZSnrqKf6LRsiIpJpRiSBztR5zhuvnhsSvg5I6vw2u29nnpCrZA-hhwn8sd-KCxEVVNAVB8Af1XTt-8xmZdmEA_EWxk8aYr4CwulcWphFdJb9FRYBZoUp1fuBo0CgVXBMfOBMRbgvl8BsWeyXs8cjrr8YFXSSB5_Z5aIeEdB1NW6GnaaoUKNV0yKEnxUAknExZqwTm1JdsBjWlRw_88onNbCS9DHn9g_FaxYZHhHNwvtgVE6AuuqMikLJ-vWWSshRiNp-EOyfDehrZSMt8aa-Q_b0pSUWurxju6mJIbzO95Iyn1Tu2ksRMSX-50DufdH2CjF21pHikzIWnsyXT6LilEx_nksYQCLz95yfFPgdfTxnGiWaMKH2XuCjdpQEg5F11M93Y-Sry9vCqP7i6HPi-1ruXAzwZstmmSb-x81S6I942PmdlsH9DbFamHnZDM9MtKwVCcz11NqhScmOdcYWxI2SeiLAU9WEYq90ZUf42UYEeLYpamSPdfUwLcDzGExGiZFOn-YiwiPbgrbaUGZzgQWC5eR37q5lP8rB7on5LWQGE7GBI70kg9UlCvB6boOEs1XwxCZ7lURXUlYeVAMVd87uXz0hnK4nKK56epW6iEYMAiaecr1pozuHrWlJTis710C5a0lH8IFX4HQtAuMxySv_IrJ-vk0F2-jcIs6yMRWraDoYSY1-akJnQQNWgkJy7g_3sCf5OEIGAk5jOfHpc94zTpBOlYpPSXEWWbdJ88mQazs_gvmfqUt-a2zG0hMHAloQTJgD49L5LYGQGoTTE9RqF7meklaFFDsT0pYrbhx7zOBBXGBf7TWizp5iwdhtVAqLGAgLGjVwcTBqYGXoLzAYiORLYyuYQfKiMjnnIAuNEKT-ugBx_SnYvsJu5xBgTm7yJTDJrMowZdPQvDg_BYxs67t5xOjRNVp62vJdTclZv1NztqiHvwclbi1V-QMjGL618KN3FTUo36Yyl-YHTiyvzVvLyhHGBDMW-qD2_4KEgO9Cuvm5Ros1l_KXxVs-vOudoncwq8sb6i0JeK3ZJGHfk0aflMmkn5orUcLECvCQdeuvjKzTpXA0isN4vkRTYJsqCnNojEywqE0Y6irV9EJkwCi8XIMQ10UUX0gdwuyvw5_MQu9q_lHI2qwUIKoto2Qw34uauS8/https://www.amazon.com/stores/page/0C475117-0B4E-4A37-8762-AD3A221283B0/?_encoding=UTF8&store_ref=SB_A055945519AF32JGF7L9F-A06203142AW0G0OLIGSTJ&pd_rd_plhdr=t&aaxitk=ef0cb64a499e8ec24840aa8c8fbb6fee&hsa_cr_id=3454676290001&lp_asins=B08MKSNYJD%2CB08MKJR83P&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                              - generic [ref=e2378]:
+                                - generic [ref=e2379]: Keychron K10 104-Key Bluetooth Mechanical Keyboard
+                                - generic [ref=e2380]: Keychron K10 104-Key Bluetooth Mechanical Keyboard
+                  - generic [ref=e2382]:
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JH6s8VjrZsihojMZ7gbv1fQAAAGeycfTQAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB123VD/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqPwsLD1AhCt--QCU713jwXsKAfet2H83B3zBnBSPHIdBWlZUIZRFKyMHArYJmMqSf3TATXLgmRxO2ymleTMbBJZoxj5_BihhLyV4H9q4Eq6xUuY0RBodAsiEjkpsisNtXrjhT65TOSjCUdUHARhuRNvjYJLZX9NNK3O_Qj4s0MNGeJVef-2UndqrIdNZUtTGaeprI3mh0050AKBSPagYP3Skux3-Br_UoJcv_0ZLu04k7HTkjqcGZuSQs-zPpI1Yb9i2Op-y1t3sdYrgatfa7PTS_-0jQ587f9gDZqXLgeP5uIWHbEBWqoAFZe0nJKcxQFA55KFonu6lrV5Mo7zf3ZImrvjJsDjQC_ubEe2-Qc2YiW8dKpp2i4eY_58bAh11DQsiiU3IBPMIHGFF4v_WtR1I0QvngpQn4JQjs7_0UL-0JUhfJC_pnvKK5KWrv4h073eOrd4BARn6csrTlFWAbYRU0OZVXHfuWnsl-V-zru5Epm7V5RfJbeEZ_x-zQUCFbNFeZFExIOhW6zK_fgv_c4R9OhwtUPFROSn0wtIKNRtQ3uCYRtYnDFKLk-OgYmJuA4mgiF1pnF56ckuhPZNgwSmaqGre7_GBtOvVJP05FDsNICmYl_DjUNvnS2No9eDbnPbjGquqAWpKINZ18SrwJfsjvYnVncIZ58cQdc8syBtxOhDaR0T2TLM7eyGWqhxzBONG7JzrU_XkbKALi5dywIWWmu5wJP1fQbkbnt5tHwZaXouTHwuOZI2RooqibaK6sNopAY8vm2BIPPuti4Q95HaTeFI8MamUTeOFzJ3TEOnlAKSHe6U4ecmP2o1g3pyTTf1ayYE-YxJJr--jV52NEQRisib76It3atcpsO_UwsrnOrhCuN3AIPBnM83Y7YftM_ROwwdKNE5x7xowSp6v-ppt2cPUjqjLaZ_ag6iPhzrtlB8uFYULmHWpUuTQJC9U4jRJaY-5oNvBy2Hde187OGYI2a_fbiVeNFVR_zeHpyTH4WFGrXFP3-aKtBdDo_liW4V2gD8gHMGlXzpM59uzvaa7sg4JfIWJVgoE9Wc2_R7L7-AwUpqX6sTsBLyhf594hYQgSF2-P2lfDqk4rkrM48tKezz_4wNElo6I1uTRKgTq5KwXLgz4qOhForTMdM7Y2Tlh5fKIbgwOuzBOljFn-8cL14-CxwJ-qhm0KCMzxxYdP7eOHE1HIlQ39h0t-crCQM0hviQIy-s5MV5vKxXnMzy8B-7YVfGBmNBbnQ0k9-WQTptjSAuNmeCQVuPdUI7uyzFZ4RO5b3fzmh3QrLdeghWiu3N421ARs7xja355lPh-rsrMdjmhqbtmQK8AAjIgfUN3Lui_xxtOnk76PjR47pVKVRSDhXtPAvhjhPnBnyJ-GNmQB5GaNvXb7gfrAO9sddDhLKMtyUyNKlDBCkiUSluO4dhybOHh2TWJOP7rD48okArbtKz1jgVDC_uxhHLlRq38D733eTI3SpiDm312GbfRqgJW0bhO6UF3NJ4iVIvRec93ItPgnICgoX7NA5ef7gLPqf18AdLt80g8NC8_tEEg2bUyZ0XUS5iMrehNdgvSJ9XXgaCvwvyJlWZSEoDVI2BduOYmF4-OlBfucxgsz_hQnPK4ZJ0O9_ZhR3qHN7RxEBxmEEbknaEaSzkQ/https://www.amazon.com/stores/page/9A342DA5-AF2B-4D14-B2B3-F92D042DB5D9/?_encoding=UTF8&store_ref=SB_A10285102SUN71OI89Z4Q-A0220091JJ9H54DAVW0I&pd_rd_plhdr=t&aaxitk=1ec18f427c363f889026d457e395f6cb&hsa_cr_id=0&lp_asins=B0FKBCZS4T%2CB0FLPZQHJ7%2CB0FGXK7X6F&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                        - link "REDRAGON" [ref=e2383] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JH6s8VjrZsihojMZ7gbv1fQAAAGeycfTQAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB123VD/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqPwsLD1AhCt--QCU713jwXsKAfet2H83B3zBnBSPHIdBWlZUIZRFKyMHArYJmMqSf3TATXLgmRxO2ymleTMbBJZoxj5_BihhLyV4H9q4Eq6xUuY0RBodAsiEjkpsisNtXrjhT65TOSjCUdUHARhuRNvjYJLZX9NNK3O_Qj4s0MNGeJVef-2UndqrIdNZUtTGaeprI3mh0050AKBSPagYP3Skux3-Br_UoJcv_0ZLu04k7HTkjqcGZuSQs-zPpI1Yb9i2Op-y1t3sdYrgatfa7PTS_-0jQ587f9gDZqXLgeP5uIWHbEBWqoAFZe0nJKcxQFA55KFonu6lrV5Mo7zf3ZImrvjJsDjQC_ubEe2-Qc2YiW8dKpp2i4eY_58bAh11DQsiiU3IBPMIHGFF4v_WtR1I0QvngpQn4JQjs7_0UL-0JUhfJC_pnvKK5KWrv4h073eOrd4BARn6csrTlFWAbYRU0OZVXHfuWnsl-V-zru5Epm7V5RfJbeEZ_x-zQUCFbNFeZFExIOhW6zK_fgv_c4R9OhwtUPFROSn0wtIKNRtQ3uCYRtYnDFKLk-OgYmJuA4mgiF1pnF56ckuhPZNgwSmaqGre7_GBtOvVJP05FDsNICmYl_DjUNvnS2No9eDbnPbjGquqAWpKINZ18SrwJfsjvYnVncIZ58cQdc8syBtxOhDaR0T2TLM7eyGWqhxzBONG7JzrU_XkbKALi5dywIWWmu5wJP1fQbkbnt5tHwZaXouTHwuOZI2RooqibaK6sNopAY8vm2BIPPuti4Q95HaTeFI8MamUTeOFzJ3TEOnlAKSHe6U4ecmP2o1g3pyTTf1ayYE-YxJJr--jV52NEQRisib76It3atcpsO_UwsrnOrhCuN3AIPBnM83Y7YftM_ROwwdKNE5x7xowSp6v-ppt2cPUjqjLaZ_ag6iPhzrtlB8uFYULmHWpUuTQJC9U4jRJaY-5oNvBy2Hde187OGYI2a_fbiVeNFVR_zeHpyTH4WFGrXFP3-aKtBdDo_liW4V2gD8gHMGlXzpM59uzvaa7sg4JfIWJVgoE9Wc2_R7L7-AwUpqX6sTsBLyhf594hYQgSF2-P2lfDqk4rkrM48tKezz_4wNElo6I1uTRKgTq5KwXLgz4qOhForTMdM7Y2Tlh5fKIbgwOuzBOljFn-8cL14-CxwJ-qhm0KCMzxxYdP7eOHE1HIlQ39h0t-crCQM0hviQIy-s5MV5vKxXnMzy8B-7YVfGBmNBbnQ0k9-WQTptjSAuNmeCQVuPdUI7uyzFZ4RO5b3fzmh3QrLdeghWiu3N421ARs7xja355lPh-rsrMdjmhqbtmQK8AAjIgfUN3Lui_xxtOnk76PjR47pVKVRSDhXtPAvhjhPnBnyJ-GNmQB5GaNvXb7gfrAO9sddDhLKMtyUyNKlDBCkiUSluO4dhybOHh2TWJOP7rD48okArbtKz1jgVDC_uxhHLlRq38D733eTI3SpiDm312GbfRqgJW0bhO6UF3NJ4iVIvRec93ItPgnICgoX7NA5ef7gLPqf18AdLt80g8NC8_tEEg2bUyZ0XUS5iMrehNdgvSJ9XXgaCvwvyJlWZSEoDVI2BduOYmF4-OlBfucxgsz_hQnPK4ZJ0O9_ZhR3qHN7RxEBxmEEbknaEaSzkQ/https://www.amazon.com/stores/page/9A342DA5-AF2B-4D14-B2B3-F92D042DB5D9/?_encoding=UTF8&store_ref=SB_A10285102SUN71OI89Z4Q-A0220091JJ9H54DAVW0I&pd_rd_plhdr=t&aaxitk=1ec18f427c363f889026d457e395f6cb&hsa_cr_id=0&lp_asins=B0FKBCZS4T%2CB0FLPZQHJ7%2CB0FGXK7X6F&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                          - img "REDRAGON" [ref=e2384]
+                        - generic [ref=e2386]:
+                          - generic [ref=e2387]:
+                            - link [ref=e2388] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JH6s8VjrZsihojMZ7gbv1fQAAAGeycfTQAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB123VD/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqPwsLD1AhCt--QCU713jwXsKAfet2H83B3zBnBSPHIdBWlZUIZRFKyMHArYJmMqSf3TATXLgmRxO2ymleTMbBJZoxj5_BihhLyV4H9q4Eq6xUuY0RBodAsiEjkpsisNtXrjhT65TOSjCUdUHARhuRNvjYJLZX9NNK3O_Qj4s0MNGeJVef-2UndqrIdNZUtTGaeprI3mh0050AKBSPagYP3Skux3-Br_UoJcv_0ZLu04k7HTkjqcGZuSQs-zPpI1Yb9i2Op-y1t3sdYrgatfa7PTS_-0jQ587f9gDZqXLgeP5uIWHbEBWqoAFZe0nJKcxQFA55KFonu6lrV5Mo7zf3ZImrvjJsDjQC_ubEe2-Qc2YiW8dKpp2i4eY_58bAh11DQsiiU3IBPMIHGFF4v_WtR1I0QvngpQn4JQjs7_0UL-0JUhfJC_pnvKK5KWrv4h073eOrd4BARn6csrTlFWAbYRU0OZVXHfuWnsl-V-zru5Epm7V5RfJbeEZ_x-zQUCFbNFeZFExIOhW6zK_fgv_c4R9OhwtUPFROSn0wtIKNRtQ3uCYRtYnDFKLk-OgYmJuA4mgiF1pnF56ckuhPZNgwSmaqGre7_GBtOvVJP05FDsNICmYl_DjUNvnS2No9eDbnPbjGquqAWpKINZ18SrwJfsjvYnVncIZ58cQdc8syBtxOhDaR0T2TLM7eyGWqhxzBONG7JzrU_XkbKALi5dywIWWmu5wJP1fQbkbnt5tHwZaXouTHwuOZI2RooqibaK6sNopAY8vm2BIPPuti4Q95HaTeFI8MamUTeOFzJ3TEOnlAKSHe6U4ecmP2o1g3pyTTf1ayYE-YxJJr--jV52NEQRisib76It3atcpsO_UwsrnOrhCuN3AIPBnM83Y7YftM_ROwwdKNE5x7xowSp6v-ppt2cPUjqjLaZ_ag6iPhzrtlB8uFYULmHWpUuTQJC9U4jRJaY-5oNvBy2Hde187OGYI2a_fbiVeNFVR_zeHpyTH4WFGrXFP3-aKtBdDo_liW4V2gD8gHMGlXzpM59uzvaa7sg4JfIWJVgoE9Wc2_R7L7-AwUpqX6sTsBLyhf594hYQgSF2-P2lfDqk4rkrM48tKezz_4wNElo6I1uTRKgTq5KwXLgz4qOhForTMdM7Y2Tlh5fKIbgwOuzBOljFn-8cL14-CxwJ-qhm0KCMzxxYdP7eOHE1HIlQ39h0t-crCQM0hviQIy-s5MV5vKxXnMzy8B-7YVfGBmNBbnQ0k9-WQTptjSAuNmeCQVuPdUI7uyzFZ4RO5b3fzmh3QrLdeghWiu3N421ARs7xja355lPh-rsrMdjmhqbtmQK8AAjIgfUN3Lui_xxtOnk76PjR47pVKVRSDhXtPAvhjhPnBnyJ-GNmQB5GaNvXb7gfrAO9sddDhLKMtyUyNKlDBCkiUSluO4dhybOHh2TWJOP7rD48okArbtKz1jgVDC_uxhHLlRq38D733eTI3SpiDm312GbfRqgJW0bhO6UF3NJ4iVIvRec93ItPgnICgoX7NA5ef7gLPqf18AdLt80g8NC8_tEEg2bUyZ0XUS5iMrehNdgvSJ9XXgaCvwvyJlWZSEoDVI2BduOYmF4-OlBfucxgsz_hQnPK4ZJ0O9_ZhR3qHN7RxEBxmEEbknaEaSzkQ/https://www.amazon.com/stores/page/9A342DA5-AF2B-4D14-B2B3-F92D042DB5D9/?_encoding=UTF8&store_ref=SB_A10285102SUN71OI89Z4Q-A0220091JJ9H54DAVW0I&pd_rd_plhdr=t&aaxitk=1ec18f427c363f889026d457e395f6cb&hsa_cr_id=0&lp_asins=B0FKBCZS4T%2CB0FLPZQHJ7%2CB0FGXK7X6F&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                            - link "REDRAGON" [ref=e2389] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JH6s8VjrZsihojMZ7gbv1fQAAAGeycfTQAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB123VD/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqPwsLD1AhCt--QCU713jwXsKAfet2H83B3zBnBSPHIdBWlZUIZRFKyMHArYJmMqSf3TATXLgmRxO2ymleTMbBJZoxj5_BihhLyV4H9q4Eq6xUuY0RBodAsiEjkpsisNtXrjhT65TOSjCUdUHARhuRNvjYJLZX9NNK3O_Qj4s0MNGeJVef-2UndqrIdNZUtTGaeprI3mh0050AKBSPagYP3Skux3-Br_UoJcv_0ZLu04k7HTkjqcGZuSQs-zPpI1Yb9i2Op-y1t3sdYrgatfa7PTS_-0jQ587f9gDZqXLgeP5uIWHbEBWqoAFZe0nJKcxQFA55KFonu6lrV5Mo7zf3ZImrvjJsDjQC_ubEe2-Qc2YiW8dKpp2i4eY_58bAh11DQsiiU3IBPMIHGFF4v_WtR1I0QvngpQn4JQjs7_0UL-0JUhfJC_pnvKK5KWrv4h073eOrd4BARn6csrTlFWAbYRU0OZVXHfuWnsl-V-zru5Epm7V5RfJbeEZ_x-zQUCFbNFeZFExIOhW6zK_fgv_c4R9OhwtUPFROSn0wtIKNRtQ3uCYRtYnDFKLk-OgYmJuA4mgiF1pnF56ckuhPZNgwSmaqGre7_GBtOvVJP05FDsNICmYl_DjUNvnS2No9eDbnPbjGquqAWpKINZ18SrwJfsjvYnVncIZ58cQdc8syBtxOhDaR0T2TLM7eyGWqhxzBONG7JzrU_XkbKALi5dywIWWmu5wJP1fQbkbnt5tHwZaXouTHwuOZI2RooqibaK6sNopAY8vm2BIPPuti4Q95HaTeFI8MamUTeOFzJ3TEOnlAKSHe6U4ecmP2o1g3pyTTf1ayYE-YxJJr--jV52NEQRisib76It3atcpsO_UwsrnOrhCuN3AIPBnM83Y7YftM_ROwwdKNE5x7xowSp6v-ppt2cPUjqjLaZ_ag6iPhzrtlB8uFYULmHWpUuTQJC9U4jRJaY-5oNvBy2Hde187OGYI2a_fbiVeNFVR_zeHpyTH4WFGrXFP3-aKtBdDo_liW4V2gD8gHMGlXzpM59uzvaa7sg4JfIWJVgoE9Wc2_R7L7-AwUpqX6sTsBLyhf594hYQgSF2-P2lfDqk4rkrM48tKezz_4wNElo6I1uTRKgTq5KwXLgz4qOhForTMdM7Y2Tlh5fKIbgwOuzBOljFn-8cL14-CxwJ-qhm0KCMzxxYdP7eOHE1HIlQ39h0t-crCQM0hviQIy-s5MV5vKxXnMzy8B-7YVfGBmNBbnQ0k9-WQTptjSAuNmeCQVuPdUI7uyzFZ4RO5b3fzmh3QrLdeghWiu3N421ARs7xja355lPh-rsrMdjmhqbtmQK8AAjIgfUN3Lui_xxtOnk76PjR47pVKVRSDhXtPAvhjhPnBnyJ-GNmQB5GaNvXb7gfrAO9sddDhLKMtyUyNKlDBCkiUSluO4dhybOHh2TWJOP7rD48okArbtKz1jgVDC_uxhHLlRq38D733eTI3SpiDm312GbfRqgJW0bhO6UF3NJ4iVIvRec93ItPgnICgoX7NA5ef7gLPqf18AdLt80g8NC8_tEEg2bUyZ0XUS5iMrehNdgvSJ9XXgaCvwvyJlWZSEoDVI2BduOYmF4-OlBfucxgsz_hQnPK4ZJ0O9_ZhR3qHN7RxEBxmEEbknaEaSzkQ/https://www.amazon.com/stores/page/9A342DA5-AF2B-4D14-B2B3-F92D042DB5D9/?_encoding=UTF8&store_ref=SB_A10285102SUN71OI89Z4Q-A0220091JJ9H54DAVW0I&pd_rd_plhdr=t&aaxitk=1ec18f427c363f889026d457e395f6cb&hsa_cr_id=0&lp_asins=B0FKBCZS4T%2CB0FLPZQHJ7%2CB0FGXK7X6F&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                              - img "REDRAGON" [ref=e2391]
+                          - generic [ref=e2392]:
+                            - link [ref=e2393] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JH6s8VjrZsihojMZ7gbv1fQAAAGeycfTQAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB123VD/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqPwsLD1AhCt--QCU713jwXsKAfet2H83B3zBnBSPHIdBWlZUIZRFKyMHArYJmMqSf3TATXLgmRxO2ymleTMbBJZoxj5_BihhLyV4H9q4Eq6xUuY0RBodAsiEjkpsisNtXrjhT65TOSjCUdUHARhuRNvjYJLZX9NNK3O_Qj4s0MNGeJVef-2UndqrIdNZUtTGaeprI3mh0050AKBSPagYP3Skux3-Br_UoJcv_0ZLu04k7HTkjqcGZuSQs-zPpI1Yb9i2Op-y1t3sdYrgatfa7PTS_-0jQ587f9gDZqXLgeP5uIWHbEBWqoAFZe0nJKcxQFA55KFonu6lrV5Mo7zf3ZImrvjJsDjQC_ubEe2-Qc2YiW8dKpp2i4eY_58bAh11DQsiiU3IBPMIHGFF4v_WtR1I0QvngpQn4JQjs7_0UL-0JUhfJC_pnvKK5KWrv4h073eOrd4BARn6csrTlFWAbYRU0OZVXHfuWnsl-V-zru5Epm7V5RfJbeEZ_x-zQUCFbNFeZFExIOhW6zK_fgv_c4R9OhwtUPFROSn0wtIKNRtQ3uCYRtYnDFKLk-OgYmJuA4mgiF1pnF56ckuhPZNgwSmaqGre7_GBtOvVJP05FDsNICmYl_DjUNvnS2No9eDbnPbjGquqAWpKINZ18SrwJfsjvYnVncIZ58cQdc8syBtxOhDaR0T2TLM7eyGWqhxzBONG7JzrU_XkbKALi5dywIWWmu5wJP1fQbkbnt5tHwZaXouTHwuOZI2RooqibaK6sNopAY8vm2BIPPuti4Q95HaTeFI8MamUTeOFzJ3TEOnlAKSHe6U4ecmP2o1g3pyTTf1ayYE-YxJJr--jV52NEQRisib76It3atcpsO_UwsrnOrhCuN3AIPBnM83Y7YftM_ROwwdKNE5x7xowSp6v-ppt2cPUjqjLaZ_ag6iPhzrtlB8uFYULmHWpUuTQJC9U4jRJaY-5oNvBy2Hde187OGYI2a_fbiVeNFVR_zeHpyTH4WFGrXFP3-aKtBdDo_liW4V2gD8gHMGlXzpM59uzvaa7sg4JfIWJVgoE9Wc2_R7L7-AwUpqX6sTsBLyhf594hYQgSF2-P2lfDqk4rkrM48tKezz_4wNElo6I1uTRKgTq5KwXLgz4qOhForTMdM7Y2Tlh5fKIbgwOuzBOljFn-8cL14-CxwJ-qhm0KCMzxxYdP7eOHE1HIlQ39h0t-crCQM0hviQIy-s5MV5vKxXnMzy8B-7YVfGBmNBbnQ0k9-WQTptjSAuNmeCQVuPdUI7uyzFZ4RO5b3fzmh3QrLdeghWiu3N421ARs7xja355lPh-rsrMdjmhqbtmQK8AAjIgfUN3Lui_xxtOnk76PjR47pVKVRSDhXtPAvhjhPnBnyJ-GNmQB5GaNvXb7gfrAO9sddDhLKMtyUyNKlDBCkiUSluO4dhybOHh2TWJOP7rD48okArbtKz1jgVDC_uxhHLlRq38D733eTI3SpiDm312GbfRqgJW0bhO6UF3NJ4iVIvRec93ItPgnICgoX7NA5ef7gLPqf18AdLt80g8NC8_tEEg2bUyZ0XUS5iMrehNdgvSJ9XXgaCvwvyJlWZSEoDVI2BduOYmF4-OlBfucxgsz_hQnPK4ZJ0O9_ZhR3qHN7RxEBxmEEbknaEaSzkQ/https://www.amazon.com/stores/page/9A342DA5-AF2B-4D14-B2B3-F92D042DB5D9/?_encoding=UTF8&store_ref=SB_A10285102SUN71OI89Z4Q-A0220091JJ9H54DAVW0I&pd_rd_plhdr=t&aaxitk=1ec18f427c363f889026d457e395f6cb&hsa_cr_id=0&lp_asins=B0FKBCZS4T%2CB0FLPZQHJ7%2CB0FGXK7X6F&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                            - link "Rapid Trigger Magnetic Switch, Aim Advanced" [ref=e2394] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JH6s8VjrZsihojMZ7gbv1fQAAAGeycfTQAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB123VD/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqPwsLD1AhCt--QCU713jwXsKAfet2H83B3zBnBSPHIdBWlZUIZRFKyMHArYJmMqSf3TATXLgmRxO2ymleTMbBJZoxj5_BihhLyV4H9q4Eq6xUuY0RBodAsiEjkpsisNtXrjhT65TOSjCUdUHARhuRNvjYJLZX9NNK3O_Qj4s0MNGeJVef-2UndqrIdNZUtTGaeprI3mh0050AKBSPagYP3Skux3-Br_UoJcv_0ZLu04k7HTkjqcGZuSQs-zPpI1Yb9i2Op-y1t3sdYrgatfa7PTS_-0jQ587f9gDZqXLgeP5uIWHbEBWqoAFZe0nJKcxQFA55KFonu6lrV5Mo7zf3ZImrvjJsDjQC_ubEe2-Qc2YiW8dKpp2i4eY_58bAh11DQsiiU3IBPMIHGFF4v_WtR1I0QvngpQn4JQjs7_0UL-0JUhfJC_pnvKK5KWrv4h073eOrd4BARn6csrTlFWAbYRU0OZVXHfuWnsl-V-zru5Epm7V5RfJbeEZ_x-zQUCFbNFeZFExIOhW6zK_fgv_c4R9OhwtUPFROSn0wtIKNRtQ3uCYRtYnDFKLk-OgYmJuA4mgiF1pnF56ckuhPZNgwSmaqGre7_GBtOvVJP05FDsNICmYl_DjUNvnS2No9eDbnPbjGquqAWpKINZ18SrwJfsjvYnVncIZ58cQdc8syBtxOhDaR0T2TLM7eyGWqhxzBONG7JzrU_XkbKALi5dywIWWmu5wJP1fQbkbnt5tHwZaXouTHwuOZI2RooqibaK6sNopAY8vm2BIPPuti4Q95HaTeFI8MamUTeOFzJ3TEOnlAKSHe6U4ecmP2o1g3pyTTf1ayYE-YxJJr--jV52NEQRisib76It3atcpsO_UwsrnOrhCuN3AIPBnM83Y7YftM_ROwwdKNE5x7xowSp6v-ppt2cPUjqjLaZ_ag6iPhzrtlB8uFYULmHWpUuTQJC9U4jRJaY-5oNvBy2Hde187OGYI2a_fbiVeNFVR_zeHpyTH4WFGrXFP3-aKtBdDo_liW4V2gD8gHMGlXzpM59uzvaa7sg4JfIWJVgoE9Wc2_R7L7-AwUpqX6sTsBLyhf594hYQgSF2-P2lfDqk4rkrM48tKezz_4wNElo6I1uTRKgTq5KwXLgz4qOhForTMdM7Y2Tlh5fKIbgwOuzBOljFn-8cL14-CxwJ-qhm0KCMzxxYdP7eOHE1HIlQ39h0t-crCQM0hviQIy-s5MV5vKxXnMzy8B-7YVfGBmNBbnQ0k9-WQTptjSAuNmeCQVuPdUI7uyzFZ4RO5b3fzmh3QrLdeghWiu3N421ARs7xja355lPh-rsrMdjmhqbtmQK8AAjIgfUN3Lui_xxtOnk76PjR47pVKVRSDhXtPAvhjhPnBnyJ-GNmQB5GaNvXb7gfrAO9sddDhLKMtyUyNKlDBCkiUSluO4dhybOHh2TWJOP7rD48okArbtKz1jgVDC_uxhHLlRq38D733eTI3SpiDm312GbfRqgJW0bhO6UF3NJ4iVIvRec93ItPgnICgoX7NA5ef7gLPqf18AdLt80g8NC8_tEEg2bUyZ0XUS5iMrehNdgvSJ9XXgaCvwvyJlWZSEoDVI2BduOYmF4-OlBfucxgsz_hQnPK4ZJ0O9_ZhR3qHN7RxEBxmEEbknaEaSzkQ/https://www.amazon.com/stores/page/9A342DA5-AF2B-4D14-B2B3-F92D042DB5D9/?_encoding=UTF8&store_ref=SB_A10285102SUN71OI89Z4Q-A0220091JJ9H54DAVW0I&pd_rd_plhdr=t&aaxitk=1ec18f427c363f889026d457e395f6cb&hsa_cr_id=0&lp_asins=B0FKBCZS4T%2CB0FLPZQHJ7%2CB0FGXK7X6F&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                              - generic [ref=e2396]:
+                                - generic [ref=e2397]: Rapid Trigger Magnetic Switch, Aim Advanced
+                                - generic [ref=e2398]: Rapid Trigger Magnetic Switch, Aim Advanced
+                  - generic [ref=e2400]:
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL9A2tDqqY5AbxncK45rVC4AAAGeycfTQQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB84ZUb/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqP7-1aB93piw4wOUF3X6WisF__1dkEObGdJUp2727iDpii2vkAu3LEQAibQKFDleCFXGTWLgnpPaE-6JX6AIB5rn9S4_xiZtLyV4H965Eih0r8X_dDNfO2LrZkuJnct1TjiuTV-z_aTEabXXAJhkSXvaECwk2pvj8kuXZ_wE4DF7foFWX8IEHd2rI9OXYNdKZengcqy_Gx4XICk95pF2O3teS5mbllL8J-sEJGqagpRoIlkG-JpKQDyYWaSL0BUyjhir1ghujD3JJcWkrfh_RJkqSLEjGFqTzhRfDbFuNI3yP53ovfO0jC3hkiAjojmLDmDIXTXV9LzOOZhVyYtAv6_z4Uglpbauw92zigxM7pouvWok6EuLdSKETxQLMMguhWkeheRUP-3VqmiEWEAzp04c4Ghe4dAIKt_cD5gaZfRDw7WkmERuorQGyHyYlR8ocZfvMNQ8ZGTuGswUY0zuqeshBDDVnUy2Ofh3gwOEZYP2WroU1QRjpaHb-9kfXwMFN00aUv5moq_KfZnOUJEtC47YWuIKlD358iyKHc16aL9okVnVlmBQfYIjnI65U7TtDG4L8A6rxw0u3obPSD6KWcYv_f4d9gFUISNsrWuouFm8Nx8ViuWWt7Yd-b4Ky3dfwyqtwMmK-YoKc9Q1LCkxmusPPjGTd6p9Y2Wzh2WrkGCGHKLJvavjn846LRL3i15I7-_H3MbX9XCH-_k1QZ_Iek53kG2jAEauHrx0kZcjlniVuiB0fXZUYDQRVMXHcVCUZ2VJSdvAywsex85HVMVU8aQ1M1L_687p1Fes_kPO8o9ZaE7mIjNt9UHUAtvX9gLS6n-eVWdutk4ZHcwfQIGPSIZC9g16Y5Q3xXYcLIJ4eoCWJnoBgh83ucxbrA05FP8Wp_ELuAb9mZK693SJq6Fl3UxcbKiWG7TS8vPjzkSVDGIT15faJI--NdGbtU9Orm1PKnQhN7zGY1AhVJ4Tzaj0ORHzLfMiLuBgwx8N8bpV4lUwXCUFRGivK7QPK6i358o_VirGcUAT_1At4jY9viGZBFNylIfAovsqI4BFbHGq3ThpIy8rPaovoVz-4RmRapgkpvVVps3H-2zdlOmk7A2YLCB_J4n0_qkTJyH2aEt_Q__DGH6em05bEtCga33FzRTtd0xaAcf8RR8rjQs4WLs_N94bFdDBhgCWtIL57iZnw6HBy4D1K6qWmup2iF4nUG3s5kT5FIAPvYqutvvJcKhdNErnm8JbvgqP24cnjHoij7EeQRSfMDsLf1Q6yUt9Fn7yutojRvAsN7AbUPGrRpftMtYzLrsbYXINnLodn0MlT6-mmFNBr9GYrDjSOpmeTbgG2uMo9ud_445J7tP1e-DwJB5gstSQoPKRFIciLWZU6W-1cYvUnDErh-xmKuLe4RvKwBB9peRpLrEMTb5Zvi75PSlSsCqAEcuc0n8zpJd0QJhublkHBQZRS_NiENEq99bG9BQdV_iQEbkgxRapq_itHUDZX5elsITXYBb7zU7rRloDcAqwOI-VZowoT6oOBMvd24hzMDM1Me_zSWrkRQmcZ_h9WKqBPzfMzUW3uAYNbi3oCRenyeE3Sf5AL3MZvVYa_5zhjdabH4fPkMwOYXsq3fh4vSjHZCe3f4Hm_FryGWZ5SXKiG00T_w/https://www.amazon.com/stores/page/94FF016A-BE18-45FC-A456-C5A79CD538CD/?_encoding=UTF8&store_ref=SB_A0486335DBVJTXNCFA13-A0778427RM9Q62EKUQK0&pd_rd_plhdr=t&aaxitk=0090c9e497d2b782852e240cd72f1d97&hsa_cr_id=0&lp_asins=B0BP1ST14S%2CB0BP1L53GT%2CB0BP1QWRQ1&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                        - link "GEEZER" [ref=e2401] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL9A2tDqqY5AbxncK45rVC4AAAGeycfTQQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB84ZUb/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqP7-1aB93piw4wOUF3X6WisF__1dkEObGdJUp2727iDpii2vkAu3LEQAibQKFDleCFXGTWLgnpPaE-6JX6AIB5rn9S4_xiZtLyV4H965Eih0r8X_dDNfO2LrZkuJnct1TjiuTV-z_aTEabXXAJhkSXvaECwk2pvj8kuXZ_wE4DF7foFWX8IEHd2rI9OXYNdKZengcqy_Gx4XICk95pF2O3teS5mbllL8J-sEJGqagpRoIlkG-JpKQDyYWaSL0BUyjhir1ghujD3JJcWkrfh_RJkqSLEjGFqTzhRfDbFuNI3yP53ovfO0jC3hkiAjojmLDmDIXTXV9LzOOZhVyYtAv6_z4Uglpbauw92zigxM7pouvWok6EuLdSKETxQLMMguhWkeheRUP-3VqmiEWEAzp04c4Ghe4dAIKt_cD5gaZfRDw7WkmERuorQGyHyYlR8ocZfvMNQ8ZGTuGswUY0zuqeshBDDVnUy2Ofh3gwOEZYP2WroU1QRjpaHb-9kfXwMFN00aUv5moq_KfZnOUJEtC47YWuIKlD358iyKHc16aL9okVnVlmBQfYIjnI65U7TtDG4L8A6rxw0u3obPSD6KWcYv_f4d9gFUISNsrWuouFm8Nx8ViuWWt7Yd-b4Ky3dfwyqtwMmK-YoKc9Q1LCkxmusPPjGTd6p9Y2Wzh2WrkGCGHKLJvavjn846LRL3i15I7-_H3MbX9XCH-_k1QZ_Iek53kG2jAEauHrx0kZcjlniVuiB0fXZUYDQRVMXHcVCUZ2VJSdvAywsex85HVMVU8aQ1M1L_687p1Fes_kPO8o9ZaE7mIjNt9UHUAtvX9gLS6n-eVWdutk4ZHcwfQIGPSIZC9g16Y5Q3xXYcLIJ4eoCWJnoBgh83ucxbrA05FP8Wp_ELuAb9mZK693SJq6Fl3UxcbKiWG7TS8vPjzkSVDGIT15faJI--NdGbtU9Orm1PKnQhN7zGY1AhVJ4Tzaj0ORHzLfMiLuBgwx8N8bpV4lUwXCUFRGivK7QPK6i358o_VirGcUAT_1At4jY9viGZBFNylIfAovsqI4BFbHGq3ThpIy8rPaovoVz-4RmRapgkpvVVps3H-2zdlOmk7A2YLCB_J4n0_qkTJyH2aEt_Q__DGH6em05bEtCga33FzRTtd0xaAcf8RR8rjQs4WLs_N94bFdDBhgCWtIL57iZnw6HBy4D1K6qWmup2iF4nUG3s5kT5FIAPvYqutvvJcKhdNErnm8JbvgqP24cnjHoij7EeQRSfMDsLf1Q6yUt9Fn7yutojRvAsN7AbUPGrRpftMtYzLrsbYXINnLodn0MlT6-mmFNBr9GYrDjSOpmeTbgG2uMo9ud_445J7tP1e-DwJB5gstSQoPKRFIciLWZU6W-1cYvUnDErh-xmKuLe4RvKwBB9peRpLrEMTb5Zvi75PSlSsCqAEcuc0n8zpJd0QJhublkHBQZRS_NiENEq99bG9BQdV_iQEbkgxRapq_itHUDZX5elsITXYBb7zU7rRloDcAqwOI-VZowoT6oOBMvd24hzMDM1Me_zSWrkRQmcZ_h9WKqBPzfMzUW3uAYNbi3oCRenyeE3Sf5AL3MZvVYa_5zhjdabH4fPkMwOYXsq3fh4vSjHZCe3f4Hm_FryGWZ5SXKiG00T_w/https://www.amazon.com/stores/page/94FF016A-BE18-45FC-A456-C5A79CD538CD/?_encoding=UTF8&store_ref=SB_A0486335DBVJTXNCFA13-A0778427RM9Q62EKUQK0&pd_rd_plhdr=t&aaxitk=0090c9e497d2b782852e240cd72f1d97&hsa_cr_id=0&lp_asins=B0BP1ST14S%2CB0BP1L53GT%2CB0BP1QWRQ1&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                          - img "GEEZER" [ref=e2402]
+                        - generic [ref=e2404]:
+                          - generic [ref=e2405]:
+                            - link [ref=e2406] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL9A2tDqqY5AbxncK45rVC4AAAGeycfTQQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB84ZUb/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqP7-1aB93piw4wOUF3X6WisF__1dkEObGdJUp2727iDpii2vkAu3LEQAibQKFDleCFXGTWLgnpPaE-6JX6AIB5rn9S4_xiZtLyV4H965Eih0r8X_dDNfO2LrZkuJnct1TjiuTV-z_aTEabXXAJhkSXvaECwk2pvj8kuXZ_wE4DF7foFWX8IEHd2rI9OXYNdKZengcqy_Gx4XICk95pF2O3teS5mbllL8J-sEJGqagpRoIlkG-JpKQDyYWaSL0BUyjhir1ghujD3JJcWkrfh_RJkqSLEjGFqTzhRfDbFuNI3yP53ovfO0jC3hkiAjojmLDmDIXTXV9LzOOZhVyYtAv6_z4Uglpbauw92zigxM7pouvWok6EuLdSKETxQLMMguhWkeheRUP-3VqmiEWEAzp04c4Ghe4dAIKt_cD5gaZfRDw7WkmERuorQGyHyYlR8ocZfvMNQ8ZGTuGswUY0zuqeshBDDVnUy2Ofh3gwOEZYP2WroU1QRjpaHb-9kfXwMFN00aUv5moq_KfZnOUJEtC47YWuIKlD358iyKHc16aL9okVnVlmBQfYIjnI65U7TtDG4L8A6rxw0u3obPSD6KWcYv_f4d9gFUISNsrWuouFm8Nx8ViuWWt7Yd-b4Ky3dfwyqtwMmK-YoKc9Q1LCkxmusPPjGTd6p9Y2Wzh2WrkGCGHKLJvavjn846LRL3i15I7-_H3MbX9XCH-_k1QZ_Iek53kG2jAEauHrx0kZcjlniVuiB0fXZUYDQRVMXHcVCUZ2VJSdvAywsex85HVMVU8aQ1M1L_687p1Fes_kPO8o9ZaE7mIjNt9UHUAtvX9gLS6n-eVWdutk4ZHcwfQIGPSIZC9g16Y5Q3xXYcLIJ4eoCWJnoBgh83ucxbrA05FP8Wp_ELuAb9mZK693SJq6Fl3UxcbKiWG7TS8vPjzkSVDGIT15faJI--NdGbtU9Orm1PKnQhN7zGY1AhVJ4Tzaj0ORHzLfMiLuBgwx8N8bpV4lUwXCUFRGivK7QPK6i358o_VirGcUAT_1At4jY9viGZBFNylIfAovsqI4BFbHGq3ThpIy8rPaovoVz-4RmRapgkpvVVps3H-2zdlOmk7A2YLCB_J4n0_qkTJyH2aEt_Q__DGH6em05bEtCga33FzRTtd0xaAcf8RR8rjQs4WLs_N94bFdDBhgCWtIL57iZnw6HBy4D1K6qWmup2iF4nUG3s5kT5FIAPvYqutvvJcKhdNErnm8JbvgqP24cnjHoij7EeQRSfMDsLf1Q6yUt9Fn7yutojRvAsN7AbUPGrRpftMtYzLrsbYXINnLodn0MlT6-mmFNBr9GYrDjSOpmeTbgG2uMo9ud_445J7tP1e-DwJB5gstSQoPKRFIciLWZU6W-1cYvUnDErh-xmKuLe4RvKwBB9peRpLrEMTb5Zvi75PSlSsCqAEcuc0n8zpJd0QJhublkHBQZRS_NiENEq99bG9BQdV_iQEbkgxRapq_itHUDZX5elsITXYBb7zU7rRloDcAqwOI-VZowoT6oOBMvd24hzMDM1Me_zSWrkRQmcZ_h9WKqBPzfMzUW3uAYNbi3oCRenyeE3Sf5AL3MZvVYa_5zhjdabH4fPkMwOYXsq3fh4vSjHZCe3f4Hm_FryGWZ5SXKiG00T_w/https://www.amazon.com/stores/page/94FF016A-BE18-45FC-A456-C5A79CD538CD/?_encoding=UTF8&store_ref=SB_A0486335DBVJTXNCFA13-A0778427RM9Q62EKUQK0&pd_rd_plhdr=t&aaxitk=0090c9e497d2b782852e240cd72f1d97&hsa_cr_id=0&lp_asins=B0BP1ST14S%2CB0BP1L53GT%2CB0BP1QWRQ1&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                            - link "GEEZER" [ref=e2407] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL9A2tDqqY5AbxncK45rVC4AAAGeycfTQQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB84ZUb/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqP7-1aB93piw4wOUF3X6WisF__1dkEObGdJUp2727iDpii2vkAu3LEQAibQKFDleCFXGTWLgnpPaE-6JX6AIB5rn9S4_xiZtLyV4H965Eih0r8X_dDNfO2LrZkuJnct1TjiuTV-z_aTEabXXAJhkSXvaECwk2pvj8kuXZ_wE4DF7foFWX8IEHd2rI9OXYNdKZengcqy_Gx4XICk95pF2O3teS5mbllL8J-sEJGqagpRoIlkG-JpKQDyYWaSL0BUyjhir1ghujD3JJcWkrfh_RJkqSLEjGFqTzhRfDbFuNI3yP53ovfO0jC3hkiAjojmLDmDIXTXV9LzOOZhVyYtAv6_z4Uglpbauw92zigxM7pouvWok6EuLdSKETxQLMMguhWkeheRUP-3VqmiEWEAzp04c4Ghe4dAIKt_cD5gaZfRDw7WkmERuorQGyHyYlR8ocZfvMNQ8ZGTuGswUY0zuqeshBDDVnUy2Ofh3gwOEZYP2WroU1QRjpaHb-9kfXwMFN00aUv5moq_KfZnOUJEtC47YWuIKlD358iyKHc16aL9okVnVlmBQfYIjnI65U7TtDG4L8A6rxw0u3obPSD6KWcYv_f4d9gFUISNsrWuouFm8Nx8ViuWWt7Yd-b4Ky3dfwyqtwMmK-YoKc9Q1LCkxmusPPjGTd6p9Y2Wzh2WrkGCGHKLJvavjn846LRL3i15I7-_H3MbX9XCH-_k1QZ_Iek53kG2jAEauHrx0kZcjlniVuiB0fXZUYDQRVMXHcVCUZ2VJSdvAywsex85HVMVU8aQ1M1L_687p1Fes_kPO8o9ZaE7mIjNt9UHUAtvX9gLS6n-eVWdutk4ZHcwfQIGPSIZC9g16Y5Q3xXYcLIJ4eoCWJnoBgh83ucxbrA05FP8Wp_ELuAb9mZK693SJq6Fl3UxcbKiWG7TS8vPjzkSVDGIT15faJI--NdGbtU9Orm1PKnQhN7zGY1AhVJ4Tzaj0ORHzLfMiLuBgwx8N8bpV4lUwXCUFRGivK7QPK6i358o_VirGcUAT_1At4jY9viGZBFNylIfAovsqI4BFbHGq3ThpIy8rPaovoVz-4RmRapgkpvVVps3H-2zdlOmk7A2YLCB_J4n0_qkTJyH2aEt_Q__DGH6em05bEtCga33FzRTtd0xaAcf8RR8rjQs4WLs_N94bFdDBhgCWtIL57iZnw6HBy4D1K6qWmup2iF4nUG3s5kT5FIAPvYqutvvJcKhdNErnm8JbvgqP24cnjHoij7EeQRSfMDsLf1Q6yUt9Fn7yutojRvAsN7AbUPGrRpftMtYzLrsbYXINnLodn0MlT6-mmFNBr9GYrDjSOpmeTbgG2uMo9ud_445J7tP1e-DwJB5gstSQoPKRFIciLWZU6W-1cYvUnDErh-xmKuLe4RvKwBB9peRpLrEMTb5Zvi75PSlSsCqAEcuc0n8zpJd0QJhublkHBQZRS_NiENEq99bG9BQdV_iQEbkgxRapq_itHUDZX5elsITXYBb7zU7rRloDcAqwOI-VZowoT6oOBMvd24hzMDM1Me_zSWrkRQmcZ_h9WKqBPzfMzUW3uAYNbi3oCRenyeE3Sf5AL3MZvVYa_5zhjdabH4fPkMwOYXsq3fh4vSjHZCe3f4Hm_FryGWZ5SXKiG00T_w/https://www.amazon.com/stores/page/94FF016A-BE18-45FC-A456-C5A79CD538CD/?_encoding=UTF8&store_ref=SB_A0486335DBVJTXNCFA13-A0778427RM9Q62EKUQK0&pd_rd_plhdr=t&aaxitk=0090c9e497d2b782852e240cd72f1d97&hsa_cr_id=0&lp_asins=B0BP1ST14S%2CB0BP1L53GT%2CB0BP1QWRQ1&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                              - img "GEEZER" [ref=e2409]
+                          - generic [ref=e2410]:
+                            - link [ref=e2411] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL9A2tDqqY5AbxncK45rVC4AAAGeycfTQQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB84ZUb/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqP7-1aB93piw4wOUF3X6WisF__1dkEObGdJUp2727iDpii2vkAu3LEQAibQKFDleCFXGTWLgnpPaE-6JX6AIB5rn9S4_xiZtLyV4H965Eih0r8X_dDNfO2LrZkuJnct1TjiuTV-z_aTEabXXAJhkSXvaECwk2pvj8kuXZ_wE4DF7foFWX8IEHd2rI9OXYNdKZengcqy_Gx4XICk95pF2O3teS5mbllL8J-sEJGqagpRoIlkG-JpKQDyYWaSL0BUyjhir1ghujD3JJcWkrfh_RJkqSLEjGFqTzhRfDbFuNI3yP53ovfO0jC3hkiAjojmLDmDIXTXV9LzOOZhVyYtAv6_z4Uglpbauw92zigxM7pouvWok6EuLdSKETxQLMMguhWkeheRUP-3VqmiEWEAzp04c4Ghe4dAIKt_cD5gaZfRDw7WkmERuorQGyHyYlR8ocZfvMNQ8ZGTuGswUY0zuqeshBDDVnUy2Ofh3gwOEZYP2WroU1QRjpaHb-9kfXwMFN00aUv5moq_KfZnOUJEtC47YWuIKlD358iyKHc16aL9okVnVlmBQfYIjnI65U7TtDG4L8A6rxw0u3obPSD6KWcYv_f4d9gFUISNsrWuouFm8Nx8ViuWWt7Yd-b4Ky3dfwyqtwMmK-YoKc9Q1LCkxmusPPjGTd6p9Y2Wzh2WrkGCGHKLJvavjn846LRL3i15I7-_H3MbX9XCH-_k1QZ_Iek53kG2jAEauHrx0kZcjlniVuiB0fXZUYDQRVMXHcVCUZ2VJSdvAywsex85HVMVU8aQ1M1L_687p1Fes_kPO8o9ZaE7mIjNt9UHUAtvX9gLS6n-eVWdutk4ZHcwfQIGPSIZC9g16Y5Q3xXYcLIJ4eoCWJnoBgh83ucxbrA05FP8Wp_ELuAb9mZK693SJq6Fl3UxcbKiWG7TS8vPjzkSVDGIT15faJI--NdGbtU9Orm1PKnQhN7zGY1AhVJ4Tzaj0ORHzLfMiLuBgwx8N8bpV4lUwXCUFRGivK7QPK6i358o_VirGcUAT_1At4jY9viGZBFNylIfAovsqI4BFbHGq3ThpIy8rPaovoVz-4RmRapgkpvVVps3H-2zdlOmk7A2YLCB_J4n0_qkTJyH2aEt_Q__DGH6em05bEtCga33FzRTtd0xaAcf8RR8rjQs4WLs_N94bFdDBhgCWtIL57iZnw6HBy4D1K6qWmup2iF4nUG3s5kT5FIAPvYqutvvJcKhdNErnm8JbvgqP24cnjHoij7EeQRSfMDsLf1Q6yUt9Fn7yutojRvAsN7AbUPGrRpftMtYzLrsbYXINnLodn0MlT6-mmFNBr9GYrDjSOpmeTbgG2uMo9ud_445J7tP1e-DwJB5gstSQoPKRFIciLWZU6W-1cYvUnDErh-xmKuLe4RvKwBB9peRpLrEMTb5Zvi75PSlSsCqAEcuc0n8zpJd0QJhublkHBQZRS_NiENEq99bG9BQdV_iQEbkgxRapq_itHUDZX5elsITXYBb7zU7rRloDcAqwOI-VZowoT6oOBMvd24hzMDM1Me_zSWrkRQmcZ_h9WKqBPzfMzUW3uAYNbi3oCRenyeE3Sf5AL3MZvVYa_5zhjdabH4fPkMwOYXsq3fh4vSjHZCe3f4Hm_FryGWZ5SXKiG00T_w/https://www.amazon.com/stores/page/94FF016A-BE18-45FC-A456-C5A79CD538CD/?_encoding=UTF8&store_ref=SB_A0486335DBVJTXNCFA13-A0778427RM9Q62EKUQK0&pd_rd_plhdr=t&aaxitk=0090c9e497d2b782852e240cd72f1d97&hsa_cr_id=0&lp_asins=B0BP1ST14S%2CB0BP1L53GT%2CB0BP1QWRQ1&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                            - link "Keyboard and Mouse Wireless Colorful" [ref=e2412] [cursor=pointer]:
+                              - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL9A2tDqqY5AbxncK45rVC4AAAGeycfTQQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICB84ZUb/clv1c_ek-wBPHXFbbWzjK3YpscrxfcOWxCnjqP7-1aB93piw4wOUF3X6WisF__1dkEObGdJUp2727iDpii2vkAu3LEQAibQKFDleCFXGTWLgnpPaE-6JX6AIB5rn9S4_xiZtLyV4H965Eih0r8X_dDNfO2LrZkuJnct1TjiuTV-z_aTEabXXAJhkSXvaECwk2pvj8kuXZ_wE4DF7foFWX8IEHd2rI9OXYNdKZengcqy_Gx4XICk95pF2O3teS5mbllL8J-sEJGqagpRoIlkG-JpKQDyYWaSL0BUyjhir1ghujD3JJcWkrfh_RJkqSLEjGFqTzhRfDbFuNI3yP53ovfO0jC3hkiAjojmLDmDIXTXV9LzOOZhVyYtAv6_z4Uglpbauw92zigxM7pouvWok6EuLdSKETxQLMMguhWkeheRUP-3VqmiEWEAzp04c4Ghe4dAIKt_cD5gaZfRDw7WkmERuorQGyHyYlR8ocZfvMNQ8ZGTuGswUY0zuqeshBDDVnUy2Ofh3gwOEZYP2WroU1QRjpaHb-9kfXwMFN00aUv5moq_KfZnOUJEtC47YWuIKlD358iyKHc16aL9okVnVlmBQfYIjnI65U7TtDG4L8A6rxw0u3obPSD6KWcYv_f4d9gFUISNsrWuouFm8Nx8ViuWWt7Yd-b4Ky3dfwyqtwMmK-YoKc9Q1LCkxmusPPjGTd6p9Y2Wzh2WrkGCGHKLJvavjn846LRL3i15I7-_H3MbX9XCH-_k1QZ_Iek53kG2jAEauHrx0kZcjlniVuiB0fXZUYDQRVMXHcVCUZ2VJSdvAywsex85HVMVU8aQ1M1L_687p1Fes_kPO8o9ZaE7mIjNt9UHUAtvX9gLS6n-eVWdutk4ZHcwfQIGPSIZC9g16Y5Q3xXYcLIJ4eoCWJnoBgh83ucxbrA05FP8Wp_ELuAb9mZK693SJq6Fl3UxcbKiWG7TS8vPjzkSVDGIT15faJI--NdGbtU9Orm1PKnQhN7zGY1AhVJ4Tzaj0ORHzLfMiLuBgwx8N8bpV4lUwXCUFRGivK7QPK6i358o_VirGcUAT_1At4jY9viGZBFNylIfAovsqI4BFbHGq3ThpIy8rPaovoVz-4RmRapgkpvVVps3H-2zdlOmk7A2YLCB_J4n0_qkTJyH2aEt_Q__DGH6em05bEtCga33FzRTtd0xaAcf8RR8rjQs4WLs_N94bFdDBhgCWtIL57iZnw6HBy4D1K6qWmup2iF4nUG3s5kT5FIAPvYqutvvJcKhdNErnm8JbvgqP24cnjHoij7EeQRSfMDsLf1Q6yUt9Fn7yutojRvAsN7AbUPGrRpftMtYzLrsbYXINnLodn0MlT6-mmFNBr9GYrDjSOpmeTbgG2uMo9ud_445J7tP1e-DwJB5gstSQoPKRFIciLWZU6W-1cYvUnDErh-xmKuLe4RvKwBB9peRpLrEMTb5Zvi75PSlSsCqAEcuc0n8zpJd0QJhublkHBQZRS_NiENEq99bG9BQdV_iQEbkgxRapq_itHUDZX5elsITXYBb7zU7rRloDcAqwOI-VZowoT6oOBMvd24hzMDM1Me_zSWrkRQmcZ_h9WKqBPzfMzUW3uAYNbi3oCRenyeE3Sf5AL3MZvVYa_5zhjdabH4fPkMwOYXsq3fh4vSjHZCe3f4Hm_FryGWZ5SXKiG00T_w/https://www.amazon.com/stores/page/94FF016A-BE18-45FC-A456-C5A79CD538CD/?_encoding=UTF8&store_ref=SB_A0486335DBVJTXNCFA13-A0778427RM9Q62EKUQK0&pd_rd_plhdr=t&aaxitk=0090c9e497d2b782852e240cd72f1d97&hsa_cr_id=0&lp_asins=B0BP1ST14S%2CB0BP1L53GT%2CB0BP1QWRQ1&lp_query=Keyboard&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=oZ41t&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=1EJFNXVVB1K480YAT0JH&pd_rd_wg=vlMt3&pd_rd_r=72f5cee5-43ab-43df-bf9d-ca3a8ce85995
+                              - generic [ref=e2414]:
+                                - generic [ref=e2415]: Keyboard and Mouse Wireless Colorful
+                                - generic [ref=e2416]: Keyboard and Mouse Wireless Colorful
+            - generic [ref=e2422]:
+              - heading "Need help?" [level=2] [ref=e2425]
+              - generic [ref=e2426]:
+                - link "Visit the help section" [ref=e2427] [cursor=pointer]:
+                  - /url: /gp/help/customer/display.html?nodeId=468556
+                - text: or
+                - link "contact us" [ref=e2428] [cursor=pointer]:
+                  - /url: /gp/help/customer/contact-us
+            - generic [ref=e2431]:
+              - iframe [ref=e2432]:
+                - generic [ref=f1e4]:
+                  - link "LOFREE Flow2 Low-Profile Mechanical Keyboard, Aluminum Alloy with Void Linear Switches, Rechargeable Wireless Keyboards with 3 Mode Connections for Windows, macOS (Silver with Silence, 100 Keys)" [ref=f1e7] [cursor=pointer]:
+                    - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RMLIaIVaP8V5xaJKycUDuUMAAAGeycfS-QEAAAH0AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDXYJKo/clv1c_ek8OM3GX57OOBXc78KNgzd5RuX6P1j8DPZQ1ewf7fm8EQj5fnjfA4R_hgCagwUHxvVzrpo8mWOVTK9k6enqnVlGCyl6emsUfnsIwSs2gxlTeDbsQL8wYZJjbfpTpLSGcyh817Y1MMl-AitUo58Hv-t7bppk_TVTYMO9-V2be8d7FUaot8WaXpxDzyq4hMqzhAH_actDQQZNWioyYJBOolML2uDRXY5Ls9-nhBloa6PEtenafYndQsrjTjEt292C48rfeBzg9TilaHk_a80b3H23QQLU1HH26_JbJc0ffeUNew3JeOlL_jmoZtn_55H15JtYchZKfMTbDRZg03TK3G_tLw2M0AHdUgcZuRuLh-FmPP718bNpLHAHxAcpHpA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNTcwNzg5Mjk5NDI1OTQ6MTc4MTUwMTc3NjpzcF9zZWFyY2hfZm9vdGVyX3NoYXJlZDozMDEwNjg2MTcwNTAxMDI6Ojo6&url=%2Fdp%2FB0FKLTZL13%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+                  - generic [ref=f1e8]:
+                    - img "LOFREE Flow2 Low-Profile Mechanical Keyboard, Aluminum Alloy with Void Linear Switches, Rechargeable Wireless Keyboards with 3 Mode Connections for Windows, macOS (Silver with Silence, 100 Keys)" [ref=f1e10]
+                    - generic [ref=f1e11]:
+                      - generic [ref=f1e12]: LOFREE Flow2 Low-Profile Mechanical Keyboard, Aluminum Alloy with Void Linear Switches...
+                      - generic [ref=f1e13]:
+                        - text: INR 18,785.91
+                        - link "300" [ref=f1e14] [cursor=pointer]:
+                          - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RMLIaIVaP8V5xaJKycUDuUMAAAGeycfS-QEAAAH0AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDXYJKo/clv1c_ek8OM3GX57OOBXc78KNgzd5RuX6P1j8DPZQ1ewf7fm8EQj5fnjfA4R_hgCagwUHxvVzrpo8mWOVTK9k6enqnVlGCyl6emsUfnsIwSs2gxlTeDbsQL8wYZJjbfpTpLSGcyh817Y1MMl-AitUo58Hv-t7bppk_TVTYMO9-V2be8d7FUaot8WaXpxDzyq4hMqzhAH_actDQQZNWioyYJBOolML2uDRXY5Ls9-nhBloa6PEtenafYndQsrjTjEt292C48rfeBzg9TilaHk_a80b3H23QQLU1HH26_JbJc0ffeUNew3JeOlL_jmoZtn_55H15JtYchZKfMTbDRZg03TK3G_tLw2M0AHdUgcZuRuLh-FmPP718bNpLHAHxAcpHpA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNTcwNzg5Mjk5NDI1OTQ6MTc4MTUwMTc3NjpzcF9zZWFyY2hfZm9vdGVyX3NoYXJlZDozMDEwNjg2MTcwNTAxMDI6Ojo6&url=%2Fdp%2FB0FKLTZL13%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA#customerReviews
+                          - text: "300"
+                    - link "Shop now" [ref=f1e18] [cursor=pointer]:
+                      - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RMLIaIVaP8V5xaJKycUDuUMAAAGeycfS-QEAAAH0AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDXYJKo/clv1c_ek8OM3GX57OOBXc78KNgzd5RuX6P1j8DPZQ1ewf7fm8EQj5fnjfA4R_hgCagwUHxvVzrpo8mWOVTK9k6enqnVlGCyl6emsUfnsIwSs2gxlTeDbsQL8wYZJjbfpTpLSGcyh817Y1MMl-AitUo58Hv-t7bppk_TVTYMO9-V2be8d7FUaot8WaXpxDzyq4hMqzhAH_actDQQZNWioyYJBOolML2uDRXY5Ls9-nhBloa6PEtenafYndQsrjTjEt292C48rfeBzg9TilaHk_a80b3H23QQLU1HH26_JbJc0ffeUNew3JeOlL_jmoZtn_55H15JtYchZKfMTbDRZg03TK3G_tLw2M0AHdUgcZuRuLh-FmPP718bNpLHAHxAcpHpA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNTcwNzg5Mjk5NDI1OTQ6MTc4MTUwMTc3NjpzcF9zZWFyY2hfZm9vdGVyX3NoYXJlZDozMDEwNjg2MTcwNTAxMDI6Ojo6&url=%2Fdp%2FB0FKLTZL13%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+              - button "Leave feedback on Sponsored ad" [ref=e2434] [cursor=pointer]:
+                - generic [ref=e2435]: Sponsored
+          - link "Go back to filtering menu" [ref=e2437] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForFilterOptions"
+        - generic [ref=e2439]:
+          - link "Skip to main search results" [ref=e2440] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e2446]:
+            - group [ref=e2447]:
+              - heading "Popular Shopping Ideas" [level=2] [ref=e2448]
+              - list [ref=e2449]:
+                - listitem [ref=e2450]:
+                  - link "Combo" [ref=e2452] [cursor=pointer]:
+                    - /url: /s?k=wireless+keyboard+and+mouse+combo&ref=sr_nr_p_rag_integrated_qb_0
+                - listitem [ref=e2453]:
+                  - link "Silent" [ref=e2455] [cursor=pointer]:
+                    - /url: /s?k=silent+keyboard&ref=sr_nr_p_rag_integrated_qb_1
+                - listitem [ref=e2456]:
+                  - link "Low Profile" [ref=e2458] [cursor=pointer]:
+                    - /url: /s?k=low+profile+keyboard&ref=sr_nr_p_rag_integrated_qb_2
+                - listitem [ref=e2459]:
+                  - link "Mini" [ref=e2461] [cursor=pointer]:
+                    - /url: /s?k=mini+keyboard&ref=sr_nr_p_rag_integrated_qb_3
+            - separator [ref=e2462]
+            - group "Customer Reviews" [ref=e2463]:
+              - heading "Customer Reviews" [level=2] [ref=e2464]
+              - list "Customer Reviews" [ref=e2465]:
+                - listitem [ref=e2466]:
+                  - link "Apply 4 Stars & Up filter to narrow results" [ref=e2469] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_72%3A1248879011&dc&qid=1781501776&rnid=1248877011&ref=sr_nr_p_72_1&ds=v1%3ANSAuP8NgKcbfUAO6JJn1JYUPVt7UIL9aA84Ph75SbrE
+                    - generic [ref=e2471]: 4 Stars
+                    - text: "& Up"
+            - group "Brands" [ref=e2472]:
+              - heading "Brands" [level=2] [ref=e2473]
+              - list "Brands" [ref=e2474]:
+                - listitem "Popular Shopping Ideas" [ref=e2475]:
+                  - link "Apply Logitech filter to narrow results" [ref=e2477] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A213704&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_1&ds=v1%3AiGLtx38P%2FFtwf5wv7ocBv7im71TzZXW23gL7T5lOEiA
+                    - checkbox [ref=e2480]
+                    - text: Logitech
+                - listitem "Popular Shopping Ideas" [ref=e2482]:
+                  - link "Apply Razer filter to narrow results" [ref=e2484] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A220854&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_2&ds=v1%3AUaPsRvmvLWS02%2FhmaQwDX0WEJfYETNQitkL5a%2BnVyyI
+                    - checkbox [ref=e2487]
+                    - text: Razer
+                - listitem "Popular Shopping Ideas" [ref=e2489]:
+                  - link "Apply Corsair filter to narrow results" [ref=e2491] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A248671&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_3&ds=v1%3AxzuFYS7rYLFB9XZSeOp0OEiiB2eMzWtwFwQePneaf1U
+                    - checkbox [ref=e2494]
+                    - text: Corsair
+                - listitem "Popular Shopping Ideas" [ref=e2496]:
+                  - link "Apply Keychron filter to narrow results" [ref=e2498] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A576793&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_4&ds=v1%3AKDYERMxrgPwyRyDHI1gWmHLJ2FU%2BYre1z9%2BwAm%2BpQbM
+                    - checkbox [ref=e2501]
+                    - text: Keychron
+                - listitem "Popular Shopping Ideas" [ref=e2503]:
+                  - link "Apply SteelSeries filter to narrow results" [ref=e2505] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A184411&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_5&ds=v1%3Aq0u%2FtBcZBKcvELEL3G51XPuQMLqeYRnttyvBl8KOJiY
+                    - checkbox [ref=e2508]
+                    - text: SteelSeries
+                - listitem "Popular Shopping Ideas" [ref=e2510]:
+                  - link "Apply Microsoft filter to narrow results" [ref=e2512] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A42439&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_6&ds=v1%3ADKtLHrHBgdHRaIiPUepKn9uU7JXoCBp7LjuV37hxP%2Bc
+                    - checkbox [ref=e2515]
+                    - text: Microsoft
+                - listitem "Popular Shopping Ideas" [ref=e2517]:
+                  - link "Apply Redragon filter to narrow results" [ref=e2519] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_123%3A111070&dc&qid=1781501776&rnid=85457740011&ref=sr_nr_p_123_7&ds=v1%3AENrpPSkKXAH8FW8wXTr5UXn82f3xWIxZ%2Fi5ZmzEqa%2Bk
+                    - checkbox [ref=e2522]
+                    - text: Redragon
+                - listitem [ref=e2524]:
+                  - button "See more, Brands" [ref=e2527] [cursor=pointer]: See more
+            - group "Connectivity" [ref=e2529]:
+              - heading "Connectivity" [level=2] [ref=e2530]
+              - list "Connectivity" [ref=e2531]:
+                - listitem "Popular Shopping Ideas" [ref=e2532]:
+                  - link "Apply USB-C filter to narrow results" [ref=e2534] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046670011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_1&ds=v1%3AHS5Lv1qMhy%2BG3p3IDWbvP9CUIJ3t6jQby1GYjL1dN3Q
+                    - checkbox [ref=e2537]
+                    - text: USB-C
+                - listitem "Popular Shopping Ideas" [ref=e2539]:
+                  - link "Apply Bluetooth filter to narrow results" [ref=e2541] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046668011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_2&ds=v1%3AsAVqLYGoWq1876P58leq4yMJVm4v8qiW9GxbHdUHEnI
+                    - checkbox [ref=e2544]
+                    - text: Bluetooth
+                - listitem "Popular Shopping Ideas" [ref=e2546]:
+                  - link "Apply USB-A filter to narrow results" [ref=e2548] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046666011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_3&ds=v1%3AVLYXKpcN2lkVxw8hzM4bqIkrByHIYCKv%2FaMtvnLzHU0
+                    - checkbox [ref=e2551]
+                    - text: USB-A
+                - listitem "Popular Shopping Ideas" [ref=e2553]:
+                  - link "Apply Micro USB filter to narrow results" [ref=e2555] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046671011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_4&ds=v1%3AEdVkjKtwDJyD5A280oEi%2BkFEiBJnvAJYV1J88kvJAwg
+                    - checkbox [ref=e2558]
+                    - text: Micro USB
+                - listitem "Popular Shopping Ideas" [ref=e2560]:
+                  - link "Apply RF filter to narrow results" [ref=e2562] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046672011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_5&ds=v1%3AALoItQ3Vz%2BPT3dF4c%2F0Pdzx2psZbQfw29W8znaTuKpw
+                    - checkbox [ref=e2565]
+                    - text: RF
+                - listitem "Popular Shopping Ideas" [ref=e2567]:
+                  - link "Apply Wi-Fi filter to narrow results" [ref=e2569] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A58126441011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_6&ds=v1%3AxzJHeChEzETAdJoXGM2OuMmSrE78k%2FBc7X4UvQmK5q8
+                    - checkbox [ref=e2572]
+                    - text: Wi-Fi
+                - listitem "Popular Shopping Ideas" [ref=e2574]:
+                  - link "Apply Infrared filter to narrow results" [ref=e2576] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A121855363011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_7&ds=v1%3AdatbRBZN2ursyQkOKNoHDEmPu3qt9luCWoyFk%2FKHdnI
+                    - checkbox [ref=e2579]
+                    - text: Infrared
+                - listitem "Popular Shopping Ideas" [ref=e2581]:
+                  - link "Apply Mini USB filter to narrow results" [ref=e2583] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046669011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_8&ds=v1%3AkwB3y2nZBcKEF4sdPXIwOGa6bq4yL53SRqk2SO2Gbuw
+                    - checkbox [ref=e2586]
+                    - text: Mini USB
+                - listitem "Popular Shopping Ideas" [ref=e2588]:
+                  - link "Apply PS/2 filter to narrow results" [ref=e2590] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003393023111%3A24046667011&dc&qid=1781501776&rnid=24046606011&ref=sr_nr_p_n_g-1003393023111_9&ds=v1%3Ax1ZptiCY%2BemPWHWWDeFQUyYdEdn%2BN5ravWkeEr7vYtM
+                    - checkbox [ref=e2593]
+                    - text: PS/2
+            - group "Features" [ref=e2595]:
+              - heading "Features" [level=2] [ref=e2596]
+              - list "Features" [ref=e2597]:
+                - listitem "Popular Shopping Ideas" [ref=e2598]:
+                  - link "Apply Backlit filter to narrow results" [ref=e2600] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A24056474011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_1&ds=v1%3AxjfilQ64sDQxTTmj%2BY749o2CxxIDnYH6R6UBUP4grR4
+                    - checkbox [ref=e2603]
+                    - text: Backlit
+                - listitem "Popular Shopping Ideas" [ref=e2605]:
+                  - link "Apply Ergonomic filter to narrow results" [ref=e2607] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A24056470011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_2&ds=v1%3AYrpKHvn4C61o9cgZQLjTA6IJzrwQ3uAX3hUqKxzJJRs
+                    - checkbox [ref=e2610]
+                    - text: Ergonomic
+                - listitem "Popular Shopping Ideas" [ref=e2612]:
+                  - link "Apply Hot-Swappable filter to narrow results" [ref=e2614] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A122183290011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_3&ds=v1%3Avkm198TVcDcSpO6OrzaWDsZqsPVMRgCD%2BQIn1jBrm4A
+                    - checkbox [ref=e2617]
+                    - text: Hot-Swappable
+                - listitem "Popular Shopping Ideas" [ref=e2619]:
+                  - link "Apply Foldable filter to narrow results" [ref=e2621] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A24056477011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_4&ds=v1%3AReqmI0zWAcqAS1lXAf8eB9OYbEGz%2F0PbO%2BuCfFN6FjY
+                    - checkbox [ref=e2624]
+                    - text: Foldable
+                - listitem "Popular Shopping Ideas" [ref=e2626]:
+                  - link "Apply Hotkeys and Media Keys filter to narrow results" [ref=e2628] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A24056486011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_5&ds=v1%3ASzMw7%2FADr%2FXMJUoSDyUHC2ZAUJ6rN%2Fae7xCOQJ3gewA
+                    - checkbox [ref=e2631]
+                    - text: Hotkeys and Media Keys
+                - listitem "Popular Shopping Ideas" [ref=e2633]:
+                  - link "Apply Lightweight filter to narrow results" [ref=e2635] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A78743210011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_6&ds=v1%3AI709b5UIOD9yqgOxmHH1Jt6IyAChfy0CuAFDIXhK9vI
+                    - checkbox [ref=e2638]
+                    - text: Lightweight
+                - listitem "Popular Shopping Ideas" [ref=e2640]:
+                  - link "Apply Rechargeable filter to narrow results" [ref=e2642] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003390592111%3A24056479011&dc&qid=1781501776&rnid=24056394011&ref=sr_nr_p_n_g-1003390592111_7&ds=v1%3AUOsVw2UZuN9H7Kh6eN7izdaEdMWMN3PonCI%2FZGkV0zQ
+                    - checkbox [ref=e2645]
+                    - text: Rechargeable
+                - listitem [ref=e2647]:
+                  - button "See more, Features" [ref=e2650] [cursor=pointer]: See more
+            - group "Deals & Discounts" [ref=e2652]:
+              - heading "Deals & Discounts" [level=2] [ref=e2653]
+              - list "Deals & Discounts" [ref=e2654]:
+                - listitem [ref=e2655]:
+                  - link "All Discounts" [ref=e2657] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_deal_type%3A23566065011&dc&qid=1781501776&rnid=23566063011&ref=sr_nr_p_n_deal_type_1&ds=v1%3Akq6e8L%2BmjBSmItQiy7ZBQevRMvaXoRgwz8QNv8062WI
+                - listitem [ref=e2658]:
+                  - link "Buy More, Save More" [ref=e2660] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_deal_type%3A210906365011&dc&qid=1781501776&rnid=23566063011&ref=sr_nr_p_n_deal_type_2&ds=v1%3AISYPx%2FBgoPVOSQeaN6iQRai2Av4syML099EvzzgPTWI
+                - listitem [ref=e2661]:
+                  - link "Coupons" [ref=e2663] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_deal_type%3A210906366011&dc&qid=1781501776&rnid=23566063011&ref=sr_nr_p_n_deal_type_3&ds=v1%3Ae274Rw%2ByixS9mZkAbmE1bg7oXy5JYP7IfFrIeaF%2FGP8
+                - listitem [ref=e2664]:
+                  - link "Today's Deals" [ref=e2666] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_deal_type%3A23566064011&dc&qid=1781501776&rnid=23566063011&ref=sr_nr_p_n_deal_type_4&ds=v1%3AFsLJg%2BJv8Kg5AyHD8s7EixYsflGXJcXwAqvdTklpbQI
+            - group "Key Count" [ref=e2667]:
+              - heading "Key Count" [level=2] [ref=e2668]
+              - list "Key Count" [ref=e2669]:
+                - listitem "Popular Shopping Ideas" [ref=e2670]:
+                  - link "Apply Up to 70 filter to narrow results" [ref=e2672] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003532609111%3A41943268011&dc&qid=1781501776&rnid=41941986011&ref=sr_nr_p_n_g-1003532609111_1&ds=v1%3A0NNvNERVw727oaWfiQlIOFi8ZtWW1vIfiQN4yAKAwAY
+                    - checkbox [ref=e2675]
+                    - text: Up to 70
+                - listitem "Popular Shopping Ideas" [ref=e2677]:
+                  - link "Apply 71 to 81 filter to narrow results" [ref=e2679] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003532609111%3A41943270011&dc&qid=1781501776&rnid=41941986011&ref=sr_nr_p_n_g-1003532609111_2&ds=v1%3AR1IA4GmOMGY6mAEysaH%2FgXIgPX%2FHpZu4lxzHak%2FovFU
+                    - checkbox [ref=e2682]
+                    - text: 71 to 81
+                - listitem "Popular Shopping Ideas" [ref=e2684]:
+                  - link "Apply 82 to 92 filter to narrow results" [ref=e2686] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003532609111%3A41943269011&dc&qid=1781501776&rnid=41941986011&ref=sr_nr_p_n_g-1003532609111_3&ds=v1%3AC%2FGVaid5g%2BVBcumNOAFVIcbSFaI4vycivDjpOyLnNF4
+                    - checkbox [ref=e2689]
+                    - text: 82 to 92
+                - listitem "Popular Shopping Ideas" [ref=e2691]:
+                  - link "Apply 93 & above filter to narrow results" [ref=e2693] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003532609111%3A41943267011&dc&qid=1781501776&rnid=41941986011&ref=sr_nr_p_n_g-1003532609111_4&ds=v1%3A%2Bmc05Wq%2FU1c9sOxEgIY1PeJREdkFWXhhyQacvH0lb%2FE
+                    - checkbox [ref=e2696]
+                    - text: 93 & above
+            - group "Condition" [ref=e2698]:
+              - heading "Condition" [level=2] [ref=e2699]
+              - list "Condition" [ref=e2700]:
+                - listitem "Popular Shopping Ideas" [ref=e2701]:
+                  - link "Apply New filter to narrow results" [ref=e2703] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_condition-type%3A2224371011&dc&qid=1781501776&rnid=2224369011&ref=sr_nr_p_n_condition-type_1&ds=v1%3AATNbJfMEVe3ZBDBu8eQrx8oKLNxeKzOXsb7BBmU1sTc
+                    - checkbox [ref=e2706]
+                    - text: New
+                - listitem "Popular Shopping Ideas" [ref=e2708]:
+                  - link "Apply Renewed filter to narrow results" [ref=e2710] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_condition-type%3A16907720011&dc&qid=1781501776&rnid=2224369011&ref=sr_nr_p_n_condition-type_2&ds=v1%3AwfilupVjHb0%2B2oauK1Mf%2F%2FUOnSvgZ7b%2BPR%2FUNLR%2Fflc
+                    - checkbox [ref=e2713]
+                    - text: Renewed
+                - listitem "Popular Shopping Ideas" [ref=e2715]:
+                  - link "Apply Used filter to narrow results" [ref=e2717] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_condition-type%3A2224373011&dc&qid=1781501776&rnid=2224369011&ref=sr_nr_p_n_condition-type_3&ds=v1%3AJxFmZVpYS%2B1yttQmIoYCOpzLg1IPV51zengFi%2BGAY7s
+                    - checkbox [ref=e2720]
+                    - text: Used
+            - group "Backlighting Color Support" [ref=e2722]:
+              - heading "Backlighting Color Support" [level=2] [ref=e2723]
+              - list "Backlighting Color Support" [ref=e2724]:
+                - listitem "Popular Shopping Ideas" [ref=e2725]:
+                  - link "Apply RGB filter to narrow results" [ref=e2727] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003391177111%3A24046379011&dc&qid=1781501776&rnid=24046340011&ref=sr_nr_p_n_g-1003391177111_1&ds=v1%3AJ9tbXY34QNhtbt0nsVtSiGoUezNbGN4ThW1RVK7Ejr8
+                    - checkbox [ref=e2730]
+                    - text: RGB
+                - listitem "Popular Shopping Ideas" [ref=e2732]:
+                  - link "Apply Single Color filter to narrow results" [ref=e2734] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003391177111%3A24046378011&dc&qid=1781501776&rnid=24046340011&ref=sr_nr_p_n_g-1003391177111_2&ds=v1%3AURbudDdDX4XDJvljLc3Go1aWgl6bxvFK6AC4sIn8r0Q
+                    - checkbox [ref=e2737]
+                    - text: Single Color
+            - group "Operating System" [ref=e2739]:
+              - heading "Operating System" [level=2] [ref=e2740]
+              - list "Operating System" [ref=e2741]:
+                - listitem "Popular Shopping Ideas" [ref=e2742]:
+                  - link "Apply Chrome OS filter to narrow results" [ref=e2744] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003073561111%3A23691227011&dc&qid=1781501776&rnid=23691214011&ref=sr_nr_p_n_g-1003073561111_1&ds=v1%3AJ8MyL0TwkzXDz4hhCN37OalugQ5JDM%2F7JeSJmDPDmOs
+                    - checkbox [ref=e2747]
+                    - text: Chrome OS
+                - listitem "Popular Shopping Ideas" [ref=e2749]:
+                  - link "Apply DOS filter to narrow results" [ref=e2751] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003073561111%3A23691226011&dc&qid=1781501776&rnid=23691214011&ref=sr_nr_p_n_g-1003073561111_2&ds=v1%3Aot%2B0YWNFtwo6F%2BuFH%2Bo3QOcanBo%2FWpmSoAwp9jWqueU
+                    - checkbox [ref=e2754]
+                    - text: DOS
+                - listitem "Popular Shopping Ideas" [ref=e2756]:
+                  - link "Apply Linux filter to narrow results" [ref=e2758] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003073561111%3A23691224011&dc&qid=1781501776&rnid=23691214011&ref=sr_nr_p_n_g-1003073561111_3&ds=v1%3ARyWpNpqyW7aG58BZPA3A%2FILPnO1vKyPhLP6VybFYZJc
+                    - checkbox [ref=e2761]
+                    - text: Linux
+                - listitem "Popular Shopping Ideas" [ref=e2763]:
+                  - link "Apply Mac filter to narrow results" [ref=e2765] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003073561111%3A23691225011&dc&qid=1781501776&rnid=23691214011&ref=sr_nr_p_n_g-1003073561111_4&ds=v1%3AW3jdvtpAapUoldnceBoPbRAY35GgTw%2FpRbzxz2nNOBk
+                    - checkbox [ref=e2768]
+                    - text: Mac
+                - listitem "Popular Shopping Ideas" [ref=e2770]:
+                  - link "Apply Windows filter to narrow results" [ref=e2772] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003073561111%3A23691228011&dc&qid=1781501776&rnid=23691214011&ref=sr_nr_p_n_g-1003073561111_5&ds=v1%3AveGOMXGYfFIKkEKAr71Lv1WctLHPz7h%2FptNJQSMGPZk
+                    - checkbox [ref=e2775]
+                    - text: Windows
+            - group "Style" [ref=e2777]:
+              - heading "Style" [level=2] [ref=e2778]
+              - list "Style" [ref=e2779]:
+                - listitem "Popular Shopping Ideas" [ref=e2780]:
+                  - link "Apply Classic filter to narrow results" [ref=e2782] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486442111%3A24677089011&dc&qid=1781501776&rnid=24676547011&ref=sr_nr_p_n_g-1003486442111_1&ds=v1%3A5sj1pbbSiNQFTa4pVVcZiXcPToqEF6A7YKWlzPr6%2FX4
+                    - checkbox [ref=e2785]
+                    - text: Classic
+                - listitem "Popular Shopping Ideas" [ref=e2787]:
+                  - link "Apply Contemporary filter to narrow results" [ref=e2789] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486442111%3A24677088011&dc&qid=1781501776&rnid=24676547011&ref=sr_nr_p_n_g-1003486442111_2&ds=v1%3AEAkEnGHnf482SmIZIMbg2ibb6LjaDkZXRFQgEKu%2BEOo
+                    - checkbox [ref=e2792]
+                    - text: Contemporary
+                - listitem "Popular Shopping Ideas" [ref=e2794]:
+                  - link "Apply Retro filter to narrow results" [ref=e2796] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486442111%3A24677090011&dc&qid=1781501776&rnid=24676547011&ref=sr_nr_p_n_g-1003486442111_3&ds=v1%3A23Xwf7PSgOnBhikOWLq1j7K0Lg8k2V05BFHIfmFVEPI
+                    - checkbox [ref=e2799]
+                    - text: Retro
+                - listitem "Popular Shopping Ideas" [ref=e2801]:
+                  - link "Apply Steampunk filter to narrow results" [ref=e2803] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486442111%3A24677086011&dc&qid=1781501776&rnid=24676547011&ref=sr_nr_p_n_g-1003486442111_4&ds=v1%3AxZnh5vsX3HoipNutI0JZvNx8%2BigCok0mqiawqjhCAzI
+                    - checkbox [ref=e2806]
+                    - text: Steampunk
+                - listitem "Popular Shopping Ideas" [ref=e2808]:
+                  - link "Apply Vintage filter to narrow results" [ref=e2810] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486442111%3A24677087011&dc&qid=1781501776&rnid=24676547011&ref=sr_nr_p_n_g-1003486442111_5&ds=v1%3ArgOZuDCIgUqTVQgLNBwkPtFzinu4BiDpNqasCzoI8vY
+                    - checkbox [ref=e2813]
+                    - text: Vintage
+            - group "Color" [ref=e2815]:
+              - heading "Color" [level=2] [ref=e2816]
+              - list "Color" [ref=e2817]:
+                - listitem [ref=e2818]:
+                  - generic:
+                    - link "Apply Black filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569815011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_1&ds=v1%3A2KKiwMtBYb2NwRN%2F6DljlVjNUD0RfwYITVtj%2Bpe2ahk
+                - listitem [ref=e2820]:
+                  - generic:
+                    - link "Apply White filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569829011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_2&ds=v1%3ATqGOoKnE2r7r7EiKcGZ1M0AkqDT7hrcpKn27vDfErFk
+                - listitem [ref=e2822]:
+                  - generic:
+                    - link "Apply Pink filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569825011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_3&ds=v1%3AjWfhxnihB3bPK45Oc1Xp4NIT8v%2BdoT8BMNPSjOtroTo
+                - listitem [ref=e2824]:
+                  - generic:
+                    - link "Apply Grey filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569821011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_4&ds=v1%3A88GSGy6DZZfNu1eWRbS2eYn2mOsAsba7VoiNzE8Q12Q
+                - listitem [ref=e2826]:
+                  - generic:
+                    - link "Apply Brown filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569817011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_5&ds=v1%3AQPoiAn3413XhRZg2Ru%2BlNeeomLpJZNWziywYD2sZhbw
+                - listitem [ref=e2828]:
+                  - generic:
+                    - link "Apply Beige filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569814011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_6&ds=v1%3APpvg1Rp0rbQK2I6woMdme9fVpXVwgCiyahBDsMcO2Z0
+                - listitem [ref=e2830]:
+                  - generic:
+                    - link "Apply Red filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569827011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_7&ds=v1%3A1ADhtHipAyPtSchHly1bZpuTuM2wKWSsuWABE8xABFM
+                - listitem [ref=e2832]:
+                  - generic:
+                    - link "Apply Orange filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569824011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_8&ds=v1%3Ah46Dp8GtXjhWVG1OpwwD2G2aDZ5Cf8ySNxKC3M1%2FQck
+                - listitem [ref=e2834]:
+                  - generic:
+                    - link "Apply Yellow filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569830011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_9&ds=v1%3AAaXXbkPst4KdZ%2B9AVDjQ7g9lR8OUuMG%2FXxWjXK1cIkY
+                - listitem [ref=e2836]:
+                  - generic:
+                    - link "Apply Ivory filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569822011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_10&ds=v1%3ApVh8MOBxKXMiFiSheWWVyphEjKn%2Fp5zHmBbXWXl4Cuk
+                - listitem [ref=e2838]:
+                  - generic:
+                    - link "Apply Green filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569820011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_11&ds=v1%3Av5KwjUdRcjZD%2BTLzN8ri3gZYl73BclqjUpDZ%2FkoiiNc
+                - listitem [ref=e2840]:
+                  - generic:
+                    - link "Apply Blue filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569816011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_12&ds=v1%3AotJpdiRd9v%2FSMMA90LTaB6PTNQxOmGNz%2FfUeedFcyPs
+                - listitem [ref=e2842]:
+                  - generic:
+                    - link "Apply Purple filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569826011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_13&ds=v1%3A4CDYzxvj5XJhuXz5%2FEh2N9ZKgspcpmAKl1J2LBN5nDE
+                - listitem [ref=e2844]:
+                  - generic:
+                    - link "Apply Gold filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569819011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_14&ds=v1%3Abv3%2BxJ1RJzyd2a62%2F0dokxsM8pmnVsRVdKAfN3wf9Q4
+                - listitem [ref=e2846]:
+                  - generic:
+                    - link "Apply Silver filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569828011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_15&ds=v1%3Aq3Eanf01CBADkmxcU3kJyNMihnV%2F2S%2FRJn%2FcwGPkjo4
+                - listitem [ref=e2848]:
+                  - generic:
+                    - link "Apply Multi filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569823011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_16&ds=v1%3AIwyJkNtbdfcF9kFy5hJ%2FoAO3FmAjz1QvHSk1lhy05bI
+                - listitem [ref=e2850]:
+                  - generic:
+                    - link "Apply Clear filter to narrow results":
+                      - /url: /s?k=Keyboard&rh=p_n_g-1001308730111%3A2569818011&dc&qid=1781501776&rnid=2569813011&ref=sr_nr_p_n_g-1001308730111_17&ds=v1%3AY92921M4Q6JG3pYoIS1LoCltIQz2t3Y%2F9WbY6yB0X7o
+            - group "Included Components" [ref=e2852]:
+              - heading "Included Components" [level=2] [ref=e2853]
+              - list "Included Components" [ref=e2854]:
+                - listitem "Popular Shopping Ideas" [ref=e2855]:
+                  - link "Apply Keycap Puller filter to narrow results" [ref=e2857] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003244688111%3A23883937011&dc&qid=1781501776&rnid=23883920011&ref=sr_nr_p_n_g-1003244688111_1&ds=v1%3AhoxngGCBr3Po6R68FnOCMUlDLfsWoSAXi1nH1DWpx%2Bs
+                    - checkbox [ref=e2860]
+                    - text: Keycap Puller
+                - listitem "Popular Shopping Ideas" [ref=e2862]:
+                  - link "Apply USB Cable filter to narrow results" [ref=e2864] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003244688111%3A23883938011&dc&qid=1781501776&rnid=23883920011&ref=sr_nr_p_n_g-1003244688111_2&ds=v1%3AVW0zVtGxrNrjrai5q%2FO8%2FAcQ88c%2BJizyWHrVaRkvthQ
+                    - checkbox [ref=e2867]
+                    - text: USB Cable
+                - listitem "Popular Shopping Ideas" [ref=e2869]:
+                  - link "Apply User Manual filter to narrow results" [ref=e2871] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003244688111%3A217000935011&dc&qid=1781501776&rnid=23883920011&ref=sr_nr_p_n_g-1003244688111_3&ds=v1%3AYkN%2FKrAUdaMfAPHCVbuOT2lKDaHZ8NO0fNsTv3f3umA
+                    - checkbox [ref=e2874]
+                    - text: User Manual
+            - group "Length" [ref=e2876]:
+              - heading "Length" [level=2] [ref=e2877]
+              - list "Length" [ref=e2878]:
+                - listitem "Popular Shopping Ideas" [ref=e2879]:
+                  - link "Apply Up to 9.9 in filter to narrow results" [ref=e2881] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101014931229111%3A119068507011&dc&qid=1781501776&rnid=119068442011&ref=sr_nr_p_n_g-101014931229111_1&ds=v1%3AOj%2FqepdnZuJPvTPBckYShBqe1yJbLiLOvc10ibZZKbI
+                    - checkbox [ref=e2884]
+                    - text: Up to 9.9 in
+                - listitem "Popular Shopping Ideas" [ref=e2886]:
+                  - link "Apply 10 to 11.9 in filter to narrow results" [ref=e2888] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101014931229111%3A119068509011&dc&qid=1781501776&rnid=119068442011&ref=sr_nr_p_n_g-101014931229111_2&ds=v1%3AC1fmO6QDdIjEC6MBEPdlPP3Zb%2FJqAf3N17BJLaXHEdk
+                    - checkbox [ref=e2891]
+                    - text: 10 to 11.9 in
+                - listitem "Popular Shopping Ideas" [ref=e2893]:
+                  - link "Apply 12 to 13.9 in filter to narrow results" [ref=e2895] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101014931229111%3A119068508011&dc&qid=1781501776&rnid=119068442011&ref=sr_nr_p_n_g-101014931229111_3&ds=v1%3AmlhgCmOreTbzcb9Ov6rNTFlgcDfpB6AqloDnyfy48sY
+                    - checkbox [ref=e2898]
+                    - text: 12 to 13.9 in
+                - listitem "Popular Shopping Ideas" [ref=e2900]:
+                  - link "Apply 14 in & above filter to narrow results" [ref=e2902] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101014931229111%3A119068506011&dc&qid=1781501776&rnid=119068442011&ref=sr_nr_p_n_g-101014931229111_4&ds=v1%3A4%2FZzTZcGoYOBD5h%2FvpUQckilgVhh6O9SLNafd8wx8JY
+                    - checkbox [ref=e2905]
+                    - text: 14 in & above
+            - group "Top Brands" [ref=e2907]:
+              - heading "Top Brands" [level=2] [ref=e2908]
+              - list "Top Brands" [ref=e2909]:
+                - listitem "Popular Shopping Ideas" [ref=e2910]:
+                  - link "Apply Top Brands filter to narrow results" [ref=e2912] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101014971069111%3A119653281011&dc&qid=1781501776&rnid=119653280011&ref=sr_nr_p_n_g-101014971069111_1&ds=v1%3AYBnCTDpEO93JNvqkC%2B2Ut9CkCM6A1CrNS0pDiWPW1xI
+                    - checkbox [ref=e2915]
+                    - text: Top Brands
+            - group "Seller" [ref=e2917]:
+              - heading "Seller" [level=2] [ref=e2918]
+              - list "Seller" [ref=e2919]:
+                - listitem "Popular Shopping Ideas" [ref=e2920]:
+                  - link "Apply Power4Laptops UK filter to narrow results" [ref=e2922] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_6%3AA159YX9LB4D00Q&dc&qid=1781501776&rnid=303116011&ref=sr_nr_p_6_1&ds=v1%3A2Er6ezffN6R8UKd1xxFf9Tc0yQP1ln9sWdXJSA9AdB0
+                    - checkbox [ref=e2925]
+                    - text: Power4Laptops UK
+                - listitem "Popular Shopping Ideas" [ref=e2927]:
+                  - link "Apply Amazon.com filter to narrow results" [ref=e2929] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_6%3AATVPDKIKX0DER&dc&qid=1781501776&rnid=303116011&ref=sr_nr_p_6_2&ds=v1%3An9qtaG9rIfaBSH43MYouaoUmywk9M7mz3ZFvh37HAjQ
+                    - checkbox [ref=e2932]
+                    - text: Amazon.com
+                - listitem [ref=e2934]:
+                  - button "See more, Seller" [ref=e2937] [cursor=pointer]: See more
+            - group "From Our Brands" [ref=e2939]:
+              - heading "From Our Brands" [level=2] [ref=e2940]
+              - list "From Our Brands" [ref=e2941]:
+                - listitem "Popular Shopping Ideas" [ref=e2942]:
+                  - link "Apply Amazon Brands filter to narrow results" [ref=e2944] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1001321510111%3A24677333011&dc&qid=1781501776&rnid=21180941011&ref=sr_nr_p_n_g-1001321510111_1&ds=v1%3AsG%2FRKl60jPD0aaoNjLzh9DSWEHCufmELNq70kvz2tfQ
+                    - checkbox [ref=e2947]
+                    - text: Amazon Brands
+            - group "Theme" [ref=e2949]:
+              - heading "Theme" [level=2] [ref=e2950]
+              - list "Theme" [ref=e2951]:
+                - listitem "Popular Shopping Ideas" [ref=e2952]:
+                  - link "Apply Rainbow filter to narrow results" [ref=e2954] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A24677095011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_1&ds=v1%3A7PazwJXQItMQLKPU2ChqgHG80nKsX0EMS7zta29LMTQ
+                    - checkbox [ref=e2957]
+                    - text: Rainbow
+                - listitem "Popular Shopping Ideas" [ref=e2959]:
+                  - link "Apply Anime filter to narrow results" [ref=e2961] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A24677094011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_2&ds=v1%3AcbVX4RPh%2FW3OEkOIf%2BBxGQ60yQaDMAgUS9%2FR1oOX3M8
+                    - checkbox [ref=e2964]
+                    - text: Anime
+                - listitem "Popular Shopping Ideas" [ref=e2966]:
+                  - link "Apply Honeycomb filter to narrow results" [ref=e2968] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A24677091011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_3&ds=v1%3A0LhTVPIQCt178tPLBXft6f4Qon8o9ryBwxo9DocLPig
+                    - checkbox [ref=e2971]
+                    - text: Honeycomb
+                - listitem "Popular Shopping Ideas" [ref=e2973]:
+                  - link "Apply Butterfly filter to narrow results" [ref=e2975] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A24677093011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_4&ds=v1%3ALNaZ0Xov5mSUfFuVkGMuLcL1tx%2BZSNTSA3qDiFZsU0A
+                    - checkbox [ref=e2978]
+                    - text: Butterfly
+                - listitem "Popular Shopping Ideas" [ref=e2980]:
+                  - link "Apply Candy filter to narrow results" [ref=e2982] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A24677096011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_5&ds=v1%3AmM228MgtCVXEH6qgxh8myH9QrDqTUmGxp7MP%2F4A3Oyo
+                    - checkbox [ref=e2985]
+                    - text: Candy
+                - listitem "Popular Shopping Ideas" [ref=e2987]:
+                  - link "Apply Christmas filter to narrow results" [ref=e2989] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A88212300011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_6&ds=v1%3A4Jrsg%2FRQ4ECy%2BRp5QdPUnTNPNEQSXOeQqKQJEEdOO1E
+                    - checkbox [ref=e2992]
+                    - text: Christmas
+                - listitem "Popular Shopping Ideas" [ref=e2994]:
+                  - link "Apply Drops filter to narrow results" [ref=e2996] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A24677092011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_7&ds=v1%3AkvdE2Df6qFRSMKjAeVpj1lRORJbHOqTkOyxJ%2Bk1v9Q8
+                    - checkbox [ref=e2999]
+                    - text: Drops
+                - listitem "Popular Shopping Ideas" [ref=e3001]:
+                  - link "Apply Floral filter to narrow results" [ref=e3003] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003486713111%3A204067912011&dc&qid=1781501776&rnid=24676548011&ref=sr_nr_p_n_g-1003486713111_8&ds=v1%3A399LVjtCy8Pu7R8BF8QNQ3h0kC7CJuqIHpkwXUneJZ0
+                    - checkbox [ref=e3006]
+                    - text: Floral
+            - group "Hand Orientation" [ref=e3008]:
+              - heading "Hand Orientation" [level=2] [ref=e3009]
+              - list "Hand Orientation" [ref=e3010]:
+                - listitem "Popular Shopping Ideas" [ref=e3011]:
+                  - link "Apply Ambidextrous filter to narrow results" [ref=e3013] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003136903111%3A23738334011&dc&qid=1781501776&rnid=23738328011&ref=sr_nr_p_n_g-1003136903111_1&ds=v1%3AilPXWwqqnlkV4nMpDmvAIzPCP1U6RHgwzxz61%2FZutQs
+                    - checkbox [ref=e3016]
+                    - text: Ambidextrous
+                - listitem "Popular Shopping Ideas" [ref=e3018]:
+                  - link "Apply Left filter to narrow results" [ref=e3020] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003136903111%3A23738335011&dc&qid=1781501776&rnid=23738328011&ref=sr_nr_p_n_g-1003136903111_2&ds=v1%3AHaTfzuVq4wABLnFJxRMhGUY%2FdzrfEm%2FYj2V49IyJRCI
+                    - checkbox [ref=e3023]
+                    - text: Left
+                - listitem "Popular Shopping Ideas" [ref=e3025]:
+                  - link "Apply Right filter to narrow results" [ref=e3027] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1003136903111%3A23738333011&dc&qid=1781501776&rnid=23738328011&ref=sr_nr_p_n_g-1003136903111_3&ds=v1%3Ay0hPfhR3hCtIaT1jAY9BELLouDNe2Ng3A5m8%2Fs9A2%2Bo
+                    - checkbox [ref=e3030]
+                    - text: Right
+            - group "Purpose" [ref=e3032]:
+              - heading "Purpose" [level=2] [ref=e3033]
+              - list "Purpose" [ref=e3034]:
+                - listitem "Popular Shopping Ideas" [ref=e3035]:
+                  - link "Apply Gaming filter to narrow results" [ref=e3037] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A207905944011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_1&ds=v1%3A61Ad2a894CXgPQVAcTll2MwFvfoZU%2BAuilWLgGzfYX4
+                    - checkbox [ref=e3040]
+                    - text: Gaming
+                - listitem "Popular Shopping Ideas" [ref=e3042]:
+                  - link "Apply Typing Practice filter to narrow results" [ref=e3044] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A207905940011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_2&ds=v1%3AgAJMZ9i20kuMxZAmtQ7iyt2TD2lA6h68oJK3nU882mk
+                    - checkbox [ref=e3047]
+                    - text: Typing Practice
+                - listitem "Popular Shopping Ideas" [ref=e3049]:
+                  - link "Apply Programming filter to narrow results" [ref=e3051] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A207905943011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_3&ds=v1%3A6SJExThyeJ%2Bv5OIG5DE6tSEzs9pdjSop2BO4d5i5eCU
+                    - checkbox [ref=e3054]
+                    - text: Programming
+                - listitem "Popular Shopping Ideas" [ref=e3056]:
+                  - link "Apply Photo Editing filter to narrow results" [ref=e3058] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A207905942011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_4&ds=v1%3AtmLzX22j9H2d5YW3pTWX%2FoFT3i4ggqu5azkZxBIFyDA
+                    - checkbox [ref=e3061]
+                    - text: Photo Editing
+                - listitem "Popular Shopping Ideas" [ref=e3063]:
+                  - link "Apply Traveling filter to narrow results" [ref=e3065] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A207905939011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_5&ds=v1%3AMBYV1TSCxBmGm6igFRP0cdWMLBvt5vCDG8CM61WnY60
+                    - checkbox [ref=e3068]
+                    - text: Traveling
+                - listitem "Popular Shopping Ideas" [ref=e3070]:
+                  - link "Apply Video Editing filter to narrow results" [ref=e3072] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A207905941011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_6&ds=v1%3AOIhw2rndqrTPfGXjB1gtpTh%2FHYq9fv7ixAZV4vCyYUs
+                    - checkbox [ref=e3075]
+                    - text: Video Editing
+                - listitem "Popular Shopping Ideas" [ref=e3077]:
+                  - link "Apply Working filter to narrow results" [ref=e3079] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016755802111%3A214322129011&dc&qid=1781501776&rnid=207905938011&ref=sr_nr_p_n_g-101016755802111_7&ds=v1%3AIdJ8VT21mhz1a%2BHi1qc7MTZHC56dnfvCzF9NFavM2EU
+                    - checkbox [ref=e3082]
+                    - text: Working
+            - group "Power Source" [ref=e3084]:
+              - heading "Power Source" [level=2] [ref=e3085]
+              - list "Power Source" [ref=e3086]:
+                - listitem "Popular Shopping Ideas" [ref=e3087]:
+                  - link "Apply Battery Powered filter to narrow results" [ref=e3089] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016777617111%3A207913716011&dc&qid=1781501776&rnid=207913715011&ref=sr_nr_p_n_g-101016777617111_1&ds=v1%3A%2F2kb68x6eDPV2krwj%2BZoG3HaZnxcuukpOqR3SBQIyoI
+                    - checkbox [ref=e3092]
+                    - text: Battery Powered
+                - listitem "Popular Shopping Ideas" [ref=e3094]:
+                  - link "Apply Corded Electric filter to narrow results" [ref=e3096] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016777617111%3A207913718011&dc&qid=1781501776&rnid=207913715011&ref=sr_nr_p_n_g-101016777617111_2&ds=v1%3AUFpizRS5Sc7VHAjGc4esN81Xwq7C7dm3W4gGiz8K9i8
+                    - checkbox [ref=e3099]
+                    - text: Corded Electric
+                - listitem "Popular Shopping Ideas" [ref=e3101]:
+                  - link "Apply Solar Powered filter to narrow results" [ref=e3103] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101016777617111%3A207913717011&dc&qid=1781501776&rnid=207913715011&ref=sr_nr_p_n_g-101016777617111_3&ds=v1%3Atwc%2F7CVg36VuQp5RS%2Fj6jmALwS9BijaS4nfiM9i%2BNHU
+                    - checkbox [ref=e3106]
+                    - text: Solar Powered
+            - group "Premium Brands" [ref=e3108]:
+              - heading "Premium Brands" [level=2] [ref=e3109]
+              - list "Premium Brands" [ref=e3110]:
+                - listitem "Popular Shopping Ideas" [ref=e3111]:
+                  - link "Apply Premium Brands filter to narrow results" [ref=e3113] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015887018111%3A204376014011&dc&qid=1781501776&rnid=204376013011&ref=sr_nr_p_n_g-101015887018111_1&ds=v1%3ANlsbF%2BmF%2FOBWE06%2FwzZi4pxcctcTF%2BxfPYBFnpkYRjo
+                    - checkbox [ref=e3116]
+                    - text: Premium Brands
+            - group "Switch Type" [ref=e3118]:
+              - heading "Switch Type" [level=2] [ref=e3119]
+              - list "Switch Type" [ref=e3120]:
+                - listitem "Popular Shopping Ideas" [ref=e3121]:
+                  - link "Apply Clicky filter to narrow results" [ref=e3123] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539908111%3A122340231011&dc&qid=1781501776&rnid=122338407011&ref=sr_nr_p_n_g-101015539908111_1&ds=v1%3Ayns%2FMwjpy8E4jHoouCAqDzAbvxKRHNH6bHhDOuGBmWo
+                    - checkbox [ref=e3126]
+                    - text: Clicky
+                - listitem "Popular Shopping Ideas" [ref=e3128]:
+                  - link "Apply Linear filter to narrow results" [ref=e3130] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539908111%3A122340230011&dc&qid=1781501776&rnid=122338407011&ref=sr_nr_p_n_g-101015539908111_2&ds=v1%3ATCUUK3Uotk21KP9E8t99C26WVVngRZe%2BwShLquu6%2BTQ
+                    - checkbox [ref=e3133]
+                    - text: Linear
+                - listitem "Popular Shopping Ideas" [ref=e3135]:
+                  - link "Apply Tactile filter to narrow results" [ref=e3137] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539908111%3A122340229011&dc&qid=1781501776&rnid=122338407011&ref=sr_nr_p_n_g-101015539908111_3&ds=v1%3AcX0m0VwotwSBe05jMS4EB3qyj6EWHkX7VFtQdjqQbOk
+                    - checkbox [ref=e3140]
+                    - text: Tactile
+            - group "Water Resistance Level" [ref=e3142]:
+              - heading "Water Resistance Level" [level=2] [ref=e3143]
+              - list "Water Resistance Level" [ref=e3144]:
+                - listitem "Popular Shopping Ideas" [ref=e3145]:
+                  - link "Apply Not Water Resistant filter to narrow results" [ref=e3147] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015528223111%3A122346337011&dc&qid=1781501776&rnid=122345828011&ref=sr_nr_p_n_g-101015528223111_1&ds=v1%3AJLdp7ito0YjahSS30TUZdEsLE5nT8xqLEH6YtAM6coU
+                    - checkbox [ref=e3150]
+                    - text: Not Water Resistant
+                - listitem "Popular Shopping Ideas" [ref=e3152]:
+                  - link "Apply Water Repellent filter to narrow results" [ref=e3154] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015528223111%3A122346336011&dc&qid=1781501776&rnid=122345828011&ref=sr_nr_p_n_g-101015528223111_2&ds=v1%3AzUTJ2OMSJecvnt%2Bj%2BT0%2Bi%2Bibo1ldDZde09onNGnCGBs
+                    - checkbox [ref=e3157]
+                    - text: Water Repellent
+                - listitem "Popular Shopping Ideas" [ref=e3159]:
+                  - link "Apply Water Resistant filter to narrow results" [ref=e3161] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015528223111%3A122346338011&dc&qid=1781501776&rnid=122345828011&ref=sr_nr_p_n_g-101015528223111_3&ds=v1%3AnyQQZwSXdkmEav%2Fy9%2BXas39yrw9BB1fgnFtf%2FBpmZnU
+                    - checkbox [ref=e3164]
+                    - text: Water Resistant
+                - listitem "Popular Shopping Ideas" [ref=e3166]:
+                  - link "Apply Waterproof filter to narrow results" [ref=e3168] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015528223111%3A122346339011&dc&qid=1781501776&rnid=122345828011&ref=sr_nr_p_n_g-101015528223111_4&ds=v1%3A61RdQXsmPAc%2FF0skZ%2FaamKFvE70ug%2FEpINvEsm5eWAw
+                    - checkbox [ref=e3171]
+                    - text: Waterproof
+            - group "Release Date" [ref=e3173]:
+              - heading "Release Date" [level=2] [ref=e3174]
+              - list "Release Date" [ref=e3175]:
+                - listitem [ref=e3176]:
+                  - link "Last 30 days" [ref=e3178] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_date%3A1249088011&dc&qid=1781501776&rnid=1249087011&ref=sr_nr_p_n_date_1&ds=v1%3ARTwNUD%2BfRv7NSddf0DzbTSLd73VysaSorEIrX3XOoPs
+                - listitem [ref=e3179]:
+                  - link "Last 90 days" [ref=e3181] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_date%3A1249089011&dc&qid=1781501776&rnid=1249087011&ref=sr_nr_p_n_date_2&ds=v1%3AMp5TOIjV8TzOjYPnTNbXEt8Mt5R%2F%2BYgIuJgs1NeQomE
+            - group "Series Number" [ref=e3182]:
+              - heading "Series Number" [level=2] [ref=e3183]
+              - list "Series Number" [ref=e3184]:
+                - listitem "Popular Shopping Ideas" [ref=e3185]:
+                  - link "Apply Up to 4 filter to narrow results" [ref=e3187] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539798111%3A122340227011&dc&qid=1781501776&rnid=122338406011&ref=sr_nr_p_n_g-101015539798111_1&ds=v1%3AksSQm1LmaUp9aYGGBnePcu5%2BtLj9VoACW9ysBPMhrkA
+                    - checkbox [ref=e3190]
+                    - text: Up to 4
+                - listitem "Popular Shopping Ideas" [ref=e3192]:
+                  - link "Apply 5 to 9 filter to narrow results" [ref=e3194] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539798111%3A122340225011&dc&qid=1781501776&rnid=122338406011&ref=sr_nr_p_n_g-101015539798111_2&ds=v1%3AH%2FGx2Ptx%2BN6bVWmhwOAgS6BicMDSrma3GVgTh4n4hqs
+                    - checkbox [ref=e3197]
+                    - text: 5 to 9
+                - listitem "Popular Shopping Ideas" [ref=e3199]:
+                  - link "Apply 10 to 14 filter to narrow results" [ref=e3201] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539798111%3A122340228011&dc&qid=1781501776&rnid=122338406011&ref=sr_nr_p_n_g-101015539798111_3&ds=v1%3AcOdUdp00J%2FQ%2FgNfpYkFyCYG%2FXV9LXPJuu0o8v94lWdM
+                    - checkbox [ref=e3204]
+                    - text: 10 to 14
+                - listitem "Popular Shopping Ideas" [ref=e3206]:
+                  - link "Apply 15 & above filter to narrow results" [ref=e3208] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539798111%3A122340226011&dc&qid=1781501776&rnid=122338406011&ref=sr_nr_p_n_g-101015539798111_4&ds=v1%3Ay6RuGGRsEHy8BRKynKEcDH3MMYaAKmyhVWNzQWbKnPQ
+                    - checkbox [ref=e3211]
+                    - text: 15 & above
+            - group "Sustainability Features" [ref=e3213]:
+              - heading "Sustainability Features" [level=2] [ref=e3214]
+              - list "Sustainability Features" [ref=e3215]:
+                - listitem [ref=e3216]:
+                  - link "Any Feature" [ref=e3218] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_cpf_labels%3A121136630011&dc&qid=1781501776&rnid=116845681011&ref=sr_nr_p_n_cpf_labels_1&ds=v1%3AFBvnLunrp%2BbQkmcPMlUlPFB3mp7XP7Y0KfNgzQSBi60
+                - listitem [ref=e3219]:
+                  - link "Carbon Impact" [ref=e3221] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_cpf_labels%3A116845688011&dc&qid=1781501776&rnid=116845681011&ref=sr_nr_p_n_cpf_labels_2&ds=v1%3A5aL14rFfpnXHERdqN9Mkitpnc2HEsMy253A4upiGG1o
+                - listitem [ref=e3222]:
+                  - button "See more, Sustainability Features" [ref=e3225] [cursor=pointer]: See more
+            - group "Total USB 2.0 Ports" [ref=e3227]:
+              - heading "Total USB 2.0 Ports" [level=2] [ref=e3228]
+              - list "Total USB 2.0 Ports" [ref=e3229]:
+                - listitem "Popular Shopping Ideas" [ref=e3230]:
+                  - link "Apply 1 filter to narrow results" [ref=e3232] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015540045111%3A122340238011&dc&qid=1781501776&rnid=122338409011&ref=sr_nr_p_n_g-101015540045111_1&ds=v1%3A1KAPImhahwf%2FsyDwBZk0sF%2FbsrlGNjYcUimvoNv4rcc
+                    - checkbox [ref=e3235]
+                    - text: "1"
+                - listitem "Popular Shopping Ideas" [ref=e3237]:
+                  - link "Apply 2 filter to narrow results" [ref=e3239] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015540045111%3A122340237011&dc&qid=1781501776&rnid=122338409011&ref=sr_nr_p_n_g-101015540045111_2&ds=v1%3A45oA%2Bf2AxuAlecHgWvLKPl4X3jiAZLLBNviM9NUs9DY
+                    - checkbox [ref=e3242]
+                    - text: "2"
+                - listitem "Popular Shopping Ideas" [ref=e3244]:
+                  - link "Apply 3 & above filter to narrow results" [ref=e3246] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015540045111%3A122340236011&dc&qid=1781501776&rnid=122338409011&ref=sr_nr_p_n_g-101015540045111_3&ds=v1%3AcOvGnvOJYCHQ2nvgPF%2BBQr6Mu0zibRm%2BT6pFhKngK7I
+                    - checkbox [ref=e3249]
+                    - text: 3 & above
+            - group "Material" [ref=e3251]:
+              - heading "Material" [level=2] [ref=e3252]
+              - list "Material" [ref=e3253]:
+                - listitem "Popular Shopping Ideas" [ref=e3254]:
+                  - link "Apply Acrylic filter to narrow results" [ref=e3256] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A212417080011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_1&ds=v1%3AOH89kWp%2B0rbckc0uKpQAJIWmYyL7qBIMYAamLUDOprc
+                    - checkbox [ref=e3259]
+                    - text: Acrylic
+                - listitem "Popular Shopping Ideas" [ref=e3261]:
+                  - link "Apply Acrylonitrile Butadiene Styrene filter to narrow results" [ref=e3263] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A122340219011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_2&ds=v1%3ASRUq1HHfghXjkqLM%2FV1i2FDhvXcz3J4JDYjfLlynEh8
+                    - checkbox [ref=e3266]
+                    - text: Acrylonitrile Butadiene Styrene
+                - listitem "Popular Shopping Ideas" [ref=e3268]:
+                  - link "Apply Aluminum filter to narrow results" [ref=e3270] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A122340218011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_3&ds=v1%3AwP2zGNGgy0evQVZxTdt4u8z1TV6i5wQxx%2FEI80L70GQ
+                    - checkbox [ref=e3273]
+                    - text: Aluminum
+                - listitem "Popular Shopping Ideas" [ref=e3275]:
+                  - link "Apply Metal filter to narrow results" [ref=e3277] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A122340221011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_4&ds=v1%3Am2VJxfRETryx5acLcohNKls95geKtPw0Pdya064bgtc
+                    - checkbox [ref=e3280]
+                    - text: Metal
+                - listitem "Popular Shopping Ideas" [ref=e3282]:
+                  - link "Apply Plastic filter to narrow results" [ref=e3284] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A122340216011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_5&ds=v1%3AeWRol%2BDDOPa1PEuUWk0w9j5ZXVC5E4ioE9olozUOv4U
+                    - checkbox [ref=e3287]
+                    - text: Plastic
+                - listitem "Popular Shopping Ideas" [ref=e3289]:
+                  - link "Apply Polybutylene Terephthalate filter to narrow results" [ref=e3291] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A122340223011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_6&ds=v1%3AsY83oR9Zh8OHRoe2xt51zjphecaOdTZOc3l3Ku1TLqU
+                    - checkbox [ref=e3294]
+                    - text: Polybutylene Terephthalate
+                - listitem "Popular Shopping Ideas" [ref=e3296]:
+                  - link "Apply Polycarbonate filter to narrow results" [ref=e3298] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101015539702111%3A122340224011&dc&qid=1781501776&rnid=122338405011&ref=sr_nr_p_n_g-101015539702111_7&ds=v1%3ALoo7Jb0WN48xONA7jrcfQfk5fvhZX1tD8FZT%2BqJW7XE
+                    - checkbox [ref=e3301]
+                    - text: Polycarbonate
+                - listitem [ref=e3303]:
+                  - button "See more, Material" [ref=e3306] [cursor=pointer]: See more
+            - group "Display Size" [ref=e3308]:
+              - heading "Display Size" [level=2] [ref=e3309]
+              - list "Display Size" [ref=e3310]:
+                - listitem "Popular Shopping Ideas" [ref=e3311]:
+                  - link "Apply Under 7 Inches filter to narrow results" [ref=e3313] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1004162281091%3A7817235011&dc&qid=1781501776&rnid=1254615011&ref=sr_nr_p_n_g-1004162281091_1&ds=v1%3AD67AlJLpj7%2FCaNVy%2BcBHqC6DML%2F%2B50LfzlyzDL%2FeUbg
+                    - checkbox [ref=e3316]
+                    - text: Under 7 Inches
+                - listitem "Popular Shopping Ideas" [ref=e3318]:
+                  - link "Apply 7 to 7.9 Inches filter to narrow results" [ref=e3320] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1004162281091%3A7817236011&dc&qid=1781501776&rnid=1254615011&ref=sr_nr_p_n_g-1004162281091_2&ds=v1%3Ax1pOMhAfGjzsXiJB00d21P9RerQnG%2FONy8vqJTfBFCM
+                    - checkbox [ref=e3323]
+                    - text: 7 to 7.9 Inches
+                - listitem "Popular Shopping Ideas" [ref=e3325]:
+                  - link "Apply 8 to 8.9 Inches filter to narrow results" [ref=e3327] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1004162281091%3A7817237011&dc&qid=1781501776&rnid=1254615011&ref=sr_nr_p_n_g-1004162281091_3&ds=v1%3AakIMRJ0ObRk7If4V5UDWOWfjHiXL0ezbgXxuP1DRsBE
+                    - checkbox [ref=e3330]
+                    - text: 8 to 8.9 Inches
+                - listitem "Popular Shopping Ideas" [ref=e3332]:
+                  - link "Apply 9 to 9.9 Inches filter to narrow results" [ref=e3334] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1004162281091%3A7817238011&dc&qid=1781501776&rnid=1254615011&ref=sr_nr_p_n_g-1004162281091_4&ds=v1%3Asgmkn0C3UpPMF4wD7LLqFUgkqkl7u8mCF8nXGrZp41E
+                    - checkbox [ref=e3337]
+                    - text: 9 to 9.9 Inches
+                - listitem "Popular Shopping Ideas" [ref=e3339]:
+                  - link "Apply 10 to 10.9 Inches filter to narrow results" [ref=e3341] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1004162281091%3A7817239011&dc&qid=1781501776&rnid=1254615011&ref=sr_nr_p_n_g-1004162281091_5&ds=v1%3AyI5BN%2BDLBMH7o8RIe4PaPpTrLX6s4wD34aqextY31dc
+                    - checkbox [ref=e3344]
+                    - text: 10 to 10.9 Inches
+                - listitem "Popular Shopping Ideas" [ref=e3346]:
+                  - link "Apply 11 Inches & Up filter to narrow results" [ref=e3348] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-1004162281091%3A7817240011&dc&qid=1781501776&rnid=1254615011&ref=sr_nr_p_n_g-1004162281091_6&ds=v1%3Ae2JwwJR10pWXY3a0H3A1n1GUJRtVRQpEZ1JySyTBVUg
+                    - checkbox [ref=e3351]
+                    - text: 11 Inches & Up
+            - group "Layout" [ref=e3353]:
+              - heading "Layout" [level=2] [ref=e3354]
+              - list "Layout" [ref=e3355]:
+                - listitem "Popular Shopping Ideas" [ref=e3356]:
+                  - link "Apply AZERTY filter to narrow results" [ref=e3358] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270941011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3ASUMX8OEX15RwkzOzO%2B1eVgYzK3QQ6OZaTse4tM78qpE
+                    - checkbox [ref=e3361]
+                    - text: AZERTY
+                - listitem "Popular Shopping Ideas" [ref=e3363]:
+                  - link "Apply Colemak filter to narrow results" [ref=e3365] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270932011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_2&ds=v1%3AOfHgFiNjBN%2BgJnSFzfWl7lFfH0SDzOF%2Fojhz5RXxTV4
+                    - checkbox [ref=e3368]
+                    - text: Colemak
+                - listitem "Popular Shopping Ideas" [ref=e3370]:
+                  - link "Apply Dvorak filter to narrow results" [ref=e3372] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270934011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_3&ds=v1%3ASmTzbAEksVb6%2BolbiHuhrmZZENwpr1kJKI%2B8hQTt%2BrE
+                    - checkbox [ref=e3375]
+                    - text: Dvorak
+                - listitem "Popular Shopping Ideas" [ref=e3377]:
+                  - link "Apply Maltron filter to narrow results" [ref=e3379] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270937011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_4&ds=v1%3A568U%2FnYA6hodSjnHL5oYhw9GmxKsE44FoNi%2BHjUGgto
+                    - checkbox [ref=e3382]
+                    - text: Maltron
+                - listitem "Popular Shopping Ideas" [ref=e3384]:
+                  - link "Apply Neo filter to narrow results" [ref=e3386] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270933011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_5&ds=v1%3ATE4INyEyxDdii8%2FYV%2FG301w6PjLVBTTYmGHgApN9TW0
+                    - checkbox [ref=e3389]
+                    - text: Neo
+                - listitem "Popular Shopping Ideas" [ref=e3391]:
+                  - link "Apply QWERTY filter to narrow results" [ref=e3393] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270940011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_6&ds=v1%3AQh7SeNsX5O9ZbNFNfA%2BlnO8XK4qkgmc5t38u0ctc%2FJQ
+                    - checkbox [ref=e3396]
+                    - text: QWERTY
+                - listitem "Popular Shopping Ideas" [ref=e3398]:
+                  - link "Apply QWERTZ filter to narrow results" [ref=e3400] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_browse-bin%3A212270938011&dc&qid=1781501776&rnid=212270931011&ref=sr_nr_p_n_feature_browse-bin_7&ds=v1%3AaK37cxCVjFIlnDGs%2BBbV%2BWrLfFR6v9KOQ9my7aihOdk
+                    - checkbox [ref=e3403]
+                    - text: QWERTZ
+                - listitem [ref=e3405]:
+                  - button "See more, Layout" [ref=e3408] [cursor=pointer]: See more
+            - group "Smart Home Compatibility" [ref=e3410]:
+              - heading "Smart Home Compatibility" [level=2] [ref=e3411]
+              - list "Smart Home Compatibility" [ref=e3412]:
+                - listitem "Popular Shopping Ideas" [ref=e3413]:
+                  - link "Apply Not Smart Home Compatible filter to narrow results" [ref=e3415] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_g-101017807111111%3A219254371011&dc&qid=1781501776&rnid=219254368011&ref=sr_nr_p_n_g-101017807111111_1&ds=v1%3ASN9cAikpJMnqZKKstF%2FUlAEZsHC%2BsZAjCNm71GL7L%2Bk
+                    - checkbox [ref=e3418]
+                    - text: Not Smart Home Compatible
+            - group "Handmade Products" [ref=e3420]:
+              - heading "Handmade Products" [level=2] [ref=e3421]
+              - list "Handmade Products" [ref=e3422]:
+                - listitem "Popular Shopping Ideas" [ref=e3423]:
+                  - link "Apply Handmade filter to narrow results" [ref=e3425] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_feature_thirty-four_browse-bin%3A217421938011&dc&qid=1781501776&rnid=217421937011&ref=sr_nr_p_n_feature_thirty-four_browse-bin_1&ds=v1%3AtEhEPd6CSw6kP%2F0d3%2FR7zRW2DmPRVBUiMcQfTKeD7fM
+                    - checkbox [ref=e3428]
+                    - text: Handmade
+            - group "Amazon Certified" [ref=e3430]:
+              - heading "Amazon Certified" [level=2] [ref=e3431]
+              - list "Amazon Certified" [ref=e3432]:
+                - listitem "Popular Shopping Ideas" [ref=e3433]:
+                  - link "Apply Works with Alexa filter to narrow results" [ref=e3435] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_amazon_certified%3A16741513011&dc&qid=1781501776&rnid=16741512011&ref=sr_nr_p_n_amazon_certified_1&ds=v1%3AoH5yR2b72NIqHbxeh9e8eSZwTpjQ%2F5%2FDbQ03ZDM5HRU
+                    - checkbox [ref=e3438]
+                    - text: Works with Alexa
+            - group "Customizable Products" [ref=e3440]:
+              - heading "Customizable Products" [level=2] [ref=e3441]
+              - list "Customizable Products" [ref=e3442]:
+                - listitem "Popular Shopping Ideas" [ref=e3443]:
+                  - link "Apply Customizable filter to narrow results" [ref=e3445] [cursor=pointer]:
+                    - /url: /s?k=Keyboard&rh=p_n_customizable_template_name%3A16031489011&dc&qid=1781501776&rnid=16031488011&ref=sr_nr_p_n_customizable_template_name_1&ds=v1%3AWdIlYPKUoq0xm7CXGXQbb40gLijPzDzkXleowDZgTys
+                    - checkbox [ref=e3448]
+                    - text: Customizable
+    - complementary "Your recently viewed items and featured recommendations"
+    - generic [ref=e3450]:
+      - button "Back to top" [ref=e3451] [cursor=pointer]:
+        - generic [ref=e3452]: Back to top
+      - generic [ref=e3453]:
+        - generic [ref=e3454]:
+          - heading "Get to Know Us" [level=6] [ref=e3455]
+          - list [ref=e3456]:
+            - listitem [ref=e3457]:
+              - link "Careers" [ref=e3458] [cursor=pointer]:
+                - /url: https://www.amazon.jobs
+            - listitem [ref=e3459]:
+              - link "Blog" [ref=e3460] [cursor=pointer]:
+                - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e3461]:
+              - link "About Amazon" [ref=e3462] [cursor=pointer]:
+                - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e3463]:
+              - link "Investor Relations" [ref=e3464] [cursor=pointer]:
+                - /url: https://www.amazon.com/ir
+            - listitem [ref=e3465]:
+              - link "Amazon Devices" [ref=e3466] [cursor=pointer]:
+                - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+            - listitem [ref=e3467]:
+              - link "Amazon Science" [ref=e3468] [cursor=pointer]:
+                - /url: https://www.amazon.science
+        - generic [ref=e3470]:
+          - heading "Make Money with Us" [level=6] [ref=e3471]
+          - list [ref=e3472]:
+            - listitem [ref=e3473]:
+              - link "Sell products on Amazon" [ref=e3474] [cursor=pointer]:
+                - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+            - listitem [ref=e3475]:
+              - link "Sell on Amazon Business" [ref=e3476] [cursor=pointer]:
+                - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+            - listitem [ref=e3477]:
+              - link "Sell apps on Amazon" [ref=e3478] [cursor=pointer]:
+                - /url: https://developer.amazon.com
+            - listitem [ref=e3479]:
+              - link "Become an Affiliate" [ref=e3480] [cursor=pointer]:
+                - /url: https://affiliate-program.amazon.com/
+            - listitem [ref=e3481]:
+              - link "Advertise Your Products" [ref=e3482] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+            - listitem [ref=e3483]:
+              - link "Self-Publish with Us" [ref=e3484] [cursor=pointer]:
+                - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+            - listitem [ref=e3485]:
+              - link "Host an Amazon Hub" [ref=e3486] [cursor=pointer]:
+                - /url: https://go.thehub-amazon.com/amazon-hub-locker
+            - listitem [ref=e3487]:
+              - text: ›
+              - link "See More Make Money with Us" [ref=e3488] [cursor=pointer]:
+                - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+        - generic [ref=e3490]:
+          - heading "Amazon Payment Products" [level=6] [ref=e3491]
+          - list [ref=e3492]:
+            - listitem [ref=e3493]:
+              - link "Amazon Business Card" [ref=e3494] [cursor=pointer]:
+                - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+            - listitem [ref=e3495]:
+              - link "Shop with Points" [ref=e3496] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+            - listitem [ref=e3497]:
+              - link "Reload Your Balance" [ref=e3498] [cursor=pointer]:
+                - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+            - listitem [ref=e3499]:
+              - link "Amazon Currency Converter" [ref=e3500] [cursor=pointer]:
+                - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+        - generic [ref=e3502]:
+          - heading "Let Us Help You" [level=6] [ref=e3503]
+          - list [ref=e3504]:
+            - listitem [ref=e3505]:
+              - link "Amazon and COVID-19" [ref=e3506] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+            - listitem [ref=e3507]:
+              - link "Your Account" [ref=e3508] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+            - listitem [ref=e3509]:
+              - link "Your Orders" [ref=e3510] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+            - listitem [ref=e3511]:
+              - link "Shipping Rates & Policies" [ref=e3512] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+            - listitem [ref=e3513]:
+              - link "Returns & Replacements" [ref=e3514] [cursor=pointer]:
+                - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+            - listitem [ref=e3515]:
+              - link "Manage Your Content and Devices" [ref=e3516] [cursor=pointer]:
+                - /url: /gp/digital/fiona/manage?ref_=footer_myk
+            - listitem [ref=e3517]:
+              - link "Help" [ref=e3518] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+      - generic [ref=e3520]:
+        - link "Amazon US Home" [ref=e3523] [cursor=pointer]:
+          - /url: /?ref_=footer_logo
+        - generic [ref=e3526]:
+          - generic [ref=e3527]:
+            - link "Choose a language for shopping. Current selection is English." [ref=e3528] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+              - generic [ref=e3530]: English
+            - button "Expand to Change Language or Country" [ref=e3531] [cursor=pointer]
+          - link "₹ INR - Indian Rupee" [ref=e3532] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2Fs%3Fk%3DKeyboard%26ref%3Dnb_sb_nosss%2Fref%3Dnb_sb_noss
+            - generic [ref=e3533]: ₹
+            - generic [ref=e3534]: INR - Indian Rupee
+          - button "Choose a country/region for shopping. The current selection is United States." [ref=e3535] [cursor=pointer]:
+            - generic [ref=e3537]: United States
+      - navigation "More on Amazon" [ref=e3538]:
+        - generic "More on Amazon" [ref=e3539]:
+          - list [ref=e3540]:
+            - listitem [ref=e3541]:
+              - link "Amazon Music Stream millions of songs" [ref=e3542] [cursor=pointer]:
+                - /url: https://music.amazon.com?ref=dm_aff_amz_com
+                - heading "Amazon Music" [level=5] [ref=e3543]
+                - generic [ref=e3544]:
+                  - text: Stream millions
+                  - text: of songs
+            - listitem [ref=e3545]
+            - listitem [ref=e3546]:
+              - link "Amazon Ads Reach customers wherever they spend their time" [ref=e3547] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+                - heading "Amazon Ads" [level=5] [ref=e3548]
+                - generic [ref=e3549]:
+                  - text: Reach customers
+                  - text: wherever they
+                  - text: spend their time
+            - listitem [ref=e3550]
+            - listitem [ref=e3551]:
+              - link "6pm Score deals on fashion brands" [ref=e3552] [cursor=pointer]:
+                - /url: https://www.6pm.com
+                - heading "6pm" [level=5] [ref=e3553]
+                - generic [ref=e3554]:
+                  - text: Score deals
+                  - text: on fashion brands
+            - listitem [ref=e3555]
+            - listitem [ref=e3556]:
+              - link "AbeBooks Books, art & collectibles" [ref=e3557] [cursor=pointer]:
+                - /url: https://www.abebooks.com
+                - heading "AbeBooks" [level=5] [ref=e3558]
+                - generic [ref=e3559]:
+                  - text: Books, art
+                  - text: "& collectibles"
+            - listitem [ref=e3560]
+            - listitem [ref=e3561]:
+              - link "ACX Audiobook Publishing Made Easy" [ref=e3562] [cursor=pointer]:
+                - /url: https://www.acx.com/
+                - heading "ACX" [level=5] [ref=e3563]
+                - generic [ref=e3564]:
+                  - text: Audiobook Publishing
+                  - text: Made Easy
+            - listitem [ref=e3565]
+            - listitem [ref=e3566]:
+              - link "Sell on Amazon Start a Selling Account" [ref=e3567] [cursor=pointer]:
+                - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+                - heading "Sell on Amazon" [level=5] [ref=e3568]
+                - generic [ref=e3569]: Start a Selling Account
+            - listitem [ref=e3570]
+            - listitem [ref=e3571]:
+              - link "Veeqo Shipping Software Inventory Management" [ref=e3572] [cursor=pointer]:
+                - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+                - heading "Veeqo" [level=5] [ref=e3573]
+                - generic [ref=e3574]:
+                  - text: Shipping Software
+                  - text: Inventory Management
+          - list [ref=e3575]:
+            - listitem [ref=e3576]:
+              - link "Amazon Business Everything For Your Business" [ref=e3577] [cursor=pointer]:
+                - /url: /business?ref_=footer_retail_b2b
+                - heading "Amazon Business" [level=5] [ref=e3578]
+                - generic [ref=e3579]:
+                  - text: Everything For
+                  - text: Your Business
+            - listitem [ref=e3580]
+            - listitem [ref=e3581]:
+              - link "AmazonGlobal Ship Orders Internationally" [ref=e3582] [cursor=pointer]:
+                - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+                - heading "AmazonGlobal" [level=5] [ref=e3583]
+                - generic [ref=e3584]:
+                  - text: Ship Orders
+                  - text: Internationally
+            - listitem [ref=e3585]
+            - listitem [ref=e3586]:
+              - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e3587] [cursor=pointer]:
+                - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+                - heading "Amazon Web Services" [level=5] [ref=e3588]
+                - generic [ref=e3589]:
+                  - text: Scalable Cloud
+                  - text: Computing Services
+            - listitem [ref=e3590]
+            - listitem [ref=e3591]:
+              - link "Audible Listen to Books & Original Audio Performances" [ref=e3592] [cursor=pointer]:
+                - /url: https://www.audible.com
+                - heading "Audible" [level=5] [ref=e3593]
+                - generic [ref=e3594]:
+                  - text: Listen to Books & Original
+                  - text: Audio Performances
+            - listitem [ref=e3595]
+            - listitem [ref=e3596]:
+              - link "Box Office Mojo Find Movie Box Office Data" [ref=e3597] [cursor=pointer]:
+                - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+                - heading "Box Office Mojo" [level=5] [ref=e3598]
+                - generic [ref=e3599]:
+                  - text: Find Movie
+                  - text: Box Office Data
+            - listitem [ref=e3600]
+            - listitem [ref=e3601]:
+              - link "Goodreads Book reviews & recommendations" [ref=e3602] [cursor=pointer]:
+                - /url: https://www.goodreads.com
+                - heading "Goodreads" [level=5] [ref=e3603]
+                - generic [ref=e3604]:
+                  - text: Book reviews
+                  - text: "& recommendations"
+            - listitem [ref=e3605]
+            - listitem [ref=e3606]:
+              - link "IMDb Movies, TV & Celebrities" [ref=e3607] [cursor=pointer]:
+                - /url: https://www.imdb.com
+                - heading "IMDb" [level=5] [ref=e3608]
+                - generic [ref=e3609]:
+                  - text: Movies, TV
+                  - text: "& Celebrities"
+          - list [ref=e3610]:
+            - listitem [ref=e3611]:
+              - link "IMDbPro Get Info Entertainment Professionals Need" [ref=e3612] [cursor=pointer]:
+                - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+                - heading "IMDbPro" [level=5] [ref=e3613]
+                - generic [ref=e3614]:
+                  - text: Get Info Entertainment
+                  - text: Professionals Need
+            - listitem [ref=e3615]
+            - listitem [ref=e3616]:
+              - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e3617] [cursor=pointer]:
+                - /url: https://kdp.amazon.com
+                - heading "Kindle Direct Publishing" [level=5] [ref=e3618]
+                - generic [ref=e3619]:
+                  - text: Indie Digital & Print Publishing
+                  - text: Made Easy
+            - listitem [ref=e3620]
+            - listitem [ref=e3621]:
+              - link "Prime Video Direct Video Distribution Made Easy" [ref=e3622] [cursor=pointer]:
+                - /url: https://videodirect.amazon.com/home/landing
+                - heading "Prime Video Direct" [level=5] [ref=e3623]
+                - generic [ref=e3624]:
+                  - text: Video Distribution
+                  - text: Made Easy
+            - listitem [ref=e3625]
+            - listitem [ref=e3626]:
+              - link "Shopbop Designer Fashion Brands" [ref=e3627] [cursor=pointer]:
+                - /url: https://www.shopbop.com
+                - heading "Shopbop" [level=5] [ref=e3628]
+                - generic [ref=e3629]:
+                  - text: Designer
+                  - text: Fashion Brands
+            - listitem [ref=e3630]
+            - listitem [ref=e3631]:
+              - link "Woot! Deals and Shenanigans" [ref=e3632] [cursor=pointer]:
+                - /url: https://www.woot.com/
+                - heading "Woot!" [level=5] [ref=e3633]
+                - generic [ref=e3634]:
+                  - text: Deals and
+                  - text: Shenanigans
+            - listitem [ref=e3635]
+            - listitem [ref=e3636]:
+              - link "Zappos Shoes & Clothing" [ref=e3637] [cursor=pointer]:
+                - /url: https://www.zappos.com
+                - heading "Zappos" [level=5] [ref=e3638]
+                - generic [ref=e3639]:
+                  - text: Shoes &
+                  - text: Clothing
+            - listitem [ref=e3640]
+            - listitem [ref=e3641]:
+              - link "Ring Smart Home Security Systems" [ref=e3642] [cursor=pointer]:
+                - /url: https://ring.com
+                - heading "Ring" [level=5] [ref=e3643]
+                - generic [ref=e3644]:
+                  - text: Smart Home
+                  - text: Security Systems
+          - list [ref=e3645]:
+            - listitem [ref=e3646]
+            - listitem [ref=e3647]
+            - listitem [ref=e3648]:
+              - link "eero WiFi Stream 4K Video in Every Room" [ref=e3649] [cursor=pointer]:
+                - /url: https://eero.com/
+                - heading "eero WiFi" [level=5] [ref=e3650]
+                - generic [ref=e3651]:
+                  - text: Stream 4K Video
+                  - text: in Every Room
+            - listitem [ref=e3652]
+            - listitem [ref=e3653]:
+              - link "Blink Smart Security for Every Home" [ref=e3654] [cursor=pointer]:
+                - /url: https://blinkforhome.com/?ref=nav_footer
+                - heading "Blink" [level=5] [ref=e3655]
+                - generic [ref=e3656]:
+                  - text: Smart Security
+                  - text: for Every Home
+            - listitem [ref=e3657]
+            - listitem [ref=e3658]:
+              - link "Neighbors App Real-Time Crime & Safety Alerts" [ref=e3659] [cursor=pointer]:
+                - /url: https://shop.ring.com/pages/neighbors-app
+                - heading "Neighbors App" [level=5] [ref=e3660]
+                - generic [ref=e3661]:
+                  - text: Real-Time Crime
+                  - text: "& Safety Alerts"
+            - listitem [ref=e3662]
+            - listitem [ref=e3663]:
+              - link "PillPack Pharmacy Simplified" [ref=e3664] [cursor=pointer]:
+                - /url: https://www.pillpack.com
+                - heading "PillPack" [level=5] [ref=e3665]
+                - generic [ref=e3666]: Pharmacy Simplified
+            - listitem [ref=e3667]
+            - listitem [ref=e3668]
+            - listitem [ref=e3669]
+            - listitem [ref=e3670]
+      - generic [ref=e3671]:
+        - list [ref=e3672]:
+          - listitem [ref=e3673]:
+            - link "Conditions of Use" [ref=e3674] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+          - listitem [ref=e3675]:
+            - link "Privacy Notice" [ref=e3676] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+          - listitem [ref=e3677]:
+            - link "Consumer Health Data Privacy Disclosure" [ref=e3678] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+          - listitem [ref=e3679]:
+            - link "Your Ads Privacy Choices" [ref=e3680] [cursor=pointer]:
+              - /url: /privacyprefs?ref_=footer_iba
+          - listitem [ref=e3681]
+        - generic [ref=e3683]: © 1996-2026, Amazon.com, Inc. or its affiliates
+    - iframe [ref=e3685]:
+      - iframe [ref=f3e2]:
+        - generic [active]:
+          - img [ref=f4e1]
+          - img [ref=f4e2]
+          - img [ref=f4e3]
+          - img [ref=f4e4]
+          - img [ref=f4e5]
+          - img [ref=f4e6]
+          - img [ref=f4e7]
+          - img [ref=f4e8]
+          - img [ref=f4e9]
+          - img [ref=f4e10]
+          - img [ref=f4e11]
+          - img [ref=f4e12]
+          - img [ref=f4e13]
+          - img [ref=f4e14]
+          - img [ref=f4e15]
+          - img [ref=f4e16]
+          - img [ref=f4e17]
+          - img [ref=f4e18]
+          - img [ref=f4e19]
+          - img [ref=f4e20]
+          - img [ref=f4e21]
+          - img [ref=f4e22]
+          - img [ref=f4e23]
+          - img [ref=f4e24]
+          - img [ref=f4e25]
+          - img [ref=f4e26]
+          - img [ref=f4e27]
+          - img [ref=f4e28]
+          - img [ref=f4e29]
+          - img [ref=f4e30]
+          - img [ref=f4e31]
+          - img [ref=f4e32]
+          - img [ref=f4e33]
+          - img [ref=f4e34]
+          - img [ref=f4e35]
+          - img [ref=f4e36]
+          - img [ref=f4e37]
+          - img [ref=f4e38]
+          - img [ref=f4e39]
+          - img [ref=f4e40]
+          - img [ref=f4e41]
+          - img [ref=f4e42]
+          - img [ref=f4e43]
+  - generic: "Test: amzn-nv-flyout-healthy-choice"
+  - generic: "Test: nav-rufus-disc-txt"
+  - generic: "Test: a-truncate-cut"
+  - generic: "Test: sp-cc-wrapper"
+  - generic: "Test: .mo-wp"
+  - generic: "Test: .a-image-container"
+  - generic: "Test: sp-cc"
+  - generic: "Test: .amzn-box-inner"
+  - generic: "Test: .js-order-card"
+  - generic: "Test: pldn-deep-link"
+  - generic: "Test: add-to-cart-btn"
+  - generic: "Test: amzn-nav-app-banner-container"
+  - generic: "Test: .sparkle-container"
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from '@playwright/test';
+  2  | import { BasePage } from './BasePage';
+  3  | 
+  4  | export class SearchResultsPage extends BasePage {
+  5  |     readonly searchResultsContainer: Locator;
+  6  |     readonly productTitle: Locator;
+  7  |     readonly priceFilter: Locator;
+  8  |     readonly minPriceInput: Locator;
+  9  |     readonly maxPriceInput: Locator;
+  10 |     readonly applyPriceButton: Locator;
+  11 |     readonly ratingFilter: Locator;
+  12 |     readonly sortDropdown: Locator;
+  13 |     readonly productItem: Locator;
+  14 |     readonly productCount: Locator;
+  15 | 
+  16 |     constructor(page: Page) {
+  17 |         super(page);
+  18 |         this.searchResultsContainer = page.locator('[data-component-type="s-search-result"]');
+  19 |         this.productTitle = page.locator('h2 a span');
+  20 |         this.priceFilter = page.locator('input[aria-label*="price"]');
+  21 |         this.minPriceInput = page.locator('input[aria-label*="min"]');
+  22 |         this.maxPriceInput = page.locator('input[aria-label*="max"]');
+  23 |         this.applyPriceButton = page.locator('input[aria-label*="Go"]');
+  24 |         this.ratingFilter = page.locator('i.a-icon-star-small span');
+  25 |         this.sortDropdown = page.locator('select#s-result-sort-select');
+  26 |         this.productItem = page.locator('[data-component-type="s-search-result"]');
+  27 |         this.productCount = page.locator('.sg-col-inner');
+  28 |     }
+  29 | 
+  30 |     async getProductCount(): Promise<number> {
+  31 |         return await this.productItem.count();
+  32 |     }
+  33 | 
+  34 |     async getProductTitles(): Promise<string[]> {
+  35 |         const titles: string[] = [];
+  36 |         const items = await this.productTitle.all();
+  37 |         for (const item of items) {
+  38 |             titles.push(await item.textContent() || '');
+  39 |         }
+  40 |         return titles;
+  41 |     }
+  42 | 
+  43 |     async selectProduct(productIndex: number) {
+  44 |         const products = this.page.locator('[data-component-type="s-search-result"]');
+  45 |         const firstProduct = products.nth(productIndex);
+> 46 |         await firstProduct.locator('h2 a').click();
+     |                                            ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  47 |     }
+  48 | 
+  49 |     async selectProductByName(productName: string) {
+  50 |         await this.page.locator(`h2 a:has-text("${productName}")`).click();
+  51 |     }
+  52 | 
+  53 |     async filterByPriceRange(minPrice: string, maxPrice: string) {
+  54 |         await this.minPriceInput.fill(minPrice);
+  55 |         await this.maxPriceInput.fill(maxPrice);
+  56 |         await this.applyPriceButton.click();
+  57 |     }
+  58 | 
+  59 |     async sortByOption(sortOption: string) {
+  60 |         // Options: 'price-asc-rank', 'price-desc-rank', 'review-rank', 'date-desc-rank'
+  61 |         await this.sortDropdown.selectOption(sortOption);
+  62 |     }
+  63 | 
+  64 |     async filterByRating(stars: number) {
+  65 |         // Filter by star rating (4 stars and up, etc.)
+  66 |         await this.page.locator(`[aria-label="${stars} Stars & Up"]`).click();
+  67 |     }
+  68 | 
+  69 |     async verifyProductsDisplayed(): Promise<boolean> {
+  70 |         return await this.searchResultsContainer.first().isVisible();
+  71 |     }
+  72 | 
+  73 |     async waitForSearchResults() {
+  74 |         await this.page.waitForSelector('[data-component-type="s-search-result"]');
+  75 |     }
+  76 | }
+  77 | 
+```

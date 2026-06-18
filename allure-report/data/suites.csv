@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8733","should navigate to Amazon homepage successfully","chromium","2026-06-11","passed","2026-06-11","Amazon Product Flow","HomePage.spec.ts","",""
+"","11041","should search for a product and add it to cart","chromium","2026-06-11","passed","2026-06-11","Amazon Product Flow","HomePage.spec.ts","",""
+"","13076","should navigate to cart page when cart icon is clicked","chromium","2026-06-11","passed","2026-06-11","Amazon Product Flow","HomePage.spec.ts","",""
+"","8971","should search for a product and display results","chromium","2026-06-11","passed","2026-06-11","Amazon Product Flow","HomePage.spec.ts","",""
