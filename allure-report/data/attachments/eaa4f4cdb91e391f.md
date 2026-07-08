@@ -1,0 +1,2379 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: EnhancedProductFlow.spec.ts >> Amazon Product Flow - Enhanced >> should view product details
+- Location: src\tests\EnhancedProductFlow.spec.ts:70:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-component-type="s-search-result"]').first().locator('h2 a')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Shortcuts menu" [ref=e3]:
+      - heading "Skip to" [level=2] [ref=e4]
+      - list "Skip to" [ref=e5]:
+        - listitem [ref=e6]:
+          - link "main content" [ref=e7] [cursor=pointer]:
+            - /url: "#skippedLink"
+            - text: Main content
+        - listitem [ref=e8]:
+          - link "Results" [ref=e9] [cursor=pointer]:
+            - /url: .s-asin a:has(h2)
+        - listitem [ref=e10]:
+          - link "Filters" [ref=e11] [cursor=pointer]:
+            - /url: "#s-refinements > div.a-section > div:first-child"
+      - separator [ref=e12]
+      - heading "Keyboard shortcuts" [level=2] [ref=e13]
+      - list "Keyboard shortcuts" [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Search, alt, forward slash" [ref=e16] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e17]:
+              - generic [ref=e18]: Search
+              - generic [ref=e19]:
+                - generic [ref=e20]: alt
+                - generic [ref=e21]: +
+                - generic [ref=e22]: /
+        - listitem [ref=e23]:
+          - link "Cart, shift, alt, c" [ref=e24] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e25]:
+              - generic [ref=e26]: Cart
+              - generic [ref=e27]:
+                - generic [ref=e28]: shift
+                - generic [ref=e29]: +
+                - generic [ref=e30]: alt
+                - generic [ref=e31]: +
+                - generic [ref=e32]: C
+        - listitem [ref=e33]:
+          - link "Home, shift, alt, h" [ref=e34] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e35]:
+              - generic [ref=e36]: Home
+              - generic [ref=e37]:
+                - generic [ref=e38]: shift
+                - generic [ref=e39]: +
+                - generic [ref=e40]: alt
+                - generic [ref=e41]: +
+                - generic [ref=e42]: H
+        - listitem [ref=e43]:
+          - link "Your orders, shift, alt, o" [ref=e44] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e45]:
+              - generic [ref=e46]: Orders
+              - generic [ref=e47]:
+                - generic [ref=e48]: shift
+                - generic [ref=e49]: +
+                - generic [ref=e50]: alt
+                - generic [ref=e51]: +
+                - generic [ref=e52]: O
+        - listitem [ref=e53]:
+          - button "Show/hide shortcuts, shift, alt, z" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: Show/Hide shortcuts
+              - generic [ref=e57]:
+                - generic [ref=e58]: shift
+                - generic [ref=e59]: +
+                - generic [ref=e60]: alt
+                - generic [ref=e61]: +
+                - generic [ref=e62]: Z
+      - generic [ref=e68]: To move between items, use your keyboard's up or down arrows.
+    - banner [ref=e69]:
+      - navigation "Primary" [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - link "Amazon" [ref=e74] [cursor=pointer]:
+              - /url: /ref=nav_logo
+            - button "Deliver to India" [ref=e77] [cursor=pointer]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: Deliver to
+                - generic [ref=e81]: India
+          - search [ref=e84]:
+            - generic [ref=e87]:
+              - generic [ref=e89]: All
+              - combobox "Select the department you want to search in" [ref=e91] [cursor=pointer]:
+                - option "All Departments" [selected]
+                - option "Arts & Crafts"
+                - option "Automotive"
+                - option "Baby"
+                - option "Beauty & Personal Care"
+                - option "Books"
+                - option "Boys' Fashion"
+                - option "Computers"
+                - option "Deals"
+                - option "Digital Music"
+                - option "Electronics"
+                - option "Girls' Fashion"
+                - option "Health & Household"
+                - option "Home & Kitchen"
+                - option "Industrial & Scientific"
+                - option "Kindle Store"
+                - option "Luggage"
+                - option "Men's Fashion"
+                - option "Movies & TV"
+                - option "Music, CDs & Vinyl"
+                - option "Pet Supplies"
+                - option "Prime Video"
+                - option "Software"
+                - option "Sports & Outdoors"
+                - option "Tools & Home Improvement"
+                - option "Toys & Games"
+                - option "Video Games"
+                - option "Women's Fashion"
+            - searchbox "Search Amazon" [ref=e94]: USB Cable
+            - generic "Go" [ref=e97] [cursor=pointer]:
+              - button "Go" [ref=e98]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=e102] [cursor=pointer]:
+                - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+                - generic [ref=e105]:
+                  - img "United States" [ref=e106]
+                  - generic [ref=e107]: EN
+              - button "Expand to Change Language or Country" [ref=e108] [cursor=pointer]
+            - generic [ref=e109]:
+              - link "Hello, sign in Account & Lists" [ref=e110] [cursor=pointer]:
+                - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DUSB%2BCable%26crid%3D3TAUBREW220M5%26sprefix%3Dusb%2Bcable%252Caps%252C848%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                - generic [ref=e112]: Hello, sign in
+                - generic [ref=e113]: Account & Lists
+              - button "Expand Account and Lists" [ref=e114] [cursor=pointer]
+            - link "Returns & Orders" [ref=e115] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=nav_orders_first
+              - generic [ref=e116]: Returns
+              - generic [ref=e117]: "& Orders"
+            - link "0 items in cart" [ref=e118] [cursor=pointer]:
+              - /url: /gp/cart/view.html?ref_=nav_cart
+              - generic [ref=e120]: "0"
+              - generic [ref=e123]: Cart
+        - alertdialog "International Shopping Transition Alert" [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e129]:
+              - text: We're showing you items that ship to
+              - strong [ref=e130]: India
+              - text: . To see items that ship to a different country, change your delivery address.
+            - generic [ref=e131]:
+              - generic [ref=e133] [cursor=pointer]:
+                - button "Submit" [ref=e134]
+                - generic [ref=e135]: Dismiss
+              - generic [ref=e137] [cursor=pointer]:
+                - button "Submit" [ref=e138]
+                - generic [ref=e139]: Change Address
+        - generic [ref=e140]:
+          - button "Open All Categories Menu" [ref=e142] [cursor=pointer]:
+            - generic [ref=e144]: All
+          - list [ref=e148]:
+            - listitem [ref=e149]:
+              - link "Today's Deals" [ref=e151] [cursor=pointer]:
+                - /url: /gp/goldbox?ref_=nav_cs_gb
+            - listitem [ref=e152]:
+              - link "Gift Cards" [ref=e154] [cursor=pointer]:
+                - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+            - listitem [ref=e155]:
+              - link "Sell" [ref=e157] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+            - listitem [ref=e158]:
+              - link "Registry" [ref=e160] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+            - listitem [ref=e161]:
+              - link "Prime Video" [ref=e163] [cursor=pointer]:
+                - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+            - listitem [ref=e164]:
+              - link "Customer Service" [ref=e166] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+            - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=e167] [cursor=pointer]:
+              - /url: /gp/help/customer/accessibility
+              - text: Disability Customer Support
+        - dialog [ref=e170]
+    - generic [ref=e172]:
+      - 'heading "1-16 of over 100,000 results for \"USB Cable\" Sort by: Featured" [level=1] [ref=e175]':
+        - generic [ref=e176]:
+          - heading "1-16 of over 100,000 results for \"USB Cable\"" [level=2] [ref=e179]
+          - generic [ref=e184]:
+            - generic [ref=e185]: "Sort by:"
+            - combobox "Sort by:" [ref=e186]:
+              - option "Featured" [selected]
+              - 'option "Price: Low to High"'
+              - 'option "Price: High to Low"'
+              - option "Avg. Customer Review"
+              - option "Newest Arrivals"
+              - option "Best Sellers"
+            - generic [ref=e189] [cursor=pointer]: Sort by:Featured
+      - generic [ref=e191]:
+        - generic [ref=e193]:
+          - generic [ref=e195]:
+            - generic [ref=e197]:
+              - generic [ref=e200]:
+                - heading "Results" [level=2] [ref=e201]
+                - generic [ref=e202]: Check each product page for other buying options.
+              - generic:
+                - list:
+                  - listitem [ref=e203]:
+                    - generic [ref=e211]:
+                      - link [ref=e217] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMTMxNzY3MTAzOTgwMjo6MDo6&url=%2FHOTNOW-Transfer-Compatible-Printers-Cameras%2Fdp%2FB0GXJZLKDX%2Fref%3Dsr_1_1_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e219]
+                      - generic [ref=e222]:
+                        - generic [ref=e223]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e226] [cursor=pointer]:
+                            - generic [ref=e227]: Sponsored
+                          - link "Sponsored Ad - USB 3.0 Cable 1FT 2Pack, USB Type A Male to Type A Male, Transfer Rate Up to 5Gbps Cable Compatible with Printers, Modems, Hard Drives, Cameras, HDD, DVD, Laptops, etc." [ref=e231] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMTMxNzY3MTAzOTgwMjo6MDo6&url=%2FHOTNOW-Transfer-Compatible-Printers-Cameras%2Fdp%2FB0GXJZLKDX%2Fref%3Dsr_1_1_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - USB 3.0 Cable 1FT 2Pack, USB Type A Male to Type A Male, Transfer Rate Up to 5Gbps Cable Compatible with Printers, Modems, Hard Drives, Cameras, HDD, DVD, Laptops, etc." [level=2] [ref=e232]: USB 3.0 Cable 1FT 2Pack, USB Type A Male to Type A Male, Transfer Rate Up to 5Gbps Cable Compatible with Printers, Modems, Hard Drives, Cameras, HDD, DVD, Laptops, etc.
+                        - generic [ref=e234]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=e236] [cursor=pointer]:
+                            - generic [ref=e238]: 4.7 out of 5 stars
+                          - link "5 ratings" [ref=e242] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMTMxNzY3MTAzOTgwMjo6MDo6&url=%2FHOTNOW-Transfer-Compatible-Printers-Cameras%2Fdp%2FB0GXJZLKDX%2Fref%3Dsr_1_1_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                            - text: (5)
+                        - link "See options" [ref=e254] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMTMxNzY3MTAzOTgwMjo6MDo6&url=%2FHOTNOW-Transfer-Compatible-Printers-Cameras%2Fdp%2FB0GXJZLKDX%2Fref%3Dsr_1_1_so_ELECTRONIC_CABLE%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                  - listitem [ref=e257]:
+                    - generic [ref=e265]:
+                      - link [ref=e271] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMDg0MTU2MDEyMjgwMjo6MDo6&url=%2FDurcord-Charger-Charging-Android-Compatible%2Fdp%2FB0CKZ7V21Y%2Fref%3Dsr_1_2_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e273]
+                      - generic [ref=e276]:
+                        - generic [ref=e277]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e280] [cursor=pointer]:
+                            - generic [ref=e281]: Sponsored
+                          - link "Sponsored Ad - Durcord 2Pack 10ft USB C Charger Cable - 100W Fast Charging for Android/Phone/Pad, Type C to Type C Compatible with iPhone 17/16/15 Pro Plus Max Silver" [ref=e285] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMDg0MTU2MDEyMjgwMjo6MDo6&url=%2FDurcord-Charger-Charging-Android-Compatible%2Fdp%2FB0CKZ7V21Y%2Fref%3Dsr_1_2_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - Durcord 2Pack 10ft USB C Charger Cable - 100W Fast Charging for Android/Phone/Pad, Type C to Type C Compatible with iPhone 17/16/15 Pro Plus Max Silver" [level=2] [ref=e286]: Durcord 2Pack 10ft USB C Charger Cable - 100W Fast Charging for Android/Phone/Pad, Type C to Type C Compatible with iPhone 17/16/15 Pro Plus Max Silver
+                        - generic [ref=e287]:
+                          - generic [ref=e288]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e290] [cursor=pointer]:
+                              - generic [ref=e292]: 4.6 out of 5 stars
+                            - link "2,111 ratings" [ref=e296] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMDg0MTU2MDEyMjgwMjo6MDo6&url=%2FDurcord-Charger-Charging-Android-Compatible%2Fdp%2FB0CKZ7V21Y%2Fref%3Dsr_1_2_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                              - text: (2.1K)
+                          - generic [ref=e297]: 10K+ bought in past month
+                        - link "See options" [ref=e309] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYXRmOjMwMDg0MTU2MDEyMjgwMjo6MDo6&url=%2FDurcord-Charger-Charging-Android-Compatible%2Fdp%2FB0CKZ7V21Y%2Fref%3Dsr_1_2_so_ELECTRONIC_CABLE%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                  - listitem [ref=e312]:
+                    - generic [ref=e318]:
+                      - generic [ref=e320]:
+                        - generic "Amazon's Choice" [ref=e323]:
+                          - generic [ref=e332]: Overall Pick
+                        - link [ref=e337] [cursor=pointer]:
+                          - /url: /Anker-2-Pack-Premium-Charging-Samsung/dp/B07DC5PPFV/ref=sr_1_3?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-3
+                          - img [ref=e339]
+                      - generic [ref=e342]:
+                        - link "Anker Cable [2 Pack 6ft], USB A to USB C Cable for iPhone 17 Series,Samsung Galaxy S10 S10+, LG V30, Beats Fit Pro and More (Black)." [ref=e346] [cursor=pointer]:
+                          - /url: /Anker-2-Pack-Premium-Charging-Samsung/dp/B07DC5PPFV/ref=sr_1_3?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-3
+                          - heading "Anker Cable [2 Pack 6ft], USB A to USB C Cable for iPhone 17 Series,Samsung Galaxy S10 S10+, LG V30, Beats Fit Pro and More (Black)." [level=2] [ref=e347]
+                        - generic [ref=e348]:
+                          - generic [ref=e349]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e351] [cursor=pointer]:
+                              - generic [ref=e353]: 4.7 out of 5 stars
+                            - link "144,594 ratings" [ref=e357] [cursor=pointer]:
+                              - /url: /Anker-2-Pack-Premium-Charging-Samsung/dp/B07DC5PPFV/ref=sr_1_3?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-3#customerReviews
+                              - text: (144.5K)
+                          - generic [ref=e358]: 10K+ bought in past month
+                        - generic [ref=e361]:
+                          - link "See options" [ref=e370] [cursor=pointer]:
+                            - /url: /Anker-2-Pack-Premium-Charging-Samsung/dp/B07DC5PPFV/ref=sr_1_3_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-3
+                          - generic [ref=e372]:
+                            - text: No featured offers available
+                            - text: INR 951.92
+                            - link "(1 new offer)" [ref=e374] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B07DC5PPFV/ref=sr_1_3_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-3
+                  - listitem [ref=e377]:
+                    - generic [ref=e383]:
+                      - link [ref=e389] [cursor=pointer]:
+                        - /url: /Charging-Charger-Compatible-Samsung-Braided/dp/B082Z1YYRK/ref=sr_1_4?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-4
+                        - img [ref=e391]
+                      - generic [ref=e394]:
+                        - link "USB Type-C to A Cable 5pack 6ft Braided Fast Charging 3A Quick Charger Cord, 6 Foot Compatible iPhone 17/17 Pro/16e/16/15 Pro Max,Samsung Galaxy S10 S9 S8 Plus, Note 10 9 8, LG V50 V40 G8 G7(Grey)" [ref=e398] [cursor=pointer]:
+                          - /url: /Charging-Charger-Compatible-Samsung-Braided/dp/B082Z1YYRK/ref=sr_1_4?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-4
+                          - heading "USB Type-C to A Cable 5pack 6ft Braided Fast Charging 3A Quick Charger Cord, 6 Foot Compatible iPhone 17/17 Pro/16e/16/15 Pro Max,Samsung Galaxy S10 S9 S8 Plus, Note 10 9 8, LG V50 V40 G8 G7(Grey)" [level=2] [ref=e399]
+                        - generic [ref=e400]:
+                          - generic [ref=e401]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e403] [cursor=pointer]:
+                              - generic [ref=e405]: 4.6 out of 5 stars
+                            - link "58,772 ratings" [ref=e409] [cursor=pointer]:
+                              - /url: /Charging-Charger-Compatible-Samsung-Braided/dp/B082Z1YYRK/ref=sr_1_4?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-4#customerReviews
+                              - text: (58.7K)
+                          - generic [ref=e410]: 10K+ bought in past month
+                        - generic [ref=e413]:
+                          - link "See options" [ref=e422] [cursor=pointer]:
+                            - /url: /Charging-Charger-Compatible-Samsung-Braided/dp/B082Z1YYRK/ref=sr_1_4_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-4
+                          - generic [ref=e424]:
+                            - text: No featured offers available
+                            - text: INR 951.92
+                            - link "(2 new offers)" [ref=e426] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B082Z1YYRK/ref=sr_1_4_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-4
+                  - listitem [ref=e429]:
+                    - generic [ref=e435]:
+                      - generic [ref=e437]:
+                        - group "Best Sellerin USB Cables" [ref=e443]:
+                          - generic "Best Seller" [ref=e445]
+                        - link [ref=e449] [cursor=pointer]:
+                          - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NMR44C/ref=sr_1_5?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-5
+                          - img [ref=e451]
+                      - generic [ref=e454]:
+                        - link "Anker USB C to USB C Cable, Type-C 60W Fast Charging Cable (3.3 FT, 2Pack) for iPhone 17 Series, iPad mini 6 and More (Black)" [ref=e458] [cursor=pointer]:
+                          - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NMR44C/ref=sr_1_5?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-5
+                          - heading "Anker USB C to USB C Cable, Type-C 60W Fast Charging Cable (3.3 FT, 2Pack) for iPhone 17 Series, iPad mini 6 and More (Black)" [level=2] [ref=e459]
+                        - generic [ref=e460]:
+                          - generic [ref=e461]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e463] [cursor=pointer]:
+                              - generic [ref=e465]: 4.7 out of 5 stars
+                            - link "83,263 ratings" [ref=e469] [cursor=pointer]:
+                              - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NMR44C/ref=sr_1_5?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-5#customerReviews
+                              - text: (83.2K)
+                          - generic [ref=e470]: 10K+ bought in past month
+                        - generic [ref=e473]:
+                          - link "See options" [ref=e482] [cursor=pointer]:
+                            - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NMR44C/ref=sr_1_5_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-5
+                          - generic [ref=e484]:
+                            - text: No featured offers available
+                            - text: INR 951.92
+                            - link "(1 new offer)" [ref=e486] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B088NMR44C/ref=sr_1_5_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-5
+            - generic [ref=e493]:
+              - generic [ref=e495]:
+                - heading "Customers mention" [level=2] [ref=e497]
+                - generic [ref=e498]:
+                  - button "View Sponsored information or leave ad feedback" [ref=e500] [cursor=pointer]: Sponsored
+                  - text: "| Based on positive mentions in reviews"
+              - region "Customers mention" [ref=e502]:
+                - list [ref=e508]:
+                  - listitem "1 of 4" [ref=e509]:
+                    - generic [ref=e511]:
+                      - generic [ref=e513]: versatility
+                      - generic [ref=e514]:
+                        - generic [ref=e517]:
+                          - link [ref=e520] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDY1NjE2OTUzMjkwMjo6MDo6&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=WHaVwT5r7x
+                            - img [ref=e522]
+                          - generic [ref=e523]:
+                            - link "Sponsored Ad - MPATIBY Multi Charging Cable, (2 Pack 4FT) Multi USB Charger Cable 3 in 1 Charging Nylon Braided Fast Charging Cord with Type-C, Micro USB, IP Port for Most Phones/iPhones/Tablets" [ref=e527] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDY1NjE2OTUzMjkwMjo6MDo6&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=WHaVwT5r7x
+                              - heading "Sponsored Ad - MPATIBY Multi Charging Cable, (2 Pack 4FT) Multi USB Charger Cable 3 in 1 Charging Nylon Braided Fast Charging Cord with Type-C, Micro USB, IP Port for Most Phones/iPhones/Tablets" [level=2] [ref=e528]: MPATIBY Multi Charging Cable, (2 Pack 4FT) Multi USB Charger Cable 3 in 1 Charging Nylon Braided Fast Charging Cord with Type-C, Micro USB, IP Port for Most Phones/iPhones/Tablets
+                            - generic [ref=e529]:
+                              - generic [ref=e530]:
+                                - text: "4.5"
+                                - button "4.5 out of 5 stars, rating details" [ref=e532] [cursor=pointer]:
+                                  - generic [ref=e534]: 4.5 out of 5 stars
+                                - link "1,490 ratings" [ref=e538] [cursor=pointer]:
+                                  - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDY1NjE2OTUzMjkwMjo6MDo6&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=WHaVwT5r7x#customerReviews
+                                  - text: (1.4K)
+                              - generic [ref=e539]: 50+ bought in past month
+                            - link "See options" [ref=e548] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDY1NjE2OTUzMjkwMjo6MDo6&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_so_ELECTRONIC_CABLE%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=WHaVwT5r7x
+                        - link "product-detail" [ref=e549] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDY1NjE2OTUzMjkwMjo6MDo6&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=WHaVwT5r7x
+                  - listitem "2 of 4" [ref=e550]:
+                    - generic [ref=e552]:
+                      - generic [ref=e554]: portability
+                      - generic [ref=e555]:
+                        - generic [ref=e558]:
+                          - link [ref=e561] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDA5NDE4Njk0OTEwMjo6MTo6&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=SbhsF6alH3
+                            - img [ref=e563]
+                          - generic [ref=e564]:
+                            - link "Sponsored Ad - CableCreation Short Micro USB Cable, USB to Micro USB 24 AWG Triple Shielded Fast Charger Cable, Compatible with PS5/PS4, Raspberry Pi Zero, Chromecast, Phone, 0.5FT/6 inch Black" [ref=e568] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDA5NDE4Njk0OTEwMjo6MTo6&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=SbhsF6alH3
+                              - heading "Sponsored Ad - CableCreation Short Micro USB Cable, USB to Micro USB 24 AWG Triple Shielded Fast Charger Cable, Compatible with PS5/PS4, Raspberry Pi Zero, Chromecast, Phone, 0.5FT/6 inch Black" [level=2] [ref=e569]: CableCreation Short Micro USB Cable, USB to Micro USB 24 AWG Triple Shielded Fast Charger Cable, Compatible with PS5/PS4, Raspberry Pi Zero, Chromecast, Phone, 0.5FT/6 inch Black
+                            - generic [ref=e570]:
+                              - generic [ref=e571]:
+                                - text: "4.6"
+                                - button "4.6 out of 5 stars, rating details" [ref=e573] [cursor=pointer]:
+                                  - generic [ref=e575]: 4.6 out of 5 stars
+                                - link "8,783 ratings" [ref=e579] [cursor=pointer]:
+                                  - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDA5NDE4Njk0OTEwMjo6MTo6&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=SbhsF6alH3#customerReviews
+                                  - text: (8.7K)
+                              - generic [ref=e580]: 400+ bought in past month
+                            - link "See options" [ref=e589] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDA5NDE4Njk0OTEwMjo6MTo6&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_so_ELECTRONIC_CABLE%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=SbhsF6alH3
+                        - link "product-detail" [ref=e590] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDA5NDE4Njk0OTEwMjo6MTo6&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=SbhsF6alH3
+                  - listitem "3 of 4" [ref=e591]:
+                    - generic [ref=e593]:
+                      - generic [ref=e595]: convenience
+                      - generic [ref=e596]:
+                        - generic [ref=e599]:
+                          - link [ref=e602] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDE1NTAxMDM0OTkwMjo6Mjo6&url=%2FGrtoeud-Braided-Charger-Compatible-Nintendo%2Fdp%2FB09R6PNKY9%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB09R6PNKY9%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DJBqcBGw9gB%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JBqcBGw9gB
+                            - img [ref=e604]
+                          - generic [ref=e605]:
+                            - link "Sponsored Ad - USB C Cable 15FT 2Pack, Extra Long USB-A to USB-C Cable Braided Fast Charger Cord Compatible with Sony PS5, Samsung Galaxy S22 S21 S20 S10, Note 9 Plus, OnePlus 10 Pro, Nintendo Switch, Moto" [ref=e609] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDE1NTAxMDM0OTkwMjo6Mjo6&url=%2FGrtoeud-Braided-Charger-Compatible-Nintendo%2Fdp%2FB09R6PNKY9%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB09R6PNKY9%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DJBqcBGw9gB%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JBqcBGw9gB
+                              - heading "Sponsored Ad - USB C Cable 15FT 2Pack, Extra Long USB-A to USB-C Cable Braided Fast Charger Cord Compatible with Sony PS5, Samsung Galaxy S22 S21 S20 S10, Note 9 Plus, OnePlus 10 Pro, Nintendo Switch, Moto" [level=2] [ref=e610]: USB C Cable 15FT 2Pack, Extra Long USB-A to USB-C Cable Braided Fast Charger Cord Compatible with Sony PS5, Samsung Galaxy S22 S21 S20 S10, Note 9 Plus, OnePlus 10 Pro, Nintendo Switch, Moto
+                            - generic [ref=e611]:
+                              - generic [ref=e612]:
+                                - text: "4.6"
+                                - button "4.6 out of 5 stars, rating details" [ref=e614] [cursor=pointer]:
+                                  - generic [ref=e616]: 4.6 out of 5 stars
+                                - link "17,650 ratings" [ref=e620] [cursor=pointer]:
+                                  - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDE1NTAxMDM0OTkwMjo6Mjo6&url=%2FGrtoeud-Braided-Charger-Compatible-Nintendo%2Fdp%2FB09R6PNKY9%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB09R6PNKY9%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DJBqcBGw9gB%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JBqcBGw9gB#customerReviews
+                                  - text: (17.6K)
+                              - generic [ref=e621]: 200+ bought in past month
+                            - link "See options" [ref=e630] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDE1NTAxMDM0OTkwMjo6Mjo6&url=%2FGrtoeud-Braided-Charger-Compatible-Nintendo%2Fdp%2FB09R6PNKY9%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_so_ELECTRONIC_CABLE%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB09R6PNKY9%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DJBqcBGw9gB%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JBqcBGw9gB
+                        - link "product-detail" [ref=e631] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDE1NTAxMDM0OTkwMjo6Mjo6&url=%2FGrtoeud-Braided-Charger-Compatible-Nintendo%2Fdp%2FB09R6PNKY9%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB09R6PNKY9%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DJBqcBGw9gB%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JBqcBGw9gB
+                  - listitem "4 of 4" [ref=e632]:
+                    - generic [ref=e634]:
+                      - generic [ref=e636]: appearance
+                      - generic [ref=e637]:
+                        - generic [ref=e640]:
+                          - link [ref=e643] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI5ODc5NjQ5MTQwMjo6Mzo6&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nz7Lq7R7lR
+                            - img [ref=e645]
+                          - generic [ref=e646]:
+                            - link "Sponsored Ad - JSAUX Micro USB Cable for Android, (2-Pack 6.6FT) Kindle Charger Cord Replacement, Nylon Braided USB Micro Charging Cable Compatible with Galaxy S7 S6 J7 Edge Note 5, Kindle, MP3-Blue" [ref=e650] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI5ODc5NjQ5MTQwMjo6Mzo6&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nz7Lq7R7lR
+                              - heading "Sponsored Ad - JSAUX Micro USB Cable for Android, (2-Pack 6.6FT) Kindle Charger Cord Replacement, Nylon Braided USB Micro Charging Cable Compatible with Galaxy S7 S6 J7 Edge Note 5, Kindle, MP3-Blue" [level=2] [ref=e651]: JSAUX Micro USB Cable for Android, (2-Pack 6.6FT) Kindle Charger Cord Replacement, Nylon Braided USB Micro Charging Cable Compatible with Galaxy S7 S6 J7 Edge Note 5, Kindle, MP3-Blue
+                            - generic [ref=e652]:
+                              - generic [ref=e653]:
+                                - text: "4.6"
+                                - button "4.6 out of 5 stars, rating details" [ref=e655] [cursor=pointer]:
+                                  - generic [ref=e657]: 4.6 out of 5 stars
+                                - link "34,886 ratings" [ref=e661] [cursor=pointer]:
+                                  - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI5ODc5NjQ5MTQwMjo6Mzo6&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nz7Lq7R7lR#customerReviews
+                                  - text: (34.8K)
+                              - generic [ref=e662]: 1K+ bought in past month
+                            - generic [ref=e665]:
+                              - generic [ref=e666]: Price, product page
+                              - 'link "INR 694.64 ( INR 52.41 /feet) List: INR 856.63 List: INR 856.63" [ref=e667] [cursor=pointer]':
+                                - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI5ODc5NjQ5MTQwMjo6Mzo6&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nz7Lq7R7lR
+                                - generic [ref=e668]:
+                                  - generic [ref=e669]: INR 694.64
+                                  - generic [ref=e670]:
+                                    - text: INR
+                                    - generic [ref=e671]:
+                                      - text: "694"
+                                      - generic [ref=e672]: .
+                                    - text: "64"
+                                - generic [ref=e673]:
+                                  - text: (
+                                  - generic [ref=e674]:
+                                    - generic [ref=e675]: INR 52.41
+                                    - text: INR52.41
+                                  - text: /feet)
+                                - generic [ref=e676]: "List: INR 856.63"
+                                - generic [ref=e677]:
+                                  - text: "List:"
+                                  - generic [ref=e678]:
+                                    - generic [ref=e679]: INR 856.63
+                                    - text: INR856.63
+                            - generic [ref=e687]: INR 909.99 delivery Fri, Jul 3
+                            - button "Recycled materials +2 more" [ref=e694] [cursor=pointer]:
+                              - generic [ref=e695]: Recycled materials +2 more
+                            - button "Add to cart" [ref=e711] [cursor=pointer]
+                        - link "product-detail":
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzI5ODU3OTMwNzczNjU0OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI5ODc5NjQ5MTQwMjo6Mzo6&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxin_16_pa_sp_search_thematic-asin_sspa%3Fcontent-id%3Damzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%253Aamzn1.sym.f7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3D2cfe3af4-6dff-4e26-a092-bbd7851e0928%26pd_rd_w%3Dyz2rl%26pd_rd_wg%3DgbV1g%26pf_rd_p%3Df7b77e05-af0a-43f2-bdd2-8b86fdffcf74%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-d41ec9cd-d26d-4d3f-bab5-47e50b3b462b-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nz7Lq7R7lR
+            - generic [ref=e713]:
+              - heading "More results" [level=2] [ref=e717]
+              - generic:
+                - list:
+                  - listitem [ref=e718]:
+                    - generic [ref=e724]:
+                      - generic [ref=e726]:
+                        - group "Best Sellerin PlayStation 4 Cables" [ref=e732]:
+                          - generic "Best Seller" [ref=e734]
+                        - link [ref=e738] [cursor=pointer]:
+                          - /url: /Superer-Controller-DualShock-Streaming-Premiere/dp/B07YFDF3YK/ref=sr_1_6?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-6
+                          - img [ref=e740]
+                      - generic [ref=e743]:
+                        - link "Superer Micro USB Charger Cable Fit for PS4 Controller, Kindle Paperwhite, Amazon Fire Tablet, Roku Streaming Stick, Fire TV Stick, Xbox One S/X, Android Phone Fast Charging Data Sync Power Cord" [ref=e747] [cursor=pointer]:
+                          - /url: /Superer-Controller-DualShock-Streaming-Premiere/dp/B07YFDF3YK/ref=sr_1_6?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-6
+                          - heading "Superer Micro USB Charger Cable Fit for PS4 Controller, Kindle Paperwhite, Amazon Fire Tablet, Roku Streaming Stick, Fire TV Stick, Xbox One S/X, Android Phone Fast Charging Data Sync Power Cord" [level=2] [ref=e748]
+                        - generic [ref=e749]:
+                          - generic [ref=e750]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e752] [cursor=pointer]:
+                              - generic [ref=e754]: 4.6 out of 5 stars
+                            - link "2,337 ratings" [ref=e758] [cursor=pointer]:
+                              - /url: /Superer-Controller-DualShock-Streaming-Premiere/dp/B07YFDF3YK/ref=sr_1_6?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-6#customerReviews
+                              - text: (2.3K)
+                          - generic [ref=e759]: 8K+ bought in past month
+                        - generic [ref=e762]:
+                          - link "See options" [ref=e771] [cursor=pointer]:
+                            - /url: /Superer-Controller-DualShock-Streaming-Premiere/dp/B07YFDF3YK/ref=sr_1_6_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-6
+                          - generic [ref=e773]:
+                            - text: No featured offers available
+                            - text: INR 656.53
+                            - link "(2 new offers)" [ref=e775] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B07YFDF3YK/ref=sr_1_6_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-6
+                  - listitem [ref=e778]:
+                    - generic [ref=e786]:
+                      - link [ref=e792] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTMyMjY3MzI0NjYwMjo6MDo6&url=%2FInfinitiByte-5-Pack-iPhone-Charger-Charging%2Fdp%2FB0H1BCN5D4%2Fref%3Dsr_1_7_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e794]
+                      - generic [ref=e797]:
+                        - generic [ref=e798]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e801] [cursor=pointer]:
+                            - generic [ref=e802]: Sponsored
+                          - link "Sponsored Ad - USB-C to USB-C Cable 5-Pack (10/10/6.6/6.6/3.3FT), Fast Charging Cord for iPhone 17/16/15 Pro Max, iPad, Galaxy S25/S24" [ref=e806] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTMyMjY3MzI0NjYwMjo6MDo6&url=%2FInfinitiByte-5-Pack-iPhone-Charger-Charging%2Fdp%2FB0H1BCN5D4%2Fref%3Dsr_1_7_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - USB-C to USB-C Cable 5-Pack (10/10/6.6/6.6/3.3FT), Fast Charging Cord for iPhone 17/16/15 Pro Max, iPad, Galaxy S25/S24" [level=2] [ref=e807]: USB-C to USB-C Cable 5-Pack (10/10/6.6/6.6/3.3FT), Fast Charging Cord for iPhone 17/16/15 Pro Max, iPad, Galaxy S25/S24
+                        - generic [ref=e809]: New on Amazon in past month
+                        - link "See options" [ref=e821] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTMyMjY3MzI0NjYwMjo6MDo6&url=%2FInfinitiByte-5-Pack-iPhone-Charger-Charging%2Fdp%2FB0H1BCN5D4%2Fref%3Dsr_1_7_so_ELECTRONIC_CABLE%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                  - listitem [ref=e824]:
+                    - generic [ref=e830]:
+                      - link [ref=e836] [cursor=pointer]:
+                        - /url: /Anker-Charger-Charging-iPhone-MacBook/dp/B09LCJPZ1P/ref=sr_1_8?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-8
+                        - img [ref=e838]
+                      - generic [ref=e841]:
+                        - link "Anker USB C to USB C Cable, 2-Pack 6 FT (1.8 m) Type C 100W Charger Cord, Fast Charging for iPhone 17 Series, MacBook Pro 2020, Pixel, and More (Black, Not for Video Output)" [ref=e845] [cursor=pointer]:
+                          - /url: /Anker-Charger-Charging-iPhone-MacBook/dp/B09LCJPZ1P/ref=sr_1_8?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-8
+                          - heading "Anker USB C to USB C Cable, 2-Pack 6 FT (1.8 m) Type C 100W Charger Cord, Fast Charging for iPhone 17 Series, MacBook Pro 2020, Pixel, and More (Black, Not for Video Output)" [level=2] [ref=e846]
+                        - generic [ref=e847]:
+                          - generic [ref=e848]:
+                            - text: "4.8"
+                            - button "4.8 out of 5 stars, rating details" [ref=e850] [cursor=pointer]:
+                              - generic [ref=e852]: 4.8 out of 5 stars
+                            - link "31,052 ratings" [ref=e856] [cursor=pointer]:
+                              - /url: /Anker-Charger-Charging-iPhone-MacBook/dp/B09LCJPZ1P/ref=sr_1_8?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-8#customerReviews
+                              - text: (31K)
+                          - generic [ref=e857]: 10K+ bought in past month
+                        - generic [ref=e860]:
+                          - generic [ref=e863]:
+                            - generic [ref=e864]: Price, product page
+                            - link "INR 1,870.48 ( INR 156.27 /feet)" [ref=e865] [cursor=pointer]:
+                              - /url: /Anker-Charger-Charging-iPhone-MacBook/dp/B09LCJPZ1P/ref=sr_1_8?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-8
+                              - generic [ref=e866]:
+                                - generic [ref=e867]: INR 1,870.48
+                                - generic [ref=e868]:
+                                  - text: INR
+                                  - generic [ref=e869]:
+                                    - text: 1,870
+                                    - generic [ref=e870]: .
+                                  - text: "48"
+                              - generic [ref=e871]:
+                                - text: (
+                                - generic [ref=e872]:
+                                  - generic [ref=e873]: INR 156.27
+                                  - text: INR156.27
+                                - text: /feet)
+                          - generic [ref=e874]:
+                            - generic [ref=e880]: INR 914.76 delivery Jun 23 - Jul 14
+                            - generic [ref=e881]: Ships to India
+                          - button "Add to cart" [ref=e896] [cursor=pointer]
+                          - generic [ref=e898]:
+                            - text: More Buying Choices
+                            - text: INR 1,017.67
+                            - link "(3+ used & new offers)" [ref=e900] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B09LCJPZ1P/ref=sr_1_8_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-8
+                  - listitem [ref=e903]:
+                    - generic [ref=e909]:
+                      - link [ref=e915] [cursor=pointer]:
+                        - /url: /Anker-Charger-Charge-Charging-Samsung/dp/B0BPCZLFS4/ref=sr_1_9?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-9
+                        - img [ref=e917]
+                      - generic [ref=e920]:
+                        - link "Anker USB A to USB C Cable, Charger Cord (2 Pack, 6FT), for iPhone 17 Series,Samsung Galaxy Note 10/S10+ S10, LG V30 (Black)" [ref=e924] [cursor=pointer]:
+                          - /url: /Anker-Charger-Charge-Charging-Samsung/dp/B0BPCZLFS4/ref=sr_1_9?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-9
+                          - heading "Anker USB A to USB C Cable, Charger Cord (2 Pack, 6FT), for iPhone 17 Series,Samsung Galaxy Note 10/S10+ S10, LG V30 (Black)" [level=2] [ref=e925]
+                        - generic [ref=e926]:
+                          - generic [ref=e927]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e929] [cursor=pointer]:
+                              - generic [ref=e931]: 4.7 out of 5 stars
+                            - link "24,487 ratings" [ref=e935] [cursor=pointer]:
+                              - /url: /Anker-Charger-Charge-Charging-Samsung/dp/B0BPCZLFS4/ref=sr_1_9?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-9#customerReviews
+                              - text: (24.4K)
+                          - generic [ref=e936]: 5K+ bought in past month
+                        - generic [ref=e939]:
+                          - link "See options" [ref=e948] [cursor=pointer]:
+                            - /url: /Anker-Charger-Charge-Charging-Samsung/dp/B0BPCZLFS4/ref=sr_1_9_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-9
+                          - generic [ref=e950]:
+                            - text: No featured offers available
+                            - text: INR 904.27
+                            - link "(1 new offer)" [ref=e952] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0BPCZLFS4/ref=sr_1_9_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-9
+                  - listitem [ref=e955]:
+                    - generic [ref=e961]:
+                      - link [ref=e967] [cursor=pointer]:
+                        - /url: /Anker-Charging-Upcycled-Braided-100-Year-Durability/dp/B0D4Z9RPT8/ref=sr_1_10?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-10
+                        - img [ref=e969]
+                      - generic [ref=e972]:
+                        - link "Anker Prime USB C to USB C Cable, 240W Fast Charging Cord, Upcycled-Braided Nylon with 100-Year Bend Durability for iPhone 17 Series, MacBook, Galaxy S24(6 FT)" [ref=e976] [cursor=pointer]:
+                          - /url: /Anker-Charging-Upcycled-Braided-100-Year-Durability/dp/B0D4Z9RPT8/ref=sr_1_10?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-10
+                          - heading "Anker Prime USB C to USB C Cable, 240W Fast Charging Cord, Upcycled-Braided Nylon with 100-Year Bend Durability for iPhone 17 Series, MacBook, Galaxy S24(6 FT)" [level=2] [ref=e977]
+                        - generic [ref=e978]:
+                          - generic [ref=e979]:
+                            - text: "4.8"
+                            - button "4.8 out of 5 stars, rating details" [ref=e981] [cursor=pointer]:
+                              - generic [ref=e983]: 4.8 out of 5 stars
+                            - link "2,854 ratings" [ref=e987] [cursor=pointer]:
+                              - /url: /Anker-Charging-Upcycled-Braided-100-Year-Durability/dp/B0D4Z9RPT8/ref=sr_1_10?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-10#customerReviews
+                              - text: (2.8K)
+                          - generic [ref=e988]: 8K+ bought in past month
+                        - generic [ref=e991]:
+                          - button "Carbon impact" [ref=e1000] [cursor=pointer]:
+                            - generic [ref=e1001]: Carbon impact
+                          - link "See options" [ref=e1009] [cursor=pointer]:
+                            - /url: /Anker-Charging-Upcycled-Braided-100-Year-Durability/dp/B0D4Z9RPT8/ref=sr_1_10_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-10
+                          - generic [ref=e1011]:
+                            - text: No featured offers available
+                            - text: INR 3,334.09
+                            - link "(1 new offer)" [ref=e1013] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0D4Z9RPT8/ref=sr_1_10_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-10
+                  - listitem [ref=e1016]:
+                    - generic [ref=e1022]:
+                      - link [ref=e1028] [cursor=pointer]:
+                        - /url: /Anker-Flexible-Multi-Color-Braided-Charging/dp/B0CZ3L9C1J/ref=sr_1_11?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-11
+                        - img [ref=e1030]
+                      - generic [ref=e1033]:
+                        - link "Anker Nano USB C Cable, 240W Flexible Multi-Color Braided Cord, Fast Charging Type C Charger for iPhone 17 Series, MacBook Pro and More (Black, 3ft)" [ref=e1037] [cursor=pointer]:
+                          - /url: /Anker-Flexible-Multi-Color-Braided-Charging/dp/B0CZ3L9C1J/ref=sr_1_11?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-11
+                          - heading "Anker Nano USB C Cable, 240W Flexible Multi-Color Braided Cord, Fast Charging Type C Charger for iPhone 17 Series, MacBook Pro and More (Black, 3ft)" [level=2] [ref=e1038]
+                        - generic [ref=e1039]:
+                          - generic [ref=e1040]:
+                            - text: "4.8"
+                            - button "4.8 out of 5 stars, rating details" [ref=e1042] [cursor=pointer]:
+                              - generic [ref=e1044]: 4.8 out of 5 stars
+                            - link "3,724 ratings" [ref=e1048] [cursor=pointer]:
+                              - /url: /Anker-Flexible-Multi-Color-Braided-Charging/dp/B0CZ3L9C1J/ref=sr_1_11?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-11#customerReviews
+                              - text: (3.7K)
+                          - generic [ref=e1049]: 3K+ bought in past month
+                        - generic [ref=e1052]:
+                          - button "Carbon impact" [ref=e1061] [cursor=pointer]:
+                            - generic [ref=e1062]: Carbon impact
+                          - link "See options" [ref=e1070] [cursor=pointer]:
+                            - /url: /Anker-Flexible-Multi-Color-Braided-Charging/dp/B0CZ3L9C1J/ref=sr_1_11_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-11
+                          - generic [ref=e1072]:
+                            - text: No featured offers available
+                            - text: INR 1,904.79
+                            - link "(1 new offer)" [ref=e1074] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CZ3L9C1J/ref=sr_1_11_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-11
+                  - listitem [ref=e1077]:
+                    - generic [ref=e1085]:
+                      - link [ref=e1091] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTI5MzM1ODIxMDQwMjo6MDo6&url=%2FCritin-Adapter-Charger-Charging-BNTV400%2Fdp%2FB0GR9G93L6%2Fref%3Dsr_1_12_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1093]
+                      - generic [ref=e1096]:
+                        - generic [ref=e1097]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1100] [cursor=pointer]:
+                            - generic [ref=e1101]: Sponsored
+                          - link "Sponsored Ad - 5V 2A Power Adapter Wall Charger & 4 FT Black USB Charging Data Cable Cord for Barnes Noble Nook HD 7'' 9\" Inch BNTV400 BNTV600 Tablet USB Charging Cable Cord Wire" [ref=e1105] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTI5MzM1ODIxMDQwMjo6MDo6&url=%2FCritin-Adapter-Charger-Charging-BNTV400%2Fdp%2FB0GR9G93L6%2Fref%3Dsr_1_12_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - 5V 2A Power Adapter Wall Charger & 4 FT Black USB Charging Data Cable Cord for Barnes Noble Nook HD 7'' 9\" Inch BNTV400 BNTV600 Tablet USB Charging Cable Cord Wire" [level=2] [ref=e1106]: 5V 2A Power Adapter Wall Charger & 4 FT Black USB Charging Data Cable Cord for Barnes Noble Nook HD 7'' 9" Inch BNTV400 BNTV600 Tablet USB Charging Cable Cord Wire
+                        - generic [ref=e1108]:
+                          - text: "4.8"
+                          - button "4.8 out of 5 stars, rating details" [ref=e1110] [cursor=pointer]:
+                            - generic [ref=e1112]: 4.8 out of 5 stars
+                          - link "5 ratings" [ref=e1116] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTI5MzM1ODIxMDQwMjo6MDo6&url=%2FCritin-Adapter-Charger-Charging-BNTV400%2Fdp%2FB0GR9G93L6%2Fref%3Dsr_1_12_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                            - text: (5)
+                        - link "See options" [ref=e1128] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMTI5MzM1ODIxMDQwMjo6MDo6&url=%2FCritin-Adapter-Charger-Charging-BNTV400%2Fdp%2FB0GR9G93L6%2Fref%3Dsr_1_12_so_ELECTRONIC_CABLE%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                  - listitem [ref=e1131]:
+                    - generic [ref=e1137]:
+                      - link [ref=e1143] [cursor=pointer]:
+                        - /url: /Anker-Charger-Charging-Samsung-Galaxy/dp/B0BPCK3RSP/ref=sr_1_13?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-13
+                        - img [ref=e1145]
+                      - generic [ref=e1148]:
+                        - link "Anker USB A to USB C Cable, Charger Cord (2 Pack, 10ft), for iPhone 17 Series,Samsung Galaxy Note 10/S10+ S10, LG V30 (Black)" [ref=e1152] [cursor=pointer]:
+                          - /url: /Anker-Charger-Charging-Samsung-Galaxy/dp/B0BPCK3RSP/ref=sr_1_13?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-13
+                          - heading "Anker USB A to USB C Cable, Charger Cord (2 Pack, 10ft), for iPhone 17 Series,Samsung Galaxy Note 10/S10+ S10, LG V30 (Black)" [level=2] [ref=e1153]
+                        - generic [ref=e1154]:
+                          - generic [ref=e1155]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e1157] [cursor=pointer]:
+                              - generic [ref=e1159]: 4.7 out of 5 stars
+                            - link "24,487 ratings" [ref=e1163] [cursor=pointer]:
+                              - /url: /Anker-Charger-Charging-Samsung-Galaxy/dp/B0BPCK3RSP/ref=sr_1_13?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-13#customerReviews
+                              - text: (24.4K)
+                          - generic [ref=e1164]: 2K+ bought in past month
+                        - generic [ref=e1167]:
+                          - link "See options" [ref=e1176] [cursor=pointer]:
+                            - /url: /Anker-Charger-Charging-Samsung-Galaxy/dp/B0BPCK3RSP/ref=sr_1_13_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-13
+                          - generic [ref=e1178]:
+                            - text: No featured offers available
+                            - text: INR 1,205.38
+                            - link "(3 used & new offers)" [ref=e1180] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0BPCK3RSP/ref=sr_1_13_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-13
+                  - listitem [ref=e1183]:
+                    - generic [ref=e1189]:
+                      - link [ref=e1195] [cursor=pointer]:
+                        - /url: /Anker-Seamless-CarPlay-Connesction-Connector/dp/B0F5PZRPLK/ref=sr_1_14?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-14
+                        - img [ref=e1197]
+                      - generic [ref=e1200]:
+                        - link "Anker Zolo USB to USB C Cable, Seamless CarPlay Connection Durable and Braided Type C Cable, Premium Look with Slim Connector, for iPhone 17/16 Series, iPad Pro, and More (Black, 3.3FT)" [ref=e1204] [cursor=pointer]:
+                          - /url: /Anker-Seamless-CarPlay-Connesction-Connector/dp/B0F5PZRPLK/ref=sr_1_14?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-14
+                          - heading "Anker Zolo USB to USB C Cable, Seamless CarPlay Connection Durable and Braided Type C Cable, Premium Look with Slim Connector, for iPhone 17/16 Series, iPad Pro, and More (Black, 3.3FT)" [level=2] [ref=e1205]
+                        - generic [ref=e1206]:
+                          - generic [ref=e1207]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1209] [cursor=pointer]:
+                              - generic [ref=e1211]: 4.6 out of 5 stars
+                            - link "1,559 ratings" [ref=e1215] [cursor=pointer]:
+                              - /url: /Anker-Seamless-CarPlay-Connesction-Connector/dp/B0F5PZRPLK/ref=sr_1_14?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-14#customerReviews
+                              - text: (1.5K)
+                          - generic [ref=e1216]: 4K+ bought in past month
+                        - generic [ref=e1219]:
+                          - button "Carbon impact" [ref=e1228] [cursor=pointer]:
+                            - generic [ref=e1229]: Carbon impact
+                          - link "See options" [ref=e1237] [cursor=pointer]:
+                            - /url: /Anker-Seamless-CarPlay-Connesction-Connector/dp/B0F5PZRPLK/ref=sr_1_14_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-14
+                          - generic [ref=e1239]:
+                            - text: No featured offers available
+                            - text: INR 856.63
+                            - link "(1 new offer)" [ref=e1241] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0F5PZRPLK/ref=sr_1_14_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-14
+                  - listitem [ref=e1244]:
+                    - generic [ref=e1250]:
+                      - link [ref=e1256] [cursor=pointer]:
+                        - /url: /ANKER-Cable-Samsung-Galaxy-Beats/dp/B0CCRQCSV4/ref=sr_1_15?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-15
+                        - img [ref=e1258]
+                      - generic [ref=e1261]:
+                        - link "Anker Cable [5 Pack, 6FT], USB A to USB C Cable for iPhone 17 Series,Samsung Galaxy S10 S10+, LG V30, Beats Fit Pro and More (Black)" [ref=e1265] [cursor=pointer]:
+                          - /url: /ANKER-Cable-Samsung-Galaxy-Beats/dp/B0CCRQCSV4/ref=sr_1_15?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-15
+                          - heading "Anker Cable [5 Pack, 6FT], USB A to USB C Cable for iPhone 17 Series,Samsung Galaxy S10 S10+, LG V30, Beats Fit Pro and More (Black)" [level=2] [ref=e1266]
+                        - generic [ref=e1267]:
+                          - generic [ref=e1268]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e1270] [cursor=pointer]:
+                              - generic [ref=e1272]: 4.7 out of 5 stars
+                            - link "144,594 ratings" [ref=e1276] [cursor=pointer]:
+                              - /url: /ANKER-Cable-Samsung-Galaxy-Beats/dp/B0CCRQCSV4/ref=sr_1_15?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-15#customerReviews
+                              - text: (144.5K)
+                          - generic [ref=e1277]: 3K+ bought in past month
+                        - generic [ref=e1280]:
+                          - button "Carbon impact" [ref=e1289] [cursor=pointer]:
+                            - generic [ref=e1290]: Carbon impact
+                          - link "See options" [ref=e1298] [cursor=pointer]:
+                            - /url: /ANKER-Cable-Samsung-Galaxy-Beats/dp/B0CCRQCSV4/ref=sr_1_15_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-15
+                          - generic [ref=e1300]:
+                            - text: No featured offers available
+                            - text: INR 1,428.35
+                            - link "(1 new offer)" [ref=e1302] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CCRQCSV4/ref=sr_1_15_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-15
+                  - listitem [ref=e1305]:
+                    - generic [ref=e1311]:
+                      - generic [ref=e1313]:
+                        - group "Best Sellerin USB Cables" [ref=e1319]:
+                          - generic "Best Seller" [ref=e1321]
+                        - link [ref=e1325] [cursor=pointer]:
+                          - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NLK5P5/ref=sr_1_16?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-16
+                          - img [ref=e1327]
+                      - generic [ref=e1330]:
+                        - link "Anker USB C to USB C Cable, Type-C 60W Fast Charging Cable (6 FT, 2Pack) for iPhone 17 Series, iPad mini 6 and More (Red)" [ref=e1334] [cursor=pointer]:
+                          - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NLK5P5/ref=sr_1_16?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-16
+                          - heading "Anker USB C to USB C Cable, Type-C 60W Fast Charging Cable (6 FT, 2Pack) for iPhone 17 Series, iPad mini 6 and More (Red)" [level=2] [ref=e1335]
+                        - generic [ref=e1336]:
+                          - generic [ref=e1337]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e1339] [cursor=pointer]:
+                              - generic [ref=e1341]: 4.7 out of 5 stars
+                            - link "83,263 ratings" [ref=e1345] [cursor=pointer]:
+                              - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NLK5P5/ref=sr_1_16?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-16#customerReviews
+                              - text: (83.2K)
+                          - generic [ref=e1346]: 4K+ bought in past month
+                        - generic [ref=e1349]:
+                          - button "Carbon impact" [ref=e1358] [cursor=pointer]:
+                            - generic [ref=e1359]: Carbon impact
+                          - link "See options" [ref=e1367] [cursor=pointer]:
+                            - /url: /Anker-Charging-MacBook-Galaxy-Charger/dp/B088NLK5P5/ref=sr_1_16_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-16
+                          - generic [ref=e1369]:
+                            - text: No featured offers available
+                            - text: INR 1,237.78
+                            - link "(1 new offer)" [ref=e1371] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B088NLK5P5/ref=sr_1_16_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-16
+                  - listitem [ref=e1374]:
+                    - generic [ref=e1382]:
+                      - link [ref=e1388] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMDAzMTY5NjE4NTgwMjo6MDo6&url=%2FRUITEXUN-Barrel-Adapter-Connector-Charging%2Fdp%2FB0BBBD6N3T%2Fref%3Dsr_1_17_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1390]
+                      - generic [ref=e1393]:
+                        - generic [ref=e1394]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1397] [cursor=pointer]:
+                            - generic [ref=e1398]: Sponsored
+                          - link "Sponsored Ad - USB to DC 2.0mm Cable 1m/3.3ft, USB Type A Male to DC 2.0mm x 0.6mm 5V DC Barrel Jack Power Adapter Connector Charging Cable" [ref=e1402] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMDAzMTY5NjE4NTgwMjo6MDo6&url=%2FRUITEXUN-Barrel-Adapter-Connector-Charging%2Fdp%2FB0BBBD6N3T%2Fref%3Dsr_1_17_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - USB to DC 2.0mm Cable 1m/3.3ft, USB Type A Male to DC 2.0mm x 0.6mm 5V DC Barrel Jack Power Adapter Connector Charging Cable" [level=2] [ref=e1403]: USB to DC 2.0mm Cable 1m/3.3ft, USB Type A Male to DC 2.0mm x 0.6mm 5V DC Barrel Jack Power Adapter Connector Charging Cable
+                        - generic [ref=e1405]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1407] [cursor=pointer]:
+                            - generic [ref=e1409]: 4.1 out of 5 stars
+                          - link "29 ratings" [ref=e1413] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMDAzMTY5NjE4NTgwMjo6MDo6&url=%2FRUITEXUN-Barrel-Adapter-Connector-Charging%2Fdp%2FB0BBBD6N3T%2Fref%3Dsr_1_17_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                            - text: (29)
+                        - link "See options" [ref=e1425] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfbXRmOjMwMDAzMTY5NjE4NTgwMjo6MDo6&url=%2FRUITEXUN-Barrel-Adapter-Connector-Charging%2Fdp%2FB0BBBD6N3T%2Fref%3Dsr_1_17_so_ELECTRONIC_CABLE%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                  - listitem [ref=e1428]:
+                    - generic [ref=e1434]:
+                      - link [ref=e1440] [cursor=pointer]:
+                        - /url: /Anker-Premium-Lightning-Certified-Chargers/dp/B07D9C8NP2/ref=sr_1_18?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-18
+                        - img [ref=e1442]
+                      - generic [ref=e1445]:
+                        - link "Anker 6 ft Premium Double-Braided Nylon Lightning Cable, Apple MFi Certified for iPhone Chargers, iPhone X/8/8 Plus/7/7 Plus/6/6 Plus/5s, iPad, iPad mini, and More (Black)" [ref=e1449] [cursor=pointer]:
+                          - /url: /Anker-Premium-Lightning-Certified-Chargers/dp/B07D9C8NP2/ref=sr_1_18?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-18
+                          - heading "Anker 6 ft Premium Double-Braided Nylon Lightning Cable, Apple MFi Certified for iPhone Chargers, iPhone X/8/8 Plus/7/7 Plus/6/6 Plus/5s, iPad, iPad mini, and More (Black)" [level=2] [ref=e1450]
+                        - generic [ref=e1451]:
+                          - generic [ref=e1452]:
+                            - text: "4.7"
+                            - button "4.7 out of 5 stars, rating details" [ref=e1454] [cursor=pointer]:
+                              - generic [ref=e1456]: 4.7 out of 5 stars
+                            - link "113,069 ratings" [ref=e1460] [cursor=pointer]:
+                              - /url: /Anker-Premium-Lightning-Certified-Chargers/dp/B07D9C8NP2/ref=sr_1_18?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-18#customerReviews
+                              - text: (113K)
+                          - generic [ref=e1461]: 3K+ bought in past month
+                        - generic [ref=e1464]:
+                          - link "See options" [ref=e1473] [cursor=pointer]:
+                            - /url: /Anker-Premium-Lightning-Certified-Chargers/dp/B07D9C8NP2/ref=sr_1_18_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-18
+                          - generic [ref=e1475]:
+                            - text: No featured offers available
+                            - text: INR 1,942.90
+                            - link "(11 used & new offers)" [ref=e1477] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B07D9C8NP2/ref=sr_1_18_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-18
+                  - listitem [ref=e1480]:
+                    - generic [ref=e1486]:
+                      - link [ref=e1492] [cursor=pointer]:
+                        - /url: /AmazonBasics-Nylon-Braided-Lightning-Cable/dp/B082T6DHB6/ref=sr_1_19?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-19
+                        - img [ref=e1494]
+                      - generic [ref=e1497]:
+                        - link "Amazon Basics USB-A to Lightning Cable, Apple MFi Certified, Nylon Braided Cord, Fast Charging, Durable, Sturdy, 3 Foot, Dark Gray" [ref=e1501] [cursor=pointer]:
+                          - /url: /AmazonBasics-Nylon-Braided-Lightning-Cable/dp/B082T6DHB6/ref=sr_1_19?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-19
+                          - heading "Amazon Basics USB-A to Lightning Cable, Apple MFi Certified, Nylon Braided Cord, Fast Charging, Durable, Sturdy, 3 Foot, Dark Gray" [level=2] [ref=e1502]
+                        - generic [ref=e1503]:
+                          - generic [ref=e1504]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1506] [cursor=pointer]:
+                              - generic [ref=e1508]: 4.6 out of 5 stars
+                            - link "77,648 ratings" [ref=e1512] [cursor=pointer]:
+                              - /url: /AmazonBasics-Nylon-Braided-Lightning-Cable/dp/B082T6DHB6/ref=sr_1_19?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-19#customerReviews
+                              - text: (77.6K)
+                          - generic [ref=e1513]: 1K+ bought in past month
+                        - generic [ref=e1516]:
+                          - generic [ref=e1519]:
+                            - generic [ref=e1520]: Price, product page
+                            - link "INR 1,199.66" [ref=e1521] [cursor=pointer]:
+                              - /url: /AmazonBasics-Nylon-Braided-Lightning-Cable/dp/B082T6DHB6/ref=sr_1_19?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-19
+                              - generic [ref=e1522]:
+                                - generic [ref=e1523]: INR 1,199.66
+                                - generic [ref=e1524]:
+                                  - text: INR
+                                  - generic [ref=e1525]:
+                                    - text: 1,199
+                                    - generic [ref=e1526]: .
+                                  - text: "66"
+                          - generic [ref=e1527]:
+                            - generic [ref=e1533]: INR 877.59 delivery Fri, Jul 3
+                            - generic [ref=e1534]: Ships to India
+                          - button "Add to cart" [ref=e1549] [cursor=pointer]
+                          - generic [ref=e1551]:
+                            - text: More Buying Choices
+                            - text: INR 1,099.61
+                            - link "(2+ used & new offers)" [ref=e1553] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B082T6DHB6/ref=sr_1_19_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-19
+                  - listitem [ref=e1556]:
+                    - generic [ref=e1562]:
+                      - link [ref=e1568] [cursor=pointer]:
+                        - /url: /Anker-Lightning-Certified-Charging-Included/dp/B0BQQDS3KX/ref=sr_1_20?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-20
+                        - img [ref=e1570]
+                      - generic [ref=e1573]:
+                        - link "Anker 310 USB C to Lightning Cable(6FT,2Pack, Black), MFi Certified for iPhone 14 Series, and More(Charger Not Included)" [ref=e1577] [cursor=pointer]:
+                          - /url: /Anker-Lightning-Certified-Charging-Included/dp/B0BQQDS3KX/ref=sr_1_20?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-20
+                          - heading "Anker 310 USB C to Lightning Cable(6FT,2Pack, Black), MFi Certified for iPhone 14 Series, and More(Charger Not Included)" [level=2] [ref=e1578]
+                        - generic [ref=e1579]:
+                          - generic [ref=e1580]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1582] [cursor=pointer]:
+                              - generic [ref=e1584]: 4.5 out of 5 stars
+                            - link "6,644 ratings" [ref=e1588] [cursor=pointer]:
+                              - /url: /Anker-Lightning-Certified-Charging-Included/dp/B0BQQDS3KX/ref=sr_1_20?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-20#customerReviews
+                              - text: (6.6K)
+                          - generic [ref=e1589]: 2K+ bought in past month
+                        - generic [ref=e1592]:
+                          - link "See options" [ref=e1601] [cursor=pointer]:
+                            - /url: /Anker-Lightning-Certified-Charging-Included/dp/B0BQQDS3KX/ref=sr_1_20_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-20
+                          - generic [ref=e1603]:
+                            - text: No featured offers available
+                            - text: INR 1,752.33
+                            - link "(2 used & new offers)" [ref=e1605] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0BQQDS3KX/ref=sr_1_20_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-20
+                  - listitem [ref=e1608]:
+                    - generic [ref=e1614]:
+                      - link [ref=e1620] [cursor=pointer]:
+                        - /url: /Anker-Charging-iPhone-MacBook-Braided/dp/B0DGLJWBC6/ref=sr_1_21?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-21
+                        - img [ref=e1622]
+                      - generic [ref=e1625]:
+                        - link "Anker Cable,6FT 2-in-1 USB C to USB C Cable 140W Max,Fast Charging for iPhone 17/17 Pro Max/16 Series,MacBook Air/Pro,and More(Braided,Black)" [ref=e1629] [cursor=pointer]:
+                          - /url: /Anker-Charging-iPhone-MacBook-Braided/dp/B0DGLJWBC6/ref=sr_1_21?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-21
+                          - heading "Anker Cable,6FT 2-in-1 USB C to USB C Cable 140W Max,Fast Charging for iPhone 17/17 Pro Max/16 Series,MacBook Air/Pro,and More(Braided,Black)" [level=2] [ref=e1630]
+                        - generic [ref=e1631]:
+                          - generic [ref=e1632]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1634] [cursor=pointer]:
+                              - generic [ref=e1636]: 4.6 out of 5 stars
+                            - link "3,106 ratings" [ref=e1640] [cursor=pointer]:
+                              - /url: /Anker-Charging-iPhone-MacBook-Braided/dp/B0DGLJWBC6/ref=sr_1_21?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-21#customerReviews
+                              - text: (3.1K)
+                          - generic [ref=e1641]: 1K+ bought in past month
+                        - generic [ref=e1644]:
+                          - button "Carbon impact" [ref=e1653] [cursor=pointer]:
+                            - generic [ref=e1654]: Carbon impact
+                          - link "See options" [ref=e1662] [cursor=pointer]:
+                            - /url: /Anker-Charging-iPhone-MacBook-Braided/dp/B0DGLJWBC6/ref=sr_1_21_so_ELECTRONIC_CABLE?crid=3TAUBREW220M5&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&dib_tag=se&keywords=USB+Cable&qid=1781164264&sprefix=usb+cable%2Caps%2C848&sr=8-21
+                          - generic [ref=e1664]:
+                            - text: No featured offers available
+                            - text: INR 1,523.64
+                            - link "(4 used & new offers)" [ref=e1666] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0DGLJWBC6/ref=sr_1_21_olp?keywords=USB+Cable&crid=3TAUBREW220M5&sprefix=usb+cable%2Caps%2C848&dib_tag=se&dib=eyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k&qid=1781164264&sr=8-21
+                  - listitem [ref=e1669]:
+                    - generic [ref=e1677]:
+                      - link [ref=e1683] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYnRmOjMwMTMyMDU0MzMwNTIwMjo6MDo6&url=%2FCharging-Retractable-Charger-iPhone-Accessories%2Fdp%2FB0GZNTCRQP%2Fref%3Dsr_1_22_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                        - img [ref=e1685]
+                      - generic [ref=e1688]:
+                        - generic [ref=e1689]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1692] [cursor=pointer]:
+                            - generic [ref=e1693]: Sponsored
+                          - link "Sponsored Ad - 100W Multi Charging Cable, 3 in 2 Retractable Charging Cable, Retractable Car Fast Charger Cord with Type C/L/Micro USB Ports for iPhone 17 16 15 14 Pro Max, S24/S23, MBook,Car Accessories for Women" [ref=e1697] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYnRmOjMwMTMyMDU0MzMwNTIwMjo6MDo6&url=%2FCharging-Retractable-Charger-iPhone-Accessories%2Fdp%2FB0GZNTCRQP%2Fref%3Dsr_1_22_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                            - heading "Sponsored Ad - 100W Multi Charging Cable, 3 in 2 Retractable Charging Cable, Retractable Car Fast Charger Cord with Type C/L/Micro USB Ports for iPhone 17 16 15 14 Pro Max, S24/S23, MBook,Car Accessories for Women" [level=2] [ref=e1698]: 100W Multi Charging Cable, 3 in 2 Retractable Charging Cable, Retractable Car Fast Charger Cord with Type C/L/Micro USB Ports for iPhone 17 16 15 14 Pro Max, S24/S23, MBook,Car Accessories for Women
+                        - generic [ref=e1700]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=e1702] [cursor=pointer]:
+                            - generic [ref=e1704]: 4.4 out of 5 stars
+                          - link "459 ratings" [ref=e1708] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYnRmOjMwMTMyMDU0MzMwNTIwMjo6MDo6&url=%2FCharging-Retractable-Charger-iPhone-Accessories%2Fdp%2FB0GZNTCRQP%2Fref%3Dsr_1_22_sspa%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1#customerReviews
+                            - text: (459)
+                        - link "See options" [ref=e1720] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToxOTE4MTU1OTc2MDQ2NTg5OjE3ODExNjQyNjQ6c3BfYnRmOjMwMTMyMDU0MzMwNTIwMjo6MDo6&url=%2FCharging-Retractable-Charger-iPhone-Accessories%2Fdp%2FB0GZNTCRQP%2Fref%3Dsr_1_22_so_ELECTRONIC_CABLE%3Fcrid%3D3TAUBREW220M5%26dib%3DeyJ2IjoiMSJ9.lv7504ingHGu_xrr48wvYIxWXvxm5A5IfCu8tsuxaQGHF86782m3OQydq_talAHoLSOGnOEXci2psYPiX9Ebhm8qNhxMk7JLlO8u6fwd1oGyYw6GUtxDxGwF5skpJS0zSKUeO0fhjbWWyXxGorsETV6eQ-cvG0ljrlNaPAcFPnvvh9UhY0erEuu2JqkcRnvS16KJFHHHB3spnmmQGE6KQqpoLyk-sX7gpw8k0NXDXik.-bZcxAdf0wRm9--zyY6Q_60SitOr4541jGtLQWbzs7k%26dib_tag%3Dse%26keywords%3DUSB%2BCable%26qid%3D1781164264%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+            - generic [ref=e1726]:
+              - generic [ref=e1731]:
+                - heading "Picks from Amazon Influencers" [level=2] [ref=e1733]
+                - generic [ref=e1734]:
+                  - button "View Sponsored information or leave ad feedback" [ref=e1736] [cursor=pointer]: Sponsored
+                  - text: "| From Amazon Influencer storefronts"
+              - region "Picks from Amazon Influencers" [ref=e1738]:
+                - list [ref=e1744]:
+                  - listitem "1 of 4" [ref=e1745]:
+                    - generic [ref=e1751]:
+                      - link [ref=e1754] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NTYxNjk1MzI5MDI6OjE6Og&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=WHaVwT5r7x
+                        - img [ref=e1756]
+                      - generic [ref=e1757]:
+                        - link "Sponsored Ad - MPATIBY Multi Charging Cable, (2 Pack 4FT) Multi USB Charger Cable 3 in 1 Charging Nylon Braided Fast Charging Cord with Type-C, Micro USB, IP Port for Most Phones/iPhones/Tablets" [ref=e1761] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NTYxNjk1MzI5MDI6OjE6Og&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=WHaVwT5r7x
+                          - heading "Sponsored Ad - MPATIBY Multi Charging Cable, (2 Pack 4FT) Multi USB Charger Cable 3 in 1 Charging Nylon Braided Fast Charging Cord with Type-C, Micro USB, IP Port for Most Phones/iPhones/Tablets" [level=2] [ref=e1762]: MPATIBY Multi Charging Cable, (2 Pack 4FT) Multi USB Charger Cable 3 in 1 Charging Nylon Braided Fast Charging Cord with Type-C, Micro USB, IP Port for Most Phones/iPhones/Tablets
+                        - generic [ref=e1763]:
+                          - generic [ref=e1764]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1766] [cursor=pointer]:
+                              - generic [ref=e1768]: 4.5 out of 5 stars
+                            - link "1,490 ratings" [ref=e1772] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NTYxNjk1MzI5MDI6OjE6Og&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=WHaVwT5r7x#customerReviews
+                              - text: (1.4K)
+                          - generic [ref=e1773]: 50+ bought in past month
+                        - link "See options" [ref=e1782] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA2NTYxNjk1MzI5MDI6OjE6Og&url=%2FCharging-Charger-Braided-Lightning-iPhones%2Fdp%2FB0CDBC5N2J%2Fref%3Dsxbs_pa_sp_search_thematic_btf_so_ELECTRONIC_CABLE%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0CDBC5N2J%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-1-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DWHaVwT5r7x%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=WHaVwT5r7x
+                  - listitem "2 of 4" [ref=e1783]:
+                    - generic [ref=e1789]:
+                      - link [ref=e1792] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAwOTQxODY5NDkxMDI6OjI6Og&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=SbhsF6alH3
+                        - img [ref=e1794]
+                      - generic [ref=e1795]:
+                        - link "Sponsored Ad - CableCreation Short Micro USB Cable, USB to Micro USB 24 AWG Triple Shielded Fast Charger Cable, Compatible with PS5/PS4, Raspberry Pi Zero, Chromecast, Phone, 0.5FT/6 inch Black" [ref=e1799] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAwOTQxODY5NDkxMDI6OjI6Og&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=SbhsF6alH3
+                          - heading "Sponsored Ad - CableCreation Short Micro USB Cable, USB to Micro USB 24 AWG Triple Shielded Fast Charger Cable, Compatible with PS5/PS4, Raspberry Pi Zero, Chromecast, Phone, 0.5FT/6 inch Black" [level=2] [ref=e1800]: CableCreation Short Micro USB Cable, USB to Micro USB 24 AWG Triple Shielded Fast Charger Cable, Compatible with PS5/PS4, Raspberry Pi Zero, Chromecast, Phone, 0.5FT/6 inch Black
+                        - generic [ref=e1801]:
+                          - generic [ref=e1802]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1804] [cursor=pointer]:
+                              - generic [ref=e1806]: 4.6 out of 5 stars
+                            - link "8,783 ratings" [ref=e1810] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAwOTQxODY5NDkxMDI6OjI6Og&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=SbhsF6alH3#customerReviews
+                              - text: (8.7K)
+                          - generic [ref=e1811]: 400+ bought in past month
+                        - link "See options" [ref=e1820] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDAwOTQxODY5NDkxMDI6OjI6Og&url=%2FCableCreation-Charger-Compatible-Chromecast-Android%2Fdp%2FB013G4EAEI%2Fref%3Dsxbs_pa_sp_search_thematic_btf_so_ELECTRONIC_CABLE%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB013G4EAEI%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-2-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DSbhsF6alH3%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=SbhsF6alH3
+                  - listitem "3 of 4" [ref=e1821]:
+                    - generic [ref=e1827]:
+                      - link [ref=e1830] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNTk0Nzk5NDI2MDI6OjM6Og&url=%2FQZIIW-iPhone-Charger-Charging-2-Pack%2Fdp%2FB0DZ6JDHHH%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0DZ6JDHHH%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DEbnFTsMVUP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=EbnFTsMVUP
+                        - img [ref=e1832]
+                      - generic [ref=e1833]:
+                        - link "Sponsored Ad - QZIIW iPhone 16 15 Pro Max Charger Fast Charging,45W Dual Port USB C Fast Charger Block [2-Pack] & Extra Long 60W 3/6/10/10FT USB C Cable - PD Quick Adapter 3.0 for iPhone 16 15/16 15Pro/16 15 Plus." [ref=e1837] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNTk0Nzk5NDI2MDI6OjM6Og&url=%2FQZIIW-iPhone-Charger-Charging-2-Pack%2Fdp%2FB0DZ6JDHHH%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0DZ6JDHHH%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DEbnFTsMVUP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=EbnFTsMVUP
+                          - heading "Sponsored Ad - QZIIW iPhone 16 15 Pro Max Charger Fast Charging,45W Dual Port USB C Fast Charger Block [2-Pack] & Extra Long 60W 3/6/10/10FT USB C Cable - PD Quick Adapter 3.0 for iPhone 16 15/16 15Pro/16 15 Plus." [level=2] [ref=e1838]: QZIIW iPhone 16 15 Pro Max Charger Fast Charging,45W Dual Port USB C Fast Charger Block [2-Pack] & Extra Long 60W 3/6/10/10FT USB C Cable - PD Quick Adapter 3.0 for iPhone 16 15/16 15Pro/16 15 Plus.
+                        - generic [ref=e1839]:
+                          - generic [ref=e1840]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1842] [cursor=pointer]:
+                              - generic [ref=e1844]: 4.6 out of 5 stars
+                            - link "5,413 ratings" [ref=e1848] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNTk0Nzk5NDI2MDI6OjM6Og&url=%2FQZIIW-iPhone-Charger-Charging-2-Pack%2Fdp%2FB0DZ6JDHHH%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0DZ6JDHHH%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DEbnFTsMVUP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=EbnFTsMVUP#customerReviews
+                              - text: (5.4K)
+                          - generic [ref=e1849]: 300+ bought in past month
+                        - link "See options" [ref=e1858] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNTk0Nzk5NDI2MDI6OjM6Og&url=%2FQZIIW-iPhone-Charger-Charging-2-Pack%2Fdp%2FB0DZ6JDHHH%2Fref%3Dsxbs_pa_sp_search_thematic_btf_so_CHARGING_ADAPTER%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB0DZ6JDHHH%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-3-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DEbnFTsMVUP%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=EbnFTsMVUP
+                  - listitem "4 of 4" [ref=e1859]:
+                    - generic [ref=e1865]:
+                      - link [ref=e1868] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyOTg3OTY0OTE0MDI6OjQ6Og&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=Nz7Lq7R7lR
+                        - img [ref=e1870]
+                      - generic [ref=e1871]:
+                        - link "Sponsored Ad - JSAUX Micro USB Cable for Android, (2-Pack 6.6FT) Kindle Charger Cord Replacement, Nylon Braided USB Micro Charging Cable Compatible with Galaxy S7 S6 J7 Edge Note 5, Kindle, MP3-Blue" [ref=e1875] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyOTg3OTY0OTE0MDI6OjQ6Og&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=Nz7Lq7R7lR
+                          - heading "Sponsored Ad - JSAUX Micro USB Cable for Android, (2-Pack 6.6FT) Kindle Charger Cord Replacement, Nylon Braided USB Micro Charging Cable Compatible with Galaxy S7 S6 J7 Edge Note 5, Kindle, MP3-Blue" [level=2] [ref=e1876]: JSAUX Micro USB Cable for Android, (2-Pack 6.6FT) Kindle Charger Cord Replacement, Nylon Braided USB Micro Charging Cable Compatible with Galaxy S7 S6 J7 Edge Note 5, Kindle, MP3-Blue
+                        - generic [ref=e1877]:
+                          - generic [ref=e1878]:
+                            - text: "4.6"
+                            - button "4.6 out of 5 stars, rating details" [ref=e1880] [cursor=pointer]:
+                              - generic [ref=e1882]: 4.6 out of 5 stars
+                            - link "34,886 ratings" [ref=e1886] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyOTg3OTY0OTE0MDI6OjQ6Og&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=Nz7Lq7R7lR#customerReviews
+                              - text: (34.8K)
+                          - generic [ref=e1887]: 1K+ bought in past month
+                        - generic [ref=e1890]:
+                          - generic [ref=e1891]: Price, product page
+                          - 'link "INR 694.64 ( INR 52.41 /feet) List: INR 856.63 List: INR 856.63" [ref=e1892] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo3MzQ3ODYzOTgzNjA2NTg4OjE3ODExNjQyNjQ6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyOTg3OTY0OTE0MDI6OjQ6Og&url=%2FAndroid-JSAUX-Charger-Braided-Compatible%2Fdp%2FB07H91JTCD%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%253Aamzn1.sym.3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26crid%3D3TAUBREW220M5%26cv_ct_cx%3DUSB%2BCable%26keywords%3DUSB%2BCable%26pd_rd_i%3DB07H91JTCD%26pd_rd_r%3Dc11be734-6c4f-4b6d-a0a8-f28801c11761%26pd_rd_w%3DYm8ie%26pd_rd_wg%3Dujc1L%26pf_rd_p%3D3b3ab630-25b6-4e2e-83b0-1bdbe008f411%26pf_rd_r%3D2QPWXCSMYPA4XRCENR9A%26qid%3D1781164264%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dusb%2Bcable%252Caps%252C848%26sr%3D1-4-fb395260-7243-4e30-82ce-3176e35831b6-spons%26aref%3DNz7Lq7R7lR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=Nz7Lq7R7lR
+                            - generic [ref=e1893]:
+                              - generic [ref=e1894]: INR 694.64
+                              - generic [ref=e1895]:
+                                - text: INR
+                                - generic [ref=e1896]:
+                                  - text: "694"
+                                  - generic [ref=e1897]: .
+                                - text: "64"
+                            - generic [ref=e1898]:
+                              - text: (
+                              - generic [ref=e1899]:
+                                - generic [ref=e1900]: INR 52.41
+                                - text: INR52.41
+                              - text: /feet)
+                            - generic [ref=e1901]: "List: INR 856.63"
+                            - generic [ref=e1902]:
+                              - text: "List:"
+                              - generic [ref=e1903]:
+                                - generic [ref=e1904]: INR 856.63
+                                - text: INR856.63
+                        - generic [ref=e1912]: INR 909.99 delivery Fri, Jul 3
+                        - button "Recycled materials +2 more" [ref=e1919] [cursor=pointer]:
+                          - generic [ref=e1920]: Recycled materials +2 more
+                        - button "Add to cart" [ref=e1936] [cursor=pointer]
+            - generic [ref=e1942]:
+              - generic "Related searches in USB Cable" [ref=e1943]:
+                - heading "Related searches" [level=2] [ref=e1946]
+              - list [ref=e1948]:
+                - generic [ref=e1949]:
+                  - link "usb" [ref=e1950] [cursor=pointer]:
+                    - /url: /s?k=usb&ref=rsl_sug_0_0&pd_rd_w=KTdAm&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=ujc1L&pd_rd_r=c11be734-6c4f-4b6d-a0a8-f28801c11761&qid=1781164264
+                    - listitem [ref=e1951]:
+                      - generic [ref=e1957]: usb
+                  - link "micro usb cable" [ref=e1958] [cursor=pointer]:
+                    - /url: /s?k=micro+usb+cable&ref=rsl_sug_0_3&pd_rd_w=KTdAm&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=ujc1L&pd_rd_r=c11be734-6c4f-4b6d-a0a8-f28801c11761&qid=1781164264
+                    - listitem [ref=e1959]:
+                      - generic [ref=e1965]: micro usb cable
+                - generic [ref=e1966]:
+                  - link "usb c cable" [ref=e1967] [cursor=pointer]:
+                    - /url: /s?k=usb+c+cable&ref=rsl_sug_0_1&pd_rd_w=KTdAm&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=ujc1L&pd_rd_r=c11be734-6c4f-4b6d-a0a8-f28801c11761&qid=1781164264
+                    - listitem [ref=e1968]:
+                      - generic [ref=e1974]: usb c cable
+                  - link "usb charger" [ref=e1975] [cursor=pointer]:
+                    - /url: /s?k=usb+charger&ref=rsl_sug_0_4&pd_rd_w=KTdAm&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=ujc1L&pd_rd_r=c11be734-6c4f-4b6d-a0a8-f28801c11761&qid=1781164264
+                    - listitem [ref=e1976]:
+                      - generic [ref=e1982]: usb charger
+                - generic [ref=e1983]:
+                  - link "usb a cable" [ref=e1984] [cursor=pointer]:
+                    - /url: /s?k=usb+a+cable&ref=rsl_sug_0_2&pd_rd_w=KTdAm&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=ujc1L&pd_rd_r=c11be734-6c4f-4b6d-a0a8-f28801c11761&qid=1781164264
+                    - listitem [ref=e1985]:
+                      - generic [ref=e1991]: usb a cable
+                  - link "usb extension cable" [ref=e1992] [cursor=pointer]:
+                    - /url: /s?k=usb+extension+cable&ref=rsl_sug_0_5&pd_rd_w=KTdAm&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=ujc1L&pd_rd_r=c11be734-6c4f-4b6d-a0a8-f28801c11761&qid=1781164264
+                    - listitem [ref=e1993]:
+                      - generic [ref=e1999]: usb extension cable
+            - navigation "pagination" [ref=e2002]:
+              - list [ref=e2004]:
+                - listitem [ref=e2005]:
+                  - button "Previous" [disabled] [ref=e2007]:
+                    - img [ref=e2008]
+                    - text: Previous
+                - listitem [ref=e2010]:
+                  - button "Page 1" [ref=e2012]: "1"
+                - listitem [ref=e2013]:
+                  - button "Go to page 2" [ref=e2015] [cursor=pointer]: "2"
+                - listitem [ref=e2016]:
+                  - button "Go to page 3" [ref=e2018] [cursor=pointer]: "3"
+                - button [disabled] [ref=e2019]:
+                  - img [ref=e2020]: ...
+                - button "20" [disabled] [ref=e2022]
+                - listitem [ref=e2023]:
+                  - button "Go to next page, page 2" [ref=e2025] [cursor=pointer]:
+                    - text: Next
+                    - img [ref=e2026]
+            - generic [ref=e2030]:
+              - generic [ref=e2031]:
+                - heading "Brands related to your search" [ref=e2032]
+                - button "Leave feedback on Sponsored ad" [ref=e2037] [cursor=pointer]: Sponsored
+              - list [ref=e2042]:
+                - listitem [ref=e2043]:
+                  - generic [ref=e2044]:
+                    - link [ref=e2045] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHmVf9nG8KaY3LKF0H2C8o8AAAGetanNOwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDHVVMM/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaPTlyK503Cl69XdM3WG1LXqdSeb-jsM1UZZ1QbXu_H9H5z2ztZL1LyXWXxi0hMzME_Y6mFkhJqzQo-qhfmX969OE054uE4zqKGjehjZxTT7A3saxH4tQCy2pf7o9eoBtXpUIB0zzyCmKZ_223ARO5GgZF8snW0Yigvon1co1Nbf0ZLGGT3uwSTYH6CGUsrgQ6quFdgAbeXiPRRBwv7wRE8vY5dexAl9D3WWZp8qZhtBg8cP_fmukiq2LqxPMN8YqoVcUPMdKWXnnm-xyY6LMo_31rGSCVUqkiHOjvOMtsIs-IHsTPf-vHZgX8dbWFstOU5lU9HdAmhU6NuRSm3N6z6AzFIH4wASD7Yz1FAcCgcFy9alNC5rQmlXPFjCmMj2qcCxGVkou5dGV8VjX08TS4-VIyvcHOV3JrHOzsFVHHJrmX-BQwuA57NpfEUjq3_4X5eXq27mIbYqVCVb2YoWQ70WkB3vxW5Nv5zQVAh65IbRTf9X-qK07Op4Xi-1QP49aA4bnHjBGIU7CLdafLcJr7RtWGBY7R9NEh74texwNEH64Gof00pnu1lzSHIEl6TCMuij_DvkojdYCdQ0dqNbcNR_o-YgRfJGuuQdKbIP_AFmbJ0UulYH_sVw7l5McWnDEUUCr5vy3U84xr0wZLY5iYvNKsTCffK0OQ4P83Zw3gS0HzBx6Aahnhv5Jv0eE_9fT4AL0nxyXUb-ur8ZpUZae4IxEbdqIoRAr4OeOSX4JkE13sBUvTIEobajKqmOD8HEKMzE10-pB1852CXrmCNhINDyfZ_wnT2DKs_NtT3PQ_2AwwXsvib0JpXbwnazHVWLvGDUcX3X8FG0E8cjvNvgN6ECD3Q_DqE_h6GO6V5RErvnWOk2rFE2ExFFJUCphwa9L8ZwKIWAJJg5RLUVbOA9gDRLjp1_h1qrB5pWxbjZgRHumPagNDpLnXH6eumpw31aJwHdjzRNV3F2430pwCIW73eM9UAK-M7JpS4UEBgZpD6YDe3cfvFVyfAUrZPk2J3Y11wU7CUhOgHyVXKdC3C5KtMQy7Ym-UVqnXeUPdGsHaPJqcY6Fm-zUh1DswdupFSorjhMXl8YF-cWgGhxHNoZ9A2OTUUiW3C9h3RK-aohTtiBRpGFayesWPzc_nq7PeF6HW6RAAz6pCh42T4Zq8O6pqeiteF_SlFHbsu2-PZy_VodVahJYLrSIWUYCvPa4rfDwYoiSvXeZjw3883O-vV3u1FJaIeBQHaIH-9GAiSqZZgOt5USvofmlFKwGCK9GYm7p3L3UmVwtW6U-tTKKTNxgRmIHceNquDVvMqChQ6pNWgY9KBQQDgAdMk94C8SDfnWR-8sdhT7wxBroGDkQWyEaOOY-I2COmLSJo-p8fW7tgOKtMZARaRqAVAq0NA5YigBNwgbicZ_lE7csxGXA_-WRQsx3oZHm99E1mKNV-EsLUMsXOG5kOFepmVqSHnETGYTd7DJkUGn1ytSEgfvtiGTGgdUplEQXycHRESDP0ksOnrHxee9o6nacBjIEcWHfA1qoGx7_jcyzdWBbAvYMGuZOrLHqgI8kwjQIGdXLWgsl75XyDpqWG0ojGpnjg-fycD0kb9AnjUa-yksWOR8QR-urYmF9CkrcTqcJ5oTcqjSdri7tgJsbHuwR61kyaG/https://www.amazon.com/stores/page/145D2044-6FDB-4BB1-951F-280015F3A209/?_encoding=UTF8&store_ref=SB_A01811672ZLCY83LWAVAQ-A02978013RAV50WAXKONG&pd_rd_plhdr=t&aaxitk=19044d1fd64739396c8b13a70283b227&hsa_cr_id=0&lp_asins=B00HWHO9F6%2CB01BIE3OCC%2CB01LXE36SJ&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from PWR+. \"Printer Cable Long USB Cord.\" Shop PWR+." [ref=e2046] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHmVf9nG8KaY3LKF0H2C8o8AAAGetanNOwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDHVVMM/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaPTlyK503Cl69XdM3WG1LXqdSeb-jsM1UZZ1QbXu_H9H5z2ztZL1LyXWXxi0hMzME_Y6mFkhJqzQo-qhfmX969OE054uE4zqKGjehjZxTT7A3saxH4tQCy2pf7o9eoBtXpUIB0zzyCmKZ_223ARO5GgZF8snW0Yigvon1co1Nbf0ZLGGT3uwSTYH6CGUsrgQ6quFdgAbeXiPRRBwv7wRE8vY5dexAl9D3WWZp8qZhtBg8cP_fmukiq2LqxPMN8YqoVcUPMdKWXnnm-xyY6LMo_31rGSCVUqkiHOjvOMtsIs-IHsTPf-vHZgX8dbWFstOU5lU9HdAmhU6NuRSm3N6z6AzFIH4wASD7Yz1FAcCgcFy9alNC5rQmlXPFjCmMj2qcCxGVkou5dGV8VjX08TS4-VIyvcHOV3JrHOzsFVHHJrmX-BQwuA57NpfEUjq3_4X5eXq27mIbYqVCVb2YoWQ70WkB3vxW5Nv5zQVAh65IbRTf9X-qK07Op4Xi-1QP49aA4bnHjBGIU7CLdafLcJr7RtWGBY7R9NEh74texwNEH64Gof00pnu1lzSHIEl6TCMuij_DvkojdYCdQ0dqNbcNR_o-YgRfJGuuQdKbIP_AFmbJ0UulYH_sVw7l5McWnDEUUCr5vy3U84xr0wZLY5iYvNKsTCffK0OQ4P83Zw3gS0HzBx6Aahnhv5Jv0eE_9fT4AL0nxyXUb-ur8ZpUZae4IxEbdqIoRAr4OeOSX4JkE13sBUvTIEobajKqmOD8HEKMzE10-pB1852CXrmCNhINDyfZ_wnT2DKs_NtT3PQ_2AwwXsvib0JpXbwnazHVWLvGDUcX3X8FG0E8cjvNvgN6ECD3Q_DqE_h6GO6V5RErvnWOk2rFE2ExFFJUCphwa9L8ZwKIWAJJg5RLUVbOA9gDRLjp1_h1qrB5pWxbjZgRHumPagNDpLnXH6eumpw31aJwHdjzRNV3F2430pwCIW73eM9UAK-M7JpS4UEBgZpD6YDe3cfvFVyfAUrZPk2J3Y11wU7CUhOgHyVXKdC3C5KtMQy7Ym-UVqnXeUPdGsHaPJqcY6Fm-zUh1DswdupFSorjhMXl8YF-cWgGhxHNoZ9A2OTUUiW3C9h3RK-aohTtiBRpGFayesWPzc_nq7PeF6HW6RAAz6pCh42T4Zq8O6pqeiteF_SlFHbsu2-PZy_VodVahJYLrSIWUYCvPa4rfDwYoiSvXeZjw3883O-vV3u1FJaIeBQHaIH-9GAiSqZZgOt5USvofmlFKwGCK9GYm7p3L3UmVwtW6U-tTKKTNxgRmIHceNquDVvMqChQ6pNWgY9KBQQDgAdMk94C8SDfnWR-8sdhT7wxBroGDkQWyEaOOY-I2COmLSJo-p8fW7tgOKtMZARaRqAVAq0NA5YigBNwgbicZ_lE7csxGXA_-WRQsx3oZHm99E1mKNV-EsLUMsXOG5kOFepmVqSHnETGYTd7DJkUGn1ytSEgfvtiGTGgdUplEQXycHRESDP0ksOnrHxee9o6nacBjIEcWHfA1qoGx7_jcyzdWBbAvYMGuZOrLHqgI8kwjQIGdXLWgsl75XyDpqWG0ojGpnjg-fycD0kb9AnjUa-yksWOR8QR-urYmF9CkrcTqcJ5oTcqjSdri7tgJsbHuwR61kyaG/https://www.amazon.com/stores/page/145D2044-6FDB-4BB1-951F-280015F3A209/?_encoding=UTF8&store_ref=SB_A01811672ZLCY83LWAVAQ-A02978013RAV50WAXKONG&pd_rd_plhdr=t&aaxitk=19044d1fd64739396c8b13a70283b227&hsa_cr_id=0&lp_asins=B00HWHO9F6%2CB01BIE3OCC%2CB01LXE36SJ&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_asin&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                          - img "Sponsored ad from PWR+. \"Printer Cable Long USB Cord.\" Shop PWR+." [ref=e2047]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHmVf9nG8KaY3LKF0H2C8o8AAAGetanNOwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDHVVMM/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaPTlyK503Cl69XdM3WG1LXqdSeb-jsM1UZZ1QbXu_H9H5z2ztZL1LyXWXxi0hMzME_Y6mFkhJqzQo-qhfmX969OE054uE4zqKGjehjZxTT7A3saxH4tQCy2pf7o9eoBtXpUIB0zzyCmKZ_223ARO5GgZF8snW0Yigvon1co1Nbf0ZLGGT3uwSTYH6CGUsrgQ6quFdgAbeXiPRRBwv7wRE8vY5dexAl9D3WWZp8qZhtBg8cP_fmukiq2LqxPMN8YqoVcUPMdKWXnnm-xyY6LMo_31rGSCVUqkiHOjvOMtsIs-IHsTPf-vHZgX8dbWFstOU5lU9HdAmhU6NuRSm3N6z6AzFIH4wASD7Yz1FAcCgcFy9alNC5rQmlXPFjCmMj2qcCxGVkou5dGV8VjX08TS4-VIyvcHOV3JrHOzsFVHHJrmX-BQwuA57NpfEUjq3_4X5eXq27mIbYqVCVb2YoWQ70WkB3vxW5Nv5zQVAh65IbRTf9X-qK07Op4Xi-1QP49aA4bnHjBGIU7CLdafLcJr7RtWGBY7R9NEh74texwNEH64Gof00pnu1lzSHIEl6TCMuij_DvkojdYCdQ0dqNbcNR_o-YgRfJGuuQdKbIP_AFmbJ0UulYH_sVw7l5McWnDEUUCr5vy3U84xr0wZLY5iYvNKsTCffK0OQ4P83Zw3gS0HzBx6Aahnhv5Jv0eE_9fT4AL0nxyXUb-ur8ZpUZae4IxEbdqIoRAr4OeOSX4JkE13sBUvTIEobajKqmOD8HEKMzE10-pB1852CXrmCNhINDyfZ_wnT2DKs_NtT3PQ_2AwwXsvib0JpXbwnazHVWLvGDUcX3X8FG0E8cjvNvgN6ECD3Q_DqE_h6GO6V5RErvnWOk2rFE2ExFFJUCphwa9L8ZwKIWAJJg5RLUVbOA9gDRLjp1_h1qrB5pWxbjZgRHumPagNDpLnXH6eumpw31aJwHdjzRNV3F2430pwCIW73eM9UAK-M7JpS4UEBgZpD6YDe3cfvFVyfAUrZPk2J3Y11wU7CUhOgHyVXKdC3C5KtMQy7Ym-UVqnXeUPdGsHaPJqcY6Fm-zUh1DswdupFSorjhMXl8YF-cWgGhxHNoZ9A2OTUUiW3C9h3RK-aohTtiBRpGFayesWPzc_nq7PeF6HW6RAAz6pCh42T4Zq8O6pqeiteF_SlFHbsu2-PZy_VodVahJYLrSIWUYCvPa4rfDwYoiSvXeZjw3883O-vV3u1FJaIeBQHaIH-9GAiSqZZgOt5USvofmlFKwGCK9GYm7p3L3UmVwtW6U-tTKKTNxgRmIHceNquDVvMqChQ6pNWgY9KBQQDgAdMk94C8SDfnWR-8sdhT7wxBroGDkQWyEaOOY-I2COmLSJo-p8fW7tgOKtMZARaRqAVAq0NA5YigBNwgbicZ_lE7csxGXA_-WRQsx3oZHm99E1mKNV-EsLUMsXOG5kOFepmVqSHnETGYTd7DJkUGn1ytSEgfvtiGTGgdUplEQXycHRESDP0ksOnrHxee9o6nacBjIEcWHfA1qoGx7_jcyzdWBbAvYMGuZOrLHqgI8kwjQIGdXLWgsl75XyDpqWG0ojGpnjg-fycD0kb9AnjUa-yksWOR8QR-urYmF9CkrcTqcJ5oTcqjSdri7tgJsbHuwR61kyaG/https://www.amazon.com/stores/page/145D2044-6FDB-4BB1-951F-280015F3A209/?_encoding=UTF8&store_ref=SB_A01811672ZLCY83LWAVAQ-A02978013RAV50WAXKONG&pd_rd_plhdr=t&aaxitk=19044d1fd64739396c8b13a70283b227&hsa_cr_id=0&lp_asins=B00HWHO9F6%2CB01BIE3OCC%2CB01LXE36SJ&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                          - generic:
+                            - generic:
+                              - link "PWR+" [ref=e2048] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHmVf9nG8KaY3LKF0H2C8o8AAAGetanNOwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDHVVMM/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaPTlyK503Cl69XdM3WG1LXqdSeb-jsM1UZZ1QbXu_H9H5z2ztZL1LyXWXxi0hMzME_Y6mFkhJqzQo-qhfmX969OE054uE4zqKGjehjZxTT7A3saxH4tQCy2pf7o9eoBtXpUIB0zzyCmKZ_223ARO5GgZF8snW0Yigvon1co1Nbf0ZLGGT3uwSTYH6CGUsrgQ6quFdgAbeXiPRRBwv7wRE8vY5dexAl9D3WWZp8qZhtBg8cP_fmukiq2LqxPMN8YqoVcUPMdKWXnnm-xyY6LMo_31rGSCVUqkiHOjvOMtsIs-IHsTPf-vHZgX8dbWFstOU5lU9HdAmhU6NuRSm3N6z6AzFIH4wASD7Yz1FAcCgcFy9alNC5rQmlXPFjCmMj2qcCxGVkou5dGV8VjX08TS4-VIyvcHOV3JrHOzsFVHHJrmX-BQwuA57NpfEUjq3_4X5eXq27mIbYqVCVb2YoWQ70WkB3vxW5Nv5zQVAh65IbRTf9X-qK07Op4Xi-1QP49aA4bnHjBGIU7CLdafLcJr7RtWGBY7R9NEh74texwNEH64Gof00pnu1lzSHIEl6TCMuij_DvkojdYCdQ0dqNbcNR_o-YgRfJGuuQdKbIP_AFmbJ0UulYH_sVw7l5McWnDEUUCr5vy3U84xr0wZLY5iYvNKsTCffK0OQ4P83Zw3gS0HzBx6Aahnhv5Jv0eE_9fT4AL0nxyXUb-ur8ZpUZae4IxEbdqIoRAr4OeOSX4JkE13sBUvTIEobajKqmOD8HEKMzE10-pB1852CXrmCNhINDyfZ_wnT2DKs_NtT3PQ_2AwwXsvib0JpXbwnazHVWLvGDUcX3X8FG0E8cjvNvgN6ECD3Q_DqE_h6GO6V5RErvnWOk2rFE2ExFFJUCphwa9L8ZwKIWAJJg5RLUVbOA9gDRLjp1_h1qrB5pWxbjZgRHumPagNDpLnXH6eumpw31aJwHdjzRNV3F2430pwCIW73eM9UAK-M7JpS4UEBgZpD6YDe3cfvFVyfAUrZPk2J3Y11wU7CUhOgHyVXKdC3C5KtMQy7Ym-UVqnXeUPdGsHaPJqcY6Fm-zUh1DswdupFSorjhMXl8YF-cWgGhxHNoZ9A2OTUUiW3C9h3RK-aohTtiBRpGFayesWPzc_nq7PeF6HW6RAAz6pCh42T4Zq8O6pqeiteF_SlFHbsu2-PZy_VodVahJYLrSIWUYCvPa4rfDwYoiSvXeZjw3883O-vV3u1FJaIeBQHaIH-9GAiSqZZgOt5USvofmlFKwGCK9GYm7p3L3UmVwtW6U-tTKKTNxgRmIHceNquDVvMqChQ6pNWgY9KBQQDgAdMk94C8SDfnWR-8sdhT7wxBroGDkQWyEaOOY-I2COmLSJo-p8fW7tgOKtMZARaRqAVAq0NA5YigBNwgbicZ_lE7csxGXA_-WRQsx3oZHm99E1mKNV-EsLUMsXOG5kOFepmVqSHnETGYTd7DJkUGn1ytSEgfvtiGTGgdUplEQXycHRESDP0ksOnrHxee9o6nacBjIEcWHfA1qoGx7_jcyzdWBbAvYMGuZOrLHqgI8kwjQIGdXLWgsl75XyDpqWG0ojGpnjg-fycD0kb9AnjUa-yksWOR8QR-urYmF9CkrcTqcJ5oTcqjSdri7tgJsbHuwR61kyaG/https://www.amazon.com/stores/page/145D2044-6FDB-4BB1-951F-280015F3A209/?_encoding=UTF8&store_ref=SB_A01811672ZLCY83LWAVAQ-A02978013RAV50WAXKONG&pd_rd_plhdr=t&aaxitk=19044d1fd64739396c8b13a70283b227&hsa_cr_id=0&lp_asins=B00HWHO9F6%2CB01BIE3OCC%2CB01LXE36SJ&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                                - img "PWR+" [ref=e2049]
+                              - link "Printer Cable Long USB Cord" [ref=e2050] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHmVf9nG8KaY3LKF0H2C8o8AAAGetanNOwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDHVVMM/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaPTlyK503Cl69XdM3WG1LXqdSeb-jsM1UZZ1QbXu_H9H5z2ztZL1LyXWXxi0hMzME_Y6mFkhJqzQo-qhfmX969OE054uE4zqKGjehjZxTT7A3saxH4tQCy2pf7o9eoBtXpUIB0zzyCmKZ_223ARO5GgZF8snW0Yigvon1co1Nbf0ZLGGT3uwSTYH6CGUsrgQ6quFdgAbeXiPRRBwv7wRE8vY5dexAl9D3WWZp8qZhtBg8cP_fmukiq2LqxPMN8YqoVcUPMdKWXnnm-xyY6LMo_31rGSCVUqkiHOjvOMtsIs-IHsTPf-vHZgX8dbWFstOU5lU9HdAmhU6NuRSm3N6z6AzFIH4wASD7Yz1FAcCgcFy9alNC5rQmlXPFjCmMj2qcCxGVkou5dGV8VjX08TS4-VIyvcHOV3JrHOzsFVHHJrmX-BQwuA57NpfEUjq3_4X5eXq27mIbYqVCVb2YoWQ70WkB3vxW5Nv5zQVAh65IbRTf9X-qK07Op4Xi-1QP49aA4bnHjBGIU7CLdafLcJr7RtWGBY7R9NEh74texwNEH64Gof00pnu1lzSHIEl6TCMuij_DvkojdYCdQ0dqNbcNR_o-YgRfJGuuQdKbIP_AFmbJ0UulYH_sVw7l5McWnDEUUCr5vy3U84xr0wZLY5iYvNKsTCffK0OQ4P83Zw3gS0HzBx6Aahnhv5Jv0eE_9fT4AL0nxyXUb-ur8ZpUZae4IxEbdqIoRAr4OeOSX4JkE13sBUvTIEobajKqmOD8HEKMzE10-pB1852CXrmCNhINDyfZ_wnT2DKs_NtT3PQ_2AwwXsvib0JpXbwnazHVWLvGDUcX3X8FG0E8cjvNvgN6ECD3Q_DqE_h6GO6V5RErvnWOk2rFE2ExFFJUCphwa9L8ZwKIWAJJg5RLUVbOA9gDRLjp1_h1qrB5pWxbjZgRHumPagNDpLnXH6eumpw31aJwHdjzRNV3F2430pwCIW73eM9UAK-M7JpS4UEBgZpD6YDe3cfvFVyfAUrZPk2J3Y11wU7CUhOgHyVXKdC3C5KtMQy7Ym-UVqnXeUPdGsHaPJqcY6Fm-zUh1DswdupFSorjhMXl8YF-cWgGhxHNoZ9A2OTUUiW3C9h3RK-aohTtiBRpGFayesWPzc_nq7PeF6HW6RAAz6pCh42T4Zq8O6pqeiteF_SlFHbsu2-PZy_VodVahJYLrSIWUYCvPa4rfDwYoiSvXeZjw3883O-vV3u1FJaIeBQHaIH-9GAiSqZZgOt5USvofmlFKwGCK9GYm7p3L3UmVwtW6U-tTKKTNxgRmIHceNquDVvMqChQ6pNWgY9KBQQDgAdMk94C8SDfnWR-8sdhT7wxBroGDkQWyEaOOY-I2COmLSJo-p8fW7tgOKtMZARaRqAVAq0NA5YigBNwgbicZ_lE7csxGXA_-WRQsx3oZHm99E1mKNV-EsLUMsXOG5kOFepmVqSHnETGYTd7DJkUGn1ytSEgfvtiGTGgdUplEQXycHRESDP0ksOnrHxee9o6nacBjIEcWHfA1qoGx7_jcyzdWBbAvYMGuZOrLHqgI8kwjQIGdXLWgsl75XyDpqWG0ojGpnjg-fycD0kb9AnjUa-yksWOR8QR-urYmF9CkrcTqcJ5oTcqjSdri7tgJsbHuwR61kyaG/https://www.amazon.com/stores/page/145D2044-6FDB-4BB1-951F-280015F3A209/?_encoding=UTF8&store_ref=SB_A01811672ZLCY83LWAVAQ-A02978013RAV50WAXKONG&pd_rd_plhdr=t&aaxitk=19044d1fd64739396c8b13a70283b227&hsa_cr_id=0&lp_asins=B00HWHO9F6%2CB01BIE3OCC%2CB01LXE36SJ&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                                - generic [ref=e2051]:
+                                  - generic [ref=e2052]: Printer Cable Long USB Cord
+                                  - generic [ref=e2053]: Printer Cable Long USB Cord
+                              - link "Shop PWR+" [ref=e2054] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JHmVf9nG8KaY3LKF0H2C8o8AAAGetanNOwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDHVVMM/clv1c_ek-wBIHXFcbWDn2nI4trJ16WpAySuUaPTlyK503Cl69XdM3WG1LXqdSeb-jsM1UZZ1QbXu_H9H5z2ztZL1LyXWXxi0hMzME_Y6mFkhJqzQo-qhfmX969OE054uE4zqKGjehjZxTT7A3saxH4tQCy2pf7o9eoBtXpUIB0zzyCmKZ_223ARO5GgZF8snW0Yigvon1co1Nbf0ZLGGT3uwSTYH6CGUsrgQ6quFdgAbeXiPRRBwv7wRE8vY5dexAl9D3WWZp8qZhtBg8cP_fmukiq2LqxPMN8YqoVcUPMdKWXnnm-xyY6LMo_31rGSCVUqkiHOjvOMtsIs-IHsTPf-vHZgX8dbWFstOU5lU9HdAmhU6NuRSm3N6z6AzFIH4wASD7Yz1FAcCgcFy9alNC5rQmlXPFjCmMj2qcCxGVkou5dGV8VjX08TS4-VIyvcHOV3JrHOzsFVHHJrmX-BQwuA57NpfEUjq3_4X5eXq27mIbYqVCVb2YoWQ70WkB3vxW5Nv5zQVAh65IbRTf9X-qK07Op4Xi-1QP49aA4bnHjBGIU7CLdafLcJr7RtWGBY7R9NEh74texwNEH64Gof00pnu1lzSHIEl6TCMuij_DvkojdYCdQ0dqNbcNR_o-YgRfJGuuQdKbIP_AFmbJ0UulYH_sVw7l5McWnDEUUCr5vy3U84xr0wZLY5iYvNKsTCffK0OQ4P83Zw3gS0HzBx6Aahnhv5Jv0eE_9fT4AL0nxyXUb-ur8ZpUZae4IxEbdqIoRAr4OeOSX4JkE13sBUvTIEobajKqmOD8HEKMzE10-pB1852CXrmCNhINDyfZ_wnT2DKs_NtT3PQ_2AwwXsvib0JpXbwnazHVWLvGDUcX3X8FG0E8cjvNvgN6ECD3Q_DqE_h6GO6V5RErvnWOk2rFE2ExFFJUCphwa9L8ZwKIWAJJg5RLUVbOA9gDRLjp1_h1qrB5pWxbjZgRHumPagNDpLnXH6eumpw31aJwHdjzRNV3F2430pwCIW73eM9UAK-M7JpS4UEBgZpD6YDe3cfvFVyfAUrZPk2J3Y11wU7CUhOgHyVXKdC3C5KtMQy7Ym-UVqnXeUPdGsHaPJqcY6Fm-zUh1DswdupFSorjhMXl8YF-cWgGhxHNoZ9A2OTUUiW3C9h3RK-aohTtiBRpGFayesWPzc_nq7PeF6HW6RAAz6pCh42T4Zq8O6pqeiteF_SlFHbsu2-PZy_VodVahJYLrSIWUYCvPa4rfDwYoiSvXeZjw3883O-vV3u1FJaIeBQHaIH-9GAiSqZZgOt5USvofmlFKwGCK9GYm7p3L3UmVwtW6U-tTKKTNxgRmIHceNquDVvMqChQ6pNWgY9KBQQDgAdMk94C8SDfnWR-8sdhT7wxBroGDkQWyEaOOY-I2COmLSJo-p8fW7tgOKtMZARaRqAVAq0NA5YigBNwgbicZ_lE7csxGXA_-WRQsx3oZHm99E1mKNV-EsLUMsXOG5kOFepmVqSHnETGYTd7DJkUGn1ytSEgfvtiGTGgdUplEQXycHRESDP0ksOnrHxee9o6nacBjIEcWHfA1qoGx7_jcyzdWBbAvYMGuZOrLHqgI8kwjQIGdXLWgsl75XyDpqWG0ojGpnjg-fycD0kb9AnjUa-yksWOR8QR-urYmF9CkrcTqcJ5oTcqjSdri7tgJsbHuwR61kyaG/https://www.amazon.com/stores/page/145D2044-6FDB-4BB1-951F-280015F3A209/?_encoding=UTF8&store_ref=SB_A01811672ZLCY83LWAVAQ-A02978013RAV50WAXKONG&pd_rd_plhdr=t&aaxitk=19044d1fd64739396c8b13a70283b227&hsa_cr_id=0&lp_asins=B00HWHO9F6%2CB01BIE3OCC%2CB01LXE36SJ&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_cta&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                                - generic [ref=e2057]:
+                                  - text: Shop
+                                  - generic [ref=e2058]:
+                                    - text: PWR+
+                                    - img [ref=e2059]
+                - listitem [ref=e2061]:
+                  - generic [ref=e2062]:
+                    - link [ref=e2063] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBA_dtOCqbNcwHcmnghWRBQAAAGetanNPAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBP1l2T/clv1c_ek-wxHHWJbTWTKWGvp8nKhIIkHqSev5mT8f8JAfGG1GpTpuKoASneLae4W5fB-kPh1plO5P3_abhnSkKPo2F30TKwXyzpakT_oxBMO7-XE0ujAqX_naRSGvpvrlVJHSHfChjk5QZfuEE6e2BbmyA4UTT7B3dlkOCUrb075epS4w7IYueU2GfsEMsNERWnoF7r4Jx4K6a3gLK79B1XijA_fS6VG0-UCrSjQguCSnTG12ZKBbZy6HhsJHkl7U1QZDxhtL_xcuxpQt7ju_BqZYZ5MkEvwpldr7oNnIu_RyrfJySk6sQZyI7SP6NECA9WJx_ZH3lyco9h8RzamcT1n5AIXElfJP-o1zqEtNghzNIVSmstZW_A0RbPa7TyChFArO7CzKD0WUV1Xt6LlAxqB0X37KeUhvDSWWYQmLcj0ff93jCCC7ZQbALM14mn_EkNKaZuqn5AV0frGYtdWY-RBQslWqvQNE8Mhm12UzYU7OAvQ0rZTBTYy9EoKVAfMk2S8Zo-vS22xDOmWW_4Jz_U2zT0Bq9_F9aw5HltXgYSzZKnUSdTgSHBCty_irRSiB9ia2WUxaRQHkdJmII7WRhNGVlxclcqtGHy0m2yRUzNMcbgX_bptBs3erudhtGhwRbWkPRf6vbthvYfjypjhQR7A1Lj4KC1sGNodlEug9HTQJMTG8nJmp8d4dsm8Io9rKiQoS25CJyLSSO41qRGyKvZ92_2M5ZRAY1NjQsGWRZ1Z27pvIYF_i0UUaAmgVeANWFcqlVI0oHCLs3u6K5BSHZ_zxjZ1vURAfG3SKpyCGTkGqiqStwnAmGxVgqdQBBEI83TC7_PQ1yoTSOKoXe2VgzaUEUsvxkri3QNLztnEp38pj0F2fUY0GYosMjnZE07KoTmm3jPp7DWhsTl0mQNfKEqpnh_kEap2EIVvqVMc0QuMG2A4q6JA9wBcbMghvsHEM4gXS5xPiKH48Cttrukidr4YT1NNWAerYs8ERNVbOxVQgdP0tV70wV0SO26_MY_R-fmze3IF2P0yCGnjgSXVxkqb0Otbmpd5Eps74HqZG0F5GLQzCv0y8eTEmISMH3ug3Cn7-sSEtrlUYfhoDggTDX05YS-H99atdSN73NppqSoZupHekDUrx281CbSlUJiegRGh55UiZZrNBNnTDfeqiQw4Ya46pLig7r1DPWcB6OaCxm-H4TmUtpnSkOkNgDtDuB3-KCGcKE2UJtpj2Xa7SD8JycL3p5mTgYP7ZD3iPvbeEIe_FNCSIYYcMRZuERTLSAPrIJJRXrjZbOJQIOamahvr6DrlpAfGI9vpiPpltEvScC5dZ3sMPcP4p32b-4Au7OZdMeMTYJ29izkFQUMkoqlRdUIu2FtsknOnKC1Bs8s6VPdpDIHTe7QHuUg50pcV8xG2uwJgN9-eb0MVhCtxer53a1v8oTUNqo7gB6w8wbbtoMvJdDgdP-xxEKEY3RuQPaSsBXs6JXAEbrr39J7W55pdThXZPehGZ-DenqarY8MMNb_HSHOA3VmUHZKvHA18FxvPd1GWrNUL1Iymd0M__q0UKv9DBSpMKsGD2cyDk99LCJnbMLZkkAEfEofR9nR49D7a2ca7sknGQSbwbjgeN5r0mm89TyiNLrRM-0YQQZJ8sdkZoacGEw4Ro8RDVFbk_hyETC9f9YQsa18R3A6R8xa68d8kEdckcoHune/https://www.amazon.com/stores/page/0124B9BD-F74F-4F59-87C6-A98A3802B47B/?_encoding=UTF8&store_ref=SB_A0832274334UVF19LQ7H-A09952882SWVBOUHWC0XT&pd_rd_plhdr=t&aaxitk=540ba39edcbe66bb06016b49aa70197d&hsa_cr_id=0&lp_asins=B0CL4WP7BP%2CB0CKZ7V21Y%2CB08CDG2SSP&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from Durcord. \"Durable C Cable.\" Shop Durcord." [ref=e2064] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBA_dtOCqbNcwHcmnghWRBQAAAGetanNPAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBP1l2T/clv1c_ek-wxHHWJbTWTKWGvp8nKhIIkHqSev5mT8f8JAfGG1GpTpuKoASneLae4W5fB-kPh1plO5P3_abhnSkKPo2F30TKwXyzpakT_oxBMO7-XE0ujAqX_naRSGvpvrlVJHSHfChjk5QZfuEE6e2BbmyA4UTT7B3dlkOCUrb075epS4w7IYueU2GfsEMsNERWnoF7r4Jx4K6a3gLK79B1XijA_fS6VG0-UCrSjQguCSnTG12ZKBbZy6HhsJHkl7U1QZDxhtL_xcuxpQt7ju_BqZYZ5MkEvwpldr7oNnIu_RyrfJySk6sQZyI7SP6NECA9WJx_ZH3lyco9h8RzamcT1n5AIXElfJP-o1zqEtNghzNIVSmstZW_A0RbPa7TyChFArO7CzKD0WUV1Xt6LlAxqB0X37KeUhvDSWWYQmLcj0ff93jCCC7ZQbALM14mn_EkNKaZuqn5AV0frGYtdWY-RBQslWqvQNE8Mhm12UzYU7OAvQ0rZTBTYy9EoKVAfMk2S8Zo-vS22xDOmWW_4Jz_U2zT0Bq9_F9aw5HltXgYSzZKnUSdTgSHBCty_irRSiB9ia2WUxaRQHkdJmII7WRhNGVlxclcqtGHy0m2yRUzNMcbgX_bptBs3erudhtGhwRbWkPRf6vbthvYfjypjhQR7A1Lj4KC1sGNodlEug9HTQJMTG8nJmp8d4dsm8Io9rKiQoS25CJyLSSO41qRGyKvZ92_2M5ZRAY1NjQsGWRZ1Z27pvIYF_i0UUaAmgVeANWFcqlVI0oHCLs3u6K5BSHZ_zxjZ1vURAfG3SKpyCGTkGqiqStwnAmGxVgqdQBBEI83TC7_PQ1yoTSOKoXe2VgzaUEUsvxkri3QNLztnEp38pj0F2fUY0GYosMjnZE07KoTmm3jPp7DWhsTl0mQNfKEqpnh_kEap2EIVvqVMc0QuMG2A4q6JA9wBcbMghvsHEM4gXS5xPiKH48Cttrukidr4YT1NNWAerYs8ERNVbOxVQgdP0tV70wV0SO26_MY_R-fmze3IF2P0yCGnjgSXVxkqb0Otbmpd5Eps74HqZG0F5GLQzCv0y8eTEmISMH3ug3Cn7-sSEtrlUYfhoDggTDX05YS-H99atdSN73NppqSoZupHekDUrx281CbSlUJiegRGh55UiZZrNBNnTDfeqiQw4Ya46pLig7r1DPWcB6OaCxm-H4TmUtpnSkOkNgDtDuB3-KCGcKE2UJtpj2Xa7SD8JycL3p5mTgYP7ZD3iPvbeEIe_FNCSIYYcMRZuERTLSAPrIJJRXrjZbOJQIOamahvr6DrlpAfGI9vpiPpltEvScC5dZ3sMPcP4p32b-4Au7OZdMeMTYJ29izkFQUMkoqlRdUIu2FtsknOnKC1Bs8s6VPdpDIHTe7QHuUg50pcV8xG2uwJgN9-eb0MVhCtxer53a1v8oTUNqo7gB6w8wbbtoMvJdDgdP-xxEKEY3RuQPaSsBXs6JXAEbrr39J7W55pdThXZPehGZ-DenqarY8MMNb_HSHOA3VmUHZKvHA18FxvPd1GWrNUL1Iymd0M__q0UKv9DBSpMKsGD2cyDk99LCJnbMLZkkAEfEofR9nR49D7a2ca7sknGQSbwbjgeN5r0mm89TyiNLrRM-0YQQZJ8sdkZoacGEw4Ro8RDVFbk_hyETC9f9YQsa18R3A6R8xa68d8kEdckcoHune/https://www.amazon.com/stores/page/0124B9BD-F74F-4F59-87C6-A98A3802B47B/?_encoding=UTF8&store_ref=SB_A0832274334UVF19LQ7H-A09952882SWVBOUHWC0XT&pd_rd_plhdr=t&aaxitk=540ba39edcbe66bb06016b49aa70197d&hsa_cr_id=0&lp_asins=B0CL4WP7BP%2CB0CKZ7V21Y%2CB08CDG2SSP&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_asin&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                          - img "Sponsored ad from Durcord. \"Durable C Cable.\" Shop Durcord." [ref=e2065]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBA_dtOCqbNcwHcmnghWRBQAAAGetanNPAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBP1l2T/clv1c_ek-wxHHWJbTWTKWGvp8nKhIIkHqSev5mT8f8JAfGG1GpTpuKoASneLae4W5fB-kPh1plO5P3_abhnSkKPo2F30TKwXyzpakT_oxBMO7-XE0ujAqX_naRSGvpvrlVJHSHfChjk5QZfuEE6e2BbmyA4UTT7B3dlkOCUrb075epS4w7IYueU2GfsEMsNERWnoF7r4Jx4K6a3gLK79B1XijA_fS6VG0-UCrSjQguCSnTG12ZKBbZy6HhsJHkl7U1QZDxhtL_xcuxpQt7ju_BqZYZ5MkEvwpldr7oNnIu_RyrfJySk6sQZyI7SP6NECA9WJx_ZH3lyco9h8RzamcT1n5AIXElfJP-o1zqEtNghzNIVSmstZW_A0RbPa7TyChFArO7CzKD0WUV1Xt6LlAxqB0X37KeUhvDSWWYQmLcj0ff93jCCC7ZQbALM14mn_EkNKaZuqn5AV0frGYtdWY-RBQslWqvQNE8Mhm12UzYU7OAvQ0rZTBTYy9EoKVAfMk2S8Zo-vS22xDOmWW_4Jz_U2zT0Bq9_F9aw5HltXgYSzZKnUSdTgSHBCty_irRSiB9ia2WUxaRQHkdJmII7WRhNGVlxclcqtGHy0m2yRUzNMcbgX_bptBs3erudhtGhwRbWkPRf6vbthvYfjypjhQR7A1Lj4KC1sGNodlEug9HTQJMTG8nJmp8d4dsm8Io9rKiQoS25CJyLSSO41qRGyKvZ92_2M5ZRAY1NjQsGWRZ1Z27pvIYF_i0UUaAmgVeANWFcqlVI0oHCLs3u6K5BSHZ_zxjZ1vURAfG3SKpyCGTkGqiqStwnAmGxVgqdQBBEI83TC7_PQ1yoTSOKoXe2VgzaUEUsvxkri3QNLztnEp38pj0F2fUY0GYosMjnZE07KoTmm3jPp7DWhsTl0mQNfKEqpnh_kEap2EIVvqVMc0QuMG2A4q6JA9wBcbMghvsHEM4gXS5xPiKH48Cttrukidr4YT1NNWAerYs8ERNVbOxVQgdP0tV70wV0SO26_MY_R-fmze3IF2P0yCGnjgSXVxkqb0Otbmpd5Eps74HqZG0F5GLQzCv0y8eTEmISMH3ug3Cn7-sSEtrlUYfhoDggTDX05YS-H99atdSN73NppqSoZupHekDUrx281CbSlUJiegRGh55UiZZrNBNnTDfeqiQw4Ya46pLig7r1DPWcB6OaCxm-H4TmUtpnSkOkNgDtDuB3-KCGcKE2UJtpj2Xa7SD8JycL3p5mTgYP7ZD3iPvbeEIe_FNCSIYYcMRZuERTLSAPrIJJRXrjZbOJQIOamahvr6DrlpAfGI9vpiPpltEvScC5dZ3sMPcP4p32b-4Au7OZdMeMTYJ29izkFQUMkoqlRdUIu2FtsknOnKC1Bs8s6VPdpDIHTe7QHuUg50pcV8xG2uwJgN9-eb0MVhCtxer53a1v8oTUNqo7gB6w8wbbtoMvJdDgdP-xxEKEY3RuQPaSsBXs6JXAEbrr39J7W55pdThXZPehGZ-DenqarY8MMNb_HSHOA3VmUHZKvHA18FxvPd1GWrNUL1Iymd0M__q0UKv9DBSpMKsGD2cyDk99LCJnbMLZkkAEfEofR9nR49D7a2ca7sknGQSbwbjgeN5r0mm89TyiNLrRM-0YQQZJ8sdkZoacGEw4Ro8RDVFbk_hyETC9f9YQsa18R3A6R8xa68d8kEdckcoHune/https://www.amazon.com/stores/page/0124B9BD-F74F-4F59-87C6-A98A3802B47B/?_encoding=UTF8&store_ref=SB_A0832274334UVF19LQ7H-A09952882SWVBOUHWC0XT&pd_rd_plhdr=t&aaxitk=540ba39edcbe66bb06016b49aa70197d&hsa_cr_id=0&lp_asins=B0CL4WP7BP%2CB0CKZ7V21Y%2CB08CDG2SSP&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                          - generic:
+                            - generic:
+                              - link "Durcord" [ref=e2066] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBA_dtOCqbNcwHcmnghWRBQAAAGetanNPAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBP1l2T/clv1c_ek-wxHHWJbTWTKWGvp8nKhIIkHqSev5mT8f8JAfGG1GpTpuKoASneLae4W5fB-kPh1plO5P3_abhnSkKPo2F30TKwXyzpakT_oxBMO7-XE0ujAqX_naRSGvpvrlVJHSHfChjk5QZfuEE6e2BbmyA4UTT7B3dlkOCUrb075epS4w7IYueU2GfsEMsNERWnoF7r4Jx4K6a3gLK79B1XijA_fS6VG0-UCrSjQguCSnTG12ZKBbZy6HhsJHkl7U1QZDxhtL_xcuxpQt7ju_BqZYZ5MkEvwpldr7oNnIu_RyrfJySk6sQZyI7SP6NECA9WJx_ZH3lyco9h8RzamcT1n5AIXElfJP-o1zqEtNghzNIVSmstZW_A0RbPa7TyChFArO7CzKD0WUV1Xt6LlAxqB0X37KeUhvDSWWYQmLcj0ff93jCCC7ZQbALM14mn_EkNKaZuqn5AV0frGYtdWY-RBQslWqvQNE8Mhm12UzYU7OAvQ0rZTBTYy9EoKVAfMk2S8Zo-vS22xDOmWW_4Jz_U2zT0Bq9_F9aw5HltXgYSzZKnUSdTgSHBCty_irRSiB9ia2WUxaRQHkdJmII7WRhNGVlxclcqtGHy0m2yRUzNMcbgX_bptBs3erudhtGhwRbWkPRf6vbthvYfjypjhQR7A1Lj4KC1sGNodlEug9HTQJMTG8nJmp8d4dsm8Io9rKiQoS25CJyLSSO41qRGyKvZ92_2M5ZRAY1NjQsGWRZ1Z27pvIYF_i0UUaAmgVeANWFcqlVI0oHCLs3u6K5BSHZ_zxjZ1vURAfG3SKpyCGTkGqiqStwnAmGxVgqdQBBEI83TC7_PQ1yoTSOKoXe2VgzaUEUsvxkri3QNLztnEp38pj0F2fUY0GYosMjnZE07KoTmm3jPp7DWhsTl0mQNfKEqpnh_kEap2EIVvqVMc0QuMG2A4q6JA9wBcbMghvsHEM4gXS5xPiKH48Cttrukidr4YT1NNWAerYs8ERNVbOxVQgdP0tV70wV0SO26_MY_R-fmze3IF2P0yCGnjgSXVxkqb0Otbmpd5Eps74HqZG0F5GLQzCv0y8eTEmISMH3ug3Cn7-sSEtrlUYfhoDggTDX05YS-H99atdSN73NppqSoZupHekDUrx281CbSlUJiegRGh55UiZZrNBNnTDfeqiQw4Ya46pLig7r1DPWcB6OaCxm-H4TmUtpnSkOkNgDtDuB3-KCGcKE2UJtpj2Xa7SD8JycL3p5mTgYP7ZD3iPvbeEIe_FNCSIYYcMRZuERTLSAPrIJJRXrjZbOJQIOamahvr6DrlpAfGI9vpiPpltEvScC5dZ3sMPcP4p32b-4Au7OZdMeMTYJ29izkFQUMkoqlRdUIu2FtsknOnKC1Bs8s6VPdpDIHTe7QHuUg50pcV8xG2uwJgN9-eb0MVhCtxer53a1v8oTUNqo7gB6w8wbbtoMvJdDgdP-xxEKEY3RuQPaSsBXs6JXAEbrr39J7W55pdThXZPehGZ-DenqarY8MMNb_HSHOA3VmUHZKvHA18FxvPd1GWrNUL1Iymd0M__q0UKv9DBSpMKsGD2cyDk99LCJnbMLZkkAEfEofR9nR49D7a2ca7sknGQSbwbjgeN5r0mm89TyiNLrRM-0YQQZJ8sdkZoacGEw4Ro8RDVFbk_hyETC9f9YQsa18R3A6R8xa68d8kEdckcoHune/https://www.amazon.com/stores/page/0124B9BD-F74F-4F59-87C6-A98A3802B47B/?_encoding=UTF8&store_ref=SB_A0832274334UVF19LQ7H-A09952882SWVBOUHWC0XT&pd_rd_plhdr=t&aaxitk=540ba39edcbe66bb06016b49aa70197d&hsa_cr_id=0&lp_asins=B0CL4WP7BP%2CB0CKZ7V21Y%2CB08CDG2SSP&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                                - img "Durcord" [ref=e2067]
+                              - link "Durable C Cable" [ref=e2068] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBA_dtOCqbNcwHcmnghWRBQAAAGetanNPAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBP1l2T/clv1c_ek-wxHHWJbTWTKWGvp8nKhIIkHqSev5mT8f8JAfGG1GpTpuKoASneLae4W5fB-kPh1plO5P3_abhnSkKPo2F30TKwXyzpakT_oxBMO7-XE0ujAqX_naRSGvpvrlVJHSHfChjk5QZfuEE6e2BbmyA4UTT7B3dlkOCUrb075epS4w7IYueU2GfsEMsNERWnoF7r4Jx4K6a3gLK79B1XijA_fS6VG0-UCrSjQguCSnTG12ZKBbZy6HhsJHkl7U1QZDxhtL_xcuxpQt7ju_BqZYZ5MkEvwpldr7oNnIu_RyrfJySk6sQZyI7SP6NECA9WJx_ZH3lyco9h8RzamcT1n5AIXElfJP-o1zqEtNghzNIVSmstZW_A0RbPa7TyChFArO7CzKD0WUV1Xt6LlAxqB0X37KeUhvDSWWYQmLcj0ff93jCCC7ZQbALM14mn_EkNKaZuqn5AV0frGYtdWY-RBQslWqvQNE8Mhm12UzYU7OAvQ0rZTBTYy9EoKVAfMk2S8Zo-vS22xDOmWW_4Jz_U2zT0Bq9_F9aw5HltXgYSzZKnUSdTgSHBCty_irRSiB9ia2WUxaRQHkdJmII7WRhNGVlxclcqtGHy0m2yRUzNMcbgX_bptBs3erudhtGhwRbWkPRf6vbthvYfjypjhQR7A1Lj4KC1sGNodlEug9HTQJMTG8nJmp8d4dsm8Io9rKiQoS25CJyLSSO41qRGyKvZ92_2M5ZRAY1NjQsGWRZ1Z27pvIYF_i0UUaAmgVeANWFcqlVI0oHCLs3u6K5BSHZ_zxjZ1vURAfG3SKpyCGTkGqiqStwnAmGxVgqdQBBEI83TC7_PQ1yoTSOKoXe2VgzaUEUsvxkri3QNLztnEp38pj0F2fUY0GYosMjnZE07KoTmm3jPp7DWhsTl0mQNfKEqpnh_kEap2EIVvqVMc0QuMG2A4q6JA9wBcbMghvsHEM4gXS5xPiKH48Cttrukidr4YT1NNWAerYs8ERNVbOxVQgdP0tV70wV0SO26_MY_R-fmze3IF2P0yCGnjgSXVxkqb0Otbmpd5Eps74HqZG0F5GLQzCv0y8eTEmISMH3ug3Cn7-sSEtrlUYfhoDggTDX05YS-H99atdSN73NppqSoZupHekDUrx281CbSlUJiegRGh55UiZZrNBNnTDfeqiQw4Ya46pLig7r1DPWcB6OaCxm-H4TmUtpnSkOkNgDtDuB3-KCGcKE2UJtpj2Xa7SD8JycL3p5mTgYP7ZD3iPvbeEIe_FNCSIYYcMRZuERTLSAPrIJJRXrjZbOJQIOamahvr6DrlpAfGI9vpiPpltEvScC5dZ3sMPcP4p32b-4Au7OZdMeMTYJ29izkFQUMkoqlRdUIu2FtsknOnKC1Bs8s6VPdpDIHTe7QHuUg50pcV8xG2uwJgN9-eb0MVhCtxer53a1v8oTUNqo7gB6w8wbbtoMvJdDgdP-xxEKEY3RuQPaSsBXs6JXAEbrr39J7W55pdThXZPehGZ-DenqarY8MMNb_HSHOA3VmUHZKvHA18FxvPd1GWrNUL1Iymd0M__q0UKv9DBSpMKsGD2cyDk99LCJnbMLZkkAEfEofR9nR49D7a2ca7sknGQSbwbjgeN5r0mm89TyiNLrRM-0YQQZJ8sdkZoacGEw4Ro8RDVFbk_hyETC9f9YQsa18R3A6R8xa68d8kEdckcoHune/https://www.amazon.com/stores/page/0124B9BD-F74F-4F59-87C6-A98A3802B47B/?_encoding=UTF8&store_ref=SB_A0832274334UVF19LQ7H-A09952882SWVBOUHWC0XT&pd_rd_plhdr=t&aaxitk=540ba39edcbe66bb06016b49aa70197d&hsa_cr_id=0&lp_asins=B0CL4WP7BP%2CB0CKZ7V21Y%2CB08CDG2SSP&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                                - generic [ref=e2069]:
+                                  - generic [ref=e2070]: Durable C Cable
+                                  - generic [ref=e2071]: Durable C Cable
+                              - link "Shop Durcord" [ref=e2072] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JBA_dtOCqbNcwHcmnghWRBQAAAGetanNPAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBP1l2T/clv1c_ek-wxHHWJbTWTKWGvp8nKhIIkHqSev5mT8f8JAfGG1GpTpuKoASneLae4W5fB-kPh1plO5P3_abhnSkKPo2F30TKwXyzpakT_oxBMO7-XE0ujAqX_naRSGvpvrlVJHSHfChjk5QZfuEE6e2BbmyA4UTT7B3dlkOCUrb075epS4w7IYueU2GfsEMsNERWnoF7r4Jx4K6a3gLK79B1XijA_fS6VG0-UCrSjQguCSnTG12ZKBbZy6HhsJHkl7U1QZDxhtL_xcuxpQt7ju_BqZYZ5MkEvwpldr7oNnIu_RyrfJySk6sQZyI7SP6NECA9WJx_ZH3lyco9h8RzamcT1n5AIXElfJP-o1zqEtNghzNIVSmstZW_A0RbPa7TyChFArO7CzKD0WUV1Xt6LlAxqB0X37KeUhvDSWWYQmLcj0ff93jCCC7ZQbALM14mn_EkNKaZuqn5AV0frGYtdWY-RBQslWqvQNE8Mhm12UzYU7OAvQ0rZTBTYy9EoKVAfMk2S8Zo-vS22xDOmWW_4Jz_U2zT0Bq9_F9aw5HltXgYSzZKnUSdTgSHBCty_irRSiB9ia2WUxaRQHkdJmII7WRhNGVlxclcqtGHy0m2yRUzNMcbgX_bptBs3erudhtGhwRbWkPRf6vbthvYfjypjhQR7A1Lj4KC1sGNodlEug9HTQJMTG8nJmp8d4dsm8Io9rKiQoS25CJyLSSO41qRGyKvZ92_2M5ZRAY1NjQsGWRZ1Z27pvIYF_i0UUaAmgVeANWFcqlVI0oHCLs3u6K5BSHZ_zxjZ1vURAfG3SKpyCGTkGqiqStwnAmGxVgqdQBBEI83TC7_PQ1yoTSOKoXe2VgzaUEUsvxkri3QNLztnEp38pj0F2fUY0GYosMjnZE07KoTmm3jPp7DWhsTl0mQNfKEqpnh_kEap2EIVvqVMc0QuMG2A4q6JA9wBcbMghvsHEM4gXS5xPiKH48Cttrukidr4YT1NNWAerYs8ERNVbOxVQgdP0tV70wV0SO26_MY_R-fmze3IF2P0yCGnjgSXVxkqb0Otbmpd5Eps74HqZG0F5GLQzCv0y8eTEmISMH3ug3Cn7-sSEtrlUYfhoDggTDX05YS-H99atdSN73NppqSoZupHekDUrx281CbSlUJiegRGh55UiZZrNBNnTDfeqiQw4Ya46pLig7r1DPWcB6OaCxm-H4TmUtpnSkOkNgDtDuB3-KCGcKE2UJtpj2Xa7SD8JycL3p5mTgYP7ZD3iPvbeEIe_FNCSIYYcMRZuERTLSAPrIJJRXrjZbOJQIOamahvr6DrlpAfGI9vpiPpltEvScC5dZ3sMPcP4p32b-4Au7OZdMeMTYJ29izkFQUMkoqlRdUIu2FtsknOnKC1Bs8s6VPdpDIHTe7QHuUg50pcV8xG2uwJgN9-eb0MVhCtxer53a1v8oTUNqo7gB6w8wbbtoMvJdDgdP-xxEKEY3RuQPaSsBXs6JXAEbrr39J7W55pdThXZPehGZ-DenqarY8MMNb_HSHOA3VmUHZKvHA18FxvPd1GWrNUL1Iymd0M__q0UKv9DBSpMKsGD2cyDk99LCJnbMLZkkAEfEofR9nR49D7a2ca7sknGQSbwbjgeN5r0mm89TyiNLrRM-0YQQZJ8sdkZoacGEw4Ro8RDVFbk_hyETC9f9YQsa18R3A6R8xa68d8kEdckcoHune/https://www.amazon.com/stores/page/0124B9BD-F74F-4F59-87C6-A98A3802B47B/?_encoding=UTF8&store_ref=SB_A0832274334UVF19LQ7H-A09952882SWVBOUHWC0XT&pd_rd_plhdr=t&aaxitk=540ba39edcbe66bb06016b49aa70197d&hsa_cr_id=0&lp_asins=B0CL4WP7BP%2CB0CKZ7V21Y%2CB08CDG2SSP&lp_query=USB%20Cable&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_cta&pd_rd_w=pO789&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=2QPWXCSMYPA4XRCENR9A&pd_rd_wg=7pKpK&pd_rd_r=a54fa0e4-8481-4a8a-a62b-317e32c29982
+                                - generic [ref=e2075]:
+                                  - text: Shop
+                                  - generic [ref=e2076]:
+                                    - text: Durcord
+                                    - img [ref=e2077]
+            - generic [ref=e2084]:
+              - heading "Need help?" [level=2] [ref=e2087]
+              - generic [ref=e2088]:
+                - link "Visit the help section" [ref=e2089] [cursor=pointer]:
+                  - /url: /gp/help/customer/display.html?nodeId=468556
+                - text: or
+                - link "contact us" [ref=e2090] [cursor=pointer]:
+                  - /url: /gp/help/customer/contact-us
+            - generic [ref=e2093]:
+              - iframe [ref=e2094]:
+                - generic [ref=f1e4]:
+                  - link "HOTNOW USB 3.0 Cable 1FT 2Pack, USB Type A Male to Type A Male, Transfer Rate Up to 5Gbps Cable Compatible with Printers, Modems, Hard Drives, Cameras, HDD, DVD, Laptops, etc." [ref=f1e7] [cursor=pointer]:
+                    - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RE8AVXIFkK_LUvg--YC6rOIAAAGetanNCAEAAAH0AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDjjEgq/clv1c_ek8OM3GX57OOBXc78KNgvapXtUd_aIO5RuyFz7iOD-OFR80o6DHA9xTvRuahwUHxvVzrpo8mWOVTK9k6enqnVlKC2t3C-4c8_C5zV70dyIlR70jvwUGFVpjbfpTpLSGczB817Y1MMl-AitUo56GsuVD3qaFNe32C0Gc9SXf78dteu6smt443OvyxTx-bQyxb8vBugCxc-uFtwr4kU15a6wDA9EXlHflgTFfvQ2FWKcJhNwvnEDPticSk97M5uiTJyv0TS38A8meRVD5Y_pYlQXhfA_ghwuOjuw7VJPuRsglG8r7oxC0olvvD-2e9lUWnzYgrUE8n4FosEalQiHlGP8mFIDOUu9jZ1sb62-AX5bSZu66Iy25qW_tjbJjuqA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxODg0OTA3NzY4NDExNTk6MTc4MTE2NDI2NDpzcF9zZWFyY2hfZm9vdGVyX3NoYXJlZDozMDEzMTU0MTQ4MDU0MDI6Ojo6&url=%2Fdp%2FB0GXJZLKDX%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+                  - generic [ref=f1e8]:
+                    - img "HOTNOW USB 3.0 Cable 1FT 2Pack, USB Type A Male to Type A Male, Transfer Rate Up to 5Gbps Cable Compatible with Printers, Modems, Hard Drives, Cameras, HDD, DVD, Laptops, etc." [ref=f1e10]
+                    - generic [ref=f1e11]:
+                      - generic [ref=f1e12]: HOTNOW USB 3.0 Cable 1FT 2Pack, USB Type A Male to Type A Male, Transfer Rate Up to 5Gbps...
+                      - generic [ref=f1e13]:
+                        - text: INR 824.52
+                        - link "5" [ref=f1e14] [cursor=pointer]:
+                          - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RE8AVXIFkK_LUvg--YC6rOIAAAGetanNCAEAAAH0AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDjjEgq/clv1c_ek8OM3GX57OOBXc78KNgvapXtUd_aIO5RuyFz7iOD-OFR80o6DHA9xTvRuahwUHxvVzrpo8mWOVTK9k6enqnVlKC2t3C-4c8_C5zV70dyIlR70jvwUGFVpjbfpTpLSGczB817Y1MMl-AitUo56GsuVD3qaFNe32C0Gc9SXf78dteu6smt443OvyxTx-bQyxb8vBugCxc-uFtwr4kU15a6wDA9EXlHflgTFfvQ2FWKcJhNwvnEDPticSk97M5uiTJyv0TS38A8meRVD5Y_pYlQXhfA_ghwuOjuw7VJPuRsglG8r7oxC0olvvD-2e9lUWnzYgrUE8n4FosEalQiHlGP8mFIDOUu9jZ1sb62-AX5bSZu66Iy25qW_tjbJjuqA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxODg0OTA3NzY4NDExNTk6MTc4MTE2NDI2NDpzcF9zZWFyY2hfZm9vdGVyX3NoYXJlZDozMDEzMTU0MTQ4MDU0MDI6Ojo6&url=%2Fdp%2FB0GXJZLKDX%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA#customerReviews
+                          - text: "5"
+                    - link "Shop now" [ref=f1e18] [cursor=pointer]:
+                      - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RE8AVXIFkK_LUvg--YC6rOIAAAGetanNCAEAAAH0AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDjjEgq/clv1c_ek8OM3GX57OOBXc78KNgvapXtUd_aIO5RuyFz7iOD-OFR80o6DHA9xTvRuahwUHxvVzrpo8mWOVTK9k6enqnVlKC2t3C-4c8_C5zV70dyIlR70jvwUGFVpjbfpTpLSGczB817Y1MMl-AitUo56GsuVD3qaFNe32C0Gc9SXf78dteu6smt443OvyxTx-bQyxb8vBugCxc-uFtwr4kU15a6wDA9EXlHflgTFfvQ2FWKcJhNwvnEDPticSk97M5uiTJyv0TS38A8meRVD5Y_pYlQXhfA_ghwuOjuw7VJPuRsglG8r7oxC0olvvD-2e9lUWnzYgrUE8n4FosEalQiHlGP8mFIDOUu9jZ1sb62-AX5bSZu66Iy25qW_tjbJjuqA/https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxODg0OTA3NzY4NDExNTk6MTc4MTE2NDI2NDpzcF9zZWFyY2hfZm9vdGVyX3NoYXJlZDozMDEzMTU0MTQ4MDU0MDI6Ojo6&url=%2Fdp%2FB0GXJZLKDX%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+              - button "Leave feedback on Sponsored ad" [ref=e2096] [cursor=pointer]:
+                - generic [ref=e2097]: Sponsored
+          - link "Go back to filtering menu" [ref=e2099] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForFilterOptions"
+        - generic [ref=e2101]:
+          - link "Skip to main search results" [ref=e2102] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e2108]:
+            - group [ref=e2109]:
+              - heading "Popular Shopping Ideas" [level=2] [ref=e2110]
+              - list [ref=e2111]:
+                - listitem [ref=e2112]:
+                  - link "Usb-c" [ref=e2114] [cursor=pointer]:
+                    - /url: /s?k=usb+c+cable&ref=sr_nr_p_rag_integrated_qb_0
+                - listitem [ref=e2115]:
+                  - link "Usb-a To C" [ref=e2117] [cursor=pointer]:
+                    - /url: /s?k=usb+a+to+c+cable&ref=sr_nr_p_rag_integrated_qb_1
+                - listitem [ref=e2118]:
+                  - link "Type-a" [ref=e2120] [cursor=pointer]:
+                    - /url: /s?k=usb+cable+type+a&ref=sr_nr_p_rag_integrated_qb_2
+                - listitem [ref=e2121]:
+                  - link "Fast Charging" [ref=e2123] [cursor=pointer]:
+                    - /url: /s?k=usb+fast+charging+cable&ref=sr_nr_p_rag_integrated_qb_3
+                - listitem [ref=e2124]:
+                  - button "See more" [ref=e2127] [cursor=pointer]: See more
+            - separator [ref=e2129]
+            - group "Length" [ref=e2130]:
+              - heading "Length" [level=2] [ref=e2131]
+              - list "Length" [ref=e2132]:
+                - listitem "Popular Shopping Ideas" [ref=e2133]:
+                  - link "Apply Up to 0.9 ft filter to narrow results" [ref=e2135] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746478011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_1&ds=v1%3A6sIl2v%2FViyf1bV2HxQwopXgs5SFGPeUy5Mvy0H5cnl8
+                    - checkbox [ref=e2138]
+                    - text: Up to 0.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2140]:
+                  - link "Apply 1 to 1.9 ft filter to narrow results" [ref=e2142] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746482011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_2&ds=v1%3Ak%2F4ECEHI1QQl8eek1k4osUNt8safkH%2ByneO4FOQwh20
+                    - checkbox [ref=e2145]
+                    - text: 1 to 1.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2147]:
+                  - link "Apply 2 to 2.9 ft filter to narrow results" [ref=e2149] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746479011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_3&ds=v1%3AAw92RxSY3TeOUTqbHnVkECJsCCyDL200aUZiBrUMyjE
+                    - checkbox [ref=e2152]
+                    - text: 2 to 2.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2154]:
+                  - link "Apply 3 to 3.9 ft filter to narrow results" [ref=e2156] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746480011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_4&ds=v1%3AhbWYsXVHiK6BvPXRRZ17aKh8IKLJjfmXJtpDnNJ5imo
+                    - checkbox [ref=e2159]
+                    - text: 3 to 3.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2161]:
+                  - link "Apply 4 to 4.9 ft filter to narrow results" [ref=e2163] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746486011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_5&ds=v1%3AJZTgtuhxnILaUfpg%2F4jHSVvry0n5Sh4Z4AF0CbqpJ30
+                    - checkbox [ref=e2166]
+                    - text: 4 to 4.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2168]:
+                  - link "Apply 5 to 5.9 ft filter to narrow results" [ref=e2170] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746484011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_6&ds=v1%3AdlZX4ZP4ftiSZXIkkj1SRiRgB3G9dzKMO5%2FKtb2KBdo
+                    - checkbox [ref=e2173]
+                    - text: 5 to 5.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2175]:
+                  - link "Apply 6 to 7.9 ft filter to narrow results" [ref=e2177] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746481011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_7&ds=v1%3AZpQ%2BIHUDctYbv3GlKs6BZ9YKnmSkDjhW0G%2FaqL736%2Fc
+                    - checkbox [ref=e2180]
+                    - text: 6 to 7.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2182]:
+                  - link "Apply 8 to 9.9 ft filter to narrow results" [ref=e2184] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746483011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_8&ds=v1%3AQH367X3pyq1tjf8e7jwyI2zuhnzuDKVFIggV9VlRl18
+                    - checkbox [ref=e2187]
+                    - text: 8 to 9.9 ft
+                - listitem "Popular Shopping Ideas" [ref=e2189]:
+                  - link "Apply 10 ft & above filter to narrow results" [ref=e2191] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014941094111%3A119746485011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119746477011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014941094111_9&ds=v1%3AvEPGbOnFc50AaB%2FVkbAj1IB89lWvwHuCJs%2F%2FU1d%2BW%2BM
+                    - checkbox [ref=e2194]
+                    - text: 10 ft & above
+            - group "Customer Reviews" [ref=e2196]:
+              - heading "Customer Reviews" [level=2] [ref=e2197]
+              - list "Customer Reviews" [ref=e2198]:
+                - listitem [ref=e2199]:
+                  - link "Apply 4 Stars & Up filter to narrow results" [ref=e2202] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_72%3A1248879011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=1248877011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_72_1&ds=v1%3ATwJwI7ljXCiNqC%2F%2B11i1ktZPbubT1uTxGIARVGSSQEw
+                    - generic [ref=e2204]: 4 Stars
+                    - text: "& Up"
+            - group "Connector Gender" [ref=e2205]:
+              - heading "Connector Gender" [level=2] [ref=e2206]
+              - list "Connector Gender" [ref=e2207]:
+                - listitem "Popular Shopping Ideas" [ref=e2208]:
+                  - link "Apply Female-to-Female filter to narrow results" [ref=e2210] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1002988121111%3A23641608011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23641588011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1002988121111_1&ds=v1%3Au2EuD14NPelIELBIuiJRY%2Fw3ErRKZybKkQdtsszdNUs
+                    - checkbox [ref=e2213]
+                    - text: Female-to-Female
+                - listitem "Popular Shopping Ideas" [ref=e2215]:
+                  - link "Apply Male-to-Female filter to narrow results" [ref=e2217] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1002988121111%3A23641609011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23641588011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1002988121111_2&ds=v1%3A9FdLI4TRUCOJl6PE%2BL3hhysixSFuxhVtoNbwzt4xhnI
+                    - checkbox [ref=e2220]
+                    - text: Male-to-Female
+                - listitem "Popular Shopping Ideas" [ref=e2222]:
+                  - link "Apply Male-to-Male filter to narrow results" [ref=e2224] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1002988121111%3A23641607011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23641588011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1002988121111_3&ds=v1%3A3%2FO3vbHOhYkpi5LCXEOZg8gx3EIGMmAmSXKsjfqf7PM
+                    - checkbox [ref=e2227]
+                    - text: Male-to-Male
+            - group "Brands" [ref=e2229]:
+              - heading "Brands" [level=2] [ref=e2230]
+              - list "Brands" [ref=e2231]:
+                - listitem "Popular Shopping Ideas" [ref=e2232]:
+                  - link "Apply Anker filter to narrow results" [ref=e2234] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A3271&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_1&ds=v1%3Au0s3f7vaSjd3aAGQWSiyUelrw2Xk3KK5W4wOAO1%2FfrU
+                    - checkbox [ref=e2237]
+                    - text: Anker
+                - listitem "Popular Shopping Ideas" [ref=e2239]:
+                  - link "Apply Amazon Basics filter to narrow results" [ref=e2241] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A234478&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_2&ds=v1%3AkoKpWI%2FU1jlwMRgIkye4kdLSxvCLN4C%2Fu5relO%2FzE7k
+                    - checkbox [ref=e2244]
+                    - text: Amazon Basics
+                - listitem "Popular Shopping Ideas" [ref=e2246]:
+                  - link "Apply UGREEN filter to narrow results" [ref=e2248] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A48431&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_3&ds=v1%3AqjjcxXAobTvZMpP2yZvpJVWc7x4oRa3Y2BU2IOu4kl8
+                    - checkbox [ref=e2251]
+                    - text: UGREEN
+                - listitem "Popular Shopping Ideas" [ref=e2253]:
+                  - link "Apply Belkin filter to narrow results" [ref=e2255] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A157711&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_4&ds=v1%3Af4F%2BykzCgHuGdxIQRumeGoOKFvZjUYyr0ltxlqOss8s
+                    - checkbox [ref=e2258]
+                    - text: Belkin
+                - listitem "Popular Shopping Ideas" [ref=e2260]:
+                  - link "Apply Cable Matters filter to narrow results" [ref=e2262] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A6973&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_5&ds=v1%3AWzA5t0HDtKERFhwL4hFTsB4jKcv3lkAYPcuvWDdYK8g
+                    - checkbox [ref=e2265]
+                    - text: Cable Matters
+                - listitem "Popular Shopping Ideas" [ref=e2267]:
+                  - link "Apply Monoprice filter to narrow results" [ref=e2269] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A3104&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_6&ds=v1%3AVs1N1h1%2FIgV%2FFGtggef7OO3CSGLqybtB0%2Bt1PgHOd4o
+                    - checkbox [ref=e2272]
+                    - text: Monoprice
+                - listitem "Popular Shopping Ideas" [ref=e2274]:
+                  - link "Apply C2G filter to narrow results" [ref=e2276] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_123%3A237863&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=85457740011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_123_7&ds=v1%3A3NAy1iiuh1DlRBztdKtn73xJcwNzcnhHQfEP%2B2OZlgQ
+                    - checkbox [ref=e2279]
+                    - text: C2G
+                - listitem [ref=e2281]:
+                  - button "See more, Brands" [ref=e2284] [cursor=pointer]: See more
+            - group "Color" [ref=e2286]:
+              - heading "Color" [level=2] [ref=e2287]
+              - list "Color" [ref=e2288]:
+                - listitem [ref=e2289]:
+                  - generic:
+                    - link "Apply Black filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569815011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_1&ds=v1%3AdLNSB3l3au3UqL7ofU%2F%2FA7MC7dig6CPcmnZm6cO2U80
+                - listitem [ref=e2291]:
+                  - generic:
+                    - link "Apply White filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569829011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_2&ds=v1%3AgmfHZMrKlVO4sU69KVZG3EOdUZlLBwl64lrNZYLq1pE
+                - listitem [ref=e2293]:
+                  - generic:
+                    - link "Apply Grey filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569821011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_3&ds=v1%3A6jHNug69wRqWbYX3xrHrLt1DXwilQrKB%2BOIhmKaOBm8
+                - listitem [ref=e2295]:
+                  - generic:
+                    - link "Apply Brown filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569817011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_4&ds=v1%3AGslPeG%2B2aBd1bdOQ8QAHAsmoqLMkguPO94KC9OitFpg
+                - listitem [ref=e2297]:
+                  - generic:
+                    - link "Apply Beige filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569814011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_5&ds=v1%3AJYFXnES4t4Ss%2BdZdVWmdp8Lyt0%2Fc576chc5ZMmH6T6k
+                - listitem [ref=e2299]:
+                  - generic:
+                    - link "Apply Red filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569827011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_6&ds=v1%3AF62K6yimY5pwZhRWmrMWW%2BkZVdZC3EhUzf4UhcFk14s
+                - listitem [ref=e2301]:
+                  - generic:
+                    - link "Apply Pink filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569825011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_7&ds=v1%3AvX28%2B%2BlaaR3ma2c6ulWxCah5jcIqvRW1KcGtKbp8On0
+                - listitem [ref=e2303]:
+                  - generic:
+                    - link "Apply Orange filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569824011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_8&ds=v1%3AIktBk6Qz5aYbjQpg%2FtDbfy1GYzoRUPQCRPEGzdm0ehU
+                - listitem [ref=e2305]:
+                  - generic:
+                    - link "Apply Yellow filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569830011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_9&ds=v1%3AcfdR5WTu%2FzbYrvRZFxNDZeJ0cEZCFGDIDDZOUbOLXug
+                - listitem [ref=e2307]:
+                  - generic:
+                    - link "Apply Ivory filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569822011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_10&ds=v1%3ArFFRXErSyrhy3GobwrV6PtDkHEKG3AdmkmovD8qcQrE
+                - listitem [ref=e2309]:
+                  - generic:
+                    - link "Apply Green filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569820011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_11&ds=v1%3AxdLnuUfA9cVfZ%2FAhsFIiB81hmg%2BJHDdH16EeWUDTDNo
+                - listitem [ref=e2311]:
+                  - generic:
+                    - link "Apply Blue filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569816011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_12&ds=v1%3Aptqh4DGW7bbxVUdhL%2BDHoTAEou3jmtlhT8TROzkN%2Bdo
+                - listitem [ref=e2313]:
+                  - generic:
+                    - link "Apply Purple filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569826011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_13&ds=v1%3ARfGGcrrLEB%2FoCwZN6kmazPTIvjZdhzz2k72sPEY1W8U
+                - listitem [ref=e2315]:
+                  - generic:
+                    - link "Apply Gold filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569819011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_14&ds=v1%3AA3kbyd2dK2YpRSLSUmxMm6TwMwoeoeKl8M92tKibzBw
+                - listitem [ref=e2317]:
+                  - generic:
+                    - link "Apply Silver filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569828011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_15&ds=v1%3A%2Fw5FQRgkL3XVsVxo25f7cjiqyZK%2BAEttXR0i7bQZLTk
+                - listitem [ref=e2319]:
+                  - generic:
+                    - link "Apply Multi filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569823011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_16&ds=v1%3ANpqOPe3W%2BQJqpx2Lou2%2BBbQWWKbKEltLXQK%2F618T5QY
+                - listitem [ref=e2321]:
+                  - generic:
+                    - link "Apply Clear filter to narrow results":
+                      - /url: /s?k=USB+Cable&rh=p_n_g-1001308730111%3A2569818011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2569813011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308730111_17&ds=v1%3A8dtaqgHPOa0cildFR6057JQvf4vnOtrSJKT1wOhxajI
+            - group "Deals & Discounts" [ref=e2323]:
+              - heading "Deals & Discounts" [level=2] [ref=e2324]
+              - list "Deals & Discounts" [ref=e2325]:
+                - listitem [ref=e2326]:
+                  - link "All Discounts" [ref=e2328] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_deal_type%3A23566065011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23566063011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_deal_type_1&ds=v1%3Al3ur3hIs%2BmFpIcEtZ0EIOD7cLWFT4xw7B4isMX21%2Bcw
+                - listitem [ref=e2329]:
+                  - link "Buy More, Save More" [ref=e2331] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_deal_type%3A210906365011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23566063011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_deal_type_2&ds=v1%3Ac71rh6HNUCtcx%2BwTMhwi0RJK5qT9TpDEE1mD9Fntv%2BM
+                - listitem [ref=e2332]:
+                  - link "Coupons" [ref=e2334] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_deal_type%3A210906366011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23566063011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_deal_type_3&ds=v1%3AmSK3wOVr4kqaLoBABtcOZDfnP32wx151JMQA98nRALw
+                - listitem [ref=e2335]:
+                  - link "Today's Deals" [ref=e2337] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_deal_type%3A23566064011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23566063011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_deal_type_4&ds=v1%3AMazVv0RmxWNk1ea%2FNMYtJ312cTbvS1NY%2Bba0VtLU3o4
+            - group "Condition" [ref=e2338]:
+              - heading "Condition" [level=2] [ref=e2339]
+              - list "Condition" [ref=e2340]:
+                - listitem "Popular Shopping Ideas" [ref=e2341]:
+                  - link "Apply New filter to narrow results" [ref=e2343] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_condition-type%3A2224371011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2224369011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_condition-type_1&ds=v1%3APjjEt073Cam4WBDmNcBDZulKiFp%2BFmOIBL0tUgVSNlU
+                    - checkbox [ref=e2346]
+                    - text: New
+                - listitem "Popular Shopping Ideas" [ref=e2348]:
+                  - link "Apply Renewed filter to narrow results" [ref=e2350] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_condition-type%3A16907720011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2224369011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_condition-type_2&ds=v1%3ApSrKZprbp%2B3UUuk5cDTrhNp1YU47XnCSqokt7hTpRpM
+                    - checkbox [ref=e2353]
+                    - text: Renewed
+                - listitem "Popular Shopping Ideas" [ref=e2355]:
+                  - link "Apply Used filter to narrow results" [ref=e2357] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_condition-type%3A2224373011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2224369011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_condition-type_3&ds=v1%3ALWRfJrMW6jmg509aKL2mrP1hnYf1fP1U1fwgaBMnv10
+                    - checkbox [ref=e2360]
+                    - text: Used
+            - group "Top Brands" [ref=e2362]:
+              - heading "Top Brands" [level=2] [ref=e2363]
+              - list "Top Brands" [ref=e2364]:
+                - listitem "Popular Shopping Ideas" [ref=e2365]:
+                  - link "Apply Top Brands filter to narrow results" [ref=e2367] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101014971069111%3A119653281011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=119653280011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101014971069111_1&ds=v1%3AJL21eYNjTbbKxr1zwS3p2KbaoC%2BepS1GD3RGLQsP1TU
+                    - checkbox [ref=e2370]
+                    - text: Top Brands
+            - group "Maximum Voltage" [ref=e2372]:
+              - heading "Maximum Voltage" [level=2] [ref=e2373]
+              - list "Maximum Voltage" [ref=e2374]:
+                - listitem "Popular Shopping Ideas" [ref=e2375]:
+                  - link "Apply Up to 9 V filter to narrow results" [ref=e2377] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003493331111%3A28963985011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=28963983011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003493331111_1&ds=v1%3AftmPg%2B%2FqyuD3%2Bylatr1qRU4gfrP7%2Bewwpft2IuQg7e8
+                    - checkbox [ref=e2380]
+                    - text: Up to 9 V
+                - listitem "Popular Shopping Ideas" [ref=e2382]:
+                  - link "Apply 10 to 49 V filter to narrow results" [ref=e2384] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003493331111%3A28963988011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=28963983011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003493331111_2&ds=v1%3AA0Wkk1ZN9FQmM5HEHFM81%2Bwo2RPp19N9D10PCu%2FZ4FI
+                    - checkbox [ref=e2387]
+                    - text: 10 to 49 V
+                - listitem "Popular Shopping Ideas" [ref=e2389]:
+                  - link "Apply 50 to 99 V filter to narrow results" [ref=e2391] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003493331111%3A28963987011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=28963983011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003493331111_3&ds=v1%3AoCIWb3Y5JosAiArtUecVqiX8qYjtK3tJCbz6un5dHsk
+                    - checkbox [ref=e2394]
+                    - text: 50 to 99 V
+                - listitem "Popular Shopping Ideas" [ref=e2396]:
+                  - link "Apply 100 to 149 V filter to narrow results" [ref=e2398] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003493331111%3A84391690011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=28963983011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003493331111_4&ds=v1%3AtrsaP7wIHqKli03kn5pAmE868EjGmAkltJw1r6FRl8o
+                    - checkbox [ref=e2401]
+                    - text: 100 to 149 V
+                - listitem "Popular Shopping Ideas" [ref=e2403]:
+                  - link "Apply 150 V & above filter to narrow results" [ref=e2405] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003493331111%3A28963986011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=28963983011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003493331111_5&ds=v1%3ADyYmjvRHB21AsD34WiQ5W0JG6J09WY2xpKryae49%2FDc
+                    - checkbox [ref=e2408]
+                    - text: 150 V & above
+            - group "From Our Brands" [ref=e2410]:
+              - heading "From Our Brands" [level=2] [ref=e2411]
+              - list "From Our Brands" [ref=e2412]:
+                - listitem "Popular Shopping Ideas" [ref=e2413]:
+                  - link "Apply Amazon Brands filter to narrow results" [ref=e2415] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1001321510111%3A24677333011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=21180941011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001321510111_1&ds=v1%3AeXXwXAsZ%2BbfFDuzN14nscpI2ZnnnKHm2JJzCrkQzaXo
+                    - checkbox [ref=e2418]
+                    - text: Amazon Brands
+            - group "Shape" [ref=e2420]:
+              - heading "Shape" [level=2] [ref=e2421]
+              - list "Shape" [ref=e2422]:
+                - listitem "Popular Shopping Ideas" [ref=e2423]:
+                  - link "Apply Round filter to narrow results" [ref=e2425] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003056178111%3A23655393011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23655392011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003056178111_1&ds=v1%3AK4eBG7rZMNLMjops%2FsViL%2FfNZLwLNxcrsT%2BBP3gClyg
+                    - checkbox [ref=e2428]
+                    - text: Round
+                - listitem "Popular Shopping Ideas" [ref=e2430]:
+                  - link "Apply Flat filter to narrow results" [ref=e2432] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003056178111%3A23655394011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23655392011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003056178111_2&ds=v1%3A7J%2FPI6Lr8ynl2T7HRPIkJPzUi1sD9mtuPyKEE13MuZ0
+                    - checkbox [ref=e2435]
+                    - text: Flat
+            - group "Material" [ref=e2437]:
+              - heading "Material" [level=2] [ref=e2438]
+              - list "Material" [ref=e2439]:
+                - listitem "Popular Shopping Ideas" [ref=e2440]:
+                  - link "Apply Nylon filter to narrow results" [ref=e2442] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834011011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_1&ds=v1%3AL6eYyn50WV1bWTaT8IjdUMm2apUUNusa%2FuERBYxaUXU
+                    - checkbox [ref=e2445]
+                    - text: Nylon
+                - listitem "Popular Shopping Ideas" [ref=e2447]:
+                  - link "Apply Polyvinyl Chloride (PVC) filter to narrow results" [ref=e2449] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834017011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_2&ds=v1%3AD5Hy9NkQietYKsHOs3rWTYL0xj61C%2BRhqy%2FQabs3Gfc
+                    - checkbox [ref=e2452]
+                    - text: Polyvinyl Chloride (PVC)
+                - listitem "Popular Shopping Ideas" [ref=e2454]:
+                  - link "Apply Plastic filter to narrow results" [ref=e2456] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834023011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_3&ds=v1%3AoPygBUFUw0LSt3qXWr71AoIHQT4p2SLrm9UVL6%2FK8%2B0
+                    - checkbox [ref=e2459]
+                    - text: Plastic
+                - listitem "Popular Shopping Ideas" [ref=e2461]:
+                  - link "Apply Acrylonitrile Butadiene Styrene (ABS) filter to narrow results" [ref=e2463] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834013011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_4&ds=v1%3Afyn85%2BVJkCT5yLsAv8RDUWQlSi8uuHpGgLzW4NZla8c
+                    - checkbox [ref=e2466]
+                    - text: Acrylonitrile Butadiene Styrene (ABS)
+                - listitem "Popular Shopping Ideas" [ref=e2468]:
+                  - link "Apply Aluminum filter to narrow results" [ref=e2470] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834015011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_5&ds=v1%3AjZUPqZaJTerflrjRWDyi14rXn6ibiYTXCgVdy4%2BF5H8
+                    - checkbox [ref=e2473]
+                    - text: Aluminum
+                - listitem "Popular Shopping Ideas" [ref=e2475]:
+                  - link "Apply Copper filter to narrow results" [ref=e2477] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834018011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_6&ds=v1%3AtKRZgB5XJJIAs%2F7BIj5ty6r4mLZvOYPU5Xqzh%2FOero0
+                    - checkbox [ref=e2480]
+                    - text: Copper
+                - listitem "Popular Shopping Ideas" [ref=e2482]:
+                  - link "Apply Faux Leather filter to narrow results" [ref=e2484] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003494100111%3A24834019011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=24834008011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003494100111_7&ds=v1%3Awk%2BCP%2BYv21qF4z%2BykqLgZQ75bgeEW1JqCnfJWI7zyC4
+                    - checkbox [ref=e2487]
+                    - text: Faux Leather
+                - listitem [ref=e2489]:
+                  - button "See more, Material" [ref=e2492] [cursor=pointer]: See more
+            - group "Seller" [ref=e2494]:
+              - heading "Seller" [level=2] [ref=e2495]
+              - list "Seller" [ref=e2496]:
+                - listitem "Popular Shopping Ideas" [ref=e2497]:
+                  - link "Apply Amazon.com filter to narrow results" [ref=e2499] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_6%3AATVPDKIKX0DER&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=303116011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_6_1&ds=v1%3AmVyZqKlyyCt7oZeoApFWP%2BN4v9qn4qGhMlREMIGAax4
+                    - checkbox [ref=e2502]
+                    - text: Amazon.com
+                - listitem "Popular Shopping Ideas" [ref=e2504]:
+                  - link "Apply Gear(4)Less filter to narrow results" [ref=e2506] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_6%3AA2E5WOIQ02BF8S&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=303116011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_6_2&ds=v1%3AwaxH4W2aaFDfV9okQtzu%2BQam7D9x9SyH6%2BIgqK1aqrw
+                    - checkbox [ref=e2509]
+                    - text: Gear(4)Less
+                - listitem [ref=e2511]:
+                  - button "See more, Seller" [ref=e2514] [cursor=pointer]: See more
+            - group "Connector Type" [ref=e2516]:
+              - heading "Connector Type" [level=2] [ref=e2517]
+              - list "Connector Type" [ref=e2518]:
+                - listitem "Popular Shopping Ideas" [ref=e2519]:
+                  - link "Apply USB Type C filter to narrow results" [ref=e2521] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917069011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_1&ds=v1%3AEOaACQ%2Fi2657ZAcmLyTiWEo7wvtNWNKzQacM2Bi%2FXuY
+                    - checkbox [ref=e2524]
+                    - text: USB Type C
+                - listitem "Popular Shopping Ideas" [ref=e2526]:
+                  - link "Apply USB Type A filter to narrow results" [ref=e2528] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917071011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_2&ds=v1%3A9YKWkLHOkA57YHnKDt01PBvMD7lZYQIx71SpioLaXb8
+                    - checkbox [ref=e2531]
+                    - text: USB Type A
+                - listitem "Popular Shopping Ideas" [ref=e2533]:
+                  - link "Apply Micro USB filter to narrow results" [ref=e2535] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917070011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_3&ds=v1%3AvzcW3CrfEJHqzsRdlG1ZYjyzEk33TwPOA2Y6cWsEZ3A
+                    - checkbox [ref=e2538]
+                    - text: Micro USB
+                - listitem "Popular Shopping Ideas" [ref=e2540]:
+                  - link "Apply 20 Pin ATX filter to narrow results" [ref=e2542] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917074011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_4&ds=v1%3At3AtGRV%2FlE%2FCXQKvOURDVr46QX5UcqL3kU%2BtOmYgcbQ
+                    - checkbox [ref=e2545]
+                    - text: 20 Pin ATX
+                - listitem "Popular Shopping Ideas" [ref=e2547]:
+                  - link "Apply 4 Pin ATX filter to narrow results" [ref=e2549] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917080011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_5&ds=v1%3A533p8PFLfJZhFG%2BrmVQj2HMq%2F%2BONGEv7L2L0JXh7yZ4
+                    - checkbox [ref=e2552]
+                    - text: 4 Pin ATX
+                - listitem "Popular Shopping Ideas" [ref=e2554]:
+                  - link "Apply 8 Pin PCIe filter to narrow results" [ref=e2556] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917068011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_6&ds=v1%3AXiAgU%2BJn2646huiAlvSGdeGxw8S8pc%2F5qWfpk4z4CAc
+                    - checkbox [ref=e2559]
+                    - text: 8 Pin PCIe
+                - listitem "Popular Shopping Ideas" [ref=e2561]:
+                  - link "Apply Auxiliary filter to narrow results" [ref=e2563] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101013587911111%3A99917072011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=99917058011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101013587911111_7&ds=v1%3ARvP0i%2FgZHpru%2FNj3E1%2FxK%2FphHx6IjPoqwWQVQnYxCD0
+                    - checkbox [ref=e2566]
+                    - text: Auxiliary
+                - listitem [ref=e2568]:
+                  - button "See more, Connector Type" [ref=e2571] [cursor=pointer]: See more
+            - group "Premium Brands" [ref=e2573]:
+              - heading "Premium Brands" [level=2] [ref=e2574]
+              - list "Premium Brands" [ref=e2575]:
+                - listitem "Popular Shopping Ideas" [ref=e2576]:
+                  - link "Apply Premium Brands filter to narrow results" [ref=e2578] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015887018111%3A204376014011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=204376013011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015887018111_1&ds=v1%3AED34LPIRKsw3fCGLuT5EUId1Y%2Fc4vHQ7biSCIpDHMe0
+                    - checkbox [ref=e2581]
+                    - text: Premium Brands
+            - group "Count" [ref=e2583]:
+              - heading "Count" [level=2] [ref=e2584]
+              - list "Count" [ref=e2585]:
+                - listitem "Popular Shopping Ideas" [ref=e2586]:
+                  - link "Apply 1 filter to narrow results" [ref=e2588] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015555605111%3A122345930011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345792011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015555605111_1&ds=v1%3AjxUaKfdaM0PtS9bqoQkCOaagcgZFUk1vc3AHRiJTECM
+                    - checkbox [ref=e2591]
+                    - text: "1"
+                - listitem "Popular Shopping Ideas" [ref=e2593]:
+                  - link "Apply 2 to 3 filter to narrow results" [ref=e2595] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015555605111%3A122345928011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345792011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015555605111_2&ds=v1%3AJY9%2BKT7SLgVm3lnYHiW7R3DL%2Fa7jkjE9cuBhG2uwimk
+                    - checkbox [ref=e2598]
+                    - text: 2 to 3
+                - listitem "Popular Shopping Ideas" [ref=e2600]:
+                  - link "Apply 4 to 5 filter to narrow results" [ref=e2602] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015555605111%3A122345929011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345792011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015555605111_3&ds=v1%3A%2BQt58cOiSvA3fLc4G2w4BIMetMwPFQLqt5SUgZZAkHg
+                    - checkbox [ref=e2605]
+                    - text: 4 to 5
+                - listitem "Popular Shopping Ideas" [ref=e2607]:
+                  - link "Apply 6 & above filter to narrow results" [ref=e2609] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015555605111%3A122345931011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345792011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015555605111_4&ds=v1%3ADrBbI0EAr9c4vpys3gWpOLLVg2siNyH8ziAW8eztnIY
+                    - checkbox [ref=e2612]
+                    - text: 6 & above
+            - group "Data Transfer Rate" [ref=e2614]:
+              - heading "Data Transfer Rate" [level=2] [ref=e2615]
+              - list "Data Transfer Rate" [ref=e2616]:
+                - listitem "Popular Shopping Ideas" [ref=e2617]:
+                  - link "Apply Up to 3,809 Mbit/s filter to narrow results" [ref=e2619] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015531844111%3A122345926011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345791011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015531844111_1&ds=v1%3APM0BZTnmC1p9qd8%2FRaZxTh7k%2Fx%2Badd3L4e41ijZjglc
+                    - checkbox [ref=e2622]
+                    - text: Up to 3,809 Mbit/s
+                - listitem "Popular Shopping Ideas" [ref=e2624]:
+                  - link "Apply 3,810 to 6,919 Mbit/s filter to narrow results" [ref=e2626] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015531844111%3A122345925011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345791011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015531844111_2&ds=v1%3Ak0Nb3S7lx4bIahCZ%2F%2BwrILO2eTNaHHo4BcFyG6Iq9xk
+                    - checkbox [ref=e2629]
+                    - text: 3,810 to 6,919 Mbit/s
+                - listitem "Popular Shopping Ideas" [ref=e2631]:
+                  - link "Apply 6,920 to 10,029 Mbit/s filter to narrow results" [ref=e2633] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015531844111%3A122345924011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345791011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015531844111_3&ds=v1%3A7kfothsOb46qKiRRsgulUiYAzZxfTsCcpe7McDo4w7k
+                    - checkbox [ref=e2636]
+                    - text: 6,920 to 10,029 Mbit/s
+                - listitem "Popular Shopping Ideas" [ref=e2638]:
+                  - link "Apply 10,030 Mbit/s & above filter to narrow results" [ref=e2640] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015531844111%3A122345927011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122345791011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015531844111_4&ds=v1%3AJM5L291aAHXJkk5VNGbQzciFfrnevO3AydzWLQ6XnT4
+                    - checkbox [ref=e2643]
+                    - text: 10,030 Mbit/s & above
+            - group "Number of Pins" [ref=e2645]:
+              - heading "Number of Pins" [level=2] [ref=e2646]
+              - list "Number of Pins" [ref=e2647]:
+                - listitem "Popular Shopping Ideas" [ref=e2648]:
+                  - link "Apply Up to 3 filter to narrow results" [ref=e2650] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015522549111%3A122338928011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122338168011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015522549111_1&ds=v1%3AJP9ugA7yJ%2BYF9qDYyGEDQ6k%2BYNTJWwT7%2FJV6Ch9K%2Bj4
+                    - checkbox [ref=e2653]
+                    - text: Up to 3
+                - listitem "Popular Shopping Ideas" [ref=e2655]:
+                  - link "Apply 4 to 7 filter to narrow results" [ref=e2657] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015522549111%3A122338929011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122338168011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015522549111_2&ds=v1%3AWLKhKE%2FGVtRFyFAsrt2bZFp3JnFmQ%2FlXGLn%2B8B7mYkc
+                    - checkbox [ref=e2660]
+                    - text: 4 to 7
+                - listitem "Popular Shopping Ideas" [ref=e2662]:
+                  - link "Apply 8 to 11 filter to narrow results" [ref=e2664] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015522549111%3A122338930011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122338168011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015522549111_3&ds=v1%3AOXy7bn8mS44glyqYk0DnXBuEl7cksisn8InPyKw58ao
+                    - checkbox [ref=e2667]
+                    - text: 8 to 11
+                - listitem "Popular Shopping Ideas" [ref=e2669]:
+                  - link "Apply 12 & above filter to narrow results" [ref=e2671] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015522549111%3A122338931011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122338168011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015522549111_4&ds=v1%3ABpNLjkcYL3tI4Q5dsBhER3JC5Rque2H9qtvbH49sYnk
+                    - checkbox [ref=e2674]
+                    - text: 12 & above
+            - group "Sustainability Features" [ref=e2676]:
+              - heading "Sustainability Features" [level=2] [ref=e2677]
+              - list "Sustainability Features" [ref=e2678]:
+                - listitem [ref=e2679]:
+                  - link "Any Feature" [ref=e2681] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_cpf_labels%3A121136630011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=116845681011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_cpf_labels_1&ds=v1%3ADTpptUWLQarq8XbVuLBFl3g7lx%2BhmLs9bnhAHQORpU4
+                - listitem [ref=e2682]:
+                  - link "Carbon Impact" [ref=e2684] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_cpf_labels%3A116845688011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=116845681011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_cpf_labels_2&ds=v1%3AUK02sJMKK4SFhJmtsiFJ6xf776Gzegev4x3lsbEMu4g
+                - listitem [ref=e2685]:
+                  - button "See more, Sustainability Features" [ref=e2688] [cursor=pointer]: See more
+            - group "Indoor Outdoor Usage" [ref=e2690]:
+              - heading "Indoor Outdoor Usage" [level=2] [ref=e2691]
+              - list "Indoor Outdoor Usage" [ref=e2692]:
+                - listitem "Popular Shopping Ideas" [ref=e2693]:
+                  - link "Apply Indoor filter to narrow results" [ref=e2695] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015556530111%3A122346526011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122346523011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015556530111_1&ds=v1%3Ai%2FV6p8Ww9FbmNahRjHErpE3msB2SlxPT01%2BjfyQRicM
+                    - checkbox [ref=e2698]
+                    - text: Indoor
+                - listitem "Popular Shopping Ideas" [ref=e2700]:
+                  - link "Apply Outdoor filter to narrow results" [ref=e2702] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015556530111%3A122346527011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122346523011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015556530111_2&ds=v1%3AtPZoEu7lHtYq3vJUoqUdNFs%2ByDo1egqeu8o2WufS%2FYU
+                    - checkbox [ref=e2705]
+                    - text: Outdoor
+            - group "Water Resistance Level" [ref=e2707]:
+              - heading "Water Resistance Level" [level=2] [ref=e2708]
+              - list "Water Resistance Level" [ref=e2709]:
+                - listitem "Popular Shopping Ideas" [ref=e2710]:
+                  - link "Apply Not Water Resistant filter to narrow results" [ref=e2712] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004246264091%3A23484212011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=11636674011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004246264091_1&ds=v1%3AAZn7YOkQhtYIAsPqHmrLwAmF3BiKAgIq2QlL%2Bos3Hyo
+                    - checkbox [ref=e2715]
+                    - text: Not Water Resistant
+                - listitem "Popular Shopping Ideas" [ref=e2717]:
+                  - link "Apply Water-Resistant filter to narrow results" [ref=e2719] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004246264091%3A11636675011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=11636674011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004246264091_2&ds=v1%3ANuRGslwoNN%2BQe1%2FEA%2BUiNP%2F%2BnHVSouLzDJTIKYqqvfk
+                    - checkbox [ref=e2722]
+                    - text: Water-Resistant
+                - listitem "Popular Shopping Ideas" [ref=e2724]:
+                  - link "Apply Waterproof filter to narrow results" [ref=e2726] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004246264091%3A11636676011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=11636674011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004246264091_3&ds=v1%3AdjDZk10lBpwf8v2BDuIoL%2BN7LOP8ExO7mEcteuUNnKE
+                    - checkbox [ref=e2729]
+                    - text: Waterproof
+            - group "Smart Home Compatibility" [ref=e2731]:
+              - heading "Smart Home Compatibility" [level=2] [ref=e2732]
+              - list "Smart Home Compatibility" [ref=e2733]:
+                - listitem "Popular Shopping Ideas" [ref=e2734]:
+                  - link "Apply Not Smart Home Compatible filter to narrow results" [ref=e2736] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101017500749111%3A216876012011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=216876009011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101017500749111_1&ds=v1%3APsbkkJ1QEX1zVb2yvhT8pq%2FY4ceVETnf%2FGPbpSaV42U
+                    - checkbox [ref=e2739]
+                    - text: Not Smart Home Compatible
+                - listitem "Popular Shopping Ideas" [ref=e2741]:
+                  - link "Apply Smart Home Compatible filter to narrow results" [ref=e2743] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101017500749111%3A216876013011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=216876009011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101017500749111_2&ds=v1%3AE4aCK0p%2Fg998nXOq2pacSwgcASlVPtJ8BqQpd1rrn9A
+                    - checkbox [ref=e2746]
+                    - text: Smart Home Compatible
+            - group "Model Year" [ref=e2748]:
+              - heading "Model Year" [level=2] [ref=e2749]
+              - list "Model Year" [ref=e2750]:
+                - listitem "Popular Shopping Ideas" [ref=e2751]:
+                  - link "Apply 2024 filter to narrow results" [ref=e2753] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A23732470011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_1&ds=v1%3AoxayPQQbqQoMqw1WqJM5RHkZQxitk%2BM1k4CsJDK1S2w
+                    - checkbox [ref=e2756]
+                    - text: "2024"
+                - listitem "Popular Shopping Ideas" [ref=e2758]:
+                  - link "Apply 2023 filter to narrow results" [ref=e2760] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A23732468011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_2&ds=v1%3AEvmd76DQnuW%2F0JyF9QLP%2BPrY85DkdXrbS%2FfvMCCySVQ
+                    - checkbox [ref=e2763]
+                    - text: "2023"
+                - listitem "Popular Shopping Ideas" [ref=e2765]:
+                  - link "Apply 2022 filter to narrow results" [ref=e2767] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A23732472011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_3&ds=v1%3AlKSsBdTTWmLpEkeMxjxHKqLxXH3fQ4H0Ac%2BiAbnhDtY
+                    - checkbox [ref=e2770]
+                    - text: "2022"
+                - listitem "Popular Shopping Ideas" [ref=e2772]:
+                  - link "Apply 2021 filter to narrow results" [ref=e2774] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A23478599011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_4&ds=v1%3ADrbbu05vQU1IBwBLXs8%2F4roCMzdwLWBvCqVzvZ0%2BA2A
+                    - checkbox [ref=e2777]
+                    - text: "2021"
+                - listitem "Popular Shopping Ideas" [ref=e2779]:
+                  - link "Apply 2020 filter to narrow results" [ref=e2781] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A21103541011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_5&ds=v1%3APSH7eQxfMFqEtUeCLkgb5U2hwVMvew231SW5SoHJDM0
+                    - checkbox [ref=e2784]
+                    - text: "2020"
+                - listitem "Popular Shopping Ideas" [ref=e2786]:
+                  - link "Apply 2019 filter to narrow results" [ref=e2788] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A18778665011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_6&ds=v1%3AUKfSpn3UeRFr1PPSJg6CaUYKoq3WxYDp55VR0Jt4rm8
+                    - checkbox [ref=e2791]
+                    - text: "2019"
+                - listitem "Popular Shopping Ideas" [ref=e2793]:
+                  - link "Apply 2018 filter to narrow results" [ref=e2795] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004218864091%3A17599302011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=4972967011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004218864091_7&ds=v1%3AWZ81BEgzQXL67UScvd5qoRgjRni8zOlXjAFRRpfpiUs
+                    - checkbox [ref=e2798]
+                    - text: "2018"
+                - listitem [ref=e2800]:
+                  - button "See more, Model Year" [ref=e2803] [cursor=pointer]: See more
+            - group "Department" [ref=e2805]:
+              - heading "Department" [level=2] [ref=e2806]
+              - list "Department" [ref=e2807]:
+                - listitem "Popular Shopping Ideas" [ref=e2808]:
+                  - link "Apply Men filter to narrow results" [ref=e2810] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004246260091%3A10075311011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=10075310011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004246260091_1&ds=v1%3ABGoqLUEvsBJYej%2BFhu3RxJYN1r0SJdd6%2B2G5LAZCOSQ
+                    - checkbox [ref=e2813]
+                    - text: Men
+                - listitem "Popular Shopping Ideas" [ref=e2815]:
+                  - link "Apply Women filter to narrow results" [ref=e2817] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004246260091%3A10075312011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=10075310011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004246260091_2&ds=v1%3AChFLHy0%2BDvVgNz3MYpO8pqV1cb%2BBzIQEKSbw4NgxK9E
+                    - checkbox [ref=e2820]
+                    - text: Women
+                - listitem "Popular Shopping Ideas" [ref=e2822]:
+                  - link "Apply Girls filter to narrow results" [ref=e2824] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004246260091%3A10075314011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=10075310011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004246260091_3&ds=v1%3A1sJ%2FrNcZLZlVHvy7frlJDnOJadaR%2Fjv%2Bpo2a4m5wDkA
+                    - checkbox [ref=e2827]
+                    - text: Girls
+            - group "Release Date" [ref=e2829]:
+              - heading "Release Date" [level=2] [ref=e2830]
+              - list "Release Date" [ref=e2831]:
+                - listitem [ref=e2832]:
+                  - link "Last 30 days" [ref=e2834] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_date%3A1249088011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=1249087011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_date_1&ds=v1%3Aocd4bOzkv0K04n8Qj8zcgkgOL4EKH1Gk9L%2Bgvb1mi7I
+                - listitem [ref=e2835]:
+                  - link "Last 90 days" [ref=e2837] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_date%3A1249089011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=1249087011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_date_2&ds=v1%3APE1yRqrZ59cjTfmhbfTFO8rNXwSwRpEN8wB1S%2FM%2Bce8
+            - group "Cable Type" [ref=e2838]:
+              - heading "Cable Type" [level=2] [ref=e2839]
+              - list "Cable Type" [ref=e2840]:
+                - listitem "Popular Shopping Ideas" [ref=e2841]:
+                  - link "Apply AUX filter to narrow results" [ref=e2843] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347726011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_1&ds=v1%3AeTfDw82gtQ6sGILbl9imjMaazprCcV6MjHpUWjLGuss
+                    - checkbox [ref=e2846]
+                    - text: AUX
+                - listitem "Popular Shopping Ideas" [ref=e2848]:
+                  - link "Apply Coaxial filter to narrow results" [ref=e2850] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347721011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_2&ds=v1%3AhfHZjjOA%2FnZ3yEEWSgv%2B9DsZv0dsTMlyP%2BabCypkz8M
+                    - checkbox [ref=e2853]
+                    - text: Coaxial
+                - listitem "Popular Shopping Ideas" [ref=e2855]:
+                  - link "Apply Component filter to narrow results" [ref=e2857] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347719011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_3&ds=v1%3Ah9UV%2Bsikma1nDZssaSca%2Fji01mpU1%2BBjnDlwsfODENU
+                    - checkbox [ref=e2860]
+                    - text: Component
+                - listitem "Popular Shopping Ideas" [ref=e2862]:
+                  - link "Apply Composite filter to narrow results" [ref=e2864] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347717011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_4&ds=v1%3Ab9oflRQ8dEyLMd21uZAxt%2FDvKQxq6a%2BxAuZAfiLWR6M
+                    - checkbox [ref=e2867]
+                    - text: Composite
+                - listitem "Popular Shopping Ideas" [ref=e2869]:
+                  - link "Apply Display Port filter to narrow results" [ref=e2871] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347723011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_5&ds=v1%3AAv79eJBAaAhWM%2FZ1kHrCqg9sReiQLGSXqk%2BtdQ9zIpQ
+                    - checkbox [ref=e2874]
+                    - text: Display Port
+                - listitem "Popular Shopping Ideas" [ref=e2876]:
+                  - link "Apply DVI filter to narrow results" [ref=e2878] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347731011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_6&ds=v1%3AARREJ4Oa9eWUBtwF1%2Bi3C7vTS7kFoPBsdfYFgLwQL3A
+                    - checkbox [ref=e2881]
+                    - text: DVI
+                - listitem "Popular Shopping Ideas" [ref=e2883]:
+                  - link "Apply Ethernet filter to narrow results" [ref=e2885] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-101015558787111%3A122347720011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=122347706011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-101015558787111_7&ds=v1%3ACDUoO3E0PzjaIWBp08UxlD7UrPi5XibmFmlHMvtVE6o
+                    - checkbox [ref=e2888]
+                    - text: Ethernet
+                - listitem [ref=e2890]:
+                  - button "See more, Cable Type" [ref=e2893] [cursor=pointer]: See more
+            - group "Jack Size" [ref=e2895]:
+              - heading "Jack Size" [level=2] [ref=e2896]
+              - list "Jack Size" [ref=e2897]:
+                - listitem "Popular Shopping Ideas" [ref=e2898]:
+                  - link "Apply 2.5 mm Jack filter to narrow results" [ref=e2900] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003100118111%3A23714305011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23714302011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003100118111_1&ds=v1%3APpyf3cKrxYupyI%2FvKzv6tGeqa37Jz9IiNEzzAUyKdeY
+                    - checkbox [ref=e2903]
+                    - text: 2.5 mm Jack
+                - listitem "Popular Shopping Ideas" [ref=e2905]:
+                  - link "Apply 3.5 mm Jack filter to narrow results" [ref=e2907] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003100118111%3A23714304011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23714302011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003100118111_2&ds=v1%3AXi1S4BT9M8wE93kXMj6nVjS1IFL4iQjCPVWl2oOTF80
+                    - checkbox [ref=e2910]
+                    - text: 3.5 mm Jack
+                - listitem "Popular Shopping Ideas" [ref=e2912]:
+                  - link "Apply 6.35 mm Jack filter to narrow results" [ref=e2914] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1003100118111%3A23714306011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=23714302011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1003100118111_3&ds=v1%3AqAS5rcgrvxci7XzK69PE1ACb8t9gWuVUpy5xRGUGN5M
+                    - checkbox [ref=e2917]
+                    - text: 6.35 mm Jack
+            - group "Activity Type" [ref=e2919]:
+              - heading "Activity Type" [level=2] [ref=e2920]
+              - list "Activity Type" [ref=e2921]:
+                - listitem "Popular Shopping Ideas" [ref=e2922]:
+                  - link "Apply Fishing filter to narrow results" [ref=e2924] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1001308728111%3A2577648011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2528739011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308728111_1&ds=v1%3A3OQRKa%2FUOy5fk9FI4Qht3CgyDa3R8mFsS6fFRNhVC0M
+                    - checkbox [ref=e2927]
+                    - text: Fishing
+                - listitem "Popular Shopping Ideas" [ref=e2929]:
+                  - link "Apply Running filter to narrow results" [ref=e2931] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1001308728111%3A2531516011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=2528739011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1001308728111_2&ds=v1%3AdjKU9iFxb4PItohkoFrFyBzjGeojm1uszALpiJwyehk
+                    - checkbox [ref=e2934]
+                    - text: Running
+            - group "Vehicle Type" [ref=e2936]:
+              - heading "Vehicle Type" [level=2] [ref=e2937]
+              - list "Vehicle Type" [ref=e2938]:
+                - listitem "Popular Shopping Ideas" [ref=e2939]:
+                  - link "Apply ATV & UTV filter to narrow results" [ref=e2941] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004235685091%3A7298818011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=404850011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004235685091_1&ds=v1%3ArY1EdXx1MWsD0ELeSS62zL9gKVTgm8II30BetkPo5M0
+                    - checkbox [ref=e2944]
+                    - text: ATV & UTV
+                - listitem "Popular Shopping Ideas" [ref=e2946]:
+                  - link "Apply Snowmobile filter to narrow results" [ref=e2948] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_g-1004235685091%3A1253813011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=404850011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_g-1004235685091_2&ds=v1%3AgiXIQnpRaIfIoMH5SVeWeBAbC4DyYS%2BYhE9LIYSed28
+                    - checkbox [ref=e2951]
+                    - text: Snowmobile
+            - group "Customizable Products" [ref=e2953]:
+              - heading "Customizable Products" [level=2] [ref=e2954]
+              - list "Customizable Products" [ref=e2955]:
+                - listitem "Popular Shopping Ideas" [ref=e2956]:
+                  - link "Apply Customizable filter to narrow results" [ref=e2958] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_customizable_template_name%3A16031489011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=16031488011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_customizable_template_name_1&ds=v1%3ArIBPjvuFVpVtsCUYvxPl9hSz4ECW6aLwZ%2B7xhMZ7xPs
+                    - checkbox [ref=e2961]
+                    - text: Customizable
+            - group "Handmade Products" [ref=e2963]:
+              - heading "Handmade Products" [level=2] [ref=e2964]
+              - list "Handmade Products" [ref=e2965]:
+                - listitem "Popular Shopping Ideas" [ref=e2966]:
+                  - link "Apply Handmade filter to narrow results" [ref=e2968] [cursor=pointer]:
+                    - /url: /s?k=USB+Cable&rh=p_n_feature_thirty-four_browse-bin%3A217421938011&dc&crid=3TAUBREW220M5&qid=1781164264&rnid=217421937011&sprefix=usb+cable%2Caps%2C848&ref=sr_nr_p_n_feature_thirty-four_browse-bin_1&ds=v1%3AMFkd4h0eHQ7eenboDr4z00GSWsCs%2BoB3Ss%2BzDR2cxMc
+                    - checkbox [ref=e2971]
+                    - text: Handmade
+    - complementary "Your recently viewed items and featured recommendations"
+    - generic [ref=e2973]:
+      - button "Back to top" [ref=e2974] [cursor=pointer]:
+        - generic [ref=e2975]: Back to top
+      - generic [ref=e2976]:
+        - generic [ref=e2977]:
+          - heading "Get to Know Us" [level=6] [ref=e2978]
+          - list [ref=e2979]:
+            - listitem [ref=e2980]:
+              - link "Careers" [ref=e2981] [cursor=pointer]:
+                - /url: https://www.amazon.jobs
+            - listitem [ref=e2982]:
+              - link "Blog" [ref=e2983] [cursor=pointer]:
+                - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e2984]:
+              - link "About Amazon" [ref=e2985] [cursor=pointer]:
+                - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e2986]:
+              - link "Investor Relations" [ref=e2987] [cursor=pointer]:
+                - /url: https://www.amazon.com/ir
+            - listitem [ref=e2988]:
+              - link "Amazon Devices" [ref=e2989] [cursor=pointer]:
+                - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+            - listitem [ref=e2990]:
+              - link "Amazon Science" [ref=e2991] [cursor=pointer]:
+                - /url: https://www.amazon.science
+        - generic [ref=e2993]:
+          - heading "Make Money with Us" [level=6] [ref=e2994]
+          - list [ref=e2995]:
+            - listitem [ref=e2996]:
+              - link "Sell products on Amazon" [ref=e2997] [cursor=pointer]:
+                - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+            - listitem [ref=e2998]:
+              - link "Sell on Amazon Business" [ref=e2999] [cursor=pointer]:
+                - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+            - listitem [ref=e3000]:
+              - link "Sell apps on Amazon" [ref=e3001] [cursor=pointer]:
+                - /url: https://developer.amazon.com
+            - listitem [ref=e3002]:
+              - link "Become an Affiliate" [ref=e3003] [cursor=pointer]:
+                - /url: https://affiliate-program.amazon.com/
+            - listitem [ref=e3004]:
+              - link "Advertise Your Products" [ref=e3005] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+            - listitem [ref=e3006]:
+              - link "Self-Publish with Us" [ref=e3007] [cursor=pointer]:
+                - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+            - listitem [ref=e3008]:
+              - link "Host an Amazon Hub" [ref=e3009] [cursor=pointer]:
+                - /url: https://go.thehub-amazon.com/amazon-hub-locker
+            - listitem [ref=e3010]:
+              - text: ›
+              - link "See More Make Money with Us" [ref=e3011] [cursor=pointer]:
+                - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+        - generic [ref=e3013]:
+          - heading "Amazon Payment Products" [level=6] [ref=e3014]
+          - list [ref=e3015]:
+            - listitem [ref=e3016]:
+              - link "Amazon Business Card" [ref=e3017] [cursor=pointer]:
+                - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+            - listitem [ref=e3018]:
+              - link "Shop with Points" [ref=e3019] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+            - listitem [ref=e3020]:
+              - link "Reload Your Balance" [ref=e3021] [cursor=pointer]:
+                - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+            - listitem [ref=e3022]:
+              - link "Amazon Currency Converter" [ref=e3023] [cursor=pointer]:
+                - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+        - generic [ref=e3025]:
+          - heading "Let Us Help You" [level=6] [ref=e3026]
+          - list [ref=e3027]:
+            - listitem [ref=e3028]:
+              - link "Amazon and COVID-19" [ref=e3029] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+            - listitem [ref=e3030]:
+              - link "Your Account" [ref=e3031] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+            - listitem [ref=e3032]:
+              - link "Your Orders" [ref=e3033] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+            - listitem [ref=e3034]:
+              - link "Shipping Rates & Policies" [ref=e3035] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+            - listitem [ref=e3036]:
+              - link "Returns & Replacements" [ref=e3037] [cursor=pointer]:
+                - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+            - listitem [ref=e3038]:
+              - link "Manage Your Content and Devices" [ref=e3039] [cursor=pointer]:
+                - /url: /gp/digital/fiona/manage?ref_=footer_myk
+            - listitem [ref=e3040]:
+              - link "Help" [ref=e3041] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+      - generic [ref=e3043]:
+        - link "Amazon US Home" [ref=e3046] [cursor=pointer]:
+          - /url: /?ref_=footer_logo
+        - generic [ref=e3049]:
+          - generic [ref=e3050]:
+            - link "Choose a language for shopping. Current selection is English." [ref=e3051] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+              - generic [ref=e3053]: English
+            - button "Expand to Change Language or Country" [ref=e3054] [cursor=pointer]
+          - link "₹ INR - Indian Rupee" [ref=e3055] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2Fs%3Fk%3DUSB%2BCable%26crid%3D3TAUBREW220M5%26sprefix%3Dusb%2Bcable%252Caps%252C848%26ref%3Dnb_sb_noss_1s%2Fref%3Dnb_sb_noss_1
+            - generic [ref=e3056]: ₹
+            - generic [ref=e3057]: INR - Indian Rupee
+          - button "Choose a country/region for shopping. The current selection is United States." [ref=e3058] [cursor=pointer]:
+            - generic [ref=e3060]: United States
+      - navigation "More on Amazon" [ref=e3061]:
+        - generic "More on Amazon" [ref=e3062]:
+          - list [ref=e3063]:
+            - listitem [ref=e3064]:
+              - link "Amazon Music Stream millions of songs" [ref=e3065] [cursor=pointer]:
+                - /url: https://music.amazon.com?ref=dm_aff_amz_com
+                - heading "Amazon Music" [level=5] [ref=e3066]
+                - generic [ref=e3067]:
+                  - text: Stream millions
+                  - text: of songs
+            - listitem [ref=e3068]
+            - listitem [ref=e3069]:
+              - link "Amazon Ads Reach customers wherever they spend their time" [ref=e3070] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+                - heading "Amazon Ads" [level=5] [ref=e3071]
+                - generic [ref=e3072]:
+                  - text: Reach customers
+                  - text: wherever they
+                  - text: spend their time
+            - listitem [ref=e3073]
+            - listitem [ref=e3074]:
+              - link "6pm Score deals on fashion brands" [ref=e3075] [cursor=pointer]:
+                - /url: https://www.6pm.com
+                - heading "6pm" [level=5] [ref=e3076]
+                - generic [ref=e3077]:
+                  - text: Score deals
+                  - text: on fashion brands
+            - listitem [ref=e3078]
+            - listitem [ref=e3079]:
+              - link "AbeBooks Books, art & collectibles" [ref=e3080] [cursor=pointer]:
+                - /url: https://www.abebooks.com
+                - heading "AbeBooks" [level=5] [ref=e3081]
+                - generic [ref=e3082]:
+                  - text: Books, art
+                  - text: "& collectibles"
+            - listitem [ref=e3083]
+            - listitem [ref=e3084]:
+              - link "ACX Audiobook Publishing Made Easy" [ref=e3085] [cursor=pointer]:
+                - /url: https://www.acx.com/
+                - heading "ACX" [level=5] [ref=e3086]
+                - generic [ref=e3087]:
+                  - text: Audiobook Publishing
+                  - text: Made Easy
+            - listitem [ref=e3088]
+            - listitem [ref=e3089]:
+              - link "Sell on Amazon Start a Selling Account" [ref=e3090] [cursor=pointer]:
+                - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+                - heading "Sell on Amazon" [level=5] [ref=e3091]
+                - generic [ref=e3092]: Start a Selling Account
+            - listitem [ref=e3093]
+            - listitem [ref=e3094]:
+              - link "Veeqo Shipping Software Inventory Management" [ref=e3095] [cursor=pointer]:
+                - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+                - heading "Veeqo" [level=5] [ref=e3096]
+                - generic [ref=e3097]:
+                  - text: Shipping Software
+                  - text: Inventory Management
+          - list [ref=e3098]:
+            - listitem [ref=e3099]:
+              - link "Amazon Business Everything For Your Business" [ref=e3100] [cursor=pointer]:
+                - /url: /business?ref_=footer_retail_b2b
+                - heading "Amazon Business" [level=5] [ref=e3101]
+                - generic [ref=e3102]:
+                  - text: Everything For
+                  - text: Your Business
+            - listitem [ref=e3103]
+            - listitem [ref=e3104]:
+              - link "AmazonGlobal Ship Orders Internationally" [ref=e3105] [cursor=pointer]:
+                - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+                - heading "AmazonGlobal" [level=5] [ref=e3106]
+                - generic [ref=e3107]:
+                  - text: Ship Orders
+                  - text: Internationally
+            - listitem [ref=e3108]
+            - listitem [ref=e3109]:
+              - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e3110] [cursor=pointer]:
+                - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+                - heading "Amazon Web Services" [level=5] [ref=e3111]
+                - generic [ref=e3112]:
+                  - text: Scalable Cloud
+                  - text: Computing Services
+            - listitem [ref=e3113]
+            - listitem [ref=e3114]:
+              - link "Audible Listen to Books & Original Audio Performances" [ref=e3115] [cursor=pointer]:
+                - /url: https://www.audible.com
+                - heading "Audible" [level=5] [ref=e3116]
+                - generic [ref=e3117]:
+                  - text: Listen to Books & Original
+                  - text: Audio Performances
+            - listitem [ref=e3118]
+            - listitem [ref=e3119]:
+              - link "Box Office Mojo Find Movie Box Office Data" [ref=e3120] [cursor=pointer]:
+                - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+                - heading "Box Office Mojo" [level=5] [ref=e3121]
+                - generic [ref=e3122]:
+                  - text: Find Movie
+                  - text: Box Office Data
+            - listitem [ref=e3123]
+            - listitem [ref=e3124]:
+              - link "Goodreads Book reviews & recommendations" [ref=e3125] [cursor=pointer]:
+                - /url: https://www.goodreads.com
+                - heading "Goodreads" [level=5] [ref=e3126]
+                - generic [ref=e3127]:
+                  - text: Book reviews
+                  - text: "& recommendations"
+            - listitem [ref=e3128]
+            - listitem [ref=e3129]:
+              - link "IMDb Movies, TV & Celebrities" [ref=e3130] [cursor=pointer]:
+                - /url: https://www.imdb.com
+                - heading "IMDb" [level=5] [ref=e3131]
+                - generic [ref=e3132]:
+                  - text: Movies, TV
+                  - text: "& Celebrities"
+          - list [ref=e3133]:
+            - listitem [ref=e3134]:
+              - link "IMDbPro Get Info Entertainment Professionals Need" [ref=e3135] [cursor=pointer]:
+                - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+                - heading "IMDbPro" [level=5] [ref=e3136]
+                - generic [ref=e3137]:
+                  - text: Get Info Entertainment
+                  - text: Professionals Need
+            - listitem [ref=e3138]
+            - listitem [ref=e3139]:
+              - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e3140] [cursor=pointer]:
+                - /url: https://kdp.amazon.com
+                - heading "Kindle Direct Publishing" [level=5] [ref=e3141]
+                - generic [ref=e3142]:
+                  - text: Indie Digital & Print Publishing
+                  - text: Made Easy
+            - listitem [ref=e3143]
+            - listitem [ref=e3144]:
+              - link "Prime Video Direct Video Distribution Made Easy" [ref=e3145] [cursor=pointer]:
+                - /url: https://videodirect.amazon.com/home/landing
+                - heading "Prime Video Direct" [level=5] [ref=e3146]
+                - generic [ref=e3147]:
+                  - text: Video Distribution
+                  - text: Made Easy
+            - listitem [ref=e3148]
+            - listitem [ref=e3149]:
+              - link "Shopbop Designer Fashion Brands" [ref=e3150] [cursor=pointer]:
+                - /url: https://www.shopbop.com
+                - heading "Shopbop" [level=5] [ref=e3151]
+                - generic [ref=e3152]:
+                  - text: Designer
+                  - text: Fashion Brands
+            - listitem [ref=e3153]
+            - listitem [ref=e3154]:
+              - link "Woot! Deals and Shenanigans" [ref=e3155] [cursor=pointer]:
+                - /url: https://www.woot.com/
+                - heading "Woot!" [level=5] [ref=e3156]
+                - generic [ref=e3157]:
+                  - text: Deals and
+                  - text: Shenanigans
+            - listitem [ref=e3158]
+            - listitem [ref=e3159]:
+              - link "Zappos Shoes & Clothing" [ref=e3160] [cursor=pointer]:
+                - /url: https://www.zappos.com
+                - heading "Zappos" [level=5] [ref=e3161]
+                - generic [ref=e3162]:
+                  - text: Shoes &
+                  - text: Clothing
+            - listitem [ref=e3163]
+            - listitem [ref=e3164]:
+              - link "Ring Smart Home Security Systems" [ref=e3165] [cursor=pointer]:
+                - /url: https://ring.com
+                - heading "Ring" [level=5] [ref=e3166]
+                - generic [ref=e3167]:
+                  - text: Smart Home
+                  - text: Security Systems
+          - list [ref=e3168]:
+            - listitem [ref=e3169]
+            - listitem [ref=e3170]
+            - listitem [ref=e3171]:
+              - link "eero WiFi Stream 4K Video in Every Room" [ref=e3172] [cursor=pointer]:
+                - /url: https://eero.com/
+                - heading "eero WiFi" [level=5] [ref=e3173]
+                - generic [ref=e3174]:
+                  - text: Stream 4K Video
+                  - text: in Every Room
+            - listitem [ref=e3175]
+            - listitem [ref=e3176]:
+              - link "Blink Smart Security for Every Home" [ref=e3177] [cursor=pointer]:
+                - /url: https://blinkforhome.com/?ref=nav_footer
+                - heading "Blink" [level=5] [ref=e3178]
+                - generic [ref=e3179]:
+                  - text: Smart Security
+                  - text: for Every Home
+            - listitem [ref=e3180]
+            - listitem [ref=e3181]:
+              - link "Neighbors App Real-Time Crime & Safety Alerts" [ref=e3182] [cursor=pointer]:
+                - /url: https://shop.ring.com/pages/neighbors-app
+                - heading "Neighbors App" [level=5] [ref=e3183]
+                - generic [ref=e3184]:
+                  - text: Real-Time Crime
+                  - text: "& Safety Alerts"
+            - listitem [ref=e3185]
+            - listitem [ref=e3186]:
+              - link "PillPack Pharmacy Simplified" [ref=e3187] [cursor=pointer]:
+                - /url: https://www.pillpack.com
+                - heading "PillPack" [level=5] [ref=e3188]
+                - generic [ref=e3189]: Pharmacy Simplified
+            - listitem [ref=e3190]
+            - listitem [ref=e3191]
+            - listitem [ref=e3192]
+            - listitem [ref=e3193]
+      - generic [ref=e3194]:
+        - list [ref=e3195]:
+          - listitem [ref=e3196]:
+            - link "Conditions of Use" [ref=e3197] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+          - listitem [ref=e3198]:
+            - link "Privacy Notice" [ref=e3199] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+          - listitem [ref=e3200]:
+            - link "Consumer Health Data Privacy Disclosure" [ref=e3201] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+          - listitem [ref=e3202]:
+            - link "Your Ads Privacy Choices" [ref=e3203] [cursor=pointer]:
+              - /url: /privacyprefs?ref_=footer_iba
+          - listitem [ref=e3204]
+        - generic [ref=e3206]: © 1996-2026, Amazon.com, Inc. or its affiliates
+    - iframe [ref=e3208]:
+      - iframe [ref=f3e2]:
+        - generic [active]:
+          - img [ref=f4e1]
+          - img [ref=f4e2]
+          - img [ref=f4e3]
+          - img [ref=f4e4]
+          - img [ref=f4e5]
+          - img [ref=f4e6]
+          - img [ref=f4e7]
+          - img [ref=f4e8]
+          - img [ref=f4e9]
+          - img [ref=f4e10]
+          - img [ref=f4e11]
+          - img [ref=f4e12]
+          - img [ref=f4e13]
+          - img [ref=f4e14]
+          - img [ref=f4e15]
+          - img [ref=f4e16]
+          - img [ref=f4e17]
+          - img [ref=f4e18]
+          - img [ref=f4e19]
+          - img [ref=f4e20]
+          - img [ref=f4e21]
+          - img [ref=f4e22]
+          - img [ref=f4e23]
+          - img [ref=f4e24]
+          - img [ref=f4e25]
+          - img [ref=f4e26]
+          - img [ref=f4e27]
+          - img [ref=f4e28]
+          - img [ref=f4e29]
+          - img [ref=f4e30]
+          - img [ref=f4e31]
+          - img [ref=f4e32]
+          - img [ref=f4e33]
+          - img [ref=f4e34]
+          - img [ref=f4e35]
+          - img [ref=f4e36]
+          - img [ref=f4e37]
+          - img [ref=f4e38]
+          - img [ref=f4e39]
+          - img [ref=f4e40]
+          - img [ref=f4e41]
+          - img [ref=f4e42]
+          - img [ref=f4e43]
+  - generic: "Test: amzn-nv-flyout-healthy-choice"
+  - generic: "Test: nav-rufus-disc-txt"
+  - generic: "Test: a-truncate-cut"
+  - generic: "Test: sp-cc-wrapper"
+  - generic: "Test: .mo-wp"
+  - generic: "Test: .a-image-container"
+  - generic: "Test: sp-cc"
+  - generic: "Test: .amzn-box-inner"
+  - generic: "Test: .js-order-card"
+  - generic: "Test: pldn-deep-link"
+  - generic: "Test: add-to-cart-btn"
+  - generic: "Test: amzn-nav-app-banner-container"
+  - generic: "Test: .sparkle-container"
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from '@playwright/test';
+  2  | import { BasePage } from './BasePage';
+  3  | 
+  4  | export class SearchResultsPage extends BasePage {
+  5  |     readonly searchResultsContainer: Locator;
+  6  |     readonly productTitle: Locator;
+  7  |     readonly priceFilter: Locator;
+  8  |     readonly minPriceInput: Locator;
+  9  |     readonly maxPriceInput: Locator;
+  10 |     readonly applyPriceButton: Locator;
+  11 |     readonly ratingFilter: Locator;
+  12 |     readonly sortDropdown: Locator;
+  13 |     readonly productItem: Locator;
+  14 |     readonly productCount: Locator;
+  15 | 
+  16 |     constructor(page: Page) {
+  17 |         super(page);
+  18 |         this.searchResultsContainer = page.locator('[data-component-type="s-search-result"]');
+  19 |         this.productTitle = page.locator('h2 a span');
+  20 |         this.priceFilter = page.locator('input[aria-label*="price"]');
+  21 |         this.minPriceInput = page.locator('input[aria-label*="min"]');
+  22 |         this.maxPriceInput = page.locator('input[aria-label*="max"]');
+  23 |         this.applyPriceButton = page.locator('input[aria-label*="Go"]');
+  24 |         this.ratingFilter = page.locator('i.a-icon-star-small span');
+  25 |         this.sortDropdown = page.locator('select#s-result-sort-select');
+  26 |         this.productItem = page.locator('[data-component-type="s-search-result"]');
+  27 |         this.productCount = page.locator('.sg-col-inner');
+  28 |     }
+  29 | 
+  30 |     async getProductCount(): Promise<number> {
+  31 |         return await this.productItem.count();
+  32 |     }
+  33 | 
+  34 |     async getProductTitles(): Promise<string[]> {
+  35 |         const titles: string[] = [];
+  36 |         const items = await this.productTitle.all();
+  37 |         for (const item of items) {
+  38 |             titles.push(await item.textContent() || '');
+  39 |         }
+  40 |         return titles;
+  41 |     }
+  42 | 
+  43 |     async selectProduct(productIndex: number) {
+  44 |         const products = this.page.locator('[data-component-type="s-search-result"]');
+  45 |         const firstProduct = products.nth(productIndex);
+> 46 |         await firstProduct.locator('h2 a').click();
+     |                                            ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  47 |     }
+  48 | 
+  49 |     async selectProductByName(productName: string) {
+  50 |         await this.page.locator(`h2 a:has-text("${productName}")`).click();
+  51 |     }
+  52 | 
+  53 |     async filterByPriceRange(minPrice: string, maxPrice: string) {
+  54 |         await this.minPriceInput.fill(minPrice);
+  55 |         await this.maxPriceInput.fill(maxPrice);
+  56 |         await this.applyPriceButton.click();
+  57 |     }
+  58 | 
+  59 |     async sortByOption(sortOption: string) {
+  60 |         // Options: 'price-asc-rank', 'price-desc-rank', 'review-rank', 'date-desc-rank'
+  61 |         await this.sortDropdown.selectOption(sortOption);
+  62 |     }
+  63 | 
+  64 |     async filterByRating(stars: number) {
+  65 |         // Filter by star rating (4 stars and up, etc.)
+  66 |         await this.page.locator(`[aria-label="${stars} Stars & Up"]`).click();
+  67 |     }
+  68 | 
+  69 |     async verifyProductsDisplayed(): Promise<boolean> {
+  70 |         return await this.searchResultsContainer.first().isVisible();
+  71 |     }
+  72 | 
+  73 |     async waitForSearchResults() {
+  74 |         await this.page.waitForSelector('[data-component-type="s-search-result"]');
+  75 |     }
+  76 | }
+  77 | 
+```

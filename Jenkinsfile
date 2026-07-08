@@ -1,55 +1,32 @@
 pipeline {
-    agent any
-
-    tools {
-        nodejs 'NodeJS'
+    agent {
+        docker { image 'jenkins/agent:latest-alpine-jdk21' }
     }
-
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git url: 'https://github.com/sahilshrrma/Playwright_AmazonTesting.git', branch: 'main'
             }
         }
-
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
-            }
-        }
-
-        stage('Install Playwright Browsers') {
-            steps {
+                sh 'npm install'
                 sh 'npx playwright install --with-deps'
             }
         }
-
-        stage('Run Playwright Tests') {
+        stage('Run Tests') {
             steps {
                 sh 'npx playwright test'
             }
         }
-
         stage('Publish Report') {
             steps {
                 publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
                     reportDir: 'playwright-report',
                     reportFiles: 'index.html',
-                    reportName: 'Playwright Test Report'
+                    reportName: 'Playwright Report'
                 ])
             }
-        }
-    }
-
-    post {
-        always {
-            echo 'Pipeline finished.'
-        }
-        failure {
-            echo 'Tests failed!'
         }
     }
 }

@@ -1,0 +1,3233 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: EnhancedProductFlow.spec.ts >> Amazon Product Flow - Enhanced >> should filter products by price range independently
+- Location: src\tests\EnhancedProductFlow.spec.ts:54:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Shortcuts menu" [ref=e3]:
+      - heading "Skip to" [level=2] [ref=e4]
+      - list "Skip to" [ref=e5]:
+        - listitem [ref=e6]:
+          - link "main content" [ref=e7] [cursor=pointer]:
+            - /url: "#skippedLink"
+            - text: Main content
+        - listitem [ref=e8]:
+          - link "Results" [ref=e9] [cursor=pointer]:
+            - /url: .s-asin a:has(h2)
+        - listitem [ref=e10]:
+          - link "Filters" [ref=e11] [cursor=pointer]:
+            - /url: "#s-refinements > div.a-section > div:first-child"
+      - separator [ref=e12]
+      - heading "Keyboard shortcuts" [level=2] [ref=e13]
+      - list "Keyboard shortcuts" [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Search, alt, forward slash" [ref=e16] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e17]:
+              - generic [ref=e18]: Search
+              - generic [ref=e19]:
+                - generic [ref=e20]: alt
+                - generic [ref=e21]: +
+                - generic [ref=e22]: /
+        - listitem [ref=e23]:
+          - link "Cart, shift, alt, c" [ref=e24] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e25]:
+              - generic [ref=e26]: Cart
+              - generic [ref=e27]:
+                - generic [ref=e28]: shift
+                - generic [ref=e29]: +
+                - generic [ref=e30]: alt
+                - generic [ref=e31]: +
+                - generic [ref=e32]: C
+        - listitem [ref=e33]:
+          - link "Home, shift, alt, h" [ref=e34] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e35]:
+              - generic [ref=e36]: Home
+              - generic [ref=e37]:
+                - generic [ref=e38]: shift
+                - generic [ref=e39]: +
+                - generic [ref=e40]: alt
+                - generic [ref=e41]: +
+                - generic [ref=e42]: H
+        - listitem [ref=e43]:
+          - link "Your orders, shift, alt, o" [ref=e44] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e45]:
+              - generic [ref=e46]: Orders
+              - generic [ref=e47]:
+                - generic [ref=e48]: shift
+                - generic [ref=e49]: +
+                - generic [ref=e50]: alt
+                - generic [ref=e51]: +
+                - generic [ref=e52]: O
+        - listitem [ref=e53]:
+          - button "Show/hide shortcuts, shift, alt, z" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: Show/Hide shortcuts
+              - generic [ref=e57]:
+                - generic [ref=e58]: shift
+                - generic [ref=e59]: +
+                - generic [ref=e60]: alt
+                - generic [ref=e61]: +
+                - generic [ref=e62]: Z
+      - generic [ref=e68]: To move between items, use your keyboard's up or down arrows.
+    - banner [ref=e69]:
+      - navigation "Primary" [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - link "Amazon" [ref=e74] [cursor=pointer]:
+              - /url: /ref=nav_logo
+            - button "Deliver to India" [ref=e77] [cursor=pointer]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: Deliver to
+                - generic [ref=e81]: India
+          - search [ref=e84]:
+            - generic [ref=e87]:
+              - generic [ref=e89]: All
+              - combobox "Select the department you want to search in" [ref=e91] [cursor=pointer]:
+                - option "All Departments" [selected]
+                - option "Arts & Crafts"
+                - option "Automotive"
+                - option "Baby"
+                - option "Beauty & Personal Care"
+                - option "Books"
+                - option "Boys' Fashion"
+                - option "Computers"
+                - option "Deals"
+                - option "Digital Music"
+                - option "Electronics"
+                - option "Girls' Fashion"
+                - option "Health & Household"
+                - option "Home & Kitchen"
+                - option "Industrial & Scientific"
+                - option "Kindle Store"
+                - option "Luggage"
+                - option "Men's Fashion"
+                - option "Movies & TV"
+                - option "Music, CDs & Vinyl"
+                - option "Pet Supplies"
+                - option "Prime Video"
+                - option "Software"
+                - option "Sports & Outdoors"
+                - option "Tools & Home Improvement"
+                - option "Toys & Games"
+                - option "Video Games"
+                - option "Women's Fashion"
+            - searchbox "Search Amazon" [ref=e94]: Laptop
+            - generic [ref=e95]:
+              - generic "Go" [ref=e97] [cursor=pointer]:
+                - button "Go" [ref=e98]
+              - button [ref=e100]: Agent Search
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=e104] [cursor=pointer]:
+                - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+                - generic [ref=e107]:
+                  - img "United States" [ref=e108]
+                  - generic [ref=e109]: EN
+              - button "Expand to Change Language or Country" [ref=e110] [cursor=pointer]
+            - generic [ref=e111]:
+              - link "Hello, sign in Account & Lists" [ref=e112] [cursor=pointer]:
+                - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DLaptop%26crid%3D2SJSLFT85F0XE%26sprefix%3Dlaptop%252Caps%252C634%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+                - generic [ref=e114]: Hello, sign in
+                - generic [ref=e115]: Account & Lists
+              - button "Expand Account and Lists" [ref=e116] [cursor=pointer]
+            - link "Returns & Orders" [ref=e117] [cursor=pointer]:
+              - /url: /gp/css/order-history?ref_=nav_orders_first
+              - generic [ref=e118]: Returns
+              - generic [ref=e119]: "& Orders"
+            - link "0 items in cart" [ref=e120] [cursor=pointer]:
+              - /url: /gp/cart/view.html?ref_=nav_cart
+              - generic [ref=e122]: "0"
+              - generic [ref=e125]: Cart
+        - alertdialog "International Shopping Transition Alert" [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e131]:
+              - text: We're showing you items that ship to
+              - strong [ref=e132]: India
+              - text: . To see items that ship to a different country, change your delivery address.
+            - generic [ref=e133]:
+              - generic [ref=e135] [cursor=pointer]:
+                - button "Submit" [ref=e136]
+                - generic [ref=e137]: Dismiss
+              - generic [ref=e139] [cursor=pointer]:
+                - button "Submit" [ref=e140]
+                - generic [ref=e141]: Change Address
+        - generic [ref=e142]:
+          - button "Open All Categories Menu" [ref=e144] [cursor=pointer]:
+            - generic [ref=e146]: All
+          - list [ref=e150]:
+            - listitem [ref=e151]:
+              - link "Today's Deals" [ref=e153] [cursor=pointer]:
+                - /url: /gp/goldbox?ref_=nav_cs_gb
+            - listitem [ref=e154]:
+              - link "Gift Cards" [ref=e156] [cursor=pointer]:
+                - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+            - listitem [ref=e157]:
+              - link "Sell" [ref=e159] [cursor=pointer]:
+                - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+            - listitem [ref=e160]:
+              - link "Registry" [ref=e162] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+            - listitem [ref=e163]:
+              - link "Prime Video" [ref=e165] [cursor=pointer]:
+                - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+            - listitem [ref=e166]:
+              - link "Customer Service" [ref=e168] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+            - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=e169] [cursor=pointer]:
+              - /url: /gp/help/customer/accessibility
+              - text: Disability Customer Support
+        - dialog [ref=e172]
+    - generic [ref=e174]:
+      - 'heading "1-16 of over 100,000 results for \"Laptop\" Sort by: Featured" [level=1] [ref=e177]':
+        - generic [ref=e178]:
+          - heading "1-16 of over 100,000 results for \"Laptop\"" [level=2] [ref=e181]
+          - generic [ref=e186]:
+            - generic [ref=e187]: "Sort by:"
+            - combobox "Sort by:" [ref=e188]:
+              - option "Featured" [selected]
+              - 'option "Price: Low to High"'
+              - 'option "Price: High to Low"'
+              - option "Avg. Customer Review"
+              - option "Newest Arrivals"
+              - option "Best Sellers"
+            - generic [ref=e191] [cursor=pointer]: Sort by:Featured
+      - generic [ref=e193]:
+        - generic [ref=e195]:
+          - generic [ref=e197]:
+            - generic [ref=e199]:
+              - generic [ref=e202]:
+                - heading "Results" [level=2] [ref=e203]
+                - generic [ref=e204]: Check each product page for other buying options.
+              - generic:
+                - list:
+                  - listitem [ref=e205]:
+                    - generic [ref=e213]:
+                      - link [ref=e219] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsr_1_1_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e221]
+                      - generic [ref=e224]:
+                        - generic [ref=e225]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e228] [cursor=pointer]:
+                            - generic [ref=e229]: Sponsored
+                          - 'link "Sponsored Ad - acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669" [ref=e231] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsr_1_1_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - 'heading "Sponsored Ad - acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669" [level=2] [ref=e232]': "acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669"
+                        - generic [ref=e233]:
+                          - generic [ref=e234]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e236] [cursor=pointer]:
+                              - generic [ref=e238]: 4.2 out of 5 stars
+                            - link "161 ratings" [ref=e242] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsr_1_1_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                              - text: (161)
+                          - generic [ref=e243]: 100+ bought in past month
+                        - generic [ref=e246]:
+                          - generic [ref=e249]:
+                            - generic [ref=e250]: Price, product page
+                            - link "INR 66,699.95" [ref=e251] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsr_1_1_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                              - generic [ref=e252]:
+                                - generic [ref=e253]: INR 66,699.95
+                                - generic [ref=e254]:
+                                  - text: INR
+                                  - generic [ref=e255]:
+                                    - text: 66,699
+                                    - generic [ref=e256]: .
+                                  - text: "95"
+                          - generic [ref=e257]:
+                            - generic [ref=e263]: INR 2,096.31 delivery Fri, Jul 3
+                            - generic [ref=e264]: Ships to India
+                          - button "Energy efficiency" [ref=e271] [cursor=pointer]:
+                            - generic [ref=e272]: Energy efficiency
+                          - button "Add to cart" [ref=e288] [cursor=pointer]
+                  - listitem [ref=e291]:
+                    - generic [ref=e299]:
+                      - link [ref=e305] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTI0NjYxMzA0MzYwMjo6MDo6&url=%2FASUS-Vivobook-Celeron-Windows-L510KA-ES04%2Fdp%2FB0CRDCW3Q3%2Fref%3Dsr_1_2_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                        - img [ref=e307]
+                      - generic [ref=e310]:
+                        - generic [ref=e311]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e314] [cursor=pointer]:
+                            - generic [ref=e315]: Sponsored
+                          - link "Sponsored Ad - ASUS 15.6” Vivobook Go Slim Laptop, Thin & Portable for Student Study, Intel Dual Core N4500, 4GB RAM, 128GB SSD, Windows 11, Star Black, L510KA-ES04" [ref=e317] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTI0NjYxMzA0MzYwMjo6MDo6&url=%2FASUS-Vivobook-Celeron-Windows-L510KA-ES04%2Fdp%2FB0CRDCW3Q3%2Fref%3Dsr_1_2_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                            - heading "Sponsored Ad - ASUS 15.6” Vivobook Go Slim Laptop, Thin & Portable for Student Study, Intel Dual Core N4500, 4GB RAM, 128GB SSD, Windows 11, Star Black, L510KA-ES04" [level=2] [ref=e318]: ASUS 15.6” Vivobook Go Slim Laptop, Thin & Portable for Student Study, Intel Dual Core N4500, 4GB RAM, 128GB SSD, Windows 11, Star Black, L510KA-ES04
+                        - generic [ref=e320]:
+                          - text: "3.8"
+                          - button "3.8 out of 5 stars, rating details" [ref=e322] [cursor=pointer]:
+                            - generic [ref=e324]: 3.8 out of 5 stars
+                          - link "839 ratings" [ref=e328] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTI0NjYxMzA0MzYwMjo6MDo6&url=%2FASUS-Vivobook-Celeron-Windows-L510KA-ES04%2Fdp%2FB0CRDCW3Q3%2Fref%3Dsr_1_2_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1#customerReviews
+                            - text: (839)
+                        - generic [ref=e331]:
+                          - generic [ref=e332]:
+                            - generic [ref=e334]:
+                              - generic [ref=e335]: Price, product page
+                              - 'link "INR 20,581.04 Typical: INR 23,726.46 Typical: INR 23,726.46" [ref=e336] [cursor=pointer]':
+                                - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYXRmOjMwMTI0NjYxMzA0MzYwMjo6MDo6&url=%2FASUS-Vivobook-Celeron-Windows-L510KA-ES04%2Fdp%2FB0CRDCW3Q3%2Fref%3Dsr_1_2_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-2-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1
+                                - generic [ref=e337]:
+                                  - generic [ref=e338]: INR 20,581.04
+                                  - generic [ref=e339]:
+                                    - text: INR
+                                    - generic [ref=e340]:
+                                      - text: 20,581
+                                      - generic [ref=e341]: .
+                                    - text: "04"
+                                - generic [ref=e342]: "Typical: INR 23,726.46"
+                                - generic [ref=e343]:
+                                  - text: "Typical:"
+                                  - generic [ref=e344]:
+                                    - generic [ref=e345]: INR 23,726.46
+                                    - text: INR23,726.46
+                            - generic [ref=e346]: Get 1 Month of Xbox GamePass for new users
+                          - generic [ref=e347]:
+                            - generic [ref=e353]: INR 2,045.81 delivery Fri, Jul 3
+                            - generic [ref=e354]: Ships to India
+                          - button "Add to cart" [ref=e369] [cursor=pointer]
+                  - listitem [ref=e372]:
+                    - generic [ref=e378]:
+                      - link [ref=e384] [cursor=pointer]:
+                        - /url: /HP-G9-Business-Processor-Productivity/dp/B0FJLJLK14/ref=sr_1_3?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-3
+                        - img [ref=e386]
+                      - generic [ref=e389]:
+                        - link "HP Everyday Laptop • 2026 Edition • 8GB RAM • 256GB SSD • Microsoft Office 365 Included • Thin & Portable • Fast Charge and Up to 12 Hours Battery Life • Windows 11" [ref=e391] [cursor=pointer]:
+                          - /url: /HP-G9-Business-Processor-Productivity/dp/B0FJLJLK14/ref=sr_1_3?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-3
+                          - heading "HP Everyday Laptop • 2026 Edition • 8GB RAM • 256GB SSD • Microsoft Office 365 Included • Thin & Portable • Fast Charge and Up to 12 Hours Battery Life • Windows 11" [level=2] [ref=e392]
+                        - generic [ref=e393]:
+                          - generic [ref=e394]:
+                            - text: "4.0"
+                            - button "4.0 out of 5 stars, rating details" [ref=e396] [cursor=pointer]:
+                              - generic [ref=e398]: 4.0 out of 5 stars
+                            - link "38 ratings" [ref=e402] [cursor=pointer]:
+                              - /url: /HP-G9-Business-Processor-Productivity/dp/B0FJLJLK14/ref=sr_1_3?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-3#customerReviews
+                              - text: (38)
+                          - generic [ref=e403]: 500+ bought in past month
+                        - generic [ref=e406]:
+                          - link "See options" [ref=e415] [cursor=pointer]:
+                            - /url: /HP-G9-Business-Processor-Productivity/dp/B0FJLJLK14/ref=sr_1_3_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-3
+                          - generic [ref=e417]:
+                            - text: No featured offers available
+                            - text: INR 23,726.46
+                            - link "(2 used & new offers)" [ref=e419] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0FJLJLK14/ref=sr_1_3_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-3
+                  - listitem [ref=e422]:
+                    - generic [ref=e428]:
+                      - generic [ref=e430]:
+                        - generic "Amazon's Choice" [ref=e433]:
+                          - generic [ref=e442]: Overall Pick
+                        - link [ref=e447] [cursor=pointer]:
+                          - /url: /SAMSUNG-Chromebook-Computer-Lightweight-12-Hour-Battery/dp/B09S3HNMHF/ref=sr_1_4?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-4
+                          - img [ref=e449]
+                      - generic [ref=e452]:
+                        - link "Samsung 14\" Galaxy Chromebook Go Laptop PC Computer, Intel Celeron N4500 Processor, 4GB RAM, 64GB Storage, ChromeOS, XE340XDA-KA2US, Student Laptop, Silver" [ref=e454] [cursor=pointer]:
+                          - /url: /SAMSUNG-Chromebook-Computer-Lightweight-12-Hour-Battery/dp/B09S3HNMHF/ref=sr_1_4?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-4
+                          - heading "Samsung 14\" Galaxy Chromebook Go Laptop PC Computer, Intel Celeron N4500 Processor, 4GB RAM, 64GB Storage, ChromeOS, XE340XDA-KA2US, Student Laptop, Silver" [level=2] [ref=e455]
+                        - generic [ref=e458]:
+                          - generic [ref=e459]: "Options:"
+                          - 'link "Options: 2 capacities" [ref=e460] [cursor=pointer]':
+                            - /url: /SAMSUNG-Chromebook-Computer-Lightweight-12-Hour-Battery/dp/B09S3HNMHF/ref=vo_sr_l_dp?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-4
+                            - generic [ref=e461]:
+                              - generic [ref=e462]: 2 capacities
+                              - generic [ref=e463]: 2 capacities
+                        - generic [ref=e464]:
+                          - generic [ref=e465]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e467] [cursor=pointer]:
+                              - generic [ref=e469]: 4.4 out of 5 stars
+                            - link "560 ratings" [ref=e473] [cursor=pointer]:
+                              - /url: /SAMSUNG-Chromebook-Computer-Lightweight-12-Hour-Battery/dp/B09S3HNMHF/ref=sr_1_4?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-4#customerReviews
+                              - text: (560)
+                          - generic [ref=e474]: 2K+ bought in past month
+                        - generic [ref=e477]:
+                          - generic [ref=e480]:
+                            - generic [ref=e481]: Price, product page
+                            - link "INR 18,198.86" [ref=e482] [cursor=pointer]:
+                              - /url: /SAMSUNG-Chromebook-Computer-Lightweight-12-Hour-Battery/dp/B09S3HNMHF/ref=sr_1_4?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-4
+                              - generic [ref=e483]:
+                                - generic [ref=e484]: INR 18,198.86
+                                - generic [ref=e485]:
+                                  - text: INR
+                                  - generic [ref=e486]:
+                                    - text: 18,198
+                                    - generic [ref=e487]: .
+                                  - text: "86"
+                          - generic [ref=e488]:
+                            - generic [ref=e494]: INR 1,857.14 delivery Fri, Jul 3
+                            - generic [ref=e495]: Ships to India
+                          - button "Add to cart" [ref=e510] [cursor=pointer]
+                          - generic [ref=e512]:
+                            - text: More Buying Choices
+                            - text: INR 14,201.57
+                            - link "(4+ used & new offers)" [ref=e514] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B09S3HNMHF/ref=sr_1_4_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-4
+                  - listitem [ref=e517]:
+                    - generic [ref=e523]:
+                      - link [ref=e529] [cursor=pointer]:
+                        - /url: /HP-Business-Computer-Display-Battery/dp/B0GMC2P6RB/ref=sr_1_5?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-5
+                        - img [ref=e531]
+                      - generic [ref=e534]:
+                        - link "HP 17 inch Business Laptop Computer • 2026 Edition • Latest AMD Ryzen 5 CPU • 16GB RAM • 512GB SSD • 17.3\" FHD Display • Long Battery Life • Windows 11 with Office 365 for The Web" [ref=e536] [cursor=pointer]:
+                          - /url: /HP-Business-Computer-Display-Battery/dp/B0GMC2P6RB/ref=sr_1_5?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-5
+                          - heading "HP 17 inch Business Laptop Computer • 2026 Edition • Latest AMD Ryzen 5 CPU • 16GB RAM • 512GB SSD • 17.3\" FHD Display • Long Battery Life • Windows 11 with Office 365 for The Web" [level=2] [ref=e537]
+                        - generic [ref=e538]:
+                          - generic [ref=e539]:
+                            - text: "5.0"
+                            - button "5.0 out of 5 stars, rating details" [ref=e541] [cursor=pointer]:
+                              - generic [ref=e543]: 5.0 out of 5 stars
+                            - link "3 ratings" [ref=e547] [cursor=pointer]:
+                              - /url: /HP-Business-Computer-Display-Battery/dp/B0GMC2P6RB/ref=sr_1_5?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-5#customerReviews
+                              - text: (3)
+                          - generic [ref=e548]: 300+ bought in past month
+                        - generic [ref=e551]:
+                          - link "See options" [ref=e560] [cursor=pointer]:
+                            - /url: /HP-Business-Computer-Display-Battery/dp/B0GMC2P6RB/ref=sr_1_5_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-5
+                          - generic [ref=e562]:
+                            - text: No featured offers available
+                            - text: INR 40,770.45
+                            - link "(4 used & new offers)" [ref=e564] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GMC2P6RB/ref=sr_1_5_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-5
+            - generic [ref=e570]:
+              - generic [ref=e575]:
+                - heading "Customers frequently viewed" [level=2] [ref=e577]
+                - button "View Sponsored information or leave ad feedback" [ref=e580] [cursor=pointer]: Sponsored
+              - region "Customers frequently viewed" [ref=e582]:
+                - list [ref=e588]:
+                  - listitem "1 of 5" [ref=e589]:
+                    - generic [ref=e595]:
+                      - link [ref=e598] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oG1hh9dmT4
+                        - img [ref=e600]
+                      - generic [ref=e601]:
+                        - 'link "Sponsored Ad - acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669" [ref=e603] [cursor=pointer]':
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oG1hh9dmT4
+                          - 'heading "Sponsored Ad - acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669" [level=2] [ref=e604]': "acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669"
+                        - generic [ref=e605]:
+                          - generic [ref=e606]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e608] [cursor=pointer]:
+                              - generic [ref=e610]: 4.2 out of 5 stars
+                            - link "161 ratings" [ref=e614] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oG1hh9dmT4#customerReviews
+                              - text: (161)
+                          - generic [ref=e615]: 100+ bought in past month
+                        - generic [ref=e618]:
+                          - generic [ref=e619]: Price, product page
+                          - link "INR 66,699.95" [ref=e620] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE5OTE2ODY3OTYwMjo6MDo6&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=oG1hh9dmT4
+                            - generic [ref=e621]:
+                              - generic [ref=e622]: INR 66,699.95
+                              - generic [ref=e623]:
+                                - text: INR
+                                - generic [ref=e624]:
+                                  - text: 66,699
+                                  - generic [ref=e625]: .
+                                - text: "95"
+                        - generic [ref=e633]: INR 2,096.31 delivery Fri, Jul 3
+                        - button "Energy efficiency" [ref=e640] [cursor=pointer]:
+                          - generic [ref=e641]: Energy efficiency
+                        - button "Add to cart" [ref=e657] [cursor=pointer]
+                  - listitem "2 of 5" [ref=e658]:
+                    - generic [ref=e664]:
+                      - link [ref=e667] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MzI4NDYzMTMwMjo6MTo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TjR9Feqwso
+                        - img [ref=e669]
+                      - generic [ref=e670]:
+                        - link "Sponsored Ad - ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44" [ref=e672] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MzI4NDYzMTMwMjo6MTo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TjR9Feqwso
+                          - heading "Sponsored Ad - ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44" [level=2] [ref=e673]: ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44
+                        - generic [ref=e674]:
+                          - generic [ref=e675]:
+                            - text: "4.1"
+                            - button "4.1 out of 5 stars, rating details" [ref=e677] [cursor=pointer]:
+                              - generic [ref=e679]: 4.1 out of 5 stars
+                            - link "77 ratings" [ref=e683] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MzI4NDYzMTMwMjo6MTo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TjR9Feqwso#customerReviews
+                              - text: (77)
+                          - generic [ref=e684]: 50+ bought in past month
+                        - generic [ref=e687]:
+                          - generic [ref=e688]: Price, product page
+                          - link "INR 28,310.72" [ref=e689] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MzI4NDYzMTMwMjo6MTo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TjR9Feqwso
+                            - generic [ref=e690]:
+                              - generic [ref=e691]: INR 28,310.72
+                              - generic [ref=e692]:
+                                - text: INR
+                                - generic [ref=e693]:
+                                  - text: 28,310
+                                  - generic [ref=e694]: .
+                                - text: "72"
+                        - generic [ref=e702]: INR 1,916.22 delivery Fri, Jul 3
+                        - button "Energy efficiency" [ref=e709] [cursor=pointer]:
+                          - generic [ref=e710]: Energy efficiency
+                        - button "Add to cart" [ref=e726] [cursor=pointer]
+                  - listitem "3 of 5" [ref=e727]:
+                    - generic [ref=e733]:
+                      - link [ref=e736] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTUwMjo6Mjo6&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JFjDBXPyzU
+                        - img [ref=e738]
+                      - generic [ref=e739]:
+                        - link "Sponsored Ad - Lenovo Chromebook Duet - 2025 - Convertible Laptop - ChromeOS - 10.95\" WUXGA IPS Touch Display - 4GB Memory - 64GB Storage - MediaTek Kompanio 838 - Luna Grey" [ref=e741] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTUwMjo6Mjo6&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JFjDBXPyzU
+                          - heading "Sponsored Ad - Lenovo Chromebook Duet - 2025 - Convertible Laptop - ChromeOS - 10.95\" WUXGA IPS Touch Display - 4GB Memory - 64GB Storage - MediaTek Kompanio 838 - Luna Grey" [level=2] [ref=e742]: Lenovo Chromebook Duet - 2025 - Convertible Laptop - ChromeOS - 10.95" WUXGA IPS Touch Display - 4GB Memory - 64GB Storage - MediaTek Kompanio 838 - Luna Grey
+                        - generic [ref=e743]:
+                          - generic [ref=e744]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e746] [cursor=pointer]:
+                              - generic [ref=e748]: 4.2 out of 5 stars
+                            - link "152 ratings" [ref=e752] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTUwMjo6Mjo6&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JFjDBXPyzU#customerReviews
+                              - text: (152)
+                          - generic [ref=e753]: 300+ bought in past month
+                        - generic [ref=e756]:
+                          - generic [ref=e757]: Price, product page
+                          - link "INR 25,632.20" [ref=e758] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTUwMjo6Mjo6&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=JFjDBXPyzU
+                            - generic [ref=e759]:
+                              - generic [ref=e760]: INR 25,632.20
+                              - generic [ref=e761]:
+                                - text: INR
+                                - generic [ref=e762]:
+                                  - text: 25,632
+                                  - generic [ref=e763]: .
+                                - text: "20"
+                        - generic [ref=e771]: INR 1,611.30 delivery Jun 22 - Jul 7
+                        - button "Add to cart" [ref=e786] [cursor=pointer]
+                  - listitem "4 of 5" [ref=e787]:
+                    - generic [ref=e793]:
+                      - link [ref=e796] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTAwMjo6Mzo6&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0KZVgf3VYn
+                        - img [ref=e798]
+                      - generic [ref=e799]:
+                        - link "Sponsored Ad - ASUS Chromebook Flip CX1 Convertible Laptop, 14\" FHD NanoEdge 360-degree Touchscreen, Intel Celeron N4500 Processor, 128GB eMMC Storage, 8GB RAM, ChromeOS, Transparent Silver, CX1400FKA-AS88FT" [ref=e801] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTAwMjo6Mzo6&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0KZVgf3VYn
+                          - heading "Sponsored Ad - ASUS Chromebook Flip CX1 Convertible Laptop, 14\" FHD NanoEdge 360-degree Touchscreen, Intel Celeron N4500 Processor, 128GB eMMC Storage, 8GB RAM, ChromeOS, Transparent Silver, CX1400FKA-AS88FT" [level=2] [ref=e802]: ASUS Chromebook Flip CX1 Convertible Laptop, 14" FHD NanoEdge 360-degree Touchscreen, Intel Celeron N4500 Processor, 128GB eMMC Storage, 8GB RAM, ChromeOS, Transparent Silver, CX1400FKA-AS88FT
+                        - generic [ref=e803]:
+                          - generic [ref=e804]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e806] [cursor=pointer]:
+                              - generic [ref=e808]: 4.4 out of 5 stars
+                            - link "527 ratings" [ref=e812] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTAwMjo6Mzo6&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0KZVgf3VYn#customerReviews
+                              - text: (527)
+                          - generic [ref=e813]: 300+ bought in past month
+                        - generic [ref=e816]:
+                          - generic [ref=e817]: Price, product page
+                          - link "INR 35,255.24" [ref=e818] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTIzMTM2MDU0NTAwMjo6Mzo6&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0KZVgf3VYn
+                            - generic [ref=e819]:
+                              - generic [ref=e820]: INR 35,255.24
+                              - generic [ref=e821]:
+                                - text: INR
+                                - generic [ref=e822]:
+                                  - text: 35,255
+                                  - generic [ref=e823]: .
+                                - text: "24"
+                        - generic [ref=e831]: INR 2,069.63 delivery Fri, Jul 3
+                        - button "Energy efficiency" [ref=e838] [cursor=pointer]:
+                          - generic [ref=e839]: Energy efficiency
+                        - button "Add to cart" [ref=e855] [cursor=pointer]
+                  - listitem "5 of 5" [ref=e856]:
+                    - generic [ref=e862]:
+                      - link [ref=e865] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NzAxOTAxNjYwMjo6NDo6&url=%2FSamsung-Computer-Touchscreen-Speakers-NP750QHA-KA1US%2Fdp%2FB0DSLNMY6M%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DSLNMY6M%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DuBOKf8EFtu%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uBOKf8EFtu
+                        - img [ref=e867]
+                      - generic [ref=e868]:
+                        - link "Sponsored Ad - Samsung 15.6” Galaxy Book5 360 Copilot AI Laptop PC Computer, FHD AMOLED Touchscreen, 16GB / 512GB, Dolby Atmos Quad Speakers, All-Day Battery Life, NP750QHA-KA1US" [ref=e870] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NzAxOTAxNjYwMjo6NDo6&url=%2FSamsung-Computer-Touchscreen-Speakers-NP750QHA-KA1US%2Fdp%2FB0DSLNMY6M%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DSLNMY6M%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DuBOKf8EFtu%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uBOKf8EFtu
+                          - heading "Sponsored Ad - Samsung 15.6” Galaxy Book5 360 Copilot AI Laptop PC Computer, FHD AMOLED Touchscreen, 16GB / 512GB, Dolby Atmos Quad Speakers, All-Day Battery Life, NP750QHA-KA1US" [level=2] [ref=e871]: Samsung 15.6” Galaxy Book5 360 Copilot AI Laptop PC Computer, FHD AMOLED Touchscreen, 16GB / 512GB, Dolby Atmos Quad Speakers, All-Day Battery Life, NP750QHA-KA1US
+                        - generic [ref=e872]:
+                          - generic [ref=e873]:
+                            - text: "4.1"
+                            - button "4.1 out of 5 stars, rating details" [ref=e875] [cursor=pointer]:
+                              - generic [ref=e877]: 4.1 out of 5 stars
+                            - link "51 ratings" [ref=e881] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NzAxOTAxNjYwMjo6NDo6&url=%2FSamsung-Computer-Touchscreen-Speakers-NP750QHA-KA1US%2Fdp%2FB0DSLNMY6M%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DSLNMY6M%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DuBOKf8EFtu%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uBOKf8EFtu#customerReviews
+                              - text: (51)
+                          - generic [ref=e882]: 50+ bought in past month
+                        - generic [ref=e885]:
+                          - generic [ref=e886]: Price, product page
+                          - link "INR 114,343.45" [ref=e887] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MToyMzY3ODMyNTI4MDk5NTc3OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NzAxOTAxNjYwMjo6NDo6&url=%2FSamsung-Computer-Touchscreen-Speakers-NP750QHA-KA1US%2Fdp%2FB0DSLNMY6M%2Fref%3Dsxin_16_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%253Aamzn1.sym.292df443-b323-44ae-8b40-9a666975b8b5%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DSLNMY6M%26pd_rd_r%3D56b04dca-f98e-428e-8aa9-6445d10db1b9%26pd_rd_w%3DrsYqy%26pd_rd_wg%3De8l2m%26pf_rd_p%3D292df443-b323-44ae-8b40-9a666975b8b5%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons%26aref%3DuBOKf8EFtu%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uBOKf8EFtu
+                            - generic [ref=e888]:
+                              - generic [ref=e889]: INR 114,343.45
+                              - generic [ref=e890]:
+                                - text: INR
+                                - generic [ref=e891]:
+                                  - text: 114,343
+                                  - generic [ref=e892]: .
+                                - text: "45"
+                        - generic [ref=e900]: INR 1,953.38 delivery
+                        - button "Add to cart" [ref=e915] [cursor=pointer]
+            - generic [ref=e917]:
+              - heading "More results" [level=2] [ref=e921]
+              - generic:
+                - list:
+                  - listitem [ref=e922]:
+                    - generic [ref=e928]:
+                      - generic [ref=e930]:
+                        - group "Best Sellerin 2 in 1 Laptop Computers" [ref=e936]:
+                          - generic "Best Seller" [ref=e938]
+                        - link [ref=e942] [cursor=pointer]:
+                          - /url: /HP-ProBook-x360-11-Touchscreen/dp/B0GX77PF25/ref=sr_1_6?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-6
+                          - img [ref=e944]
+                      - generic [ref=e947]:
+                        - link "HP ProBook x360 11 G5 EE 11.6\" 2-in-1 Touchscreen Notebook Computer (Intel 4-Core Pentium Silver N5030, 8GB RAM, 256GB SSD, Window 11 Pro) (Renewed)" [ref=e949] [cursor=pointer]:
+                          - /url: /HP-ProBook-x360-11-Touchscreen/dp/B0GX77PF25/ref=sr_1_6?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-6
+                          - heading "HP ProBook x360 11 G5 EE 11.6\" 2-in-1 Touchscreen Notebook Computer (Intel 4-Core Pentium Silver N5030, 8GB RAM, 256GB SSD, Window 11 Pro) (Renewed)" [level=2] [ref=e950]
+                        - generic [ref=e951]:
+                          - generic [ref=e952]:
+                            - text: "4.1"
+                            - button "4.1 out of 5 stars, rating details" [ref=e954] [cursor=pointer]:
+                              - generic [ref=e956]: 4.1 out of 5 stars
+                            - link "13 ratings" [ref=e960] [cursor=pointer]:
+                              - /url: /HP-ProBook-x360-11-Touchscreen/dp/B0GX77PF25/ref=sr_1_6?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-6#customerReviews
+                              - text: (13)
+                          - generic [ref=e961]: 400+ bought in past month
+                  - listitem [ref=e967]:
+                    - generic [ref=e975]:
+                      - link [ref=e981] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTE4MzI4NDYzMTMwMjo6MDo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsr_1_7_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e983]
+                      - generic [ref=e986]:
+                        - generic [ref=e987]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e990] [cursor=pointer]:
+                            - generic [ref=e991]: Sponsored
+                          - link "Sponsored Ad - ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44" [ref=e993] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTE4MzI4NDYzMTMwMjo6MDo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsr_1_7_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44" [level=2] [ref=e994]: ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44
+                        - generic [ref=e995]:
+                          - generic [ref=e996]:
+                            - text: "4.1"
+                            - button "4.1 out of 5 stars, rating details" [ref=e998] [cursor=pointer]:
+                              - generic [ref=e1000]: 4.1 out of 5 stars
+                            - link "77 ratings" [ref=e1004] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTE4MzI4NDYzMTMwMjo6MDo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsr_1_7_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                              - text: (77)
+                          - generic [ref=e1005]: 50+ bought in past month
+                        - generic [ref=e1008]:
+                          - generic [ref=e1011]:
+                            - generic [ref=e1012]: Price, product page
+                            - link "INR 28,310.72" [ref=e1013] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTE4MzI4NDYzMTMwMjo6MDo6&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsr_1_7_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-7-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e1014]:
+                                - generic [ref=e1015]: INR 28,310.72
+                                - generic [ref=e1016]:
+                                  - text: INR
+                                  - generic [ref=e1017]:
+                                    - text: 28,310
+                                    - generic [ref=e1018]: .
+                                  - text: "72"
+                          - generic [ref=e1019]:
+                            - generic [ref=e1025]: INR 1,916.22 delivery Fri, Jul 3
+                            - generic [ref=e1026]: Ships to India
+                          - button "Energy efficiency" [ref=e1033] [cursor=pointer]:
+                            - generic [ref=e1034]: Energy efficiency
+                          - button "Add to cart" [ref=e1050] [cursor=pointer]
+                  - listitem [ref=e1053]:
+                    - generic [ref=e1059]:
+                      - link [ref=e1065] [cursor=pointer]:
+                        - /url: /Traditional-Computer-Business-Lightweight-Portable/dp/B0GYRWPPTN/ref=sr_1_8?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-8
+                        - img [ref=e1067]
+                      - generic [ref=e1070]:
+                        - link "2026 Windows 11 Pro Traditional Laptop Computer, 16GB RAM 256GB SSD for Business Office Student School College, 15.6\" FHD IPS Display, Lightweight Portable with Office 365, 4H Battery, 3.5 lbs" [ref=e1072] [cursor=pointer]:
+                          - /url: /Traditional-Computer-Business-Lightweight-Portable/dp/B0GYRWPPTN/ref=sr_1_8?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-8
+                          - heading "2026 Windows 11 Pro Traditional Laptop Computer, 16GB RAM 256GB SSD for Business Office Student School College, 15.6\" FHD IPS Display, Lightweight Portable with Office 365, 4H Battery, 3.5 lbs" [level=2] [ref=e1073]
+                        - generic [ref=e1076]:
+                          - generic [ref=e1077]: "Options:"
+                          - 'link "Options: 2 capacities" [ref=e1078] [cursor=pointer]':
+                            - /url: /Traditional-Computer-Business-Lightweight-Portable/dp/B0GYRWPPTN/ref=vo_sr_l_dp?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-8
+                            - generic [ref=e1079]:
+                              - generic [ref=e1080]: 2 capacities
+                              - generic [ref=e1081]: 2 capacities
+                        - generic [ref=e1082]:
+                          - generic [ref=e1083]:
+                            - text: "4.0"
+                            - button "4.0 out of 5 stars, rating details" [ref=e1085] [cursor=pointer]:
+                              - generic [ref=e1087]: 4.0 out of 5 stars
+                            - link "38 ratings" [ref=e1091] [cursor=pointer]:
+                              - /url: /Traditional-Computer-Business-Lightweight-Portable/dp/B0GYRWPPTN/ref=sr_1_8?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-8#customerReviews
+                              - text: (38)
+                          - generic [ref=e1092]: 400+ bought in past month
+                        - generic [ref=e1095]:
+                          - link "See options" [ref=e1104] [cursor=pointer]:
+                            - /url: /Traditional-Computer-Business-Lightweight-Portable/dp/B0GYRWPPTN/ref=sr_1_8_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-8
+                          - generic [ref=e1106]:
+                            - text: No featured offers available
+                            - text: INR 32,396.63
+                            - link "(1 new offer)" [ref=e1108] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GYRWPPTN/ref=sr_1_8_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-8
+                  - listitem [ref=e1111]:
+                    - generic [ref=e1117]:
+                      - link [ref=e1123] [cursor=pointer]:
+                        - /url: /HP-Business-Dual-Core-Processor-Snowflake/dp/B0GY9RQVF9/ref=sr_1_9?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-9
+                        - img [ref=e1125]
+                      - generic [ref=e1128]:
+                        - link "HP 14\" Business Laptop, 1-Year Office 365 with Copilot AI, 8GB RAM 576GB Storage (64GB eMMC+512GB SD Card), Dual-Core Intel Processor, Windows 11, Snowflake White" [ref=e1130] [cursor=pointer]:
+                          - /url: /HP-Business-Dual-Core-Processor-Snowflake/dp/B0GY9RQVF9/ref=sr_1_9?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-9
+                          - heading "HP 14\" Business Laptop, 1-Year Office 365 with Copilot AI, 8GB RAM 576GB Storage (64GB eMMC+512GB SD Card), Dual-Core Intel Processor, Windows 11, Snowflake White" [level=2] [ref=e1131]
+                        - generic [ref=e1132]:
+                          - generic [ref=e1133]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e1135] [cursor=pointer]:
+                              - generic [ref=e1137]: 4.2 out of 5 stars
+                            - link "50 ratings" [ref=e1141] [cursor=pointer]:
+                              - /url: /HP-Business-Dual-Core-Processor-Snowflake/dp/B0GY9RQVF9/ref=sr_1_9?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-9#customerReviews
+                              - text: (50)
+                          - generic [ref=e1142]: 100+ bought in past month
+                        - generic [ref=e1145]:
+                          - link "See options" [ref=e1154] [cursor=pointer]:
+                            - /url: /HP-Business-Dual-Core-Processor-Snowflake/dp/B0GY9RQVF9/ref=sr_1_9_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-9
+                          - generic [ref=e1156]:
+                            - text: No featured offers available
+                            - text: INR 29,538.02
+                            - link "(1 new offer)" [ref=e1158] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GY9RQVF9/ref=sr_1_9_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-9
+                  - listitem [ref=e1161]:
+                    - generic [ref=e1167]:
+                      - link [ref=e1173] [cursor=pointer]:
+                        - /url: /HP-Processor-Lightweight-Microsoft-Students/dp/B0GRVFY42Q/ref=sr_1_10?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-10
+                        - img [ref=e1175]
+                      - generic [ref=e1178]:
+                        - link "HP 15.6\" FHD Laptop 2026 Edition with Copilot AI, 16GB RAM, 256GB SSD, Intel Processor, Long Battery Life, Lightweight 3.64 lbs, Microsoft 365, Windows 11 for Students & Office" [ref=e1180] [cursor=pointer]:
+                          - /url: /HP-Processor-Lightweight-Microsoft-Students/dp/B0GRVFY42Q/ref=sr_1_10?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-10
+                          - heading "HP 15.6\" FHD Laptop 2026 Edition with Copilot AI, 16GB RAM, 256GB SSD, Intel Processor, Long Battery Life, Lightweight 3.64 lbs, Microsoft 365, Windows 11 for Students & Office" [level=2] [ref=e1181]
+                        - generic [ref=e1182]:
+                          - generic [ref=e1183]:
+                            - text: "4.0"
+                            - button "4.0 out of 5 stars, rating details" [ref=e1185] [cursor=pointer]:
+                              - generic [ref=e1187]: 4.0 out of 5 stars
+                            - link "462 ratings" [ref=e1191] [cursor=pointer]:
+                              - /url: /HP-Processor-Lightweight-Microsoft-Students/dp/B0GRVFY42Q/ref=sr_1_10?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-10#customerReviews
+                              - text: (462)
+                          - generic [ref=e1192]: 1K+ bought in past month
+                        - generic [ref=e1195]:
+                          - link "See options" [ref=e1204] [cursor=pointer]:
+                            - /url: /HP-Processor-Lightweight-Microsoft-Students/dp/B0GRVFY42Q/ref=sr_1_10_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-10
+                          - generic [ref=e1206]:
+                            - text: No featured offers available
+                            - text: INR 47,639.69
+                            - link "(1 new offer)" [ref=e1208] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GRVFY42Q/ref=sr_1_10_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-10
+                  - listitem [ref=e1211]:
+                    - generic [ref=e1217]:
+                      - link [ref=e1223] [cursor=pointer]:
+                        - /url: /ASUS-Vivobook-Celeron-Windows-L510KA-ES04/dp/B0CRDCW3Q3/ref=sr_1_11?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-11
+                        - img [ref=e1225]
+                      - generic [ref=e1228]:
+                        - link "ASUS 15.6” Vivobook Go Slim Laptop, Thin & Portable for Student Study, Intel Dual Core N4500, 4GB RAM, 128GB SSD, Windows 11, Star Black, L510KA-ES04" [ref=e1230] [cursor=pointer]:
+                          - /url: /ASUS-Vivobook-Celeron-Windows-L510KA-ES04/dp/B0CRDCW3Q3/ref=sr_1_11?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-11
+                          - heading "ASUS 15.6” Vivobook Go Slim Laptop, Thin & Portable for Student Study, Intel Dual Core N4500, 4GB RAM, 128GB SSD, Windows 11, Star Black, L510KA-ES04" [level=2] [ref=e1231]
+                        - generic [ref=e1233]:
+                          - text: "3.8"
+                          - button "3.8 out of 5 stars, rating details" [ref=e1235] [cursor=pointer]:
+                            - generic [ref=e1237]: 3.8 out of 5 stars
+                          - link "839 ratings" [ref=e1241] [cursor=pointer]:
+                            - /url: /ASUS-Vivobook-Celeron-Windows-L510KA-ES04/dp/B0CRDCW3Q3/ref=sr_1_11?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-11#customerReviews
+                            - text: (839)
+                        - generic [ref=e1244]:
+                          - generic [ref=e1245]:
+                            - generic [ref=e1247]:
+                              - generic [ref=e1248]: Price, product page
+                              - 'link "INR 20,581.04 Typical: INR 23,726.46 Typical: INR 23,726.46" [ref=e1249] [cursor=pointer]':
+                                - /url: /ASUS-Vivobook-Celeron-Windows-L510KA-ES04/dp/B0CRDCW3Q3/ref=sr_1_11?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-11
+                                - generic [ref=e1250]:
+                                  - generic [ref=e1251]: INR 20,581.04
+                                  - generic [ref=e1252]:
+                                    - text: INR
+                                    - generic [ref=e1253]:
+                                      - text: 20,581
+                                      - generic [ref=e1254]: .
+                                    - text: "04"
+                                - generic [ref=e1255]: "Typical: INR 23,726.46"
+                                - generic [ref=e1256]:
+                                  - text: "Typical:"
+                                  - generic [ref=e1257]:
+                                    - generic [ref=e1258]: INR 23,726.46
+                                    - text: INR23,726.46
+                            - generic [ref=e1259]: Get 1 Month of Xbox GamePass for new users
+                          - generic [ref=e1260]:
+                            - generic [ref=e1266]: INR 2,045.81 delivery Fri, Jul 3
+                            - generic [ref=e1267]: Ships to India
+                          - button "Add to cart" [ref=e1282] [cursor=pointer]
+                          - generic [ref=e1284]:
+                            - text: More Buying Choices
+                            - text: INR 19,998.84
+                            - link "(7 used & new offers)" [ref=e1286] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CRDCW3Q3/ref=sr_1_11_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-11
+                  - listitem [ref=e1289]:
+                    - generic [ref=e1297]:
+                      - link [ref=e1303] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTUwMjo6MDo6&url=%2FLenovo-Chromebook-Plus-Lightweight-Touchscreen%2Fdp%2FB0GQ152BZB%2Fref%3Dsr_1_12_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1305]
+                      - generic [ref=e1308]:
+                        - generic [ref=e1309]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1312] [cursor=pointer]:
+                            - generic [ref=e1313]: Sponsored
+                          - link "Sponsored Ad - Lenovo Chromebook Plus 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N355 CPU - 14\" WUXGA IPS Touchscreen Display - 8GB RAM - 256GB UFS Storage - Integrated Intel® Graphics - Fingerprint reader" [ref=e1315] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTUwMjo6MDo6&url=%2FLenovo-Chromebook-Plus-Lightweight-Touchscreen%2Fdp%2FB0GQ152BZB%2Fref%3Dsr_1_12_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - Lenovo Chromebook Plus 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N355 CPU - 14\" WUXGA IPS Touchscreen Display - 8GB RAM - 256GB UFS Storage - Integrated Intel® Graphics - Fingerprint reader" [level=2] [ref=e1316]: Lenovo Chromebook Plus 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N355 CPU - 14" WUXGA IPS Touchscreen Display - 8GB RAM - 256GB UFS Storage - Integrated Intel® Graphics - Fingerprint reader
+                        - generic [ref=e1317]:
+                          - generic [ref=e1318]:
+                            - text: "5.0"
+                            - button "5.0 out of 5 stars, rating details" [ref=e1320] [cursor=pointer]:
+                              - generic [ref=e1322]: 5.0 out of 5 stars
+                            - link "5 ratings" [ref=e1326] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTUwMjo6MDo6&url=%2FLenovo-Chromebook-Plus-Lightweight-Touchscreen%2Fdp%2FB0GQ152BZB%2Fref%3Dsr_1_12_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                              - text: (5)
+                          - generic [ref=e1327]: 100+ bought in past month
+                        - generic [ref=e1330]:
+                          - generic [ref=e1333]:
+                            - generic [ref=e1334]: Price, product page
+                            - 'link "INR 46,897.40 List: INR 49,548.29 List: INR 49,548.29" [ref=e1335] [cursor=pointer]':
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTUwMjo6MDo6&url=%2FLenovo-Chromebook-Plus-Lightweight-Touchscreen%2Fdp%2FB0GQ152BZB%2Fref%3Dsr_1_12_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-12-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e1336]:
+                                - generic [ref=e1337]: INR 46,897.40
+                                - generic [ref=e1338]:
+                                  - text: INR
+                                  - generic [ref=e1339]:
+                                    - text: 46,897
+                                    - generic [ref=e1340]: .
+                                  - text: "40"
+                              - generic [ref=e1341]: "List: INR 49,548.29"
+                              - generic [ref=e1342]:
+                                - text: "List:"
+                                - generic [ref=e1343]:
+                                  - generic [ref=e1344]: INR 49,548.29
+                                  - text: INR49,548.29
+                          - generic [ref=e1345]:
+                            - generic [ref=e1351]: INR 1,964.82 delivery Fri, Jul 3
+                            - generic [ref=e1352]: Ships to India
+                          - button "Add to cart" [ref=e1367] [cursor=pointer]
+                  - listitem [ref=e1370]:
+                    - generic [ref=e1376]:
+                      - link [ref=e1382] [cursor=pointer]:
+                        - /url: /HP-Touchscreen-Display-Graphics-fc0099nr/dp/B0DZQCTH92/ref=sr_1_13?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-13
+                        - img [ref=e1384]
+                      - generic [ref=e1387]:
+                        - link "HP 15.6 inch Laptop, HD Touchscreen Display, AMD Ryzen 3 7320U, 8 GB RAM, 128 GB SSD, AMD Radeon Graphics, Windows 11 Home in S Mode, Natural Silver, 15- fc0099nr" [ref=e1389] [cursor=pointer]:
+                          - /url: /HP-Touchscreen-Display-Graphics-fc0099nr/dp/B0DZQCTH92/ref=sr_1_13?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-13
+                          - heading "HP 15.6 inch Laptop, HD Touchscreen Display, AMD Ryzen 3 7320U, 8 GB RAM, 128 GB SSD, AMD Radeon Graphics, Windows 11 Home in S Mode, Natural Silver, 15- fc0099nr" [level=2] [ref=e1390]
+                        - generic [ref=e1391]:
+                          - generic [ref=e1392]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1394] [cursor=pointer]:
+                              - generic [ref=e1396]: 4.5 out of 5 stars
+                            - link "1,466 ratings" [ref=e1400] [cursor=pointer]:
+                              - /url: /HP-Touchscreen-Display-Graphics-fc0099nr/dp/B0DZQCTH92/ref=sr_1_13?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-13#customerReviews
+                              - text: (1.4K)
+                          - generic [ref=e1401]: 500+ bought in past month
+                        - generic [ref=e1404]:
+                          - link "See options" [ref=e1413] [cursor=pointer]:
+                            - /url: /HP-Touchscreen-Display-Graphics-fc0099nr/dp/B0DZQCTH92/ref=sr_1_13_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-13
+                          - generic [ref=e1415]:
+                            - text: No featured offers available
+                            - text: INR 27,974.36
+                            - link "(16 used & new offers)" [ref=e1417] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0DZQCTH92/ref=sr_1_13_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-13
+                  - listitem [ref=e1420]:
+                    - generic [ref=e1426]:
+                      - link [ref=e1432] [cursor=pointer]:
+                        - /url: /NIMO-i5-1135G7-Computer-Warranty-Fingerprint/dp/B0G51ZZ34Y/ref=sr_1_14?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-14
+                        - img [ref=e1434]
+                      - generic [ref=e1437]:
+                        - link "NIMO 15.6'' IPS FHD Laptop, 16GB RAM 512GB SSD AMD Ryzen 5(Beat i5-1135G7, 4 Cores Up to 3.7GHz) Student Computer with 65W Type-C, 2 Years Warranty, Fingerprint, Backlit Keyboard, BT5.2, for Home" [ref=e1439] [cursor=pointer]:
+                          - /url: /NIMO-i5-1135G7-Computer-Warranty-Fingerprint/dp/B0G51ZZ34Y/ref=sr_1_14?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-14
+                          - heading "NIMO 15.6'' IPS FHD Laptop, 16GB RAM 512GB SSD AMD Ryzen 5(Beat i5-1135G7, 4 Cores Up to 3.7GHz) Student Computer with 65W Type-C, 2 Years Warranty, Fingerprint, Backlit Keyboard, BT5.2, for Home" [level=2] [ref=e1440]
+                        - generic [ref=e1441]:
+                          - generic [ref=e1442]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1444] [cursor=pointer]:
+                              - generic [ref=e1446]: 4.5 out of 5 stars
+                            - link "119 ratings" [ref=e1450] [cursor=pointer]:
+                              - /url: /NIMO-i5-1135G7-Computer-Warranty-Fingerprint/dp/B0G51ZZ34Y/ref=sr_1_14?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-14#customerReviews
+                              - text: (119)
+                          - generic [ref=e1451]: 500+ bought in past month
+                        - generic [ref=e1454]:
+                          - button "Recycled materials +2 more" [ref=e1463] [cursor=pointer]:
+                            - generic [ref=e1464]: Recycled materials +2 more
+                          - link "See options" [ref=e1472] [cursor=pointer]:
+                            - /url: /NIMO-i5-1135G7-Computer-Warranty-Fingerprint/dp/B0G51ZZ34Y/ref=sr_1_14_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-14
+                          - generic [ref=e1474]:
+                            - text: No featured offers available
+                            - text: INR 38,113.85
+                            - link "(2 new offers)" [ref=e1476] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0G51ZZ34Y/ref=sr_1_14_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-14
+                          - group "colors available" [ref=e1478]:
+                            - list [ref=e1479]:
+                              - generic [ref=e1480]:
+                                - listitem:
+                                  - link "Red":
+                                    - /url: /NIMO-i5-1135G7-Computer-Warranty-Fingerprint/dp/B0G51ZZ34Y/ref=cs_sr_dp_loc_1?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-14
+                              - generic [ref=e1483]:
+                                - listitem:
+                                  - link "Rose Gold":
+                                    - /url: /NIMO-i5-1135G7-Computer-Warranty-Fingerprint/dp/B0FXM1QB1G/ref=cs_sr_dp_loc_2?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-14
+                  - listitem [ref=e1488]:
+                    - generic [ref=e1494]:
+                      - link [ref=e1500] [cursor=pointer]:
+                        - /url: /Lenovo-Premium-i7-13620H-i7-1355U-Copilot/dp/B0GX66CNNJ/ref=sr_1_15?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-15
+                        - img [ref=e1502]
+                      - generic [ref=e1505]:
+                        - link "Lenovo 2026 Premium Laptop, Intel Core i7-13620H (Beat i7-1355U), 16GB DDR5, 512GB SSD, 15\" FHD+ Copilot AI PC, Windows 11 – for Power Business Multitasker" [ref=e1507] [cursor=pointer]:
+                          - /url: /Lenovo-Premium-i7-13620H-i7-1355U-Copilot/dp/B0GX66CNNJ/ref=sr_1_15?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-15
+                          - heading "Lenovo 2026 Premium Laptop, Intel Core i7-13620H (Beat i7-1355U), 16GB DDR5, 512GB SSD, 15\" FHD+ Copilot AI PC, Windows 11 – for Power Business Multitasker" [level=2] [ref=e1508]
+                        - generic [ref=e1509]:
+                          - generic [ref=e1510]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e1512] [cursor=pointer]:
+                              - generic [ref=e1514]: 4.2 out of 5 stars
+                            - link "27 ratings" [ref=e1518] [cursor=pointer]:
+                              - /url: /Lenovo-Premium-i7-13620H-i7-1355U-Copilot/dp/B0GX66CNNJ/ref=sr_1_15?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-15#customerReviews
+                              - text: (27)
+                          - generic [ref=e1519]: 300+ bought in past month
+                        - generic [ref=e1522]:
+                          - link "See options" [ref=e1531] [cursor=pointer]:
+                            - /url: /Lenovo-Premium-i7-13620H-i7-1355U-Copilot/dp/B0GX66CNNJ/ref=sr_1_15_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-15
+                          - generic [ref=e1533]:
+                            - text: No featured offers available
+                            - text: INR 76,228.65
+                            - link "(1 new offer)" [ref=e1535] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0GX66CNNJ/ref=sr_1_15_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-15
+                  - listitem [ref=e1538]:
+                    - generic [ref=e1544]:
+                      - link [ref=e1550] [cursor=pointer]:
+                        - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0CBJ46QZX/ref=sr_1_16?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16
+                        - img [ref=e1552]
+                      - generic [ref=e1555]:
+                        - link "Lenovo Flagship Chromebook, 14'' FHD Touchscreen Slim Thin Light Laptop Computer, 8-Core MediaTek Kompanio 520 Processor, 4GB RAM, 64GB eMMC, WiFi 6,Chrome OS, Abyss Blue" [ref=e1557] [cursor=pointer]:
+                          - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0CBJ46QZX/ref=sr_1_16?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16
+                          - heading "Lenovo Flagship Chromebook, 14'' FHD Touchscreen Slim Thin Light Laptop Computer, 8-Core MediaTek Kompanio 520 Processor, 4GB RAM, 64GB eMMC, WiFi 6,Chrome OS, Abyss Blue" [level=2] [ref=e1558]
+                        - generic [ref=e1561]:
+                          - generic [ref=e1562]: "Options:"
+                          - 'link "Options: 7 capacities" [ref=e1563] [cursor=pointer]':
+                            - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0CBJ46QZX/ref=vo_sr_l_dp?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16
+                            - generic [ref=e1564]:
+                              - generic [ref=e1565]: 7 capacities
+                              - generic [ref=e1566]: 7 capacities
+                        - generic [ref=e1568]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=e1570] [cursor=pointer]:
+                            - generic [ref=e1572]: 4.3 out of 5 stars
+                          - link "1,339 ratings" [ref=e1576] [cursor=pointer]:
+                            - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0CBJ46QZX/ref=sr_1_16?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16#customerReviews
+                            - text: (1.3K)
+                        - generic [ref=e1579]:
+                          - link "See options" [ref=e1588] [cursor=pointer]:
+                            - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0CBJ46QZX/ref=sr_1_16_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16
+                          - generic [ref=e1590]:
+                            - text: No featured offers available
+                            - text: INR 17,204.07
+                            - link "(13 used & new offers)" [ref=e1592] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0CBJ46QZX/ref=sr_1_16_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-16
+                          - group "colors available" [ref=e1594]:
+                            - list [ref=e1595]:
+                              - generic [ref=e1596]:
+                                - listitem:
+                                  - link "Blue":
+                                    - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0CBJ46QZX/ref=cs_sr_dp_loc_1?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16
+                              - generic [ref=e1599]:
+                                - listitem:
+                                  - link "Business Black":
+                                    - /url: /Lenovo-Newest-Flagship-Chromebook-HubxcelAccesory/dp/B0H31T238J/ref=cs_sr_dp_loc_2?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-16
+                  - listitem [ref=e1604]:
+                    - generic [ref=e1612]:
+                      - link [ref=e1618] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTMwMjo6MDo6&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsr_1_17_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                        - img [ref=e1620]
+                      - generic [ref=e1623]:
+                        - generic [ref=e1624]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1627] [cursor=pointer]:
+                            - generic [ref=e1628]: Sponsored
+                          - link "Sponsored Ad - Lenovo Chromebook 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N150 CPU - 14\" WUXGA IPS Touchscreen Display - 4GB RAM - 128GB UFS Storage - Integrated Intel® Graphics - Luna Grey" [ref=e1630] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTMwMjo6MDo6&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsr_1_17_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                            - heading "Sponsored Ad - Lenovo Chromebook 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N150 CPU - 14\" WUXGA IPS Touchscreen Display - 4GB RAM - 128GB UFS Storage - Integrated Intel® Graphics - Luna Grey" [level=2] [ref=e1631]: Lenovo Chromebook 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N150 CPU - 14" WUXGA IPS Touchscreen Display - 4GB RAM - 128GB UFS Storage - Integrated Intel® Graphics - Luna Grey
+                        - generic [ref=e1633]:
+                          - text: "4.8"
+                          - button "4.8 out of 5 stars, rating details" [ref=e1635] [cursor=pointer]:
+                            - generic [ref=e1637]: 4.8 out of 5 stars
+                          - link "11 ratings" [ref=e1641] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTMwMjo6MDo6&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsr_1_17_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1#customerReviews
+                            - text: (11)
+                        - generic [ref=e1644]:
+                          - generic [ref=e1647]:
+                            - generic [ref=e1648]: Price, product page
+                            - link "INR 42,878.20" [ref=e1649] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfbXRmOjMwMTIzMjk1NTQxNTMwMjo6MDo6&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsr_1_17_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-17-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1
+                              - generic [ref=e1650]:
+                                - generic [ref=e1651]: INR 42,878.20
+                                - generic [ref=e1652]:
+                                  - text: INR
+                                  - generic [ref=e1653]:
+                                    - text: 42,878
+                                    - generic [ref=e1654]: .
+                                  - text: "20"
+                          - generic [ref=e1655]:
+                            - generic [ref=e1661]: INR 1,970.54 delivery Fri, Jul 3
+                            - generic [ref=e1662]: Ships to India
+                          - button "Add to cart" [ref=e1677] [cursor=pointer]
+                  - listitem [ref=e1680]:
+                    - generic [ref=e1686]:
+                      - link [ref=e1692] [cursor=pointer]:
+                        - /url: /Lenovo-3i-Chromebook-Everyday-Notebook/dp/B0BSJ46KY9/ref=sr_1_18?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-18
+                        - img [ref=e1694]
+                      - generic [ref=e1697]:
+                        - link "Lenovo IdeaPad 3i Chromebook, 15.6” FHD Display, Intel Celeron N4500, 8GB RAM, 64GB eMMC, 1920x1080 px, 720p Camera, Chrome OS, Abyss Blue" [ref=e1699] [cursor=pointer]:
+                          - /url: /Lenovo-3i-Chromebook-Everyday-Notebook/dp/B0BSJ46KY9/ref=sr_1_18?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-18
+                          - heading "Lenovo IdeaPad 3i Chromebook, 15.6” FHD Display, Intel Celeron N4500, 8GB RAM, 64GB eMMC, 1920x1080 px, 720p Camera, Chrome OS, Abyss Blue" [level=2] [ref=e1700]
+                        - generic [ref=e1703]:
+                          - generic [ref=e1704]: "Options:"
+                          - 'link "Options: 10 capacities" [ref=e1705] [cursor=pointer]':
+                            - /url: /Lenovo-3i-Chromebook-Everyday-Notebook/dp/B0BSJ46KY9/ref=vo_sr_l_dp?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-18
+                            - generic [ref=e1706]:
+                              - generic [ref=e1707]: 10 capacities
+                              - generic [ref=e1708]: 10 capacities
+                        - generic [ref=e1709]:
+                          - generic [ref=e1710]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1712] [cursor=pointer]:
+                              - generic [ref=e1714]: 4.3 out of 5 stars
+                            - link "1,659 ratings" [ref=e1718] [cursor=pointer]:
+                              - /url: /Lenovo-3i-Chromebook-Everyday-Notebook/dp/B0BSJ46KY9/ref=sr_1_18?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-18#customerReviews
+                              - text: (1.6K)
+                          - generic [ref=e1719]: 1K+ bought in past month
+                        - generic [ref=e1722]:
+                          - link "See options" [ref=e1731] [cursor=pointer]:
+                            - /url: /Lenovo-3i-Chromebook-Everyday-Notebook/dp/B0BSJ46KY9/ref=sr_1_18_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-18
+                          - generic [ref=e1733]:
+                            - text: No featured offers available
+                            - text: INR 17,658.59
+                            - link "(5 used & new offers)" [ref=e1735] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0BSJ46KY9/ref=sr_1_18_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-18
+                  - listitem [ref=e1738]:
+                    - generic [ref=e1744]:
+                      - link [ref=e1750] [cursor=pointer]:
+                        - /url: /ASUS-ROG-Strix-Gaming-Laptop/dp/B0DZZWMB2L/ref=sr_1_19?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-19
+                        - img [ref=e1752]
+                      - generic [ref=e1755]:
+                        - link "ASUS ROG Strix G16 (2025) Gaming Laptop, 16” FHD+ 16:10 165Hz/3ms Display, NVIDIA® GeForce RTX™ 5060 Laptop GPU, Intel® Core™ i7 Processor 14650HX, 16GB DDR5, 1TB Gen 4 SSD, Wi-Fi 7, Windows 11 Home" [ref=e1757] [cursor=pointer]:
+                          - /url: /ASUS-ROG-Strix-Gaming-Laptop/dp/B0DZZWMB2L/ref=sr_1_19?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-19
+                          - heading "ASUS ROG Strix G16 (2025) Gaming Laptop, 16” FHD+ 16:10 165Hz/3ms Display, NVIDIA® GeForce RTX™ 5060 Laptop GPU, Intel® Core™ i7 Processor 14650HX, 16GB DDR5, 1TB Gen 4 SSD, Wi-Fi 7, Windows 11 Home" [level=2] [ref=e1758]
+                        - generic [ref=e1759]:
+                          - generic [ref=e1760]:
+                            - text: "4.5"
+                            - button "4.5 out of 5 stars, rating details" [ref=e1762] [cursor=pointer]:
+                              - generic [ref=e1764]: 4.5 out of 5 stars
+                            - link "471 ratings" [ref=e1768] [cursor=pointer]:
+                              - /url: /ASUS-ROG-Strix-Gaming-Laptop/dp/B0DZZWMB2L/ref=sr_1_19?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-19#customerReviews
+                              - text: (471)
+                          - generic [ref=e1769]: 1K+ bought in past month
+                        - generic [ref=e1772]:
+                          - generic [ref=e1773]:
+                            - generic [ref=e1775]:
+                              - generic [ref=e1776]: Price, product page
+                              - link "INR 127,683.63" [ref=e1777] [cursor=pointer]:
+                                - /url: /ASUS-ROG-Strix-Gaming-Laptop/dp/B0DZZWMB2L/ref=sr_1_19?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-19
+                                - generic [ref=e1778]:
+                                  - generic [ref=e1779]: INR 127,683.63
+                                  - generic [ref=e1780]:
+                                    - text: INR
+                                    - generic [ref=e1781]:
+                                      - text: 127,683
+                                      - generic [ref=e1782]: .
+                                    - text: "63"
+                            - generic [ref=e1783]: Get 1 Month of Xbox GamePass for new users
+                          - generic [ref=e1784]:
+                            - generic [ref=e1790]: INR 3,222.61 delivery
+                            - generic [ref=e1791]: Ships to India
+                          - button "Add to cart" [ref=e1806] [cursor=pointer]
+                          - generic [ref=e1808]:
+                            - text: More Buying Choices
+                            - text: INR 121,299.40
+                            - link "(2+ used & new offers)" [ref=e1810] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0DZZWMB2L/ref=sr_1_19_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-19
+                  - listitem [ref=e1813]:
+                    - generic [ref=e1819]:
+                      - link [ref=e1825] [cursor=pointer]:
+                        - /url: /Dell-Latitude-5400-Laptop-1920x1080/dp/B0D58RNGKY/ref=sr_1_20?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-20
+                        - img [ref=e1827]
+                      - generic [ref=e1830]:
+                        - link "Dell Latitude 5400 Laptop | 14\"\" 1920x1080 FHD | Core i5-8365U - 256GB SSD Hard Drive - 8GB RAM | 4 cores @ 4.1 GHz Win 11 Pro (Renewed), Black" [ref=e1832] [cursor=pointer]:
+                          - /url: /Dell-Latitude-5400-Laptop-1920x1080/dp/B0D58RNGKY/ref=sr_1_20?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-20
+                          - heading "Dell Latitude 5400 Laptop | 14\"\" 1920x1080 FHD | Core i5-8365U - 256GB SSD Hard Drive - 8GB RAM | 4 cores @ 4.1 GHz Win 11 Pro (Renewed), Black" [level=2] [ref=e1833]
+                        - generic [ref=e1834]:
+                          - generic [ref=e1835]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e1837] [cursor=pointer]:
+                              - generic [ref=e1839]: 4.2 out of 5 stars
+                            - link "133 ratings" [ref=e1843] [cursor=pointer]:
+                              - /url: /Dell-Latitude-5400-Laptop-1920x1080/dp/B0D58RNGKY/ref=sr_1_20?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-20#customerReviews
+                              - text: (133)
+                          - generic [ref=e1844]: 500+ bought in past month
+                        - generic [ref=e1847]:
+                          - generic [ref=e1850]:
+                            - generic [ref=e1851]: Price, product page
+                            - link "INR 18,665.77" [ref=e1852] [cursor=pointer]:
+                              - /url: /Dell-Latitude-5400-Laptop-1920x1080/dp/B0D58RNGKY/ref=sr_1_20?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-20
+                              - generic [ref=e1853]:
+                                - generic [ref=e1854]: INR 18,665.77
+                                - generic [ref=e1855]:
+                                  - text: INR
+                                  - generic [ref=e1856]:
+                                    - text: 18,665
+                                    - generic [ref=e1857]: .
+                                  - text: "77"
+                          - generic "Only 1 left in stock - order soon." [ref=e1864]
+                          - link "See options" [ref=e1871] [cursor=pointer]:
+                            - /url: /Dell-Latitude-5400-Laptop-1920x1080/dp/B0D58RNGKY/ref=sr_1_20_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-20
+                  - listitem [ref=e1874]:
+                    - generic [ref=e1880]:
+                      - link [ref=e1886] [cursor=pointer]:
+                        - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LTNRP/ref=sr_1_21?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                        - img [ref=e1888]
+                      - generic [ref=e1891]:
+                        - link "HP 14\" Laptop 2025 Business Student Slim Computer, Lifetime MS Office, Copilot AI, Quad-Core Intel CPU, 16GB RAM, 628GB Storage (128GB UFS+500GB Ext), MarxsolAccessory, Wi-Fi 6, Win 11 Pro, Silver" [ref=e1893] [cursor=pointer]:
+                          - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LTNRP/ref=sr_1_21?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                          - heading "HP 14\" Laptop 2025 Business Student Slim Computer, Lifetime MS Office, Copilot AI, Quad-Core Intel CPU, 16GB RAM, 628GB Storage (128GB UFS+500GB Ext), MarxsolAccessory, Wi-Fi 6, Win 11 Pro, Silver" [level=2] [ref=e1894]
+                        - generic [ref=e1895]:
+                          - generic [ref=e1896]:
+                            - text: "4.3"
+                            - button "4.3 out of 5 stars, rating details" [ref=e1898] [cursor=pointer]:
+                              - generic [ref=e1900]: 4.3 out of 5 stars
+                            - link "441 ratings" [ref=e1904] [cursor=pointer]:
+                              - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LTNRP/ref=sr_1_21?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21#customerReviews
+                              - text: (441)
+                          - generic [ref=e1905]: 300+ bought in past month
+                        - generic [ref=e1908]:
+                          - link "See options" [ref=e1917] [cursor=pointer]:
+                            - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LTNRP/ref=sr_1_21_so_NOTEBOOK_COMPUTER?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                          - generic [ref=e1919]:
+                            - text: No featured offers available
+                            - text: INR 30,491.84
+                            - link "(2 used & new offers)" [ref=e1921] [cursor=pointer]:
+                              - /url: /gp/offer-listing/B0FJ7LTNRP/ref=sr_1_21_olp?keywords=Laptop&crid=2SJSLFT85F0XE&sprefix=laptop%2Caps%2C634&dib_tag=se&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&qid=1781174907&sr=8-21
+                          - group "colors available" [ref=e1923]:
+                            - list [ref=e1924]:
+                              - generic [ref=e1925]:
+                                - listitem:
+                                  - link "Natural Silver":
+                                    - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LTNRP/ref=cs_sr_dp_loc_1?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                              - generic [ref=e1928]:
+                                - listitem:
+                                  - link "Honey Lavender":
+                                    - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7L453K/ref=cs_sr_dp_loc_2?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                              - generic [ref=e1931]:
+                                - listitem:
+                                  - link "Rose Gold":
+                                    - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LKVG3/ref=cs_sr_dp_loc_3?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                              - generic [ref=e1934]:
+                                - listitem:
+                                  - link "Sky Blue":
+                                    - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LFR7X/ref=cs_sr_dp_loc_4?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                              - generic [ref=e1937]:
+                                - listitem:
+                                  - link "Willow Green":
+                                    - /url: /HP-14-Laptop-2025-MarxsolAccessory/dp/B0FJ7LQ847/ref=cs_sr_dp_loc_5?crid=2SJSLFT85F0XE&dib=eyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI&dib_tag=se&keywords=Laptop&qid=1781174907&sprefix=laptop%2Caps%2C634&sr=8-21
+                  - listitem [ref=e1942]:
+                    - generic [ref=e1950]:
+                      - link [ref=e1956] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYnRmOjMwMTE5NDQyMTg1MzYwMjo6MDo6&url=%2FLenovo-Chromebook-14-Everyday-Integrated%2Fdp%2FB0GJ71T3PC%2Fref%3Dsr_1_22_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                        - img [ref=e1958]
+                      - generic [ref=e1961]:
+                        - generic [ref=e1962]:
+                          - button "View Sponsored information or leave ad feedback" [ref=e1965] [cursor=pointer]:
+                            - generic [ref=e1966]: Sponsored
+                          - link "Sponsored Ad - Lenovo Chromebook m 14\" - Everyday Laptop - Google Gemini - MediaTek Kompanio 540 CPU - 14\" WUXGA IPS Display - 8GB RAM - 64GB UFS Storage - Integrated Arm Mali-G57 MC2 GPU - Cosmic Blue" [ref=e1968] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYnRmOjMwMTE5NDQyMTg1MzYwMjo6MDo6&url=%2FLenovo-Chromebook-14-Everyday-Integrated%2Fdp%2FB0GJ71T3PC%2Fref%3Dsr_1_22_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                            - heading "Sponsored Ad - Lenovo Chromebook m 14\" - Everyday Laptop - Google Gemini - MediaTek Kompanio 540 CPU - 14\" WUXGA IPS Display - 8GB RAM - 64GB UFS Storage - Integrated Arm Mali-G57 MC2 GPU - Cosmic Blue" [level=2] [ref=e1969]: Lenovo Chromebook m 14" - Everyday Laptop - Google Gemini - MediaTek Kompanio 540 CPU - 14" WUXGA IPS Display - 8GB RAM - 64GB UFS Storage - Integrated Arm Mali-G57 MC2 GPU - Cosmic Blue
+                        - generic [ref=e1972]:
+                          - generic [ref=e1973]: "Options:"
+                          - 'link "Options: 4 capacities" [ref=e1974] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYnRmOjMwMTE5NDQyMTg1MzYwMjo6MDo6&url=%2FLenovo-Chromebook-14-Everyday-Integrated%2Fdp%2FB0GJ71T3PC%2Fref%3Dsr_1_22_sspa_vo_sr_l_dp%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                            - generic [ref=e1975]:
+                              - generic [ref=e1976]: 4 capacities
+                              - generic [ref=e1977]: 4 capacities
+                        - generic [ref=e1978]:
+                          - generic [ref=e1979]:
+                            - text: "5.0"
+                            - button "5.0 out of 5 stars, rating details" [ref=e1981] [cursor=pointer]:
+                              - generic [ref=e1983]: 5.0 out of 5 stars
+                            - link "1 ratings" [ref=e1987] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYnRmOjMwMTE5NDQyMTg1MzYwMjo6MDo6&url=%2FLenovo-Chromebook-14-Everyday-Integrated%2Fdp%2FB0GJ71T3PC%2Fref%3Dsr_1_22_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1#customerReviews
+                              - text: (1)
+                          - generic [ref=e1988]: 50+ bought in past month
+                        - generic [ref=e1991]:
+                          - generic [ref=e1994]:
+                            - generic [ref=e1995]: Price, product page
+                            - link "INR 38,113.85" [ref=e1996] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo1ODAyMTI3Njc1MjkzMTg3OjE3ODExNzQ5MDc6c3BfYnRmOjMwMTE5NDQyMTg1MzYwMjo6MDo6&url=%2FLenovo-Chromebook-14-Everyday-Integrated%2Fdp%2FB0GJ71T3PC%2Fref%3Dsr_1_22_sspa%3Fcrid%3D2SJSLFT85F0XE%26dib%3DeyJ2IjoiMSJ9.7yDoqIwLamQiaaVKzxAA5CD5DDLfMmwgktC0CDbjCNRwFCK74-6XzWkx1xDIhKW6tmwDsJ7hhUktPg-ZFTn7ET3bVijgcZDfRJKMUTZeqe1_OtZ8W_YEe2q9o6-MxtVYVMNjNiYWuPy4qHOGXcGTR4Ww2n0yzCCwk_jthvQ_v9spOqo6ppHuFuFii6KpZAXLU0urFCI1SAw-bkm_mtcwh8v4t-_5YNxFq-GbPVP2iV8.VQekjWNZ3-vvUiMgE7hz_5mn0AckMaX6eQD8-pZyzNI%26dib_tag%3Dse%26keywords%3DLaptop%26qid%3D1781174907%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D8-22-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1
+                              - generic [ref=e1997]:
+                                - generic [ref=e1998]: INR 38,113.85
+                                - generic [ref=e1999]:
+                                  - text: INR
+                                  - generic [ref=e2000]:
+                                    - text: 38,113
+                                    - generic [ref=e2001]: .
+                                  - text: "85"
+                          - generic [ref=e2002]:
+                            - generic [ref=e2008]: INR 1,902.88 delivery Fri, Jul 3
+                            - generic [ref=e2009]: Ships to India
+                          - button "Energy efficiency +3 more" [ref=e2016] [cursor=pointer]:
+                            - generic [ref=e2017]: Energy efficiency +3 more
+                          - button "Add to cart" [ref=e2033] [cursor=pointer]
+            - generic [ref=e2039]:
+              - generic [ref=e2044]:
+                - heading "Seen on social media" [level=2] [ref=e2046]
+                - button "View Sponsored information or leave ad feedback" [ref=e2049] [cursor=pointer]: Sponsored
+              - region "Seen on social media" [ref=e2051]:
+                - list [ref=e2057]:
+                  - listitem "1 of 5" [ref=e2058]:
+                    - generic [ref=e2064]:
+                      - link [ref=e2067] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExOTkxNjg2Nzk2MDI6OjA6Og&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=oG1hh9dmT4
+                        - img [ref=e2069]
+                      - generic [ref=e2070]:
+                        - 'link "Sponsored Ad - acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669" [ref=e2072] [cursor=pointer]':
+                          - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExOTkxNjg2Nzk2MDI6OjA6Og&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=oG1hh9dmT4
+                          - 'heading "Sponsored Ad - acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669" [level=2] [ref=e2073]': "acer Aspire 16 AI Copilot+ PC | 16\" WUXGA 120Hz Multi-Touch Display | Snapdragon X X1-26-100 | NPU: 45 Tops - GPU: Up to 1.7 TFLOPs | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669"
+                        - generic [ref=e2074]:
+                          - generic [ref=e2075]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e2077] [cursor=pointer]:
+                              - generic [ref=e2079]: 4.2 out of 5 stars
+                            - link "161 ratings" [ref=e2083] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExOTkxNjg2Nzk2MDI6OjA6Og&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=oG1hh9dmT4#customerReviews
+                              - text: (161)
+                          - generic [ref=e2084]: 100+ bought in past month
+                        - generic [ref=e2087]:
+                          - generic [ref=e2088]: Price, product page
+                          - link "INR 66,699.95" [ref=e2089] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExOTkxNjg2Nzk2MDI6OjA6Og&url=%2FCopilot-Multi-Touch-Display-Snapdragon-X1-26-100%2Fdp%2FB0F196M26K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0F196M26K%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-1-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DoG1hh9dmT4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=oG1hh9dmT4
+                            - generic [ref=e2090]:
+                              - generic [ref=e2091]: INR 66,699.95
+                              - generic [ref=e2092]:
+                                - text: INR
+                                - generic [ref=e2093]:
+                                  - text: 66,699
+                                  - generic [ref=e2094]: .
+                                - text: "95"
+                        - generic [ref=e2102]: INR 2,096.31 delivery Fri, Jul 3
+                        - button "Energy efficiency" [ref=e2109] [cursor=pointer]:
+                          - generic [ref=e2110]: Energy efficiency
+                        - button "Add to cart" [ref=e2126] [cursor=pointer]
+                  - listitem "2 of 5" [ref=e2127]:
+                    - generic [ref=e2133]:
+                      - link [ref=e2136] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODMyODQ2MzEzMDI6OjE6Og&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TjR9Feqwso
+                        - img [ref=e2138]
+                      - generic [ref=e2139]:
+                        - link "Sponsored Ad - ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44" [ref=e2141] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODMyODQ2MzEzMDI6OjE6Og&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TjR9Feqwso
+                          - heading "Sponsored Ad - ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44" [level=2] [ref=e2142]: ASUS Chromebook CR11 Ruggedized Laptop, 11.6” Display, Intel Processor N100 Processor, 4GB RAM, 64GB eMMC Storage, Antimicrobial Guard, Spill-Resistant Keyboard, Mineral Grey, CR1104CGA-AS44
+                        - generic [ref=e2143]:
+                          - generic [ref=e2144]:
+                            - text: "4.1"
+                            - button "4.1 out of 5 stars, rating details" [ref=e2146] [cursor=pointer]:
+                              - generic [ref=e2148]: 4.1 out of 5 stars
+                            - link "77 ratings" [ref=e2152] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODMyODQ2MzEzMDI6OjE6Og&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TjR9Feqwso#customerReviews
+                              - text: (77)
+                          - generic [ref=e2153]: 50+ bought in past month
+                        - generic [ref=e2156]:
+                          - generic [ref=e2157]: Price, product page
+                          - link "INR 28,310.72" [ref=e2158] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODMyODQ2MzEzMDI6OjE6Og&url=%2FASUS-Chromebook-Antimicrobial-Spill-Resistant-CR1104CGA-AS44%2Fdp%2FB0DZZBGNJN%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZBGNJN%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-2-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DTjR9Feqwso%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=TjR9Feqwso
+                            - generic [ref=e2159]:
+                              - generic [ref=e2160]: INR 28,310.72
+                              - generic [ref=e2161]:
+                                - text: INR
+                                - generic [ref=e2162]:
+                                  - text: 28,310
+                                  - generic [ref=e2163]: .
+                                - text: "72"
+                        - generic [ref=e2171]: INR 1,916.22 delivery Fri, Jul 3
+                        - button "Energy efficiency" [ref=e2178] [cursor=pointer]:
+                          - generic [ref=e2179]: Energy efficiency
+                        - button "Add to cart" [ref=e2195] [cursor=pointer]
+                  - listitem "3 of 5" [ref=e2196]:
+                    - generic [ref=e2202]:
+                      - link [ref=e2205] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzI5NTU0MTUzMDI6OjI6Og&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0GJ6QGPHQ%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D9QePOSIoGy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9QePOSIoGy
+                        - img [ref=e2207]
+                      - generic [ref=e2208]:
+                        - link "Sponsored Ad - Lenovo Chromebook 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N150 CPU - 14\" WUXGA IPS Touchscreen Display - 4GB RAM - 128GB UFS Storage - Integrated Intel® Graphics - Luna Grey" [ref=e2210] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzI5NTU0MTUzMDI6OjI6Og&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0GJ6QGPHQ%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D9QePOSIoGy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9QePOSIoGy
+                          - heading "Sponsored Ad - Lenovo Chromebook 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N150 CPU - 14\" WUXGA IPS Touchscreen Display - 4GB RAM - 128GB UFS Storage - Integrated Intel® Graphics - Luna Grey" [level=2] [ref=e2211]: Lenovo Chromebook 2-in-1 - Lightweight Laptop - Google Gemini - Intel® N150 CPU - 14" WUXGA IPS Touchscreen Display - 4GB RAM - 128GB UFS Storage - Integrated Intel® Graphics - Luna Grey
+                        - generic [ref=e2213]:
+                          - text: "4.8"
+                          - button "4.8 out of 5 stars, rating details" [ref=e2215] [cursor=pointer]:
+                            - generic [ref=e2217]: 4.8 out of 5 stars
+                          - link "11 ratings" [ref=e2221] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzI5NTU0MTUzMDI6OjI6Og&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0GJ6QGPHQ%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D9QePOSIoGy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9QePOSIoGy#customerReviews
+                            - text: (11)
+                        - generic [ref=e2224]:
+                          - generic [ref=e2225]: Price, product page
+                          - link "INR 42,878.20" [ref=e2226] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzI5NTU0MTUzMDI6OjI6Og&url=%2FLenovo-Chromebook-Lightweight-Touchscreen-Integrated%2Fdp%2FB0GJ6QGPHQ%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0GJ6QGPHQ%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-3-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D9QePOSIoGy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=9QePOSIoGy
+                            - generic [ref=e2227]:
+                              - generic [ref=e2228]: INR 42,878.20
+                              - generic [ref=e2229]:
+                                - text: INR
+                                - generic [ref=e2230]:
+                                  - text: 42,878
+                                  - generic [ref=e2231]: .
+                                - text: "20"
+                        - generic [ref=e2239]: INR 1,970.54 delivery Fri, Jul 3
+                        - button "Add to cart" [ref=e2254] [cursor=pointer]
+                  - listitem "4 of 5" [ref=e2255]:
+                    - generic [ref=e2261]:
+                      - link [ref=e2264] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDUwMDI6OjM6Og&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=0KZVgf3VYn
+                        - img [ref=e2266]
+                      - generic [ref=e2267]:
+                        - link "Sponsored Ad - ASUS Chromebook Flip CX1 Convertible Laptop, 14\" FHD NanoEdge 360-degree Touchscreen, Intel Celeron N4500 Processor, 128GB eMMC Storage, 8GB RAM, ChromeOS, Transparent Silver, CX1400FKA-AS88FT" [ref=e2269] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDUwMDI6OjM6Og&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=0KZVgf3VYn
+                          - heading "Sponsored Ad - ASUS Chromebook Flip CX1 Convertible Laptop, 14\" FHD NanoEdge 360-degree Touchscreen, Intel Celeron N4500 Processor, 128GB eMMC Storage, 8GB RAM, ChromeOS, Transparent Silver, CX1400FKA-AS88FT" [level=2] [ref=e2270]: ASUS Chromebook Flip CX1 Convertible Laptop, 14" FHD NanoEdge 360-degree Touchscreen, Intel Celeron N4500 Processor, 128GB eMMC Storage, 8GB RAM, ChromeOS, Transparent Silver, CX1400FKA-AS88FT
+                        - generic [ref=e2271]:
+                          - generic [ref=e2272]:
+                            - text: "4.4"
+                            - button "4.4 out of 5 stars, rating details" [ref=e2274] [cursor=pointer]:
+                              - generic [ref=e2276]: 4.4 out of 5 stars
+                            - link "527 ratings" [ref=e2280] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDUwMDI6OjM6Og&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=0KZVgf3VYn#customerReviews
+                              - text: (527)
+                          - generic [ref=e2281]: 300+ bought in past month
+                        - generic [ref=e2284]:
+                          - generic [ref=e2285]: Price, product page
+                          - link "INR 35,255.24" [ref=e2286] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDUwMDI6OjM6Og&url=%2FASUS-Convertible-Touchscreen-Transparent-CX1400FKA-AS88FT%2Fdp%2FB0DZZVLF6N%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DZZVLF6N%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-4-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3D0KZVgf3VYn%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=0KZVgf3VYn
+                            - generic [ref=e2287]:
+                              - generic [ref=e2288]: INR 35,255.24
+                              - generic [ref=e2289]:
+                                - text: INR
+                                - generic [ref=e2290]:
+                                  - text: 35,255
+                                  - generic [ref=e2291]: .
+                                - text: "24"
+                        - generic [ref=e2299]: INR 2,069.63 delivery Fri, Jul 3
+                        - button "Energy efficiency" [ref=e2306] [cursor=pointer]:
+                          - generic [ref=e2307]: Energy efficiency
+                        - button "Add to cart" [ref=e2323] [cursor=pointer]
+                  - listitem "5 of 5" [ref=e2324]:
+                    - generic [ref=e2330]:
+                      - link [ref=e2333] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDU1MDI6OjQ6Og&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JFjDBXPyzU
+                        - img [ref=e2335]
+                      - generic [ref=e2336]:
+                        - link "Sponsored Ad - Lenovo Chromebook Duet - 2025 - Convertible Laptop - ChromeOS - 10.95\" WUXGA IPS Touch Display - 4GB Memory - 64GB Storage - MediaTek Kompanio 838 - Luna Grey" [ref=e2338] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDU1MDI6OjQ6Og&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JFjDBXPyzU
+                          - heading "Sponsored Ad - Lenovo Chromebook Duet - 2025 - Convertible Laptop - ChromeOS - 10.95\" WUXGA IPS Touch Display - 4GB Memory - 64GB Storage - MediaTek Kompanio 838 - Luna Grey" [level=2] [ref=e2339]: Lenovo Chromebook Duet - 2025 - Convertible Laptop - ChromeOS - 10.95" WUXGA IPS Touch Display - 4GB Memory - 64GB Storage - MediaTek Kompanio 838 - Luna Grey
+                        - generic [ref=e2340]:
+                          - generic [ref=e2341]:
+                            - text: "4.2"
+                            - button "4.2 out of 5 stars, rating details" [ref=e2343] [cursor=pointer]:
+                              - generic [ref=e2345]: 4.2 out of 5 stars
+                            - link "152 ratings" [ref=e2349] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDU1MDI6OjQ6Og&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JFjDBXPyzU#customerReviews
+                              - text: (152)
+                          - generic [ref=e2350]: 300+ bought in past month
+                        - generic [ref=e2353]:
+                          - generic [ref=e2354]: Price, product page
+                          - link "INR 25,632.20" [ref=e2355] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTozMTUzNTAwNDI2MzM1NzIyOjE3ODExNzQ5MDc6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMzEzNjA1NDU1MDI6OjQ6Og&url=%2FLenovo-Chromebook-Duet-Convertible-ChromeOS%2Fdp%2FB0DJH9WBLW%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%253Aamzn1.sym.9435b2aa-085c-44dc-8cef-d0748587ce2d%26crid%3D2SJSLFT85F0XE%26cv_ct_cx%3DLaptop%26keywords%3DLaptop%26pd_rd_i%3DB0DJH9WBLW%26pd_rd_r%3D239688b1-82ad-4921-b42f-2b3005333cad%26pd_rd_w%3Dc2IgQ%26pd_rd_wg%3D29t2p%26pf_rd_p%3D9435b2aa-085c-44dc-8cef-d0748587ce2d%26pf_rd_r%3D0DGFQDWRE3ZMN0PJS64R%26qid%3D1781174907%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Dlaptop%252Caps%252C634%26sr%3D1-5-73e1366e-5cfd-4283-a4f2-da1469909d71-spons%26aref%3DJFjDBXPyzU%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=JFjDBXPyzU
+                            - generic [ref=e2356]:
+                              - generic [ref=e2357]: INR 25,632.20
+                              - generic [ref=e2358]:
+                                - text: INR
+                                - generic [ref=e2359]:
+                                  - text: 25,632
+                                  - generic [ref=e2360]: .
+                                - text: "20"
+                        - generic [ref=e2368]: INR 1,611.30 delivery Jun 22 - Jul 7
+                        - button "Add to cart" [ref=e2383] [cursor=pointer]
+            - generic [ref=e2389]:
+              - generic "Related searches in Laptop" [ref=e2390]:
+                - heading "Related searches" [level=2] [ref=e2393]
+              - list [ref=e2395]:
+                - generic [ref=e2396]:
+                  - link "macbook" [ref=e2397] [cursor=pointer]:
+                    - /url: /s?k=macbook&ref=rsl_sug_0_0&pd_rd_w=N2il3&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=29t2p&pd_rd_r=239688b1-82ad-4921-b42f-2b3005333cad&qid=1781174907
+                    - listitem [ref=e2398]:
+                      - generic [ref=e2404]: macbook
+                  - link "chromebook" [ref=e2405] [cursor=pointer]:
+                    - /url: /s?k=chromebook&ref=rsl_sug_0_3&pd_rd_w=N2il3&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=29t2p&pd_rd_r=239688b1-82ad-4921-b42f-2b3005333cad&qid=1781174907
+                    - listitem [ref=e2406]:
+                      - generic [ref=e2412]: chromebook
+                - generic [ref=e2413]:
+                  - link "gaming laptop" [ref=e2414] [cursor=pointer]:
+                    - /url: /s?k=gaming+laptop&ref=rsl_sug_0_1&pd_rd_w=N2il3&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=29t2p&pd_rd_r=239688b1-82ad-4921-b42f-2b3005333cad&qid=1781174907
+                    - listitem [ref=e2415]:
+                      - generic [ref=e2421]: gaming laptop
+                  - link "eptwfu01" [ref=e2422] [cursor=pointer]:
+                    - /url: /s?k=eptwfu01&ref=rsl_sug_0_4&pd_rd_w=N2il3&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=29t2p&pd_rd_r=239688b1-82ad-4921-b42f-2b3005333cad&qid=1781174907
+                    - listitem [ref=e2423]:
+                      - generic [ref=e2429]: eptwfu01
+                - generic [ref=e2430]:
+                  - link "computer" [ref=e2431] [cursor=pointer]:
+                    - /url: /s?k=computer&ref=rsl_sug_0_2&pd_rd_w=N2il3&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=29t2p&pd_rd_r=239688b1-82ad-4921-b42f-2b3005333cad&qid=1781174907
+                    - listitem [ref=e2432]:
+                      - generic [ref=e2438]: computer
+                  - link "laptop touch screen" [ref=e2439] [cursor=pointer]:
+                    - /url: /s?k=laptop+touch+screen&ref=rsl_sug_0_5&pd_rd_w=N2il3&content-id=amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871:amzn1.sym.3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_p=3be64970-3b95-4a6d-a45d-78077a3ff871&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=29t2p&pd_rd_r=239688b1-82ad-4921-b42f-2b3005333cad&qid=1781174907
+                    - listitem [ref=e2440]:
+                      - generic [ref=e2446]: laptop touch screen
+            - navigation "pagination" [ref=e2449]:
+              - list [ref=e2451]:
+                - listitem [ref=e2452]:
+                  - button "Previous" [disabled] [ref=e2454]:
+                    - img [ref=e2455]
+                    - text: Previous
+                - listitem [ref=e2457]:
+                  - button "Page 1" [ref=e2459]: "1"
+                - listitem [ref=e2460]:
+                  - button "Go to page 2" [ref=e2462] [cursor=pointer]: "2"
+                - listitem [ref=e2463]:
+                  - button "Go to page 3" [ref=e2465] [cursor=pointer]: "3"
+                - button [disabled] [ref=e2466]:
+                  - img [ref=e2467]: ...
+                - button "20" [disabled] [ref=e2469]
+                - listitem [ref=e2470]:
+                  - button "Go to next page, page 2" [ref=e2472] [cursor=pointer]:
+                    - text: Next
+                    - img [ref=e2473]
+            - generic [ref=e2477]:
+              - generic [ref=e2478]:
+                - heading "Brands related to your search" [ref=e2479]
+                - button "Leave feedback on Sponsored ad" [ref=e2484] [cursor=pointer]: Sponsored
+              - list [ref=e2489]:
+                - listitem [ref=e2490]:
+                  - generic [ref=e2491]:
+                    - link [ref=e2492] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNSzD-cROBvyYdsFTb-X844AAAGetkwzowEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAE7MYz/clv1c_ek-wBHfWVcba3TK2Zzp473dcuEa5bu-H1yeDM3-3CuYFO87f-1Apc9zc_0fMFXra9DDMHShWvULel7SLZ9DisUNevrxTK624Ws8YabeWtLTmG3YsHLvzeSw5ZvP5dO2NA5KOFCxDVkE87DfpqcJE61DYqdOsoGmyioTRzDqgpFYFK22kDMu7WznE_AJQEBnc2GxbJ4nLFZTJ0PSt2hGW54oLjQuDMnY831p74WgHydM80ZyU656C_WlPHYI4y9MYifbOBIbRNyE_M33riJZS37j-uPojZ0lhrm75c5ie136jSb6Ao_smeLczuBsKcJBLFBGW1jnUnYrtycbsGxNoHCbli4SuTNtQFkLVoOgWA9Ef09T79oY11bdtQmARQLPR4BsVLJpDK9u6ZNCAjMaOl9T_XrNdbAqUpR3eb2pjfFHhVAIIPC734dGowP3Qk0gokkmzko0s6vCIZWWSNuVOolT1n9-MaUm6byS6TCVeQ1lCaebe-ky220cx7xzZonM98nIIHJ5KevBBLfanjFqU8UtX0QCxlCCo4XtlGhDjzbDZhtGxyCnXacMDSH97DcEPLS6i6JSJb_lXqt3KXR8yanLcbkJYHExkFgnMIYtr2FuG5jMEz4QnfVUuByO2bISPQURYRe6lGpgE-mZzM57qDYkEQ5mwQZg_H1nK9shtNKdNh-egmtivPc79pJo6QE06vE22PO8Jn9-OWC3AKCn_6Cr1yDkTEZ3RE-hm5-s9jLM8puRbo0RQrFVKI15ei5J0HgGTWOg6TmBVjnfZ-RIPosyGxUESvfVedblue0_zLUiilqpO_3wweTMilqyZ8DJ0IUq5OTrhRx8CjEamaomv71iDS-j7Fj1WXnFxdXAqwXMaM6ML4JwlnaFN-kLWHLhuDh-QhgGbQV-laE1gk0VWW6hxzvFM2xboxFczrtx5WiT30ux8tSpAup6IwjIAC81-AmOuBdH5L-LBxVMznv-ApjcylsiRLQqkiUd7-ERQKZSADvBrx9dgLripJszn12lNqmSQ8ukWFaQoErMIqW0ds9oE53MUS2zy6ipzWwjgRAo70mkqZ6-zDWxJGhhzSiv0A5HqyXp1mL78wFqnzqZWcQ0N5ncldplxKWyr0jyn1SU5T5Qe8mGhiF5YNTzOWhv7IW4HJpQcxgDUDJL4V0_zifKRDzes9wCRd1SYGLGhvjWwi5rmTVA2dMq5oTRUTBtqeJJ4wObnzsvVW5MZy8FhO8CxUVNpCi3STxisd2m90UP8bI6kUQLcg5DbePF0QBi4ychh-tgMAEt_MHLjidI3cYMXNRAiqxvDL8GzfYKYzuHJmLEkCRIuC3VBDUsFTGPLICTxyFbmeSY5c3FG-G2N3Xu9-n7NMlgx2c5-ANUwZ_R2x5t47pn6AGQ01CI0ho7371g1hqFHG2plE0UAVezmoLhFnYmg6IEAjiHSB5DhXA4fx5essUX1mngpVynceIAauqy47xCtMHGG173nf8at0SDZ1TDMZzhMjzfMimt6mIw9fImWTZuce75UKjzL_IwD0ck--wm3XWH9toeCZs5MqhKXXOC9W6C57_7USXdK5jMeXg3VQ91sjnqdsE19wIDsRLNBklL6Vz7paQDMmwb9bKD19ngL1YetDvz0a-zZsAORCRp_JZA4f-XdjAn1KOi6SINAwqTtQlq-aw4v0gYth01h/https://www.amazon.com/stores/page/999416C1-6AF7-4B0E-9F6A-2B449F8B9F93/?_encoding=UTF8&store_ref=SB_A04288713JSM1HPDDY2K1-A028080220HE9P12R3EHO&pd_rd_plhdr=t&aaxitk=e9bf3f977c98698e8ad279a2aa753c58&hsa_cr_id=0&lp_asins=B0F167PYK7&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                    - generic:
+                      - generic:
+                        - link "Sponsored ad from Windows 11. \"Save now on select Windows 11 PCs.\" Shop Windows 11." [ref=e2493] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNSzD-cROBvyYdsFTb-X844AAAGetkwzowEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAE7MYz/clv1c_ek-wBHfWVcba3TK2Zzp473dcuEa5bu-H1yeDM3-3CuYFO87f-1Apc9zc_0fMFXra9DDMHShWvULel7SLZ9DisUNevrxTK624Ws8YabeWtLTmG3YsHLvzeSw5ZvP5dO2NA5KOFCxDVkE87DfpqcJE61DYqdOsoGmyioTRzDqgpFYFK22kDMu7WznE_AJQEBnc2GxbJ4nLFZTJ0PSt2hGW54oLjQuDMnY831p74WgHydM80ZyU656C_WlPHYI4y9MYifbOBIbRNyE_M33riJZS37j-uPojZ0lhrm75c5ie136jSb6Ao_smeLczuBsKcJBLFBGW1jnUnYrtycbsGxNoHCbli4SuTNtQFkLVoOgWA9Ef09T79oY11bdtQmARQLPR4BsVLJpDK9u6ZNCAjMaOl9T_XrNdbAqUpR3eb2pjfFHhVAIIPC734dGowP3Qk0gokkmzko0s6vCIZWWSNuVOolT1n9-MaUm6byS6TCVeQ1lCaebe-ky220cx7xzZonM98nIIHJ5KevBBLfanjFqU8UtX0QCxlCCo4XtlGhDjzbDZhtGxyCnXacMDSH97DcEPLS6i6JSJb_lXqt3KXR8yanLcbkJYHExkFgnMIYtr2FuG5jMEz4QnfVUuByO2bISPQURYRe6lGpgE-mZzM57qDYkEQ5mwQZg_H1nK9shtNKdNh-egmtivPc79pJo6QE06vE22PO8Jn9-OWC3AKCn_6Cr1yDkTEZ3RE-hm5-s9jLM8puRbo0RQrFVKI15ei5J0HgGTWOg6TmBVjnfZ-RIPosyGxUESvfVedblue0_zLUiilqpO_3wweTMilqyZ8DJ0IUq5OTrhRx8CjEamaomv71iDS-j7Fj1WXnFxdXAqwXMaM6ML4JwlnaFN-kLWHLhuDh-QhgGbQV-laE1gk0VWW6hxzvFM2xboxFczrtx5WiT30ux8tSpAup6IwjIAC81-AmOuBdH5L-LBxVMznv-ApjcylsiRLQqkiUd7-ERQKZSADvBrx9dgLripJszn12lNqmSQ8ukWFaQoErMIqW0ds9oE53MUS2zy6ipzWwjgRAo70mkqZ6-zDWxJGhhzSiv0A5HqyXp1mL78wFqnzqZWcQ0N5ncldplxKWyr0jyn1SU5T5Qe8mGhiF5YNTzOWhv7IW4HJpQcxgDUDJL4V0_zifKRDzes9wCRd1SYGLGhvjWwi5rmTVA2dMq5oTRUTBtqeJJ4wObnzsvVW5MZy8FhO8CxUVNpCi3STxisd2m90UP8bI6kUQLcg5DbePF0QBi4ychh-tgMAEt_MHLjidI3cYMXNRAiqxvDL8GzfYKYzuHJmLEkCRIuC3VBDUsFTGPLICTxyFbmeSY5c3FG-G2N3Xu9-n7NMlgx2c5-ANUwZ_R2x5t47pn6AGQ01CI0ho7371g1hqFHG2plE0UAVezmoLhFnYmg6IEAjiHSB5DhXA4fx5essUX1mngpVynceIAauqy47xCtMHGG173nf8at0SDZ1TDMZzhMjzfMimt6mIw9fImWTZuce75UKjzL_IwD0ck--wm3XWH9toeCZs5MqhKXXOC9W6C57_7USXdK5jMeXg3VQ91sjnqdsE19wIDsRLNBklL6Vz7paQDMmwb9bKD19ngL1YetDvz0a-zZsAORCRp_JZA4f-XdjAn1KOi6SINAwqTtQlq-aw4v0gYth01h/https://www.amazon.com/stores/page/999416C1-6AF7-4B0E-9F6A-2B449F8B9F93/?_encoding=UTF8&store_ref=SB_A04288713JSM1HPDDY2K1-A028080220HE9P12R3EHO&pd_rd_plhdr=t&aaxitk=e9bf3f977c98698e8ad279a2aa753c58&hsa_cr_id=0&lp_asins=B0F167PYK7&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_asin&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                          - img "Sponsored ad from Windows 11. \"Save now on select Windows 11 PCs.\" Shop Windows 11." [ref=e2494]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNSzD-cROBvyYdsFTb-X844AAAGetkwzowEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAE7MYz/clv1c_ek-wBHfWVcba3TK2Zzp473dcuEa5bu-H1yeDM3-3CuYFO87f-1Apc9zc_0fMFXra9DDMHShWvULel7SLZ9DisUNevrxTK624Ws8YabeWtLTmG3YsHLvzeSw5ZvP5dO2NA5KOFCxDVkE87DfpqcJE61DYqdOsoGmyioTRzDqgpFYFK22kDMu7WznE_AJQEBnc2GxbJ4nLFZTJ0PSt2hGW54oLjQuDMnY831p74WgHydM80ZyU656C_WlPHYI4y9MYifbOBIbRNyE_M33riJZS37j-uPojZ0lhrm75c5ie136jSb6Ao_smeLczuBsKcJBLFBGW1jnUnYrtycbsGxNoHCbli4SuTNtQFkLVoOgWA9Ef09T79oY11bdtQmARQLPR4BsVLJpDK9u6ZNCAjMaOl9T_XrNdbAqUpR3eb2pjfFHhVAIIPC734dGowP3Qk0gokkmzko0s6vCIZWWSNuVOolT1n9-MaUm6byS6TCVeQ1lCaebe-ky220cx7xzZonM98nIIHJ5KevBBLfanjFqU8UtX0QCxlCCo4XtlGhDjzbDZhtGxyCnXacMDSH97DcEPLS6i6JSJb_lXqt3KXR8yanLcbkJYHExkFgnMIYtr2FuG5jMEz4QnfVUuByO2bISPQURYRe6lGpgE-mZzM57qDYkEQ5mwQZg_H1nK9shtNKdNh-egmtivPc79pJo6QE06vE22PO8Jn9-OWC3AKCn_6Cr1yDkTEZ3RE-hm5-s9jLM8puRbo0RQrFVKI15ei5J0HgGTWOg6TmBVjnfZ-RIPosyGxUESvfVedblue0_zLUiilqpO_3wweTMilqyZ8DJ0IUq5OTrhRx8CjEamaomv71iDS-j7Fj1WXnFxdXAqwXMaM6ML4JwlnaFN-kLWHLhuDh-QhgGbQV-laE1gk0VWW6hxzvFM2xboxFczrtx5WiT30ux8tSpAup6IwjIAC81-AmOuBdH5L-LBxVMznv-ApjcylsiRLQqkiUd7-ERQKZSADvBrx9dgLripJszn12lNqmSQ8ukWFaQoErMIqW0ds9oE53MUS2zy6ipzWwjgRAo70mkqZ6-zDWxJGhhzSiv0A5HqyXp1mL78wFqnzqZWcQ0N5ncldplxKWyr0jyn1SU5T5Qe8mGhiF5YNTzOWhv7IW4HJpQcxgDUDJL4V0_zifKRDzes9wCRd1SYGLGhvjWwi5rmTVA2dMq5oTRUTBtqeJJ4wObnzsvVW5MZy8FhO8CxUVNpCi3STxisd2m90UP8bI6kUQLcg5DbePF0QBi4ychh-tgMAEt_MHLjidI3cYMXNRAiqxvDL8GzfYKYzuHJmLEkCRIuC3VBDUsFTGPLICTxyFbmeSY5c3FG-G2N3Xu9-n7NMlgx2c5-ANUwZ_R2x5t47pn6AGQ01CI0ho7371g1hqFHG2plE0UAVezmoLhFnYmg6IEAjiHSB5DhXA4fx5essUX1mngpVynceIAauqy47xCtMHGG173nf8at0SDZ1TDMZzhMjzfMimt6mIw9fImWTZuce75UKjzL_IwD0ck--wm3XWH9toeCZs5MqhKXXOC9W6C57_7USXdK5jMeXg3VQ91sjnqdsE19wIDsRLNBklL6Vz7paQDMmwb9bKD19ngL1YetDvz0a-zZsAORCRp_JZA4f-XdjAn1KOi6SINAwqTtQlq-aw4v0gYth01h/https://www.amazon.com/stores/page/999416C1-6AF7-4B0E-9F6A-2B449F8B9F93/?_encoding=UTF8&store_ref=SB_A04288713JSM1HPDDY2K1-A028080220HE9P12R3EHO&pd_rd_plhdr=t&aaxitk=e9bf3f977c98698e8ad279a2aa753c58&hsa_cr_id=0&lp_asins=B0F167PYK7&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                          - generic:
+                            - generic:
+                              - link "Windows 11" [ref=e2495] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNSzD-cROBvyYdsFTb-X844AAAGetkwzowEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAE7MYz/clv1c_ek-wBHfWVcba3TK2Zzp473dcuEa5bu-H1yeDM3-3CuYFO87f-1Apc9zc_0fMFXra9DDMHShWvULel7SLZ9DisUNevrxTK624Ws8YabeWtLTmG3YsHLvzeSw5ZvP5dO2NA5KOFCxDVkE87DfpqcJE61DYqdOsoGmyioTRzDqgpFYFK22kDMu7WznE_AJQEBnc2GxbJ4nLFZTJ0PSt2hGW54oLjQuDMnY831p74WgHydM80ZyU656C_WlPHYI4y9MYifbOBIbRNyE_M33riJZS37j-uPojZ0lhrm75c5ie136jSb6Ao_smeLczuBsKcJBLFBGW1jnUnYrtycbsGxNoHCbli4SuTNtQFkLVoOgWA9Ef09T79oY11bdtQmARQLPR4BsVLJpDK9u6ZNCAjMaOl9T_XrNdbAqUpR3eb2pjfFHhVAIIPC734dGowP3Qk0gokkmzko0s6vCIZWWSNuVOolT1n9-MaUm6byS6TCVeQ1lCaebe-ky220cx7xzZonM98nIIHJ5KevBBLfanjFqU8UtX0QCxlCCo4XtlGhDjzbDZhtGxyCnXacMDSH97DcEPLS6i6JSJb_lXqt3KXR8yanLcbkJYHExkFgnMIYtr2FuG5jMEz4QnfVUuByO2bISPQURYRe6lGpgE-mZzM57qDYkEQ5mwQZg_H1nK9shtNKdNh-egmtivPc79pJo6QE06vE22PO8Jn9-OWC3AKCn_6Cr1yDkTEZ3RE-hm5-s9jLM8puRbo0RQrFVKI15ei5J0HgGTWOg6TmBVjnfZ-RIPosyGxUESvfVedblue0_zLUiilqpO_3wweTMilqyZ8DJ0IUq5OTrhRx8CjEamaomv71iDS-j7Fj1WXnFxdXAqwXMaM6ML4JwlnaFN-kLWHLhuDh-QhgGbQV-laE1gk0VWW6hxzvFM2xboxFczrtx5WiT30ux8tSpAup6IwjIAC81-AmOuBdH5L-LBxVMznv-ApjcylsiRLQqkiUd7-ERQKZSADvBrx9dgLripJszn12lNqmSQ8ukWFaQoErMIqW0ds9oE53MUS2zy6ipzWwjgRAo70mkqZ6-zDWxJGhhzSiv0A5HqyXp1mL78wFqnzqZWcQ0N5ncldplxKWyr0jyn1SU5T5Qe8mGhiF5YNTzOWhv7IW4HJpQcxgDUDJL4V0_zifKRDzes9wCRd1SYGLGhvjWwi5rmTVA2dMq5oTRUTBtqeJJ4wObnzsvVW5MZy8FhO8CxUVNpCi3STxisd2m90UP8bI6kUQLcg5DbePF0QBi4ychh-tgMAEt_MHLjidI3cYMXNRAiqxvDL8GzfYKYzuHJmLEkCRIuC3VBDUsFTGPLICTxyFbmeSY5c3FG-G2N3Xu9-n7NMlgx2c5-ANUwZ_R2x5t47pn6AGQ01CI0ho7371g1hqFHG2plE0UAVezmoLhFnYmg6IEAjiHSB5DhXA4fx5essUX1mngpVynceIAauqy47xCtMHGG173nf8at0SDZ1TDMZzhMjzfMimt6mIw9fImWTZuce75UKjzL_IwD0ck--wm3XWH9toeCZs5MqhKXXOC9W6C57_7USXdK5jMeXg3VQ91sjnqdsE19wIDsRLNBklL6Vz7paQDMmwb9bKD19ngL1YetDvz0a-zZsAORCRp_JZA4f-XdjAn1KOi6SINAwqTtQlq-aw4v0gYth01h/https://www.amazon.com/stores/page/999416C1-6AF7-4B0E-9F6A-2B449F8B9F93/?_encoding=UTF8&store_ref=SB_A04288713JSM1HPDDY2K1-A028080220HE9P12R3EHO&pd_rd_plhdr=t&aaxitk=e9bf3f977c98698e8ad279a2aa753c58&hsa_cr_id=0&lp_asins=B0F167PYK7&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                                - img "Windows 11" [ref=e2496]
+                              - link "Save now on select Windows 11 PCs" [ref=e2497] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNSzD-cROBvyYdsFTb-X844AAAGetkwzowEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAE7MYz/clv1c_ek-wBHfWVcba3TK2Zzp473dcuEa5bu-H1yeDM3-3CuYFO87f-1Apc9zc_0fMFXra9DDMHShWvULel7SLZ9DisUNevrxTK624Ws8YabeWtLTmG3YsHLvzeSw5ZvP5dO2NA5KOFCxDVkE87DfpqcJE61DYqdOsoGmyioTRzDqgpFYFK22kDMu7WznE_AJQEBnc2GxbJ4nLFZTJ0PSt2hGW54oLjQuDMnY831p74WgHydM80ZyU656C_WlPHYI4y9MYifbOBIbRNyE_M33riJZS37j-uPojZ0lhrm75c5ie136jSb6Ao_smeLczuBsKcJBLFBGW1jnUnYrtycbsGxNoHCbli4SuTNtQFkLVoOgWA9Ef09T79oY11bdtQmARQLPR4BsVLJpDK9u6ZNCAjMaOl9T_XrNdbAqUpR3eb2pjfFHhVAIIPC734dGowP3Qk0gokkmzko0s6vCIZWWSNuVOolT1n9-MaUm6byS6TCVeQ1lCaebe-ky220cx7xzZonM98nIIHJ5KevBBLfanjFqU8UtX0QCxlCCo4XtlGhDjzbDZhtGxyCnXacMDSH97DcEPLS6i6JSJb_lXqt3KXR8yanLcbkJYHExkFgnMIYtr2FuG5jMEz4QnfVUuByO2bISPQURYRe6lGpgE-mZzM57qDYkEQ5mwQZg_H1nK9shtNKdNh-egmtivPc79pJo6QE06vE22PO8Jn9-OWC3AKCn_6Cr1yDkTEZ3RE-hm5-s9jLM8puRbo0RQrFVKI15ei5J0HgGTWOg6TmBVjnfZ-RIPosyGxUESvfVedblue0_zLUiilqpO_3wweTMilqyZ8DJ0IUq5OTrhRx8CjEamaomv71iDS-j7Fj1WXnFxdXAqwXMaM6ML4JwlnaFN-kLWHLhuDh-QhgGbQV-laE1gk0VWW6hxzvFM2xboxFczrtx5WiT30ux8tSpAup6IwjIAC81-AmOuBdH5L-LBxVMznv-ApjcylsiRLQqkiUd7-ERQKZSADvBrx9dgLripJszn12lNqmSQ8ukWFaQoErMIqW0ds9oE53MUS2zy6ipzWwjgRAo70mkqZ6-zDWxJGhhzSiv0A5HqyXp1mL78wFqnzqZWcQ0N5ncldplxKWyr0jyn1SU5T5Qe8mGhiF5YNTzOWhv7IW4HJpQcxgDUDJL4V0_zifKRDzes9wCRd1SYGLGhvjWwi5rmTVA2dMq5oTRUTBtqeJJ4wObnzsvVW5MZy8FhO8CxUVNpCi3STxisd2m90UP8bI6kUQLcg5DbePF0QBi4ychh-tgMAEt_MHLjidI3cYMXNRAiqxvDL8GzfYKYzuHJmLEkCRIuC3VBDUsFTGPLICTxyFbmeSY5c3FG-G2N3Xu9-n7NMlgx2c5-ANUwZ_R2x5t47pn6AGQ01CI0ho7371g1hqFHG2plE0UAVezmoLhFnYmg6IEAjiHSB5DhXA4fx5essUX1mngpVynceIAauqy47xCtMHGG173nf8at0SDZ1TDMZzhMjzfMimt6mIw9fImWTZuce75UKjzL_IwD0ck--wm3XWH9toeCZs5MqhKXXOC9W6C57_7USXdK5jMeXg3VQ91sjnqdsE19wIDsRLNBklL6Vz7paQDMmwb9bKD19ngL1YetDvz0a-zZsAORCRp_JZA4f-XdjAn1KOi6SINAwqTtQlq-aw4v0gYth01h/https://www.amazon.com/stores/page/999416C1-6AF7-4B0E-9F6A-2B449F8B9F93/?_encoding=UTF8&store_ref=SB_A04288713JSM1HPDDY2K1-A028080220HE9P12R3EHO&pd_rd_plhdr=t&aaxitk=e9bf3f977c98698e8ad279a2aa753c58&hsa_cr_id=0&lp_asins=B0F167PYK7&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                                - generic [ref=e2498]:
+                                  - generic [ref=e2499]: Save now on select Windows 11 PCs
+                                  - generic [ref=e2500]: Save now on select Windows 11 PCs
+                              - link "Shop Windows 11" [ref=e2501] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JNSzD-cROBvyYdsFTb-X844AAAGetkwzowEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAE7MYz/clv1c_ek-wBHfWVcba3TK2Zzp473dcuEa5bu-H1yeDM3-3CuYFO87f-1Apc9zc_0fMFXra9DDMHShWvULel7SLZ9DisUNevrxTK624Ws8YabeWtLTmG3YsHLvzeSw5ZvP5dO2NA5KOFCxDVkE87DfpqcJE61DYqdOsoGmyioTRzDqgpFYFK22kDMu7WznE_AJQEBnc2GxbJ4nLFZTJ0PSt2hGW54oLjQuDMnY831p74WgHydM80ZyU656C_WlPHYI4y9MYifbOBIbRNyE_M33riJZS37j-uPojZ0lhrm75c5ie136jSb6Ao_smeLczuBsKcJBLFBGW1jnUnYrtycbsGxNoHCbli4SuTNtQFkLVoOgWA9Ef09T79oY11bdtQmARQLPR4BsVLJpDK9u6ZNCAjMaOl9T_XrNdbAqUpR3eb2pjfFHhVAIIPC734dGowP3Qk0gokkmzko0s6vCIZWWSNuVOolT1n9-MaUm6byS6TCVeQ1lCaebe-ky220cx7xzZonM98nIIHJ5KevBBLfanjFqU8UtX0QCxlCCo4XtlGhDjzbDZhtGxyCnXacMDSH97DcEPLS6i6JSJb_lXqt3KXR8yanLcbkJYHExkFgnMIYtr2FuG5jMEz4QnfVUuByO2bISPQURYRe6lGpgE-mZzM57qDYkEQ5mwQZg_H1nK9shtNKdNh-egmtivPc79pJo6QE06vE22PO8Jn9-OWC3AKCn_6Cr1yDkTEZ3RE-hm5-s9jLM8puRbo0RQrFVKI15ei5J0HgGTWOg6TmBVjnfZ-RIPosyGxUESvfVedblue0_zLUiilqpO_3wweTMilqyZ8DJ0IUq5OTrhRx8CjEamaomv71iDS-j7Fj1WXnFxdXAqwXMaM6ML4JwlnaFN-kLWHLhuDh-QhgGbQV-laE1gk0VWW6hxzvFM2xboxFczrtx5WiT30ux8tSpAup6IwjIAC81-AmOuBdH5L-LBxVMznv-ApjcylsiRLQqkiUd7-ERQKZSADvBrx9dgLripJszn12lNqmSQ8ukWFaQoErMIqW0ds9oE53MUS2zy6ipzWwjgRAo70mkqZ6-zDWxJGhhzSiv0A5HqyXp1mL78wFqnzqZWcQ0N5ncldplxKWyr0jyn1SU5T5Qe8mGhiF5YNTzOWhv7IW4HJpQcxgDUDJL4V0_zifKRDzes9wCRd1SYGLGhvjWwi5rmTVA2dMq5oTRUTBtqeJJ4wObnzsvVW5MZy8FhO8CxUVNpCi3STxisd2m90UP8bI6kUQLcg5DbePF0QBi4ychh-tgMAEt_MHLjidI3cYMXNRAiqxvDL8GzfYKYzuHJmLEkCRIuC3VBDUsFTGPLICTxyFbmeSY5c3FG-G2N3Xu9-n7NMlgx2c5-ANUwZ_R2x5t47pn6AGQ01CI0ho7371g1hqFHG2plE0UAVezmoLhFnYmg6IEAjiHSB5DhXA4fx5essUX1mngpVynceIAauqy47xCtMHGG173nf8at0SDZ1TDMZzhMjzfMimt6mIw9fImWTZuce75UKjzL_IwD0ck--wm3XWH9toeCZs5MqhKXXOC9W6C57_7USXdK5jMeXg3VQ91sjnqdsE19wIDsRLNBklL6Vz7paQDMmwb9bKD19ngL1YetDvz0a-zZsAORCRp_JZA4f-XdjAn1KOi6SINAwqTtQlq-aw4v0gYth01h/https://www.amazon.com/stores/page/999416C1-6AF7-4B0E-9F6A-2B449F8B9F93/?_encoding=UTF8&store_ref=SB_A04288713JSM1HPDDY2K1-A028080220HE9P12R3EHO&pd_rd_plhdr=t&aaxitk=e9bf3f977c98698e8ad279a2aa753c58&hsa_cr_id=0&lp_asins=B0F167PYK7&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb0_cta&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                                - generic [ref=e2504]:
+                                  - text: Shop Windows
+                                  - generic [ref=e2505]:
+                                    - text: "11"
+                                    - img [ref=e2506]
+                - listitem [ref=e2508]:
+                  - generic [ref=e2509]:
+                    - link [ref=e2510] [cursor=pointer]:
+                      - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL6s7hYaSN3Y1TPgLmHvhowAAAGetkwzpAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAKb36G/clv1c_ek-wBPHXFbbWzjK3YoscrxfcuXaZLo8nmvAE-whCt-dWVBd2lHd1xxIZ4WB7-7PNpHZ_y7wKV4yihl4wmZNUGf1_gDzY8aW2wQlFht6LxEK8gAyeXNTSLCz95o289pJK_Taiy-VlCa9tnpSBhGok-9mrYF2cnT1vksL2n5_qjgURXGQDVTg7Up_rHgHl58vSojHrpk5IHDWE08BdFhFi2iFbPnz0QCsW3IAP3Tz2IdOG6DYlhG5Qiv9gMuBXxqhxCgQ6YwMDHYA87mql-4Jwu1I2BIBuFhnqxisrNlSBdKa9kEx8yG3sulAS06wyS1HJ3RP_maSFRSDJlAjdDGpaa1i9OsqBswlhA1OZkG4JEnr2TOycMcFagdi-04rOvi8vucnkrKaeNTdcUoQGRfPe3muo7hD9Qy05sqypr5ODbrfpOxD9zGGj9C20sVm0lhD7er-QpnARo72lawwdJ9RGXq2-towxz-hpO7K7Ssg6_nauPpTMUxVXxwy8e1KuVvKgp0VZAqWUUJDMl8bBeNbClzp9L1NjzgJf8AG7dIZ5TitFW79W3r17pFT7z3GVIUv5lWemYTCL4aOZDlknOpQk9DQAmup2SzCI-Uhvc4Bo7lQzlnmh2ayf2ogzMHAh07GGiws0yprxc7iOlAVwWnu-dNjdjVcxbGc7XVz_tsiDbNgggwJFb0_uFI_iUWLWUrvRDWpr1PQdKzhtfREcnr1CaO8kCs8g3iJ51AxjLyA1960e52ajnsySCFmlF_dH-OO_BiKBXgjG6jQUAxKH_WbETXQ0XW7dAaYn480r2kHeLQfx8TOpWdrsiBLOkF19r6yGfoLHRBxcinGHu-PCLv8MVfuhhkcp8aifbySIOcf3npNvQn1GHMt_hjxH03u5EPNEVSmdGCyjMu4eaVy-0jLwO9XY3SQrU_TMOqWrffH4r7jxi7LdFTxigJO7uo_CD6ccRyWO-1LYedIdXMsDP1Mi40s8Q28FZYiK4xQoHoNHQBBCkqTc0x6Ax_mKYUDCLBjSZVYYeG6T54dMOjOdaJYrOscxODCwaQ_X4WOmhUY3GyD9s7OUtt2Epe4Cl0hzAY1dzVnk5PiwLQevvT05pjtngCenTPvlooZPMVe6z4WfDMH_wRwRSFEqGYcjr4tKntVw5ynpXGGAC5lt-bdZOTl_sbg2rSZfkmkhenh18WglOCUjsQz4ehSBSq0iTnYXL2aPzGSVYb43BZ_RWzKs8UeYwLf3m2oA8zXWPTy0S4oBdOBFN0qLjYAIomqQsxuTnLRBdwlKtGoeHrCczoym3vnjNF5SnKpSfLrZg8RharZsD-TRu8cwi_GXi453WTcMssdqvtxJIPgD6pSFsDxejJMLnw9EEBsr0-SmPvym04jfs49A9XpCbkKR1D94wMHTmgayCCEZFEZapYT2l-64-R_imukVINAUheGWwKB9tpVAjysadWN5g3JOh5cefp1qSbtezZP8VP8EGDR3-zyy9G6-bD0VSApqM54YdaRV1hXjtJ4C1UWHQ9ALnc7S4kxX2MJckyjGSx5eiJ4TB2OcayXvtLpwBZ_Pjl-_Js1EzwjrNw0URYNCyn583780ADR6Sq8e6qkEIiHNCEsO7_M41eTueGmZBP9XZu3ep0B6F6Hb9pIgvMFiu75vHuGUbcl22hN-fb-r3PD1TJhOOlAbAADocpWmEf30728/https://www.amazon.com/stores/page/77D9E1F7-0337-4282-9DB6-B6B8FB2DC98D/?_encoding=UTF8&store_ref=SB_A0499122NR9IO3IWHCHI-A08294906U9PX04B90VV&pd_rd_plhdr=t&aaxitk=ce36b8844433d2d60fc17d44ec054cdf&hsa_cr_id=0&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                    - generic:
+                      - generic:
+                        - link "Apple" [ref=e2511] [cursor=pointer]:
+                          - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL6s7hYaSN3Y1TPgLmHvhowAAAGetkwzpAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAKb36G/clv1c_ek-wBPHXFbbWzjK3YoscrxfcuXaZLo8nmvAE-whCt-dWVBd2lHd1xxIZ4WB7-7PNpHZ_y7wKV4yihl4wmZNUGf1_gDzY8aW2wQlFht6LxEK8gAyeXNTSLCz95o289pJK_Taiy-VlCa9tnpSBhGok-9mrYF2cnT1vksL2n5_qjgURXGQDVTg7Up_rHgHl58vSojHrpk5IHDWE08BdFhFi2iFbPnz0QCsW3IAP3Tz2IdOG6DYlhG5Qiv9gMuBXxqhxCgQ6YwMDHYA87mql-4Jwu1I2BIBuFhnqxisrNlSBdKa9kEx8yG3sulAS06wyS1HJ3RP_maSFRSDJlAjdDGpaa1i9OsqBswlhA1OZkG4JEnr2TOycMcFagdi-04rOvi8vucnkrKaeNTdcUoQGRfPe3muo7hD9Qy05sqypr5ODbrfpOxD9zGGj9C20sVm0lhD7er-QpnARo72lawwdJ9RGXq2-towxz-hpO7K7Ssg6_nauPpTMUxVXxwy8e1KuVvKgp0VZAqWUUJDMl8bBeNbClzp9L1NjzgJf8AG7dIZ5TitFW79W3r17pFT7z3GVIUv5lWemYTCL4aOZDlknOpQk9DQAmup2SzCI-Uhvc4Bo7lQzlnmh2ayf2ogzMHAh07GGiws0yprxc7iOlAVwWnu-dNjdjVcxbGc7XVz_tsiDbNgggwJFb0_uFI_iUWLWUrvRDWpr1PQdKzhtfREcnr1CaO8kCs8g3iJ51AxjLyA1960e52ajnsySCFmlF_dH-OO_BiKBXgjG6jQUAxKH_WbETXQ0XW7dAaYn480r2kHeLQfx8TOpWdrsiBLOkF19r6yGfoLHRBxcinGHu-PCLv8MVfuhhkcp8aifbySIOcf3npNvQn1GHMt_hjxH03u5EPNEVSmdGCyjMu4eaVy-0jLwO9XY3SQrU_TMOqWrffH4r7jxi7LdFTxigJO7uo_CD6ccRyWO-1LYedIdXMsDP1Mi40s8Q28FZYiK4xQoHoNHQBBCkqTc0x6Ax_mKYUDCLBjSZVYYeG6T54dMOjOdaJYrOscxODCwaQ_X4WOmhUY3GyD9s7OUtt2Epe4Cl0hzAY1dzVnk5PiwLQevvT05pjtngCenTPvlooZPMVe6z4WfDMH_wRwRSFEqGYcjr4tKntVw5ynpXGGAC5lt-bdZOTl_sbg2rSZfkmkhenh18WglOCUjsQz4ehSBSq0iTnYXL2aPzGSVYb43BZ_RWzKs8UeYwLf3m2oA8zXWPTy0S4oBdOBFN0qLjYAIomqQsxuTnLRBdwlKtGoeHrCczoym3vnjNF5SnKpSfLrZg8RharZsD-TRu8cwi_GXi453WTcMssdqvtxJIPgD6pSFsDxejJMLnw9EEBsr0-SmPvym04jfs49A9XpCbkKR1D94wMHTmgayCCEZFEZapYT2l-64-R_imukVINAUheGWwKB9tpVAjysadWN5g3JOh5cefp1qSbtezZP8VP8EGDR3-zyy9G6-bD0VSApqM54YdaRV1hXjtJ4C1UWHQ9ALnc7S4kxX2MJckyjGSx5eiJ4TB2OcayXvtLpwBZ_Pjl-_Js1EzwjrNw0URYNCyn583780ADR6Sq8e6qkEIiHNCEsO7_M41eTueGmZBP9XZu3ep0B6F6Hb9pIgvMFiu75vHuGUbcl22hN-fb-r3PD1TJhOOlAbAADocpWmEf30728/https://www.amazon.com/stores/page/77D9E1F7-0337-4282-9DB6-B6B8FB2DC98D/?_encoding=UTF8&store_ref=SB_A0499122NR9IO3IWHCHI-A08294906U9PX04B90VV&pd_rd_plhdr=t&aaxitk=ce36b8844433d2d60fc17d44ec054cdf&hsa_cr_id=0&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                          - img "Apple" [ref=e2512]
+                        - generic:
+                          - link:
+                            - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL6s7hYaSN3Y1TPgLmHvhowAAAGetkwzpAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAKb36G/clv1c_ek-wBPHXFbbWzjK3YoscrxfcuXaZLo8nmvAE-whCt-dWVBd2lHd1xxIZ4WB7-7PNpHZ_y7wKV4yihl4wmZNUGf1_gDzY8aW2wQlFht6LxEK8gAyeXNTSLCz95o289pJK_Taiy-VlCa9tnpSBhGok-9mrYF2cnT1vksL2n5_qjgURXGQDVTg7Up_rHgHl58vSojHrpk5IHDWE08BdFhFi2iFbPnz0QCsW3IAP3Tz2IdOG6DYlhG5Qiv9gMuBXxqhxCgQ6YwMDHYA87mql-4Jwu1I2BIBuFhnqxisrNlSBdKa9kEx8yG3sulAS06wyS1HJ3RP_maSFRSDJlAjdDGpaa1i9OsqBswlhA1OZkG4JEnr2TOycMcFagdi-04rOvi8vucnkrKaeNTdcUoQGRfPe3muo7hD9Qy05sqypr5ODbrfpOxD9zGGj9C20sVm0lhD7er-QpnARo72lawwdJ9RGXq2-towxz-hpO7K7Ssg6_nauPpTMUxVXxwy8e1KuVvKgp0VZAqWUUJDMl8bBeNbClzp9L1NjzgJf8AG7dIZ5TitFW79W3r17pFT7z3GVIUv5lWemYTCL4aOZDlknOpQk9DQAmup2SzCI-Uhvc4Bo7lQzlnmh2ayf2ogzMHAh07GGiws0yprxc7iOlAVwWnu-dNjdjVcxbGc7XVz_tsiDbNgggwJFb0_uFI_iUWLWUrvRDWpr1PQdKzhtfREcnr1CaO8kCs8g3iJ51AxjLyA1960e52ajnsySCFmlF_dH-OO_BiKBXgjG6jQUAxKH_WbETXQ0XW7dAaYn480r2kHeLQfx8TOpWdrsiBLOkF19r6yGfoLHRBxcinGHu-PCLv8MVfuhhkcp8aifbySIOcf3npNvQn1GHMt_hjxH03u5EPNEVSmdGCyjMu4eaVy-0jLwO9XY3SQrU_TMOqWrffH4r7jxi7LdFTxigJO7uo_CD6ccRyWO-1LYedIdXMsDP1Mi40s8Q28FZYiK4xQoHoNHQBBCkqTc0x6Ax_mKYUDCLBjSZVYYeG6T54dMOjOdaJYrOscxODCwaQ_X4WOmhUY3GyD9s7OUtt2Epe4Cl0hzAY1dzVnk5PiwLQevvT05pjtngCenTPvlooZPMVe6z4WfDMH_wRwRSFEqGYcjr4tKntVw5ynpXGGAC5lt-bdZOTl_sbg2rSZfkmkhenh18WglOCUjsQz4ehSBSq0iTnYXL2aPzGSVYb43BZ_RWzKs8UeYwLf3m2oA8zXWPTy0S4oBdOBFN0qLjYAIomqQsxuTnLRBdwlKtGoeHrCczoym3vnjNF5SnKpSfLrZg8RharZsD-TRu8cwi_GXi453WTcMssdqvtxJIPgD6pSFsDxejJMLnw9EEBsr0-SmPvym04jfs49A9XpCbkKR1D94wMHTmgayCCEZFEZapYT2l-64-R_imukVINAUheGWwKB9tpVAjysadWN5g3JOh5cefp1qSbtezZP8VP8EGDR3-zyy9G6-bD0VSApqM54YdaRV1hXjtJ4C1UWHQ9ALnc7S4kxX2MJckyjGSx5eiJ4TB2OcayXvtLpwBZ_Pjl-_Js1EzwjrNw0URYNCyn583780ADR6Sq8e6qkEIiHNCEsO7_M41eTueGmZBP9XZu3ep0B6F6Hb9pIgvMFiu75vHuGUbcl22hN-fb-r3PD1TJhOOlAbAADocpWmEf30728/https://www.amazon.com/stores/page/77D9E1F7-0337-4282-9DB6-B6B8FB2DC98D/?_encoding=UTF8&store_ref=SB_A0499122NR9IO3IWHCHI-A08294906U9PX04B90VV&pd_rd_plhdr=t&aaxitk=ce36b8844433d2d60fc17d44ec054cdf&hsa_cr_id=0&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                          - generic:
+                            - generic:
+                              - link "Mac does that." [ref=e2513] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL6s7hYaSN3Y1TPgLmHvhowAAAGetkwzpAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAKb36G/clv1c_ek-wBPHXFbbWzjK3YoscrxfcuXaZLo8nmvAE-whCt-dWVBd2lHd1xxIZ4WB7-7PNpHZ_y7wKV4yihl4wmZNUGf1_gDzY8aW2wQlFht6LxEK8gAyeXNTSLCz95o289pJK_Taiy-VlCa9tnpSBhGok-9mrYF2cnT1vksL2n5_qjgURXGQDVTg7Up_rHgHl58vSojHrpk5IHDWE08BdFhFi2iFbPnz0QCsW3IAP3Tz2IdOG6DYlhG5Qiv9gMuBXxqhxCgQ6YwMDHYA87mql-4Jwu1I2BIBuFhnqxisrNlSBdKa9kEx8yG3sulAS06wyS1HJ3RP_maSFRSDJlAjdDGpaa1i9OsqBswlhA1OZkG4JEnr2TOycMcFagdi-04rOvi8vucnkrKaeNTdcUoQGRfPe3muo7hD9Qy05sqypr5ODbrfpOxD9zGGj9C20sVm0lhD7er-QpnARo72lawwdJ9RGXq2-towxz-hpO7K7Ssg6_nauPpTMUxVXxwy8e1KuVvKgp0VZAqWUUJDMl8bBeNbClzp9L1NjzgJf8AG7dIZ5TitFW79W3r17pFT7z3GVIUv5lWemYTCL4aOZDlknOpQk9DQAmup2SzCI-Uhvc4Bo7lQzlnmh2ayf2ogzMHAh07GGiws0yprxc7iOlAVwWnu-dNjdjVcxbGc7XVz_tsiDbNgggwJFb0_uFI_iUWLWUrvRDWpr1PQdKzhtfREcnr1CaO8kCs8g3iJ51AxjLyA1960e52ajnsySCFmlF_dH-OO_BiKBXgjG6jQUAxKH_WbETXQ0XW7dAaYn480r2kHeLQfx8TOpWdrsiBLOkF19r6yGfoLHRBxcinGHu-PCLv8MVfuhhkcp8aifbySIOcf3npNvQn1GHMt_hjxH03u5EPNEVSmdGCyjMu4eaVy-0jLwO9XY3SQrU_TMOqWrffH4r7jxi7LdFTxigJO7uo_CD6ccRyWO-1LYedIdXMsDP1Mi40s8Q28FZYiK4xQoHoNHQBBCkqTc0x6Ax_mKYUDCLBjSZVYYeG6T54dMOjOdaJYrOscxODCwaQ_X4WOmhUY3GyD9s7OUtt2Epe4Cl0hzAY1dzVnk5PiwLQevvT05pjtngCenTPvlooZPMVe6z4WfDMH_wRwRSFEqGYcjr4tKntVw5ynpXGGAC5lt-bdZOTl_sbg2rSZfkmkhenh18WglOCUjsQz4ehSBSq0iTnYXL2aPzGSVYb43BZ_RWzKs8UeYwLf3m2oA8zXWPTy0S4oBdOBFN0qLjYAIomqQsxuTnLRBdwlKtGoeHrCczoym3vnjNF5SnKpSfLrZg8RharZsD-TRu8cwi_GXi453WTcMssdqvtxJIPgD6pSFsDxejJMLnw9EEBsr0-SmPvym04jfs49A9XpCbkKR1D94wMHTmgayCCEZFEZapYT2l-64-R_imukVINAUheGWwKB9tpVAjysadWN5g3JOh5cefp1qSbtezZP8VP8EGDR3-zyy9G6-bD0VSApqM54YdaRV1hXjtJ4C1UWHQ9ALnc7S4kxX2MJckyjGSx5eiJ4TB2OcayXvtLpwBZ_Pjl-_Js1EzwjrNw0URYNCyn583780ADR6Sq8e6qkEIiHNCEsO7_M41eTueGmZBP9XZu3ep0B6F6Hb9pIgvMFiu75vHuGUbcl22hN-fb-r3PD1TJhOOlAbAADocpWmEf30728/https://www.amazon.com/stores/page/77D9E1F7-0337-4282-9DB6-B6B8FB2DC98D/?_encoding=UTF8&store_ref=SB_A0499122NR9IO3IWHCHI-A08294906U9PX04B90VV&pd_rd_plhdr=t&aaxitk=ce36b8844433d2d60fc17d44ec054cdf&hsa_cr_id=0&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                                - generic [ref=e2514]:
+                                  - generic [ref=e2515]: Mac does that.
+                                  - generic [ref=e2516]: Mac does that.
+                              - link "Shop Apple" [ref=e2517] [cursor=pointer]:
+                                - /url: https://aax-us-east-retail-direct.amazon.com/x/c/JL6s7hYaSN3Y1TPgLmHvhowAAAGetkwzpAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAKb36G/clv1c_ek-wBPHXFbbWzjK3YoscrxfcuXaZLo8nmvAE-whCt-dWVBd2lHd1xxIZ4WB7-7PNpHZ_y7wKV4yihl4wmZNUGf1_gDzY8aW2wQlFht6LxEK8gAyeXNTSLCz95o289pJK_Taiy-VlCa9tnpSBhGok-9mrYF2cnT1vksL2n5_qjgURXGQDVTg7Up_rHgHl58vSojHrpk5IHDWE08BdFhFi2iFbPnz0QCsW3IAP3Tz2IdOG6DYlhG5Qiv9gMuBXxqhxCgQ6YwMDHYA87mql-4Jwu1I2BIBuFhnqxisrNlSBdKa9kEx8yG3sulAS06wyS1HJ3RP_maSFRSDJlAjdDGpaa1i9OsqBswlhA1OZkG4JEnr2TOycMcFagdi-04rOvi8vucnkrKaeNTdcUoQGRfPe3muo7hD9Qy05sqypr5ODbrfpOxD9zGGj9C20sVm0lhD7er-QpnARo72lawwdJ9RGXq2-towxz-hpO7K7Ssg6_nauPpTMUxVXxwy8e1KuVvKgp0VZAqWUUJDMl8bBeNbClzp9L1NjzgJf8AG7dIZ5TitFW79W3r17pFT7z3GVIUv5lWemYTCL4aOZDlknOpQk9DQAmup2SzCI-Uhvc4Bo7lQzlnmh2ayf2ogzMHAh07GGiws0yprxc7iOlAVwWnu-dNjdjVcxbGc7XVz_tsiDbNgggwJFb0_uFI_iUWLWUrvRDWpr1PQdKzhtfREcnr1CaO8kCs8g3iJ51AxjLyA1960e52ajnsySCFmlF_dH-OO_BiKBXgjG6jQUAxKH_WbETXQ0XW7dAaYn480r2kHeLQfx8TOpWdrsiBLOkF19r6yGfoLHRBxcinGHu-PCLv8MVfuhhkcp8aifbySIOcf3npNvQn1GHMt_hjxH03u5EPNEVSmdGCyjMu4eaVy-0jLwO9XY3SQrU_TMOqWrffH4r7jxi7LdFTxigJO7uo_CD6ccRyWO-1LYedIdXMsDP1Mi40s8Q28FZYiK4xQoHoNHQBBCkqTc0x6Ax_mKYUDCLBjSZVYYeG6T54dMOjOdaJYrOscxODCwaQ_X4WOmhUY3GyD9s7OUtt2Epe4Cl0hzAY1dzVnk5PiwLQevvT05pjtngCenTPvlooZPMVe6z4WfDMH_wRwRSFEqGYcjr4tKntVw5ynpXGGAC5lt-bdZOTl_sbg2rSZfkmkhenh18WglOCUjsQz4ehSBSq0iTnYXL2aPzGSVYb43BZ_RWzKs8UeYwLf3m2oA8zXWPTy0S4oBdOBFN0qLjYAIomqQsxuTnLRBdwlKtGoeHrCczoym3vnjNF5SnKpSfLrZg8RharZsD-TRu8cwi_GXi453WTcMssdqvtxJIPgD6pSFsDxejJMLnw9EEBsr0-SmPvym04jfs49A9XpCbkKR1D94wMHTmgayCCEZFEZapYT2l-64-R_imukVINAUheGWwKB9tpVAjysadWN5g3JOh5cefp1qSbtezZP8VP8EGDR3-zyy9G6-bD0VSApqM54YdaRV1hXjtJ4C1UWHQ9ALnc7S4kxX2MJckyjGSx5eiJ4TB2OcayXvtLpwBZ_Pjl-_Js1EzwjrNw0URYNCyn583780ADR6Sq8e6qkEIiHNCEsO7_M41eTueGmZBP9XZu3ep0B6F6Hb9pIgvMFiu75vHuGUbcl22hN-fb-r3PD1TJhOOlAbAADocpWmEf30728/https://www.amazon.com/stores/page/77D9E1F7-0337-4282-9DB6-B6B8FB2DC98D/?_encoding=UTF8&store_ref=SB_A0499122NR9IO3IWHCHI-A08294906U9PX04B90VV&pd_rd_plhdr=t&aaxitk=ce36b8844433d2d60fc17d44ec054cdf&hsa_cr_id=0&lp_query=Laptop&lp_slot=desktop-hsa-3psl&ref_=sbx_be_s_3psl_mbd_mb1_cta&pd_rd_w=MdLXj&content-id=amzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d%3Aamzn1.sym.34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_p=34925003-ed5a-42a1-b6c2-ded67a03dc8d&pf_rd_r=0DGFQDWRE3ZMN0PJS64R&pd_rd_wg=GlpRe&pd_rd_r=664cf585-158d-4b14-94a3-761df8ce8e0c
+                                - generic [ref=e2520]:
+                                  - text: Shop
+                                  - generic [ref=e2521]:
+                                    - text: Apple
+                                    - img [ref=e2522]
+            - generic [ref=e2529]:
+              - heading "Need help?" [level=2] [ref=e2532]
+              - generic [ref=e2533]:
+                - link "Visit the help section" [ref=e2534] [cursor=pointer]:
+                  - /url: /gp/help/customer/display.html?nodeId=468556
+                - text: or
+                - link "contact us" [ref=e2535] [cursor=pointer]:
+                  - /url: /gp/help/customer/contact-us
+            - generic [ref=e2538]:
+              - iframe [ref=e2539]:
+                - generic [ref=f2e4]:
+                  - link "Auusda Business Laptop Computer for Work, Notebook PC for College Students, 15.6\" FHD Display, 4-Core Processor, Backlit Keyboard, Fingerprint ID, Up to 10TB Storage, 16GB DDR4 RAM, 1TB NVMe, Silver" [ref=f2e7] [cursor=pointer]:
+                    - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RIzcYR3rVXZ_hspOiT2VnpUAAAGetkwzygEAAAH0AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICDNzJct/clv1c_ek8OM3GX57OOBXc78KNgzRKkwPFC2M21hK71h0iI9dkESEvWlDdAZD-bvuahwUHxvVzrpo8mWOVTK9k6enqnVlGCOrCsGto_7a3A6sCjdFVSDetQUPD49pnbfpTpLSGcyh817Y1MMl-AitUo5-Fv-crw7CU-TYTaU8N59bYIthbH0Fq5yobYHG6fb0TBjhQBvNMoznxwqC__8kctfW53IqbLxhXo1IAOIUiI5mR4Cc9ba6U3yveUGRt1yOwQ4IeMRSrA6iD-40S3BGClB-XK1k3-Dr2SJKqVbNHsqwWylFkFaAB5hvrftkDT1imW0Mr0yojrTKs2G5CuGIdmbOabtln9P2XKYz0W20pxgCpfz3NLWeTcgaSfmc7YxHnJr38/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NDc0MTYwNjkxMzE5MjI1OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAxMzIxMjYxMDU0OTAyOjo6Og&url=%2Fdp%2FB0DR2QCKNR%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+                  - generic [ref=f2e8]:
+                    - img "Auusda Business Laptop Computer for Work, Notebook PC for College Students, 15.6\" FHD Display, 4-Core Processor, Backlit Keyboard, Fingerprint ID, Up to 10TB Storage, 16GB DDR4 RAM, 1TB NVMe, Silver" [ref=f2e10]
+                    - generic [ref=f2e11]:
+                      - generic [ref=f2e12]: Auusda Business Laptop Computer for Work, Notebook PC for College Students, 15.6" FHD...
+                      - generic [ref=f2e13]:
+                        - text: INR 29,729.28
+                        - link "734" [ref=f2e14] [cursor=pointer]:
+                          - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RIzcYR3rVXZ_hspOiT2VnpUAAAGetkwzygEAAAH0AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICDNzJct/clv1c_ek8OM3GX57OOBXc78KNgzRKkwPFC2M21hK71h0iI9dkESEvWlDdAZD-bvuahwUHxvVzrpo8mWOVTK9k6enqnVlGCOrCsGto_7a3A6sCjdFVSDetQUPD49pnbfpTpLSGcyh817Y1MMl-AitUo5-Fv-crw7CU-TYTaU8N59bYIthbH0Fq5yobYHG6fb0TBjhQBvNMoznxwqC__8kctfW53IqbLxhXo1IAOIUiI5mR4Cc9ba6U3yveUGRt1yOwQ4IeMRSrA6iD-40S3BGClB-XK1k3-Dr2SJKqVbNHsqwWylFkFaAB5hvrftkDT1imW0Mr0yojrTKs2G5CuGIdmbOabtln9P2XKYz0W20pxgCpfz3NLWeTcgaSfmc7YxHnJr38/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NDc0MTYwNjkxMzE5MjI1OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAxMzIxMjYxMDU0OTAyOjo6Og&url=%2Fdp%2FB0DR2QCKNR%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA#customerReviews
+                          - text: "734"
+                    - link "Shop now" [ref=f2e18] [cursor=pointer]:
+                      - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RIzcYR3rVXZ_hspOiT2VnpUAAAGetkwzygEAAAH0AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICDNzJct/clv1c_ek8OM3GX57OOBXc78KNgzRKkwPFC2M21hK71h0iI9dkESEvWlDdAZD-bvuahwUHxvVzrpo8mWOVTK9k6enqnVlGCOrCsGto_7a3A6sCjdFVSDetQUPD49pnbfpTpLSGcyh817Y1MMl-AitUo5-Fv-crw7CU-TYTaU8N59bYIthbH0Fq5yobYHG6fb0TBjhQBvNMoznxwqC__8kctfW53IqbLxhXo1IAOIUiI5mR4Cc9ba6U3yveUGRt1yOwQ4IeMRSrA6iD-40S3BGClB-XK1k3-Dr2SJKqVbNHsqwWylFkFaAB5hvrftkDT1imW0Mr0yojrTKs2G5CuGIdmbOabtln9P2XKYz0W20pxgCpfz3NLWeTcgaSfmc7YxHnJr38/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NDc0MTYwNjkxMzE5MjI1OjE3ODExNzQ5MDc6c3Bfc2VhcmNoX2Zvb3Rlcl9zaGFyZWQ6MzAxMzIxMjYxMDU0OTAyOjo6Og&url=%2Fdp%2FB0DR2QCKNR%2Fref%3Dsspa_dk_bot_sx_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfZm9vdGVyX3NoYXJlZA
+              - button "Leave feedback on Sponsored ad" [ref=e2541] [cursor=pointer]:
+                - generic [ref=e2542]: Sponsored
+          - link "Go back to filtering menu" [ref=e2544] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForFilterOptions"
+        - generic [ref=e2546]:
+          - link "Skip to main search results" [ref=e2547] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e2553]:
+            - group [ref=e2554]:
+              - heading "Popular Shopping Ideas" [level=2] [ref=e2555]
+              - list [ref=e2556]:
+                - listitem [ref=e2557]:
+                  - link "Thinkpad" [ref=e2559] [cursor=pointer]:
+                    - /url: /s?k=laptop+thinkpad&ref=sr_nr_p_rag_integrated_qb_0
+                - listitem [ref=e2560]:
+                  - link "2-in-1" [ref=e2562] [cursor=pointer]:
+                    - /url: /s?k=2+in+1+laptop&ref=sr_nr_p_rag_integrated_qb_1
+                - listitem [ref=e2563]:
+                  - link "Budget" [ref=e2565] [cursor=pointer]:
+                    - /url: /s?k=laptop+under+200&ref=sr_nr_p_rag_integrated_qb_2
+                - listitem [ref=e2566]:
+                  - link "I7 Processor" [ref=e2568] [cursor=pointer]:
+                    - /url: /s?k=laptop+with+i7+processor&ref=sr_nr_p_rag_integrated_qb_3
+                - listitem [ref=e2569]:
+                  - button "See more" [ref=e2572] [cursor=pointer]: See more
+            - separator [ref=e2574]
+            - group "Screen Size" [ref=e2575]:
+              - heading "Screen Size" [level=2] [ref=e2576]
+              - list "Screen Size" [ref=e2577]:
+                - listitem "Popular Shopping Ideas" [ref=e2578]:
+                  - link "Apply Up to 13.9 in filter to narrow results" [ref=e2580] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664399011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_1&ds=v1%3AbnwwngsJMqtnebwN4zLL7yvIm5Z%2F3ic7kWpaEDF0lnM
+                    - checkbox [ref=e2583]
+                    - text: Up to 13.9 in
+                - listitem "Popular Shopping Ideas" [ref=e2585]:
+                  - link "Apply 14 to 14.9 in filter to narrow results" [ref=e2587] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664402011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_2&ds=v1%3AGUjRqosiQ3LEgLxQ20SLQSyzqyvOc%2BDdXTKZTVo%2FbTc
+                    - checkbox [ref=e2590]
+                    - text: 14 to 14.9 in
+                - listitem "Popular Shopping Ideas" [ref=e2592]:
+                  - link "Apply 15 to 15.9 in filter to narrow results" [ref=e2594] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664401011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_3&ds=v1%3ALW7JyGb3SLuylKob%2FuLakVhKmcIuW8cm4JdhUtZPTxY
+                    - checkbox [ref=e2597]
+                    - text: 15 to 15.9 in
+                - listitem "Popular Shopping Ideas" [ref=e2599]:
+                  - link "Apply 16 in & above filter to narrow results" [ref=e2601] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664404011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_4&ds=v1%3AQzKFvcqZmTssRzKaIgNVadHF4XxtomjzVnt9oJcNNLE
+                    - checkbox [ref=e2604]
+                    - text: 16 in & above
+                - listitem "Popular Shopping Ideas" [ref=e2606]:
+                  - link "Apply Up to 34 cm filter to narrow results" [ref=e2608] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664403011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_5&ds=v1%3A5t6SkCwC6bKSwA%2Br8rUgi7z9niiBjWlTSWJM4LoWU00
+                    - checkbox [ref=e2611]
+                    - text: Up to 34 cm
+                - listitem "Popular Shopping Ideas" [ref=e2613]:
+                  - link "Apply 35 to 39 cm filter to narrow results" [ref=e2615] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664398011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_6&ds=v1%3A8DbMMi5VPmBzs9krta8dBEmQX6TquZu9xl3ag2BGrpA
+                    - checkbox [ref=e2618]
+                    - text: 35 to 39 cm
+                - listitem "Popular Shopping Ideas" [ref=e2620]:
+                  - link "Apply 40 cm & above filter to narrow results" [ref=e2622] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_two_browse-bin%3A212664400011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=212664397011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_two_browse-bin_7&ds=v1%3Ar7E2%2B1MUnO%2FmQbkUxHoXWgX80HbMJS5XFLga2aHZaLA
+                    - checkbox [ref=e2625]
+                    - text: 40 cm & above
+            - group "RAM Size" [ref=e2627]:
+              - heading "RAM Size" [level=2] [ref=e2628]
+              - list "RAM Size" [ref=e2629]:
+                - listitem "Popular Shopping Ideas" [ref=e2630]:
+                  - link "Apply 128 GB filter to narrow results" [ref=e2632] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A122309459011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_1&ds=v1%3AVxIg5yWLzSCpVz38qrJCfThZH2nAZUAfijKfAmWYj6Y
+                    - checkbox [ref=e2635]
+                    - text: 128 GB
+                - listitem "Popular Shopping Ideas" [ref=e2637]:
+                  - link "Apply 64 GB filter to narrow results" [ref=e2639] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A23720421011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_2&ds=v1%3AHSKoMQFkQuKQk5CaA%2FIuCcXLwEBhqN8taK3i5IlyQeI
+                    - checkbox [ref=e2642]
+                    - text: 64 GB
+                - listitem "Popular Shopping Ideas" [ref=e2644]:
+                  - link "Apply 32 GB filter to narrow results" [ref=e2646] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A23720422011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_3&ds=v1%3AnE0EzZad8Zp%2Bn%2FI6brPz7q9zQ18kcUmsF4y8b29j%2BEE
+                    - checkbox [ref=e2649]
+                    - text: 32 GB
+                - listitem "Popular Shopping Ideas" [ref=e2651]:
+                  - link "Apply 16 GB filter to narrow results" [ref=e2653] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A23720418011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_4&ds=v1%3AAux45D9McJze9gCl4lLZN%2BB81qlqvmitx9GqjmX3pzg
+                    - checkbox [ref=e2656]
+                    - text: 16 GB
+                - listitem "Popular Shopping Ideas" [ref=e2658]:
+                  - link "Apply 8 GB filter to narrow results" [ref=e2660] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A23720419011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_5&ds=v1%3A7y9FhxobZTwejmK5oMPoOQ9pH65vwLXwJEZUHJN69dU
+                    - checkbox [ref=e2663]
+                    - text: 8 GB
+                - listitem "Popular Shopping Ideas" [ref=e2665]:
+                  - link "Apply 4 GB filter to narrow results" [ref=e2667] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A23720420011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_6&ds=v1%3Af0FyQNtv7FtMXimQRp5z1MDMdM8GeBbZg2waMK0sZP0
+                    - checkbox [ref=e2670]
+                    - text: 4 GB
+                - listitem "Popular Shopping Ideas" [ref=e2672]:
+                  - link "Apply 2 GB filter to narrow results" [ref=e2674] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119721111%3A23720417011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23720416011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119721111_7&ds=v1%3AXQRAdhhVeAK%2BSuoPaB7PKkHoV1lN94XepKIXlu6%2FPJQ
+                    - checkbox [ref=e2677]
+                    - text: 2 GB
+            - group "Brands" [ref=e2679]:
+              - heading "Brands" [level=2] [ref=e2680]
+              - list "Brands" [ref=e2681]:
+                - listitem "Popular Shopping Ideas" [ref=e2682]:
+                  - link "Apply HP filter to narrow results" [ref=e2684] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A308445&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_1&ds=v1%3AJoJmtjimj7NKh8qJlOZDVv%2Fz3MObXbI3xsiN%2FMvsHsU
+                    - checkbox [ref=e2687]
+                    - text: HP
+                - listitem "Popular Shopping Ideas" [ref=e2689]:
+                  - link "Apply Lenovo filter to narrow results" [ref=e2691] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A391242&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_2&ds=v1%3AtumKyh2lAjLjdEgTHYHBcaWeGxCEUmRbtB634L9n4fE
+                    - checkbox [ref=e2694]
+                    - text: Lenovo
+                - listitem "Popular Shopping Ideas" [ref=e2696]:
+                  - link "Apply Dell filter to narrow results" [ref=e2698] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A241862&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_3&ds=v1%3A9falkD0osMB4%2FH%2F6tYRhurz%2FeP15umXsvi5jodSx0uU
+                    - checkbox [ref=e2701]
+                    - text: Dell
+                - listitem "Popular Shopping Ideas" [ref=e2703]:
+                  - link "Apply Apple filter to narrow results" [ref=e2705] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A110955&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_4&ds=v1%3A2b2iX4ORJXk989%2FYw%2BKYcXcJRJ5Gi8lPpyky044gmmU
+                    - checkbox [ref=e2708]
+                    - text: Apple
+                - listitem "Popular Shopping Ideas" [ref=e2710]:
+                  - link "Apply ASUS filter to narrow results" [ref=e2712] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A219979&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_5&ds=v1%3Ajb4VKFBKk%2FIJgdeSj9RP3OYwFtuq3FzwPWleH2cO5vE
+                    - checkbox [ref=e2715]
+                    - text: ASUS
+                - listitem "Popular Shopping Ideas" [ref=e2717]:
+                  - link "Apply Acer filter to narrow results" [ref=e2719] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A247341&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_6&ds=v1%3A28CAE7WBPQzG2c7k%2Fo8l0EP6CgQ%2FECqHRCL3bDGKR10
+                    - checkbox [ref=e2722]
+                    - text: Acer
+                - listitem "Popular Shopping Ideas" [ref=e2724]:
+                  - link "Apply Microsoft filter to narrow results" [ref=e2726] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_123%3A42439&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=85457740011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_123_7&ds=v1%3AGnO3DnW1DFYdYK5s%2BvW6pTQU%2F9bMSiz0FC922UWmI6s
+                    - checkbox [ref=e2729]
+                    - text: Microsoft
+                - listitem [ref=e2731]:
+                  - button "See more, Brands" [ref=e2734] [cursor=pointer]: See more
+            - group "Customer Reviews" [ref=e2736]:
+              - heading "Customer Reviews" [level=2] [ref=e2737]
+              - list "Customer Reviews" [ref=e2738]:
+                - listitem [ref=e2739]:
+                  - link "Apply 4 Stars & Up filter to narrow results" [ref=e2742] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_72%3A1248879011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=1248877011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_72_1&ds=v1%3A0uG1j1uA30W49yDsMB9q5wsIgr6yP1p998K142BoMy0
+                    - generic [ref=e2744]: 4 Stars
+                    - text: "& Up"
+            - group "Hard Drive Size" [ref=e2745]:
+              - heading "Hard Drive Size" [level=2] [ref=e2746]
+              - list "Hard Drive Size" [ref=e2747]:
+                - listitem "Popular Shopping Ideas" [ref=e2748]:
+                  - link "Apply 4 TB & Above filter to narrow results" [ref=e2750] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A5446816011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_1&ds=v1%3Azfs%2FlWQ9grNaD2c8S62w505YDCvv9vF9TsB8pNzAEo0
+                    - checkbox [ref=e2753]
+                    - text: 4 TB & Above
+                - listitem "Popular Shopping Ideas" [ref=e2755]:
+                  - link "Apply 2 TB filter to narrow results" [ref=e2757] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A7817230011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_2&ds=v1%3AGBIQqV4MXAbOFRiWYH8dwdgiaJ%2BUIokqesgk5i7JlQU
+                    - checkbox [ref=e2760]
+                    - text: 2 TB
+                - listitem "Popular Shopping Ideas" [ref=e2762]:
+                  - link "Apply 1.5 TB filter to narrow results" [ref=e2764] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A5446813011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_3&ds=v1%3A8WlbWwIWrIwtCgoqe9dSl3aR2tmRKPnM7CAM8NNXCpA
+                    - checkbox [ref=e2767]
+                    - text: 1.5 TB
+                - listitem "Popular Shopping Ideas" [ref=e2769]:
+                  - link "Apply 1 TB filter to narrow results" [ref=e2771] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A5446812011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_4&ds=v1%3AGI%2FTMao4cYo8i%2F%2BtLpkODKTLXVtfFoBcgWz8AQSKaE0
+                    - checkbox [ref=e2774]
+                    - text: 1 TB
+                - listitem "Popular Shopping Ideas" [ref=e2776]:
+                  - link "Apply 501 to 999 GB filter to narrow results" [ref=e2778] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A562241011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_5&ds=v1%3Aac%2BXJHl3MQHEcpg7S5p%2BQiqKTXfbC6E%2Bfo4YuK03X6M
+                    - checkbox [ref=e2781]
+                    - text: 501 to 999 GB
+                - listitem "Popular Shopping Ideas" [ref=e2783]:
+                  - link "Apply 321 to 500 GB filter to narrow results" [ref=e2785] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A562240011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_6&ds=v1%3AmuPO07%2BNi39huf6goHDOZnrHoAKdao%2BnNHIKAjslJDg
+                    - checkbox [ref=e2788]
+                    - text: 321 to 500 GB
+                - listitem "Popular Shopping Ideas" [ref=e2790]:
+                  - link "Apply 121 to 320 GB filter to narrow results" [ref=e2792] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A610553011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_7&ds=v1%3A35YrrhYEgLSrnNe9z%2BEBsPoi4yM4qrvhBTgbuNOW5nw
+                    - checkbox [ref=e2795]
+                    - text: 121 to 320 GB
+                - listitem "Popular Shopping Ideas" [ref=e2797]:
+                  - link "Apply Up to 80 GB filter to narrow results" [ref=e2799] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004209391091%3A610552011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562234011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004209391091_8&ds=v1%3ANfnSo5aIQY1%2FSdr1wVFddQbaRfS93c%2FK%2B50lbdqMaSY
+                    - checkbox [ref=e2802]
+                    - text: Up to 80 GB
+            - group "Operating System" [ref=e2804]:
+              - heading "Operating System" [level=2] [ref=e2805]
+              - list "Operating System" [ref=e2806]:
+                - listitem "Popular Shopping Ideas" [ref=e2807]:
+                  - link "Apply Windows 11 Pro filter to narrow results" [ref=e2809] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724789011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_1&ds=v1%3AhG5FdY8S35SEXViG0VG4o0Toa7hbQPUvDR1t4E3uVgQ
+                    - checkbox [ref=e2812]
+                    - text: Windows 11 Pro
+                - listitem "Popular Shopping Ideas" [ref=e2814]:
+                  - link "Apply Windows 11 Home filter to narrow results" [ref=e2816] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724790011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_2&ds=v1%3AL%2Bs7sBY5pdN%2BmS%2FGOZDaFabrr2om9NO1f6FATuVko9I
+                    - checkbox [ref=e2819]
+                    - text: Windows 11 Home
+                - listitem "Popular Shopping Ideas" [ref=e2821]:
+                  - link "Apply Windows Legacy System filter to narrow results" [ref=e2823] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724785011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_3&ds=v1%3A4i%2FWrpVieU65J6quIbQMCZE9Veqz10hjH9%2FC2JIwPvE
+                    - checkbox [ref=e2826]
+                    - text: Windows Legacy System
+                - listitem "Popular Shopping Ideas" [ref=e2828]:
+                  - link "Apply Windows 11 in S mode filter to narrow results" [ref=e2830] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724793011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_4&ds=v1%3AYZT%2B7GqQdEk%2FOf5RNk85neUeVwHgFutQpg5oMoQQL80
+                    - checkbox [ref=e2833]
+                    - text: Windows 11 in S mode
+                - listitem "Popular Shopping Ideas" [ref=e2835]:
+                  - link "Apply Windows 10 Home filter to narrow results" [ref=e2837] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724797011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_5&ds=v1%3AggPghnZVpGJsAEJIFFwIAS%2BamXN41%2FOfj6wW9lsTiPA
+                    - checkbox [ref=e2840]
+                    - text: Windows 10 Home
+                - listitem "Popular Shopping Ideas" [ref=e2842]:
+                  - link "Apply Windows 10 Pro filter to narrow results" [ref=e2844] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724787011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_6&ds=v1%3ANue5TDTxaqD1mWNszOCYVHJ9epVVd8ihZOFv4b9nZQI
+                    - checkbox [ref=e2847]
+                    - text: Windows 10 Pro
+                - listitem "Popular Shopping Ideas" [ref=e2849]:
+                  - link "Apply Windows 10 in S mode filter to narrow results" [ref=e2851] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A23724786011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_7&ds=v1%3AN8ZnoUTlCbgg6qDLbYYvPRqfY21kpVD1YiRQC6IN6yg
+                    - checkbox [ref=e2854]
+                    - text: Windows 10 in S mode
+                - listitem "Popular Shopping Ideas" [ref=e2856]:
+                  - link "Apply Mac OS filter to narrow results" [ref=e2858] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A7529233011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_8&ds=v1%3AcH6kpGtz4MtwNdRfMZXn8BrXdLw4Rl1kicfhZjuSh90
+                    - checkbox [ref=e2861]
+                    - text: Mac OS
+                - listitem "Popular Shopping Ideas" [ref=e2863]:
+                  - link "Apply Chrome OS filter to narrow results" [ref=e2865] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A6401981011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_9&ds=v1%3AyaxererBclQdu8gyum6%2FPe0epP537n1lsX4Si1TTaS8
+                    - checkbox [ref=e2868]
+                    - text: Chrome OS
+                - listitem "Popular Shopping Ideas" [ref=e2870]:
+                  - link "Apply Linux filter to narrow results" [ref=e2872] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004198069091%3A7817221011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=562215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004198069091_10&ds=v1%3Av4UVkoVHnoEA2Vzyc2r1OYo9rCse6fQMKJUuv8WsdzQ
+                    - checkbox [ref=e2875]
+                    - text: Linux
+            - group "Condition" [ref=e2877]:
+              - heading "Condition" [level=2] [ref=e2878]
+              - list "Condition" [ref=e2879]:
+                - listitem "Popular Shopping Ideas" [ref=e2880]:
+                  - link "Apply New filter to narrow results" [ref=e2882] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_condition-type%3A2224371011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2224369011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_condition-type_1&ds=v1%3AFuh%2BGW9YZmD%2FjOEPpMv8Yh1LgWPLlMbwyLoepz0ZC20
+                    - checkbox [ref=e2885]
+                    - text: New
+                - listitem "Popular Shopping Ideas" [ref=e2887]:
+                  - link "Apply Renewed filter to narrow results" [ref=e2889] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_condition-type%3A16907720011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2224369011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_condition-type_2&ds=v1%3AgttQuEVPFw2lijEfkMWjNhr4bTRqCkNiod%2FfUnklU2E
+                    - checkbox [ref=e2892]
+                    - text: Renewed
+                - listitem "Popular Shopping Ideas" [ref=e2894]:
+                  - link "Apply Used filter to narrow results" [ref=e2896] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_condition-type%3A2224373011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2224369011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_condition-type_3&ds=v1%3AQESN1lsnL41gihiMPrM0BAkplNX%2FmiM8dg66J50xcKA
+                    - checkbox [ref=e2899]
+                    - text: Used
+            - group "CPU Manufacturer" [ref=e2901]:
+              - heading "CPU Manufacturer" [level=2] [ref=e2902]
+              - list "CPU Manufacturer" [ref=e2903]:
+                - listitem "Popular Shopping Ideas" [ref=e2904]:
+                  - link "Apply AMD filter to narrow results" [ref=e2906] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716057011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_1&ds=v1%3AP1CBTubMqhXKl%2BTcjsgRKRmwgCqVHaCaWvJsrg4hBMc
+                    - checkbox [ref=e2909]
+                    - text: AMD
+                - listitem "Popular Shopping Ideas" [ref=e2911]:
+                  - link "Apply Apple filter to narrow results" [ref=e2913] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716058011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_2&ds=v1%3AHXC4TVDSGxH2v%2BYsPAW%2BLl%2F42GXQ0u1kyVaJGV%2BOFeo
+                    - checkbox [ref=e2916]
+                    - text: Apple
+                - listitem "Popular Shopping Ideas" [ref=e2918]:
+                  - link "Apply Intel filter to narrow results" [ref=e2920] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716064011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_3&ds=v1%3AycYMwNHNs6%2FTCTzk2ngYt57B1MrQIPSlBD8fY6DWGqg
+                    - checkbox [ref=e2923]
+                    - text: Intel
+                - listitem "Popular Shopping Ideas" [ref=e2925]:
+                  - link "Apply MediaTek filter to narrow results" [ref=e2927] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716061011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_4&ds=v1%3AOUb%2FpfmliTbO738cL22sC8410tZljSYS5Umj9VOzn4s
+                    - checkbox [ref=e2930]
+                    - text: MediaTek
+                - listitem "Popular Shopping Ideas" [ref=e2932]:
+                  - link "Apply NVIDIA filter to narrow results" [ref=e2934] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716059011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_5&ds=v1%3Axc%2FgBrpqu4QZ1LvNJN9JOEa%2Fi5JbsiIxpSvNYKY6q1Q
+                    - checkbox [ref=e2937]
+                    - text: NVIDIA
+                - listitem "Popular Shopping Ideas" [ref=e2939]:
+                  - link "Apply Qualcomm filter to narrow results" [ref=e2941] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716062011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_6&ds=v1%3An6GsM2jpLo%2BDVmL%2FPqSMbjFbvhoQqExSqDtszXXK7iE
+                    - checkbox [ref=e2944]
+                    - text: Qualcomm
+                - listitem "Popular Shopping Ideas" [ref=e2946]:
+                  - link "Apply VIA filter to narrow results" [ref=e2948] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003123814111%3A23716063011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716050011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003123814111_7&ds=v1%3Ap7BfKDXwcVwp1xt1l4W9QDxAlWjzVNvVWwpKL02Q5Ao
+                    - checkbox [ref=e2951]
+                    - text: VIA
+            - group "Deals & Discounts" [ref=e2953]:
+              - heading "Deals & Discounts" [level=2] [ref=e2954]
+              - list "Deals & Discounts" [ref=e2955]:
+                - listitem [ref=e2956]:
+                  - link "All Discounts" [ref=e2958] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_deal_type%3A23566065011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23566063011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_deal_type_1&ds=v1%3AhKxzE6Txg2w4Y4wf%2BDjYuqfWWlJm98eVrNNaBlgCqkg
+                - listitem [ref=e2959]:
+                  - link "Buy More, Save More" [ref=e2961] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_deal_type%3A210906365011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23566063011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_deal_type_2&ds=v1%3AReZYj9Nvl%2BBfKXFTOvjpgdZG%2Fkjljs416kLpvrBTQqU
+                - listitem [ref=e2962]:
+                  - link "Coupons" [ref=e2964] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_deal_type%3A210906366011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23566063011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_deal_type_3&ds=v1%3AGOZ7wyhZmS09efaSbO3mJjPHksD232qWEwBBLhZund0
+                - listitem [ref=e2965]:
+                  - link "Today's Deals" [ref=e2967] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_deal_type%3A23566064011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23566063011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_deal_type_4&ds=v1%3AGuZu%2BdzJM2dTJ1zmIECRHCVOKa%2BeabWEAF6hNzA1p2E
+            - group "Processor Speed" [ref=e2968]:
+              - heading "Processor Speed" [level=2] [ref=e2969]
+              - list "Processor Speed" [ref=e2970]:
+                - listitem "Popular Shopping Ideas" [ref=e2971]:
+                  - link "Apply 1 to 1.59 GHz filter to narrow results" [ref=e2973] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A2057523011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_1&ds=v1%3AF3%2B9yZHAtuxADQpwbLGafT8WK0cwitahYT08%2BYZv9kM
+                    - checkbox [ref=e2976]
+                    - text: 1 to 1.59 GHz
+                - listitem "Popular Shopping Ideas" [ref=e2978]:
+                  - link "Apply 1.60 to 1.79 GHz filter to narrow results" [ref=e2980] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A2057524011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_2&ds=v1%3AAozQCXC1sj6lzMpFqtx4uw4G6%2Bxghrdau67Dpr63jMw
+                    - checkbox [ref=e2983]
+                    - text: 1.60 to 1.79 GHz
+                - listitem "Popular Shopping Ideas" [ref=e2985]:
+                  - link "Apply 1.80 to 1.99 GHz filter to narrow results" [ref=e2987] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A2057525011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_3&ds=v1%3AGk22wFQnPkToXRIszbM2KhMEDAuWsGdFQOtZI1SLuZU
+                    - checkbox [ref=e2990]
+                    - text: 1.80 to 1.99 GHz
+                - listitem "Popular Shopping Ideas" [ref=e2992]:
+                  - link "Apply 2.00 to 2.49 GHz filter to narrow results" [ref=e2994] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A2057526011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_4&ds=v1%3AFwTZl9SdfQuIxgYpy1KriAPOTar6uDnaCaHGbAUYOls
+                    - checkbox [ref=e2997]
+                    - text: 2.00 to 2.49 GHz
+                - listitem "Popular Shopping Ideas" [ref=e2999]:
+                  - link "Apply 2.50 to 2.99 GHz filter to narrow results" [ref=e3001] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A2057527011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_5&ds=v1%3AB8QtprAwUe%2FFhk4xIIZ8C%2BkbmA9JMdJNdGBxl7fuIHQ
+                    - checkbox [ref=e3004]
+                    - text: 2.50 to 2.99 GHz
+                - listitem "Popular Shopping Ideas" [ref=e3006]:
+                  - link "Apply 3.00 to 3.49 GHz filter to narrow results" [ref=e3008] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A2057528011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_6&ds=v1%3A%2FtIYDzUqYIhsDGoF2jAIAufUxC44UTy1Ou7yRJnSk1g
+                    - checkbox [ref=e3011]
+                    - text: 3.00 to 3.49 GHz
+                - listitem "Popular Shopping Ideas" [ref=e3013]:
+                  - link "Apply 3.50 to 3.99 GHz filter to narrow results" [ref=e3015] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A3492020011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_7&ds=v1%3AP2s9buBiHXAr72U%2FqJbDp5MALlvoeizvERZP5Lu0n7Y
+                    - checkbox [ref=e3018]
+                    - text: 3.50 to 3.99 GHz
+                - listitem "Popular Shopping Ideas" [ref=e3020]:
+                  - link "Apply 4.0 GHz & Above filter to narrow results" [ref=e3022] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660211111%3A3492021011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=2057413011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660211111_8&ds=v1%3A02Fw7Z9iYI%2Be9V9aAN81kwLWQpV8n24X1r8HqJobkg4
+                    - checkbox [ref=e3025]
+                    - text: 4.0 GHz & Above
+            - group "Processor Count" [ref=e3027]:
+              - heading "Processor Count" [level=2] [ref=e3028]
+              - list "Processor Count" [ref=e3029]:
+                - listitem "Popular Shopping Ideas" [ref=e3030]:
+                  - link "Apply 24 filter to narrow results" [ref=e3032] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913659011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_1&ds=v1%3AxosVuenKDVvkP88W8Zl6m%2BTC1gh%2Bx9G0U%2BXGBcq8hZk
+                    - checkbox [ref=e3035]
+                    - text: "24"
+                - listitem "Popular Shopping Ideas" [ref=e3037]:
+                  - link "Apply 20 filter to narrow results" [ref=e3039] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913664011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_2&ds=v1%3AQ1OChy0lA0wgCg6MbWA90yZ%2FQL8m0jE703IngXjUR5E
+                    - checkbox [ref=e3042]
+                    - text: "20"
+                - listitem "Popular Shopping Ideas" [ref=e3044]:
+                  - link "Apply 18 filter to narrow results" [ref=e3046] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913670011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_3&ds=v1%3AyrCu4ijTO2XFL1Z5t6aLKVcY%2Bhu9aJHkvWWal10Kkpk
+                    - checkbox [ref=e3049]
+                    - text: "18"
+                - listitem "Popular Shopping Ideas" [ref=e3051]:
+                  - link "Apply 16 filter to narrow results" [ref=e3053] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913665011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_4&ds=v1%3AB89kjGOQs7HKoy4ru1dc7UuSgZGTcMH9sHywPTdd%2FLs
+                    - checkbox [ref=e3056]
+                    - text: "16"
+                - listitem "Popular Shopping Ideas" [ref=e3058]:
+                  - link "Apply 14 filter to narrow results" [ref=e3060] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913662011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_5&ds=v1%3ATN0ZQWnwYgK5ayUCXODyyD%2BKjzE08S6iRqXioy%2Ftr9U
+                    - checkbox [ref=e3063]
+                    - text: "14"
+                - listitem "Popular Shopping Ideas" [ref=e3065]:
+                  - link "Apply 12 filter to narrow results" [ref=e3067] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913653011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_6&ds=v1%3AcW3%2FsPXyxk4i3Hvc9aTxreyO3I4%2FYa8f0NKJ6e0M88s
+                    - checkbox [ref=e3070]
+                    - text: "12"
+                - listitem "Popular Shopping Ideas" [ref=e3072]:
+                  - link "Apply 10 filter to narrow results" [ref=e3074] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003513532111%3A35913655011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=35913650011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003513532111_7&ds=v1%3AABJ0uioXziC97dYAxoiF74UKSBRS5sKAS8xvbsaAjgk
+                    - checkbox [ref=e3077]
+                    - text: "10"
+                - listitem [ref=e3079]:
+                  - button "See more, Processor Count" [ref=e3082] [cursor=pointer]: See more
+            - group "Hard Drive Type" [ref=e3084]:
+              - heading "Hard Drive Type" [level=2] [ref=e3085]
+              - list "Hard Drive Type" [ref=e3086]:
+                - listitem "Popular Shopping Ideas" [ref=e3087]:
+                  - link "Apply Emmc filter to narrow results" [ref=e3089] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014849667111%3A117987657011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=117987475011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014849667111_1&ds=v1%3A28sTQNI2u1jrPWX1TZig7CM0WKaIHaVtRbTwDmh7QLA
+                    - checkbox [ref=e3092]
+                    - text: Emmc
+                - listitem "Popular Shopping Ideas" [ref=e3094]:
+                  - link "Apply HDD filter to narrow results" [ref=e3096] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014849667111%3A117987658011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=117987475011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014849667111_2&ds=v1%3A5MKgaFCAsb3daHjAJCFXuHUyAgdfwzX14SPhJP%2BfJM4
+                    - checkbox [ref=e3099]
+                    - text: HDD
+                - listitem "Popular Shopping Ideas" [ref=e3101]:
+                  - link "Apply SSD filter to narrow results" [ref=e3103] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014849667111%3A117987656011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=117987475011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014849667111_3&ds=v1%3At7E6set%2BrV1Bjvacxq8Feoqh%2F4L5HesM1EgIRxTHIP0
+                    - checkbox [ref=e3106]
+                    - text: SSD
+            - group "Input" [ref=e3108]:
+              - heading "Input" [level=2] [ref=e3109]
+              - list "Input" [ref=e3110]:
+                - listitem "Popular Shopping Ideas" [ref=e3111]:
+                  - link "Apply Touch Bar filter to narrow results" [ref=e3113] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1002980457111%3A23936568011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23611390011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1002980457111_1&ds=v1%3Acs5A6t8PwowrIORHFQqP4fgmUDW0dQ5wTFeTUsmqn1c
+                    - checkbox [ref=e3116]
+                    - text: Touch Bar
+                - listitem "Popular Shopping Ideas" [ref=e3118]:
+                  - link "Apply Touch Pad filter to narrow results" [ref=e3120] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1002980457111%3A120120115011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23611390011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1002980457111_2&ds=v1%3AWj4MNv%2BKf49zCn0fUnStJkZkTy4EfwUaOubgCfIPv9c
+                    - checkbox [ref=e3123]
+                    - text: Touch Pad
+                - listitem "Popular Shopping Ideas" [ref=e3125]:
+                  - link "Apply Touchscreen filter to narrow results" [ref=e3127] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1002980457111%3A23611396011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23611390011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1002980457111_3&ds=v1%3A6WC9pRKEDsoGKZgwMHiDlSj%2BQTL093FQuGbWZExS3AA
+                    - checkbox [ref=e3130]
+                    - text: Touchscreen
+                - listitem "Popular Shopping Ideas" [ref=e3132]:
+                  - link "Apply Touchscreen with Stylus Support filter to narrow results" [ref=e3134] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1002980457111%3A23611397011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23611390011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1002980457111_4&ds=v1%3A6LsEbL5AHjERQlD6DJop7pxeHmLdSTegY0T5cYlNkMI
+                    - checkbox [ref=e3137]
+                    - text: Touchscreen with Stylus Support
+            - group "Connectivity" [ref=e3139]:
+              - heading "Connectivity" [level=2] [ref=e3140]
+              - list "Connectivity" [ref=e3141]:
+                - listitem "Popular Shopping Ideas" [ref=e3142]:
+                  - link "Apply Wi-Fi filter to narrow results" [ref=e3144] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003127918111%3A55631113011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716455011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003127918111_1&ds=v1%3AW4M80llPetZuHiVBkiJCPhSroPuRSy13UYX52Y05kTU
+                    - checkbox [ref=e3147]
+                    - text: Wi-Fi
+                - listitem "Popular Shopping Ideas" [ref=e3149]:
+                  - link "Apply Bluetooth filter to narrow results" [ref=e3151] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003127918111%3A43216684011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716455011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003127918111_2&ds=v1%3ALJIYP1ZAaqxNRpgKU5kJvJzycAU7hGkfZduD7t2%2FUxg
+                    - checkbox [ref=e3154]
+                    - text: Bluetooth
+                - listitem "Popular Shopping Ideas" [ref=e3156]:
+                  - link "Apply USB filter to narrow results" [ref=e3158] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003127918111%3A23716458011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716455011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003127918111_3&ds=v1%3Abd6zJJge1La%2B1N1CBLZDj9iamReGh1zQZuNbOZbrXLg
+                    - checkbox [ref=e3161]
+                    - text: USB
+                - listitem "Popular Shopping Ideas" [ref=e3163]:
+                  - link "Apply Ethernet filter to narrow results" [ref=e3165] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003127918111%3A23716456011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716455011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003127918111_4&ds=v1%3AN2nnAEEYe8XSDVRH9l3O0XhlZ32FoQMEIpha2Cq9KAE
+                    - checkbox [ref=e3168]
+                    - text: Ethernet
+                - listitem "Popular Shopping Ideas" [ref=e3170]:
+                  - link "Apply HDMI filter to narrow results" [ref=e3172] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003127918111%3A23716457011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716455011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003127918111_5&ds=v1%3AfOJnH6ahESM54iTbgZwqO5Z75QGkgKrbE7BHngkndIA
+                    - checkbox [ref=e3175]
+                    - text: HDMI
+            - group "Wireless Type" [ref=e3177]:
+              - heading "Wireless Type" [level=2] [ref=e3178]
+              - list "Wireless Type" [ref=e3179]:
+                - listitem "Popular Shopping Ideas" [ref=e3180]:
+                  - link "Apply Bluetooth filter to narrow results" [ref=e3182] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001273177111%3A23447648011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23447637011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001273177111_1&ds=v1%3Awa8tdp2jYsZYEQ8hPyTrQGMkCSfsVIB7LHc6zodLGbk
+                    - checkbox [ref=e3185]
+                    - text: Bluetooth
+                - listitem "Popular Shopping Ideas" [ref=e3187]:
+                  - link "Apply NFC filter to narrow results" [ref=e3189] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001273177111%3A23490147011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23447637011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001273177111_2&ds=v1%3AG4SOvBtX2xmDrYHUQ9XMqaZOUAZo%2BCcCCzUmbl5getM
+                    - checkbox [ref=e3192]
+                    - text: NFC
+                - listitem "Popular Shopping Ideas" [ref=e3194]:
+                  - link "Apply Wi-Fi filter to narrow results" [ref=e3196] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001273177111%3A23447647011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23447637011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001273177111_3&ds=v1%3AAKd8CYUqjtCMKHOTlYgcvgk49fBllZCkn%2FFQMwC8g%2F8
+                    - checkbox [ref=e3199]
+                    - text: Wi-Fi
+            - group "Special Features" [ref=e3201]:
+              - heading "Special Features" [level=2] [ref=e3202]
+              - list "Special Features" [ref=e3203]:
+                - listitem "Popular Shopping Ideas" [ref=e3204]:
+                  - link "Apply Backlit Keyboard filter to narrow results" [ref=e3206] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487180011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_1&ds=v1%3AsODhj3%2F4R97TooxEH6e%2Brss4bvCSqxnvDWwUdWEZZ00
+                    - checkbox [ref=e3209]
+                    - text: Backlit Keyboard
+                - listitem "Popular Shopping Ideas" [ref=e3211]:
+                  - link "Apply HD Audio filter to narrow results" [ref=e3213] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487178011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_2&ds=v1%3Aw9KTvh1UeGO7%2Fd5HoIlxiVV2UfK62i5hutgNkNVdbRI
+                    - checkbox [ref=e3216]
+                    - text: HD Audio
+                - listitem "Popular Shopping Ideas" [ref=e3218]:
+                  - link "Apply Numeric Keypad filter to narrow results" [ref=e3220] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487182011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_3&ds=v1%3A9x%2B236GKZJ%2FT9k6dnoNgDl6TfWmtRULMDheJDQDwciA
+                    - checkbox [ref=e3223]
+                    - text: Numeric Keypad
+                - listitem "Popular Shopping Ideas" [ref=e3225]:
+                  - link "Apply Anti Glare Coating filter to narrow results" [ref=e3227] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487169011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_4&ds=v1%3APaE59VRgJa3dqP46UONYWDsLmW0Hz%2Buhs8T8WZmD7F4
+                    - checkbox [ref=e3230]
+                    - text: Anti Glare Coating
+                - listitem "Popular Shopping Ideas" [ref=e3232]:
+                  - link "Apply Fingerprint Reader filter to narrow results" [ref=e3234] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487170011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_5&ds=v1%3Adj%2FrYLy%2B5n0%2BY0XpK4VWfignKN6aFZ6V6cWs0CeBgFc
+                    - checkbox [ref=e3237]
+                    - text: Fingerprint Reader
+                - listitem "Popular Shopping Ideas" [ref=e3239]:
+                  - link "Apply Memory Card Slot filter to narrow results" [ref=e3241] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487172011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_6&ds=v1%3AekS%2FTorXGFiMaaVdghvt9CdjSBIOEG89wUfFgEmORHc
+                    - checkbox [ref=e3244]
+                    - text: Memory Card Slot
+                - listitem "Popular Shopping Ideas" [ref=e3246]:
+                  - link "Apply Spill Resistant filter to narrow results" [ref=e3248] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101013586527111%3A75487174011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=75487167011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101013586527111_7&ds=v1%3A8poeZfar9x6wVgEJYA8OX03XGT8pyv1l08itIQ5oDUo
+                    - checkbox [ref=e3251]
+                    - text: Spill Resistant
+                - listitem [ref=e3253]:
+                  - button "See more, Special Features" [ref=e3256] [cursor=pointer]: See more
+            - group "Display Resolution" [ref=e3258]:
+              - heading "Display Resolution" [level=2] [ref=e3259]
+              - list "Display Resolution" [ref=e3260]:
+                - listitem "Popular Shopping Ideas" [ref=e3261]:
+                  - link "Apply 1080i filter to narrow results" [ref=e3263] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003409261111%3A24044947011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=24044690011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003409261111_1&ds=v1%3AyAUAmSz6MU4NwDSQ1gqp3fWrIQxVlRepiVIUt2Yo3vE
+                    - checkbox [ref=e3266]
+                    - text: 1080i
+                - listitem "Popular Shopping Ideas" [ref=e3268]:
+                  - link "Apply 1080p filter to narrow results" [ref=e3270] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003409261111%3A24044950011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=24044690011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003409261111_2&ds=v1%3AUue53Lu0Yedm30sX639T8%2Fmq8evk9xz8yVMdf3Bv9sc
+                    - checkbox [ref=e3273]
+                    - text: 1080p
+                - listitem "Popular Shopping Ideas" [ref=e3275]:
+                  - link "Apply 4K filter to narrow results" [ref=e3277] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003409261111%3A24044944011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=24044690011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003409261111_3&ds=v1%3AYMYXJr62XdOVbaWpwE2tw83n0L8Fxg6skO2MhY1U56M
+                    - checkbox [ref=e3280]
+                    - text: 4K
+                - listitem "Popular Shopping Ideas" [ref=e3282]:
+                  - link "Apply 720p filter to narrow results" [ref=e3284] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003409261111%3A24044945011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=24044690011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003409261111_4&ds=v1%3AsrHp5%2FgbbIDSfg%2FyfBFxVp%2BDtdf9Y2b6xXhQhZlmRsE
+                    - checkbox [ref=e3287]
+                    - text: 720p
+            - group "Graphics Memory" [ref=e3289]:
+              - heading "Graphics Memory" [level=2] [ref=e3290]
+              - list "Graphics Memory" [ref=e3291]:
+                - listitem "Popular Shopping Ideas" [ref=e3292]:
+                  - link "Apply 8 GB & Above filter to narrow results" [ref=e3294] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119464111%3A23716054011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716049011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119464111_1&ds=v1%3Az71SnN3kYIGSksd%2BfzxXXMvoy8IDB1d6XC8PlwpXcHs
+                    - checkbox [ref=e3297]
+                    - text: 8 GB & Above
+                - listitem "Popular Shopping Ideas" [ref=e3299]:
+                  - link "Apply 6 to 7 GB filter to narrow results" [ref=e3301] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119464111%3A23716055011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716049011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119464111_2&ds=v1%3A9qUg5H2z9SZVfOSWwclPnmaF02pHeM51JHrFmFjnHpI
+                    - checkbox [ref=e3304]
+                    - text: 6 to 7 GB
+                - listitem "Popular Shopping Ideas" [ref=e3306]:
+                  - link "Apply 4 to 5 GB filter to narrow results" [ref=e3308] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119464111%3A23716053011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716049011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119464111_3&ds=v1%3Aunh9dd1bX0OuOzQIyp3v3VtH0wg%2F2oyGgIIvN3HBDF8
+                    - checkbox [ref=e3311]
+                    - text: 4 to 5 GB
+                - listitem "Popular Shopping Ideas" [ref=e3313]:
+                  - link "Apply 2 to 3 GB filter to narrow results" [ref=e3315] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119464111%3A23716052011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716049011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119464111_4&ds=v1%3AcmrhnwfeNd9Z4LlpPKI9q6aJRriqC5jpd7%2B6kNKyEtg
+                    - checkbox [ref=e3318]
+                    - text: 2 to 3 GB
+                - listitem "Popular Shopping Ideas" [ref=e3320]:
+                  - link "Apply Up to 1 GB filter to narrow results" [ref=e3322] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119464111%3A23716051011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23716049011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119464111_5&ds=v1%3A%2BfUQhnK1sI%2Ba359mZl37k2YPKragfLKRxN1E1X%2B5%2Bdw
+                    - checkbox [ref=e3325]
+                    - text: Up to 1 GB
+            - group "RAM Technology" [ref=e3327]:
+              - heading "RAM Technology" [level=2] [ref=e3328]
+              - list "RAM Technology" [ref=e3329]:
+                - listitem "Popular Shopping Ideas" [ref=e3330]:
+                  - link "Apply DDR2 filter to narrow results" [ref=e3332] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703232011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_1&ds=v1%3AmLYrblyC5%2Fqork2wUrK9ztRnL157gyEFULjtb7Rc4ug
+                    - checkbox [ref=e3335]
+                    - text: DDR2
+                - listitem "Popular Shopping Ideas" [ref=e3337]:
+                  - link "Apply DDR3 filter to narrow results" [ref=e3339] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703227011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_2&ds=v1%3AXnolhC7PsGlDbDhTzA2pmgv8PuyiEizI6%2FEnf4ivBcA
+                    - checkbox [ref=e3342]
+                    - text: DDR3
+                - listitem "Popular Shopping Ideas" [ref=e3344]:
+                  - link "Apply DDR4 filter to narrow results" [ref=e3346] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703230011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_3&ds=v1%3ADt49ImKRuCDUCpw4x%2FzIQRHCHvwvy9FvxWgbb%2FPnfWg
+                    - checkbox [ref=e3349]
+                    - text: DDR4
+                - listitem "Popular Shopping Ideas" [ref=e3351]:
+                  - link "Apply DDR5 filter to narrow results" [ref=e3353] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703231011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_4&ds=v1%3APfI10PbsohGypMdq1EUz9Smncq2rXTPfrsB6ZrcL0C0
+                    - checkbox [ref=e3356]
+                    - text: DDR5
+                - listitem "Popular Shopping Ideas" [ref=e3358]:
+                  - link "Apply LPDDR3 filter to narrow results" [ref=e3360] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703229011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_5&ds=v1%3AHh6z0uuzEAxpxUDpyzT5D7NofvKP%2FNC8wygbNY3YQMs
+                    - checkbox [ref=e3363]
+                    - text: LPDDR3
+                - listitem "Popular Shopping Ideas" [ref=e3365]:
+                  - link "Apply LPDDR4 filter to narrow results" [ref=e3367] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703228011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_6&ds=v1%3A7w0IAMJHI4qZF%2FXCstsbwtoI6V6QiUnNH8GMkcCmY8A
+                    - checkbox [ref=e3370]
+                    - text: LPDDR4
+                - listitem "Popular Shopping Ideas" [ref=e3372]:
+                  - link "Apply LPDDR4X filter to narrow results" [ref=e3374] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23703226011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_7&ds=v1%3A9J9BDo5j%2BMW%2BIVJgNY%2Bf0jE5WHsSqsXqhrhahKOMj5o
+                    - checkbox [ref=e3377]
+                    - text: LPDDR4X
+                - listitem "Popular Shopping Ideas" [ref=e3379]:
+                  - link "Apply LPDDR5 filter to narrow results" [ref=e3381] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003099804111%3A23936569011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23703215011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003099804111_8&ds=v1%3AeYxyb%2BHT12axfJxMmuottnBckoRdIRTmMe4llyvdQTQ
+                    - checkbox [ref=e3384]
+                    - text: LPDDR5
+            - group "Weight" [ref=e3386]:
+              - heading "Weight" [level=2] [ref=e3387]
+              - list "Weight" [ref=e3388]:
+                - listitem "Popular Shopping Ideas" [ref=e3389]:
+                  - link "Apply Up to 3 Pounds filter to narrow results" [ref=e3391] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A9521903011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_1&ds=v1%3AwkpM0ADFt6fz0H7EVcROAN81dusv%2FnQo5bp2yOoXQrQ
+                    - checkbox [ref=e3394]
+                    - text: Up to 3 Pounds
+                - listitem "Popular Shopping Ideas" [ref=e3396]:
+                  - link "Apply 3 to 3.9 Pounds filter to narrow results" [ref=e3398] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A13580795011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_2&ds=v1%3A4Km99y5XSMRdQkW5kqe%2Fgk23346xNxoI6hXvximVMmk
+                    - checkbox [ref=e3401]
+                    - text: 3 to 3.9 Pounds
+                - listitem "Popular Shopping Ideas" [ref=e3403]:
+                  - link "Apply 4 to 4.9 Pounds filter to narrow results" [ref=e3405] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A13580796011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_3&ds=v1%3AdS8jRrfmWc2m8soOqMoPI6B3OtKfECbDYUzQGh2xJFk
+                    - checkbox [ref=e3408]
+                    - text: 4 to 4.9 Pounds
+                - listitem "Popular Shopping Ideas" [ref=e3410]:
+                  - link "Apply 5 to 5.9 Pounds filter to narrow results" [ref=e3412] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A13580797011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_4&ds=v1%3ArK6x6zB1wxfZkOHRjeX8Kri4vEpFiMhx4QuFg1NOBT4
+                    - checkbox [ref=e3415]
+                    - text: 5 to 5.9 Pounds
+                - listitem "Popular Shopping Ideas" [ref=e3417]:
+                  - link "Apply 6 to 6.9 Pounds filter to narrow results" [ref=e3419] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A13580798011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_5&ds=v1%3A9ue6podfi%2BONcdpYg0j4KwNJfoBgQxo4BR7K%2BE32rtI
+                    - checkbox [ref=e3422]
+                    - text: 6 to 6.9 Pounds
+                - listitem "Popular Shopping Ideas" [ref=e3424]:
+                  - link "Apply 7 to 7.9 Pounds filter to narrow results" [ref=e3426] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A13580799011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_6&ds=v1%3A%2FMOwOYbIl7xtWD6wJOkBeJRP%2B6slV0S0kFCqmlp5lBE
+                    - checkbox [ref=e3429]
+                    - text: 7 to 7.9 Pounds
+                - listitem "Popular Shopping Ideas" [ref=e3431]:
+                  - link "Apply 8 Pounds & Above filter to narrow results" [ref=e3433] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004196842091%3A9521906011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521902011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004196842091_7&ds=v1%3Ache8mFK7B1BGVEgrlqz97dOHtQGSksGBgzxNZHM1i1Y
+                    - checkbox [ref=e3436]
+                    - text: 8 Pounds & Above
+            - group "Battery Life" [ref=e3438]:
+              - heading "Battery Life" [level=2] [ref=e3439]
+              - list "Battery Life" [ref=e3440]:
+                - listitem "Popular Shopping Ideas" [ref=e3441]:
+                  - link "Apply Up to 6.9 h filter to narrow results" [ref=e3443] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_browse-bin%3A211748474011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=211748470011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3ASbRYvzbEBfcVftlcLoaQBg6GaekygWkTvZorpNAcbGQ
+                    - checkbox [ref=e3446]
+                    - text: Up to 6.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3448]:
+                  - link "Apply 7 to 7.9 h filter to narrow results" [ref=e3450] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_browse-bin%3A211748473011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=211748470011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_browse-bin_2&ds=v1%3AjgMTY8Lnks7aQzTUpoQ3o0Uo4%2FYrbPXaDMHCkueNeec
+                    - checkbox [ref=e3453]
+                    - text: 7 to 7.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3455]:
+                  - link "Apply 8 to 8.9 h filter to narrow results" [ref=e3457] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_browse-bin%3A211748472011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=211748470011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_browse-bin_3&ds=v1%3AJpG%2FqY6AdkBSD%2BG988tm7GEavLD0u%2BZjl2%2BggBfWcTI
+                    - checkbox [ref=e3460]
+                    - text: 8 to 8.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3462]:
+                  - link "Apply 9 h & above filter to narrow results" [ref=e3464] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_feature_browse-bin%3A211748471011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=211748470011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_feature_browse-bin_4&ds=v1%3AHwa268Qi7%2Fv3r%2FSWoufJehfhu3jbM7b1t3WoEHxIBN4
+                    - checkbox [ref=e3467]
+                    - text: 9 h & above
+            - group "USB 3.0 Ports" [ref=e3469]:
+              - heading "USB 3.0 Ports" [level=2] [ref=e3470]
+              - list "USB 3.0 Ports" [ref=e3471]:
+                - listitem "Popular Shopping Ideas" [ref=e3472]:
+                  - link "Apply 5 or More filter to narrow results" [ref=e3474] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662272111%3A9521917011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521911011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662272111_1&ds=v1%3Ah%2FSWighUqKx2i2398waPsKfB7HD%2FEEpdWiDS2PSO4i0
+                    - checkbox [ref=e3477]
+                    - text: 5 or More
+                - listitem "Popular Shopping Ideas" [ref=e3479]:
+                  - link "Apply 4 filter to narrow results" [ref=e3481] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662272111%3A9521916011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521911011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662272111_2&ds=v1%3AFDnLfvoKtslyK9BzXhg572aAlUKt%2FxxOsYQQE6PmeaA
+                    - checkbox [ref=e3484]
+                    - text: "4"
+                - listitem "Popular Shopping Ideas" [ref=e3486]:
+                  - link "Apply 3 filter to narrow results" [ref=e3488] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662272111%3A9521915011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521911011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662272111_3&ds=v1%3AtBziJkK6EU8r7TuwLb389DY91F%2FMux6L4pDgnRd5e7w
+                    - checkbox [ref=e3491]
+                    - text: "3"
+                - listitem "Popular Shopping Ideas" [ref=e3493]:
+                  - link "Apply 2 filter to narrow results" [ref=e3495] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662272111%3A9521914011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521911011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662272111_4&ds=v1%3Ai6N9zmV%2FTF5hS5YMe2poNPfWY7XH44s0%2BhxP6fKgsb4
+                    - checkbox [ref=e3498]
+                    - text: "2"
+                - listitem "Popular Shopping Ideas" [ref=e3500]:
+                  - link "Apply 1 filter to narrow results" [ref=e3502] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662272111%3A9521913011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521911011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662272111_5&ds=v1%3A8Wcej0s39wsBcssXCUKmo2QgPpysWDQE8It8xU9XNFY
+                    - checkbox [ref=e3505]
+                    - text: "1"
+                - listitem "Popular Shopping Ideas" [ref=e3507]:
+                  - link "Apply None filter to narrow results" [ref=e3509] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662272111%3A9521912011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521911011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662272111_6&ds=v1%3ADNCLDtn94%2F014TFmV7slUrNNn7fO249MpuJZvIq%2F%2Fh4
+                    - checkbox [ref=e3512]
+                    - text: None
+            - group "Display Type" [ref=e3514]:
+              - heading "Display Type" [level=2] [ref=e3515]
+              - list "Display Type" [ref=e3516]:
+                - listitem "Popular Shopping Ideas" [ref=e3517]:
+                  - link "Apply Amoled filter to narrow results" [ref=e3519] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003210526111%3A23760602011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23760600011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003210526111_1&ds=v1%3AeewkIYNCJBLGl%2B2Lvt8O6ocggGDTnwTvvXdCab9jmz8
+                    - checkbox [ref=e3522]
+                    - text: Amoled
+                - listitem "Popular Shopping Ideas" [ref=e3524]:
+                  - link "Apply LCD filter to narrow results" [ref=e3526] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003210526111%3A23760603011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23760600011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003210526111_2&ds=v1%3An%2BSDluz8EpEP4EFkh3wcRcvPc01J5TJ4Ofuwzll%2FfcA
+                    - checkbox [ref=e3529]
+                    - text: LCD
+                - listitem "Popular Shopping Ideas" [ref=e3531]:
+                  - link "Apply LED filter to narrow results" [ref=e3533] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003210526111%3A23760605011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23760600011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003210526111_3&ds=v1%3AJ6Tq3X%2BiaF%2FF24vp%2BfKyokmkAfWq0UjNfZl5zBgBp%2FI
+                    - checkbox [ref=e3536]
+                    - text: LED
+                - listitem "Popular Shopping Ideas" [ref=e3538]:
+                  - link "Apply OLED filter to narrow results" [ref=e3540] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003210526111%3A23760604011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23760600011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003210526111_4&ds=v1%3AwmLeN0OLOKOY3icFxVaUZyoGGgeecR7BeZ2fXTHpuY0
+                    - checkbox [ref=e3543]
+                    - text: OLED
+            - group "Hardware Interface" [ref=e3545]:
+              - heading "Hardware Interface" [level=2] [ref=e3546]
+              - list "Hardware Interface" [ref=e3547]:
+                - listitem "Popular Shopping Ideas" [ref=e3548]:
+                  - link "Apply USB filter to narrow results" [ref=e3550] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A23721164011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_1&ds=v1%3A6%2B%2BDiXhqeZWtJyHNAsyoROOM4ql7zJ07j2YzQye6%2FbA
+                    - checkbox [ref=e3553]
+                    - text: USB
+                - listitem "Popular Shopping Ideas" [ref=e3555]:
+                  - link "Apply HDMI filter to narrow results" [ref=e3557] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A23721169011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_2&ds=v1%3Ai%2Bk0jfdiFHIe5m4FC9aXuArr9iPnNIosJ5kb9DBT0Vg
+                    - checkbox [ref=e3560]
+                    - text: HDMI
+                - listitem "Popular Shopping Ideas" [ref=e3562]:
+                  - link "Apply Bluetooth filter to narrow results" [ref=e3564] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A24089308011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_3&ds=v1%3AtlLx2Fm%2FYkWgSvyanKKbWFVBYxN0kEnu60ZJT%2BBVybE
+                    - checkbox [ref=e3567]
+                    - text: Bluetooth
+                - listitem "Popular Shopping Ideas" [ref=e3569]:
+                  - link "Apply 3.5mm Audio filter to narrow results" [ref=e3571] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A24089354011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_4&ds=v1%3ALJHy3lOidGVn59x8lY4Z%2FwfRJ1XDtXB4GTcF4rYOYis
+                    - checkbox [ref=e3574]
+                    - text: 3.5mm Audio
+                - listitem "Popular Shopping Ideas" [ref=e3576]:
+                  - link "Apply 802.11 ac/b/g/n filter to narrow results" [ref=e3578] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A24089309011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_5&ds=v1%3AIp6FZnF5toYOqosa4y5OV3RpVMTRSOKGwklxKbFalR8
+                    - checkbox [ref=e3581]
+                    - text: 802.11 ac/b/g/n
+                - listitem "Popular Shopping Ideas" [ref=e3583]:
+                  - link "Apply Bluetooth 4.0 filter to narrow results" [ref=e3585] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A24089357011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_6&ds=v1%3ATqTfpdcbMzMboRWLpP8UwOMamzEj5BKIb2qJcBy255k
+                    - checkbox [ref=e3588]
+                    - text: Bluetooth 4.0
+                - listitem "Popular Shopping Ideas" [ref=e3590]:
+                  - link "Apply Bluetooth 5 filter to narrow results" [ref=e3592] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1003119736111%3A24089310011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=23721163011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1003119736111_7&ds=v1%3A%2Fa4oQ3I4tKMwse9Tt%2Fb7D2TCbeGXDIYzY4FII9yEPLo
+                    - checkbox [ref=e3595]
+                    - text: Bluetooth 5
+                - listitem [ref=e3597]:
+                  - button "See more, Hardware Interface" [ref=e3600] [cursor=pointer]: See more
+            - group "Flash Size" [ref=e3602]:
+              - heading "Flash Size" [level=2] [ref=e3603]
+              - list "Flash Size" [ref=e3604]:
+                - listitem "Popular Shopping Ideas" [ref=e3605]:
+                  - link "Apply 500 GB & Above filter to narrow results" [ref=e3607] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A9659363011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_1&ds=v1%3AGM0ixrxZEPLGC1sAZCj%2Fay5n6KHd%2BKAVxKKRupI5zkw
+                    - checkbox [ref=e3610]
+                    - text: 500 GB & Above
+                - listitem "Popular Shopping Ideas" [ref=e3612]:
+                  - link "Apply 250 to 499 GB filter to narrow results" [ref=e3614] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A9659361011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_2&ds=v1%3A3%2BLSVOGMpzcHZqr5eNlB%2FuTF2AJwHXNvvVz9m7DyITs
+                    - checkbox [ref=e3617]
+                    - text: 250 to 499 GB
+                - listitem "Popular Shopping Ideas" [ref=e3619]:
+                  - link "Apply 120 to 249 GB filter to narrow results" [ref=e3621] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A9659360011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_3&ds=v1%3Aq%2F9g5bSJdUveFE%2BCXaBMztY7P9Iq10iUkf4ssUlnlR4
+                    - checkbox [ref=e3624]
+                    - text: 120 to 249 GB
+                - listitem "Popular Shopping Ideas" [ref=e3626]:
+                  - link "Apply 64 to 119 GB filter to narrow results" [ref=e3628] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A3071910011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_4&ds=v1%3AwAFXGVTKi%2BgjdU9J4sJTZF%2BUjys2OF1my9W%2BQD7i5Jw
+                    - checkbox [ref=e3631]
+                    - text: 64 to 119 GB
+                - listitem "Popular Shopping Ideas" [ref=e3633]:
+                  - link "Apply 32 to 63 GB filter to narrow results" [ref=e3635] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A3071909011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_5&ds=v1%3AhDo3Ar7fPNTywEIADbYHwlmf8QBDGSNhlxi4CCGQFv0
+                    - checkbox [ref=e3638]
+                    - text: 32 to 63 GB
+                - listitem "Popular Shopping Ideas" [ref=e3640]:
+                  - link "Apply 17 to 31 GB filter to narrow results" [ref=e3642] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A3071908011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_6&ds=v1%3AIzBhrxoNOfg%2BQZLup4v6GCzKdAs%2F05M%2Fdg9MfbXBH48
+                    - checkbox [ref=e3645]
+                    - text: 17 to 31 GB
+                - listitem "Popular Shopping Ideas" [ref=e3647]:
+                  - link "Apply 8 to 16 GB filter to narrow results" [ref=e3649] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A3071912011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_7&ds=v1%3AladsMUUZIEhh9zwkwbPE80JIkjUCF9M24yjuto7R%2BRA
+                    - checkbox [ref=e3652]
+                    - text: 8 to 16 GB
+                - listitem "Popular Shopping Ideas" [ref=e3654]:
+                  - link "Apply 7 GB & Under filter to narrow results" [ref=e3656] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001660891111%3A3071911011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=3071907011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001660891111_8&ds=v1%3AeQYocMdakNAm8z4wyRpimiZzxnwG6lMuMTuG165gHDk
+                    - checkbox [ref=e3659]
+                    - text: 7 GB & Under
+            - group "Top Brands" [ref=e3661]:
+              - heading "Top Brands" [level=2] [ref=e3662]
+              - list "Top Brands" [ref=e3663]:
+                - listitem "Popular Shopping Ideas" [ref=e3664]:
+                  - link "Apply Top Brands filter to narrow results" [ref=e3666] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014971069111%3A119653281011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=119653280011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014971069111_1&ds=v1%3AbGNzPs8p2THO%2FlCwAEoA%2BZakmU43whL1Y7T01m%2BKCe0
+                    - checkbox [ref=e3669]
+                    - text: Top Brands
+            - group "Video Output" [ref=e3671]:
+              - heading "Video Output" [level=2] [ref=e3672]
+              - list "Video Output" [ref=e3673]:
+                - listitem "Popular Shopping Ideas" [ref=e3674]:
+                  - link "Apply HDMI filter to narrow results" [ref=e3676] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662314111%3A9521936011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521930011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662314111_1&ds=v1%3A4SAw%2Bbv7yoVK4ivuqik85VJ3vQAcXHT39CxYmElHoaA
+                    - checkbox [ref=e3679]
+                    - text: HDMI
+                - listitem "Popular Shopping Ideas" [ref=e3681]:
+                  - link "Apply DisplayPort filter to narrow results" [ref=e3683] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662314111%3A9521937011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521930011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662314111_2&ds=v1%3ATydVngXI06tsaOPybPYonEMCwiXt5XfmjYSEv%2Bxt1zk
+                    - checkbox [ref=e3686]
+                    - text: DisplayPort
+                - listitem "Popular Shopping Ideas" [ref=e3688]:
+                  - link "Apply VGA filter to narrow results" [ref=e3690] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1001662314111%3A9521931011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=9521930011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1001662314111_3&ds=v1%3AnOBAM1uWSscORoXGW9j0QhPksHZ6GTPSX1Bqj0plYtQ
+                    - checkbox [ref=e3693]
+                    - text: VGA
+            - group "Seller" [ref=e3695]:
+              - heading "Seller" [level=2] [ref=e3696]
+              - list "Seller" [ref=e3697]:
+                - listitem "Popular Shopping Ideas" [ref=e3698]:
+                  - link "Apply GreatPriceTech (Expedite Shipping) (Record S/N) filter to narrow results" [ref=e3700] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_6%3AA3MUHYPYV02A8E&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=303116011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_6_1&ds=v1%3A%2FFHMTGmsmGn7Lf8gZPJw46M2%2BtYdNjNAGTd%2FTm61Shw
+                    - checkbox [ref=e3703]
+                    - text: GreatPriceTech (Expedite Shipping) (Record S/N)
+                - listitem "Popular Shopping Ideas" [ref=e3705]:
+                  - link "Apply Home Star For you filter to narrow results" [ref=e3707] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_6%3AA3LVALC0I30N6I&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=303116011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_6_2&ds=v1%3A2cTgR0jqJCbs4%2FApew%2BLds5wg0BBVsybnW%2FXge1Xy9A
+                    - checkbox [ref=e3710]
+                    - text: Home Star For you
+                - listitem [ref=e3712]:
+                  - button "See more, Seller" [ref=e3715] [cursor=pointer]: See more
+            - group "Wi-Fi Generation" [ref=e3717]:
+              - heading "Wi-Fi Generation" [level=2] [ref=e3718]
+              - list "Wi-Fi Generation" [ref=e3719]:
+                - listitem "Popular Shopping Ideas" [ref=e3720]:
+                  - link "Apply Wi-Fi 6 filter to narrow results" [ref=e3722] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014910595111%3A118961523011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=118961516011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014910595111_1&ds=v1%3AYtcdmJSpWO1UXMbrhQe82ogATZ9hedwCyvwBgMkuhWM
+                    - checkbox [ref=e3725]
+                    - text: Wi-Fi 6
+                - listitem "Popular Shopping Ideas" [ref=e3727]:
+                  - link "Apply Wi-Fi 5 filter to narrow results" [ref=e3729] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014910595111%3A118961522011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=118961516011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014910595111_2&ds=v1%3AP%2F0hEuSuQ%2FkmjBA9oNy4vaxpipB%2FDRvAfj%2FsuhgsJdw
+                    - checkbox [ref=e3732]
+                    - text: Wi-Fi 5
+                - listitem "Popular Shopping Ideas" [ref=e3734]:
+                  - link "Apply Wi-Fi 7 filter to narrow results" [ref=e3736] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014910595111%3A118961519011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=118961516011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014910595111_3&ds=v1%3ApnMmAlx3oErficI6EtVQ21ayCA%2Bm5EJ9mLjn%2FFR6Gjk
+                    - checkbox [ref=e3739]
+                    - text: Wi-Fi 7
+                - listitem "Popular Shopping Ideas" [ref=e3741]:
+                  - link "Apply Wi-Fi 4 filter to narrow results" [ref=e3743] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014910595111%3A118961517011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=118961516011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014910595111_4&ds=v1%3AU9aLc0h4ucyQuPQv0upZbf06Z1tla5c0ULo7YlqkpwY
+                    - checkbox [ref=e3746]
+                    - text: Wi-Fi 4
+                - listitem "Popular Shopping Ideas" [ref=e3748]:
+                  - link "Apply Wi-Fi 6E filter to narrow results" [ref=e3750] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101014910595111%3A118961520011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=118961516011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101014910595111_5&ds=v1%3AhxdVEYlc%2BC7k6xstEXdifj8oP%2Fxln%2FfA2oOo%2BMfnQSY
+                    - checkbox [ref=e3753]
+                    - text: Wi-Fi 6E
+            - group "Number of Cells" [ref=e3755]:
+              - heading "Number of Cells" [level=2] [ref=e3756]
+              - list "Number of Cells" [ref=e3757]:
+                - listitem "Popular Shopping Ideas" [ref=e3758]:
+                  - link "Apply 1 filter to narrow results" [ref=e3760] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496726111%3A122269873011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269795011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496726111_1&ds=v1%3AtxpEo3CU2sqwr%2B6%2BbdfUdqR%2B5lrsHvMgeQnw5h6Y3nA
+                    - checkbox [ref=e3763]
+                    - text: "1"
+                - listitem "Popular Shopping Ideas" [ref=e3765]:
+                  - link "Apply 2 filter to narrow results" [ref=e3767] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496726111%3A122269874011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269795011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496726111_2&ds=v1%3A%2FzGak2tRnsMB9AKFbxd4jfXDfJuFJ7UxhSzlmCntPa8
+                    - checkbox [ref=e3770]
+                    - text: "2"
+                - listitem "Popular Shopping Ideas" [ref=e3772]:
+                  - link "Apply 3 filter to narrow results" [ref=e3774] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496726111%3A122269875011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269795011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496726111_3&ds=v1%3AOg8S8UZ6%2Bf95DgMnLHRz%2FB9TxUMZjyTgFYzKsx8radg
+                    - checkbox [ref=e3777]
+                    - text: "3"
+                - listitem "Popular Shopping Ideas" [ref=e3779]:
+                  - link "Apply 4 & above filter to narrow results" [ref=e3781] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496726111%3A122269876011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269795011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496726111_4&ds=v1%3A2ZVF3NQ3%2FOEYD9t8pLgNhtKJPsUjYr01Uy1BDzyocvE
+                    - checkbox [ref=e3784]
+                    - text: 4 & above
+            - group "Memory Clock Speed" [ref=e3786]:
+              - heading "Memory Clock Speed" [level=2] [ref=e3787]
+              - list "Memory Clock Speed" [ref=e3788]:
+                - listitem "Popular Shopping Ideas" [ref=e3789]:
+                  - link "Apply Up to 2.9 GHz filter to narrow results" [ref=e3791] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496428111%3A122268330011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268190011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496428111_1&ds=v1%3A1LtQSfZ%2FtuL8T1PRd2ZbeHu2IMXoVxxkH4uRxZH%2FPNY
+                    - checkbox [ref=e3794]
+                    - text: Up to 2.9 GHz
+                - listitem "Popular Shopping Ideas" [ref=e3796]:
+                  - link "Apply 3 to 3.9 GHz filter to narrow results" [ref=e3798] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496428111%3A122268331011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268190011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496428111_2&ds=v1%3AxPp4AFuN5o1NJP1iz71PJSwi49SQ3kwgE5%2BehCnS4hc
+                    - checkbox [ref=e3801]
+                    - text: 3 to 3.9 GHz
+                - listitem "Popular Shopping Ideas" [ref=e3803]:
+                  - link "Apply 4 to 4.9 GHz filter to narrow results" [ref=e3805] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496428111%3A122268333011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268190011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496428111_3&ds=v1%3APTXeDH5ykIWKBUFPowsTN8xPZgdQ22Yi%2FUhwERl2WRA
+                    - checkbox [ref=e3808]
+                    - text: 4 to 4.9 GHz
+                - listitem "Popular Shopping Ideas" [ref=e3810]:
+                  - link "Apply 5 GHz & above filter to narrow results" [ref=e3812] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496428111%3A122268332011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268190011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496428111_4&ds=v1%3AE81unfycJJv83Bq%2BKHBbVThm5vx0S8aQsDOraQEBD6g
+                    - checkbox [ref=e3815]
+                    - text: 5 GHz & above
+            - group "Cellular Technology" [ref=e3817]:
+              - heading "Cellular Technology" [level=2] [ref=e3818]
+              - list "Cellular Technology" [ref=e3819]:
+                - listitem "Popular Shopping Ideas" [ref=e3820]:
+                  - link "Apply 4G filter to narrow results" [ref=e3822] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016791036111%3A210917527011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=210917523011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016791036111_1&ds=v1%3Aijz9cVWYPCE9YPt8Ne8VD%2BTrzj7Ms3FY%2F7bUJs8QwPw
+                    - checkbox [ref=e3825]
+                    - text: 4G
+                - listitem "Popular Shopping Ideas" [ref=e3827]:
+                  - link "Apply 5G filter to narrow results" [ref=e3829] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016791036111%3A210917525011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=210917523011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016791036111_2&ds=v1%3AwLYRQAwxJcDIhmiAGHJi7aHLAQivFn7oEnGmYgp9IV0
+                    - checkbox [ref=e3832]
+                    - text: 5G
+            - group "Purpose" [ref=e3834]:
+              - heading "Purpose" [level=2] [ref=e3835]
+              - list "Purpose" [ref=e3836]:
+                - listitem "Popular Shopping Ideas" [ref=e3837]:
+                  - link "Apply Working filter to narrow results" [ref=e3839] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754153011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_1&ds=v1%3AO5oCmL1uFSG2SHtQDc8jcQAlEQ6d%2FxHj1Yh8lV1UlX4
+                    - checkbox [ref=e3842]
+                    - text: Working
+                - listitem "Popular Shopping Ideas" [ref=e3844]:
+                  - link "Apply Learning filter to narrow results" [ref=e3846] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754156011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_2&ds=v1%3Aot%2BsQSGktLaby%2B5MSOGNLgdyfm0xbBub5tp44Jhy%2BPc
+                    - checkbox [ref=e3849]
+                    - text: Learning
+                - listitem "Popular Shopping Ideas" [ref=e3851]:
+                  - link "Apply Video Conferencing filter to narrow results" [ref=e3853] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754159011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_3&ds=v1%3AWwMxZMzrkf7WmZ%2FhE7pexRhGy4z8Sew6Bb3Lv8gjcAw
+                    - checkbox [ref=e3856]
+                    - text: Video Conferencing
+                - listitem "Popular Shopping Ideas" [ref=e3858]:
+                  - link "Apply Browsing Internet filter to narrow results" [ref=e3860] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754158011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_4&ds=v1%3A5y8xss3rbig2gBrdruhPXjrBnNtexA34XQIo2vMwNOo
+                    - checkbox [ref=e3863]
+                    - text: Browsing Internet
+                - listitem "Popular Shopping Ideas" [ref=e3865]:
+                  - link "Apply Gaming filter to narrow results" [ref=e3867] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754154011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_5&ds=v1%3ALIFt%2FsQI4YsdXTvsH38GySLnJbvS%2BSJc13AevcxP4pc
+                    - checkbox [ref=e3870]
+                    - text: Gaming
+                - listitem "Popular Shopping Ideas" [ref=e3872]:
+                  - link "Apply Music Listening filter to narrow results" [ref=e3874] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754162011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_6&ds=v1%3A%2F%2Furgrt703xQzqO0J8sGDotPb6QTn9SCeGNYGr%2BYa6M
+                    - checkbox [ref=e3877]
+                    - text: Music Listening
+                - listitem "Popular Shopping Ideas" [ref=e3879]:
+                  - link "Apply Photo Editing filter to narrow results" [ref=e3881] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101016745300111%3A207754161011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=207754152011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101016745300111_7&ds=v1%3AX6J2n04IJ4X4A3qkkrOua6JGJbnUj9ZSeQ8uptmfNDU
+                    - checkbox [ref=e3884]
+                    - text: Photo Editing
+                - listitem [ref=e3886]:
+                  - button "See more, Purpose" [ref=e3889] [cursor=pointer]: See more
+            - group "Voltage" [ref=e3891]:
+              - heading "Voltage" [level=2] [ref=e3892]
+              - list "Voltage" [ref=e3893]:
+                - listitem "Popular Shopping Ideas" [ref=e3894]:
+                  - link "Apply Up to 4 V filter to narrow results" [ref=e3896] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495677111%3A122272129011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122272100011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495677111_1&ds=v1%3AoPkMzJGWm2vNeUp1HIwepknzpjaja1DORu8FbaKUt8c
+                    - checkbox [ref=e3899]
+                    - text: Up to 4 V
+                - listitem "Popular Shopping Ideas" [ref=e3901]:
+                  - link "Apply 5 to 14 V filter to narrow results" [ref=e3903] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495677111%3A122272126011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122272100011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495677111_2&ds=v1%3A%2BrMPHS1uhCi03sRIe0Ls8x9XgBxdf7igOAQn957woW0
+                    - checkbox [ref=e3906]
+                    - text: 5 to 14 V
+                - listitem "Popular Shopping Ideas" [ref=e3908]:
+                  - link "Apply 15 to 19 V filter to narrow results" [ref=e3910] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495677111%3A122272127011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122272100011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495677111_3&ds=v1%3AXu1IMBzxlfGvgZWZ3vpzJMLCClLr4nIksTFop1XjBP4
+                    - checkbox [ref=e3913]
+                    - text: 15 to 19 V
+                - listitem "Popular Shopping Ideas" [ref=e3915]:
+                  - link "Apply 20 V & above filter to narrow results" [ref=e3917] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495677111%3A122272128011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122272100011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495677111_4&ds=v1%3Abb%2B5ve1Oe%2BY43U7Hr79fb25L6NSxqSDnVywrIBRaW0Y
+                    - checkbox [ref=e3920]
+                    - text: 20 V & above
+            - group "Cell Composition" [ref=e3922]:
+              - heading "Cell Composition" [level=2] [ref=e3923]
+              - list "Cell Composition" [ref=e3924]:
+                - listitem "Popular Shopping Ideas" [ref=e3925]:
+                  - link "Apply Lithium Ion filter to narrow results" [ref=e3927] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499352111%3A122268378011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268193011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499352111_1&ds=v1%3A2PTS0YLTNfOVl3tN5Brke9JPN71bwasc5SuZedHXNaE
+                    - checkbox [ref=e3930]
+                    - text: Lithium Ion
+                - listitem "Popular Shopping Ideas" [ref=e3932]:
+                  - link "Apply Lithium Polymer filter to narrow results" [ref=e3934] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499352111%3A122268368011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268193011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499352111_2&ds=v1%3Aefr4IIfqzoNGvTYH9QpEMbWl%2FU5sjRXyXQP%2BjlDQvxo
+                    - checkbox [ref=e3937]
+                    - text: Lithium Polymer
+                - listitem "Popular Shopping Ideas" [ref=e3939]:
+                  - link "Apply Other Than Listed filter to narrow results" [ref=e3941] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499352111%3A204067855011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268193011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499352111_3&ds=v1%3AQ8DClAL4Ymvu62eL4BpRWoVKZe%2BUlmU6jDlXeWyl%2BkQ
+                    - checkbox [ref=e3944]
+                    - text: Other Than Listed
+            - group "Average Standby Battery Life" [ref=e3946]:
+              - heading "Average Standby Battery Life" [level=2] [ref=e3947]
+              - list "Average Standby Battery Life" [ref=e3948]:
+                - listitem "Popular Shopping Ideas" [ref=e3949]:
+                  - link "Apply 11 h & above filter to narrow results" [ref=e3951] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499336111%3A122268382011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268194011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499336111_1&ds=v1%3ANc4kScFE8vxtGIdOlYrrW9AdUMeKUYBgUxa%2BawbLVq8
+                    - checkbox [ref=e3954]
+                    - text: 11 h & above
+                - listitem "Popular Shopping Ideas" [ref=e3956]:
+                  - link "Apply 9 to 10.9 h filter to narrow results" [ref=e3958] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499336111%3A122268381011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268194011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499336111_2&ds=v1%3A2KqqrmaMaIWsm2myPEmmDdVPDNJg8pX7HSVRrWyhy0k
+                    - checkbox [ref=e3961]
+                    - text: 9 to 10.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3963]:
+                  - link "Apply 7 to 8.9 h filter to narrow results" [ref=e3965] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499336111%3A122268383011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268194011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499336111_3&ds=v1%3AsygD7XA0hK%2F%2FaNckbC8cEFaKQu7Sot7z%2FYDF4cCrIqI
+                    - checkbox [ref=e3968]
+                    - text: 7 to 8.9 h
+                - listitem "Popular Shopping Ideas" [ref=e3970]:
+                  - link "Apply Up to 6.9 h filter to narrow results" [ref=e3972] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499336111%3A122268384011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268194011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499336111_4&ds=v1%3ALYSOvh0Otyah2on%2F0WYsPupsteE5t%2FlcJXzFYh7AfDs
+                    - checkbox [ref=e3975]
+                    - text: Up to 6.9 h
+            - group "Model Year" [ref=e3977]:
+              - heading "Model Year" [level=2] [ref=e3978]
+              - list "Model Year" [ref=e3979]:
+                - listitem "Popular Shopping Ideas" [ref=e3980]:
+                  - link "Apply Up to 2020 filter to narrow results" [ref=e3982] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496666111%3A122268386011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268195011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496666111_1&ds=v1%3AwSDqY01DBdLXQeKgyJ5WmesHJmFJFQP%2Bqu4%2FALvzL1A
+                    - checkbox [ref=e3985]
+                    - text: Up to 2020
+                - listitem "Popular Shopping Ideas" [ref=e3987]:
+                  - link "Apply 2021 filter to narrow results" [ref=e3989] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496666111%3A122268385011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268195011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496666111_2&ds=v1%3ACj6%2BY7cke4knC78VwtC%2F1UpVyDk%2BwD1Gue1HQKBpbik
+                    - checkbox [ref=e3992]
+                    - text: "2021"
+                - listitem "Popular Shopping Ideas" [ref=e3994]:
+                  - link "Apply 2022 filter to narrow results" [ref=e3996] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496666111%3A122268389011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268195011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496666111_3&ds=v1%3AJyQbBOmq77jUPPFE7m%2FY4ksDlHQv%2BcsykkjNQ0BuBw4
+                    - checkbox [ref=e3999]
+                    - text: "2022"
+                - listitem "Popular Shopping Ideas" [ref=e4001]:
+                  - link "Apply 2023 filter to narrow results" [ref=e4003] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496666111%3A122268388011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268195011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496666111_4&ds=v1%3AtIViObx8Eefid38imeSHMpvZXmYE1Va3D5ZMfSH0WVI
+                    - checkbox [ref=e4006]
+                    - text: "2023"
+                - listitem "Popular Shopping Ideas" [ref=e4008]:
+                  - link "Apply 2024 filter to narrow results" [ref=e4010] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496666111%3A122268387011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268195011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496666111_5&ds=v1%3A%2FecFzv%2B0sVYOOT7m7yaxuhsDxVmGTE69NwqHjTmRCt8
+                    - checkbox [ref=e4013]
+                    - text: "2024"
+            - group "Memory Slots" [ref=e4015]:
+              - heading "Memory Slots" [level=2] [ref=e4016]
+              - list "Memory Slots" [ref=e4017]:
+                - listitem "Popular Shopping Ideas" [ref=e4018]:
+                  - link "Apply 1 filter to narrow results" [ref=e4020] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496484111%3A122269945011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269798011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496484111_1&ds=v1%3A%2BPG7mjdbO1GVK9xuQ5253xTkep7FT%2BgwMJw8RFq664k
+                    - checkbox [ref=e4023]
+                    - text: "1"
+                - listitem "Popular Shopping Ideas" [ref=e4025]:
+                  - link "Apply 2 filter to narrow results" [ref=e4027] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496484111%3A122269935011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269798011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496484111_2&ds=v1%3ALZWXNSwIM8U9jg75cewxF%2BzTp6eui4k4mAHb%2F7RELNw
+                    - checkbox [ref=e4030]
+                    - text: "2"
+                - listitem "Popular Shopping Ideas" [ref=e4032]:
+                  - link "Apply 4 filter to narrow results" [ref=e4034] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496484111%3A122269949011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269798011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496484111_3&ds=v1%3AYARbFJNbYzYfSl%2FFlabfJtYTg1YtkjV7UGMlCBDlLWE
+                    - checkbox [ref=e4037]
+                    - text: "4"
+            - group "Audio Output Type" [ref=e4039]:
+              - heading "Audio Output Type" [level=2] [ref=e4040]
+              - list "Audio Output Type" [ref=e4041]:
+                - listitem "Popular Shopping Ideas" [ref=e4042]:
+                  - link "Apply Headphones filter to narrow results" [ref=e4044] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499305111%3A122268391011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268196011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499305111_1&ds=v1%3AwhkPeIWCcnM0Jk76gXK9jUGM133wjnohz51NMX1HtUw
+                    - checkbox [ref=e4047]
+                    - text: Headphones
+                - listitem "Popular Shopping Ideas" [ref=e4049]:
+                  - link "Apply Speakers filter to narrow results" [ref=e4051] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015499305111%3A122268390011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268196011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015499305111_2&ds=v1%3AVGsiIOKjpNAy9R%2Fdwr3AquSidbd6pTRrNBK40IUb4hs
+                    - checkbox [ref=e4054]
+                    - text: Speakers
+            - group "Sustainability Features" [ref=e4056]:
+              - heading "Sustainability Features" [level=2] [ref=e4057]
+              - list "Sustainability Features" [ref=e4058]:
+                - listitem [ref=e4059]:
+                  - link "Any Feature" [ref=e4061] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_cpf_labels%3A121136630011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=116845681011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_cpf_labels_1&ds=v1%3AQjecJTTuGiLoUuXJdmWGoeZxMpsBXc6mBF4I3nM19m0
+                - listitem [ref=e4062]:
+                  - link "Energy Efficiency" [ref=e4064] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_cpf_labels%3A116845685011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=116845681011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_cpf_labels_2&ds=v1%3AV82stIWA81pYLpiE2GirD4rqpLCfKuCU0Fiw4t5szy0
+                - listitem [ref=e4065]:
+                  - button "See more, Sustainability Features" [ref=e4068] [cursor=pointer]: See more
+            - group "Graphics Card Type" [ref=e4070]:
+              - heading "Graphics Card Type" [level=2] [ref=e4071]
+              - list "Graphics Card Type" [ref=e4072]:
+                - listitem "Popular Shopping Ideas" [ref=e4073]:
+                  - link "Apply Dedicated filter to narrow results" [ref=e4075] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004235078091%3A14292273011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=14292272011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004235078091_1&ds=v1%3A%2FExQCbiJuPPWCXurziyfW6yg9J1djak440zn4uwa95c
+                    - checkbox [ref=e4078]
+                    - text: Dedicated
+                - listitem "Popular Shopping Ideas" [ref=e4080]:
+                  - link "Apply Integrated filter to narrow results" [ref=e4082] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-1004235078091%3A14292274011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=14292272011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-1004235078091_2&ds=v1%3A9jjTf1FgI251bJ1FnDDXAUQSoh6TW5WnODCTUANAPTg
+                    - checkbox [ref=e4085]
+                    - text: Integrated
+            - group "Premium Brands" [ref=e4087]:
+              - heading "Premium Brands" [level=2] [ref=e4088]
+              - list "Premium Brands" [ref=e4089]:
+                - listitem "Popular Shopping Ideas" [ref=e4090]:
+                  - link "Apply Premium Brands filter to narrow results" [ref=e4092] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015887018111%3A204376014011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=204376013011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015887018111_1&ds=v1%3ACny8rmBYq7QsOsIaifWfxqs5a3VHDUor7HcyWcJK7g4
+                    - checkbox [ref=e4095]
+                    - text: Premium Brands
+            - group "Front Camera Resolution" [ref=e4097]:
+              - heading "Front Camera Resolution" [level=2] [ref=e4098]
+              - list "Front Camera Resolution" [ref=e4099]:
+                - listitem "Popular Shopping Ideas" [ref=e4100]:
+                  - link "Apply 3 MP & above filter to narrow results" [ref=e4102] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495452111%3A122268336011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268191011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495452111_1&ds=v1%3AwHyTzvfNJ1zwhNHG%2FRPCsguRQZNQ%2FbVJqNoPd%2F%2FfBWA
+                    - checkbox [ref=e4105]
+                    - text: 3 MP & above
+                - listitem "Popular Shopping Ideas" [ref=e4107]:
+                  - link "Apply 2 to 2.9 MP filter to narrow results" [ref=e4109] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495452111%3A122268335011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268191011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495452111_2&ds=v1%3AIY9DfrKWQOW34ekSE2wXnpY%2F3vxLX9qT12CbVtLeCZo
+                    - checkbox [ref=e4112]
+                    - text: 2 to 2.9 MP
+                - listitem "Popular Shopping Ideas" [ref=e4114]:
+                  - link "Apply 1 to 1.9 MP filter to narrow results" [ref=e4116] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495452111%3A122268337011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268191011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495452111_3&ds=v1%3Aeh2aMKOrHUS2q4ctC3nYeskjYDdWevkpxlHx89qXd8s
+                    - checkbox [ref=e4119]
+                    - text: 1 to 1.9 MP
+                - listitem "Popular Shopping Ideas" [ref=e4121]:
+                  - link "Apply Up to 1 MP filter to narrow results" [ref=e4123] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495452111%3A122268334011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268191011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495452111_4&ds=v1%3A%2BDh2pOMwhL7esKFGHfiE5YMYsTyVb56tbb211ZB92vQ
+                    - checkbox [ref=e4126]
+                    - text: Up to 1 MP
+            - group "Display Maximum Resolution" [ref=e4128]:
+              - heading "Display Maximum Resolution" [level=2] [ref=e4129]
+              - list "Display Maximum Resolution" [ref=e4130]:
+                - listitem "Popular Shopping Ideas" [ref=e4131]:
+                  - link "Apply 1366 x 768 filter to narrow results" [ref=e4133] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017641222111%3A217447782011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=217447778011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017641222111_1&ds=v1%3Aftxq6UiJAIyAeIlv%2F9zgbL4V24H7txiATFl2crP3W10
+                    - checkbox [ref=e4136]
+                    - text: 1366 x 768
+                - listitem "Popular Shopping Ideas" [ref=e4138]:
+                  - link "Apply 1920 x 1080 filter to narrow results" [ref=e4140] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017641222111%3A217447779011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=217447778011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017641222111_2&ds=v1%3AdtjslzCpMGdoIcThn%2F7wY1Zx5lQOqEylx5zm1PpCLOY
+                    - checkbox [ref=e4143]
+                    - text: 1920 x 1080
+                - listitem "Popular Shopping Ideas" [ref=e4145]:
+                  - link "Apply 2560 x 1440 filter to narrow results" [ref=e4147] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017641222111%3A217447784011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=217447778011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017641222111_3&ds=v1%3AuT7flgj6UVRRwX1c7lzYXO2DJZFhe5al12Uo4kfHAyc
+                    - checkbox [ref=e4150]
+                    - text: 2560 x 1440
+                - listitem "Popular Shopping Ideas" [ref=e4152]:
+                  - link "Apply 2560 x 1600 filter to narrow results" [ref=e4154] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017641222111%3A217447781011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=217447778011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017641222111_4&ds=v1%3AVTrcHhyM7UJry4UxGMrGMVYyDRf6%2BExJ4puxLuTJlQ8
+                    - checkbox [ref=e4157]
+                    - text: 2560 x 1600
+                - listitem "Popular Shopping Ideas" [ref=e4159]:
+                  - link "Apply 3456 x 2234 filter to narrow results" [ref=e4161] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017641222111%3A217447780011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=217447778011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017641222111_5&ds=v1%3AcYjAO3j9OVyfPJrI6yatZTIKZzQd2jwKohBUryFsVaQ
+                    - checkbox [ref=e4164]
+                    - text: 3456 x 2234
+                - listitem "Popular Shopping Ideas" [ref=e4166]:
+                  - link "Apply 3840 x 2160 filter to narrow results" [ref=e4168] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017641222111%3A217447783011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=217447778011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017641222111_6&ds=v1%3A%2FRTHllyhLBVlpagqf6Rw1ThLwalxNhzAkseb%2F3uCLC0
+                    - checkbox [ref=e4171]
+                    - text: 3840 x 2160
+            - group "Customizable Products" [ref=e4173]:
+              - heading "Customizable Products" [level=2] [ref=e4174]
+              - list "Customizable Products" [ref=e4175]:
+                - listitem "Popular Shopping Ideas" [ref=e4176]:
+                  - link "Apply Customizable filter to narrow results" [ref=e4178] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_customizable_template_name%3A16031489011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=16031488011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_customizable_template_name_1&ds=v1%3AEAZtkGxtlRPXdMh4XTczIiEhZPYq9LUqH6ZfTLWO5uo
+                    - checkbox [ref=e4181]
+                    - text: Customizable
+            - group "GPU Manufacturer" [ref=e4183]:
+              - heading "GPU Manufacturer" [level=2] [ref=e4184]
+              - list "GPU Manufacturer" [ref=e4185]:
+                - listitem "Popular Shopping Ideas" [ref=e4186]:
+                  - link "Apply AMD filter to narrow results" [ref=e4188] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269952011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_1&ds=v1%3APpcFi4qXHHniuCJeMoBfDYsQnrOdkQgCqvfRlMfyRos
+                    - checkbox [ref=e4191]
+                    - text: AMD
+                - listitem "Popular Shopping Ideas" [ref=e4193]:
+                  - link "Apply Apple filter to narrow results" [ref=e4195] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269954011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_2&ds=v1%3Am9wZQUVvch9urHB2Q%2B1PpGLvWjQpVr1NzAGj8AS6hUM
+                    - checkbox [ref=e4198]
+                    - text: Apple
+                - listitem "Popular Shopping Ideas" [ref=e4200]:
+                  - link "Apply ARM filter to narrow results" [ref=e4202] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269956011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_3&ds=v1%3AjdsD3DChI3Lo3Aa9GrU56UFSHb39QsllpklWyDD5Fjc
+                    - checkbox [ref=e4205]
+                    - text: ARM
+                - listitem "Popular Shopping Ideas" [ref=e4207]:
+                  - link "Apply Intel filter to narrow results" [ref=e4209] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269957011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_4&ds=v1%3AJrpEZbok0nU0VHPB2TXFvmbJX3CzeXI%2F%2FiLULxarfGU
+                    - checkbox [ref=e4212]
+                    - text: Intel
+                - listitem "Popular Shopping Ideas" [ref=e4214]:
+                  - link "Apply MediaTek filter to narrow results" [ref=e4216] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269953011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_5&ds=v1%3AEif%2FB5P%2BMv9KNjY4tygYIYPUyqgG6VpKF8wbQPSDNOc
+                    - checkbox [ref=e4219]
+                    - text: MediaTek
+                - listitem "Popular Shopping Ideas" [ref=e4221]:
+                  - link "Apply NVIDIA filter to narrow results" [ref=e4223] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269950011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_6&ds=v1%3Ar5mL2HyaN4Eja8o6rNGzJmu%2Fz6jUljsXcUSg1rXXrJo
+                    - checkbox [ref=e4226]
+                    - text: NVIDIA
+                - listitem "Popular Shopping Ideas" [ref=e4228]:
+                  - link "Apply Qualcomm filter to narrow results" [ref=e4230] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495581111%3A122269951011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269799011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495581111_7&ds=v1%3ARhxOX77fEm8IzGoN7NbmFNtuN%2FStKEz%2F5OTmTxD7Rss
+                    - checkbox [ref=e4233]
+                    - text: Qualcomm
+            - group "Hard Disk Interface" [ref=e4235]:
+              - heading "Hard Disk Interface" [level=2] [ref=e4236]
+              - list "Hard Disk Interface" [ref=e4237]:
+                - listitem "Popular Shopping Ideas" [ref=e4238]:
+                  - link "Apply Solid State filter to narrow results" [ref=e4240] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269913011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_1&ds=v1%3AcEAdtVdiUxOokgAmmZ%2BGwXqGd%2BMCqpl4TevqQUMD1OQ
+                    - checkbox [ref=e4243]
+                    - text: Solid State
+                - listitem "Popular Shopping Ideas" [ref=e4245]:
+                  - link "Apply PCIE x 4 filter to narrow results" [ref=e4247] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269903011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_2&ds=v1%3A5g%2BgDe4Wsd3WC%2BauNn4fPwPnM7pZCuQUZHJc6bfKjfQ
+                    - checkbox [ref=e4250]
+                    - text: PCIE x 4
+                - listitem "Popular Shopping Ideas" [ref=e4252]:
+                  - link "Apply Serial ATA filter to narrow results" [ref=e4254] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269909011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_3&ds=v1%3A4ABmPfF62k7lDFiRwMDriAOkhPzvHxmVqHCqMZYoMV4
+                    - checkbox [ref=e4257]
+                    - text: Serial ATA
+                - listitem "Popular Shopping Ideas" [ref=e4259]:
+                  - link "Apply ATA-4 filter to narrow results" [ref=e4261] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269891011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_4&ds=v1%3Atg%2FqQjEhjIbaekHvQoQ7sq38mBENvzD8FEKtv0VETWk
+                    - checkbox [ref=e4264]
+                    - text: ATA-4
+                - listitem "Popular Shopping Ideas" [ref=e4266]:
+                  - link "Apply eSATA filter to narrow results" [ref=e4268] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269894011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_5&ds=v1%3A8Qm%2Bw9pe3Ha6O4c%2B2tx4pO5bncAdGQBCRj4w5otVV5w
+                    - checkbox [ref=e4271]
+                    - text: eSATA
+                - listitem "Popular Shopping Ideas" [ref=e4273]:
+                  - link "Apply Ethernet filter to narrow results" [ref=e4275] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269922011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_6&ds=v1%3AB34i4nRBbXH7sBKNwMSgUxiychNbI%2FORcwIsuGutWVo
+                    - checkbox [ref=e4278]
+                    - text: Ethernet
+                - listitem "Popular Shopping Ideas" [ref=e4280]:
+                  - link "Apply Gigabit Ethernet filter to narrow results" [ref=e4282] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495806111%3A122269915011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269796011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495806111_7&ds=v1%3Ab6zK4oIGzMTYTQWQZ2YT2w0wef80nUlwr1HrrG%2BuYQ0
+                    - checkbox [ref=e4285]
+                    - text: Gigabit Ethernet
+                - listitem [ref=e4287]:
+                  - button "See more, Hard Disk Interface" [ref=e4290] [cursor=pointer]: See more
+            - group "RAM Type" [ref=e4292]:
+              - heading "RAM Type" [level=2] [ref=e4293]
+              - list "RAM Type" [ref=e4294]:
+                - listitem "Popular Shopping Ideas" [ref=e4295]:
+                  - link "Apply DDR DRAM filter to narrow results" [ref=e4297] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268341011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_1&ds=v1%3An8YyziB7Rm01c0YkUPJK6uFItcGhzqWj0YODQNqsJEg
+                    - checkbox [ref=e4300]
+                    - text: DDR DRAM
+                - listitem "Popular Shopping Ideas" [ref=e4302]:
+                  - link "Apply DDR SDRAM filter to narrow results" [ref=e4304] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268343011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_2&ds=v1%3AaWUSh748BJZUsknM5lSlPtxLO7NoMpZ31gj9UHxh01I
+                    - checkbox [ref=e4307]
+                    - text: DDR SDRAM
+                - listitem "Popular Shopping Ideas" [ref=e4309]:
+                  - link "Apply DDR2 SDRAM filter to narrow results" [ref=e4311] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268347011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_3&ds=v1%3AzIp%2Bpmvkt7Bo9%2FSwikIWKFonD%2BxjCk19lLkSPapPtOk
+                    - checkbox [ref=e4314]
+                    - text: DDR2 SDRAM
+                - listitem "Popular Shopping Ideas" [ref=e4316]:
+                  - link "Apply DDR3 SDRAM filter to narrow results" [ref=e4318] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268345011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_4&ds=v1%3AGpkDmVgk3WVc8TE10%2F%2BITSSDSND4XJY95kLtQZQGd5A
+                    - checkbox [ref=e4321]
+                    - text: DDR3 SDRAM
+                - listitem "Popular Shopping Ideas" [ref=e4323]:
+                  - link "Apply DDR4 SDRAM filter to narrow results" [ref=e4325] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268344011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_5&ds=v1%3A2YkudluXrtu9dc1TwjWiSUGincJUmEP7UV629%2FtuBi8
+                    - checkbox [ref=e4328]
+                    - text: DDR4 SDRAM
+                - listitem "Popular Shopping Ideas" [ref=e4330]:
+                  - link "Apply DDR5 RAM filter to narrow results" [ref=e4332] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268346011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_6&ds=v1%3A6aRPvu7nTWsdR0EYnQBslo%2F%2FxyHSBfe859E4GnzOjSo
+                    - checkbox [ref=e4335]
+                    - text: DDR5 RAM
+                - listitem "Popular Shopping Ideas" [ref=e4337]:
+                  - link "Apply DIMM filter to narrow results" [ref=e4339] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015495447111%3A122268338011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122268192011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015495447111_7&ds=v1%3AG3Lsm9zz%2F%2FzuoAsC%2FOPLc0ADbGlE%2BdQPxMbu6%2B2zBRY
+                    - checkbox [ref=e4342]
+                    - text: DIMM
+                - listitem [ref=e4344]:
+                  - button "See more, RAM Type" [ref=e4347] [cursor=pointer]: See more
+            - group "Display Refresh Rate in Hertz" [ref=e4349]:
+              - heading "Display Refresh Rate in Hertz" [level=2] [ref=e4350]
+              - list "Display Refresh Rate in Hertz" [ref=e4351]:
+                - listitem "Popular Shopping Ideas" [ref=e4352]:
+                  - link "Apply 60 filter to narrow results" [ref=e4354] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854313011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_1&ds=v1%3AYmWhuIcV%2BqPO73ZgxRWv2tILpg%2BfKbqatDPM4fiU69g
+                    - checkbox [ref=e4357]
+                    - text: "60"
+                - listitem "Popular Shopping Ideas" [ref=e4359]:
+                  - link "Apply 90 filter to narrow results" [ref=e4361] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854311011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_2&ds=v1%3AWvBMvmhivJMAgWwyCONvIbosIGLDoIEgfnwQgskzrM0
+                    - checkbox [ref=e4364]
+                    - text: "90"
+                - listitem "Popular Shopping Ideas" [ref=e4366]:
+                  - link "Apply 120 filter to narrow results" [ref=e4368] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854315011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_3&ds=v1%3ArScCPcdrccuHLhYcdyoZCwW5RXro3%2FzWSUSyFmAj6to
+                    - checkbox [ref=e4371]
+                    - text: "120"
+                - listitem "Popular Shopping Ideas" [ref=e4373]:
+                  - link "Apply 144 filter to narrow results" [ref=e4375] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854319011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_4&ds=v1%3A1w3e9YUIsMh6An6nBKMbcnSgsGBzo0I3XhzyZxc2FFI
+                    - checkbox [ref=e4378]
+                    - text: "144"
+                - listitem "Popular Shopping Ideas" [ref=e4380]:
+                  - link "Apply 165 filter to narrow results" [ref=e4382] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854317011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_5&ds=v1%3ARZ%2BXc%2Bv6%2BFlikuBMyElsap60FA781rwc8%2FkQT44rsgo
+                    - checkbox [ref=e4385]
+                    - text: "165"
+                - listitem "Popular Shopping Ideas" [ref=e4387]:
+                  - link "Apply 240 filter to narrow results" [ref=e4389] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854318011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_6&ds=v1%3AZysutQGQz7Qfokz93CGz9HLhft1AxhNugkdp939JTOo
+                    - checkbox [ref=e4392]
+                    - text: "240"
+                - listitem "Popular Shopping Ideas" [ref=e4394]:
+                  - link "Apply 300 filter to narrow results" [ref=e4396] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101017397117111%3A214854322011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=214854310011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101017397117111_7&ds=v1%3Arn0mGBodMV49YkN%2F0%2Bpv%2BoSAMZwd99Wa5J6R6rkI2gM
+                    - checkbox [ref=e4399]
+                    - text: "300"
+                - listitem [ref=e4401]:
+                  - button "See more, Display Refresh Rate in Hertz" [ref=e4404] [cursor=pointer]: See more
+            - group "Keyboard Type" [ref=e4406]:
+              - heading "Keyboard Type" [level=2] [ref=e4407]
+              - list "Keyboard Type" [ref=e4408]:
+                - listitem "Popular Shopping Ideas" [ref=e4409]:
+                  - link "Apply Backlit filter to narrow results" [ref=e4411] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496308111%3A122269930011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269797011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496308111_1&ds=v1%3A0KtWlf2ZkUtANNHtlYbmeUDgXqPqloK%2F%2Fw5t%2B%2FjDDF8
+                    - checkbox [ref=e4414]
+                    - text: Backlit
+                - listitem "Popular Shopping Ideas" [ref=e4416]:
+                  - link "Apply Chiclet filter to narrow results" [ref=e4418] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496308111%3A122269932011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269797011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496308111_2&ds=v1%3AzOSqYFKslphWtG%2BHES9xPwGCcAZfwcaQbmOCy7yH6tM
+                    - checkbox [ref=e4421]
+                    - text: Chiclet
+                - listitem "Popular Shopping Ideas" [ref=e4423]:
+                  - link "Apply Ergonomic filter to narrow results" [ref=e4425] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496308111%3A122269931011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269797011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496308111_3&ds=v1%3ANiPFzoD4DFuf0NoRNHPnl8xbij4O3r2UMbcO8QwLhZI
+                    - checkbox [ref=e4428]
+                    - text: Ergonomic
+                - listitem "Popular Shopping Ideas" [ref=e4430]:
+                  - link "Apply Gaming filter to narrow results" [ref=e4432] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496308111%3A122269929011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269797011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496308111_4&ds=v1%3AG1lZz857hfdtvQp7%2Bpx4q8sOgXYYuijNpbSNThr%2F8pw
+                    - checkbox [ref=e4435]
+                    - text: Gaming
+                - listitem "Popular Shopping Ideas" [ref=e4437]:
+                  - link "Apply Mechanical filter to narrow results" [ref=e4439] [cursor=pointer]:
+                    - /url: /s?k=Laptop&rh=p_n_g-101015496308111%3A122269933011&dc&crid=2SJSLFT85F0XE&qid=1781174907&rnid=122269797011&sprefix=laptop%2Caps%2C634&ref=sr_nr_p_n_g-101015496308111_5&ds=v1%3AX4DptuiYzrajgMU5r5ACgJpv9MLN5aTm1NuI15VHJmU
+                    - checkbox [ref=e4442]
+                    - text: Mechanical
+    - complementary "Your recently viewed items and featured recommendations"
+    - generic [ref=e4444]:
+      - button "Back to top" [ref=e4445] [cursor=pointer]:
+        - generic [ref=e4446]: Back to top
+      - generic [ref=e4447]:
+        - generic [ref=e4448]:
+          - heading "Get to Know Us" [level=6] [ref=e4449]
+          - list [ref=e4450]:
+            - listitem [ref=e4451]:
+              - link "Careers" [ref=e4452] [cursor=pointer]:
+                - /url: https://www.amazon.jobs
+            - listitem [ref=e4453]:
+              - link "Blog" [ref=e4454] [cursor=pointer]:
+                - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e4455]:
+              - link "About Amazon" [ref=e4456] [cursor=pointer]:
+                - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+            - listitem [ref=e4457]:
+              - link "Investor Relations" [ref=e4458] [cursor=pointer]:
+                - /url: https://www.amazon.com/ir
+            - listitem [ref=e4459]:
+              - link "Amazon Devices" [ref=e4460] [cursor=pointer]:
+                - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+            - listitem [ref=e4461]:
+              - link "Amazon Science" [ref=e4462] [cursor=pointer]:
+                - /url: https://www.amazon.science
+        - generic [ref=e4464]:
+          - heading "Make Money with Us" [level=6] [ref=e4465]
+          - list [ref=e4466]:
+            - listitem [ref=e4467]:
+              - link "Sell products on Amazon" [ref=e4468] [cursor=pointer]:
+                - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+            - listitem [ref=e4469]:
+              - link "Sell on Amazon Business" [ref=e4470] [cursor=pointer]:
+                - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+            - listitem [ref=e4471]:
+              - link "Sell apps on Amazon" [ref=e4472] [cursor=pointer]:
+                - /url: https://developer.amazon.com
+            - listitem [ref=e4473]:
+              - link "Become an Affiliate" [ref=e4474] [cursor=pointer]:
+                - /url: https://affiliate-program.amazon.com/
+            - listitem [ref=e4475]:
+              - link "Advertise Your Products" [ref=e4476] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+            - listitem [ref=e4477]:
+              - link "Self-Publish with Us" [ref=e4478] [cursor=pointer]:
+                - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+            - listitem [ref=e4479]:
+              - link "Host an Amazon Hub" [ref=e4480] [cursor=pointer]:
+                - /url: https://go.thehub-amazon.com/amazon-hub-locker
+            - listitem [ref=e4481]:
+              - text: ›
+              - link "See More Make Money with Us" [ref=e4482] [cursor=pointer]:
+                - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+        - generic [ref=e4484]:
+          - heading "Amazon Payment Products" [level=6] [ref=e4485]
+          - list [ref=e4486]:
+            - listitem [ref=e4487]:
+              - link "Amazon Business Card" [ref=e4488] [cursor=pointer]:
+                - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+            - listitem [ref=e4489]:
+              - link "Shop with Points" [ref=e4490] [cursor=pointer]:
+                - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+            - listitem [ref=e4491]:
+              - link "Reload Your Balance" [ref=e4492] [cursor=pointer]:
+                - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+            - listitem [ref=e4493]:
+              - link "Amazon Currency Converter" [ref=e4494] [cursor=pointer]:
+                - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+        - generic [ref=e4496]:
+          - heading "Let Us Help You" [level=6] [ref=e4497]
+          - list [ref=e4498]:
+            - listitem [ref=e4499]:
+              - link "Amazon and COVID-19" [ref=e4500] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=GDFU3JS5AL6SYHRD&ref_=footer_covid
+            - listitem [ref=e4501]:
+              - link "Your Account" [ref=e4502] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+            - listitem [ref=e4503]:
+              - link "Your Orders" [ref=e4504] [cursor=pointer]:
+                - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+            - listitem [ref=e4505]:
+              - link "Shipping Rates & Policies" [ref=e4506] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+            - listitem [ref=e4507]:
+              - link "Returns & Replacements" [ref=e4508] [cursor=pointer]:
+                - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+            - listitem [ref=e4509]:
+              - link "Manage Your Content and Devices" [ref=e4510] [cursor=pointer]:
+                - /url: /gp/digital/fiona/manage?ref_=footer_myk
+            - listitem [ref=e4511]:
+              - link "Help" [ref=e4512] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+      - generic [ref=e4514]:
+        - link "Amazon US Home" [ref=e4517] [cursor=pointer]:
+          - /url: /?ref_=footer_logo
+        - generic [ref=e4520]:
+          - generic [ref=e4521]:
+            - link "Choose a language for shopping. Current selection is English." [ref=e4522] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+              - generic [ref=e4524]: English
+            - button "Expand to Change Language or Country" [ref=e4525] [cursor=pointer]
+          - link "₹ INR - Indian Rupee" [ref=e4526] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2Fs%3Fk%3DLaptop%26crid%3D2SJSLFT85F0XE%26sprefix%3Dlaptop%252Caps%252C634%26ref%3Dnb_sb_noss_1s%2Fref%3Dnb_sb_noss_1
+            - generic [ref=e4527]: ₹
+            - generic [ref=e4528]: INR - Indian Rupee
+          - button "Choose a country/region for shopping. The current selection is United States." [ref=e4529] [cursor=pointer]:
+            - generic [ref=e4531]: United States
+      - navigation "More on Amazon" [ref=e4532]:
+        - generic "More on Amazon" [ref=e4533]:
+          - list [ref=e4534]:
+            - listitem [ref=e4535]:
+              - link "Amazon Music Stream millions of songs" [ref=e4536] [cursor=pointer]:
+                - /url: https://music.amazon.com?ref=dm_aff_amz_com
+                - heading "Amazon Music" [level=5] [ref=e4537]
+                - generic [ref=e4538]:
+                  - text: Stream millions
+                  - text: of songs
+            - listitem [ref=e4539]
+            - listitem [ref=e4540]:
+              - link "Amazon Ads Reach customers wherever they spend their time" [ref=e4541] [cursor=pointer]:
+                - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+                - heading "Amazon Ads" [level=5] [ref=e4542]
+                - generic [ref=e4543]:
+                  - text: Reach customers
+                  - text: wherever they
+                  - text: spend their time
+            - listitem [ref=e4544]
+            - listitem [ref=e4545]:
+              - link "6pm Score deals on fashion brands" [ref=e4546] [cursor=pointer]:
+                - /url: https://www.6pm.com
+                - heading "6pm" [level=5] [ref=e4547]
+                - generic [ref=e4548]:
+                  - text: Score deals
+                  - text: on fashion brands
+            - listitem [ref=e4549]
+            - listitem [ref=e4550]:
+              - link "AbeBooks Books, art & collectibles" [ref=e4551] [cursor=pointer]:
+                - /url: https://www.abebooks.com
+                - heading "AbeBooks" [level=5] [ref=e4552]
+                - generic [ref=e4553]:
+                  - text: Books, art
+                  - text: "& collectibles"
+            - listitem [ref=e4554]
+            - listitem [ref=e4555]:
+              - link "ACX Audiobook Publishing Made Easy" [ref=e4556] [cursor=pointer]:
+                - /url: https://www.acx.com/
+                - heading "ACX" [level=5] [ref=e4557]
+                - generic [ref=e4558]:
+                  - text: Audiobook Publishing
+                  - text: Made Easy
+            - listitem [ref=e4559]
+            - listitem [ref=e4560]:
+              - link "Sell on Amazon Start a Selling Account" [ref=e4561] [cursor=pointer]:
+                - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+                - heading "Sell on Amazon" [level=5] [ref=e4562]
+                - generic [ref=e4563]: Start a Selling Account
+            - listitem [ref=e4564]
+            - listitem [ref=e4565]:
+              - link "Veeqo Shipping Software Inventory Management" [ref=e4566] [cursor=pointer]:
+                - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+                - heading "Veeqo" [level=5] [ref=e4567]
+                - generic [ref=e4568]:
+                  - text: Shipping Software
+                  - text: Inventory Management
+          - list [ref=e4569]:
+            - listitem [ref=e4570]:
+              - link "Amazon Business Everything For Your Business" [ref=e4571] [cursor=pointer]:
+                - /url: /business?ref_=footer_retail_b2b
+                - heading "Amazon Business" [level=5] [ref=e4572]
+                - generic [ref=e4573]:
+                  - text: Everything For
+                  - text: Your Business
+            - listitem [ref=e4574]
+            - listitem [ref=e4575]:
+              - link "AmazonGlobal Ship Orders Internationally" [ref=e4576] [cursor=pointer]:
+                - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+                - heading "AmazonGlobal" [level=5] [ref=e4577]
+                - generic [ref=e4578]:
+                  - text: Ship Orders
+                  - text: Internationally
+            - listitem [ref=e4579]
+            - listitem [ref=e4580]:
+              - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e4581] [cursor=pointer]:
+                - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+                - heading "Amazon Web Services" [level=5] [ref=e4582]
+                - generic [ref=e4583]:
+                  - text: Scalable Cloud
+                  - text: Computing Services
+            - listitem [ref=e4584]
+            - listitem [ref=e4585]:
+              - link "Audible Listen to Books & Original Audio Performances" [ref=e4586] [cursor=pointer]:
+                - /url: https://www.audible.com
+                - heading "Audible" [level=5] [ref=e4587]
+                - generic [ref=e4588]:
+                  - text: Listen to Books & Original
+                  - text: Audio Performances
+            - listitem [ref=e4589]
+            - listitem [ref=e4590]:
+              - link "Box Office Mojo Find Movie Box Office Data" [ref=e4591] [cursor=pointer]:
+                - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+                - heading "Box Office Mojo" [level=5] [ref=e4592]
+                - generic [ref=e4593]:
+                  - text: Find Movie
+                  - text: Box Office Data
+            - listitem [ref=e4594]
+            - listitem [ref=e4595]:
+              - link "Goodreads Book reviews & recommendations" [ref=e4596] [cursor=pointer]:
+                - /url: https://www.goodreads.com
+                - heading "Goodreads" [level=5] [ref=e4597]
+                - generic [ref=e4598]:
+                  - text: Book reviews
+                  - text: "& recommendations"
+            - listitem [ref=e4599]
+            - listitem [ref=e4600]:
+              - link "IMDb Movies, TV & Celebrities" [ref=e4601] [cursor=pointer]:
+                - /url: https://www.imdb.com
+                - heading "IMDb" [level=5] [ref=e4602]
+                - generic [ref=e4603]:
+                  - text: Movies, TV
+                  - text: "& Celebrities"
+          - list [ref=e4604]:
+            - listitem [ref=e4605]:
+              - link "IMDbPro Get Info Entertainment Professionals Need" [ref=e4606] [cursor=pointer]:
+                - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+                - heading "IMDbPro" [level=5] [ref=e4607]
+                - generic [ref=e4608]:
+                  - text: Get Info Entertainment
+                  - text: Professionals Need
+            - listitem [ref=e4609]
+            - listitem [ref=e4610]:
+              - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy" [ref=e4611] [cursor=pointer]:
+                - /url: https://kdp.amazon.com
+                - heading "Kindle Direct Publishing" [level=5] [ref=e4612]
+                - generic [ref=e4613]:
+                  - text: Indie Digital & Print Publishing
+                  - text: Made Easy
+            - listitem [ref=e4614]
+            - listitem [ref=e4615]:
+              - link "Prime Video Direct Video Distribution Made Easy" [ref=e4616] [cursor=pointer]:
+                - /url: https://videodirect.amazon.com/home/landing
+                - heading "Prime Video Direct" [level=5] [ref=e4617]
+                - generic [ref=e4618]:
+                  - text: Video Distribution
+                  - text: Made Easy
+            - listitem [ref=e4619]
+            - listitem [ref=e4620]:
+              - link "Shopbop Designer Fashion Brands" [ref=e4621] [cursor=pointer]:
+                - /url: https://www.shopbop.com
+                - heading "Shopbop" [level=5] [ref=e4622]
+                - generic [ref=e4623]:
+                  - text: Designer
+                  - text: Fashion Brands
+            - listitem [ref=e4624]
+            - listitem [ref=e4625]:
+              - link "Woot! Deals and Shenanigans" [ref=e4626] [cursor=pointer]:
+                - /url: https://www.woot.com/
+                - heading "Woot!" [level=5] [ref=e4627]
+                - generic [ref=e4628]:
+                  - text: Deals and
+                  - text: Shenanigans
+            - listitem [ref=e4629]
+            - listitem [ref=e4630]:
+              - link "Zappos Shoes & Clothing" [ref=e4631] [cursor=pointer]:
+                - /url: https://www.zappos.com
+                - heading "Zappos" [level=5] [ref=e4632]
+                - generic [ref=e4633]:
+                  - text: Shoes &
+                  - text: Clothing
+            - listitem [ref=e4634]
+            - listitem [ref=e4635]:
+              - link "Ring Smart Home Security Systems" [ref=e4636] [cursor=pointer]:
+                - /url: https://ring.com
+                - heading "Ring" [level=5] [ref=e4637]
+                - generic [ref=e4638]:
+                  - text: Smart Home
+                  - text: Security Systems
+          - list [ref=e4639]:
+            - listitem [ref=e4640]
+            - listitem [ref=e4641]
+            - listitem [ref=e4642]:
+              - link "eero WiFi Stream 4K Video in Every Room" [ref=e4643] [cursor=pointer]:
+                - /url: https://eero.com/
+                - heading "eero WiFi" [level=5] [ref=e4644]
+                - generic [ref=e4645]:
+                  - text: Stream 4K Video
+                  - text: in Every Room
+            - listitem [ref=e4646]
+            - listitem [ref=e4647]:
+              - link "Blink Smart Security for Every Home" [ref=e4648] [cursor=pointer]:
+                - /url: https://blinkforhome.com/?ref=nav_footer
+                - heading "Blink" [level=5] [ref=e4649]
+                - generic [ref=e4650]:
+                  - text: Smart Security
+                  - text: for Every Home
+            - listitem [ref=e4651]
+            - listitem [ref=e4652]:
+              - link "Neighbors App Real-Time Crime & Safety Alerts" [ref=e4653] [cursor=pointer]:
+                - /url: https://shop.ring.com/pages/neighbors-app
+                - heading "Neighbors App" [level=5] [ref=e4654]
+                - generic [ref=e4655]:
+                  - text: Real-Time Crime
+                  - text: "& Safety Alerts"
+            - listitem [ref=e4656]
+            - listitem [ref=e4657]:
+              - link "PillPack Pharmacy Simplified" [ref=e4658] [cursor=pointer]:
+                - /url: https://www.pillpack.com
+                - heading "PillPack" [level=5] [ref=e4659]
+                - generic [ref=e4660]: Pharmacy Simplified
+            - listitem [ref=e4661]
+            - listitem [ref=e4662]
+            - listitem [ref=e4663]
+            - listitem [ref=e4664]
+      - generic [ref=e4665]:
+        - list [ref=e4666]:
+          - listitem [ref=e4667]:
+            - link "Conditions of Use" [ref=e4668] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+          - listitem [ref=e4669]:
+            - link "Privacy Notice" [ref=e4670] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+          - listitem [ref=e4671]:
+            - link "Consumer Health Data Privacy Disclosure" [ref=e4672] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+          - listitem [ref=e4673]:
+            - link "Your Ads Privacy Choices" [ref=e4674] [cursor=pointer]:
+              - /url: /privacyprefs?ref_=footer_iba
+          - listitem [ref=e4675]
+        - generic [ref=e4677]: © 1996-2026, Amazon.com, Inc. or its affiliates
+    - iframe [ref=e4679]
+  - generic: "Test: amzn-nv-flyout-healthy-choice"
+  - generic: "Test: nav-rufus-disc-txt"
+  - generic: "Test: a-truncate-cut"
+  - generic: "Test: sp-cc-wrapper"
+  - generic: "Test: .mo-wp"
+  - generic: "Test: .a-image-container"
+  - generic: "Test: sp-cc"
+  - generic: "Test: .amzn-box-inner"
+  - generic: "Test: .js-order-card"
+  - generic: "Test: pldn-deep-link"
+  - generic: "Test: add-to-cart-btn"
+  - generic: "Test: amzn-nav-app-banner-container"
+  - generic: "Test: .sparkle-container"
+```
