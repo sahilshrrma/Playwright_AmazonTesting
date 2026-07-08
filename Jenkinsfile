@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'jenkins/agent:latest-alpine-jdk21' }
+        docker { image 'mcr.microsoft.com/playwright:v1.48.0-jammy' }
     }
     stages {
         stage('Checkout') {
@@ -11,7 +11,6 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
-                sh 'npx playwright install --with-deps'
             }
         }
         stage('Run Tests') {
@@ -22,6 +21,9 @@ pipeline {
         stage('Publish Report') {
             steps {
                 publishHTML(target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
                     reportDir: 'playwright-report',
                     reportFiles: 'index.html',
                     reportName: 'Playwright Report'
