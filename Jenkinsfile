@@ -1,34 +1,26 @@
 pipeline {
-    agent {
-        docker { image 'mcr.microsoft.com/playwright:v1.48.0-jammy' }
-    }
+    agent any
     stages {
-        stage('Checkout') {
+        stage('Build test image') {
             steps {
-                git url: 'https://github.com/sahilshrrma/Playwright_AmazonTesting.git', branch: 'main'
+                sh "docker build -f Dockerfile.playwright -t amazon-tests:${BUILD_NUMBER} ."
             }
         }
-        stage('Install Dependencies') {
+        stage('Run tests') {
             steps {
-                sh 'npm install'
+                sh "docker run --rm -v ${WORKSPACE}/results:/app/results amazon-tests:${BUILD_NUMBER}"
             }
         }
-        stage('Run Tests') {
-            steps {
-                sh 'npx playwright test'
-            }
+    }
+    post {
+        always {
+            junit allowEmptyResults: true, testResults: 'results/junit.xml'
         }
-        stage('Publish Report') {
-            steps {
-                publishHTML(target: [
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'playwright-report',
-                    reportFiles: 'index.html',
-                    reportName: 'Playwright Report'
-                ])
-            }
+        success {
+            echo 'All tests passed'
+        }
+        failure {
+            echo 'Some tests failed — check the JUnit report above'
         }
     }
 }
