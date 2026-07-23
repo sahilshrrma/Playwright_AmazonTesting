@@ -8,19 +8,19 @@ pipeline {
         }
         stage('Run tests') {
             steps {
-                sh "docker run --rm -v ${WORKSPACE}/results:/app/results amazon-tests:${BUILD_NUMBER}"
+                sh "docker run --rm -v ${WORKSPACE}/allure-results:/app/allure-results amazon-tests:${BUILD_NUMBER}"
             }
         }
     }
     post {
         always {
-            junit allowEmptyResults: true, testResults: 'results/junit.xml'
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
         }
         success {
             echo 'All tests passed'
         }
         failure {
-            echo 'Some tests failed — check the JUnit report above'
+            echo 'Some tests failed — check the Allure report above'
         }
     }
 }

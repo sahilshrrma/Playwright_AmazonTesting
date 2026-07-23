@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -32,7 +33,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
     /* Run in headed mode */
-    headless: false,
+    headless: !!process.env.CI,
 
     /* Take screenshots on test failure */
     screenshot: 'only-on-failure',
